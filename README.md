@@ -1,6 +1,6 @@
-# Ladya front-end
+# Cases for Webernetic
 
-This is a front-end part of Ladya project.
+Markup for cases for Webernetic website would be stored in this repository 
 
 ## Installation
 
