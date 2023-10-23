@@ -1,6 +1,6 @@
 # Cases for Webernetic
 
-Markup for cases for Webernetic website would be stored in this repository 
+Markup for cases for Webernetic website is stored in this repository. Cases are divided by folders, each folder contains russian and english version of a single case.
 
 ## Installation
 
