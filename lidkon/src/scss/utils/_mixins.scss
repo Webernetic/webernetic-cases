@@ -25,6 +25,10 @@
     font-size: 24px;
     font-weight: 400;
     line-height: 140%; /* 33.6px */
+
+    @media (max-width: 998px) {
+        font-size: 18px;
+    }
 }
 
 @mixin text {
@@ -32,4 +36,8 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 140%; /* 28px */
+
+    @media (max-width: 998px) {
+        font-size: 16px;
+    }
 }
