@@ -1,0 +1,46 @@
+.outline {
+  padding: 20px 0;
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+  }
+  &__text {
+    width: 570px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  &__style {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    width: 520px;
+  }
+  &__font {
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    color: #000;
+  }
+  &__colors {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & div {
+      width: 150px;
+      height: 70px;
+      border-radius: 10px;
+    }
+    & div:nth-child(1) {
+      background-color: #f2f2f2;
+    }
+    & div:nth-child(2) {
+      background-color: #2b2d42;
+    }
+    & div:nth-child(3) {
+      background-color: #f76648;
+    }
+  }
+}

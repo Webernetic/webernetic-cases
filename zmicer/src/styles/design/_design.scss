@@ -1,0 +1,49 @@
+.design {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+  border-radius: 10px;
+  background-color: $color-red;
+  overflow: hidden;
+  &__title {
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 108.5%;
+    color: $color-light;
+    text-transform: uppercase;
+  }
+  &__img {
+    position: absolute;
+    width: 600px;
+    height: 810px;
+    z-index: 1;
+    & img {
+      object-fit: cover;
+    }
+  }
+  &__down {
+    bottom: -77%;
+    right: 5%;
+  }
+  &__up {
+    top: 0%;
+    left: 5%;
+  }
+  &__arrow {
+    position: absolute;
+  }
+}
+
+.arrow__up {
+  top: 0;
+  left: 0;
+}
+
+.arrow__down {
+  bottom: 11%;
+  right: -16%;
+  transform: rotate(-90deg);
+}

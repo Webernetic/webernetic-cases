@@ -1,0 +1,40 @@
+.result {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  &__content {
+    width: 100%;
+    padding: 50px 60px 56px 60px;
+    border-radius: 10px;
+    color: $color-light;
+    background-color: $color-dark;
+  }
+  &__title {
+    margin-bottom: 25px;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 108.5%;
+  }
+  &__text {
+    width: 1040px;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0.75px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__description {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 0.75px;
+  }
+}
