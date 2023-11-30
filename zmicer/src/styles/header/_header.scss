@@ -1,0 +1,61 @@
+.header {
+    position: relative;
+    margin: 251px 0 279px 0;
+
+    &__img {
+        position: absolute;
+        width: 250px;
+        height: 545px;
+        overflow: hidden;
+        transform: rotate(-35deg);
+        top: -80%;
+        left: 45%;
+        z-index: 1;
+        & img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__title {
+        font-size: 120px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 108.5%;
+        color: $color-dark;
+        white-space: nowrap;
+        min-width: 100%;
+        counter-reset: header__text;
+        & span {
+            counter-increment: header__text;
+            transition: all 0.5s ease-in-out;
+        }
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        color: $color-red;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 141.5%;
+    }
+}
+
+.marquee {
+    animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-155.5%);
+    }
+}

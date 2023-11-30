@@ -1,0 +1,24 @@
+.advantages {
+    display: flex;
+    justify-content: center;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        gap: 46px;
+    }
+    &__img {
+        & img {
+            width: 561px;
+            height: 426px;
+        }
+    }
+    &__text {
+        width: 560px;
+        height: 190px;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        color: #000;
+    }
+}

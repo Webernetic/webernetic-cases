@@ -1,0 +1,28 @@
+.info {
+    position: relative;
+    padding: 29px 0 56px 0;
+    &__wrapper {
+        padding: 60px;
+        border-radius: 10px;
+        background-color: $color-red;
+    }
+    &__text {
+        width: 476px;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        color: $color-light;
+    }
+    &__img {
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        transform: rotate(-15deg);
+        & img {
+            width: 591px;
+            height: 450px;
+            object-fit: cover;
+        }
+    }
+}

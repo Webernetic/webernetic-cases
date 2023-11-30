@@ -1,0 +1,48 @@
+@import "./variables";
+@import "./fonts";
+@import "./header/header";
+@import "./about/about";
+@import "./task/task";
+@import "./prototype/prototype";
+@import "./info/info";
+@import "./advantages/advantages";
+@import "./rate/rate";
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    max-width: 1400px;
+    height: 9000px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
