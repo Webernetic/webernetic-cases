@@ -1,244 +1,277 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Zmicer</title>
-  </head>
 
-  <body>
-    <div class="wrapper">
-      <main>
-        <div class="container main-container">
-          <section class="about">
-            <ul class="about__list prof-list"></ul>
-            <article class="about__content">
-              <picture class="about__img">
-                <img src="./assets/img/frame.svg" alt="frame" />
-              </picture>
-              <p class="about__text">
-                <b>Дмитрий Горячко</b> — IT-консультант, основатель и
-                собственник сервисной компании по разработке ПО. Проводит услуги
-                консультирования по развитию IT-продуктов и управлению
-                процессами IT-проектов. Также Дмитрий сертифицированный Agile,
-                Scrum эксперт, специалист по внедрению CI/CD в процесс поставки
-                IT-продуктов.
-              </p>
-            </article>
-          </section>
-          <section class="tasks">
-            <h2 class="task__title">Задачи</h2>
-            <div class="tasks__list">
-              <ul>
-                <li>
-                  Разработать строгий, но стильный и современный Landing page,
-                  для продажи услуг консалтинга Дмитрия
-                </li>
-                <li>
-                  Отразить суть ценностей Дмитрия и его эстетические подходы в
-                  работе, разработать страницы с актуальным портфолио
-                </li>
-              </ul>
-              <ul>
-                <li>Сделать удобную форму, для сбора заявок</li>
-                <li>
-                  Адаптировать сайт к 2 языковым версиям (английский и русский)
-                </li>
-                <li>Запустить сайт в продакшн</li>
-              </ul>
+<head>
+  <meta charset="utf-8" />
+  <title>Zmicer</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <section class="header">
+      <div class="header__container">
+        <picture class="header__img">
+          <img src="./assets/img/phone.png" alt="phone">
+        </picture>
+        <div class="anims">
+          <div class="anims__lines">
+            <div class="anims__line">
+              <h2>Разработка сайта для IT-консультанта</h2>
+              <h2>Разработка сайта для IT-консультанта</h2>
             </div>
-          </section>
-          <section class="prototype">
-            <picture class="prototype__img prototype__up">
-              <img src="./assets/img/prototype1.png" alt="pic" />
-            </picture>
-            <picture class="prototype__img prototype__down">
-              <img src="./assets/img/prototype2.png" alt="pic" />
-            </picture>
-            <picture class="prototype__arrow arrow__up">
-              <img src="./assets/img/frame2.svg" alt="pic" />
-            </picture>
-            <picture class="prototype__arrow arrow__down">
-              <img src="./assets/img/frame2.svg" alt="pic" />
-            </picture>
-            <h3 class="prototype__title">ПРОТОТИПЫ</h3>
-          </section>
-          <section class="info">
-            <article class="info__wrapper">
-              <p class="info__text">
-                На сайте большое внимание уделено информационной составляющей.
-                Например, в блоке “Услуги консультирования по развитию
-                IT-продуктов и управлению процессами IT-проектов” детально
-                описаны все компоненты, которые включены в предлагаемые услуги.
-                При этом дизайн данного блока легкий, с большим количеством
-                воздуха, чтобы не создавать лишней нагрузки на пользователя.
-              </p>
-              <picture class="info__img">
-                <img src="./assets/img/pad.png" alt="pad" />
-              </picture>
-            </article>
-          </section>
-          <section class="advantages">
-            <article class="advantages__wrapper">
-              <picture class="advantages__img">
-                <img src="./assets/img/group.svg" alt="figure" />
-              </picture>
-              <p class="advantages__text">
-                Для формирования доверия у пользователя был создан блок с
-                описанием преимуществ и опыта Дмитрия, где мы визуализировали
-                информацию с помощью запоминающихся иконок.
-              </p>
-            </article>
-          </section>
-          <section class="rate">
-            <article class="rate__wrapper">
-              <p class="rate__text">
-                Было реализовано подробное описание тарифов и их составляющих,
-                чтобы помочь пользователям в принятии решений о выборе услуг.
-              </p>
-              <picture class="rate__img phone-one">
-                <img src="./assets/img/phone1.png" alt="phone" />
-              </picture>
-              <picture class="rate__img phone-two">
-                <img src="./assets/img/phone2.png" alt="phone" />
-              </picture>
-            </article>
-          </section>
-          <section class="design">
-            <picture class="design__img design__up">
-              <img src="./assets/img/layouts1.png" alt="pic" />
-            </picture>
-            <picture class="design__img design__down">
-              <img src="./assets/img/layouts2.png" alt="pic" />
-            </picture>
-            <picture class="design__arrow arrow__up">
-              <img src="./assets/img/frame2.svg" alt="pic" />
-            </picture>
-            <picture class="design__arrow arrow__down">
-              <img src="./assets/img/frame2.svg" alt="pic" />
-            </picture>
-            <h3 class="design__title">МАКЕТЫ</h3>
-          </section>
-          <section class="outline">
-            <article class="outline__wrapper">
-              <p class="outline__text">
-                Для текcтового коyтента мы выбрали шрифт Ubuntu, он простой,
-                лаконичный и мягкий, что создает атмосферу доверия. Цвета
-                из класcической палитры совместили с ярким акцентным оранжевым и
-                градиентами.
-              </p>
-              <div class="outline__style">
-                <div class="outline__font">
-                  <span>Ubuntu</span>
-                  <span>Aa Bb Cc</span>
-                </div>
-                <div class="outline__colors">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-              </div>
-            </article>
-          </section>
-          <section class="result">
-            <article class="result__wrapper">
-              <div class="result__content">
-                <h2 class="result__title">Итог</h2>
-                <p class="result__text">
-                  Мы провели полный цикл разработки сайта, в результате чего
-                  создали лаконичный современный сайт. Сайт удобен в навигации,
-                  информативен и вызывает доверие у пользователей. Клиент
-                  получил новый канал продвижения услуг и остался доволен
-                  результатом.
-                </p>
-              </div>
-              <ul class="result__list prof-list"></ul>
-              <p class="result__description">
-                Удобный интерфейс, быстрая загрузка и адаптивный дизайн — мы
-                знаем, как привлечь и удержать клиентов через сайт. Свяжитесь с
-                нами прямо сейчас, чтобы начать работу!
-              </p>
-            </article>
-          </section>
-        </div>
-      </main>
-      <section class="footer">
-        <div class="container">
-          <div class="footer__wrapper">
-            <picture class="footer__img">
-              <img src="./assets/img/photo.png" alt="pm" />
-              <img src="./assets/img/label.svg" alt="label" />
-            </picture>
-            <form class="footer__form">
-              <h2 class="footer__title">Заказать консультацию</h2>
-              <div class="footer__actions">
-                <div class="footer__inputs">
-                  <input
-                    class="footer__input"
-                    type="text"
-                    placeholder="Имя *"
-                  />
-                  <input
-                    class="footer__input"
-                    type="text"
-                    placeholder="Телефон *"
-                  />
-                  <input
-                    class="footer__input"
-                    type="text"
-                    placeholder="E-mail *"
-                  />
-                  <input
-                    class="footer__input"
-                    type="text"
-                    placeholder="Сайт *"
-                  />
-                </div>
-                <div class="footer__checkboxs">
-                  <label class="footer__label">
-                    <input type="checkbox" name="user_wish[]" value="Сайт" />
-                    <span>Сайт</span>
-                  </label>
-                  <label class="footer__label">
-                    <input type="checkbox" name="user_wish[]" value="SEO" />
-                    <span>SEO</span>
-                  </label>
-                  <label class="footer__label">
-                    <input type="checkbox" name="user_wish[]" value="SMM" />
-                    <span>SMM</span>
-                  </label>
-                  <label class="footer__label">
-                    <input
-                      type="checkbox"
-                      name="user_wish[]"
-                      value="Доработка"
-                    />
-                    <span>Доработка</span>
-                  </label>
-                  <label class="footer__label">
-                    <input
-                      type="checkbox"
-                      name="user_wish[]"
-                      value="Контекст"
-                    />
-                    <span>Контекст</span>
-                  </label>
-                  <label class="footer__label">
-                    <input type="checkbox" name="user_wish[]" value="Другое" />
-                    <span>Другое</span>
-                  </label>
-                </div>
-                <button class="footer__button">Отправить</button>
-              </div>
-              <div class="footer__link">
-                <h3>Может быть полезно</h3>
-                <a href="https://www.belpromimpex.by/" target="_blank"
-                  >БЕЛПРОМИМПЭКС</a
-                >
-              </div>
-            </form>
+            <ul class="anims__bottom revers">
+              <li>zmicer.consulting</li>
+              <li>&#149;</li>
+              <li>zmicer.consulting</li>
+              <li>&#149;</li>
+              <li>zmicer.consulting</li>
+              <li>&#149;</li>
+              <li>zmicer.consulting</li>
+              <li>&#149;</li>
+              <li>zmicer.consulting</li>
+              <li>&#149;</li>
+              <li>zmicer.consulting</li>
+              <li>&#149;</li>
+              <li>zmicer.consulting</li>
+              <li>&#149;</li>
+              <li>zmicer.consulting</li>
+              <li>&#149;</li>
+              <li>zmicer.consulting</li>
+              <li>&#149;</li>
+              <li>zmicer.consulting</li>
+              <li>&#149;</li>
+              <li>zmicer.consulting</li>
+              <li>&#149;</li>
+              <li>zmicer.consulting</li>
+              <li>&#149;</li>
+              <li>zmicer.consulting</li>
+              <li>&#149;</li>
+              <li>zmicer.consulting</li>
+              <li>&#149;</li>
+              <li>zmicer.consulting</li>
+              <li>&#149;</li>
+              <li>zmicer.consulting</li>
+            </ul>
           </div>
         </div>
-      </section>
-    </div>
-  </body>
+    </section>
+    <main>
+      <div class="container main-container">
+        <section class="about">
+          <ul class="about__list prof-list"></ul>
+          <article class="about__content">
+            <picture class="about__img">
+              <img src="./assets/img/frame.svg" alt="frame" />
+            </picture>
+            <p class="about__text">
+              <b>Дмитрий Горячко</b> — IT-консультант, основатель и
+              собственник сервисной компании по разработке ПО. Проводит услуги
+              консультирования по развитию IT-продуктов и управлению
+              процессами IT-проектов. Также Дмитрий сертифицированный Agile,
+              Scrum эксперт, специалист по внедрению CI/CD в процесс поставки
+              IT-продуктов.
+            </p>
+          </article>
+        </section>
+        <section class="tasks">
+          <h2 class="task__title">Задачи</h2>
+          <div class="tasks__list">
+            <ul>
+              <li>
+                Разработать строгий, но стильный и современный Landing page,
+                для продажи услуг консалтинга Дмитрия
+              </li>
+              <li>
+                Отразить суть ценностей Дмитрия и его эстетические подходы в
+                работе, разработать страницы с актуальным портфолио
+              </li>
+            </ul>
+            <ul>
+              <li>Сделать удобную форму, для сбора заявок</li>
+              <li>
+                Адаптировать сайт к 2 языковым версиям (английский и русский)
+              </li>
+              <li>Запустить сайт в продакшн</li>
+            </ul>
+          </div>
+        </section>
+        <section class="prototype">
+          <div class="prototype__wrapper">
+            <div class="prototype__scroll">
+              <picture class="prototype__img">
+                <img src="./assets/img/proto1.png" alt="prototype">
+              </picture>
+              <picture class="prototype__img">
+                <img src="./assets/img/proto2.png" alt="prototype">
+              </picture>
+              <picture class="prototype__img">
+                <img src="./assets/img/proto3.png" alt="prototype">
+              </picture>
+              <picture class="prototype__img">
+                <img src="./assets/img/proto4.png" alt="prototype">
+              </picture>
+              <picture class="prototype__img">
+                <img src="./assets/img/proto5.png" alt="prototype">
+              </picture>
+              <picture class="prototype__img">
+                <img src="./assets/img/proto6.png" alt="prototype">
+              </picture>
+              <h3 class="prototype__title">ПРОТОТИПЫ</h3>
+            </div>
+          </div>
+        </section>
+        <section class="info">
+          <article class="info__wrapper">
+            <p class="info__text">
+              На сайте большое внимание уделено информационной составляющей.
+              Например, в блоке “Услуги консультирования по развитию
+              IT-продуктов и управлению процессами IT-проектов” детально
+              описаны все компоненты, которые включены в предлагаемые услуги.
+              При этом дизайн данного блока легкий, с большим количеством
+              воздуха, чтобы не создавать лишней нагрузки на пользователя.
+            </p>
+            <picture class="info__img">
+              <img src="./assets/img/pad.png" alt="pad" />
+            </picture>
+          </article>
+        </section>
+        <section class="advantages">
+          <article class="advantages__wrapper">
+            <picture class="advantages__img">
+              <img src="./assets/img/group.svg" alt="figure" />
+            </picture>
+            <p class="advantages__text">
+              Для формирования доверия у пользователя был создан блок с
+              описанием преимуществ и опыта Дмитрия, где мы визуализировали
+              информацию с помощью запоминающихся иконок.
+            </p>
+          </article>
+        </section>
+        <section class="rate">
+          <article class="rate__wrapper">
+            <p class="rate__text">
+              Было реализовано подробное описание тарифов и их составляющих,
+              чтобы помочь пользователям в принятии решений о выборе услуг.
+            </p>
+            <picture class="rate__img phone-one">
+              <img src="./assets/img/phone1.png" alt="phone" />
+            </picture>
+            <picture class="rate__img phone-two">
+              <img src="./assets/img/phone2.png" alt="phone" />
+            </picture>
+          </article>
+        </section>
+        <section class="design">
+          <picture class="design__img design__up">
+            <img src="./assets/img/layouts1.png" alt="pic" />
+          </picture>
+          <picture class="design__img design__down">
+            <img src="./assets/img/layouts2.png" alt="pic" />
+          </picture>
+          <picture class="design__arrow arrow__up">
+            <img src="./assets/img/frame2.svg" alt="pic" />
+          </picture>
+          <picture class="design__arrow arrow__down">
+            <img src="./assets/img/frame2.svg" alt="pic" />
+          </picture>
+          <h3 class="design__title">МАКЕТЫ</h3>
+        </section>
+        <section class="outline">
+          <article class="outline__wrapper">
+            <p class="outline__text">
+              Для текcтового коyтента мы выбрали шрифт Ubuntu, он простой,
+              лаконичный и мягкий, что создает атмосферу доверия. Цвета
+              из класcической палитры совместили с ярким акцентным оранжевым и
+              градиентами.
+            </p>
+            <div class="outline__style">
+              <div class="outline__font">
+                <span>Ubuntu</span>
+                <span>Aa Bb Cc</span>
+              </div>
+              <div class="outline__colors">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </article>
+        </section>
+        <section class="result">
+          <article class="result__wrapper">
+            <div class="result__content">
+              <h2 class="result__title">Итог</h2>
+              <p class="result__text">
+                Мы провели полный цикл разработки сайта, в результате чего
+                создали лаконичный современный сайт. Сайт удобен в навигации,
+                информативен и вызывает доверие у пользователей. Клиент
+                получил новый канал продвижения услуг и остался доволен
+                результатом.
+              </p>
+            </div>
+            <ul class="result__list prof-list"></ul>
+            <p class="result__description">
+              Удобный интерфейс, быстрая загрузка и адаптивный дизайн — мы
+              знаем, как привлечь и удержать клиентов через сайт. Свяжитесь с
+              нами прямо сейчас, чтобы начать работу!
+            </p>
+          </article>
+        </section>
+      </div>
+    </main>
+    <section class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <picture class="footer__img">
+            <img src="./assets/img/photo.png" alt="pm" />
+            <img src="./assets/img/label.svg" alt="label" />
+          </picture>
+          <form class="footer__form">
+            <h2 class="footer__title">Заказать консультацию</h2>
+            <div class="footer__actions">
+              <div class="footer__inputs">
+                <input class="footer__input" type="text" placeholder="Имя *" />
+                <input class="footer__input" type="text" placeholder="Телефон *" />
+                <input class="footer__input" type="text" placeholder="E-mail *" />
+                <input class="footer__input" type="text" placeholder="Сайт *" />
+              </div>
+              <div class="footer__checkboxs">
+                <label class="footer__label">
+                  <input type="checkbox" name="user_wish[]" value="Сайт" />
+                  <span>Сайт</span>
+                </label>
+                <label class="footer__label">
+                  <input type="checkbox" name="user_wish[]" value="SEO" />
+                  <span>SEO</span>
+                </label>
+                <label class="footer__label">
+                  <input type="checkbox" name="user_wish[]" value="SMM" />
+                  <span>SMM</span>
+                </label>
+                <label class="footer__label">
+                  <input type="checkbox" name="user_wish[]" value="Доработка" />
+                  <span>Доработка</span>
+                </label>
+                <label class="footer__label">
+                  <input type="checkbox" name="user_wish[]" value="Контекст" />
+                  <span>Контекст</span>
+                </label>
+                <label class="footer__label">
+                  <input type="checkbox" name="user_wish[]" value="Другое" />
+                  <span>Другое</span>
+                </label>
+              </div>
+              <button class="footer__button">Отправить</button>
+            </div>
+            <div class="footer__link">
+              <h3>Может быть полезно</h3>
+              <a href="https://www.belpromimpex.by/" target="_blank">БЕЛПРОМИМПЭКС</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+
 </html>

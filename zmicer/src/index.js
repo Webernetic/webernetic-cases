@@ -1,43 +1,42 @@
 import "./main.scss";
+import { printList } from "./modules/printList";
 
-import { createHeader } from "./modules/header";
-const wrapper = document.querySelector(".wrapper");
-const resultList = document.querySelector(".result__list");
-const aboutList = document.querySelector(".about__list");
+document.addEventListener("DOMContentLoaded", () => {
+  const resultList = document.querySelector(".result__list");
+  const aboutList = document.querySelector(".about__list");
+  const items = {
+    skills: ["CSS 3", "Wordpress", "PHP", "javascript", "HTML5", "Figma"],
+    directions: [
+      "Project Manager",
+      "Backend разработчик",
+      "Frontend разработчик",
+      "Тестировщик",
+      "Дизайнер",
+    ],
+  };
 
-const items = {
-  skills: ["CSS 3", "Wordpress", "PHP", "javascript", "HTML5", "Figma"],
-  directions: [
-    "Project Manager",
-    "Backend разработчик",
-    "Frontend разработчик",
-    "Тестировщик",
-    "Дизайнер",
-  ],
-};
+  printList(aboutList, items.skills);
+  printList(resultList, items.directions);
 
-wrapper.insertAdjacentHTML("afterbegin", createHeader());
+  const prototypeSection = document.querySelector(".prototype__scroll");
 
-function runTitle(el) {
-  let str = el.textContent;
-  let a = str.slice(1);
-  let b = str.slice(0, 1);
-  let newStr = a + b;
-  el.textContent = newStr;
-}
+  let isScroll = false;
+  window.addEventListener('scroll', () => {
+    let scrollPosition = Math.ceil(window.scrollY);
 
-function createItem(str) {
-  return `<li>${str}</li>`;
-}
 
-function printList(el, items) {
-  return el.insertAdjacentHTML(
-    "afterbegin",
-    items.map((text) => createItem(text)).join("")
-  );
-}
+    prototypeSection.addEventListener("scroll", () => {
+      let scroll = Math.ceil(prototypeSection.scrollTop);
+      let countHeight = prototypeSection.scrollHeight;
+      let hiddenHeight = prototypeSection.clientHeight;
 
-printList(aboutList, items.skills);
-printList(resultList, items.directions);
 
-// let s = setInterval(runTitle, 500, title)
+      if (scroll === countHeight - hiddenHeight) {
+        isScroll = true;
+      } else if (scroll === 0) {
+        isScroll = false;
+      }
+    })
+
+  })
+})

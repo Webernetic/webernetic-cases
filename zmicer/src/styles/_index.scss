@@ -20,6 +20,10 @@
   margin: 0;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .wrapper {
   max-width: 1400px;
   width: 100%;

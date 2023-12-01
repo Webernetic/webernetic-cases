@@ -1,13 +1,61 @@
 .prototype {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 700px;
-    border-radius: 10px;
-    background-color: $color-dark;
-    overflow: hidden;
+    &__wrapper {
+        position: relative;
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    &__scroll {
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        gap: 150px;
+        height: 700px;
+        padding: 60px;
+        background-color: $color-dark;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__img {
+        width: 600px;
+        z-index: 1;
+        &:nth-child(even) {
+            align-self: flex-end;
+        }
+        &:nth-child(1) {
+            height: 283px;
+            margin-top: 450px;
+        }
+        &:nth-child(2) {
+            height: 811px;
+        }
+        &:nth-child(3) {
+            width: 730px;
+            height: 369px;
+        }
+        &:nth-child(4) {
+            width: 860px;
+            height: 458px;
+        }
+        &:nth-child(5) {
+            width: 580px;
+            height: 314px;
+        }
+        &:nth-child(6) {
+            width: 702px;
+            height: 455px;
+            margin-right: 168px;
+        }
+    }
+
     &__title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         font-size: 128px;
         font-style: normal;
         font-weight: 700;
@@ -15,35 +63,5 @@
         color: $color-light;
         text-transform: uppercase;
     }
-    &__img {
-        position: absolute;
-        width: 600px;
-        height: 810px;
-        z-index: 1;
-        & img {
-            object-fit: cover;
-        }
-    }
-    &__down {
-        bottom: -68%;
-        right: 5%;
-    }
-    &__up {
-        top: -5%;
-        left: 5%;
-    }
-    &__arrow {
-        position: absolute;
-    }
 }
 
-.arrow__up {
-    top: 0;
-    left: 0;
-}
-
-.arrow__down {
-    bottom: 11%;
-    right: -16%;
-    transform: rotate(-90deg);
-}
