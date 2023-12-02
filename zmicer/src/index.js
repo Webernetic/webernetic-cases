@@ -1,5 +1,6 @@
 import "./main.scss";
 import { printList } from "./modules/printList";
+import { setupScrolling } from "./modules/setupScrolling";
 
 document.addEventListener("DOMContentLoaded", () => {
   const resultList = document.querySelector(".result__list");
@@ -17,26 +18,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   printList(aboutList, items.skills);
   printList(resultList, items.directions);
-
-  const prototypeSection = document.querySelector(".prototype__scroll");
-
-  let isScroll = false;
-  window.addEventListener('scroll', () => {
-    let scrollPosition = Math.ceil(window.scrollY);
-
-
-    prototypeSection.addEventListener("scroll", () => {
-      let scroll = Math.ceil(prototypeSection.scrollTop);
-      let countHeight = prototypeSection.scrollHeight;
-      let hiddenHeight = prototypeSection.clientHeight;
-
-
-      if (scroll === countHeight - hiddenHeight) {
-        isScroll = true;
-      } else if (scroll === 0) {
-        isScroll = false;
-      }
-    })
-
-  })
-})
+  setupScrolling(".prototype", ".prototype__scroll");
+});

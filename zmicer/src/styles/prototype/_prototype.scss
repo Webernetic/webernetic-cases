@@ -1,67 +1,67 @@
 .prototype {
-    position: relative;
-    &__wrapper {
-        position: relative;
-        width: 100%;
-        border-radius: 10px;
-        overflow: hidden;
-    }
-    &__scroll {
-        display: flex;
-        flex-direction: column;
-        overflow: auto;
-        gap: 150px;
-        height: 700px;
-        padding: 60px;
-        background-color: $color-dark;
-        &::-webkit-scrollbar {
-            display: none;
-        }
-    }
+  position: relative;
+  &__wrapper {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 700px;
+    background-color: $color-dark;
+  }
+  &__scroll {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    gap: 150px;
+    padding: 60px;
+    transition: transform 0.6s;
+    user-select: none;
+    z-index: 2;
+  }
 
-    &__img {
-        width: 600px;
-        z-index: 1;
-        &:nth-child(even) {
-            align-self: flex-end;
-        }
-        &:nth-child(1) {
-            height: 283px;
-            margin-top: 450px;
-        }
-        &:nth-child(2) {
-            height: 811px;
-        }
-        &:nth-child(3) {
-            width: 730px;
-            height: 369px;
-        }
-        &:nth-child(4) {
-            width: 860px;
-            height: 458px;
-        }
-        &:nth-child(5) {
-            width: 580px;
-            height: 314px;
-        }
-        &:nth-child(6) {
-            width: 702px;
-            height: 455px;
-            margin-right: 168px;
-        }
+  &__img {
+    width: 600px;
+    z-index: 1;
+    &:nth-child(even) {
+      align-self: flex-end;
     }
+    &:nth-child(1) {
+      height: 283px;
+      margin-top: 450px;
+    }
+    &:nth-child(2) {
+      height: 811px;
+    }
+    &:nth-child(3) {
+      width: 730px;
+      height: 369px;
+    }
+    &:nth-child(4) {
+      width: 860px;
+      height: 458px;
+    }
+    &:nth-child(5) {
+      width: 580px;
+      height: 314px;
+    }
+    &:nth-child(6) {
+      width: 702px;
+      height: 455px;
+      margin-right: 168px;
+    }
+  }
 
-    &__title {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 128px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 108.5%;
-        color: $color-light;
-        text-transform: uppercase;
-    }
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 108.5%;
+    color: $color-light;
+    text-transform: uppercase;
+    user-select: none;
+    // z-index: 1;
+  }
 }
-
