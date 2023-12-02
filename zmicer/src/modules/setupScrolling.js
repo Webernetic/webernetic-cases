@@ -6,7 +6,12 @@ export const setupScrolling = (blockSelector, scrollContainerSelector) => {
   const block = document.querySelector(blockSelector);
   const scrollContainer = document.querySelector(scrollContainerSelector);
 
-  window.addEventListener("scroll", () => {
+  if (!block || !scrollContainer) {
+    console.error("Block or scroll container not found");
+    return;
+  }
+
+  const checkScroll = () => {
     const blockPosition = block.getBoundingClientRect();
 
     if (
@@ -21,7 +26,11 @@ export const setupScrolling = (blockSelector, scrollContainerSelector) => {
       document.body.style.overflow = "auto";
       blockScrolling = false;
     }
-  });
+
+    requestAnimationFrame(checkScroll);
+  };
+
+  checkScroll();
 
   window.addEventListener(
     "wheel",
