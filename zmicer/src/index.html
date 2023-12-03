@@ -249,34 +249,40 @@
             <h2 class="footer__title">Заказать консультацию</h2>
             <div class="footer__actions">
               <div class="footer__inputs">
-                <input class="footer__input" type="text" placeholder="Имя *" />
-                <input class="footer__input" type="text" placeholder="Телефон *" />
-                <input class="footer__input" type="text" placeholder="E-mail *" />
-                <input class="footer__input" type="text" placeholder="Сайт *" />
+                <input class="footer__input" type="text" name="name" placeholder="Имя *" required/>
+                <input class="footer__input" type="text" name="tel" placeholder="Телефон *" required/>
+                <input class="footer__input" type="text" name="email" placeholder="E-mail *" required/>
+                <input class="footer__input" type="text" name="site" placeholder="Сайт *" required/>
               </div>
               <div class="footer__checkboxs">
-                <label class="footer__label">
-                  <input type="checkbox" name="user_wish[]" value="Сайт" />
+                <label class="checkbox">
+                  <input type="checkbox" name="user_wish[]" value="Сайт"/>
+                  <span class="checkbox__custom"></span>
                   <span>Сайт</span>
                 </label>
-                <label class="footer__label">
-                  <input type="checkbox" name="user_wish[]" value="SEO" />
+                <label class="checkbox">
+                  <input type="checkbox" name="user_wish[]" value="SEO"/>
+                  <span class="checkbox__custom"></span>
                   <span>SEO</span>
                 </label>
-                <label class="footer__label">
-                  <input type="checkbox" name="user_wish[]" value="SMM" />
+                <label class="checkbox">
+                  <input type="checkbox" name="user_wish[]" value="SMM"/>
+                  <span class="checkbox__custom"></span>
                   <span>SMM</span>
                 </label>
-                <label class="footer__label">
-                  <input type="checkbox" name="user_wish[]" value="Доработка" />
+                <label class="checkbox">
+                  <input type="checkbox" name="user_wish[]" value="Доработка"/>
+                  <span class="checkbox__custom"></span>
                   <span>Доработка</span>
                 </label>
-                <label class="footer__label">
-                  <input type="checkbox" name="user_wish[]" value="Контекст" />
+                <label class="checkbox">
+                  <input type="checkbox" name="user_wish[]" value="Контекст"/>
+                  <span class="checkbox__custom"></span>
                   <span>Контекст</span>
                 </label>
-                <label class="footer__label">
-                  <input type="checkbox" name="user_wish[]" value="Другое" />
+                <label class="checkbox">
+                  <input type="checkbox" name="user_wish[]" value="Другое"/>
+                  <span class="checkbox__custom"></span>
                   <span>Другое</span>
                 </label>
               </div>
