@@ -1,49 +1,59 @@
 .design {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 700px;
-  border-radius: 10px;
-  background-color: $color-red;
-  overflow: hidden;
+  &__wrapper {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 700px;
+    background-color: $color-red;
+  }
   &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 128px;
     font-style: normal;
     font-weight: 700;
     line-height: 108.5%;
     color: $color-light;
     text-transform: uppercase;
+    user-select: none;
+  }
+  &__scroll {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    gap: 150px;
+    padding: 60px;
+    transition: transform 0.6s;
+    user-select: none;
+    z-index: 2;
   }
   &__img {
-    position: absolute;
     width: 600px;
-    height: 810px;
     z-index: 1;
-    & img {
-      object-fit: cover;
+    &:nth-child(even) {
+      align-self: flex-end;
+    }
+    &:nth-child(1) {
+      height: 338px;
+      margin-top: 450px;
+    }
+    &:nth-child(2) {
+      height: 872px;
+    }
+    &:nth-child(3) {
+      width: 730px;
+      height: 1191px;
+    }
+    &:nth-child(4) {
+      width: 860px;
+      height: 799px;
+    }
+    &:nth-child(5) {
+      width: 830px;
+      height: 880px;
     }
   }
-  &__down {
-    bottom: -77%;
-    right: 5%;
-  }
-  &__up {
-    top: 0%;
-    left: 5%;
-  }
-  &__arrow {
-    position: absolute;
-  }
-}
-
-.arrow__up {
-  top: 0;
-  left: 0;
-}
-
-.arrow__down {
-  bottom: 11%;
-  right: -16%;
-  transform: rotate(-90deg);
 }

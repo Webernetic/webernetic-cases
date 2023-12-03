@@ -44,8 +44,8 @@ export const setupScrolling = (blockSelector, scrollContainerSelector) => {
           scrollAmount = 0;
         }
 
-        if (-containerHeight / 1.1 > scrollAmount) {
-          scrollAmount = -containerHeight / 1.1;
+        if (-containerHeight > scrollAmount) {
+          scrollAmount = -containerHeight;
           document.body.style.overflow = "auto";
           blockScrolling = false;
           blockScrolled = true;

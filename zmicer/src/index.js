@@ -19,4 +19,5 @@ document.addEventListener("DOMContentLoaded", () => {
   printList(aboutList, items.skills);
   printList(resultList, items.directions);
   setupScrolling(".prototype", ".prototype__scroll");
+  setupScrolling(".design", ".design__scroll");
 });
