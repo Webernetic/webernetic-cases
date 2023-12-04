@@ -3,7 +3,7 @@ import { printList } from "./modules/printList";
 import { setupScrolling } from "./modules/setupScrolling";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const resultList = document.querySelector(".result__list");
+  const resultList = document.querySelector(".dev__list");
   const stackList = document.querySelector(".stack__list");
   const items = {
     skills: ["CSS 3", "Wordpress", "PHP", "javascript", "HTML5", "Figma"],

@@ -25,11 +25,6 @@
     line-height: 140%;
     letter-spacing: 0.75px;
   }
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
   &__description {
     text-align: center;
     font-size: 30px;
@@ -53,6 +48,51 @@
     &__description {
       font-size: 18px;
       letter-spacing: 0.45px;
+    }
+  }
+}
+
+.dev {
+  position: relative;
+  width: 100%;
+  &__list {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @media (max-width: $max-width) {
+    width: 360px;
+    height: 180px;
+    &__list {
+      position: absolute;
+      left: -20px;
+      width: 360px;
+      gap: 5;
+      li {
+        flex: auto;
+      }
+      li:nth-child(1) {
+        order: -5;
+        background-color: $color-red;
+      }
+      li:nth-child(2) {
+        order: -2;
+        background-color: $color-dark !important;
+      }
+      li:nth-child(3) {
+        flex: none;
+        order: 1;
+        background-color: $color-red !important;
+      }
+      li:nth-child(4) {
+        order: -3;
+        background-color: $color-dark !important;
+      }
+      li:nth-child(5) {
+        order: -2;
+        background-color: $color-red !important;
+      }
     }
   }
 }

@@ -63,4 +63,7 @@
     text-transform: uppercase;
     user-select: none;
   }
+  @media (max-width: $max-width) {
+    display: none;
+  }
 }

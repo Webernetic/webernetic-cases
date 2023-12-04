@@ -38,7 +38,8 @@ body::-webkit-scrollbar {
   width: 100%;
   margin: 0 auto;
   @media (max-width: $max-width) {
-    max-width: 320px;
+    max-width: 360px;
+    padding: 0 20px;
   }
 }
 
@@ -60,6 +61,16 @@ body::-webkit-scrollbar {
   width: 100%;
   height: max-content;
   margin-bottom: 40px;
+  @media (max-width: $max-width) {
+    flex-wrap: wrap;
+    left: 0;
+    right: 0;
+    &__list {
+      li {
+        flex: auto;
+      }
+    }
+  }
 }
 
 ul {
@@ -92,10 +103,8 @@ img {
 
   @media (max-width: $max-width) {
     flex-wrap: wrap;
-    left: 0;
-    right: 0;
+    gap: 5px;
     & li {
-      flex: auto;
       display: flex;
       align-items: center;
       justify-content: center;

@@ -60,6 +60,9 @@
   &__arrow {
     position: absolute;
   }
+  @media (max-width: $max-width) {
+    display: none;
+  }
 }
 
 .arrow__up {
