@@ -1,8 +1,5 @@
 .about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 90px;
+  position: relative;
   &__content {
     position: relative;
     color: $color-light;
@@ -22,5 +19,15 @@
     width: 542px;
     height: 548px;
     transform: translate(0, -50%);
+  }
+
+  @media (max-width: $max-width) {
+    &__content {
+      padding: 25px;
+      font-size: 18px;
+    }
+    &__img {
+      display: none;
+    }
   }
 }

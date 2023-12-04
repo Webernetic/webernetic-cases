@@ -43,4 +43,27 @@
       background-color: #f76648;
     }
   }
+  @media (max-width: $max-width) {
+    &__wrapper {
+      flex-direction: column;
+      gap: 15px;
+    }
+    &__text {
+      width: 100%;
+      font-size: 18px;
+    }
+    &__style {
+      width: 100%;
+      gap: 30px;
+    }
+    &__font {
+      font-size: 40px;
+    }
+    &__colors {
+      div {
+        width: 95px;
+        height: 50px;
+      }
+    }
+  }
 }

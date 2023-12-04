@@ -21,4 +21,24 @@
         line-height: 160%;
         color: #000;
     }
+    @media (max-width: $max-width) {
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        &__img {
+            margin-top: 35px;
+            & img {
+                width: 320px;
+                height: 255px;
+                object-fit: cover;
+            }
+        }
+        &__text {
+            width: 100%;
+            height: max-content;
+            font-size: 18px;
+        }
+    }
 }

@@ -25,4 +25,23 @@
             object-fit: cover;
         }
     }
+    @media (max-width: $max-width) {
+        &__wrapper {
+            padding: 25px;
+        }
+        &__text {
+            width: 100%;
+            font-size: 18px;
+            margin-bottom: 118px;
+        }
+        &__img {
+            top: 72%;
+            right: 1%;
+            & img {
+                width: 310px;
+                height: 235px;
+                object-fit: cover;
+            }
+        }
+    }
 }

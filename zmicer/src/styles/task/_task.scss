@@ -28,4 +28,27 @@
             width: 460px;
         }
     }
+
+    @media (max-width: $max-width) {
+        justify-content: space-between;
+        gap: 10px;
+        &__title {
+            font-size: 18px;
+        }
+        &__list {
+            flex-direction: column;
+            gap: 0;
+            width: 245px;
+            ul {
+                font-size: 18px;
+                padding: 0 0 0 30px;
+            }
+            & ul:nth-child(1) {
+                width: 100%;
+            }
+            & ul:nth-child(2) {
+                width: 100%;
+            }
+        }
+    }
 }

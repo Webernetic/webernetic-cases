@@ -22,6 +22,21 @@
   &__img {
     position: absolute;
   }
+
+  @media (max-width: $max-width) {
+    height: 415px;
+    margin-bottom: 100px;
+    &__wrapper {
+      height: 100%;
+      padding: 25px;
+    }
+    &__text {
+      width: 100%;
+      height: max-content;
+      font-size: 18px;
+      line-height: 150%;
+    }
+  }
 }
 
 .phone-one {
@@ -32,6 +47,15 @@
     width: 150px;
     height: 326px;
   }
+  @media (max-width: $max-width) {
+    top: 45%;
+    left: 5%;
+    transform: rotate(-18.241deg);
+    & img {
+      width: 107px;
+      height: 233px;
+    }
+  }
 }
 .phone-two {
   top: -33%;
@@ -40,5 +64,12 @@
   & img {
     width: 205px;
     height: 447px;
+  }
+  @media (max-width: $max-width) {
+    top: 52%;
+    & img {
+      width: 137px;
+      height: 299px;
+    }
   }
 }

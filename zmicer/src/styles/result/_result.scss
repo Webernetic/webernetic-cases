@@ -37,4 +37,22 @@
     line-height: 140%;
     letter-spacing: 0.75px;
   }
+
+  @media (max-width: $max-width) {
+    &__content {
+      padding: 25px;
+    }
+    &__title {
+      font-size: 28px;
+      line-height: 150%;
+    }
+    &__text {
+      width: 100%;
+      font-size: 18px;
+    }
+    &__description {
+      font-size: 18px;
+      letter-spacing: 0.45px;
+    }
+  }
 }
