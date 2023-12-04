@@ -21,6 +21,7 @@
     user-select: none;
   }
   &__scroll {
+    position: relative;
     display: flex;
     flex-direction: column;
     height: max-content;
@@ -56,4 +57,18 @@
       height: 880px;
     }
   }
+  &__arrow {
+    position: absolute;
+  }
+}
+
+.arrow__up {
+  top: 0;
+  left: 0;
+}
+
+.arrow__down {
+  bottom: 0;
+  right: 0;
+  transform: rotate(-180deg);
 }
