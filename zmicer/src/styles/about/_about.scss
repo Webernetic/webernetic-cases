@@ -2,16 +2,15 @@
   position: relative;
   &__content {
     position: relative;
-    color: $color-light;
     padding: 60px;
     border-radius: 10px;
     background: #dd4a2e;
-    font-size: 26px;
-    font-weight: 400;
+  }
+  &__text {
     line-height: 150%;
     letter-spacing: 1px;
+    color: $color-light;
   }
-
   &__img {
     position: absolute;
     top: 50%;
@@ -24,7 +23,6 @@
   @media (max-width: $max-width) {
     &__content {
       padding: 25px;
-      font-size: 18px;
     }
     &__img {
       display: none;

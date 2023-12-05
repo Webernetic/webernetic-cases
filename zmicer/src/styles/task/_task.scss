@@ -15,10 +15,8 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
+            color: $color-text-dark;
             list-style: disc;
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 400;
             line-height: 141.5%;
         }
         & ul:nth-child(1) {
@@ -40,7 +38,6 @@
             gap: 0;
             width: 245px;
             ul {
-                font-size: 18px;
                 padding: 0 0 0 30px;
             }
             & ul:nth-child(1) {
