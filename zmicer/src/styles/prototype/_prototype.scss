@@ -19,34 +19,40 @@
   }
 
   &__img {
-    width: 600px;
     z-index: 1;
     &:nth-child(even) {
       align-self: flex-end;
     }
     &:nth-child(1) {
-      height: 283px;
       margin-top: 450px;
     }
-    &:nth-child(2) {
+    &:nth-child(6) {
+      margin-right: 168px;
+    }
+    & img {
+      width: 600px;
+    }
+    & img:nth-child(1) {
+      height: 283px;
+    }
+    & img:nth-child(2) {
       height: 811px;
     }
-    &:nth-child(3) {
+    & img:nth-child(3) {
       width: 730px;
       height: 369px;
     }
-    &:nth-child(4) {
+    & img:nth-child(4) {
       width: 860px;
       height: 458px;
     }
-    &:nth-child(5) {
+    & img:nth-child(5) {
       width: 580px;
       height: 314px;
     }
-    &:nth-child(6) {
+    & img:nth-child(6) {
       width: 702px;
       height: 455px;
-      margin-right: 168px;
     }
   }
 
@@ -64,25 +70,99 @@
     user-select: none;
   }
   @media (max-width: $max-width) {
-    display: none;
+    &__wrapper {
+      height: 600px;
+    }
+    &__title {
+      font-size: 45px;
+      line-height: 108.5%;
+    }
+    &__scroll {
+      gap: 50px;
+      padding: 15px;
+    }
+    &__img {
+      z-index: 1;
+
+      &:nth-child(1) {
+        margin-top: 450px;
+      }
+      &:nth-child(6) {
+        margin-right: 0;
+      }
+      & img:nth-child(1) {
+        width: 226px;
+        height: 107px;
+      }
+      & img:nth-child(2) {
+        width: 173px;
+        height: 233px;
+      }
+      & img:nth-child(3) {
+        width: 226px;
+        height: 116px;
+      }
+      & img:nth-child(4) {
+        width: 226px;
+        height: 120px;
+      }
+      & img:nth-child(5) {
+        width: 226px;
+        height: 122px;
+      }
+      & img:nth-child(6) {
+        height: 145px;
+        margin-right: 68px;
+      }
+    }
   }
 }
 
 .track {
   position: absolute;
-  display: flex;
+  display: none;
   justify-content: center;
   right: 10px;
-  background-color: red;
-  width: 30px;
+  background-color: green;
+  width: 5px;
   height: 100%;
   z-index: 5;
+  background-color: transparent;
   &__thumb {
     position: absolute;
     top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     width: 20px;
-    height: 20px;
-    background-color: #fff;
-    cursor: pointer;
+    height: 40px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    border: 1px solid $color-red;
+    cursor: grab;
+    opacity: 0.2;
+    &::after,
+    &::before {
+      text-align: center;
+      font-size: 10px;
+      line-height: 10px;
+      color: $color-red;
+    }
+    &::after {
+      transform: rotate(90deg);
+      content: "\23F5";
+    }
+    &::before {
+      transform: rotate(90deg);
+      content: "\23F4";
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+  @media (max-width: $max-width) {
+    display: flex;
   }
 }

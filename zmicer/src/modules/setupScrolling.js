@@ -1,4 +1,7 @@
 export const setupScrolling = (blockSelector, scrollContainerSelector) => {
+
+  if (window.innerWidth < 480) return
+
   let scrollAmount = 0;
   let blockScrolling = false;
   let blockScrolled = false;

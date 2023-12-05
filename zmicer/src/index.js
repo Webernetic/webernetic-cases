@@ -18,14 +18,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   printList(stackList, items.skills);
   printList(resultList, items.directions);
-  // setupScrolling(".prototype", ".prototype__scroll");
-  // setupScrolling(".design", ".design__scroll");
+  setupScrolling(".prototype", ".prototype__scroll");
+  setupScrolling(".design", ".design__scroll");
 });
 
 
 function slide() {
   const track = document.querySelector(".track");
   const thumb = document.querySelector(".track__thumb");
+  const scroll = document.querySelector(".prototype__scroll");
+  const scrollContainer = document.querySelector(".prototype__wrapper");
 
   let mouseDown = false;
 
@@ -61,8 +63,8 @@ function slide() {
 
     thumb.style.top = sliderPosition + "px";
 
-    // let maxOffset = track.offsetWidth - scrollContainer.offsetWidth;
-    // scrollContainer.scrollLeft = (sliderPosition / maxPosition) * maxOffset;
+    let maxOffset = scroll.offsetHeight - scrollContainer.offsetHeight;
+    scrollContainer.scrollTop = (sliderPosition / maxPosition) * maxOffset;
   };
 
   track.addEventListener("touchmove", moveSlider);
