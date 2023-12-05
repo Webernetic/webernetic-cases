@@ -11,7 +11,7 @@ export const setupScrolling = (blockSelector, scrollContainerSelector) => {
     return;
   }
 
-  const checkScroll = () => {
+  window.addEventListener("scroll", () => {
     const blockPosition = block.getBoundingClientRect();
 
     if (
@@ -26,17 +26,33 @@ export const setupScrolling = (blockSelector, scrollContainerSelector) => {
       document.body.style.overflow = "auto";
       blockScrolling = false;
     }
+  })
 
-    requestAnimationFrame(checkScroll);
-  };
+  // const checkScroll = () => {
+  //   const blockPosition = block.getBoundingClientRect();
 
-  checkScroll();
+  //   if (
+  //     blockPosition.top < window.innerHeight / 2 &&
+  //     blockPosition.bottom >= window.innerHeight / 2
+  //   ) {
+  //     if (!blockScrolled) {
+  //       document.body.style.overflow = "hidden";
+  //       blockScrolling = true;
+  //     }
+  //   } else if (blockPosition.bottom < window.innerHeight / 2) {
+  //     document.body.style.overflow = "auto";
+  //     blockScrolling = false;
+  //   }
+
+  //   requestAnimationFrame(checkScroll);
+  // };
+
+  // checkScroll();
 
   window.addEventListener(
     "wheel",
     (e) => {
       if (blockScrolling) {
-        e.preventDefault();
         const containerHeight = scrollContainer.getBoundingClientRect().height;
         scrollAmount -= e.deltaY;
 
@@ -54,6 +70,5 @@ export const setupScrolling = (blockSelector, scrollContainerSelector) => {
         scrollContainer.style.transform = `translateY(${scrollAmount}px)`;
       }
     },
-    { passive: false }
   );
 };

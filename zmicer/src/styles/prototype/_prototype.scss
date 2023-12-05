@@ -67,3 +67,22 @@
     display: none;
   }
 }
+
+.track {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  right: 10px;
+  background-color: red;
+  width: 30px;
+  height: 100%;
+  z-index: 5;
+  &__thumb {
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+}

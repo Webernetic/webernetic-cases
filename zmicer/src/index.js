@@ -18,6 +18,54 @@ document.addEventListener("DOMContentLoaded", () => {
 
   printList(stackList, items.skills);
   printList(resultList, items.directions);
-  setupScrolling(".prototype", ".prototype__scroll");
-  setupScrolling(".design", ".design__scroll");
+  // setupScrolling(".prototype", ".prototype__scroll");
+  // setupScrolling(".design", ".design__scroll");
 });
+
+
+function slide() {
+  const track = document.querySelector(".track");
+  const thumb = document.querySelector(".track__thumb");
+
+  let mouseDown = false;
+
+  const startDrag = () => {
+    document.body.style.overflow = "hidden";
+    return mouseDown = true;
+  };
+
+  const stopDrag = () => {
+    document.body.style.overflow = "auto";
+    return mouseDown = false
+  };
+
+  thumb.addEventListener("touchstart", startDrag);
+
+  window.addEventListener("touchend", stopDrag);
+
+  const moveSlider = (e) => {
+    if (!mouseDown) return;
+
+    let containerRect = track.getBoundingClientRect();
+    let sliderHeigth = thumb.offsetHeight;
+    let maxPosition = containerRect.height - sliderHeigth;
+
+
+    let clientY = e.clientY || e.touches[0].clientY
+    let mousePosition = clientY - containerRect.top;
+
+    let sliderPosition = Math.min(
+      maxPosition,
+      Math.max(0, mousePosition - sliderHeigth / 2)
+    );
+
+    thumb.style.top = sliderPosition + "px";
+
+    // let maxOffset = track.offsetWidth - scrollContainer.offsetWidth;
+    // scrollContainer.scrollLeft = (sliderPosition / maxPosition) * maxOffset;
+  };
+
+  track.addEventListener("touchmove", moveSlider);
+}
+
+slide() 
