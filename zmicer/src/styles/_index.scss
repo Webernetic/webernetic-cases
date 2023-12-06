@@ -20,6 +20,10 @@
   margin: 0;
 }
 
+body {
+  scroll-behavior: smooth;
+}
+
 body::-webkit-scrollbar {
   display: none;
 }
