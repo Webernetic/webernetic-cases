@@ -1,0 +1,131 @@
+.mobile-section {
+    margin-bottom: 130px;
+
+    @include bp-large {
+        margin-bottom: 40px;
+    }
+
+    @media only screen and (max-width: 500px) {
+        overflow: hidden;
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include bp-medium {
+            flex-direction: column;
+            align-items: normal;
+            justify-content: normal;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 40px;
+        color: rgba(125, 125, 129, 0.4);
+        font-size: 100px;
+        font-weight: 700;
+        line-height: 115.02%;
+
+        @include bp-xl {
+            font-size: 60px;
+        }
+
+        @include bp-large {
+            font-size: 50px;
+        }
+
+        @include bp-medium {
+            margin-bottom: 20px;
+            font-size: 40px;
+        }
+    }
+
+    &__text {
+        max-width: 350px;
+        color: rgba(0, 0, 0, 0.87);
+        font-size: 24px;
+        line-height: 130%;
+
+        @include bp-xl {
+            font-size: 22px;
+        }
+
+        @include bp-large {
+            font-size: 20px;
+        }
+
+        @include bp-medium {
+            font-size: 18px;
+        }
+    }
+
+    &__images {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        & > div {
+            width: 380px;
+            overflow: hidden;
+            & > img {
+                width: 100%;
+                border-radius: 15px;
+                border: 3px solid #c6c6c7;
+                object-fit: cover;
+            }
+        }
+
+        // & > div > img {
+        //     @media only screen and (max-width: 1620px) {
+        //         width: 380px;
+        //     }
+
+        //     @media only screen and (max-width: 1280px) {
+        //         width: 300px;
+        //     }
+
+        //     @media only screen and (max-width: 970px) {
+        //         width: 300px;
+        //     }
+
+        //     @media only screen and (max-width: 680px) {
+        //         width: 100px;
+        //     }
+        // }
+        & > div:nth-child(1) {
+            height: 1275px;
+        }
+        & > div:nth-child(2) {
+            height: 1460px;
+        }
+        & > div:nth-child(3) {
+            height: 1347px;
+        }
+        & > div:nth-child(4) {
+            height: 1250px;
+            > img:nth-child(2) {
+                height: 427px;
+            }
+        }
+
+        & > div:nth-child(4) {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+
+            @include bp-large {
+                gap: 30px;
+            }
+
+            @media only screen and (max-width: 680px) {
+                gap: 10px;
+            }
+        }
+    }
+}

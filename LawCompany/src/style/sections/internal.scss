@@ -28,7 +28,7 @@
 
 	&__title {
 		margin-bottom: 40px;
-		color: rgba(125, 125, 129, 0.40);
+		color: rgba(125, 125, 129, 0.4);
 		font-size: 100px;
 		font-weight: 700;
 		line-height: 115.02%;
@@ -71,8 +71,7 @@
 		justify-content: center;
 		gap: 30px;
 
-
-		&>div>img {
+		& > div > img {
 			@media only screen and (max-width: 1620px) {
 				width: 400px;
 			}
@@ -90,7 +89,7 @@
 			}
 		}
 
-		&>div:nth-child(1) {
+		& > div:nth-child(1) {
 			display: flex;
 			flex-direction: column;
 			gap: 60px;
@@ -106,10 +105,9 @@
 	}
 
 	&__pulse {
-
 		position: absolute;
 		z-index: -1;
-		background: radial-gradient(50% 50% at 50% 50%, #CC4A3D 0%, rgba(204, 74, 61, 0.00) 100%);
+		background: radial-gradient(50% 50% at 50% 50%, #cc4a3d 0%, rgba(204, 74, 61, 0) 100%);
 		animation: pulse 2s linear infinite;
 
 		&_1 {
