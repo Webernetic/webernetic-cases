@@ -1,0 +1,62 @@
+-
+	var technologies = [
+		{
+			title:'Frontend',
+			values:['JAVASCRIPT','CSS3','HTML5']
+		},
+		{
+			title:'Backend',
+			values:['WordPress','SQL','PHP']
+		},
+		{
+			title:'Integrations',
+			values:['Company internal services']
+		}
+	]
+
+	var technologiesIcons = [
+		require("../assets/icons/wpIcon.png"),
+		require("../assets/icons/htmlIcon.png"),
+		require("../assets/icons/cssIcon.png")
+	]
+
+section.section.home-section
+
+	.container.home-section__container
+
+		div.project-desc
+			h1.home-section__title.
+				Website Development for law company
+				
+			img(src=require("../assets/img/pcImage.png"), alt="pc", class="logo")
+
+			p.home-section__desc
+				b STERLING LAWYERS LTD 
+				| is a law firm based in the UK. The team advises small, medium businesses and private person on business immigration to the UK.
+			
+			h2.home-section__sub-title.
+				Task from the client:
+			
+			p.home-section__desc.
+				We needed to create a modern corporate website, which is understandable and user-friendly. We used Wordpress, because the old site was created on this CMS.
+
+			h2.home-section__sub-title.
+				Website: 
+
+			p.home-section__desc.
+				https://sterling-law.co.uk
+		
+		div.project-tech 
+
+			div.project-tech__icons
+				each icon in technologiesIcons
+					img(src=icon)
+
+			div.project-tech__group
+				each val in technologies
+					div
+						p.project-tech__title= val.title
+						div.project-tech__items
+							each tit in val.values 
+								p=tit
+		

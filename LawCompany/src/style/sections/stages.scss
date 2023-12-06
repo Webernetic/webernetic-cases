@@ -1,0 +1,87 @@
+.stages-section {
+	margin-bottom: 100px;
+
+	@include bp-large {
+		margin-bottom: 60px;
+	}
+
+	&__container {
+		font-size: 18px;
+
+		@include bp-small {
+			font-size: 14px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 60px;
+		color: #CC4A3D;
+		line-height: 115.02%;
+
+		@include bp-medium {
+			margin-bottom: 25px;
+		}
+	}
+
+	&__stages {
+		display: grid;
+		gap: 40px;
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+		@include bp-large {
+			column-gap: 20px;
+		}
+
+		@include bp-medium {
+			grid-template-columns: 1fr;
+			gap: 20px;
+		}
+	}
+
+	&__stage {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 317px;
+		padding: 0 15px;
+		border-left: 2px solid rgba(204, 74, 61, 0.40);
+
+		@include bp-medium {
+			height: auto;
+			padding: 10px 0;
+			flex-direction: row-reverse;
+			gap: 73px;
+			border-left: 0px;
+			border-top: 2px solid rgba(204, 74, 61, 0.40);
+			justify-content: flex-end;
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+
+		@include bp-small {
+			gap: 10px;
+		}
+	}
+
+	&__item {
+		line-height: 130%;
+	}
+
+	&__counter {
+		flex-shrink: 0;
+		color: #C6C6C8;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 115.02%;
+
+		@include bp-small {
+			font-size: 18px;
+		}
+	}
+}
+
+.title {}

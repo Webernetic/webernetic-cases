@@ -1,0 +1,41 @@
+-
+	var stages = [
+		[
+			'Competitor analysis',
+			'Target audience analysis',
+			'Sitemap development',
+			'Development of technical specifications. Preparation for SEO promotion',
+		],
+		[
+			'Selection of references',
+			'Prototyping',
+			'Design creation',
+			'Creating an adaptive version',
+		],
+		[
+			'HTML /CSS site layout',
+			'Function programming',
+			'Installation and configuration of modules',
+			'Page load optimization',
+			'Website testing',
+		],
+		[
+			'Basic content filling',
+			'Delivery of the project to the client',
+			'Site publishing',
+		],
+	]
+
+section.section.stages-section
+	
+	.container.stages-section__container
+		h2.stages-section__title.
+			#Stages_of_work
+
+		.stages-section__stages
+			each items, index in stages
+				div.stages-section__stage
+					div.stages-section__items
+						each item in items
+							p.stages-section__item= item
+					p.stages-section__counter STAGE #{index + 1}

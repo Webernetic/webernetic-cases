@@ -1,0 +1,29 @@
+body {
+	font-family: 'Cera Pro', 'sans-serif';
+	color: $primary;
+}
+
+.container {
+	max-width: $maxWidth;
+	padding: 0 100px;
+	margin: 0 auto;
+
+	@include bp-large {
+		padding: 0 20px;
+	}
+}
+
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(0.9);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}

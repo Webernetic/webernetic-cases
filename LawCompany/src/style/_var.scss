@@ -1,0 +1,45 @@
+// Colors
+$primary: #000;
+$secondary: rgba(0, 0, 0, 0.87);
+$gradient: linear-gradient(166deg, #CC4A3D 3.73%, rgba(204, 74, 61, 0) 54.67%);
+$bgLight: #ECECED;
+$fontLight: #C6C6C8;
+
+// Template
+$maxWidth: 1400px;
+
+$xl-2: 1630px;
+$xl: 1300px;
+$large: 1130px;
+$medium: 767px;
+$small: 480px;
+
+@mixin bp-2xl {
+	@media only screen and (max-width: $xl-2) {
+		@content;
+	}
+}
+
+@mixin bp-xl {
+	@media only screen and (max-width: $xl) {
+		@content;
+	}
+}
+
+@mixin bp-large {
+	@media only screen and (max-width: $large) {
+		@content;
+	}
+}
+
+@mixin bp-medium {
+	@media only screen and (max-width: $medium) {
+		@content;
+	}
+}
+
+@mixin bp-small {
+	@media only screen and (max-width: $small) {
+		@content;
+	}
+}

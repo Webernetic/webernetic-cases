@@ -1,0 +1,199 @@
+.home-section {
+	background: $gradient;
+
+	&__container {
+		padding: 92px 100px;
+		position: relative;
+
+		@include bp-large {
+			padding: 36px 20px;
+		}
+
+		.project-desc {
+			max-width: 600px;
+			margin-bottom: 130px;
+
+			@include bp-xl {
+				margin-bottom: 80px;
+				max-width: 500px;
+			}
+
+			@media only screen and (max-width: 900px) {
+				max-width: 380px;
+			}
+
+			@include bp-medium {
+				display: flex;
+				max-width: 600px;
+				margin: 0 auto 60px;
+				flex-direction: column;
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: 60px;
+		font-size: 75px;
+		font-weight: 700;
+		line-height: 115.02%;
+
+		@include bp-xl {
+			margin-bottom: 40px;
+			font-size: 60px;
+		}
+
+		@include bp-large {
+			margin-bottom: 25px;
+			font-size: 40px;
+		}
+	}
+
+	&__sub-title {
+		margin-bottom: 10px;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 130%;
+
+		@include bp-xl {
+			margin-bottom: 5px;
+			font-size: 20px;
+		}
+
+		@include bp-large {
+			font-size: 18px;
+		}
+	}
+
+	&__desc {
+		color: $secondary;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 130%;
+
+		@include bp-xl {
+			font-size: 20px;
+		}
+
+		@include bp-large {
+			font-size: 18px;
+		}
+	}
+
+	&__desc:not(:last-child) {
+		margin-bottom: 40px;
+
+		@include bp-xl {
+			margin-bottom: 20px;
+		}
+	}
+
+	.project-tech {
+		display: flex;
+		gap: 100px;
+
+		@include bp-large {
+			gap: 50px;
+		}
+
+		@include bp-medium {
+			flex-direction: column;
+			align-items: center;
+			gap: 25px;
+		}
+
+		&__icons {
+			display: flex;
+			gap: 30px;
+
+			@include bp-large {
+				gap: 25px;
+			}
+
+			@include bp-medium {
+				gap: 20px;
+			}
+
+			&>img {
+				width: 70px;
+				height: 70px;
+				padding: 15px;
+				border-radius: 50%;
+				background-color: $bgLight;
+
+				@include bp-medium {
+					width: 60px;
+					height: 60px;
+				}
+			}
+		}
+
+		&__group {
+			display: flex;
+			gap: 100px;
+
+			@include bp-xl {
+				gap: 50px;
+			}
+
+			@include bp-medium {
+				flex-wrap: wrap;
+			}
+		}
+
+		&__title {
+			color: $fontLight;
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 115.02%;
+			margin-bottom: 20px;
+		}
+
+		&__items {
+			max-width: 200px;
+			word-wrap: break-word;
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+			color: $secondary;
+			font-size: 24px;
+			font-weight: 400;
+			line-height: 115.02%;
+
+			@include bp-xl {
+				font-size: 20px;
+			}
+
+			@include bp-medium {
+				font-size: 18px;
+			}
+		}
+	}
+}
+
+.logo {
+	height: 926px;
+	position: absolute;
+	top: 17px;
+	right: -105px;
+
+	@include bp-2xl {
+		top: 92px;
+		right: 0;
+		height: 700px;
+	}
+
+	@include bp-xl {
+		height: 600px;
+	}
+
+	@include bp-large {
+		height: 450px;
+		top: 36px;
+	}
+
+	@include bp-medium {
+		position: static;
+		align-self: center;
+		margin-bottom: 25px;
+	}
+}

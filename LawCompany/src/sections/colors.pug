@@ -1,0 +1,55 @@
+-
+	var colors = [
+		{
+			color: '#F6F6F6',
+			value: '# F6F6F6'
+		},
+		{
+			color: '#CC4A3D',
+			value: '# CC4A3D'
+		},
+		{
+			color: '#000000',
+			value: '# 000000'
+		},
+		{
+			color: '#D8D8D8',
+			value: '# D8D8D8'
+		},
+		{
+			color: '#E8E8E8',
+			value: '# E8E8E8'
+		}
+	]
+
+section.section.colors-section
+	
+	.container.colors-section__container
+
+		h2.colors-section__title.
+			Colors
+
+		.colors-section__colors-inner 
+
+
+			div.colors-section__color-items 
+
+				each color in colors
+					div.obs
+						svg(xmlns="http://www.w3.org/2000/svg",width="130",height="80",viewBox="0 0 130 80",fill="none")
+							path(d="M1 1H99.5858L129 30.4142V79H1V1Z",stroke="black",stroke-width="2", fill=color.color)
+						p= color.value
+
+			img(src=require("../assets/img/phone1Img.png"), alt="")
+
+		
+		.colors-section__font-inner
+
+			img(src=require("../assets/img/phone2Img.png"), alt="")
+
+			.colors-section__font
+				h3.
+					Cera Pro
+
+					
+				img(src=require("../assets/img/fontsImg.png"), alt="")
