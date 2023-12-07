@@ -19,13 +19,13 @@ footer.footer
 
                     .footer__inputs
                         each input in inputs
-                            input.footer__input(type="text" placeholder=input)
+                            input.footer__input(type="text" placeholder=input required)
                     h3.footer__subtitle.
                         How can I help you?
                     .footer__checkboxs
                         each service in services
                             label.footer__label
-                                input(type="checkbox")
+                                input(type="checkbox" name="user_wish[]" value=service)
                                 span #{service}
 
                     button.footer__button.
