@@ -6,7 +6,7 @@
         left: 0;
         top: -120%;
         bottom: 0;
-        background: linear-gradient(349deg, #d15d51 26.67%, rgba(209, 93, 81, 0) 56.34%);
+        background: $gradientBottom;
         z-index: -1;
     }
     &__wrapper {

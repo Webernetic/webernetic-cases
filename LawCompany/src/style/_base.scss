@@ -29,9 +29,25 @@ body {
 	}
 }
 
-.gradient {
-	position: absolute;
-	right: 0;
-	left: 0;
-	background: linear-gradient(343deg, #d15d51 32.67%, rgba(209, 93, 81, 0) 75.34%);
+.section-title {
+	font-family: Cera Pro;
+	font-size: 90px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 100%;
+	text-transform: capitalize;
+	margin-bottom: 40px;
+	color: $title-color;
+	@include bp-xl {
+		font-size: 60px;
+	}
+
+	@include bp-large {
+		font-size: 50px;
+	}
+
+	@include bp-medium {
+		margin-bottom: 20px;
+		font-size: 40px;
+	}
 }

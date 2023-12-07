@@ -1,9 +1,11 @@
 // Colors
 $primary: #000;
 $secondary: rgba(0, 0, 0, 0.87);
-$gradient: linear-gradient(166deg, #CC4A3D 3.73%, rgba(204, 74, 61, 0) 54.67%);
+$gradient: linear-gradient(166deg, #CC4A3D 3.73%, rgba(204, 74, 61, 0) 32.67%);
+$gradientBottom: linear-gradient(349deg, #d15d51 26.67%, rgba(209, 93, 81, 0) 56.34%);
 $bgLight: #ECECED;
 $fontLight: #C6C6C8;
+$title-color: rgba(125, 125, 129, 0.40);
 
 // Template
 $maxWidth: 1400px;

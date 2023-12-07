@@ -16,10 +16,6 @@
 
 	&__title {
 		margin-bottom: 40px;
-		color: rgba(125, 125, 129, 0.40);
-		font-size: 100px;
-		font-weight: 700;
-		line-height: 115.02%;
 
 		@include bp-xl {
 			font-size: 60px;
@@ -181,10 +177,6 @@
 
 		>h3 {
 			margin-bottom: 40px;
-			color: rgba(125, 125, 129, 0.40);
-			font-size: 100px;
-			font-weight: 700;
-			line-height: 115.02%;
 
 			@include bp-xl {
 				font-size: 60px;
