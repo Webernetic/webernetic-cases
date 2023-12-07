@@ -1,21 +1,5 @@
 .menu-section {
     margin-bottom: 130px;
-    &__title {
-        margin-bottom: 40px;
-
-        @include bp-xl {
-            font-size: 60px;
-        }
-
-        @include bp-large {
-            font-size: 50px;
-        }
-
-        @include bp-medium {
-            margin-bottom: 20px;
-            font-size: 40px;
-        }
-    }
 
     &__image {
         display: flex;

@@ -13,17 +13,6 @@
 		}
 	}
 
-	&__title {
-		margin-bottom: 60px;
-		color: #CC4A3D;
-		line-height: 115.02%;
-		text-transform: uppercase;
-
-		@include bp-medium {
-			margin-bottom: 25px;
-		}
-	}
-
 	&__stages {
 		display: grid;
 		gap: 40px;
@@ -45,7 +34,7 @@
 		justify-content: space-between;
 		height: 317px;
 		padding: 0 15px;
-		border-left: 2px solid rgba(204, 74, 61, 0.40);
+		border-left: 2px solid rgba(204, 74, 61, 0.4);
 
 		@include bp-medium {
 			height: auto;
@@ -53,7 +42,7 @@
 			flex-direction: row-reverse;
 			gap: 73px;
 			border-left: 0px;
-			border-top: 2px solid rgba(204, 74, 61, 0.40);
+			border-top: 2px solid rgba(204, 74, 61, 0.4);
 			justify-content: flex-end;
 		}
 	}
@@ -74,7 +63,7 @@
 
 	&__counter {
 		flex-shrink: 0;
-		color: #C6C6C8;
+		color: #c6c6c8;
 		font-size: 24px;
 		font-weight: 700;
 		line-height: 115.02%;
@@ -85,4 +74,5 @@
 	}
 }
 
-.title {}
+.title {
+}

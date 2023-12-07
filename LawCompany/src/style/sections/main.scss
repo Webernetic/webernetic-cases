@@ -14,30 +14,12 @@
 		}
 	}
 
-	&__title {
-		margin-bottom: 40px;
-		color: rgba(125, 125, 129, 0.40);
-
-		@include bp-xl {
-			font-size: 60px;
-		}
-
-		@include bp-large {
-			font-size: 50px;
-		}
-
-		@include bp-medium {
-			font-size: 40px;
-			margin-bottom: 15px;
-		}
-	}
-
 	&__img {
 		margin: 0 auto;
 		max-width: 1028px;
 		position: relative;
 
-		&>img {
+		& > img {
 			display: block;
 			width: 100%;
 			height: 100%;
@@ -45,10 +27,9 @@
 	}
 
 	&__pulse {
-
 		position: absolute;
 		z-index: -1;
-		background: radial-gradient(50% 50% at 50% 50%, #CC4A3D 0%, rgba(204, 74, 61, 0.00) 100%);
+		background: radial-gradient(50% 50% at 50% 50%, #cc4a3d 0%, rgba(204, 74, 61, 0) 100%);
 		animation: pulse 2s linear infinite;
 
 		&_1 {
@@ -86,7 +67,6 @@
 				width: 169px;
 				height: 169px;
 			}
-
 		}
 
 		&_3 {

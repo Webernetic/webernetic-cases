@@ -26,23 +26,6 @@
 		}
 	}
 
-	&__title {
-		margin-bottom: 40px;
-
-		@include bp-xl {
-			font-size: 60px;
-		}
-
-		@include bp-large {
-			font-size: 50px;
-		}
-
-		@include bp-medium {
-			margin-bottom: 20px;
-			font-size: 40px;
-		}
-	}
-
 	&__text {
 		max-width: 350px;
 		color: rgba(0, 0, 0, 0.87);

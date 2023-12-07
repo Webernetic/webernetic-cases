@@ -5,19 +5,6 @@
 		margin-bottom: 25px;
 	}
 
-	&__title {
-		margin-bottom: 60px;
-		color: #CC4A3D;
-		font-size: 18px;
-		line-height: 115.02%;
-		text-transform: uppercase;
-
-		@include bp-small {
-			margin-bottom: 25px;
-			font-size: 14px;
-		}
-	}
-
 	&__text {
 		color: rgba(0, 0, 0, 0.87);
 		font-size: 24px;
