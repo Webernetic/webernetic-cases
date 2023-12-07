@@ -81,6 +81,9 @@
 				gap: 10px;
 			}
 		}
+		@media (max-width: $small) {
+			gap: 10px;
+		}
 	}
 
 	&__pulse {

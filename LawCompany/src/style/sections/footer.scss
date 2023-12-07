@@ -12,7 +12,7 @@
     &__wrapper {
         display: flex;
         justify-content: space-between;
-        padding: 59px 0 114px 0;
+        padding: 0 0 114px 0;
     }
     &__image {
         position: relative;
@@ -121,18 +121,22 @@
     }
 
     @media (max-width: 480px) {
+        &__wrapper {
+            padding: 0 0 50px 0;
+        }
         &__image {
             display: none;
         }
-        &__pm {
-            display: none;
-        }
+        
         &__title {
             font-size: 25px;
         }
         &__actions {
             gap: 30px;
             margin-bottom: 56px;
+        }
+        &__form {
+            width: 100%;
         }
         &__inputs {
             height: auto;
@@ -141,10 +145,16 @@
         &__input {
             width: 100%;
         }
+        &__subtitle {
+            font-size: 20px;
+        }
         &__checkboxs {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 0 25px;
+        }
+        &__label {
+            font-size: 14px;
         }
         &__button {
             font-size: 20px;

@@ -11,4 +11,8 @@
             }
         }
     }
+
+    @media (max-width: $small) {
+        margin-bottom: 110px;
+    }
 }
