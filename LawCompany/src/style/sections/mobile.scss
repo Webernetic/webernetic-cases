@@ -70,47 +70,22 @@
         display: flex;
         justify-content: center;
         gap: 30px;
-        & > div {
-            width: 380px;
-            overflow: hidden;
-            & > img {
-                width: 100%;
-                border-radius: 15px;
-                border: 3px solid #c6c6c7;
-                object-fit: cover;
+
+        & > div > img {
+            @media only screen and (max-width: 1620px) {
+                width: 400px;
             }
-        }
 
-        // & > div > img {
-        //     @media only screen and (max-width: 1620px) {
-        //         width: 380px;
-        //     }
+            @media only screen and (max-width: 1280px) {
+                width: 300px;
+            }
 
-        //     @media only screen and (max-width: 1280px) {
-        //         width: 300px;
-        //     }
+            @media only screen and (max-width: 970px) {
+                width: 200px;
+            }
 
-        //     @media only screen and (max-width: 970px) {
-        //         width: 300px;
-        //     }
-
-        //     @media only screen and (max-width: 680px) {
-        //         width: 100px;
-        //     }
-        // }
-        & > div:nth-child(1) {
-            height: 1275px;
-        }
-        & > div:nth-child(2) {
-            height: 1460px;
-        }
-        & > div:nth-child(3) {
-            height: 1347px;
-        }
-        & > div:nth-child(4) {
-            height: 1250px;
-            > img:nth-child(2) {
-                height: 427px;
+            @media only screen and (max-width: 680px) {
+                width: 140px;
             }
         }
 

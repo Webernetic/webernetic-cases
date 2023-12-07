@@ -1,0 +1,39 @@
+- var services = ['Website', 'SEO', 'SMM', 'Refinement', 'Context', 'Other']
+- var inputs = ['Name *', 'Phone number *', 'E-mail *', 'Website *']
+footer.footer
+
+    .container
+
+        .footer__wrapper
+
+            .footer__image
+                img(src=require("../assets/img/photo.png"), alt="")
+                img(src=require("../assets/icons/promo.svg"), alt="")
+
+            form.footer__form
+
+                h2.footer__title.
+                    Order a consultation
+
+                .footer__actions
+
+                    .footer__inputs
+                        each input in inputs
+                            input.footer__input(type="text" placeholder=input)
+                    h3.footer__subtitle.
+                        How can I help you?
+                    .footer__checkboxs
+                        each service in services
+                            label.footer__label
+                                input(type="checkbox")
+                                span #{service}
+
+                    button.footer__button.
+                        Send
+
+                .footer__link
+                    h3.
+                        It might be useful
+                    a(href="https://www.belpromimpex.by/" target="_blank").
+                        БЕЛПРОМИМПЭКС
+        .footer__gradient

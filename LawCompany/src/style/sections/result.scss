@@ -1,0 +1,42 @@
+.result-section {
+    &__container {
+        position: relative;
+        display: flex;
+        padding: 82px 0 167px 0;
+    }
+    &__content {
+        max-width: 576px;
+    }
+    &__title {
+        margin-bottom: 40px;
+        color: #cc4a3d;
+        font-size: 18px;
+        line-height: 115.02%;
+        text-transform: uppercase;
+
+        @include bp-small {
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+    }
+
+    &__text {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 12px;
+        color: rgba(0, 0, 0, 0.87);
+        font-size: 24px;
+        line-height: 130%;
+
+        @include bp-small {
+            color: #000;
+            font-size: 18px;
+            line-height: 140%;
+        }
+    }
+    &__image {
+        position: absolute;
+        top: 0%;
+        right: 10%;
+    }
+}

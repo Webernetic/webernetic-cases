@@ -1,6 +1,8 @@
 body {
-	font-family: 'Cera Pro', 'sans-serif';
+	position: relative;
+	font-family: "Cera Pro", "sans-serif";
 	color: $primary;
+	background-color: #f6f6f6;
 }
 
 .container {
@@ -12,7 +14,6 @@ body {
 		padding: 0 20px;
 	}
 }
-
 
 @keyframes pulse {
 	0% {
@@ -26,4 +27,11 @@ body {
 	100% {
 		transform: scale(1);
 	}
+}
+
+.gradient {
+	position: absolute;
+	right: 0;
+	left: 0;
+	background: linear-gradient(343deg, #d15d51 32.67%, rgba(209, 93, 81, 0) 75.34%);
 }
