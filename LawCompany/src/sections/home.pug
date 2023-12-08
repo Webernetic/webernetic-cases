@@ -50,11 +50,11 @@ section.section.home-section
 
 			div.project-tech__icons
 				each icon in technologiesIcons
-					img(src=icon)
+					img(src=icon class="project-tech__icon")
 
 			div.project-tech__group
 				each val in technologies
-					div
+					div.project-tech__box
 						p.project-tech__title= val.title
 						div.project-tech__items
 							each tit in val.values 

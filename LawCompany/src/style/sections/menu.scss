@@ -1,5 +1,6 @@
 .menu-section {
     margin-bottom: 130px;
+    position: relative;
 
     &__image {
         display: flex;
@@ -8,6 +9,68 @@
             width: 1028px;
             @media only screen and (max-width: 680px) {
                 width: 320px;
+            }
+        }
+    }
+
+    &__pulse {
+        position: absolute;
+        z-index: -1;
+        background: radial-gradient(50% 50% at 50% 50%, #cc4a3d 0%, rgba(204, 74, 61, 0) 100%);
+        animation: pulse 2s linear infinite;
+
+        &_1 {
+            top: 60%;
+            left: 25%;
+            width: 283px;
+            height: 283px;
+            border-radius: 283px;
+
+            @media only screen and (max-width: 1620px) {
+                top: 12%;
+                right: 19%;
+            }
+
+            @media only screen and (max-width: 970px) {
+                width: 110px;
+                height: 110px;
+                top: 16%;
+                right: 29%;
+            }
+
+            @media only screen and (max-width: 680px) {
+                top: 23%;
+                right: 3%;
+            }
+        }
+
+        &_2 {
+            top: 0%;
+            right: 25%;
+            width: 370px;
+            height: 370px;
+            border-radius: 436px;
+
+            @media only screen and (max-width: 1620px) {
+                top: 26%;
+                left: 10%;
+            }
+
+            @media only screen and (max-width: 1280px) {
+                width: 350px;
+                top: 26%;
+                left: 15%;
+            }
+
+            @media only screen and (max-width: 970px) {
+                width: 129px;
+                height: 129px;
+                top: 37%;
+                left: 28%;
+            }
+
+            @media only screen and (max-width: 680px) {
+                left: -3%;
             }
         }
     }

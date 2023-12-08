@@ -1,6 +1,5 @@
 .home-section {
 	background: $gradient;
-
 	&__container {
 		padding: 92px 100px;
 		position: relative;
@@ -92,6 +91,13 @@
 		display: flex;
 		gap: 100px;
 
+		&__box {
+			opacity: 0;
+		}
+		&__icon {
+			opacity: 0;
+		}
+
 		@include bp-large {
 			gap: 50px;
 		}
@@ -114,7 +120,7 @@
 				gap: 20px;
 			}
 
-			&>img {
+			& > img {
 				width: 70px;
 				height: 70px;
 				padding: 15px;
@@ -169,6 +175,7 @@
 			}
 		}
 	}
+	
 }
 
 .logo {
@@ -196,5 +203,26 @@
 		position: static;
 		align-self: center;
 		margin-bottom: 25px;
+	}
+}
+
+.isActive {
+	animation: 0.5s isVisible forwards;
+	transform: scale(1);
+}
+
+@keyframes isVisible {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	75% {
+		scale: 1.1;
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
 	}
 }
