@@ -1,5 +1,5 @@
-- var services = ['Website', 'SEO', 'SMM', 'Refinement', 'Context', 'Other']
-- var inputs = ['Name *', 'Phone number *', 'E-mail *', 'Website *']
+- var services = ['Сайт', 'SEO', 'SMM', 'Доработка', 'Контекст', 'Другое']
+- var inputs = ['Имя *', 'Телефон *', 'E-mail *', 'Сайт *']
 footer.footer
 
     .container
@@ -13,7 +13,7 @@ footer.footer
             form.footer__form
 
                 h2.footer__title.
-                    Order a consultation
+                    Заказать консультацию
 
                 .footer__actions
 
@@ -21,7 +21,7 @@ footer.footer
                         each input in inputs
                             input.footer__input(type="text" placeholder=input required)
                     h3.footer__subtitle.
-                        How can I help you?
+                        Чем вам помочь?
                     .footer__checkboxs
                         each service in services
                             label.footer__label
@@ -29,11 +29,11 @@ footer.footer
                                 span #{service}
 
                     button.footer__button.
-                        Send
+                        Отправить
 
                 .footer__link
                     h3.
-                        It might be useful
+                        Может быть полезно
                     a(href="https://www.belpromimpex.by/" target="_blank").
                         БЕЛПРОМИМПЭКС
         .footer__gradient

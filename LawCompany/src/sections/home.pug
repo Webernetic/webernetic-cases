@@ -9,8 +9,8 @@
 			values:['WordPress','SQL','PHP']
 		},
 		{
-			title:'Integrations',
-			values:['Company internal services']
+			title:'Интеграции',
+			values:['Внутренние сервисы компании']
 		}
 	]
 
@@ -26,26 +26,26 @@ section.section.home-section
 
 		div.project-desc
 			h1.home-section__title.
-				Website Development for law company
-				
-			img(src=require("../assets/img/pcImage.png"), alt="pc", class="logo")
+				Разработка сайта для юридической компании
+
+			img(src=require("../assets/img/pcImage.png"), alt="pc" class="logo")
 
 			p.home-section__desc
 				b STERLING LAWYERS LTD 
-				| is a law firm based in the UK. The team advises small, medium businesses and private person on business immigration to the UK.
-			
-			h2.home-section__sub-title.
-				Task from the client:
-			
-			p.home-section__desc.
-				We needed to create a modern corporate website, which is understandable and user-friendly. We used Wordpress, because the old site was created on this CMS.
+				| юридическая компания из Великобритании. Команда консультирует малый, средний бизнес и частных лиц по иммиграции бизнеса в Великобританию.
 
 			h2.home-section__sub-title.
-				Website: 
+				Задача от клиента:
+
+			p.home-section__desc.
+				Создать современный корпоративный сайт, понятный и удобный для пользователей. Использовать Wordpress, так как старый сайт был создан на даной CMS.
+
+			h2.home-section__sub-title.
+				Сайт:: 
 
 			p.home-section__desc.
 				https://sterling-law.co.uk
-		
+
 		div.project-tech 
 
 			div.project-tech__icons
@@ -59,4 +59,3 @@ section.section.home-section
 						div.project-tech__items
 							each tit in val.values 
 								p=tit
-		

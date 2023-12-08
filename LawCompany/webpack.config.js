@@ -27,7 +27,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
-    filename: 'index.[contenthash].js',
+    filename: path.join("js", 'main.[contenthash].js'),
     assetModuleFilename: "assets/[name][ext]",
   },
   plugins: [
@@ -35,7 +35,7 @@ const config = {
       template: path.resolve(__dirname, 'src', 'index.pug')
     }),
     new MiniCssExtractPlugin({
-      filename: devMode ? '[name].css' : '[name].[contenthash].css',
+      filename: devMode ? path.join('css', '[name].css') : path.join('css', '[name].[contenthash].css'),
     })
   ],
   module: {

@@ -1,8 +1,9 @@
-body {
+.low-wrapper {
 	position: relative;
 	font-family: "Cera Pro", "sans-serif";
 	color: $primary;
 	background-color: #f6f6f6;
+	z-index: 1;
 }
 
 .container {
@@ -30,7 +31,7 @@ body {
 	}
 }
 
-.section-title {
+.low-wrapper .section-title {
 	font-family: Cera Pro;
 	font-size: 90px;
 	font-style: normal;
@@ -53,7 +54,7 @@ body {
 	}
 }
 
-.hash-title {
+.low-wrapper .hash-title {
 	font-family: Cera Pro;
 	font-size: 18px;
 	font-style: normal;
@@ -66,4 +67,25 @@ body {
 		margin-bottom: 25px;
 		font-size: 14px;
 	}
+}
+
+.low-wrapper .home-section__title {
+	margin-bottom: 60px;
+	font-size: 75px;
+	font-weight: 700;
+	line-height: 115.02%;
+
+	@include bp-xl {
+		margin-bottom: 40px;
+		font-size: 60px;
+	}
+
+	@include bp-large {
+		margin-bottom: 25px;
+		font-size: 40px;
+	}
+}
+
+.low-wrapper p {
+	margin: 0;
 }

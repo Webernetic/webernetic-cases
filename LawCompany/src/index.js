@@ -1,5 +1,5 @@
 import './index.pug'
-import './index.scss'
+import './main.scss'
 
 document.addEventListener('DOMContentLoaded', () => {
 
