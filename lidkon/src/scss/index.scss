@@ -78,7 +78,7 @@ input{
     
     .lidkon__inner {
         position: relative;
-        background: url('/img/bg-1.png');
+        background: url('../img/bg-1.png');
         background-repeat: no-repeat;
     }
     
@@ -89,7 +89,7 @@ input{
         height: 100px;
         right: 0;
         top: 0;
-        background: url('/img/webernetic.svg');
+        background: url('../img/webernetic.svg');
         background-repeat: no-repeat;
         background-position: center;
         z-index: 1;
@@ -162,7 +162,7 @@ input{
     }
     
     .summary__block {
-        background: url('/img/summary-bot.png') no-repeat;
+        background: url('../img/summary-bot.png') no-repeat;
         max-width: 470px;
         @include flexCol;
         gap: 10px;
@@ -198,7 +198,7 @@ input{
             }
     
             &:not(.block-white) {
-                background: url('/img/summary-top.png') no-repeat;
+                background: url('../img/summary-top.png') no-repeat;
             }
         }
     }
@@ -240,7 +240,7 @@ input{
         position: relative;
     
         &.item-1 {
-            background: url('/img/steps-bg-1.png') no-repeat;
+            background: url('../img/steps-bg-1.png') no-repeat;
             margin-top: 107px;
             margin-bottom: 96px;
         }
@@ -284,7 +284,7 @@ input{
         }
     
         &.item-2 {
-            background: url('/img/steps-bg-2.png') no-repeat;
+            background: url('../img/steps-bg-2.png') no-repeat;
     
             .steps__text-el {
                 max-width: 470px;
@@ -383,7 +383,7 @@ input{
     
         &.item-3 {
             margin: 40px 0;
-            background: url('/img/steps-bg-5.png') no-repeat;
+            background: url('../img/steps-bg-5.png') no-repeat;
     
             .steps__num {
                 background: $pale;
@@ -409,7 +409,7 @@ input{
     
         &.item-4 {
             margin-bottom: 90px;
-            background: url('/img/steps-bg-6.png') no-repeat;
+            background: url('../img/steps-bg-6.png') no-repeat;
     
             .steps__num {
                 color: $white;
@@ -439,7 +439,7 @@ input{
     }
     
     .result__main {
-        background: url('/img/result-bg-1.png') no-repeat;
+        background: url('../img/result-bg-1.png') no-repeat;
         @include flexCol;
         gap: 35px;
         padding: 84px 0 106px 45px;
@@ -464,7 +464,7 @@ input{
     }
     
     .result__secondary {
-        background: url('/img/result-bg-2.png') no-repeat;
+        background: url('../img/result-bg-2.png') no-repeat;
         position: absolute;
         z-index: -1;
         top: 170px;
@@ -713,7 +713,7 @@ input{
     
     @media (max-width: 998px) {
         .lidkon__inner {
-            background: url('/img/m-bg-1.png') no-repeat;
+            background: url('../img/m-bg-1.png') no-repeat;
             background-size: cover;
             background-position-x: center;
         }
@@ -747,7 +747,7 @@ input{
         }
     
         .lidkon__webernetic {
-            background: url('/img/m-webernetic.svg') no-repeat;
+            background: url('../img/m-webernetic.svg') no-repeat;
             max-width: 60px;
             height: 52px;
             background-position: center;
@@ -922,7 +922,7 @@ input{
         .steps__item.item-1 {
             margin: 0;
             flex-direction: column;
-            background: url('/img/m-steps-bg-1.png') no-repeat;
+            background: url('../img/m-steps-bg-1.png') no-repeat;
             background-size: contain;
         }
     
@@ -944,7 +944,7 @@ input{
     
         .steps__item.item-2 {
             flex-direction: column-reverse;
-            background: url('/img/m-steps-bg-2.png') no-repeat;
+            background: url('../img/m-steps-bg-2.png') no-repeat;
             background-size: contain;
         }
     
@@ -1031,7 +1031,7 @@ input{
     
         .steps__item.item-3 {
             margin: 0;
-            background: url('/img/m-steps-bg-5.png') no-repeat;
+            background: url('../img/m-steps-bg-5.png') no-repeat;
             background-size: contain;
             background-position-x: center;
         }
@@ -1061,7 +1061,7 @@ input{
     
         .steps__item.item-4 {
             margin: 0;
-            background: url('/img/m-steps-bg-6.png') no-repeat;
+            background: url('../img/m-steps-bg-6.png') no-repeat;
             background-position: center;
             background-size: contain;
             @include flex;
@@ -1091,7 +1091,7 @@ input{
         .result__main {
             padding: 0;
             gap: 12px;
-            background: url('/img/m-result-bg-1.png') no-repeat;
+            background: url('../img/m-result-bg-1.png') no-repeat;
             background-position: center;
             background-position-y: top;
             background-size: auto;
@@ -1103,7 +1103,7 @@ input{
             padding: 0;
             height: auto;
             position: static;
-            background: url('/img/m-result-bg-2.png') no-repeat;
+            background: url('../img/m-result-bg-2.png') no-repeat;
             background-size: auto;
             background-position: center;
             background-position-y: top;
