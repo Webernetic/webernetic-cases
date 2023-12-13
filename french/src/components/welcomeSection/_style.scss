@@ -1,4 +1,6 @@
 .welcome {
+    position: relative;
+
     &__wrapper {
         display: flex;
         flex-direction: column;
@@ -19,13 +21,72 @@
     }
 
     &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
         width: 456px;
         & > p {
+            @include text-style;
+        }
+    }
+
+    &__stacks {
+        display: flex;
+        gap: 30px;
+
+        & > ul {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            list-style: none;
+
+            color: $link-color;
             font-family: Mulish;
-            font-size: 20px;
+            font-size: 16px;
             font-style: normal;
-            font-weight: 400;
+            font-weight: 600;
             line-height: 150.2%;
+            text-transform: uppercase;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        top: -7%;
+        right: 5%;
+        width: 720px;
+        height: 737px;
+        background: url("../../assets/img/welcome-bg.png") center no-repeat;
+    }
+
+    @media (max-width: $media-sm) {
+
+        .container {
+            padding: 0  ;
+        }
+
+        &__wrapper {
+            gap: 90px;
+            padding: 28px 20px;
+        }
+
+        &__title {
+            width: 100%;
+            font-size: 36px;
+        }
+
+        &__info {
+            gap: 24px;
+            width: 294px;
+        }
+
+        &__stacks {
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        &__image {
+            display: none;
         }
     }
 }

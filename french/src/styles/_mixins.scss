@@ -1,0 +1,12 @@
+@mixin text-style {
+    font-family: Mulish;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150.2%;
+    color: $text-color;
+
+    @media (max-width: $media-sm) {
+        font-size: 16px;
+    }
+}
