@@ -1,0 +1,21 @@
+.task {
+    &__content {
+        width: 550px;
+    }
+
+    &__title {
+        @include title-style;
+        margin-bottom: 30px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 0 0 20px;
+
+        & > li {
+            @include text-style;
+        }
+    }
+}
