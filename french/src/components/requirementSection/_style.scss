@@ -1,16 +1,176 @@
 .requirement {
     &__wrapper {
+        position: relative;
         padding: 60px;
         color: $text-color;
         background-color: $section-color;
         border-radius: 60px;
+        overflow: hidden;
     }
 
     &__title {
-        font-family: Forum;
-        font-size: 40px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 110%;
+        @include title-style;
+        margin-bottom: 30px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 700px;
+        list-style: none;
+    }
+
+    &__item {
+        width: 100%;
+        padding: 30px;
+        border-radius: 30px;
+        background: #f7efff;
+
+        & > h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        & > p {
+            @include text-style;
+        }
+    }
+
+    &__circle {
+        position: absolute;
+        opacity: 0.3;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) -18.06%, rgba(255, 255, 255, 0) 123.61%);
+        box-shadow:
+            1px 1px 4px 0px #fff inset,
+            -20px -20px 100px 0px #fff inset;
+    }
+
+    .smoll {
+        right: 20%;
+        bottom: -5%;
+        width: 290px;
+        height: 290px;
+        border-radius: 290px;
+    }
+
+    .big {
+        top: -15%;
+        right: -10%;
+        width: 552px;
+        height: 552px;
+        border-radius: 552px;
+    }
+
+    .candy-one {
+        position: absolute;
+        top: 5%;
+        right: 8%;
+        width: 200px;
+        height: 200px;
+        background: url("../../assets/img/candy1.png") center no-repeat;
+    }
+    .candy-two {
+        position: absolute;
+        top: 40%;
+        right: 5%;
+        width: 85px;
+        height: 83px;
+        background: url("../../assets/img/candy2.png") center no-repeat;
+    }
+    .candy-three {
+        position: absolute;
+        top: 50%;
+        right: 25%;
+        width: 131.825px;
+        height: 140px;
+        background: url("../../assets/img/candy3.png") center no-repeat;
+    }
+    .candy-four {
+        position: absolute;
+        bottom: 0%;
+        right: 2%;
+        width: 231.196px;
+        height: 220.348px;
+        background: url("../../assets/img/candy4.png") center no-repeat;
+    }
+
+    .crumb-one {
+        position: absolute;
+        top: 32%;
+        right: 25%;
+        width: 30.958px;
+        height: 36.543px;
+        background: url("../../assets/img/crumbs1.png") center no-repeat;
+    }
+    .crumb-two {
+        position: absolute;
+        top: 48%;
+        right: 10%;
+        width: 128px;
+        height: 142px;
+        background: url("../../assets/img/crumbs2.png") center no-repeat;
+    }
+    .crumb-three {
+        position: absolute;
+        bottom: 16%;
+        right: 22%;
+        width: 130px;
+        height: 85px;
+        background: url("../../assets/img/crumbs3.png") center no-repeat;
+    }
+
+    @media (max-width: $media-sm) {
+        .candy-two,
+        .candy-three,
+        .candy-four,
+        .crumb-one,
+        .crumb-two,
+        .crumb-three {
+            display: none;
+        }
+
+        .candy-one {
+            top: 6%;
+            right: 0%;
+            width: 60px;
+            height: 60px;
+            background-size: cover;
+        }
+
+        .smoll {
+            top: -1%;
+            right: -25%;
+            width: 190px;
+            height: 190px;
+        }
+
+        .big {
+            top: 77%;
+            left: -50%;
+            width: 400px;
+            height: 400px;
+        }
+
+        .container {
+            padding: 0;
+        }
+
+        &__wrapper {
+            padding: 28px 20px;
+        }
+
+        &__title {
+            margin-bottom: 20px;
+        }
+
+        &__list {
+            width: 100%;
+        }
+
+        &__item {
+            padding: 16px;
+        }
     }
 }

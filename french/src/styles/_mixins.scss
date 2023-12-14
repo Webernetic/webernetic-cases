@@ -10,3 +10,16 @@
         font-size: 16px;
     }
 }
+
+@mixin title-style {
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    color: $text-color;
+
+    @media (max-width: $media-sm) {
+        font-size: 28px;
+    }
+}
