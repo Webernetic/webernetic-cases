@@ -1,0 +1,16 @@
+.requirement {
+    &__wrapper {
+        padding: 60px;
+        color: $text-color;
+        background-color: $section-color;
+        border-radius: 60px;
+    }
+
+    &__title {
+        font-family: Forum;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%;
+    }
+}
