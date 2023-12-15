@@ -1,0 +1,81 @@
++layout("done", "done__wrapper")
+
+    h2.done__title.
+        Что было сделано?
+
+    article.review
+
+        .review__content 
+
+            h3.review__title.
+                Анализ
+
+            p.review__text.
+                Был проведен анализ конкурентов и целевой аудитории 
+                для выявления трендов и сильных сторон существующих сайтов, 
+                а также с целью узнать какие инструменты и функционал могут 
+                привлечь пользователей и повысить эффективность работы сайта.
+
+        .review__images
+
+            .review__image
+                img(src=require("./assets/img/review1.png"), alt="logo")
+
+            .review__image
+                img(src=require("./assets/img/review2.png"), alt="logo")
+
+
+    article.redesign 
+
+        .redesign__others 
+
+            .redesign__font
+                div.font Forum
+                div.font Mulish
+
+            .redesign__color 
+                div.color
+                div.color
+                div.color
+                div.color
+
+        .redesign__content
+
+            h3.redesign__title.
+                Редизайн
+
+            span.redesign__subtitle.
+                Разработка нового дизайна сайта включала в себя:
+
+            ul.redesign__list 
+                li.redesign__item исследование и анализ конкурентов и целевой аудитории
+
+                li.redesign__item прототипирование
+
+                li.redesign__item разработка трех концепций
+                    p.
+                        На этапе согласования заказчику понравились все предложенные дизайны,
+                            поэтому проджект-менеджер и дизайнер давали подробное объяснение, 
+                            что какой дизайн закрывает и какие преимущества он имеет. 
+                            Было важно проконтролировать процесс согласования и убедиться, 
+                            что клиент получает всю необходимую информацию для принятия правильного решения.
+
+                li.redesign__item разработка дизайна главной страницы и других компонентов сайта
+
+    .done__screen
+
+    article.word-press
+
+        .word-press__content
+            h3.word-press__title.
+                Создан новый сайт на CMS WordPress
+
+            p.word-press__text.
+                Исходный сайт был выполнен в Tilda, но для масштабирования и удобства 
+                в навигации приняли решение разработать <strong>многостраничный сайт на WordPress</strong>.<br/> 
+                Была проведена полная разработка сайта с использованием этой CMS. 
+                WordPress <strong>прост в использовании и администрировании</strong>. 
+                Люди даже без технических знаний могут легко добавлять новые страницы и медиа-контент на сайте. 
+        
+        .word-press__images
+            img(class="phones" src=require("./assets/img/phons.png"), alt="logo")

@@ -6,6 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const animationParams = {
         tackImgs: document.querySelectorAll(".task__img"),
         phoneImg: document.querySelectorAll(".problem__phone"),
+        reviewImgs: document.querySelectorAll(".review__image"),
+        colors: document.querySelectorAll(".color"),
+        fonts: document.querySelectorAll(".font"),
+        screen: document.querySelectorAll(".done__screen"),
+        phones: document.querySelectorAll(".phones"),
         options: {
             root: null,
             rootMargin: '0px',
@@ -31,4 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     animationParams.delayVisible(animationParams.phoneImg);
     animationParams.delayVisible(animationParams.tackImgs);
+    animationParams.delayVisible(animationParams.reviewImgs);
+    animationParams.delayVisible(animationParams.colors);
+    animationParams.delayVisible(animationParams.fonts);
+    animationParams.delayVisible(animationParams.screen);
+    animationParams.delayVisible(animationParams.phones);
 })

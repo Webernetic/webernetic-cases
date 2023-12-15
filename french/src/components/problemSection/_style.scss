@@ -15,12 +15,8 @@
     &__circle {
         width: 500px;
         height: 500px;
-        border-radius: 500px;
+        @include circle-style;
         opacity: 0.6;
-        background: linear-gradient(180deg, rgba(238, 220, 255, 0.08) -18.06%, rgba(238, 220, 255, 0) 123.61%);
-        box-shadow:
-            1px 1px 4px 0px #eedcff inset,
-            -20px -20px 100px 0px #eedcff inset;
     }
 
     &__phone {
