@@ -8,12 +8,15 @@
         margin: 60px auto;
     }
 
-    &__circle {
+    &__image {
         position: relative;
+    }
+
+    &__circle {
         width: 500px;
         height: 500px;
         border-radius: 500px;
-        // opacity: 0.6;
+        opacity: 0.6;
         background: linear-gradient(180deg, rgba(238, 220, 255, 0.08) -18.06%, rgba(238, 220, 255, 0) 123.61%);
         box-shadow:
             1px 1px 4px 0px #eedcff inset,
@@ -28,6 +31,7 @@
         height: 600px;
         background: url("../../assets/img/duoPhone.png") center no-repeat;
         background-size: cover;
+        opacity: 0;
     }
 
     &__text {

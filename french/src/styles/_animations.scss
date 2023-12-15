@@ -1,0 +1,27 @@
+.animation {
+    animation: 0.6s ascent forwards;
+	transform: scale(1);
+}
+
+@keyframes ascent {
+    0% {
+		opacity: 0;
+        transform: translateY(30px);
+        animation-timing-function: linear;
+	}
+	50% {
+		opacity: 0.5;
+        transform: translateY(20px);
+        animation-timing-function: linear;
+	}
+	75% {
+		scale: 1.1;
+		opacity: 0.7;
+        transform: translateY(10px);
+        animation-timing-function: ease-out;
+	}
+	100% {
+		opacity: 1;
+        transform: translateY(0px);
+	}
+}

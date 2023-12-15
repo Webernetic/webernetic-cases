@@ -1,5 +1,15 @@
 +layout("task", "task__wrapper")
 
+    .task__images
+        .task__circle
+        .task__circle
+        .task__img
+            img(src=require("./assets/img/task1.png"), alt="logo")
+        .task__img
+            img(src=require("./assets/img/task2.png"), alt="logo")
+        .task__img
+            img(src=require("./assets/img/task3.png"), alt="logo")
+
     .task__content 
 
         h2.task__title.
@@ -21,3 +31,4 @@
                 Внедрить модуль с расписанием
             li.
                 Произвести тестирование сайта
+
