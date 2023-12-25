@@ -2,18 +2,39 @@
 
 $max-width: 1400px;
 
+//spacings
+$spacing-1: 100px;
+$spacing-2: 75px;
+$spacing-3: 70px;
+$spacing-4: 60px;
+$spacing-5: 50px;
+$spacing-6: 40px;
+$spacing-7: 35px;
+$spacing-8: 30px;
+$spacing-9: 24px;
+$spacing-10: 20px;
+$spacing-11: 18px;
+$spacing-12: 16px;
+$spacing-13: 10px;
+$spacing-14: 7px;
+$spacing-15: 5px;
+
+
 //fonts
 $font-family: Circe;
-$font-weight-bold: 500;
-$font-weight-primary: 700;
+$font-weight-bold: 700;
+$font-weight-primary: 500;
 
+$line-height-primary: 130%;
+$line-height-secondary: 120%;
+$line-height-H: 110%;
 
-$font-size: 1.75rem;
-$font-size-secondary: 2rem;
-$font-size-H1: 3.875rem;
-$font-size-H2: 3.44rem;
-$font-size-H3: 2.25rem;
-$font-size-H4: 2rem;
+$font-size: clamp(1rem, 2vw, 1.75rem);
+$font-size-secondary: clamp(1.06rem, 2.3vw, 2rem);
+$font-size-H1: clamp(1.5rem, 4vw, 3.875rem);
+$font-size-H2: clamp(1.5rem, 4.4vw, 3.44rem);
+$font-size-H3: clamp(1.06rem, 2.5vw, 2.1rem);
+$font-size-H4: clamp(1.06rem, 2.3vw, 2rem);
 
 
 $font-color: #363636;
@@ -27,4 +48,5 @@ $max-width: 1400px;
 $bg-secondary: #F5F5F5;
 $bg-dark: #393939;
 $bg-bright: #F16237;
+$bg-white: #ffffff;
 
