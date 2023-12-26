@@ -4,6 +4,7 @@ include mixins/img.pug
 include mixins/aboutClientItem.pug
 include mixins/target.pug
 include mixins/stage.pug
+include mixins/resultItem.pug
 
 block title
   | Sysracks
@@ -18,7 +19,7 @@ block content
       +wrapper(class="brightBg header_content")
         p.header_title.boldText.colorInvertText Как перенести сайт с одной платформы на другую, не уронив позиции и подняться в Топ-5 поисковой выдачи 
         .header_imgWrapper
-          +img("./assets/images/computer.png", "Awesome alt text", ["500", "1200"])
+          +img("./assets/images/computer.png", "Компьютер", ["500", "1200"])
     section.clientsSection
       +wrapper(class="darkBg colorInvertText")
         +aboutClientItem("О клиенте:", "Официальный дистрибютор оборудования для теелкоммуникаций и серверных стоек. Под NDA")
@@ -28,8 +29,10 @@ block content
         +aboutClientItem("Регион продвижения:", "США")
     section.targetsSection
       .targetsSection_item
+        +img("./assets/images/runningManLeft.png", "Бегущий человек", ["500", "1200"])(class="targetsSection_img")
+        +img("./assets/images/runningMan.png", "Бегущий человек", ["500", "1200"])(class="targetsSection_img")
       .targetsSection_item
-        h2 Цели проекта:
+        h2.targetsSection_header Цели проекта:
         ul.targetsSection_targetList
           +target("Попасть в ТОП-5 Google")
           +target("Увеличить продажи")
@@ -46,9 +49,10 @@ block content
           p Клиент пришел с запросом сменить регион и продвигаться на США, до этого он работал с Канадой. Для реализации этих планов мы порекомендовали сменить доменную зону с .ca на .com. 
           p Это логический шаг, чтобы привлечь американскую аудиторию.
         div
-          p dfd
+          +img("./assets/images/com.png", ".com", ["500", "1200"])
       .stageProjectSection_loading
-        div aadad
+        div 
+          +img("./assets/images/loading.png", "Изображение загрузки", ["500", "1200"])
         +wrapper(class="secondaryBg") 
           h3 Переезд на новую CMS
           p Изначально сайт был на Битрикс, но он не подходит для продвижения в англоязычных странах, так как платформа ориентирована на рынок СНГ. Например, функциональность корзины была неудобной и непонятной для иностранных пользователей. 
@@ -59,39 +63,78 @@ block content
         p.stagesSection_info Пока разрабатывался новый сайт, мы разместили старую версию на новом домене, начали добавлять контент и наращивать ссылки на главную страницу.
         p.stagesSection_info В период и после создания сайта были выполнены 9 этапов 
       .stagesSection_line
-        +stage("01","Сбор семантического ядра, которое регулярно обновляется")
+        +stage("01","Сбор семантического ядра, которое регулярно обновляется")(class="secondaryBg")
         +wrapper(class="brightBg verticalCenter colorWhite") 
           p В настоящее время клиент решил расширить сайт и добавить версии на французском и испанском языках. Команда уже начала собирать семантику для этого обновления.
       .stagesSection_line
-        +stage("02","Подготовка структуры сайта и структуры меню")
+        div
+          +stage("02","Подготовка структуры сайта и структуры меню")(class="secondaryBg")
+          div 
+            +img("./assets/images/aboutUs.png", "О нас", ["500", "1200"])
+        div
+          +img("./assets/images/equipment.png", "Оборудование", ["500", "1200"])
       .stagesSection_line
-        +stage("03","Подготовка контент-плана на основе собранного семантического ядра, созданы новые страницы и текст для их продвижения")
+        +stage("03","Подготовка контент-плана на основе собранного семантического ядра, созданы новые страницы и текст для их продвижения")(class="secondaryBg")
         +wrapper(class="secondaryBg verticalCenter") 
           p В ходе работы клиент предложил перенести тексты с канадского сайта на новый. При анализе мы обнаружили, что контент неуникальный и скопирован из других источников. Это могло вызвать проблемы в продвижении, о чем мы объяснили клиенту. После согласования приступили к созданию новых текстов.
       +wrapper(class="brightBg colorWhite")
         h4.stage_numberWrapper.stage__numberInvert С какой проблемой столкнулись при создании новых текстов?
         p Было сложно найти копирайтера, специализирующегося в сложной технической тематике, т.к. в основном в серверах разбираются сисьемные администраторы, но мало кто из них имеет писательское хобби. В итоге мы все-таки нашли технически грамотного специалиста, который глубоко понимает тематику телекоммуникационного оборудования.
       .stagesSection_line
-        +stage("04","Подготовка уникальных мета-тегов","stage__numberInvert")(class="brightBg")
+        +stage("04","Подготовка уникальных мета-тегов","stage__numberInvert")(class="stage__invert")
         +wrapper(class="secondaryBg verticalCenter") 
           p Команда подготовила мета-теги h1, title и description и внесла на сайт на продвигаемые страницы
+          +img("./assets/images/tags.png", "Тэги", ["500", "1200"])(class="stagesSection_tags")
       .stagesSection_line
-        +stage("05","Подготовка ТЗ для отдела разработки")
+        +stage("05","Подготовка ТЗ для отдела разработки")(class="secondaryBg")
         +wrapper(class="secondaryBg verticalCenter") 
           p В ТЗ были подробно описаны SEO-требования, которые должны быть учтены при переносе сайта
       .stagesSection_line
-        +stage("06","Анализ ссылочного профиля сайта клиента и сайтов конкурентов")
+        +stage("06","Анализ ссылочного профиля сайта клиента и сайтов конкурентов")(class="secondaryBg")
         +wrapper(class="secondaryBg verticalCenter") 
           p Были изучены конкуренты по этой же тематике, имеющие наиболее высокую видимость сайта в поисковых системах. На основе анализа был составлен план наращивания ссылочной массы. Сейчас мы активно занимаемся наращиванием ссылок, получая ежемесячно бесплатные ссылки с форумов, каталогов и практикуем guest posting.
       .stagesSection_line
-        +stage("07","Анализ юзабилити и коммерческих факторов ранжирования, изучение конкурентов")
+        +stage("07","Анализ юзабилити и коммерческих факторов ранжирования, изучение конкурентов")(class="secondaryBg")
         +wrapper(class="brightBg verticalCenter colorWhite") 
           p Учитывая, что сайт был в стадии разработки, все наши рекомендации из анализа были внедрены.
+          .stagesSection_imageWrapper   
+             +img("./assets/images/delivery.png", "Тэги", ["500", "1200"])  
+             +img("./assets/images/404.png", "Тэги", ["500", "1200"]) 
       .stagesSection_line
-        +stage("08","Ведение блога")
+        +stage("08","Ведение блога")(class="secondaryBg")
         +wrapper(class="secondaryBg verticalCenter") 
           p Для заполнения Блога на сайте собрали информационные запросы и стали регулярно писать статьи.
       .stagesSection_line
-        +stage("09","Разработка стратегии увеличения количества продаж", "stage__numberInvert")(class="brightBg")
+        +stage("09","Разработка стратегии увеличения количества продаж", "stage__numberInvert")(class="stage__invert")
         +wrapper(class="secondaryBg verticalCenter") 
           p В процессе работы в рамках продвижения клиент поставил цель - х заказов/день. Мы начали исследовать, почему некоторые пользователи не завершают оформление заказа и не покупают. Провели аудит корзины, проанализировали воронку продаж и в итоге сформулировали гипотезы. 
+      +stage("Итог","После внедрения наших рекомендаций и последовательной работы, смогли увеличить количество заказов на сайте на 15%.","stage__numberInvert")(class="darkBg stagesSection_lastLine")
+    section.seoSection
+        h2.seoSection__title А что дальше?      
+        +wrapper(class="secondaryBg flexColumn")
+          .flexContainer 
+            +wrapper(class="whiteBg") 
+              p SEO - это непрерывный и цикличный процесс, поэтому после завершения одного этапа работ мы снова начинаем сначала. Регулярные аудиты и обновление СЯ важны, потому что в интернете постоянно меняются требования поисковых систем и поведение пользователей. 
+            .seoSection_imageWrapper
+              +img("./assets/images/seo.png", "Сео", ["500", "1200"]) 
+          +wrapper(class="brightBg colorWhite") 
+            p Например, то, что раньше было популярным запросом, сейчас может быть устаревшим, а новые слова и фразы становятся востребованными. Такие циклы работ позволяют оптимизировать контент, привлекать больше трафика и оставаться в Топ выдачи.
+          .flexContainer 
+            +wrapper(class="darkBg colorWhite boldText seoSection__blockWidth")
+              p В результате одного из повторных аудитов команда предложила дополнительный функционал для добавления на сайт.
+            div 
+              +target("Отслеживание заказов")
+              +target("Онлайн-консультант")
+              +target("Блок обратной связи")
+    section.resultsSection
+      h2.resultsSection_title Результаты на новом сайте:
+      +resultItem("01") 
+        p.boldText Вывели #[span.brightText 34%] собранных запросов #[span.brightText в Топ-10 Google], а #[span.brightText 75% в Топ-30 Google]
+      +resultItem("02") 
+        p.boldText Привлекли #[span.brightText в 3 раза больше посетителей], кто интересуется серверным оборудованием за 10 месяцев
+      +wrapper(class="darkBg colorWhite ")
+        h4.resultsSection_graphTitle Рост органического трафика 
+        .resultsSection_imageWrapper
+          +img("./assets/images/traffic.png", "График роста органического трафика", ["500", "1200"])(class="resultsSection_image")
+      +resultItem("03") 
+        p.boldText #[span.brightText Увеличили прибыль в 2,6 раза], и после клиент поднял средний чек
