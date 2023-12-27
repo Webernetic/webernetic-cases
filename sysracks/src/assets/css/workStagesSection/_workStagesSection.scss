@@ -9,7 +9,7 @@
   &_stagesWrapper {
     display: flex;
     flex-direction: column;
-    gap: clamp($spacing-13, 2.1vw, $spacing-8);
+    gap: clamp($spacing-10, 2.1vw, $spacing-8);
   }
 
   &_info {
@@ -41,7 +41,7 @@
 
   &_line {
     display: flex;
-    gap: $spacing-10;
+    gap: clamp($spacing-13, 1.4vw, $spacing-10);
 
     & > div:first-of-type {
       flex-basis: 40%;
@@ -59,6 +59,32 @@
     }
   }
 
+  &_gridLine {
+    display: grid;
+    grid-template:
+      "lineHeader image2"
+      "image1 image2" / 40% 1fr;
+    gap: clamp($spacing-13, 1.4vw, $spacing-10);
+
+    & > div:nth-child(1) {
+      grid-area: lineHeader;
+    }
+
+    & > div:nth-child(2) {
+      grid-area: image1;
+    }
+
+    & > div:nth-child(3) {
+      grid-area: image2;
+    }
+
+    img {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
   &_lastLine {
     display: flex;
     color: #ffffff;
@@ -67,6 +93,32 @@
 
     & > p {
       flex-basis: 55%;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &_line {
+      flex-direction: column;
+    }
+
+    &_gridLine {
+      grid-template:
+        "lineHeader lineHeader"
+        "image1 image2" / 1fr 1fr;
+    }
+
+    &_tags {
+      bottom: 5px;
+    }
+
+    &_imageWrapper {
+      width: 100%;
+      bottom: 5px;
+      gap: 10px;
+    }
+
+    &_lastLine {
+      flex-direction: column;
     }
   }
 }

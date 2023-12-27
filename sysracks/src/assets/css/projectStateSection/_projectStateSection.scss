@@ -2,7 +2,7 @@
 
 .stageProjectSection {
   h2 {
-    margin-bottom: clamp($spacing-13, 6.4vw, $spacing-8);
+    margin-bottom: clamp($spacing-13, 2.1vw, $spacing-8);
   }
 
   h3 {
@@ -13,7 +13,7 @@
     display: flex;
     justify-content: space-between;
     gap: clamp($spacing-13, 1.1vw, $spacing-12);
-    margin-top: clamp($spacing-13, 6.4vw, $spacing-8);
+    margin-top: clamp($spacing-13, 2.1vw, $spacing-8);
     margin-bottom: clamp($spacing-13, 2.1vw, $spacing-8);
 
     & > div {
@@ -45,6 +45,16 @@
 
     & > div:last-of-type {
       flex: 1;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &_region {
+      flex-direction: column-reverse;
+    }
+
+    &_loading {
+      flex-direction: column;
     }
   }
 }

@@ -1,0 +1,21 @@
+.target {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: clamp($spacing-14, 1.3vw, $spacing-11)
+    clamp($spacing-12, 2.1vw, $spacing-8);
+  background-color: $bg-white;
+  border-radius: clamp($spacing-12, 1.4vw, $spacing-10);
+
+  &_circle {
+    width: clamp($spacing-13, 1.1vw, $spacing-12);
+    height: clamp($spacing-13, 1.1vw, $spacing-12);
+    border-radius: 50%;
+    background-color: $bg-bright;
+    margin-right: clamp($spacing-12, 2.1vw, $spacing-8);
+  }
+
+  &_text {
+    font-weight: $font-weight-bold;
+  }
+}
