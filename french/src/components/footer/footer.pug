@@ -1,0 +1,34 @@
+- var services = ['Сайт', 'SEO', 'SMM', 'Доработка', 'Контекст', 'Другое']
+- var inputs = ['Имя *', 'Телефон *', 'E-mail *', 'Сайт *']
+
++layout("footer", "footer__wrapper")
+
+    .footer__image
+        div
+        
+    form.footer__form
+
+        h2.footer__title.
+            Заказать консультацию
+
+        .footer__inputs
+            each input in inputs
+                input.footer__input(type="text" placeholder=input required)
+
+        h3.footer__subtitle.
+            Чем вам помочь?
+            
+        .footer__checkboxs
+            each service in services
+                label.footer__label
+                    input(type="checkbox" name="user_wish[]" value=service)
+                    span #{service}
+
+        button.footer__button.
+            Отправить
+
+        .footer__link
+            h3.
+                Может быть полезно
+            a(href="https://www.belpromimpex.by/" target="_blank").
+                БЕЛПРОМИМПЭКС
