@@ -1,0 +1,11 @@
+- var teams = ["Project Manager", "Frontend-разработчик", "Backend-разработчик", "Дизайнер", "Тестировщик"]
+
++layout("teams", "teams__wrapper")
+
+    h2.teams__title Команда
+
+    ul.teams__list 
+        each val in teams
+            li= val
+
+
