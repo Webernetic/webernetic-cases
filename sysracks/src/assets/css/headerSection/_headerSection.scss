@@ -1,3 +1,5 @@
+@import "../variables";
+
 //HEADER SECTION
 
 .header {
@@ -14,6 +16,7 @@
   }
 
   &_content {
+    position: relative;
     display: flex;
     justify-content: space-between;
     margin-top: 148px;
@@ -32,6 +35,38 @@
       position: absolute;
       bottom: 0%;
       max-width: 450px;
+      min-width: 240px;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &_title {
+      text-align: center;
+
+      & > h1 {
+        display: inline;
+      }
+    }
+
+    &_content {
+      flex-direction: column-reverse;
+      margin-top: 220px;
+    }
+
+    &_imgWrapper {
+      position: absolute;
+      width: 100%;
+      top: 0%;
+      left: 0%;
+      transform: translateY(-105%);
+      min-height: 210px;
+      overflow: hidden;
+
+      img {
+        top: 30%;
+        left: 50%;
+        transform: translate(-40%);
+      }
     }
   }
 }

@@ -50,13 +50,15 @@
   &_teamLeadImageWrapper {
     position: relative;
     max-width: 40%;
+    width: 100%;
+    min-height: 100%;
   }
 
   &_teamLeadImage {
     position: absolute;
-    bottom: 0;
+    bottom: 3%;
     transform: translateY(clamp($spacing-9, 3.6vw, $spacing-5));
-    height: clamp(221px, 29vw, 380px);
+    height: 110%;
   }
 
   &__teamLeadNameWrapper {
@@ -65,7 +67,7 @@
     right: -27%;
     max-width: fit-content;
     padding: clamp($spacing-15, 0.7vw, $spacing-13)
-      clamp($spacing-11, 1.4vw, $spacing-8);
+      clamp($spacing-13, 1.4vw, $spacing-8);
 
     & > p {
       font-size: $font-size-mini;
@@ -78,7 +80,7 @@
 
   &__trianglePosition {
     top: 0;
-    right: 0;
+    right: 1px;
     transform: translate(100%, 100%);
   }
 
@@ -96,5 +98,51 @@
 
   &_statisticsText {
     font-size: clamp($spacing-11, 1.9vw, $spacing-9);
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__flexColumn {
+      flex-direction: column;
+    }
+
+    &__marginTop {
+      margin-top: $spacing-6;
+    }
+
+    &_teamLeadText {
+      max-width: 100%;
+    }
+
+    &_teamLeadImageWrapper {
+      max-width: 100%;
+    }
+
+    &_teamLeadImage {
+      position: relative;
+      object-fit: contain;
+      width: 100%;
+      right: -15%;
+      transform: translateY(14.5%);
+      height: clamp(190px, 29vw, 380px);
+    }
+
+    &__teamLeadNameWrapper {
+      left: 0%;
+
+      & > p {
+        min-width: fit-content;
+        white-space: nowrap;
+      }
+    }
+
+    &__trianglePosition {
+      bottom: 0%;
+      top: auto;
+      right: 80%;
+      transform: translate(100%, 100%) rotate(90deg);
+    }
+    &__triangle {
+      border-top: clamp($spacing-15, 2.1vw, $spacing-8) solid transparent;
+    }
   }
 }

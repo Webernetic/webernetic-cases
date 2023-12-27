@@ -1,7 +1,7 @@
 //CLIENTS SECTION
 
 .clientsSection {
-  margin-top: clamp($spacing-10, 22.1vw, $spacing-8);
+  margin-top: clamp($spacing-10, 2.1vw, $spacing-8);
   display: flex;
   gap: clamp($spacing-13, 1.4%, $spacing-10);
 
@@ -19,5 +19,13 @@
   & > div:not(:first-of-type) {
     padding: clamp($spacing-9, 3.6vw, $spacing-5)
       clamp($spacing-12, 3.6vw, $spacing-8);
+  }
+
+  @media (max-width: $breakpoints-md) {
+    flex-wrap: wrap;
+
+    & > div:first-of-type {
+      min-width: 100%;
+    }
   }
 }

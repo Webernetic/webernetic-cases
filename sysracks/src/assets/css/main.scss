@@ -1,12 +1,12 @@
 @import "./variables";
 @import "./fonts";
 @import "../../mixins/mixinsStyles.scss";
-@import "./seoSection/_seoSection.scss";
 @import "./headerSection/_headerSection.scss";
 @import "./clientsSection/_clientsSection.scss";
 @import "./targetsSection/_targetsSection.scss";
 @import "./projectStateSection/_projectStateSection.scss";
 @import "./workStagesSection/_workStagesSection.scss";
+@import "./seoSection/_seoSection.scss";
 @import "./resultsSection/_resultsSection.scss";
 @import "./orderSection/_orderSection.scss";
 
@@ -34,6 +34,11 @@ body::-webkit-scrollbar {
     clamp($spacing-13, 5vw, $spacing-3);
   width: 100%;
   margin: 0 auto;
+
+  @media (max-width: $breakpoints-sm) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 blockquote:before,

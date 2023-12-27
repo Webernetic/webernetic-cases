@@ -10,7 +10,7 @@ block content
     section.header
       .header_title
         h1 Продвижение и разработка сайта для 
-        h1.brightText дистрибьютора серверного
+        h1.brightText дистрибьютора серверного 
         h1.brightText оборудования
       +wrapper(class="brightBg header_content")
         p.header_text.boldText.colorInvertText Как перенести сайт с одной платформы на другую, не уронив позиции и подняться в Топ-5 поисковой выдачи 
@@ -48,7 +48,7 @@ block content
           +img("./assets/images/com.png", ".com", ["500", "1200"])
       .stageProjectSection_loading
         div 
-          +img("./assets/images/loading.png", "Изображение загрузки", ["500", "1200"])
+          +img("./assets/images/loading.png", "Изображение загрузки", ["567", "1200"])
         +wrapper(class="secondaryBg") 
           h3 Переезд на новую CMS
           p Изначально сайт был на Битрикс, но он не подходит для продвижения в англоязычных странах, так как платформа ориентирована на рынок СНГ. Например, функциональность корзины была неудобной и непонятной для иностранных пользователей. 
@@ -63,11 +63,10 @@ block content
           +stage("01","Сбор семантического ядра, которое регулярно обновляется")(class="secondaryBg")
           +wrapper(class="brightBg verticalCenter colorWhite") 
             p В настоящее время клиент решил расширить сайт и добавить версии на французском и испанском языках. Команда уже начала собирать семантику для этого обновления.
-        li.stagesSection_line
-          div
-            +stage("02","Подготовка структуры сайта и структуры меню")(class="secondaryBg")
-            div 
-              +img("./assets/images/aboutUs.png", "О нас", ["500", "1200"])
+        li.stagesSection_gridLine
+          +stage("02","Подготовка структуры сайта и структуры меню")(class="secondaryBg")
+          div 
+            +img("./assets/images/aboutUs.png", "О нас", ["500", "1200"])
           div
             +img("./assets/images/equipment.png", "Оборудование", ["500", "1200"])
         li.stagesSection_line
@@ -111,14 +110,14 @@ block content
     section.seoSection
         h2.seoSection__title А что дальше?      
         +wrapper(class="secondaryBg flexColumn")
-          .flexContainer 
+          .flexContainer.seoSection__flexColumnReverse 
             +wrapper(class="whiteBg gorizontalPaddingSecondary") 
               p SEO - это непрерывный и цикличный процесс, поэтому после завершения одного этапа работ мы снова начинаем сначала. Регулярные аудиты и обновление СЯ важны, потому что в интернете постоянно меняются требования поисковых систем и поведение пользователей. 
             .seoSection_imageWrapper
               +img("./assets/images/seo.png", "Сео", ["500", "1200"]) 
           +wrapper(class="brightBg colorWhite gorizontalPaddingSecondary") 
             p Например, то, что раньше было популярным запросом, сейчас может быть устаревшим, а новые слова и фразы становятся востребованными. Такие циклы работ позволяют оптимизировать контент, привлекать больше трафика и оставаться в Топ выдачи.
-          .flexContainer 
+          .flexContainer.seoSection__flexColumn 
             +wrapper(class="darkBg colorWhite seoSection__blockWidth gorizontalPaddingSecondary")
               p В результате одного из повторных аудитов команда предложила дополнительный функционал для добавления на сайт.
             ul.seoSection_featuresWrapper
@@ -141,7 +140,7 @@ block content
       +resultItem("03") 
         p.boldText #[span.brightText Увеличили прибыль в 2,6 раза], и после клиент поднял средний чек
       li 
-        .flexContainer
+        .flexContainer.resultsSection__flexColumn
           figure 
             .resultsSection_imageGraphWrapper
               +img("./assets/images/profit1.png", "График динамики выручки до сотрудничества", ["500", "1200"])(class="resultsSection_imageGraph")
@@ -150,21 +149,21 @@ block content
             .resultsSection_imageGraphWrapper
               +img("./assets/images/profit2.png", "График динамики выручки при продвижении", ["500", "1200"])(class="resultsSection_imageGraph")
             figcaption.resultsSection_graphTitle Динамика выручки при продвижении
-      +wrapper(class="darkBg colorWhite")
+      +wrapper(class="darkBg colorWhite").resultsSection__marginTop
         h2.resultsSection__resultsTitle Итоги:
         +wrapper(class="whiteBg boldText gorizontalPaddingSecondary")
           p Команда разработчиков и SEO-специалистов помогла клиенту сменить домен, разработать сайт на другой CMS и создать стратегию его продвижения на англоязычном рынке. 
-      +wrapper(class="brightBg flexContainer flex-start")
+      +wrapper(class="brightBg flexContainer flex-start resultsSection__flexColumn")
         +wrapper(class="whiteBg resultsSection_teamLeadText gorizontalPaddingSecondary")
           blockquote Если вслепую перейти на новый домен, есть риск потерять органический трафик и позиции в выдаче, так как поисковые системы рассматривают его как совершенно новый сайт.  
-          +triangle()(class="resultsSection__trianglePosition")
+          +triangle()(class="resultsSection__trianglePosition resultsSection__triangle")
         .resultsSection_teamLeadImageWrapper
           +img("./assets/images/man.png", "График роста органического трафика", ["500", "1200"])(class="resultsSection_teamLeadImage")
           +wrapper(class="whiteBg flex-center resultsSection__teamLeadNameWrapper")
             h4.resultsSection__teamLeadNamePosition Кирилл
             p Team-lead SEO-отдела
       h2.resultsSection_titleSecondary Результат работы говорит сам за себя:
-      ul.flexContainer
+      ul.flexContainer.resultsSection__flexColumn 
           li 
             +wrapper(class="brightBg colorWhite")
               p.resultsSection_statisticsTitleMain 34%
@@ -187,7 +186,7 @@ block content
           +img("./assets/images/girl.png", "Девушка", ["500", "1200"])
         form.orderSection_form
           h3.orderSection_formTitle Заказать консультацию
-          .flexContainer 
+          .flexContainer.orderSection__flexColumn 
             .orderSection_inputWrapper
               input.input(type="text" placeholder="Имя*") 
               input.input(type="email" placeholder="E-mail*") 

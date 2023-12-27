@@ -44,4 +44,26 @@
     left: 10%;
     top: -7%;
   }
+
+  @media (max-width: $breakpoints-sm) {
+    flex-direction: column-reverse;
+    padding-top: clamp($spacing-10, 3.6vw, $spacing-5);
+    gap: $spacing-9;
+
+    &_item {
+      justify-content: flex-start;
+      margin-bottom: $spacing-9;
+      margin-bottom: 0;
+    }
+
+    &_targetList,
+    &_header {
+      padding-left: clamp($spacing-10, 3.6vw, $spacing-5);
+    }
+
+    img:last-of-type {
+      left: 5%;
+      top: -7%;
+    }
+  }
 }

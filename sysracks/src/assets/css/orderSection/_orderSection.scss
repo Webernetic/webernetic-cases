@@ -73,4 +73,27 @@
   &_buttonWrapper {
     margin-top: clamp($spacing-8, 3.6vw, $spacing-5);
   }
+
+  @media (max-width: $breakpoints-sm) {
+    &_title {
+      text-align: start;
+    }
+
+    &_imageWrapper,
+    &_nameWrapper {
+      display: none;
+    }
+
+    &_inputWrapper {
+      min-width: 100%;
+    }
+
+    &__flexColumn {
+      flex-direction: column;
+
+      & > div:not(:first-of-type) {
+        margin-top: 20px;
+      }
+    }
+  }
 }
