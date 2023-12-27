@@ -1,0 +1,32 @@
+.stage {
+  &_numberWrapper {
+    display: flex;
+    align-items: center;
+    min-width: clamp(100px, 11.4vw, 160px);
+    width: fit-content;
+    min-height: clamp(32px, 3.6vw, 50px);
+    margin-bottom: clamp($spacing-12, 2.5vw, $spacing-7);
+    padding: 5px clamp(15px, 2.1vw, 30px);
+    background-color: $bg-dark;
+    color: $font-color-invert;
+    border-radius: clamp(16px, 1.8vw, 25px);
+  }
+
+  &__numberInvert {
+    background-color: $bg-secondary;
+    color: $font-color;
+  }
+
+  &_text {
+    font-size: $font-size-secondary;
+    font-weight: $font-weight-bold;
+  }
+
+  &__invert {
+    background-color: $bg-bright;
+
+    & > p {
+      color: #ffffff;
+    }
+  }
+}

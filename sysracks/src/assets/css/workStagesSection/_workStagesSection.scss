@@ -1,0 +1,72 @@
+//WORK STAGES SECTION
+
+.stagesSection {
+  display: flex;
+  flex-direction: column;
+  margin-top: clamp($spacing-4, 7.1vw, $spacing-1);
+  gap: clamp($spacing-13, 2.1vw, $spacing-8);
+
+  &_stagesWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: clamp($spacing-13, 2.1vw, $spacing-8);
+  }
+
+  &_info {
+    font-size: $font-size-secondary;
+  }
+
+  &_tags {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    transform: translate(
+      clamp($spacing-10, 3.6vw, $spacing-5),
+      clamp($spacing-9, 2.9vw, $spacing-6)
+    );
+  }
+
+  &_imageWrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    transform: translateY(calc(clamp($spacing-9, 2.9vw, $spacing-6) + 3px));
+
+    & > img {
+      max-width: 48.5%;
+    }
+  }
+
+  &_line {
+    display: flex;
+    gap: $spacing-10;
+
+    & > div:first-of-type {
+      flex-basis: 40%;
+    }
+    & > div:last-of-type {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    img {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &_lastLine {
+    display: flex;
+    color: #ffffff;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    & > p {
+      flex-basis: 55%;
+    }
+  }
+}

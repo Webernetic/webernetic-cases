@@ -1,0 +1,9 @@
+.triangle {
+  position: absolute;
+  z-index: 10;
+  width: 0;
+  height: 0;
+  border-top: clamp($spacing-11, 2.1vw, $spacing-8) solid transparent;
+  border-left: clamp($spacing-6, 5vw, $spacing-3) solid #ffffff;
+  border-bottom: clamp($spacing-11, 2.1vw, $spacing-8) solid transparent;
+}

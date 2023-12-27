@@ -1,0 +1,27 @@
+.resultItem {
+  &_wrapper {
+    display: flex;
+    align-items: center;
+    gap: clamp($spacing-11, 2.1vw, $spacing-8);
+    padding: clamp($spacing-10, 2.9vw, $spacing-6)
+      clamp($spacing-12, 3.6vw, $spacing-5);
+    background-color: $bg-secondary;
+    border-radius: clamp($spacing-12, 1.4vw, $spacing-10);
+  }
+
+  &_number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: clamp($spacing-6, 4.4vw, $spacing-4);
+    height: clamp($spacing-6, 4.4vw, $spacing-4);
+    border-radius: 50%;
+    background-color: $bg-dark;
+
+    & > p {
+      font-weight: $font-weight-bold;
+      font-size: $font-size-secondary;
+      color: #ffffff;
+    }
+  }
+}

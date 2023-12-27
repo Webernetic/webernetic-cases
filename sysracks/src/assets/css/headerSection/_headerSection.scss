@@ -1,0 +1,37 @@
+//HEADER SECTION
+
+.header {
+  background-color: $bg-secondary;
+  overflow: hidden;
+  position: relative;
+  border-top-left-radius: clamp($spacing-12, 1.4vw, $spacing-10);
+  border-top-right-radius: clamp($spacing-12, 1.4vw, $spacing-10);
+
+  &_title {
+    margin: clamp($spacing-9, 3.6vw, $spacing-5)
+      clamp($spacing-10, 3.6vw, $spacing-5) 0
+      clamp($spacing-10, 3.6vw, $spacing-5);
+  }
+
+  &_content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 148px;
+  }
+
+  &_text {
+    flex: 1;
+  }
+
+  &_imgWrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      position: absolute;
+      bottom: 0%;
+      max-width: 450px;
+    }
+  }
+}

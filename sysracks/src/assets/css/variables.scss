@@ -28,6 +28,7 @@ $line-height-primary: 130%;
 $line-height-secondary: 120%;
 $line-height-H: 110%;
 
+$font-size-mini: clamp(0.875rem, 2vw, 1.5rem);
 $font-size: clamp(1rem, 2vw, 1.75rem);
 $font-size-secondary: clamp(1.06rem, 2.3vw, 2rem);
 $font-size-H1: clamp(1.5rem, 4vw, 3.875rem);
@@ -40,6 +41,8 @@ $font-color-invert: #ffffff;
 $font-color-secondary: #555555;
 $font-color-H: #373c41;
 $font-color-bright: #f16237;
+$font-color-bright-hover: #dd5127;
+$font-color-placeholder: #363636;
 
 //backgrounds
 $bg-secondary: #f5f5f5;

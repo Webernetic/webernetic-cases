@@ -1,21 +1,22 @@
 @font-face {
-	font-family: 'Circe';
-	src: url('../fonts/circe_light.eot'); /* IE 9 Compatibility Mode */
-	src: url('../fonts/circe_light.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
-		url('../fonts/circe_light.woff2') format('woff2'), /* Super Modern Browsers */
-		url('../fonts/circe_light.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
-		url('../fonts/circe_light.ttf') format('truetype'), /* Safari, Android, iOS */
-		url('../fonts/circe_light.svg#circe_light') format('svg'); /* Chrome < 4, Legacy iOS */
-    font-weight: 500;
+  font-family: "Circe";
+  src: url("../fonts/circe_regular.eot"); /* IE 9 Compatibility Mode */
+  src: /* Super Modern Browsers */ url("../fonts/circe_regular.woff")
+      format("woff"),
+    /* Firefox >= 3.6, any other modern browser */
+      url("../fonts/circe_regular.ttf") format("truetype");
+  font-weight: 500;
 }
 
 @font-face {
-	font-family: 'Circe';
-	src: url('../fonts/circe_bold.eot'); /* IE 9 Compatibility Mode */
-	src: url('../fonts/circe_bold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
-		url('../fonts/circe_bold.woff2') format('woff2'), /* Super Modern Browsers */
-		url('../fonts/circe_bold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
-		url('../fonts/circe_bold.ttf') format('truetype'), /* Safari, Android, iOS */
-		url('../fonts/circe_bold.svg#circe_bold') format('svg'); /* Chrome < 4, Legacy iOS */
-    font-weight: 700;
+  font-family: "Circe";
+  src: url("../fonts/circe_bold.eot"); /* IE 9 Compatibility Mode */
+  src: url("../fonts/circe_bold.eot?#iefix") format("embedded-opentype"),
+    /* IE < 9 */ url("../fonts/circe_bold.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/circe_bold.woff") format("woff"),
+    /* Firefox >= 3.6, any other modern browser */
+      url("../fonts/circe_bold.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/circe_bold.svg#circe_bold")
+      format("svg"); /* Chrome < 4, Legacy iOS */
+  font-weight: 700;
 }
