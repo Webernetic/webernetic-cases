@@ -1,0 +1,58 @@
+.upshot {
+    position: relative;
+
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 680px;
+        padding: 60px 60px 80px 60px;
+        border-radius: 60px;
+        background-color: #eedcff;
+
+        & > h2 {
+            @include title-style;
+        }
+
+        & > p {
+            @include text-style;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 2%;
+        width: 790px;
+        height: 650px;
+        background: url("../../assets/img/unshot-bg.png") center no-repeat;
+        background-size: cover;
+        opacity: 0;
+    }
+
+    @media (max-width: $media-sm) {
+        &__wrapper {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__content {
+            gap: 8px;
+            padding: 40px 20px 28px 20px;
+        }
+
+        &__image {
+            position: relative;
+            top: 45px;
+            left: 0;
+            width: 320px;
+            height: 231.291px;
+        }
+    }
+}
