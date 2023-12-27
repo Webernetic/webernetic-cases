@@ -1,0 +1,18 @@
+.text {
+    &__wrapper {
+        padding: 0 120px;
+    }
+    &__seo {
+        @include title-style;
+
+        & > span {
+            color: #9567c0;
+        }
+    }
+
+    @media (max-width: $media-sm) {
+        &__wrapper {
+            padding: 0 0;
+        }
+    }
+}
