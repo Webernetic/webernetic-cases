@@ -5,7 +5,7 @@ Markup for cases for Webernetic website is stored in this repository. Cases are 
 ## Installation
 
 Use Node v20 to install project.
-Use [gulp](https://gulpjs.com/) to build project
+Use [gulp](https://gulpjs.com/) to build project.
 
 ```bash
 npm install --global gulp-cli
