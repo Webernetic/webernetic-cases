@@ -1,0 +1,5 @@
+mixin stage(number, text, classNumber="stage_numberWrapper ")
+    .stage.blockWrapper&attributes(attributes)
+        .stage_numberWrapper(class= classNumber) 
+            h4= number 
+        p.stage_text= text

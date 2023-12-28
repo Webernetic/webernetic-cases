@@ -1,0 +1,165 @@
+//RESULTS SECTION
+
+.resultsSection {
+  display: flex;
+  flex-direction: column;
+  gap: clamp($spacing-13, 2.1vw, $spacing-8);
+  margin-top: clamp($spacing-4, 7.1vw, $spacing-1);
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  &_title {
+    margin-bottom: clamp($spacing-13, 1.4vw, $spacing-10);
+  }
+
+  &_titleSecondary {
+    margin-top: clamp($spacing-5, 5vw, $spacing-3);
+  }
+
+  &_imageWrapper {
+    overflow-x: auto;
+  }
+
+  &_image {
+    min-width: 1160px;
+    width: 1160px;
+    height: 100%;
+  }
+
+  &_graphTitle {
+    text-align: center;
+    margin-bottom: clamp($spacing-15, 0.7vw, $spacing-13);
+    margin-top: clamp($spacing-15, 0.7vw, $spacing-13);
+  }
+
+  &_imageGraph {
+    width: 100%;
+    height: 100%;
+  }
+
+  &_imageGraphWrapper {
+    border-radius: clamp($spacing-12, 1.4vw, $spacing-10);
+    overflow: hidden;
+  }
+
+  &__resultsTitle {
+    margin-bottom: 10px;
+  }
+
+  &_teamLeadText {
+    max-width: 47%;
+  }
+
+  &_teamLeadImageWrapper {
+    position: relative;
+    max-width: 40%;
+    width: 100%;
+    min-height: 100%;
+  }
+
+  &_teamLeadImage {
+    position: absolute;
+    bottom: 3%;
+    transform: translateY(clamp($spacing-9, 3.6vw, $spacing-5));
+    height: 110%;
+  }
+
+  &__teamLeadNameWrapper {
+    position: absolute;
+    bottom: 0;
+    right: -27%;
+    max-width: fit-content;
+    padding: clamp($spacing-15, 0.7vw, $spacing-13)
+      clamp($spacing-13, 1.4vw, $spacing-8);
+
+    & > p {
+      font-size: $font-size-mini;
+    }
+  }
+
+  &__teamLeadNamePosition {
+    text-align: center;
+  }
+
+  &__trianglePosition {
+    top: 0;
+    right: 1px;
+    transform: translate(100%, 100%);
+  }
+
+  &_statisticsTitleMain {
+    margin-bottom: clamp(54px, 6.1vw, 86px);
+    font-size: clamp($spacing-8, 3.6vw, $spacing-5);
+    font-weight: $font-weight-bold;
+  }
+
+  &_statisticsTitle {
+    margin-bottom: clamp(54px, 6.1vw, 86px);
+    font-size: clamp($spacing-9, 2.9vw, $spacing-6);
+    font-weight: $font-weight-bold;
+  }
+
+  &_statisticsText {
+    font-size: clamp($spacing-11, 1.9vw, $spacing-9);
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__flexColumn {
+      flex-direction: column;
+    }
+
+    &__marginTop {
+      margin-top: $spacing-6;
+    }
+
+    &_teamLeadText {
+      max-width: 100%;
+    }
+
+    &_teamLeadImageWrapper {
+      max-width: 100%;
+    }
+
+    &_teamLeadImage {
+      position: relative;
+      object-fit: contain;
+      width: auto;
+      transform: translate(90%, 10%);
+      height: clamp(190px, 29vw, 380px);
+    }
+
+    &__teamLeadNameWrapper {
+      left: 0%;
+
+      & > p {
+        min-width: fit-content;
+        white-space: nowrap;
+      }
+    }
+
+    &__trianglePosition {
+      bottom: 0%;
+      top: auto;
+      right: 80%;
+      transform: translate(100%, 100%) rotate(90deg);
+    }
+    &__triangle {
+      border-top: clamp($spacing-15, 2.1vw, $spacing-8) solid transparent;
+    }
+  }
+
+  @media (max-width: 430px) {
+  &_teamLeadImage {
+    transform: translate(60%, 10%);
+  }
+}
+
+@media (max-width: 370px) {
+  &_teamLeadImage {
+    transform: translate(30%, 10%);
+  }
+}
+}
