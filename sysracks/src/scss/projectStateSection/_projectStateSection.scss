@@ -55,6 +55,13 @@
 
     &_loading {
       flex-direction: column;
+      border-radius: 15px;
+      overflow: hidden;
+      
+      img {
+      max-height: clamp(340px,100vw,567px);
+      object-fit: cover;
+    }
     }
   }
 }

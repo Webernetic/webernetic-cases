@@ -1,5 +1,5 @@
 @import "./variables";
-// @import "./fonts";
+@import "./fonts";
 @import "../mixins/mixinsStyles.scss";
 @import "./headerSection/_headerSection.scss";
 @import "./clientsSection/_clientsSection.scss";
@@ -10,6 +10,7 @@
 @import "./resultsSection/_resultsSection.scss";
 @import "./orderSection/_orderSection.scss";
 
+ 
 *,
 *::after,
 *::before {
@@ -79,9 +80,11 @@ h4 {
   font-weight: $font-weight-bold;
   line-height: $line-height-H;
   color: inherit;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
+h1, .h-1 {
   font-size: $font-size-H1;
 }
 
@@ -100,7 +103,7 @@ h4 {
 p,
 span,
 li,
-a,
+a, ul,
 figcaption,
 blockquote,
 input,
@@ -109,6 +112,8 @@ input::placeholder {
   font-size: $font-size;
   line-height: $line-height-primary;
   color: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 .boldText {
@@ -192,7 +197,7 @@ input::placeholder {
   }
 }
 
-.button {
+.customButton {
   font-size: $font-size-secondary;
   color: $font-color-bright;
   font-weight: $font-weight-bold;

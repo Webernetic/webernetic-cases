@@ -6,6 +6,7 @@
     clamp($spacing-12, 2.1vw, $spacing-8);
   background-color: $bg-white;
   border-radius: clamp($spacing-12, 1.4vw, $spacing-10);
+  margin: 0;
 
   &_circle {
     width: clamp($spacing-13, 1.1vw, $spacing-12);

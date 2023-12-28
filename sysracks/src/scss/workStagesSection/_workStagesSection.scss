@@ -10,6 +10,8 @@
     display: flex;
     flex-direction: column;
     gap: clamp($spacing-10, 2.1vw, $spacing-8);
+    padding: 0;
+    margin-top: 0;
   }
 
   &_info {
@@ -42,6 +44,7 @@
   &_line {
     display: flex;
     gap: clamp($spacing-13, 1.4vw, $spacing-10);
+    margin: 0;
 
     & > div:first-of-type {
       flex-basis: 40%;

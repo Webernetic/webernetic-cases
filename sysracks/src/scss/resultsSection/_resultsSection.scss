@@ -6,6 +6,11 @@
   gap: clamp($spacing-13, 2.1vw, $spacing-8);
   margin-top: clamp($spacing-4, 7.1vw, $spacing-1);
 
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
   &_title {
     margin-bottom: clamp($spacing-13, 1.4vw, $spacing-10);
   }
@@ -19,6 +24,7 @@
   }
 
   &_image {
+    min-width: 1160px;
     width: 1160px;
     height: 100%;
   }
@@ -120,9 +126,8 @@
     &_teamLeadImage {
       position: relative;
       object-fit: contain;
-      width: 100%;
-      right: -15%;
-      transform: translateY(14.5%);
+      width: auto;
+      transform: translate(90%, 10%);
       height: clamp(190px, 29vw, 380px);
     }
 
@@ -145,4 +150,16 @@
       border-top: clamp($spacing-15, 2.1vw, $spacing-8) solid transparent;
     }
   }
+
+  @media (max-width: 430px) {
+  &_teamLeadImage {
+    transform: translate(60%, 10%);
+  }
+}
+
+@media (max-width: 370px) {
+  &_teamLeadImage {
+    transform: translate(30%, 10%);
+  }
+}
 }
