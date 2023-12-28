@@ -1,0 +1,12 @@
+-
+  var targets = ["Попасть в ТОП-5 Google", "Увеличить продажи", "Повысить узнаваемость"]
+
+section.targetsSection
+      .targetsSection_item
+        +img("./assets/images/runningManLeft.png", "Бегущий человек", ["500", "1200"])(class="targetsSection_img")
+        +img("./assets/images/runningMan.png", "Бегущий человек", ["500", "1200"])(class="targetsSection_img")
+      .targetsSection_item
+        h2.targetsSection_header Цели проекта:
+        ul.targetsSection_targetList
+          each target in targets
+            +target(target)

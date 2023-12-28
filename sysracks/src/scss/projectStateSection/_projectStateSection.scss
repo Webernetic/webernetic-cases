@@ -1,0 +1,67 @@
+//PROJECT STATE SECTION
+
+.stageProjectSection {
+  h2 {
+    margin-bottom: clamp($spacing-13, 2.1vw, $spacing-8);
+  }
+
+  h3 {
+    margin-bottom: clamp($spacing-15, 0.7vw, $spacing-13);
+  }
+
+  &_region {
+    display: flex;
+    justify-content: space-between;
+    gap: clamp($spacing-13, 1.1vw, $spacing-12);
+    margin-top: clamp($spacing-13, 2.1vw, $spacing-8);
+    margin-bottom: clamp($spacing-13, 2.1vw, $spacing-8);
+
+    & > div {
+      border-radius: clamp($spacing-12, 1.4vw, $spacing-10);
+      flex-basis: 49%;
+      overflow: hidden;
+    }
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &_loading {
+    display: flex;
+    gap: clamp($spacing-13, 1.1vw, $spacing-12);
+
+    & > div:first-of-type {
+      flex-basis: 25%;
+      height: 100%;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    & > div:last-of-type {
+      flex: 1;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &_region {
+      flex-direction: column-reverse;
+    }
+
+    &_loading {
+      flex-direction: column;
+      border-radius: 15px;
+      overflow: hidden;
+      
+      img {
+      max-height: clamp(340px,100vw,567px);
+      object-fit: cover;
+    }
+    }
+  }
+}

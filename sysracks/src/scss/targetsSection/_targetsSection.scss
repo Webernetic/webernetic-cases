@@ -1,0 +1,71 @@
+//TARGETS SECTION
+
+.targetsSection {
+  display: flex;
+  gap: clamp($spacing-13, 1.4%, $spacing-10);
+  margin-top: clamp($spacing-4, 7.1vw, $spacing-1);
+  margin-bottom: clamp($spacing-4, 6.4vw, 90px);
+  padding-right: clamp($spacing-10, 3.6vw, $spacing-5);
+  border-radius: clamp($spacing-12, 1.4vw, $spacing-10);
+  background-color: $bg-secondary;
+
+  &_targetList {
+    display: flex;
+    flex-direction: column;
+    gap: clamp($spacing-15, 0.7vw, $spacing-13);
+    padding: 0;
+    margin-top: 0;
+  }
+
+  &_header {
+    margin-bottom: clamp($spacing-13, 1.4vw, $spacing-10);
+  }
+
+  &_item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    min-height: clamp(152px, 32.2vw, 451px);
+  }
+
+  &_img {
+    position: absolute;
+    flex: 1;
+    height: 105%;
+  }
+
+  img:first-of-type {
+    left: 0%;
+    top: 0.75%;
+    max-height: 84.45%;
+  }
+
+  img:last-of-type {
+    left: 10%;
+    top: -7%;
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    flex-direction: column-reverse;
+    padding-top: clamp($spacing-10, 3.6vw, $spacing-5);
+    gap: $spacing-9;
+
+    &_item {
+      justify-content: flex-start;
+      margin-bottom: $spacing-9;
+      margin-bottom: 0;
+    }
+
+    &_targetList,
+    &_header {
+      padding-left: clamp($spacing-10, 3.6vw, $spacing-5);
+    }
+
+    img:last-of-type {
+      left: 5%;
+      top: -7%;
+    }
+  }
+}
