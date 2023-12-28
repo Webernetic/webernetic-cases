@@ -1,6 +1,8 @@
-mixin customCheckbox(value, name)
-    .checkbox
-        input(class="custom-checkbox" type="checkbox" id=name name=name value=value)
-        label(for=name)&attributes(attributes)= value
+mixin customCheckbox(value, name, id)
+    label.checkbox&attributes(attributes)
+        input(class="checkbox" type="checkbox" id=id name=name value=value)
+        span(class="checkbox__custom")
+        span= value
+
   
    

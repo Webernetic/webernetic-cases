@@ -56,8 +56,12 @@
 
   &_inputWrapper {
     display: flex;
-    flex-direction: column;
     gap: clamp($spacing-8, 2.9vw, $spacing-6);
+    flex-wrap: wrap;
+
+    & > input {
+      flex-basis: 47%;
+    }
   }
 
   &_checkboxWrapper {
@@ -85,14 +89,12 @@
     }
 
     &_inputWrapper {
-      min-width: 100%;
-    }
+      & > input:not(:first-of-type) {
+        margin-top: $spacing-10;
+      }
 
-    &__flexColumn {
-      flex-direction: column;
-
-      & > div:not(:first-of-type) {
-        margin-top: 20px;
+      & > input {
+        flex-basis: 100%;
       }
     }
   }

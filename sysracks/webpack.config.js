@@ -9,7 +9,7 @@ module.exports = {
     entry: path.join(__dirname, 'src', 'index.js'),
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: path.join('assets', "js", 'main.js'),
+        filename: path.join("js", 'main.js'),
     },
     module: {
         rules: [
@@ -45,6 +45,9 @@ module.exports = {
             {
                 test: /\.(woff2?|eot|ttf|otf)$/i,
                 type: 'asset/resource',
+                generator: {
+                    filename: path.join('assets', 'fonts', '[name][ext]'),
+                },
             },
         ],
     },
@@ -62,7 +65,7 @@ module.exports = {
             },
         }),
         new MiniCssExtractPlugin({
-            filename: path.join('assets', 'css', 'main.css'),
+            filename: path.join('css', 'main.css'),
         }),
         new CopyPlugin({
             patterns: [

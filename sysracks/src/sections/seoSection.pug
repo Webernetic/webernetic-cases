@@ -1,0 +1,19 @@
+-
+  var features = ["Отслеживание заказов", "Онлайн-консультант", "Блок обратной связи"]
+
+section.seoSection
+        h2.seoSection__title А что дальше?      
+        +wrapper(class="secondaryBg flexColumn")
+          .flexContainer.seoSection__flexColumnReverse 
+            +wrapper(class="whiteBg gorizontalPaddingSecondary") 
+              p SEO - это непрерывный и цикличный процесс, поэтому после завершения одного этапа работ мы снова начинаем сначала. Регулярные аудиты и обновление СЯ важны, потому что в интернете постоянно меняются требования поисковых систем и поведение пользователей. 
+            .seoSection_imageWrapper
+              +img("./assets/images/seo.png", "Сео", ["500", "1200"]) 
+          +wrapper(class="brightBg colorWhite gorizontalPaddingSecondary") 
+            p Например, то, что раньше было популярным запросом, сейчас может быть устаревшим, а новые слова и фразы становятся востребованными. Такие циклы работ позволяют оптимизировать контент, привлекать больше трафика и оставаться в Топ выдачи.
+          .flexContainer.seoSection__flexColumn 
+            +wrapper(class="darkBg colorWhite seoSection__blockWidth gorizontalPaddingSecondary")
+              p В результате одного из повторных аудитов команда предложила дополнительный функционал для добавления на сайт.
+            ul.seoSection_featuresWrapper
+              each feature in features
+                +target(feature)             

@@ -1,0 +1,52 @@
+section.resultsSection
+  h2.resultsSection_title Результаты на новом сайте:
+  +resultItem("01") 
+    p.boldText Вывели #[span.brightText 34%] собранных запросов #[span.brightText в Топ-10 Google], а #[span.brightText 75% в Топ-30 Google]
+  +resultItem("02") 
+    p.boldText Привлекли #[span.brightText в 3 раза больше посетителей], кто интересуется серверным оборудованием за 10 месяцев
+  li 
+    +wrapper(class="darkBg")
+      figure
+        figcaption
+          h4.resultsSection_graphTitle.colorWhite Рост органического трафика 
+        .resultsSection_imageWrapper
+          +img("./assets/images/traffic.png", "График роста органического трафика", ["500", "1200"])(class="resultsSection_image")
+  +resultItem("03") 
+    p.boldText #[span.brightText Увеличили прибыль в 2,6 раза], и после клиент поднял средний чек
+  li 
+    .flexContainer.resultsSection__flexColumn
+      figure 
+        .resultsSection_imageGraphWrapper
+          +img("./assets/images/profit1.png", "График динамики выручки до сотрудничества", ["500", "1200"])(class="resultsSection_imageGraph")
+        figcaption.resultsSection_graphTitle Динамика выручки до сотрудничества
+      figure 
+        .resultsSection_imageGraphWrapper
+          +img("./assets/images/profit2.png", "График динамики выручки при продвижении", ["500", "1200"])(class="resultsSection_imageGraph")
+        figcaption.resultsSection_graphTitle Динамика выручки при продвижении
+  +wrapper(class="darkBg colorWhite").resultsSection__marginTop
+    h2.resultsSection__resultsTitle Итоги:
+    +wrapper(class="whiteBg boldText gorizontalPaddingSecondary")
+      p Команда разработчиков и SEO-специалистов помогла клиенту сменить домен, разработать сайт на другой CMS и создать стратегию его продвижения на англоязычном рынке. 
+  +wrapper(class="brightBg flexContainer flex-start resultsSection__flexColumn")
+    +wrapper(class="whiteBg resultsSection_teamLeadText gorizontalPaddingSecondary")
+      blockquote Если вслепую перейти на новый домен, есть риск потерять органический трафик и позиции в выдаче, так как поисковые системы рассматривают его как совершенно новый сайт.  
+      +triangle()(class="resultsSection__trianglePosition resultsSection__triangle")
+    .resultsSection_teamLeadImageWrapper
+      +img("./assets/images/man.png", "График роста органического трафика", ["500", "1200"])(class="resultsSection_teamLeadImage")
+      +wrapper(class="whiteBg flex-center resultsSection__teamLeadNameWrapper")
+        h4.resultsSection__teamLeadNamePosition Кирилл
+        p Team-lead SEO-отдела
+  h2.resultsSection_titleSecondary Результат работы говорит сам за себя:
+  ul.flexContainer.resultsSection__flexColumn 
+      li 
+        +wrapper(class="brightBg colorWhite")
+          p.resultsSection_statisticsTitleMain 34%
+          p.resultsSection_statisticsText ключевых запросов вывели в Топ-5 Google
+      li
+        +wrapper(class="secondaryBg")
+          p.resultsSection_statisticsTitle на #[span.resultsSection_statisticsTitleMain 228%]
+          p.resultsSection_statisticsText увеличилось количество заказов на сайте
+      li 
+        +wrapper(class="secondaryBg")
+          p.resultsSection_statisticsTitle в #[span.resultsSection_statisticsTitleMain 3 раза]
+          p.resultsSection_statisticsText вырос трафик на сайте за 10 месяцев
