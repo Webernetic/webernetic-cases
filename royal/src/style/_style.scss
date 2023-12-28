@@ -1,0 +1,38 @@
+body {
+    font-family: "Circle", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: $color-text;
+    background-color: $body-color;
+}
+
+.container {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 46px 115px 120px 115px;
+    overflow: hidden;
+
+    @media (max-width: $media-sm) {
+        max-width: 360px;
+        padding: 30px 20px 0px 20px;
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+
+    @media screen {
+        gap: 40px;
+    }
+}
+
+p {
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}

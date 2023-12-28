@@ -1,0 +1,12 @@
+@mixin text-style {
+    font-family: "Circe" sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    color: $color-text;
+
+    @media (max-width: $media-sm) {
+        font-size: 18px;
+    }
+}
