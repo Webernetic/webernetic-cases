@@ -178,6 +178,10 @@ input::placeholder {
   justify-content: flex-start;
 }
 
+.flex-1 {
+  flex: 1;
+}
+
 .flexColumn {
   display: flex;
   flex-direction: column;
