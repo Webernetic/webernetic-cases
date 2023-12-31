@@ -46,6 +46,10 @@
     & > div:last-of-type {
       flex: 1;
     }
+
+    p:not(:last-of-type) {
+      margin-bottom: clamp($spacing-13, 1.1vw, $spacing-12);
+    }
   }
 
   @media (max-width: $breakpoints-sm) {
