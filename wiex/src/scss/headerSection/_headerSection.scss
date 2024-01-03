@@ -1,0 +1,52 @@
+.headerSection {
+  position: relative;
+
+  .imageWrapper {
+    padding-top: clamp($spacing-5, 8.3vw, $spacing-1);
+    padding-bottom: $spacing-1;
+    background-image: url("../assets/images/banner-1200.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .wiex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: clamp($spacing-3, 8.3vw, $spacing-1);
+    width: fit-content;
+    height: clamp(35px, 3.5vw, 42px);
+    padding: 0 clamp($spacing-9, 3.33vw, $spacing-7);
+    border-radius: clamp(18px, 1.75vw, 21px);
+    background-color: $bg-white;
+    color: #000000;
+  }
+
+  .header_text {
+    margin-top: $spacing-13;
+    font-size: $font-size-secondary;
+    font-size: $font-size-mini;
+    font-weight: $font-weight-bold;
+  }
+
+  &_cardsWrapper {
+    position: relative;
+    bottom: 0;
+    transform: translateY(-15%);
+    z-index: 10;
+  }
+
+  &_card {
+    background-color: $bg-white;
+  }
+
+  &__cardTitle {
+    margin-bottom: clamp($spacing-15, 2.3vw, $spacing-9);
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    .wiex {
+      margin-bottom: 256px;
+    }
+  }
+}
