@@ -10,3 +10,36 @@
         font-size: 18px;
     }
 }
+
+@mixin section-title {
+    margin: 0 0 30px 0;
+
+    font-family: "Circe" sans-serif;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    color: $color-text;
+
+    @media (max-width: $media-sm) {
+        margin: 0 0 15px 0;
+        font-size: 38px;
+        line-height: 110%;
+    }
+}
+
+@mixin section-subtitle {
+    margin: 0 0 13px 0;
+
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    color: $color-text;
+
+    @media (max-width: $media-sm) {
+        margin: 0 0 11px 0;
+        font-size: 22px;
+        line-height: 110%;
+    }
+}
