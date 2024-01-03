@@ -1,0 +1,108 @@
+//ORDER SECTION
+
+.orderSection {
+  margin-top: clamp($spacing-4, 7.1vw, $spacing-1);
+
+  &_title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &_imageWrapper {
+    margin-left: clamp($spacing-7, 4.3vw, $spacing-4);
+    max-width: 36%;
+    width: 100%;
+    height: auto;
+
+    & > img {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &_nameWrapper {
+    position: absolute;
+    left: 4%;
+    bottom: 30%;
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: clamp($spacing-11, 1.4vw, $spacing-8)
+      clamp($spacing-11, 1.4vw, $spacing-8);
+
+    & > h4 {
+      font-size: 30px;
+    }
+
+    & > p {
+      font-size: 9px;
+    }
+  }
+
+  &_form {
+    flex: 1;
+  }
+
+  &_formTitle {
+    margin-bottom: 20px;
+  }
+
+  &_secondformTitle {
+    margin-top: clamp($spacing-8, 3.6vw, $spacing-5);
+    margin-bottom: $spacing-10;
+  }
+
+  &_inputWrapper {
+    display: flex;
+    gap: clamp($spacing-8, 2.9vw, $spacing-6);
+    flex-wrap: wrap;
+
+    & > input {
+      flex-basis: 47%;
+    }
+  }
+
+  &_checkboxWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-11;
+
+    & > label {
+      flex-basis: 31%;
+    }
+  }
+
+  &_buttonWrapper {
+    margin-top: clamp($spacing-8, 3.6vw, $spacing-5);
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &_title {
+      text-align: start;
+    }
+
+    &_imageWrapper,
+    &_nameWrapper {
+      display: none;
+    }
+
+    &_inputWrapper {
+      & > input:not(:first-of-type) {
+        margin-top: $spacing-10;
+      }
+
+      & > input {
+        flex-basis: 100%;
+      }
+    }
+
+    &_checkboxWrapper {
+ 
+      & > label {
+        flex-basis: 46%;
+      }
+    }
+  }
+}

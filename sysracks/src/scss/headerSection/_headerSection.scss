@@ -1,0 +1,72 @@
+@import "../variables";
+
+//HEADER SECTION
+
+.header {
+  background-color: $bg-secondary;
+  overflow: hidden;
+  position: relative;
+  border-top-left-radius: clamp($spacing-12, 1.4vw, $spacing-10);
+  border-top-right-radius: clamp($spacing-12, 1.4vw, $spacing-10);
+
+  &_title {
+    margin: clamp($spacing-9, 3.6vw, $spacing-5)
+      clamp($spacing-10, 3.6vw, $spacing-5) 0
+      clamp($spacing-10, 3.6vw, $spacing-5);
+  }
+
+  &_content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 148px;
+  }
+
+  &_text {
+    flex: 1;
+  }
+
+  &_imgWrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      position: absolute;
+      bottom: 0%;
+      max-width: 450px;
+      min-width: 240px;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &_title {
+      text-align: center;
+
+      & > h1 {
+        display: inline;
+      }
+    }
+
+    &_content {
+      flex-direction: column-reverse;
+      margin-top: 220px;
+    }
+
+    &_imgWrapper {
+      position: absolute;
+      width: 100%;
+      top: 0%;
+      left: 0%;
+      transform: translateY(-105%);
+      min-height: 210px;
+      overflow: hidden;
+
+      img {
+        top: 30%;
+        left: 50%;
+        transform: translate(-40%);
+      }
+    }
+  }
+}
