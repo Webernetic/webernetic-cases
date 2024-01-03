@@ -1,0 +1,25 @@
+.stories {
+    &__title {
+        @include section-title;
+    }
+
+    &__bg {
+        display: flex;
+        justify-content: center;
+        padding: 0 50px;
+        & > img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    @media (max-width: $media-sm) {
+        &__list {
+            justify-content: space-evenly;
+            height: 125px;
+        }
+        &__bg {
+            padding: 0 10px;
+        }
+    }
+}
