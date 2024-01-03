@@ -1,0 +1,54 @@
+.done {
+    border-radius: 4px;
+    border: 1px solid #cdaa4c;
+    background: #fff;
+    padding: 30px;
+
+    &__title {
+        @include section-title;
+    }
+
+    &__list {
+        @include section-subtitle;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        & > li > span {
+            @include section-subtitle;
+            color: #a67ec5;
+        }
+    }
+
+    &__sublists {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+
+    &__sublist {
+        margin: 0;
+        width: 80%;
+        @include text-style;
+        color: rgba(38, 37, 42, 0.8);
+
+        list-style-type: disc;
+    }
+
+    @media (max-width: $media-sm) {
+        &__list {
+            gap: 6px;
+        }
+        &__sublists {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 0;
+        }
+        &__sublist {
+            padding: 0 0 0 25px;
+        }
+    }
+}
