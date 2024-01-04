@@ -1,8 +1,11 @@
-@import "./fonts";
-@import "./variables";
-@import "../mixins/mixinsStyles.scss";
-@import "./headerSection/_headerSection.scss";
-@import "./orderSection/_orderSection.scss";
+@import './fonts';
+@import './variables';
+@import '../mixins/mixinsStyles.scss';
+@import './headerSection/_headerSection.scss';
+@import './structureSection/_structureSection.scss';
+@import './profileAnalysisSection/_profileAnalysisSection.scss';
+@import './competitorSection/_competitorSection.scss';
+@import './orderSection/_orderSection.scss';
 
 *,
 *::after,
@@ -33,7 +36,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
   padding: 0;
   margin: 0;
@@ -119,10 +122,6 @@ input::placeholder {
   color: $font-color-invert;
 }
 
-.colorTextInvert {
-  color: #ffffff;
-}
-
 .brightText {
   color: $font-color-bright;
 }
@@ -152,6 +151,10 @@ input::placeholder {
   & > div {
     flex: 1;
   }
+}
+
+.mb-10 {
+  margin-bottom: clamp($spacing-15, 0.8vw, $spacing-14);
 }
 
 .flex-start {

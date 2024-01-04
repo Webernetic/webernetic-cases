@@ -4,7 +4,7 @@
   .imageWrapper {
     padding-top: clamp($spacing-5, 8.3vw, $spacing-1);
     padding-bottom: $spacing-1;
-    background-image: url("../assets/images/banner-1200.png");
+    background-image: url('../assets/images/banner-1200.png');
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -34,6 +34,7 @@
     bottom: 0;
     transform: translateY(-15%);
     z-index: 10;
+    margin-bottom: clamp($spacing-9, 4.2vw, $spacing-5);
   }
 
   &_card {
@@ -42,6 +43,26 @@
 
   &__cardTitle {
     margin-bottom: clamp($spacing-15, 2.3vw, $spacing-9);
+  }
+
+  &_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+    background-color: $bg-dark;
+    gap: clamp($spacing-12, 5.2vw, $spacing-4);
+  }
+
+  &_itemLine {
+    display: flex;
+    gap: 14px;
+  }
+
+  &_itemLineNumber {
+    font-size: clamp(22px, 2.17vw, 26px);
+    font-weight: $font-weight-bold;
+    color: $font-color-invert;
   }
 
   @media (max-width: $breakpoints-sm) {

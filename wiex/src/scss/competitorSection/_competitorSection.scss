@@ -1,0 +1,11 @@
+.competitorSection {
+  padding-top: clamp($spacing-3, 8.3vw, $spacing-1);
+
+  &_descriptionWrapper {
+    max-width: 768px;
+  }
+
+  &_title {
+    margin-bottom: clamp($spacing-11, 2.1vw, $spacing-10);
+  }
+}
