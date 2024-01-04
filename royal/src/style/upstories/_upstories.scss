@@ -1,0 +1,91 @@
+.upstories {
+    &__title {
+        @include section-title;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 110px 0;
+    }
+
+    &__before,
+    &__after {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+
+        & > span {
+            @include section-subtitle;
+        }
+
+        & > p {
+            @include text-style;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 570px;
+
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__board {
+        width: 667px;
+        height: 500px;
+
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__decoration {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__text {
+        & > h3 {
+            @include section-subtitle;
+        }
+
+        & > ul {
+            margin: 0;
+            @include text-style;
+        }
+    }
+
+    @media (max-width: $media-sm) {
+        &__content {
+            gap: 13px;
+        }
+
+        &__before,
+        &__after {
+            width: 100%;
+        }
+
+        &__image {
+            height: 360px;
+        }
+
+        &__decoration {
+            gap: 20px;
+        }
+
+        &__board {
+            width: 100%;
+            height: 214px;
+        }
+    }
+}
