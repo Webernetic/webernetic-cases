@@ -1,3 +1,7 @@
 .structureSection {
   padding: clamp($spacing-3, 8.3vw, $spacing-1) 0;
+
+  &_lastBlock {
+    max-width: 47%;
+  }
 }

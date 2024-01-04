@@ -1,15 +1,16 @@
 //ORDER SECTION
 
 .orderSection {
-  margin-top: clamp($spacing-4, 7.1vw, $spacing-1);
+  margin-top: clamp($spacing-4, 7.5vw, $spacing-2);
 
-  &_title {
-    text-align: center;
-    margin-bottom: 30px;
+  &__position {
+    padding-top: clamp($spacing-9, 6.7vw, $spacing-3);
+    gap: clamp($spacing-7, 7.08vw, $spacing-2);
   }
 
   &_imageWrapper {
     margin-left: clamp($spacing-7, 4.3vw, $spacing-4);
+    margin-right: clamp($spacing-7, 4.3vw, $spacing-4);
     max-width: 36%;
     width: 100%;
     height: auto;
@@ -29,15 +30,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: clamp($spacing-11, 1.4vw, $spacing-8)
+    padding: clamp($spacing-12, 2.1vw, $spacing-10)
       clamp($spacing-11, 1.4vw, $spacing-8);
+    box-shadow: none;
 
     & > h4 {
       font-size: 30px;
+      font-weight: $font-weight-extra-bold;
     }
 
     & > p {
-      font-size: 9px;
+      font-size: 10px;
+      font-weight: $font-weight-bold;
     }
   }
 
@@ -47,6 +51,8 @@
 
   &_formTitle {
     margin-bottom: 20px;
+    font-weight: $font-weight-extra-bold;
+    font-size: $font-size-H2-secondary;
   }
 
   &_secondformTitle {
@@ -70,7 +76,7 @@
     gap: $spacing-11;
 
     & > label {
-      flex-basis: 31%;
+      flex-basis: 30%;
     }
   }
 
@@ -79,10 +85,6 @@
   }
 
   @media (max-width: $breakpoints-sm) {
-    &_title {
-      text-align: start;
-    }
-
     &_imageWrapper,
     &_nameWrapper {
       display: none;
@@ -99,7 +101,6 @@
     }
 
     &_checkboxWrapper {
- 
       & > label {
         flex-basis: 46%;
       }

@@ -5,6 +5,8 @@
 @import './structureSection/_structureSection.scss';
 @import './profileAnalysisSection/_profileAnalysisSection.scss';
 @import './competitorSection/_competitorSection.scss';
+@import './optimizationSection/_optimizationSection.scss';
+@import './resultSection/_resultSection.scss';
 @import './orderSection/_orderSection.scss';
 
 *,
@@ -187,14 +189,14 @@ input::placeholder {
 
 .customButton {
   font-size: $font-size-secondary;
-  color: $font-color-bright;
-  font-weight: $font-weight-bold;
-  border-bottom: 2px solid $font-color-bright;
+  color: $font-color;
+  font-weight: $font-weight-extra-bold;
+  border-bottom: 2px solid $font-color;
 
   &:hover,
   &:active {
     transform: scale(1.05);
-    // color: $font-color-bright-hover;
-    // border-color: $font-color-bright-hover;
+    color: $font-color;
+    border-color: $font-color;
   }
 }

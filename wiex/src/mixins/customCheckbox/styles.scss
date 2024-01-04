@@ -10,7 +10,7 @@
   cursor: pointer;
   user-select: none;
 
-  input[type="checkbox"] {
+  input[type='checkbox'] {
     position: absolute;
     opacity: 0;
     z-index: -1;
@@ -19,7 +19,7 @@
       ~ .checkbox__custom {
         background-color: $bg-dark;
         border-color: $bg-dark;
-        box-shadow: 0 0 0 0.2rem rgba(241, 98, 55, 0.25);
+        box-shadow: 0 0 0 0.2rem rgba(95, 164, 241, 0.25);
 
         &:after {
           display: block;
@@ -41,7 +41,7 @@
     border-radius: 2px;
 
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       left: 50%;
       top: 50%;
@@ -63,9 +63,5 @@
         height: 12px;
       }
     }
-  }
-
-  .checkbox__value {
-    margin-top: 5px;
   }
 }

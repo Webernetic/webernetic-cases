@@ -1,5 +1,24 @@
+-
+  var data = [
+    {icon: "../assets/icons/globeIcon.svg", alt: "Иконка глобуса", text: "Добавить возможность переключения языка сайта."}, 
+    {icon: "../assets/icons/exchangeIcon.svg", alt: "Иконка обмена валют", text: "Разработать кнопки для конвертации валюты."}, 
+    {icon: "../assets/icons/downloadIcon.svg", alt: "Иконка загрузки", text: "Добавить иконки для скачивания мобильного приложения и др."},]
+
 section.competitorSection
     h2.competitorSection_title Анализ конкурентов юзабилити
     +wrapper.competitorSection_descriptionWrapper 
         p.mb-10 У клиента не было полноценного сайта (за исключением 1 страницы). Поэтому анализировались макеты будущего сайта.  
-        p Были предложены #[span.brightText доработки] для повышения юзабилити.  
+        p Были предложены #[span.brightText доработки] для повышения юзабилити.
+    ul.flexContainer
+        each item in data 
+            li.competitorSection_item
+                img.competitorSection_icon(src=item.icon alt=item.alt )   
+                p.competitorSection_itemText= item.text  
+    .competitorSection_recommendationWrapper 
+        h2.competitorSection_recommendationHeader.colorInvertText Рекомендации для разработки сайта
+        .flexContainer.competitorSection_contentWrapper
+            +wrapper.whiteBg 
+                p Мы предоставили разработчикам все необходимые #[span.brightText SEO-требования] для технической оптимизации сайта. 
+                p С учетом этих рекомендаций сейчас идет разработка.
+            +wrapper.whiteBg 
+                img(src="./assets/icons/logo.svg" alt = "Логотип")

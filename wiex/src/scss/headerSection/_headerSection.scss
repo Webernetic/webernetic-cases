@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: clamp($spacing-3, 8.3vw, $spacing-1);
+    margin-bottom: clamp($spacing-3, 7.5vw, $spacing-2);
     width: fit-content;
     height: clamp(35px, 3.5vw, 42px);
     padding: 0 clamp($spacing-9, 3.33vw, $spacing-7);
@@ -25,8 +25,6 @@
   .header_text {
     margin-top: $spacing-13;
     font-size: $font-size-secondary;
-    font-size: $font-size-mini;
-    font-weight: $font-weight-bold;
   }
 
   &_cardsWrapper {

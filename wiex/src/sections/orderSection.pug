@@ -9,14 +9,13 @@
 
   var inputs = [
     {type: "text", placeholder: "Имя*", name: "name"}, 
-    {type: "email", placeholder: "E-mail*", name: "email"}, 
     {type: "tel", placeholder: "Телефон*", name: "phone"}, 
+    {type: "email", placeholder: "E-mail*", name: "email"},    
     {type: "url", placeholder: "Сайт*", name: "site"} ]
 
-section.orderSection
-      h4.orderSection_title Доверьте свой проект профессионалам, мы поможем безопасно сменить регион продвижения без потери клиентов и прибыли.
-      +wrapper(class="secondaryBg flexContainer")
-        +wrapper(class="brightBg flex-center orderSection_nameWrapper colorWhite")
+section.orderSection     
+      +wrapper(class="secondaryBg flexContainer orderSection__position")
+        +wrapper(class="whiteBg flex-center orderSection_nameWrapper")
             h4 Анастасия
             p ACCOUNT MANAGER
         .orderSection_imageWrapper 
