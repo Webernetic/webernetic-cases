@@ -1,13 +1,15 @@
 .done {
     &__wrapper {
-        border-radius: 4px;
-        border: 1px solid #cdaa4c;
-        background: #fff;
-        padding: 30px;
+        @include section-frame;
+        // border-radius: 4px;
+        // border: 1px solid #cdaa4c;
+        // background: #fff;
+        // padding: 30px;
     }
 
     &__title {
         @include section-title;
+        margin: 0 0 0 0 !important;
     }
 
     &__list {
@@ -42,9 +44,9 @@
     }
 
     @media (max-width: $media-sm) {
-        &__wrapper {
-            padding: 15px;
-        }
+        // &__wrapper {
+        //     padding: 15px;
+        // }
 
         &__list {
             gap: 6px;
