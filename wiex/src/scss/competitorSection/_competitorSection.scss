@@ -66,3 +66,22 @@
     }
   }
 }
+
+@media (max-width: $breakpoints-sm) {
+  .competitorSection {
+    &__flexColumn {
+      flex-direction: column;
+    }
+
+    &_contentWrapper {
+      & > div:first-of-type {
+        flex: 1;
+        box-shadow: none;
+      }
+
+      & > div:last-of-type {
+        max-width: 100%;
+      }
+    }
+  }
+}

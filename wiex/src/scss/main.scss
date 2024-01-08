@@ -20,7 +20,10 @@
 }
 
 body {
+  position: relative;
   scroll-behavior: smooth;
+  background-color: rgba(221, 238, 255, 0.2);
+  z-index: -1;
 }
 
 body::-webkit-scrollbar {

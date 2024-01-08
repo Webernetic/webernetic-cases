@@ -7,6 +7,7 @@
     background-image: url('../assets/images/banner-1200.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: right;
   }
 
   .wiex {
@@ -30,7 +31,7 @@
   &_cardsWrapper {
     position: relative;
     bottom: 0;
-    transform: translateY(-15%);
+    transform: translateY(-$spacing-4);
     z-index: 10;
     margin-bottom: clamp($spacing-9, 4.2vw, $spacing-5);
   }
@@ -62,10 +63,24 @@
     font-weight: $font-weight-bold;
     color: $font-color-invert;
   }
-
-  @media (max-width: $breakpoints-sm) {
+}
+@media (max-width: $breakpoints-sm) {
+  .headerSection {
     .wiex {
       margin-bottom: 256px;
+    }
+
+    &__flexColumn {
+      flex-direction: column;
+    }
+
+    .imageWrapper {
+      background-image: url('../assets/images/banner-500.png');
+    }
+
+    &_cardsWrapper {
+      margin-bottom: 0;
+      transform: translateY(-$spacing-5);
     }
   }
 }

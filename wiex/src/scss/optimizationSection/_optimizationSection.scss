@@ -29,3 +29,15 @@
     }
   }
 }
+
+@media (max-width: $breakpoints-sm) {
+  .optimizationSection {
+    &__flexColumn {
+      flex-direction: column;
+    }
+
+    &_imageWrapper {
+      max-width: 100%;
+    }
+  }
+}

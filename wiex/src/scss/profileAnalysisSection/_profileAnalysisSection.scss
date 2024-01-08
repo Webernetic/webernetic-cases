@@ -20,3 +20,11 @@
     }
   }
 }
+
+@media (max-width: $breakpoints-sm) {
+  .profileAnalysisSection {
+    &__flexColumn {
+      flex-direction: column;
+    }
+  }
+}

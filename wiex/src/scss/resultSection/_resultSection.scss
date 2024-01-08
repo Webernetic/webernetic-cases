@@ -40,3 +40,15 @@
     }
   }
 }
+
+@media (max-width: $breakpoints-sm) {
+  .resultSection {
+    &__flexColumn {
+      flex-direction: column;
+    }
+
+    &_imageWrapper {
+      max-width: 100%;
+    }
+  }
+}

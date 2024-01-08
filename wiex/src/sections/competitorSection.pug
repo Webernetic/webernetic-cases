@@ -9,14 +9,14 @@ section.competitorSection
     +wrapper.competitorSection_descriptionWrapper 
         p.mb-10 У клиента не было полноценного сайта (за исключением 1 страницы). Поэтому анализировались макеты будущего сайта.  
         p Были предложены #[span.brightText доработки] для повышения юзабилити.
-    ul.flexContainer
+    ul.flexContainer.competitorSection__flexColumn
         each item in data 
             li.competitorSection_item
                 img.competitorSection_icon(src=item.icon alt=item.alt )   
                 p.competitorSection_itemText= item.text  
     .competitorSection_recommendationWrapper 
         h2.competitorSection_recommendationHeader.colorInvertText Рекомендации для разработки сайта
-        .flexContainer.competitorSection_contentWrapper
+        .flexContainer.competitorSection_contentWrapper.competitorSection__flexColumn
             +wrapper.whiteBg 
                 p Мы предоставили разработчикам все необходимые #[span.brightText SEO-требования] для технической оптимизации сайта. 
                 p С учетом этих рекомендаций сейчас идет разработка.

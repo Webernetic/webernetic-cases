@@ -5,3 +5,15 @@
     max-width: 47%;
   }
 }
+
+@media (max-width: $breakpoints-sm) {
+  .structureSection {
+    &__flexColumn {
+      flex-direction: column;
+    }
+
+    &_lastBlock {
+      max-width: 100%;
+    }
+  }
+}
