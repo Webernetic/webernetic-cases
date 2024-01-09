@@ -1,0 +1,65 @@
+@import './fonts';
+
+$max-width: 1200px;
+
+//spacings
+$spacing-1: 100px;
+$spacing-2: 90px;
+$spacing-3: 70px;
+$spacing-4: 62px;
+$spacing-5: 50px;
+$spacing-6: 44px;
+$spacing-7: 40px;
+$spacing-8: 35px;
+$spacing-9: 30px;
+$spacing-10: 25px;
+$spacing-11: 20px;
+$spacing-12: 16px;
+$spacing-13: 14px;
+$spacing-14: 10px;
+$spacing-15: 4px;
+
+//fonts
+$font-family: Circe;
+$font-weight-extra-bold: 800;
+$font-weight-bold: 700;
+$font-weight-primary: 500;
+
+$line-height-primary: 135%;
+$line-height-secondary: 120%;
+$line-height-H: 130%;
+$line-height-H1: 105%;
+
+$font-size-mini: clamp(1.125rem, 2vw, 1.5rem);
+$font-size: clamp(1.125rem, 2vw, 1.5rem);
+$font-size-medium: clamp(1.125rem, 2.17vw, 1.625rem);
+$font-size-secondary: clamp(1.375rem, 2.3vw, 1.75rem);
+$font-size-H1: clamp(2.375rem, 4vw, 4.06rem);
+$font-size-H2: clamp(2rem, 3.75vw, 2.81rem);
+$font-size-H2-secondary: clamp(2rem, 4vw, 3rem);
+$font-size-H3: clamp(1.625rem, 3vw, 2.25rem);
+$font-size-H4: clamp(1.06rem, 2.3vw, 2rem);
+
+$font-color: #3e3e3e;
+$font-color-invert: #ffffff;
+$font-color-secondary: #555555;
+$font-color-bright: #1f6ebb;
+$font-color-H: #373c41;
+$font-color-placeholder: #3c465b;
+
+//backgrounds
+$bg-secondary: #ddeeff;
+$bg-dark: #5fa4f1;
+$bg-white: #ffffff;
+
+$breakpoints-sm: 576px;
+$breakpoints-md: 768px;
+
+// $breakpoint: (
+//   xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px,
+//   xxl: 1400px,
+// );
