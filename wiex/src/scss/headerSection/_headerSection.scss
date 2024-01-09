@@ -36,6 +36,11 @@
     margin-bottom: clamp($spacing-9, 4.2vw, $spacing-5);
   }
 
+  &_list {
+    padding: 0;
+    margin: 0;
+  }
+
   &_card {
     background-color: $bg-white;
   }

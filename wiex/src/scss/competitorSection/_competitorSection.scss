@@ -16,9 +16,15 @@
     flex-direction: column;
     min-height: 100%;
     gap: $spacing-13;
+    margin-bottom: 0;
     padding: $spacing-10 clamp($spacing-10, 2.5vw, $spacing-9);
     background-color: $bg-secondary;
     border-radius: 20px;
+  }
+
+  &_list {
+    margin: 0;
+    padding: 0;
   }
 
   &_itemText {
@@ -54,8 +60,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-top: $spacing-9;
-      padding-bottom: clamp($spacing-9, 3.3vw, $spacing-7);
+      padding: $spacing-9 $spacing-6 clamp($spacing-9, 3.3vw, $spacing-7)
+        $spacing-6;
       box-shadow: none;
 
       img {

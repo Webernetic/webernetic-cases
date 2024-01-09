@@ -20,8 +20,8 @@
       height: 4px;
       border-radius: 50%;
       left: clamp(6px, 0.67vw, 8px);
-      bottom: 50%;
-      transform: translateY(50%);
+      top: 0;
+      transform: translateY(clamp($spacing-14, 1.3vw, $spacing-12));
       background-color: $font-color;
     }
   }

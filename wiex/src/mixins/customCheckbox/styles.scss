@@ -52,8 +52,12 @@
       transform: translate(-50%, -50%);
     }
   }
+}
 
-  @media (max-width: $breakpoints-sm) {
+@media (max-width: $breakpoints-sm) {
+  .checkbox {
+    font-weight: $font-weight-bold;
+
     .checkbox__custom {
       height: 20px;
       width: 20px;
