@@ -1,0 +1,60 @@
+@import './fonts';
+
+$max-width: 1200px;
+
+//spacings
+$spacing-1: 124px;
+$spacing-2: 110px;
+$spacing-3: 70px;
+$spacing-4: 64px;
+$spacing-5: 60px;
+$spacing-6: 50px;
+$spacing-7: 45px;
+$spacing-8: 40px;
+$spacing-9: 35px;
+$spacing-10: 30px;
+$spacing-11: 24px;
+$spacing-12: 20px;
+$spacing-13: 12px;
+$spacing-14: 10px;
+$spacing-15: 5px;
+
+//fonts
+$font-family: Circe;
+$font-weight-extra-bold: 800;
+$font-weight-bold: 700;
+$font-weight-primary: 400;
+
+$line-height-primary: 135%;
+$line-height-secondary: 125%;
+$line-height-H: 115%;
+
+$font-size-mini: clamp(0.875rem, 1.83vw, 1.375rem);
+$font-size: clamp(1rem, 2.5vw, 1.875rem);
+$font-size-secondary: clamp(1rem, 2.92vw, 2.188rem);
+$font-size-H1: clamp(1.688rem, 5vw, 3.75rem);
+$font-size-H2: clamp(1.688rem, 5vw, 3.75rem);
+$font-size-H3: clamp(1.5rem, 4vw, 3rem);
+$font-size-H4: clamp(1rem, 2.9vw, 2.188rem);
+
+$font-color: #363636;
+$font-color-invert: #ffffff;
+$font-color-bright: #7647c9;
+$font-color-placeholder: #363636;
+
+//backgrounds
+$bg-secondary: #bf7ae9;
+$bg-bright: #ff7f40;
+$bg-white: #ffffff;
+
+$breakpoints-sm: 576px;
+$breakpoints-md: 768px;
+
+// $breakpoint: (
+//   xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px,
+//   xxl: 1400px,
+// );
