@@ -1,0 +1,50 @@
+.client {
+    &__wrapper {
+        display: flex;
+        gap: 90px;
+        justify-content: space-between;
+    }
+
+    &__image {
+        position: relative;
+        display: block;
+        width: 334px;
+        height: 436px;
+        overflow: hidden;
+        padding-top: 20%;
+        margin-left: 90px;
+
+        & > img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+    }
+
+    &__content {
+        flex: 0 1 599px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        & > p {
+            @include regular-text;
+
+            & > span {
+                color: $text-purpur;
+                font-weight: 700;
+            }
+        }
+
+        & > p:nth-child(3) > span {
+            display: block
+        }
+    }
+
+    &__title {
+        @include bold-text;
+    }
+}

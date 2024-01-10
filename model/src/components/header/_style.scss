@@ -1,0 +1,47 @@
+.header {
+    position: relative;
+    margin-bottom: 30px;
+    background-color: $blue-color;
+    overflow: hidden;
+
+    &__wrapper {
+        width: 100%;
+        padding: 110px 0 204px 0;
+    }
+
+    &__title {
+        max-width: 700px;
+        font-size: 75px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 115%;
+        color: #333;
+        background: url("../../assets/img/decoration.svg") no-repeat 15% 100%;
+        padding-bottom: 25px;
+        margin-bottom: 28px;
+    }
+
+    &__text {
+        max-width: 420px;
+        font-size: 38px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 115%;
+        color: $text-color;
+
+        & > span {
+            font-size: 44px;
+            font-weight: 700;
+            color: $text-purpur;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        top: 14%;
+        right: 0;
+        width: 604px;
+        height: 552px;
+        background: url("../../assets/img/header-img.png") center no-repeat;
+    }
+}

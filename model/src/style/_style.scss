@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Circle", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    max-width: 1160px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media (max-width: $media-sm) {
+        max-width: 360px;
+        padding: 0 20px;
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+}

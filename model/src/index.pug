@@ -1,0 +1,19 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Webpack
+  body
+    - var badge1 = "В 2023 году накрутка подписчиков ведет только к теневому бану и порче репутации перед Instagram. Бесплатные методы продвижения, такие как reels, перестанут работать, так как Instagram не будет продвигать ваши видео, если вы используете накрутку."
+
+    include ./components/mixins/mixins.pug
+
+    include ./components/header/header.pug
+
+    main.main
+
+      +badge(badge1)
+
+      include ./components/aboutClient/aboutClient.pug

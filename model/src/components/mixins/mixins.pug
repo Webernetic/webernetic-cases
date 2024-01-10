@@ -1,0 +1,18 @@
+mixin badge(text)
+    .container
+        aside.badge
+
+            .badge__image
+                img(src=require("./assets/img/quote.png"), alt="quote")
+
+            p.badge__text= text
+
+mixin sections(sectionClass, wrapperClass)
+
+    section(class= sectionClass)
+
+        .container
+
+            div(class= wrapperClass)
+            
+                block
