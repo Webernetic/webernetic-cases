@@ -1,0 +1,97 @@
+.tape {
+    &__title {
+        @include section-title;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 70px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @include text-style;
+    }
+
+    &__images {
+        position: relative;
+        display: flex;
+        gap: 55px;
+    }
+
+    &__image {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        & > span {
+            @include section-subtitle;
+            margin: 0 !important    ;
+        }
+
+        & > img {
+            width: 100%;
+            object-fit: contain;
+        }
+
+        &:nth-child(1) {
+            width: 293px;
+            height: 573.529px;
+        }
+        &:nth-child(2) {
+            width: 282px;
+            height: 635px;
+        }
+
+        & > div {
+            z-index: -1;
+        }
+    }
+
+    &__blob {
+        position: absolute;
+        top: 30%;
+        right: -8%;
+        width: 374.628px;
+        height: 355.117px;
+        background: url("../../assets/img/tape-blob.svg") center no-repeat;
+        background-size: contain;
+        z-index: -1;
+    }
+
+    @media (max-width: $media-sm) {
+        &__wrapper {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__images {
+            justify-content: space-between;
+        }
+
+        &__image {
+            gap: 5px;
+
+            &:nth-child(1) {
+                width: 150px;
+                height: 327px;
+            }
+            &:nth-child(2) {
+                width: 144px;
+                height: 327px;
+            }
+        }
+
+        &__blob {
+            top: 30%;
+            right: -5%;
+            width: 192px;
+            height: 182px;
+        }
+    }
+}

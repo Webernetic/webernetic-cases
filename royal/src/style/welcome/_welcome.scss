@@ -1,0 +1,128 @@
+.welcome {
+    position: relative;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        max-width: 65%;
+        margin-bottom: 40px;
+    }
+
+    &__box {
+        @include text-style;
+
+        & > p {
+            margin: 0;
+        }
+    }
+
+    &__box:nth-child(1) {
+        font-size: 32px;
+    }
+
+    &__box:nth-child(2) {
+        & > strong {
+            display: block;
+            @include section-subtitle;
+        }
+    }
+
+    &__box:nth-child(4) {
+        & > strong {
+            @include section-subtitle;
+        }
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0 0 0 36px;
+        @include text-style;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0%;
+        right: -15%;
+        width: 720.9px;
+        height: 744.818px;
+        background: url("../../assets/img/welcome-img.png") center no-repeat;
+        background-size: contain;
+    }
+
+    .audience {
+        @include text-style;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        & > strong {
+            @include section-subtitle;
+        }
+
+        &__list {
+            display: flex;
+            gap: 60px;
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+            & > img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        @media (max-width: $media-sm) {
+            &__list {
+                flex-wrap: wrap;
+                gap: 11px;
+            }
+
+            &__item {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 15px;
+                & > img {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $media-sm) {
+        &__content {
+            gap: 15px;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+
+        &__box:nth-child(1) {
+            font-size: 22px;
+        }
+
+        &__box:nth-child(4) {
+            & > strong {
+                margin-bottom: 6px;
+            }
+        }
+
+        &__bg {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            top: 0;
+            left: 0;
+        }
+
+        &__list {
+            margin: 0;
+            padding: 0 0 0 20px;
+        }
+    }
+}

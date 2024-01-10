@@ -1,0 +1,17 @@
+.header {
+    padding-top: 46px;
+    &__title {
+        font-size: 70px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+    }
+
+    @media (max-width: $media-sm) {
+        padding-top: 30px;
+
+        &__title {
+            font-size: 38px;
+        }
+    }
+}

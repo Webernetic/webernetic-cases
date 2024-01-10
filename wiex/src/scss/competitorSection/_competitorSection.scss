@@ -1,0 +1,93 @@
+.competitorSection {
+  padding: clamp($spacing-3, 7.5vw, $spacing-2) 0;
+
+  &_descriptionWrapper {
+    max-width: 768px;
+    margin-bottom: clamp($spacing-13, 2.1vw, $spacing-10);
+  }
+
+  &_title {
+    margin-bottom: clamp($spacing-11, 2.1vw, $spacing-10);
+  }
+
+  &_item {
+    flex-basis: 33%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    gap: $spacing-13;
+    margin-bottom: 0;
+    padding: $spacing-10 clamp($spacing-10, 2.5vw, $spacing-9);
+    background-color: $bg-secondary;
+    border-radius: 20px;
+  }
+
+  &_list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &_itemText {
+    color: $font-color-secondary;
+  }
+
+  &_icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  &_recommendationWrapper {
+    margin-top: clamp($spacing-3, 7.5vw, $spacing-2);
+    background-color: $bg-dark;
+    padding: clamp($spacing-7, 5vw, $spacing-4)
+      clamp($spacing-10, 3.8vw, $spacing-6);
+    border-radius: 20px;
+  }
+
+  &_recommendationHeader {
+    margin-bottom: clamp($spacing-11, 2.1vw, $spacing-10);
+  }
+
+  &_contentWrapper {
+    & > div:first-of-type {
+      flex: 1;
+      box-shadow: none;
+    }
+
+    & > div:last-of-type {
+      max-width: 32%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: $spacing-9 $spacing-6 clamp($spacing-9, 3.3vw, $spacing-7)
+        $spacing-6;
+      box-shadow: none;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoints-sm) {
+  .competitorSection {
+    &__flexColumn {
+      flex-direction: column;
+    }
+
+    &_contentWrapper {
+      & > div:first-of-type {
+        flex: 1;
+        box-shadow: none;
+      }
+
+      & > div:last-of-type {
+        max-width: 100%;
+      }
+    }
+  }
+}

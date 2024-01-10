@@ -1,0 +1,56 @@
+.start {
+    &__title {
+        @include section-title;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__img {
+        width: 508px;
+        height: 762px;
+        background: url("../../assets/img/phone2.png") center no-repeat;
+        background-size: contain;
+    }
+
+    &__info {
+        flex: 0 1 41%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__subtitle {
+        @include section-subtitle;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        padding: 0;
+        margin: 0;
+
+        @include text-style;
+        list-style: none;
+    }
+
+    @media (max-width: $media-sm) {
+        &__content {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        &__img {
+            width: 100%;
+            height: 352px;
+        }
+
+        &__info {
+            gap: 15px;
+        }
+    }
+}

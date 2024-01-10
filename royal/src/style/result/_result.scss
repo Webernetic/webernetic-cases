@@ -1,0 +1,53 @@
+.result {
+    &__title {
+        @include section-title;
+    }
+
+    &__hidden {
+        display: none;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__frame {
+        @include section-frame;
+
+        & > h3 {
+            @include section-subtitle;
+
+            & > span {
+                color: #a67ec5;
+            }
+        }
+
+        & > p {
+            @include text-style;
+        }
+
+        & > ul {
+            @include text-style;
+            margin: 0;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        padding-top: 20px;
+
+        & > img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    @media (max-width: $media-sm) {
+        &__hidden {
+            display: block;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+extends layouts/MainLayout
+include mixins/index.pug
+
+block title
+  | Wiex
+
+block content
+  body.body  
+    include sections/headerSection
+    .container
+      include sections/structureSection 
+      include sections/profileAnalysisSection   
+      include sections/competitorSection 
+      include sections/optimizationSection 
+      include sections/resultSection 
+      include sections/orderSection 
+      
+    
+    

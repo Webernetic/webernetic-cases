@@ -1,0 +1,53 @@
+.posts {
+    &__title {
+        @include section-title;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    &__image {
+        width: 547px;
+        height: 493px;
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__text {
+        max-width: 45%;
+        & > h3 {
+            @include section-subtitle;
+            margin-bottom: 7px;
+        }
+
+        & > ul {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            margin: 0;
+
+            @include text-style;
+        }
+    }
+
+    @media (max-width: $media-sm) {
+        &__content {
+            flex-direction: column;
+        }
+
+        &__image {
+            width: 100%;
+            height: 290px;
+        }
+
+        &__text {
+            max-width: 100%;
+        }
+    }
+}
