@@ -1,0 +1,26 @@
+- var point = ["Разработать концепцию блога", "Упаковать профиль в Instagram", "Увеличить узнаваемость для успешного прохождения кастингов", "Привлечь новых подписчиков"]
+- var items = [{p: "×67", text: "Увеличение охвата с 8 600 до 578 825 человек"}, {p: "×5", text: "Рост вовлеченности аудитории с 6.5% до 36,8%"}, {p: "+15%", text: "Увеличение охвата с 8 600 до 578 825 человек",}]
+
++sections("purpose", "purpose__wrapper")
+
+    .purpose__left
+        h2.purpose__title.
+            Цели проекта:
+
+        ul.purpose__points
+            each val, index in point
+                li 
+                    div= `0${index + 1}`
+                    div= val 
+
+    .purpose__right
+        h2.purpose__title.
+            Результаты за 9 месяцев:
+
+        ul.purpose__list
+            each val in items
+                li 
+                    div= val.p 
+                    div= val.text
+
+

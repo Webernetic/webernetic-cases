@@ -1,0 +1,49 @@
+.start {
+    &__wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__title {
+        @include bold-text;
+    }
+
+    &__points {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        max-width: 560px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 25px;
+
+        & > li {
+            @include regular-text;
+        }
+    }
+
+    &__description {
+        max-width: 560px;
+    }
+
+    &__text {
+        @include regular-text;
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 556px;
+        height: 660.32px;
+        background: url("../../assets/img/mobile1.png") center no-repeat;
+        background-size: contain;
+    }
+}

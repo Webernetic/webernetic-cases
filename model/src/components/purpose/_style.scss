@@ -1,0 +1,86 @@
+.purpose {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        @include bold-text;
+        font-size: 35px;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 34px;
+    }
+
+    &__points {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        & > li {
+            max-width: 630px;
+            height: 110px;
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding: 25px 30px;
+            border-radius: 20px;
+            background-color: $list-colot;
+
+            & > div:first-child {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 60px;
+                height: 60px;
+
+                font-family: "Hammersmith One", sans-serif;
+                font-size: 32px;
+                line-height: 140%;
+
+                background-color: $light-color;
+                border-radius: 50%;
+            }
+
+            & > div:last-child {
+                @include regular-text;
+                font-size: 27px;
+                font-weight: 700;
+                max-width: 480px;
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 460px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        & > li {
+            display: flex;
+            flex-direction: column;
+            max-width: 364px;
+
+            & > div:first-child {
+                font-family: "Hammersmith One", sans-serif;
+                font-size: 80px;
+                line-height: 110%;
+                color: $text-purpur;
+            }
+
+            & > div:last-child {
+                @include regular-text;
+            }
+        }
+    }
+}
