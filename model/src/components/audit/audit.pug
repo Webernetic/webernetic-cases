@@ -1,0 +1,14 @@
+- var items = ["Профиль клиента ориентирован на:", "Девушек, которые хотят стать моделью", "Начинающих моделей", "Тех, кто хочет научиться красиво позировать для фотографий"]
+
++sections("audit", "audit__wrapper")
+
+    h2.audit__title Целевая аудитория
+
+    .audit__content 
+
+        picture.audit__image
+            img(src=require("./assets/img/audit.png"), alt="pic")
+
+        ul.audit__list 
+            each item in items
+                li= item
