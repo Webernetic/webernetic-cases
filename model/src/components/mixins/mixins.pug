@@ -9,11 +9,11 @@ mixin badge(text)
 
 mixin sections(sectionClass, wrapperClass)
 
-    section(class= sectionClass)
+    section(class=sectionClass)
 
         .container
 
-            div(class= wrapperClass)
+            div(class=sectionClass + "__wrapper")
             
                 block
 
