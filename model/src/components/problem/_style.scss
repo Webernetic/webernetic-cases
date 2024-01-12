@@ -1,3 +1,66 @@
 .problem {
-    
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    & p {
+        @include regular-text;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        & > div:first-child {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 18.5px 0;
+            max-width: 604px;
+
+            & > h2 {
+                @include bold-text;
+            }
+
+            // & > div {
+            //     display: block;
+            //     width: 490px;
+            //     height: 460px;
+            //     background: url("../../assets/img/problem.png") center no-repeat;
+            //     & > img {
+            //         width: 100%;
+            //         height: 100%;
+            //         object-fit: contain;
+            //     }
+            // }
+        }
+        & > div:last-child {
+            display: block;
+            width: 490px;
+            height: 460px;
+            background: url("../../assets/img/problem.png") center no-repeat;
+        }
+    }
+
+    &__middle {
+        background-color: $grey-color;
+    }
+
+    &__state {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 40px 0;
+
+        & > div {
+            width: 100%;
+            height: 150px;
+            background: url("../../assets/img/problem2.png") center no-repeat;
+        }
+    }
+
+    &__laptop {
+        width: 100%;
+        height: 515px;
+        background: url("../../assets/img/problem3.png") center no-repeat;
+    }
 }
