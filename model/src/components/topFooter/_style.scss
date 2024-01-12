@@ -1,0 +1,7 @@
+.footer-top {
+    &__text {
+        @include bold-text;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
