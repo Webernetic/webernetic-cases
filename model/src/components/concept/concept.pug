@@ -1,0 +1,16 @@
+- var badge3 = "При подписке аудитории сперва интересен полезный контент, но лояльными они становятся к тем блогерам, которые ближе им по ценностям."
+- var items = [{text: "Все посты разделили на 3 направления:"}, {p: "50%", text: "экспертные"}, {p: "30%", text: "личные"}, {p: "20%", text: "информационные"}]
+
++dubleSections("concept", "Концепция постов", badge3)
+
+    picture.concept__image 
+        img(src=require("./assets/img/concept.png"), alt="pic")
+
+    ul.concept__list
+        each item in items 
+            li
+                if item.p
+                    span= item.p
+                    span= item.text
+                else
+                    span= item.text

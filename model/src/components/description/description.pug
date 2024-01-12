@@ -1,38 +1,23 @@
 - var badge2 = "При переходе на страницу люди сначала просматривают шапку профиля. Если она не раскрывает уникальности аккаунта, то подписчик уходит."
 - var items = ["Исходное описание профиля состояло только из перечислений модельных агентств, с которыми работает клиентка.", "Но давало ли это ценность людям, которые только думали стать моделью или хотели научиться позировать для фотографий?", "Мы обновили описание профиля, чтобы выделить ценность аудитории и рассказать о жизненном пути Софии. Теперь люди быстро поймут, чем аккаунт может быть полезен."]
 
-section.description
 
-    .container
++dubleSections("description", "Описание профиля", badge2)
 
-        .description__header
+    ul.description__list 
+        each item in items
+            li= item
 
-            h2.description__title Описание профиля
+    .description__box 
 
-            +badge(badge2)
-
-    .description__wrapper 
-
-        .container
-
-            .description__content 
-
-                ul.description__list 
-                    each item in items
-                        li= item
-
-                .description__box 
-
-                    .description__before
-                        picture 
-                            img(src=require('./assets/img/description1.png'), alt="befor-logo")
+        .description__before
+            picture 
+                img(src=require('./assets/img/description1.png'), alt="befor-logo")
                         
-                        span До
+                span До
 
-                    .description__after
-                        picture 
-                            img(src=require('./assets/img/description2.png'), alt="befor-logo")
+        .description__after
+            picture 
+                img(src=require('./assets/img/description2.png'), alt="befor-logo")
 
-                        span После
-
-
+                span После

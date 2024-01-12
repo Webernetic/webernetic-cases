@@ -16,3 +16,22 @@ mixin sections(sectionClass, wrapperClass)
             div(class= wrapperClass)
             
                 block
+
+mixin dubleSections(sectionClass, title, badge)
+
+    section(class=sectionClass)
+
+        .container
+
+            div(class=sectionClass + "__header")
+
+                h2.concept__title= title
+
+                +badge(badge)
+
+        div(class=sectionClass + "__wrapper")
+
+            .container
+
+                div(class=sectionClass + "__content")
+                    block

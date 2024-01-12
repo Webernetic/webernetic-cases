@@ -1,0 +1,67 @@
+.concept {
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        @include bold-text;
+    }
+
+    &__wrapper {
+        padding: 50px 0;
+        background-color: $dark-blue;
+    }
+    
+    &__content {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__image {
+        position: absolute;
+        top: -22%;
+        left: 5%;
+        display: block;
+        width: 424px;
+        height: 486px;
+
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-width: 556px;
+        list-style: none;
+
+        & > li:first-child {
+            @include regular-text;
+            font-size: 26px;
+        }
+
+        & > li:not(:first-child) {
+            @include bold-text;
+            & > span:last-child {
+                font-size: 32px;
+            }
+        }
+
+        & > li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 30px;
+            border-radius: 20px;
+            background-color: $light-color;
+        }
+    }
+}
