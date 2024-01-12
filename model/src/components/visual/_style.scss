@@ -1,0 +1,57 @@
+.visual {
+    &__before {
+        display: flex;
+        justify-content: space-between;
+
+        & > div {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-top: 70px;
+            max-width: 620px;
+
+            & > h2 {
+                @include bold-text;
+            }
+
+            & > p {
+                @include regular-text;
+            }
+        }
+    }
+
+    &__after {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        & > div {
+            padding: 117px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 5px;
+            width: 556px;
+            & > p {
+                @include regular-text;
+            }
+        }
+
+        & > picture {
+            position: absolute;
+            top: -25%;
+            left: 0;
+            display: block;
+            width: 594px;
+            height: 687px;
+
+            & > img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+    }
+}
