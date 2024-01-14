@@ -1,0 +1,85 @@
+.aboutSection {
+  &_groupWrapper {
+    min-width: 66.7%;
+  }
+
+  &_title {
+    margin-bottom: clamp($spacing-11, 3.67vw, $spacing-7);
+  }
+
+  &_item {
+    position: relative;
+    overflow: hidden;
+    border-radius: clamp($spacing-13, 2.08vw, $spacing-11);
+    border: 2px solid $bg-secondary;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_itemTitle {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    flex: 1;
+    margin-top: clamp($spacing-10, 9.5vw, $spacing-1);
+    margin-left: clamp($spacing-12, 5.4vw, $spacing-4);
+    padding-bottom: clamp($spacing-14, 2.16vw, $spacing-10);
+    font-size: clamp(1rem, 2.67vw, 2rem);
+    font-weight: $font-weight-bold;
+    line-height: $line-height-H;
+  }
+
+  &_itemText {
+    padding: clamp($spacing-14, 2.83vw, $spacing-9) 0
+      clamp($spacing-14, 2.5vw, $spacing-10)
+      clamp($spacing-12, 5.4vw, $spacing-4);
+    background-color: $bg-secondary;
+    font-size: clamp(1rem, 2.08vw, 1.56rem);
+    font-weight: $font-weight-bold;
+    color: $bg-white;
+  }
+
+  &_imageWrapper {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 50%;
+    max-height: 100%;
+    height: 100%;
+
+    & > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: $breakpoints-sm) {
+  .aboutSection {
+    &__flexColumn {
+      flex-direction: column;
+    }
+
+    &_groupWrapper {
+      min-width: 100%;
+    }
+
+    &_itemTitle {
+      position: static;
+    }
+
+    &_imageWrapper {
+      max-width: 40%;
+      max-height: 95%;
+    }
+  }
+}
+
+@media (max-width: 280px) {
+  .aboutSection {
+    &_imageWrapper {
+      display: none;
+    }
+  }
+}

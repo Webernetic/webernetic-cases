@@ -2,6 +2,7 @@
 
 .orderSection {
   margin-top: clamp($spacing-4, 7.5vw, $spacing-2);
+  background-color: $bg-order;
 
   &__position {
     padding-top: clamp($spacing-9, 6.7vw, $spacing-3);
@@ -52,7 +53,7 @@
   &_formTitle {
     margin-bottom: 20px;
     font-weight: $font-weight-extra-bold;
-    font-size: $font-size-H2-secondary;
+    font-size: $font-size-H2;
   }
 
   &_secondformTitle {

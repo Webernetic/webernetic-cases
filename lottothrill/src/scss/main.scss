@@ -2,6 +2,7 @@
 @import './variables';
 @import '../mixins/mixinsStyles.scss';
 @import './headerSection/_headerSection.scss';
+@import './aboutSection/_aboutSection.scss';
 @import './orderSection/_orderSection.scss';
 
 *,
@@ -79,7 +80,6 @@ h4 {
 
 h1 {
   font-size: $font-size-H1;
-  line-height: $line-height-H1;
 }
 
 h2 {
@@ -109,6 +109,11 @@ input::placeholder {
   color: inherit;
   margin: 0;
   padding: 0;
+}
+
+span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .li {
@@ -157,7 +162,7 @@ input::placeholder {
 .flexContainer {
   display: flex;
   justify-content: space-between;
-  gap: clamp($spacing-13, 1.67vw, $spacing-11);
+  gap: clamp($spacing-14, 2vw, $spacing-11);
 
   & > div {
     flex: 1;
