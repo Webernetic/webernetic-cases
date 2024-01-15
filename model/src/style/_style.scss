@@ -34,6 +34,7 @@ p {
     max-width: 1160px;
     width: 100%;
     margin: 0 auto;
+    overflow: hidden;
 
     @media (max-width: $media-sm) {
         max-width: 360px;
