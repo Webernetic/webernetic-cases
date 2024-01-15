@@ -1,0 +1,7 @@
+.blockWrapper {
+  position: relative;
+  border-radius: $spacing-11;
+  padding: clamp($spacing-10, 3.3vw, $spacing-7)
+    clamp($spacing-10, 3.75vw, $spacing-6);
+  box-shadow: 0px 4px 2px 0px rgba(31, 110, 187, 0.15);
+}

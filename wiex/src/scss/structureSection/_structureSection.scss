@@ -1,0 +1,19 @@
+.structureSection {
+  padding: clamp($spacing-3, 8.3vw, $spacing-1) 0;
+
+  &_lastBlock {
+    max-width: 47%;
+  }
+}
+
+@media (max-width: $breakpoints-sm) {
+  .structureSection {
+    &__flexColumn {
+      flex-direction: column;
+    }
+
+    &_lastBlock {
+      max-width: 100%;
+    }
+  }
+}
