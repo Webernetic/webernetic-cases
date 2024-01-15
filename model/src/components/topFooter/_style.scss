@@ -4,4 +4,10 @@
         text-align: center;
         margin-bottom: 40px;
     }
+
+    @media (max-width: $media-sm) {
+        &__text {
+            text-align: start;
+        }
+    }
 }
