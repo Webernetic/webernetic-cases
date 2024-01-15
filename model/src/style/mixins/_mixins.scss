@@ -6,7 +6,7 @@
     line-height: 130%;
     color: $text-color;
 
-    @media (max-width: 480px) {
+    @media (max-width: $media-sm) {
         font-size: 16px;
     }
 }
@@ -18,8 +18,8 @@
     line-height: 130%;
     color: $text-color;
 
-    @media (max-width: 480px) {
-        font-size: 24px;
+    @media (max-width: $media-sm) {
+        font-size: 18px;
     }
 }
 
@@ -31,7 +31,7 @@
     line-height: normal;
     color: $text-color;
 
-    @media (max-width: 480px) {
-        font-size: 32px;
+    @media (max-width: $media-sm) {
+        font-size: 24px;
     }
 }

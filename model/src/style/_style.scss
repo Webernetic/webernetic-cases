@@ -45,4 +45,8 @@ p {
     display: flex;
     flex-direction: column;
     gap: 90px;
+
+    @media (max-width: $media-sm) {
+        gap: 65px;
+    }
 }

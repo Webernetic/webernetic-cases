@@ -44,4 +44,37 @@
         height: 552px;
         background: url("../../assets/img/header-img.png") center no-repeat;
     }
+
+    @media (max-width: $media-sm) {
+        &__wrapper {
+            padding: 32px 0 260px 0;
+        }
+
+        &__title {
+            width: 100%;
+            font-size: 32px;
+            background: url("../../assets/img/decoration.svg") no-repeat 15% 100%;
+            margin-bottom: 21px;
+            padding-bottom: 10px;
+            background-size: 80%;
+        }
+
+        &__text {
+            max-width: 235px;
+            font-size: 20px;
+
+            & > span {
+                font-size: 20px;
+            }
+        }
+
+        &__image {
+            position: absolute;
+            top: 39%;
+            right: 5%;
+            width: 322.133px;
+            height: 293.841px;
+            background-size: contain;
+        }
+    }
 }

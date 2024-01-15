@@ -53,10 +53,37 @@
         & > picture {
             display: block;
             max-width: 460px;
+            width: 100%;
+
+            & > img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
         }
 
         & > span {
             @include light-text;
+        }
+    }
+
+    @media (max-width: $media-sm) {
+        &__content {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        &__list {
+            gap: 10px;
+            & > li {
+                padding: 18px 15px;
+            }
+        }
+
+        &__before,
+        &__after {
+            text-align: center;
+            gap: 5px;
         }
     }
 }

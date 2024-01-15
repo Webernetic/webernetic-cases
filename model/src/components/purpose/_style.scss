@@ -83,4 +83,50 @@
             }
         }
     }
+
+    @media (max-width: $media-sm) {
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        &__left {
+            gap: 10px;
+            margin-bottom: 65px;
+        }
+
+        &__points {
+            gap: 10px;
+            & > li {
+                height: auto;
+                gap: 15px;
+                padding: 20px 15px;
+
+                & > div:first-child {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 22px;
+                }
+            }
+        }
+
+        &__right {
+            gap: 10px;
+        }
+
+        &__list {
+            gap: 15px;
+
+            & > li {
+                max-width: 100%;
+
+                & > div:first-child {
+                    font-size: 60px;
+                }
+
+                & > div:last-child {
+                    text-align: start;
+                }
+            }
+        }
+    }
 }

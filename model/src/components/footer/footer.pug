@@ -25,15 +25,10 @@ footer.footer
                         Чем вам помочь?
                     .footer__checkboxs
                         each service in services
-                            label.footer__label
+                            label.checkbox
                                 input(type="checkbox" name="user_wish[]" value=service)
+                                .checkbox__custom
                                 span #{service}
 
                     button.footer__button.
                         Отправить
-
-                .footer__link
-                    h3.
-                        Может быть полезно
-                    a(href="https://www.belpromimpex.by/" target="_blank").
-                        БЕЛПРОМИМПЭКС

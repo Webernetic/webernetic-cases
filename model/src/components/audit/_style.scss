@@ -40,4 +40,25 @@
             background-color: $list-colot;
         }
     }
+
+    @media (max-width: $media-sm) {
+        &__content {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__image {
+            width: 288px;
+            height: 294px;
+            margin-left: 0;
+        }
+
+        &__list {
+            gap: 10px;
+
+            & > li:not(:first-child) {
+                padding: 10px 15px;
+            }
+        }
+    }
 }
