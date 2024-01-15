@@ -48,7 +48,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+
 
         & > picture {
             display: block;
@@ -62,9 +62,6 @@
             }
         }
 
-        & > span {
-            @include light-text;
-        }
     }
 
     @media (max-width: $media-sm) {
@@ -82,7 +79,6 @@
 
         &__before,
         &__after {
-            text-align: center;
             gap: 5px;
         }
     }
