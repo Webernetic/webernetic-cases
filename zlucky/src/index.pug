@@ -10,5 +10,7 @@ html(lang="ru")
       picture.header-bg
         img(src=require('./assets/img/header.svg'), alt="bg")
       include ./components/header/header.pug
-      include ./components/aboutProject/aboutProject.pug
+      main
+        include ./components/aboutProject/aboutProject.pug
+        include ./components/before/before.pug
 

@@ -24,6 +24,12 @@ p {
     margin: 0;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
 // .wrapper {
 //     position: relative;
 //     max-width: 1400px;
