@@ -9,11 +9,6 @@
         display: flex;
         flex-direction: column;
         gap: 30px;
-    }
-
-    &__header {
-        display: flex;
-        flex-direction: column;
 
         & > h2 {
             position: relative;
@@ -21,15 +16,15 @@
 
             @include section-title;
 
-            & > div {
+            &::after {
+                content: "";
+                background: url("../../assets/img/about6.svg");
+                background-size: contain;
                 position: absolute;
                 top: -15px;
                 left: -30px;
                 width: 286px;
                 height: 83px;
-                background: url("../../assets/img/about6.svg") no-repeat;
-                background-position: 25% 75%;
-                background-size: contain;
                 z-index: -1;
             }
         }
@@ -39,17 +34,125 @@
         }
     }
 
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        gap: 100px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        max-width: 658px;
+    }
+
+    &__image {
+        display: block;
+        width: 387px;
+        height: 670px;
+
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
 
     &__box {
         display: flex;
         flex-direction: column;
+        gap: 30px;
 
         & > span {
+            position: relative;
             @include section-title;
         }
 
         & > p {
             @include sm-text;
+        }
+    }
+
+    &__box:first-child {
+        & > span::after {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -30px;
+            width: 327.338px;
+            height: 73.5px;
+            background: url("../../assets/img/about2.svg") center no-repeat;
+            background-size: contain;
+            z-index: -1;
+        }
+    }
+
+    &__box:last-child {
+        & > span::after {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 256px;
+            height: 77px;
+            background: url("../../assets/img/about3.svg") center no-repeat;
+            background-size: contain;
+            z-index: -1;
+        }
+
+        & > p > span {
+            display: block;
+        }
+    }
+
+    @media (max-width: 480px) {
+        &__body {
+            flex-direction: column;
+            align-items: center;
+            gap: 60px;
+        }
+
+        &__image {
+            width: 205px;
+            height: 395px;
+        }
+
+        &__header {
+            & > h2 {
+                &::after {
+                    width: 171px;
+                    height: 50px;
+                    top: -5px;
+                    left: -15px;
+                }
+            }
+        }
+
+        &__content {
+            gap: 40px;
+        }
+
+        &__box {
+            gap: 20px;
+        }
+
+        &__box:first-child {
+            & > span::after {
+                top: -5px;
+                left: -20px;
+                width: 217px;
+                height: 50px;
+            }
+        }
+
+        &__box:last-child {
+            & > span::after {
+                top: 0px;
+                left: -15px;
+                width: 169px;
+                height: 47px;
+            }
         }
     }
 }

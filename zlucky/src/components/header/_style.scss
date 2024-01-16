@@ -10,10 +10,6 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
-        @media (max-width: 480px) {
-            padding: 30px 0 64px 0;
-            gap: 14px;
-        }
     }
 
     &__title {
@@ -26,10 +22,6 @@
 
         &::first-letter {
             text-transform: uppercase;
-        }
-
-        @media (max-width: 480px) {
-            font-size: 32px;
         }
     }
 
@@ -44,8 +36,22 @@
         &::first-letter {
             text-transform: uppercase;
         }
+    }
 
-        @media (max-width: 480px) {
+    @media (max-width: 480px) {
+        height: 280px;
+        margin-bottom: 0;
+
+        &__wrapper {
+            padding: 30px 0 64px 0;
+            gap: 14px;
+        }
+
+        &__title {
+            font-size: 32px;
+        }
+
+        &__text {
             font-size: 22px;
         }
     }
