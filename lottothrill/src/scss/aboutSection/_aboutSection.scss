@@ -1,4 +1,6 @@
 .aboutSection {
+  margin-bottom: clamp($spacing-10, 9.5vw, $spacing-1);
+
   &_groupWrapper {
     min-width: 66.7%;
   }
@@ -53,6 +55,23 @@
       height: auto;
     }
   }
+
+  &_contentWrapper {
+    margin-top: clamp($spacing-10, 9.5vw, $spacing-1);
+  }
+
+  &_ticketWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > img {
+      width: 80%;
+      height: 80%;
+    }
+  }
 }
 
 @media (max-width: $breakpoints-sm) {
@@ -72,6 +91,14 @@
     &_imageWrapper {
       max-width: 40%;
       max-height: 95%;
+    }
+
+    &_contentWrapper {
+      flex-direction: column-reverse;
+    }
+
+    &_ticketWrapper {
+      margin-bottom: $spacing-13;
     }
   }
 }

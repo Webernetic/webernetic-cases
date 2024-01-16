@@ -1,6 +1,6 @@
-.blockWrapper {
+.blockWrapperSecondary {
   position: relative;
-  border-radius: clamp(10px, 2.08vw, 25px);
+  border-radius: clamp(15px, 3.33vw, 40px);
   padding: clamp($spacing-11, 5.83vw, $spacing-3)
     clamp($spacing-12, 5.33vw, $spacing-4);
 }
