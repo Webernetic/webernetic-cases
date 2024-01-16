@@ -1,0 +1,55 @@
+.about {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+
+        & > h2 {
+            position: relative;
+            display: inline-block;
+
+            @include section-title;
+
+            & > div {
+                position: absolute;
+                top: -15px;
+                left: -30px;
+                width: 286px;
+                height: 83px;
+                background: url("../../assets/img/about6.svg") no-repeat;
+                background-position: 25% 75%;
+                background-size: contain;
+                z-index: -1;
+            }
+        }
+
+        & > p {
+            @include medium-text;
+        }
+    }
+
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+
+        & > span {
+            @include section-title;
+        }
+
+        & > p {
+            @include sm-text;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@mixin section-title {
+    color: $color-dark;
+    font-family: Circe, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    @media (max-width: 480px) {
+        font-size: 28px;
+    }
+}
+
+@mixin sm-text {
+    color: $color-dark;
+    font-family: Circe, sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+
+    @media (max-width: 480px) {
+        font-size: 18px;
+    }
+}
+
+@mixin medium-text {
+    color: $color-dark;
+    font-family: Circe, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    @media (max-width: 480px) {
+        font-size: 22px;
+    }
+}
