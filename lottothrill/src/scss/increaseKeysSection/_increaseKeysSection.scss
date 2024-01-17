@@ -1,0 +1,58 @@
+.increaseKeysSection {
+  margin-bottom: clamp($spacing-10, 9.5vw, $spacing-1);
+
+  &_title {
+    margin-bottom: clamp($spacing-11, 3.67vw, $spacing-7);
+  }
+
+  &_text {
+    max-width: 50%;
+    margin-bottom: clamp($spacing-11, 3.75vw, $spacing-7);
+  }
+
+  &_statisticsWrapper {
+    border: 2px solid $bg-secondary;
+  }
+
+  &_statisticsItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &_arrow {
+    height: auto;
+    width: clamp(12px, 2.83vw, 34px);
+  }
+
+  &_statistics {
+    font-weight: $font-weight-bold;
+    font-size: clamp(1.125rem, 3.75vw, 2.813rem);
+  }
+
+  &_statisticsDescription {
+    font-size: clamp(0.75rem, 2.08vw, 1.563rem);
+    text-align: center;
+  }
+
+  &_graphWrapper {
+    overflow-x: auto;
+    width: 100%;
+    height: auto;
+    margin-top: clamp(56px, 7.5vw, 90px);
+
+    img {
+      min-width: 656px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: $breakpoints-sm) {
+  .increaseKeysSection {
+    &_text {
+      max-width: 100%;
+    }
+  }
+}
