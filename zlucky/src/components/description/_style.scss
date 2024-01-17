@@ -1,0 +1,127 @@
+.description {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+
+        &>h2 {
+            position: relative;
+            @include section-title;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: -10px;
+                left: -28px;
+                width: 719px;
+                height: 81px;
+                background: url("../../assets/img/description3.svg") center no-repeat;
+                background-size: contain;
+                z-index: -1;
+            }
+        }
+
+        &>p {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            @include sm-text;
+        }
+    }
+
+    &__word {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: -14px;
+            width: 147px;
+            height: 36px;
+            background: url("../../assets/img/description4.svg") center no-repeat;
+            background-size: contain;
+            z-index: -1;
+        }
+    }
+
+    &__image {
+        display: flex;
+        gap: 70px;
+
+        &>picture {
+            display: block;
+
+            &>img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        &>picture:nth-child(1) {
+            width: 425px;
+            height: 263px;
+        }
+
+        &>picture:nth-child(2) {
+            width: 658px;
+            height: 307px;
+        }
+    }
+
+    @media (max-width: $media-sm) {
+
+        &__content {
+            gap: 20px;
+
+            &>h2 {
+
+                &::after {
+                    top: -5px;
+                    left: -11px;
+                    width: 331px;
+                    height: 88px;
+                    background: url("../../assets/img/description5.svg") center no-repeat;
+                }
+            }
+
+        }
+
+        &__word {
+            &::after {
+                left: -11px;
+                width: 105px;
+                height: 25px;
+            }
+        }
+
+        &__image {
+            flex-direction: column;
+            gap: 14px;
+
+            &>picture {
+                &>img {
+                    object-fit: cover;
+                }
+            }
+
+            &>picture:nth-child(1) {
+                width: 100%;
+                height: 188px;
+            }
+
+            &>picture:nth-child(2) {
+                width: 100%;
+                height: 154px;
+            }
+        }
+    }
+}

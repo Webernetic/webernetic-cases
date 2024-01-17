@@ -28,6 +28,10 @@ main {
     display: flex;
     flex-direction: column;
     gap: 100px;
+
+    @media (max-width: $media-sm) {
+        gap: 70px;
+    }
 }
 
 .wrapper {
@@ -36,7 +40,8 @@ main {
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
-    @media (max-width: 480px) {
+
+    @media (max-width: $media-sm) {
         max-width: 360px;
     }
 }
@@ -46,7 +51,7 @@ main {
     width: 100%;
     margin: 0 auto;
 
-    @media (max-width: 480px) {
+    @media (max-width: $media-sm) {
         max-width: 360px;
         padding: 0 20px;
     }
