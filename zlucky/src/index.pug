@@ -7,10 +7,9 @@ html(lang="ru")
     title Webpack
   body
     .wrapper
-      picture.header-bg
-        img(src=require('./assets/img/header.svg'), alt="bg")
       include ./components/header/header.pug
       main
         include ./components/aboutProject/aboutProject.pug
         include ./components/before/before.pug
+        include ./components/repack/repack.pug
 

@@ -1,16 +1,6 @@
 .before {
     position: relative;
 
-    &::after {
-        content: "";
-        position: absolute;
-        top: -45px;
-        width: 100%;
-        height: 371px;
-        background: url("../../assets/img/before.svg") center no-repeat;
-        z-index: -1;
-    }
-
     &__wrapper {
         display: flex;
         flex-direction: column;
@@ -18,16 +8,24 @@
     }
 
     &__header {
+        margin-bottom: 44px;
+        background: url("../../assets/img/before.svg") center no-repeat;
+        background-size: cover;
+        padding: 55px 0;
+    }
+
+    &__content {
         display: flex;
         flex-direction: column;
         gap: 10px;
         text-align: center;
+        position: relative;
 
-        & > h2 {
+        &>h2 {
             @include section-title;
         }
 
-        & > p {
+        &>p {
             @include sm-text;
         }
     }
@@ -36,7 +34,8 @@
         display: flex;
         flex-direction: column;
         gap: 30px;
-        & > h3 {
+
+        &>h3 {
             position: relative;
             @include section-title;
 
@@ -50,6 +49,12 @@
                 background: url("../../assets/img/before2.svg") center no-repeat;
                 background-size: contain;
                 z-index: -1;
+
+                @media (max-width: $media-sm) {
+                    left: -5px;
+                    width: 244px;
+                    height: 47px;
+                }
             }
         }
     }
@@ -57,65 +62,107 @@
     &__boxs {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     &__box:nth-child(1) {
-        & > div:last-child {
+        &>div:last-child {
+
             &::after {
-                top: 0px;
-                left: -25px;
+                left: -10px;
                 background: url("../../assets/img/before3.svg") center no-repeat;
                 width: 262px;
                 height: 56.5px;
+                background-size: contain;
+
+                @media (max-width: $media-sm) {
+                    width: 202px;
+                    height: 44px;
+                }
             }
+
         }
     }
+
     &__box:nth-child(2) {
-        & > div:last-child {
+        &>div:last-child {
             &::after {
                 top: -10px;
                 left: -25px;
                 background: url("../../assets/img/before4.svg") center no-repeat;
                 width: 401.384px;
                 height: 80.496px;
+                background-size: contain;
+
+                @media (max-width: $media-sm) {
+                    left: -15px;
+                    width: 296.453px;
+                    height: 60.117px;
+                }
             }
         }
     }
+
     &__box:nth-child(3) {
-        & > div:last-child {
+        &>div:last-child {
             &::after {
                 top: -10px;
                 left: -65px;
                 background: url("../../assets/img/before5.svg") center no-repeat;
+                background-size: contain;
                 width: 406px;
                 height: 69px;
+
+                @media (max-width: $media-sm) {
+                    left: -20px;
+                    width: 266px;
+                    height: 48px;
+                }
             }
         }
     }
+
+    @media (max-width: 480px) {
+        &__header {
+            margin-bottom: 42px;
+        }
+
+        &__content {
+            text-align: start;
+        }
+
+        &__boxs {
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+        }
+    }
+
 }
 
 .box {
     display: flex;
     flex-direction: column;
+    gap: 5px;
 
     &__top {
         display: flex;
         gap: 8px;
         align-items: flex-end;
 
-        & > span {
+        &>span {
             font-family: Circe, sans-serif;
             color: $color-dark;
             font-style: normal;
             line-height: 120%;
         }
 
-        & > span:first-child {
+        &>span:first-child {
             font-size: 55px;
             font-weight: 700;
         }
 
-        & > span:last-child {
+        &>span:last-child {
             font-size: 26px;
             font-weight: 400;
         }
@@ -128,8 +175,20 @@
         &::after {
             position: absolute;
             content: "";
-            background-size: contain;
             z-index: -1;
+        }
+    }
+
+    @media (max-width: 480px) {
+        &__top {
+            &>span:first-child {
+                font-size: 38px;
+                font-weight: 700;
+            }
+
+            &>span:last-child {
+                font-size: 18px;
+            }
         }
     }
 }
