@@ -1,0 +1,165 @@
+.changes {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        &>h2 {
+            position: relative;
+            @include section-title;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: -3px;
+                left: -28px;
+                width: 564px;
+                height: 70px;
+                background: url("../../assets/img/changes1.svg") center no-repeat;
+                background-size: contain;
+                z-index: -1;
+            }
+        }
+
+        &>p {
+            @include medium-text;
+        }
+    }
+
+    &__body {
+
+        display: flex;
+        justify-content: center;
+        gap: 180px;
+
+        &>picture {
+            display: block;
+            width: 344px;
+            height: 726px;
+
+            &>img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+        }
+
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &>p {
+            @include medium-text;
+        }
+    }
+
+    &__word {
+        
+    } 
+    
+    &__images {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__image {
+        display: block;
+        width: 163px;
+        height: 163px;
+        border-radius: 50%;
+        filter: drop-shadow(5px 9px 15px rgba(0, 0, 0, 0.20));
+        overflow: hidden;
+
+        &>img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    @media (max-width: $media-sm) {
+
+        &__header {
+            gap: 20px;
+
+            &>h2 {
+
+                &::after {
+                    top: 4px;
+                    left: -13px;
+                    width: 252px;
+                    height: 79px;
+                    background: url("../../assets/img/changes-mob1.svg") center no-repeat;
+                }
+            }
+
+        }
+
+        &__body {
+            gap: 30px;
+
+            &>picture {
+                width: 132px;
+                height: 280px;
+            }
+        }
+
+        &__images {
+            width: 320px;
+            height: 240px;
+        }
+
+        &__image {
+            position: absolute;
+            width: 115px;
+            height: 115px;
+        }
+
+        &__image:nth-child(1) {
+            top: 0;
+            left: 0;
+
+        }
+
+        &__image:nth-child(2) {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &__image:nth-child(3) {
+            top: 0;
+            right: 0;
+
+        }
+
+        &__image:nth-child(4) {
+            bottom: 0;
+            left: 0;
+
+        }
+
+        &__image:nth-child(5) {
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &__image:nth-child(6) {
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+}
