@@ -1,8 +1,23 @@
 .increaseKeysSection {
   margin-bottom: clamp($spacing-10, 9.5vw, $spacing-1);
+  &_wrapper {
+    position: relative;
+  }
+
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: clamp($spacing-11, 3.67vw, $spacing-7);
+  }
 
   &_title {
-    margin-bottom: clamp($spacing-11, 3.67vw, $spacing-7);
+  }
+
+  &_imageWrapper {
+    padding-top: 20px;
+    width: fit-content;
+    position: relative;
   }
 
   &_text {
@@ -12,6 +27,7 @@
 
   &_statisticsWrapper {
     border: 2px solid $bg-secondary;
+    margin-bottom: clamp(36px, 5.83vw, 70px);
   }
 
   &_statisticsItem {
@@ -36,10 +52,15 @@
   }
 
   &_graphWrapper {
+    position: relative;
     overflow-x: auto;
     width: 100%;
     height: auto;
-    margin-top: clamp(56px, 7.5vw, 90px);
+
+    &:not(:first-of-type) h4 {
+      margin-top: $spacing-7;
+      margin-bottom: $spacing-13;
+    }
 
     img {
       min-width: 656px;
@@ -47,12 +68,50 @@
       height: 100%;
     }
   }
+
+  &__descriptionItem {
+    top: 0;
+    left: 52%;
+    background-color: $bg-bright;
+  }
+
+  &_imageWrapper {
+    padding-top: 20px;
+    width: fit-content;
+    position: relative;
+  }
+
+  &_originalsGrahpics {
+    display: none;
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 100;
+  }
+
+  &_originalsGrahpics.active {
+    display: block;
+  }
 }
 
 @media (max-width: $breakpoints-sm) {
   .increaseKeysSection {
     &_text {
       max-width: 100%;
+    }
+
+    &__descriptionItem {
+      top: 0;
+      left: 65%;
+    }
+
+    &_graphWrapper {
+      h4 {
+        font-weight: $font-weight-extra-bold;
+      }
     }
   }
 }

@@ -9,6 +9,9 @@
 @import './strategySection/_strategySection.scss';
 @import './resultSection/_resultSection.scss';
 @import './increaseKeysSection/_increaseKeysSection.scss';
+@import './attendanceSection/_attendanceSection.scss';
+@import './increaseTrafficSection/_increaseTrafficSection.scss';
+@import './finalSection/_finalSection.scss';
 @import './orderSection/_orderSection.scss';
 
 *,
@@ -208,7 +211,7 @@ span {
 
 .customButton {
   font-size: $font-size-secondary;
-  color: $font-color;
+  color: $font-color-bright;
   font-weight: $font-weight-extra-bold;
   border-bottom: 2px solid $font-color;
 

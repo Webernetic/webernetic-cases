@@ -10,9 +10,8 @@
   }
 
   &_imageWrapper {
-    margin-left: clamp($spacing-7, 4.3vw, $spacing-4);
-    margin-right: clamp($spacing-7, 4.3vw, $spacing-4);
-    max-width: 36%;
+    margin-left: clamp($spacing-7, 3.75vw, $spacing-7);
+    max-width: 40%;
     width: 100%;
     height: auto;
 
@@ -53,7 +52,7 @@
   &_formTitle {
     margin-bottom: 20px;
     font-weight: $font-weight-extra-bold;
-    font-size: $font-size-H2;
+    font-size: $font-size-H3;
   }
 
   &_secondformTitle {

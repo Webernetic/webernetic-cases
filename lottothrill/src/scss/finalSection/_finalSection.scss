@@ -1,0 +1,37 @@
+.finalSection {
+  &_wrapper {
+    gap: clamp(24px, 6.67vw, 80px) !important;
+  }
+
+  &_title {
+    margin-bottom: clamp($spacing-11, 3.67vw, $spacing-7);
+  }
+
+  &_contentWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &_imageWrapper {
+    padding-top: 20px;
+    width: fit-content;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: $breakpoints-sm) {
+  .finalSection {
+    &_imageWrapper {
+      min-width: 100%;
+    }
+    &_flexColumn {
+      flex-direction: column;
+    }
+  }
+}

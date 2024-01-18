@@ -1,0 +1,12 @@
+.descriptionWrapper {
+  position: absolute;
+  border-radius: clamp($spacing-14, 1.67vw, $spacing-12);
+  padding: clamp($spacing-14, 1.67vw, $spacing-12) $spacing-12;
+  z-index: 10;
+}
+
+.descriptionText {
+  font-size: clamp(0.875rem, 2.08vw, 1.56rem);
+  font-weight: $font-weight-bold;
+  color: $font-color-invert;
+}

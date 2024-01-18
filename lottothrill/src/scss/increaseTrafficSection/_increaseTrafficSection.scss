@@ -1,0 +1,93 @@
+.increaseTrafficSection {
+  margin-bottom: clamp($spacing-10, 9.5vw, $spacing-1);
+
+  &_wrapper {
+    position: relative;
+    top: 0;
+  }
+
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: clamp($spacing-11, 3.67vw, $spacing-7);
+  }
+
+  &_graphWrapper {
+    display: flex;
+    background-color: $bg-secondary;
+  }
+
+  &_imgText {
+    color: $font-color-invert;
+    width: 100%;
+    max-width: 32%;
+    font-size: clamp(1rem, 2.9vw, 2.188rem);
+    margin-right: 40px;
+  }
+
+  &__alignItems {
+    align-items: center;
+  }
+
+  &_imageWrapper {
+    padding-top: 20px;
+    width: fit-content;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &_originalsGrahpics {
+    display: none;
+    justify-content: space-between;
+    gap: clamp($spacing-13, 2.08vw, $spacing-11);
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 100;
+
+    img {
+      min-width: 800px;
+      width: 100%;
+      height: 100%;
+      padding-bottom: 50px;
+    }
+  }
+
+  &_originalsGrahpics.active {
+    display: block;
+  }
+}
+
+@media (max-width: $breakpoints-sm) {
+  .increaseTrafficSection {
+    &_btn {
+      display: none;
+    }
+
+    &_flexColumn {
+      flex-direction: column;
+    }
+
+    &_imgText {
+      max-width: 100%;
+      margin-right: 0;
+    }
+
+    &_imageWrapper {
+      min-width: 100%;
+    }
+
+    &__alignItems {
+      align-items: stretch;
+      min-width: 100%;
+    }
+  }
+}

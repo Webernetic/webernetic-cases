@@ -1,15 +1,33 @@
 section.increaseKeysSection
-    h2.increaseKeysSection_title Увеличение ключей в Топ-10 
-    p.increaseKeysSection_text Рост ключевых слов в Топ-10 Google за год #[span.brightText в 7 раз]. То есть #[span.brightText из 3000] запросов около #[span.brightText 250] появились в Топе.
-    +wrapper(class="flexContainer increaseKeysSection_statisticsWrapper")
-        .increaseKeysSection_statisticsItem
-            p.increaseKeysSection_statistics 0 #[img(src="./assets/icons/right-arrow.svg" alt="Стрелка вправо").increaseKeysSection_arrow] #[span.brightText 64]
-            p.increaseKeysSection_statisticsDescription ключей в Топ-5 Google
-        .increaseKeysSection_statisticsItem
-            p.increaseKeysSection_statistics 1 #[img(src="./assets/icons/right-arrow.svg" alt="Стрелка вправо").increaseKeysSection_arrow] #[span.brightText 228]
-            p.increaseKeysSection_statisticsDescription ключей в Топ-10 Google
-        .increaseKeysSection_statisticsItem
-            p.increaseKeysSection_statistics 8 #[img(src="./assets/icons/right-arrow.svg" alt="Стрелка вправо").increaseKeysSection_arrow] #[span.brightText 654]
-            p.increaseKeysSection_statisticsDescription ключей в Топ-30 Google
-    .increaseKeysSection_graphWrapper
-        +img("./assets/images/graph1.png", "График", ["500", "1200"])(id="target")
+    .increaseKeysSection_header(id="increaseKeysSection_title")
+        h2.increaseKeysSection_title Увеличение ключей в Топ-10 
+        +arrowButton("Оригинальный график")(id="arrBtn1")
+    .increaseKeysSection_wrapper
+        p.increaseKeysSection_text Рост ключевых слов в Топ-10 Google за год #[span.brightText в 7 раз]. То есть #[span.brightText из 3000] запросов около #[span.brightText 250] появились в Топе.
+        +wrapper(class="flexContainer increaseKeysSection_statisticsWrapper")
+            .increaseKeysSection_statisticsItem
+                p.increaseKeysSection_statistics 0 #[img(src="./assets/icons/right-arrow.svg" alt="Стрелка вправо").increaseKeysSection_arrow] #[span.brightText 64]
+                p.increaseKeysSection_statisticsDescription ключей в Топ-5 Google
+            .increaseKeysSection_statisticsItem
+                p.increaseKeysSection_statistics 1 #[img(src="./assets/icons/right-arrow.svg" alt="Стрелка вправо").increaseKeysSection_arrow] #[span.brightText 228]
+                p.increaseKeysSection_statisticsDescription ключей в Топ-10 Google
+            .increaseKeysSection_statisticsItem
+                p.increaseKeysSection_statistics 8 #[img(src="./assets/icons/right-arrow.svg" alt="Стрелка вправо").increaseKeysSection_arrow] #[span.brightText 654]
+                p.increaseKeysSection_statisticsDescription ключей в Топ-30 Google
+        .increaseKeysSection_graphWrapper
+            .increaseKeysSection_imageWrapper
+                +img("./assets/images/graph1.png", "График", ["500", "1200"])
+                +descriptionItem("7% ключей в Топ-10 Google ")(class="increaseKeysSection__descriptionItem")
+        .increaseKeysSection_originalsGrahpics(id="increaseKeysSection_originalsGrahpics")
+            .increaseKeysSection_graphWrapper
+                h4 Количество ключей до продвижения
+                .increaseKeysSection_imageWrapper
+                    +img("./assets/images/graph2.png", "График", ["500", "1200"])         
+            .increaseKeysSection_graphWrapper
+                h4 Количество ключей после продвижения
+                .increaseKeysSection_imageWrapper
+                    +img("./assets/images/graph3.png", "График", ["500", "1200"])  
+            .increaseKeysSection_graphWrapper
+                h4 % ключей в Топ-10 Google
+                .increaseKeysSection_imageWrapper
+                    +img("./assets/images/graph4.png", "График", ["500", "1200"])       
