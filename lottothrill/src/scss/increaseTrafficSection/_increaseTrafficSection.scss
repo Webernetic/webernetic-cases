@@ -64,6 +64,12 @@
   &_originalsGrahpics.active {
     display: block;
   }
+
+  &_originalsGrahpics.activeMobile {
+    display: block;
+    position: relative;
+    margin-top: 24px;
+  }
 }
 
 @media (max-width: $breakpoints-sm) {

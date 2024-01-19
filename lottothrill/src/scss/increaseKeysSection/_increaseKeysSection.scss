@@ -11,9 +11,6 @@
     margin-bottom: clamp($spacing-11, 3.67vw, $spacing-7);
   }
 
-  &_title {
-  }
-
   &_imageWrapper {
     padding-top: 20px;
     width: fit-content;
@@ -23,6 +20,8 @@
   &_text {
     max-width: 50%;
     margin-bottom: clamp($spacing-11, 3.75vw, $spacing-7);
+    opacity: 0;
+    transition: all 3s ease-in-out;
   }
 
   &_statisticsWrapper {
@@ -73,6 +72,8 @@
     top: 0;
     left: 52%;
     background-color: $bg-bright;
+    opacity: 0;
+    transition: all 3s ease-in-out;
   }
 
   &_imageWrapper {
@@ -95,10 +96,20 @@
   &_originalsGrahpics.active {
     display: block;
   }
+
+  &_originalsGrahpics.activeMobile {
+    display: block;
+    position: relative;
+    margin-top: 24px;
+  }
 }
 
 @media (max-width: $breakpoints-sm) {
   .increaseKeysSection {
+    &_btn {
+      display: none;
+    }
+
     &_text {
       max-width: 100%;
     }

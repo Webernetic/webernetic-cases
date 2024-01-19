@@ -39,12 +39,16 @@
     top: 0;
     left: 20%;
     background-color: $bg-secondary;
+    opacity: 0;
+    transition: all 3s ease-in-out;
   }
 
   &__descriptionItemSecondary {
     bottom: 33%;
     left: 33%;
     background-color: $bg-bright;
+    opacity: 0;
+    transition: all 3s ease-in-out;
   }
 
   &_statisticsWrapper {
@@ -107,6 +111,12 @@
 
   &_originalsGrahpics.active {
     display: flex;
+  }
+
+  &_originalsGrahpics.activeMobile {
+    display: flex;
+    position: relative;
+    margin-top: 24px;
   }
 }
 

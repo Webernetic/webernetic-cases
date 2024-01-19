@@ -2,8 +2,23 @@ section.attendanceSection
     .attendanceSection_header(id="attendanceSection_title")
         h2.attendanceSection_title Рост посещаемости сайта
         +arrowButton("Оригинальный график")(id="arrBtn2" class="attendanceSection_btn")
-    .attendanceSection_wrapper
-         .attendanceSection_originalsGrahpics#attendanceSection_originalsGrahpics
+    .attendanceSection_wrapper        
+        .attendanceSection_graphWrapper
+                .attendanceSection_imageWrapper
+                    +img("./assets/images/graph5.png", "График", ["500", "1200"])
+                    +descriptionItem("403 посетителя/день в 2022")(class="attendanceSection__descriptionItem")
+                    +descriptionItem("85 посетителей/день в 2021")(class="attendanceSection__descriptionItemSecondary")
+        .attendanceSection_statisticsWrapper#attendanceSection_statisticsWrapper
+            p.attendanceSection_statisticsResult В #[span.boldText 10] раз увеличили посещаемость на сайте за год 
+            .flexContainer.attendanceSection_flexColumn 
+                .attendanceSection_statisticsItem
+                    p.attendanceSection_statisticsTitle 6438
+                    p.attendanceSection_statisticsText посетителей в апреле 2022
+                .attendanceSection_statisticsItem
+                    p.attendanceSection_statisticsTitle 778
+                    p.attendanceSection_statisticsText посетителей в апреле 2021
+        +arrowButton("Перейти к оригинальным графикам")(id="arrBtn5" class="attendanceSection_btn customButtonSecondary")
+        .attendanceSection_originalsGrahpics#attendanceSection_originalsGrahpics
                 div
                     h4 До продвижения
                     .attendanceSection_imageWrapper
@@ -12,19 +27,5 @@ section.attendanceSection
                     h4 После продвижения
                     .attendanceSection_imageWrapper
                         +img("./assets/images/graph8.png", "График", ["500", "1200"])    
-    .attendanceSection_graphWrapper
-            .attendanceSection_imageWrapper
-                +img("./assets/images/graph5.png", "График", ["500", "1200"])
-                +descriptionItem("403 посетителя/день в 2022")(class="attendanceSection__descriptionItem")
-                +descriptionItem("85 посетителей/день в 2021")(class="attendanceSection__descriptionItemSecondary")
-    .attendanceSection_statisticsWrapper#attendanceSection_statisticsWrapper
-        p.attendanceSection_statisticsResult В #[span.boldText 10] раз увеличили посещаемость на сайте за год 
-        .flexContainer.attendanceSection_flexColumn 
-            .attendanceSection_statisticsItem
-                p.attendanceSection_statisticsTitle 6438
-                p.attendanceSection_statisticsText посетителей в апреле 2022
-            .attendanceSection_statisticsItem
-                p.attendanceSection_statisticsTitle 778
-                p.attendanceSection_statisticsText посетителей в апреле 2021
     
 

@@ -11,6 +11,8 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    opacity: 0;
+    transition: all 3s ease-in-out;
   }
 
   &_imageWrapper {
@@ -23,6 +25,13 @@
       height: 100%;
     }
   }
+
+  &_text {
+    margin-top: clamp($spacing-10, 9.5vw, $spacing-1);
+    font-weight: $font-weight-extra-bold;
+    font-size: clamp(1.125rem, 3.33vw, 2.5rem);
+    text-align: center;
+  }
 }
 
 @media (max-width: $breakpoints-sm) {
@@ -32,6 +41,10 @@
     }
     &_flexColumn {
       flex-direction: column;
+    }
+
+    &_text {
+      text-align: left;
     }
   }
 }

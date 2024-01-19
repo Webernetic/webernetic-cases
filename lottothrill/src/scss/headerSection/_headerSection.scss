@@ -8,6 +8,16 @@
     max-width: 55%;
     margin-top: clamp(45px, 10.3vw, 124px);
     margin-bottom: clamp($spacing-12, 6.1vw, $spacing-3);
+    animation: 5s show ease;
+  }
+
+  @keyframes show {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   &_imageWrapper {
@@ -46,13 +56,17 @@
     line-height: $line-height-H;
     color: $font-color-invert;
     margin-bottom: $spacing-15;
+    opacity: 0;
+    animation: 4s show 1s ease forwards;
   }
 
   &_contentText {
     font-size: clamp(1rem, 3.33vw, 2.5rem);
     line-height: 1;
+    opacity: 0;
     font-weight: $font-weight-bold;
     color: $font-color-invert;
+    animation: 4s show 2s ease forwards;
   }
 
   &_text {
@@ -60,6 +74,7 @@
     font-size: $font-size-secondary;
     line-height: $line-height-primary;
     font-weight: $font-weight-bold;
+    animation: 5s show ease;
   }
 }
 @media (max-width: $breakpoints-sm) {
@@ -96,10 +111,19 @@
     &_contentTitle {
       color: $font-color-bright;
       margin-bottom: 2px;
+      opacity: 1;
+      animation: none;
     }
 
     &_contentText {
       color: $font-color;
+      opacity: 1;
+      animation: none;
+    }
+
+    &_text {
+      opacity: 1;
+      animation: none;
     }
 
     &__newlLine {

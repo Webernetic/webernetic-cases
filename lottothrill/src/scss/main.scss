@@ -222,3 +222,25 @@ span {
     border-color: $font-color;
   }
 }
+.customButtonSecondary {
+  display: none;
+}
+
+@media (max-width: $breakpoints-sm) {
+  .customButtonSecondary {
+    display: flex;
+    border-radius: $spacing-13;
+    background-color: $bg-secondary;
+    padding: $spacing-13 $spacing-11;
+    margin-top: $spacing-11;
+    min-width: 100%;
+    justify-content: space-between;
+
+    p,
+    span,
+    span:after {
+      color: $font-color-invert;
+      opacity: 1;
+    }
+  }
+}
