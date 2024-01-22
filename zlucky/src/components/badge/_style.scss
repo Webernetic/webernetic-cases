@@ -1,0 +1,55 @@
+.badge {
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &::after {
+            position: absolute;
+            top: -45px;
+            left: -68px;
+            content: "";
+            width: 1292px;
+            height: 234px;
+            background: url("../../assets/img/badge1.svg") center no-repeat;
+            background-size: contain;
+            z-index: -1;
+        }
+    }
+
+    &__title {
+        @include section-title;
+        text-align: center;
+    }
+
+    &__text {
+        @include sm-text;
+        text-align: center;
+
+        &>span {
+            font-weight: 700;
+        }
+    }
+
+    @media (max-width: $media-sm) {
+        &__wrapper {
+            &::after {
+                left: -160px;
+                top: -46px;
+                width: 637px;
+                height: 322px;
+                background: url("../../assets/img/badge2.svg") center no-repeat;
+            }
+        }
+
+        &__title {
+            text-align: start;
+        }
+
+        &__text {
+            text-align: start;
+        }
+    }
+}
