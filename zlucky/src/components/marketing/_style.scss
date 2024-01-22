@@ -1,0 +1,7 @@
+.marketing {
+    &__text {
+        @include sm-text;
+        font-weight: 700;
+        text-align: center;
+    }
+}
