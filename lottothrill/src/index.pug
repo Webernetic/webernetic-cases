@@ -1,0 +1,27 @@
+extends layouts/MainLayout
+include mixins/index.pug
+
+block title
+  | Lottothrill
+
+block content
+  body.body  
+    .container
+      include sections/headerSection
+      include sections/aboutSection
+      include sections/peculiaritiesSection
+      include sections/wishesSection
+      include sections/initialStateSection
+      include sections/strategySection
+      include sections/resultSection
+      include sections/increaseKeysSection
+      include sections/attendanceSection
+      include sections/increaseTrafficSection
+      include sections/finalSection
+      include sections/orderSection 
+
+  script
+    include js/animations.js 
+    include js/toggleActiveClass.js
+    include js/getDistanceBetweenBlocks.js
+    include js/showGraphics.js 

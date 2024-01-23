@@ -1,0 +1,79 @@
+.wishesSection {
+  margin-bottom: clamp($spacing-10, 9.5vw, $spacing-1);
+  background-color: $bg-white;
+
+  &_wrapper {
+    background: linear-gradient(180deg, rgb(255, 164, 116), rgb(255, 150, 93));
+    position: relative;
+  }
+
+  &_title {
+    margin-bottom: clamp($spacing-11, 3.67vw, $spacing-7);
+    color: $font-color-invert;
+  }
+
+  &_text {
+    color: $font-color-invert;
+  }
+
+  &_contentWrapper {
+    max-width: 50%;
+  }
+
+  &_img {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    max-width: 50%;
+    border-radius: clamp(15px, 3.33vw, 40px);
+
+    & > img {
+      height: auto;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+@media (max-width: $breakpoints-sm) {
+  .wishesSection {
+    &_wrapper {
+      background: none;
+      padding: 0;
+    }
+
+    &_title {
+      color: $font-color;
+    }
+
+    &_text {
+      color: $font-color;
+    }
+
+    &_contentWrapper {
+      max-width: 100%;
+    }
+
+    &_img {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: $spacing-12;
+      max-width: 100%;
+      width: 100%;
+      background: linear-gradient(
+        180deg,
+        rgb(255, 164, 116),
+        rgb(255, 150, 93)
+      );
+
+      & > img {
+        width: 90%;
+      }
+    }
+  }
+}
