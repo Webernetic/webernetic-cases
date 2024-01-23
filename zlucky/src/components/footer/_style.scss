@@ -172,7 +172,7 @@
         position: relative;
         height: 14px;
         width: 14px;
-        border: 2px solid #7647c9;
+        border: 2px solid #000;
         border-radius: 2px;
 
         &:after {
@@ -183,7 +183,7 @@
             display: none;
             width: 7px;
             height: 7px;
-            background-color: #7647c9;
+            background-color: #000;
             transform: translate(-50%, -50%);
         }
     }
