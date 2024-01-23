@@ -41,8 +41,14 @@
   }
 
   &_statistics {
+    display: flex;
+    gap: clamp(5px, 0.8vw, 10px);
     font-weight: $font-weight-bold;
     font-size: clamp(1.125rem, 3.75vw, 2.813rem);
+
+    & > img {
+      object-fit: contain;
+    }
   }
 
   &_statisticsDescription {
