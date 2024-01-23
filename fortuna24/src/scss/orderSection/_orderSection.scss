@@ -1,109 +1,109 @@
 //ORDER SECTION
 
-.orderSection {
-  margin-top: clamp($spacing-4, 7.5vw, $spacing-2);
-  background-color: $bg-order;
+// .orderSection {
+//   margin-top: clamp($spacing-4, 7.5vw, $spacing-2);
+//   background-color: $bg-secondary;
 
-  &__position {
-    padding-top: clamp($spacing-9, 6.7vw, $spacing-3);
-    gap: clamp($spacing-7, 7.08vw, $spacing-2);
-  }
+//   &__position {
+//     padding-top: clamp($spacing-9, 6.7vw, $spacing-3);
+//     gap: clamp($spacing-7, 7.08vw, $spacing-2);
+//   }
 
-  &_imageWrapper {
-    margin-left: clamp($spacing-7, 3.75vw, $spacing-7);
-    max-width: 40%;
-    width: 100%;
-    height: auto;
+//   &_imageWrapper {
+//     margin-left: clamp($spacing-7, 3.75vw, $spacing-7);
+//     max-width: 40%;
+//     width: 100%;
+//     height: auto;
 
-    & > img {
-      object-fit: contain;
-      height: 100%;
-      width: 100%;
-    }
-  }
+//     & > img {
+//       object-fit: contain;
+//       height: 100%;
+//       width: 100%;
+//     }
+//   }
 
-  &_nameWrapper {
-    position: absolute;
-    left: 4%;
-    bottom: 30%;
-    max-width: fit-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: clamp($spacing-12, 2.1vw, $spacing-10)
-      clamp($spacing-11, 1.4vw, $spacing-8);
-    box-shadow: none;
+//   &_nameWrapper {
+//     position: absolute;
+//     left: 4%;
+//     bottom: 30%;
+//     max-width: fit-content;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     padding: clamp($spacing-12, 2.1vw, $spacing-10)
+//       clamp($spacing-11, 1.4vw, $spacing-8);
+//     box-shadow: none;
 
-    & > h4 {
-      font-size: 30px;
-      font-weight: $font-weight-extra-bold;
-    }
+//     & > h4 {
+//       font-size: 30px;
+//       font-weight: $font-weight-extra-bold;
+//     }
 
-    & > p {
-      font-size: 10px;
-      font-weight: $font-weight-bold;
-    }
-  }
+//     & > p {
+//       font-size: 10px;
+//       font-weight: $font-weight-bold;
+//     }
+//   }
 
-  &_form {
-    flex: 1;
-  }
+//   &_form {
+//     flex: 1;
+//   }
 
-  &_formTitle {
-    margin-bottom: 20px;
-    font-weight: $font-weight-extra-bold;
-    font-size: $font-size-H3;
-  }
+//   &_formTitle {
+//     margin-bottom: 20px;
+//     font-weight: $font-weight-extra-bold;
+//     font-size: $font-size-H3;
+//   }
 
-  &_secondformTitle {
-    margin-top: clamp($spacing-8, 3.6vw, $spacing-5);
-    margin-bottom: $spacing-10;
-  }
+//   &_secondformTitle {
+//     margin-top: clamp($spacing-8, 3.6vw, $spacing-5);
+//     margin-bottom: $spacing-10;
+//   }
 
-  &_inputWrapper {
-    display: flex;
-    gap: clamp($spacing-8, 2.9vw, $spacing-6);
-    flex-wrap: wrap;
+//   &_inputWrapper {
+//     display: flex;
+//     gap: clamp($spacing-8, 2.9vw, $spacing-6);
+//     flex-wrap: wrap;
 
-    & > input {
-      flex-basis: 47%;
-    }
-  }
+//     & > input {
+//       flex-basis: 47%;
+//     }
+//   }
 
-  &_checkboxWrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: $spacing-11;
+//   &_checkboxWrapper {
+//     display: flex;
+//     flex-wrap: wrap;
+//     gap: $spacing-11;
 
-    & > label {
-      flex-basis: 30%;
-    }
-  }
+//     & > label {
+//       flex-basis: 30%;
+//     }
+//   }
 
-  &_buttonWrapper {
-    margin-top: clamp($spacing-8, 3.6vw, $spacing-5);
-  }
+//   &_buttonWrapper {
+//     margin-top: clamp($spacing-8, 3.6vw, $spacing-5);
+//   }
 
-  @media (max-width: $breakpoints-sm) {
-    &_imageWrapper,
-    &_nameWrapper {
-      display: none;
-    }
+//   @media (max-width: $breakpoints-sm) {
+//     &_imageWrapper,
+//     &_nameWrapper {
+//       display: none;
+//     }
 
-    &_inputWrapper {
-      & > input:not(:first-of-type) {
-        margin-top: $spacing-10;
-      }
+//     &_inputWrapper {
+//       & > input:not(:first-of-type) {
+//         margin-top: $spacing-10;
+//       }
 
-      & > input {
-        flex-basis: 100%;
-      }
-    }
+//       & > input {
+//         flex-basis: 100%;
+//       }
+//     }
 
-    &_checkboxWrapper {
-      & > label {
-        flex-basis: 46%;
-      }
-    }
-  }
-}
+//     &_checkboxWrapper {
+//       & > label {
+//         flex-basis: 46%;
+//       }
+//     }
+//   }
+// }
