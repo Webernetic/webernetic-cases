@@ -13,12 +13,27 @@ section.aboutSection
                 p.colorInvertText.boldText Минск
                 .aboutSection_imageWrapper 
                     +img("./assets/images/city.png", "Город", ["500", "1200"])
-        .aboutSection_activityWrapper.aboutSection__flexColumn 
-            .aboutSection_activityImageWrapper 
-                +img("./assets/images/lupa.png", "Увеличительное стекло", ["500", "1200"])
-            .aboutSection_activityContent
-                h3.aboutSection_activityTitle Основные направления деятельности сети ломбардов Fortuna24.by:
-                .aboutSection_listWrapper
-                    .aboutSection_itemLi займы под залог имущества
-                    .aboutSection_itemLi скупка золота и техники
-                    .aboutSection_itemLi продажа невыкупленного из залога имущества
+    .aboutSection_activityWrapper.aboutSection__flexColumn 
+        .aboutSection_activityImageWrapper 
+            +img("./assets/images/lupa.png", "Увеличительное стекло", ["500", "1200"])
+        .aboutSection_activityContent
+            h3.aboutSection_activityTitle Основные направления деятельности сети ломбардов Fortuna24.by:
+            ul.aboutSection_listWrapper
+                li.aboutSection_itemLi займы под залог имущества
+                li.aboutSection_itemLi скупка золота и техники
+                li.aboutSection_itemLi продажа невыкупленного из залога имущества
+    .aboutSection_targetWrapper
+        h3.aboutSection_targetTitle Цель проекта
+        p.aboutSection_targetText Цель проекта — увеличить основные показатели сайта: позиции по ключевым запросам, органический трафик на сайте, количество заявок и контактных данных пользователей.
+    .aboutSection_wishesWrapper
+        .aboutSection_wishesContent
+            h3.aboutSection_wishesTitle Пожелания клиента
+            p.aboutSection_wishesText К нам клиент пришел после продвижения ломбарда в другом агентстве, где не был доволен подходом в обслуживании, коммуникации и результатами работ.
+            .aboutSection_wishesQuoteWrapper.aboutSection__flexColumn 
+                .aboutSection_wishesQuoteImage
+                    +img("./assets/images/quote.png", "Ковычки", ["500", "1200"])
+                .aboutSection_wishesQuoteTextWrapper 
+                    blockquote.aboutSection_wishesQuoteText.mb-10 Наше основное пожелание – привлечение клиентов, заинтересованных в услугах компании.
+                    blockquote.aboutSection_wishesQuoteText В начале сотрудничества хотим создать высокое качество информации на страницах: контент должен быть простым, понятным и отвечать на запросы посетителей.
+        .aboutSection_wishesImageWrapper
+            +img("./assets/images/man.png", "Мужчина с проигрывателем", ["500", "1200"])

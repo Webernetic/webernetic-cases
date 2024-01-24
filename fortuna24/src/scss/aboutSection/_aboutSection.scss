@@ -1,4 +1,6 @@
 .aboutSection {
+  margin-bottom: clamp($spacing-5, 4.28vw, $spacing-3);
+
   &_title {
     margin-bottom: clamp($spacing-10, 1.79vw, $spacing-8);
   }
@@ -57,6 +59,7 @@
   &_activityWrapper {
     display: flex;
     gap: $spacing-4;
+    margin-bottom: clamp($spacing-5, 4.28vw, $spacing-3);
     background-color: $bg-medium;
     border-radius: clamp($spacing-9, 2.86vw, $spacing-6);
     overflow: hidden;
@@ -80,7 +83,7 @@
 
   &_listWrapper {
     margin: 0;
-    max-width: 60%;
+    max-width: 80%;
   }
 
   &_itemLi {
@@ -99,8 +102,98 @@
       border-radius: 50%;
       left: 7px;
       top: 0;
-      transform: translateY(10px);
+      transform: translateY(clamp(9px, 1.3vw, 18px));
       background-color: $font-color-invert;
+    }
+  }
+
+  &_targetWrapper {
+    display: flex;
+    align-items: center;
+    gap: clamp(20px, 7.57vw, 106px);
+    flex-direction: column;
+    padding: clamp($spacing-8, 2.9vw, $spacing-6)
+      clamp($spacing-9, 10.9vw, 152px) clamp($spacing-8, 12.5vw, 175px)
+      clamp($spacing-9, 10.9vw, 152px);
+    background-color: $bg-dark;
+    border-radius: clamp($spacing-9, 2.86vw, $spacing-6);
+    margin-bottom: clamp($spacing-5, 4.28vw, $spacing-3);
+  }
+
+  &_targetTitle {
+    color: $font-color-invert;
+    font-family: Toxigenesis;
+    font-size: $font-size;
+  }
+
+  &_targetText {
+    color: $font-color-invert;
+    font-family: Toxigenesis;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-H3;
+    text-align: center;
+  }
+
+  &_wishesWrapper {
+    display: flex;
+    gap: 40px;
+    background-color: $bg-secondary;
+    border-radius: clamp($spacing-9, 2.86vw, $spacing-6);
+    overflow: hidden;
+  }
+
+  &_wishesContent {
+    padding: clamp($spacing-8, 4.3vw, $spacing-3)
+      clamp($spacing-9, 2.9vw, $spacing-6) clamp($spacing-8, 4.3vw, $spacing-3)
+      clamp($spacing-9, 2.9vw, $spacing-6);
+  }
+
+  &_wishesTitle {
+    margin-bottom: $spacing-9;
+  }
+
+  &_wishesText {
+    font-size: $font-size-secondary;
+    margin-bottom: clamp($spacing-9, 2.3vw, $spacing-7);
+  }
+
+  &_wishesQuoteWrapper {
+    display: flex;
+    gap: 28px;
+  }
+
+  &_wishesQuoteImage {
+    max-width: 13%;
+    width: 100%;
+
+    & > img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  &_wishesQuoteTextWrapper {
+    padding-top: clamp($spacing-11, 2.1vw, $spacing-7);
+  }
+
+  &_wishesQuoteText {
+    font-weight: $font-weight-bold;
+    font-size: clamp(1.125rem, 1.7vw, 1.5rem);
+    line-height: 145%;
+  }
+
+  &_wishesImageWrapper {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    min-height: 100%;
+    max-width: 30%;
+
+    & > img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
     }
   }
 }
@@ -134,7 +227,7 @@
       min-height: clamp(200px, 52vw, 300px);
 
       & > img {
-        left: 10%;
+        left: 15%;
         transform: rotate(90deg) scale(1.1);
         height: 100%;
         width: 100%;
@@ -152,6 +245,22 @@
     }
 
     &_activityWrapper {
+      gap: 0;
+    }
+
+    &_targetWrapper {
+      padding-bottom: $spacing-8;
+    }
+
+    &_wishesImageWrapper {
+      display: none;
+    }
+
+    &_wishesText {
+      font-weight: $font-weight-bold;
+    }
+
+    &_wishesQuoteWrapper {
       gap: 0;
     }
   }

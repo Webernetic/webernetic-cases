@@ -3,6 +3,7 @@
 @import '../mixins/mixinsStyles.scss';
 @import './headerSection/_headerSection.scss';
 @import './aboutSection/_aboutSection.scss';
+@import './doneSection/_doneSection.scss';
 @import './orderSection/_orderSection.scss';
 
 *,
@@ -180,6 +181,10 @@ span {
 
 .flex-1 {
   flex: 1;
+}
+
+.heightAuto {
+  height: auto;
 }
 
 .flexColumn {
