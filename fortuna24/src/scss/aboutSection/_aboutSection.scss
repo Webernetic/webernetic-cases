@@ -1,7 +1,158 @@
 .aboutSection {
+  &_title {
+    margin-bottom: clamp($spacing-10, 1.79vw, $spacing-8);
+  }
+
+  &_itemsWrapper {
+    display: flex;
+    gap: clamp($spacing-11, 1.1vw, $spacing-10);
+    margin-bottom: clamp($spacing-5, 4.28vw, $spacing-3);
+  }
+
+  &_item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(64px, 8.4vw, 118px);
+    background-color: $bg-secondary;
+    border-radius: clamp($spacing-9, 2.9vw, $spacing-6);
+    overflow: hidden;
+    padding: clamp($spacing-9, 2.9vw, $spacing-6);
+
+    & > h3 {
+      flex: 1;
+    }
+  }
+
+  &_imageWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    & > img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__bgNone {
+    background: none;
+  }
+
+  &_activityContent {
+    max-width: 47%;
+    padding-top: clamp(50px, 7vw, 98px);
+    padding-right: clamp($spacing-9, 2.9vw, $spacing-6);
+    padding-bottom: clamp(24px, 10.1vw, 142px);
+  }
+
+  &_activityTitle {
+    margin-bottom: clamp($spacing-9, 2.9vw, $spacing-6);
+    color: $font-color-invert;
+  }
+
+  &_activityWrapper {
+    display: flex;
+    gap: $spacing-4;
+    background-color: $bg-medium;
+    border-radius: clamp($spacing-9, 2.86vw, $spacing-6);
+    overflow: hidden;
+  }
+
+  &_activityImageWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    & > img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 10;
+      height: auto;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &_listWrapper {
+    margin: 0;
+    max-width: 60%;
+  }
+
+  &_itemLi {
+    margin: 0;
+    position: relative;
+    padding-left: 20px;
+    font-family: 'Toxigenesis';
+    color: $font-color-invert;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      left: 7px;
+      top: 0;
+      transform: translateY(10px);
+      background-color: $font-color-invert;
+    }
+  }
+}
+
+@media (max-width: $breakpoints-md) {
+  .aboutSection {
+    &_activityContent {
+      max-width: 60%;
+    }
+
+    &_listWrapper {
+      max-width: 100%;
+    }
+
+    &_itemLi {
+      &::before {
+        width: 3px;
+        height: 3px;
+      }
+    }
+  }
 }
 
 @media (max-width: $breakpoints-sm) {
   .aboutSection {
+    &_wrapper {
+      padding: 0 $spacing-9;
+    }
+
+    &_activityImageWrapper {
+      min-height: clamp(200px, 52vw, 300px);
+
+      & > img {
+        left: 10%;
+        transform: rotate(90deg) scale(1.1);
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &_activityContent {
+      padding-top: 0;
+      max-width: 100%;
+      padding-left: clamp($spacing-9, 2.9vw, $spacing-6);
+    }
+
+    &__flexColumn {
+      flex-direction: column;
+    }
+
+    &_activityWrapper {
+      gap: 0;
+    }
   }
 }

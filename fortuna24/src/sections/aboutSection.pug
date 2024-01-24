@@ -1,2 +1,24 @@
 section.aboutSection 
-  
+    .aboutSection_wrapper
+        h2.aboutSection_title О проекте
+        .aboutSection_itemsWrapper.aboutSection__flexColumn
+            .aboutSection_item
+                h3 Наш клиент
+                p Сеть ломбардов Fortuna24.by 
+            .aboutSection_item
+                h3 Старт сотрудничества
+                p Январь 2021 года
+            .aboutSection_item.aboutSection__bgNone
+                h3.colorInvertText Регион продвижения
+                p.colorInvertText.boldText Минск
+                .aboutSection_imageWrapper 
+                    +img("./assets/images/city.png", "Город", ["500", "1200"])
+        .aboutSection_activityWrapper.aboutSection__flexColumn 
+            .aboutSection_activityImageWrapper 
+                +img("./assets/images/lupa.png", "Увеличительное стекло", ["500", "1200"])
+            .aboutSection_activityContent
+                h3.aboutSection_activityTitle Основные направления деятельности сети ломбардов Fortuna24.by:
+                .aboutSection_listWrapper
+                    .aboutSection_itemLi займы под залог имущества
+                    .aboutSection_itemLi скупка золота и техники
+                    .aboutSection_itemLi продажа невыкупленного из залога имущества
