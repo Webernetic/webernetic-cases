@@ -1,67 +1,3 @@
-let heights = [];
-
-const getMaxHeight = (elements) =>
-  elements.forEach((element) => heights.push(element.offsetHeight));
-
-document.addEventListener('DOMContentLoaded', () => {
-  const btnPrev = document.querySelector('#prevSlide');
-  const btnNext = document.querySelector('#nextSlide');
-  const slides = document.querySelectorAll('.slide');
-  getMaxHeight(slides);
-  console.log(heights);
-
-  const showNextSlide = () => {
-    const slides = document.querySelectorAll('.slide');
-    const activeSlides = document.querySelectorAll('.activeSlide');
-
-    let firstActiveSlide = activeSlides[0];
-    let lastActiveSlideId = activeSlides[activeSlides.length - 1].id;
-
-    if (lastActiveSlideId !== slides[slides.length - 1].id) {
-      btnNext.disabled = false;
-      let nextActiveSlideId = `slide${+lastActiveSlideId[lastActiveSlideId.length - 1] + 1}`;
-      let nextActiveSlide = document.querySelector(`#${nextActiveSlideId}`);
-
-      firstActiveSlide.classList.toggle('activeSlide');
-      nextActiveSlide.classList.toggle('activeSlide');
-
-      if (nextActiveSlideId === slides[slides.length - 1].id) {
-        btnNext.disabled = true;
-      }
-
-      if (firstActiveSlide.id !== slides[1].id) {
-        btnPrev.disabled = false;
-      }
-    }
-  };
-
-  const showPrevSlide = () => {
-    const slides = document.querySelectorAll('.slide');
-    const activeSlides = document.querySelectorAll('.activeSlide');
-    let firstActiveSlideId = activeSlides[0].id;
-    let lastActiveSlide = activeSlides[activeSlides.length - 1];
-
-    if (firstActiveSlideId !== slides[0].id) {
-      let prevActiveSlideId = `slide${+firstActiveSlideId[firstActiveSlideId.length - 1] - 1}`;
-      let prevActiveSlide = document.querySelector(`#${prevActiveSlideId}`);
-
-      lastActiveSlide.classList.toggle('activeSlide');
-      prevActiveSlide.classList.toggle('activeSlide');
-
-      if (prevActiveSlideId === slides[0].id) {
-        btnPrev.disabled = true;
-      }
-
-      if (lastActiveSlide.id !== slides[slides.length - 2].id) {
-        btnNext.disabled = false;
-      }
-    }
-  };
-
-  btnPrev.addEventListener('click', showPrevSlide);
-  btnNext.addEventListener('click', showNextSlide);
-});
-
 /**
  * Swiper 11.0.5
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -3472,7 +3408,9 @@ var Swiper = (function () {
     }
   }
   function pe(e, t, s) {
-    const a = `swiper-slide-shadow${s ? `-${s}` : ''}${e ? ` swiper-slide-shadow-${e}` : ''}`,
+    const a = `swiper-slide-shadow${s ? `-${s}` : ''}${
+        e ? ` swiper-slide-shadow-${e}` : ''
+      }`,
       i = h(t);
     let r = i.querySelector(`.${a.split(' ').join('.')}`);
     return r || ((r = v('div', a.split(' '))), i.append(r)), r;
@@ -4581,7 +4519,9 @@ var Swiper = (function () {
           for (let s = 0; s < a; s += 1)
             e.renderBullet
               ? (r += e.renderBullet.call(t, s, e.bulletClass))
-              : (r += `<${e.bulletElement} ${t.isElement ? 'part="bullet"' : ''} class="${e.bulletClass}"></${e.bulletElement}>`);
+              : (r += `<${e.bulletElement} ${
+                  t.isElement ? 'part="bullet"' : ''
+                } class="${e.bulletClass}"></${e.bulletElement}>`);
         }
         'fraction' === e.type &&
           (r = e.renderFraction
@@ -5898,7 +5838,15 @@ var Swiper = (function () {
             r =
               e.id ||
               a.getAttribute('id') ||
-              `swiper-wrapper-${((l = 16), void 0 === l && (l = 16), 'x'.repeat(l).replace(/x/g, () => Math.round(16 * Math.random()).toString(16)))}`;
+              `swiper-wrapper-${
+                ((l = 16),
+                void 0 === l && (l = 16),
+                'x'
+                  .repeat(l)
+                  .replace(/x/g, () =>
+                    Math.round(16 * Math.random()).toString(16),
+                  ))
+              }`;
           var l;
           const o =
             t.params.autoplay && t.params.autoplay.enabled ? 'off' : 'polite';
@@ -6825,8 +6773,9 @@ var Swiper = (function () {
               ((r.virtualSize = (e + n) * t),
               (r.virtualSize = Math.ceil(r.virtualSize / l) - n),
               r.params.cssMode ||
-                (r.wrapperEl.style[r.getDirectionLabel('width')] =
-                  `${r.virtualSize + n}px`),
+                (r.wrapperEl.style[r.getDirectionLabel('width')] = `${
+                  r.virtualSize + n
+                }px`),
               a)
             ) {
               const e = [];
@@ -6981,7 +6930,9 @@ var Swiper = (function () {
                   : (r - 3) % 4 == 0 && ((f = -o), (v = 3 * o + 4 * o * d)),
               l && (f = -f),
               p || ((g = f), (f = 0));
-            const w = `rotateX(${p ? 0 : -n}deg) rotateY(${p ? n : 0}deg) translate3d(${f}px, ${g}px, ${v}px)`;
+            const w = `rotateX(${p ? 0 : -n}deg) rotateY(${
+              p ? n : 0
+            }deg) translate3d(${f}px, ${g}px, ${v}px)`;
             m <= 1 &&
               m > -1 &&
               ((h = 90 * r + 90 * m),
@@ -6999,7 +6950,11 @@ var Swiper = (function () {
             c.shadow)
           )
             if (p)
-              m.style.transform = `translate3d(0px, ${r / 2 + c.shadowOffset}px, ${-r / 2}px) rotateX(89.99deg) rotateZ(0deg) scale(${c.shadowScale})`;
+              m.style.transform = `translate3d(0px, ${
+                r / 2 + c.shadowOffset
+              }px, ${-r / 2}px) rotateX(89.99deg) rotateZ(0deg) scale(${
+                c.shadowScale
+              })`;
             else {
               const e = Math.abs(h) - 90 * Math.floor(Math.abs(h) / 90),
                 t =
@@ -7009,11 +6964,15 @@ var Swiper = (function () {
                 s = c.shadowScale,
                 a = c.shadowScale / t,
                 i = c.shadowOffset;
-              m.style.transform = `scale3d(${s}, 1, ${a}) translate3d(0px, ${n / 2 + i}px, ${-n / 2 / a}px) rotateX(-89.99deg)`;
+              m.style.transform = `scale3d(${s}, 1, ${a}) translate3d(0px, ${
+                n / 2 + i
+              }px, ${-n / 2 / a}px) rotateX(-89.99deg)`;
             }
           const f =
             (d.isSafari || d.isWebView) && d.needPerspectiveFix ? -o / 2 : 0;
-          (s.style.transform = `translate3d(0px,0,${f}px) rotateX(${t.isHorizontal() ? 0 : h}deg) rotateY(${t.isHorizontal() ? -h : 0}deg)`),
+          (s.style.transform = `translate3d(0px,0,${f}px) rotateX(${
+            t.isHorizontal() ? 0 : h
+          }deg) rotateY(${t.isHorizontal() ? -h : 0}deg)`),
             s.style.setProperty('--swiper-cube-translate-z', `${f}px`);
         },
         setTransition: (e) => {
@@ -7287,8 +7246,9 @@ var Swiper = (function () {
               ? ((f = r.next), (h = !0))
               : d > 0 && ((f = r.prev), (h = !0)),
               u.forEach((e, t) => {
-                u[t] =
-                  `calc(${e}px + (${i(f.translate[t])} * ${Math.abs(d * n)}))`;
+                u[t] = `calc(${e}px + (${i(f.translate[t])} * ${Math.abs(
+                  d * n,
+                )}))`;
               }),
               m.forEach((e, s) => {
                 let a = f.rotate[s] * Math.abs(d * n);
@@ -7412,7 +7372,9 @@ var Swiper = (function () {
                 (h = m), (m = e);
               }
               const x = p < 0 ? '' + (1 + (1 - g) * p) : '' + (1 - (1 - g) * p),
-                S = `\n        translate3d(${m}, ${h}, ${f}px)\n        rotateZ(${i.rotate ? (a ? -v : v) : 0}deg)\n        scale(${x})\n      `;
+                S = `\n        translate3d(${m}, ${h}, ${f}px)\n        rotateZ(${
+                  i.rotate ? (a ? -v : v) : 0
+                }deg)\n        scale(${x})\n      `;
               if (i.slideShadows) {
                 let e = d.querySelector('.swiper-slide-shadow');
                 e || (e = pe('cards', d)),
@@ -7457,11 +7419,12 @@ const swiper = new Swiper('.swiper', {
     // when window width is >= 768px
     768: {
       slidesPerView: 2,
-      spaceBetween: 10,
+      spaceBetween: 15,
     },
+    // when window width is >= 992px
     992: {
       slidesPerView: 3,
-      spaceBetween: 10,
+      spaceBetween: 15,
     },
   },
   loop: true,
@@ -7470,12 +7433,9 @@ const swiper = new Swiper('.swiper', {
   },
   autoHeight: true,
   updateOnWindowResize: true,
-
-  //   autoplay: {
-  //     delay: 5000,
-  //   },
-
-  // Navigation arrows
+  autoplay: {
+    delay: 5000,
+  },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',

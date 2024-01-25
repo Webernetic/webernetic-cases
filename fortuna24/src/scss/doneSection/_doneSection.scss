@@ -11,43 +11,40 @@
     font-size: $font-size-secondary;
   }
 
-  &_sliderWrapper {
-    display: flex;
-    min-width: 100%;
-    height: auto !important;
-    padding: clamp($spacing-9, 2.9vw, $spacing-6);
-    background-color: $bg-secondary;
-    border-radius: clamp($spacing-9, 2.86vw, $spacing-6);
+  &_listWrapper {
+    margin: 0;
+  }
+
+  &_itemLi {
+    margin: 0;
     position: relative;
-    overflow: hidden;
-  }
-
-  &_slidesWrapper {
-    min-width: 100%;
-    //   display: flex;
-    //   gap: $spacing-10;
-    margin-bottom: clamp($spacing-11, 1.4vw, $spacing-9);
-    //   flex-wrap: nowrap;
-    // overflow: hidden;
-  }
-
-  &_slide {
-    padding: clamp($spacing-9, 2.9vw, $spacing-6);
-    min-height: 100%;
-    // flex: 1;
-    // width: calc((100% - 2 * 10px) / 3) !important;
-    background-color: $bg-bright;
-    border-radius: clamp($spacing-9, 2.14vw, $spacing-7);
-  }
-
-  &_slideTitle {
-    margin-bottom: clamp($spacing-11, 1.4vw, $spacing-9);
-    color: $font-color-invert;
-  }
-
-  &_slideText {
+    padding-left: 20px;
     color: $font-color-invert;
     font-size: $font-size-mini;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      left: 7px;
+      top: 0;
+      transform: translateY(10px);
+      background-color: $font-color-invert;
+    }
+  }
+}
+
+@media (max-width: $breakpoints-md) {
+  .doneSection {
+    &_itemLi {
+      &::before {
+        width: 3px;
+        height: 3px;
+      }
+    }
   }
 }
 
@@ -57,18 +54,5 @@
       max-width: 100%;
       font-weight: $font-weight-bold;
     }
-
-    &_slide {
-      max-width: 100%;
-    }
-
-    &_slideText {
-      font-weight: $font-weight-bold;
-    }
   }
-}
-
-.swiper {
-  width: 600px;
-  height: 300px;
 }
