@@ -50,9 +50,15 @@
 
 @media (max-width: $breakpoints-sm) {
   .doneSection {
+    &_title {
+      margin-left: $spacing-9;
+      margin-right: $spacing-9;
+    }
     &_text {
       max-width: 100%;
       font-weight: $font-weight-bold;
+      margin-left: $spacing-9;
+      margin-right: $spacing-9;
     }
   }
 }

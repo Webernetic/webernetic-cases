@@ -4,6 +4,8 @@
 @import './headerSection/_headerSection.scss';
 @import './aboutSection/_aboutSection.scss';
 @import './doneSection/_doneSection.scss';
+@import './resultsSection/_resultsSection.scss';
+@import './summarySection/_summarySection.scss';
 @import './orderSection/_orderSection.scss';
 @import './customizeSlider/_customizeSlider.scss';
 *,
@@ -161,6 +163,10 @@ span {
   align-items: center;
 }
 
+.textCenter {
+  text-align: center;
+}
+
 .flexContainer {
   display: flex;
   justify-content: space-between;
@@ -173,6 +179,14 @@ span {
 
 .mb-10 {
   margin-bottom: clamp(8px, 0.7vw, 10px);
+}
+
+.mb-24 {
+  margin-bottom: clamp(16px, 1.7vw, 24px);
+}
+
+.mb-50 {
+  margin-bottom: clamp(20px, 3.57vw, 50px);
 }
 
 .flex-start {
