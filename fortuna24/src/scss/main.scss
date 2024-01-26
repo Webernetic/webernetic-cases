@@ -1,0 +1,235 @@
+@import './fonts';
+@import './variables';
+@import '../mixins/mixinsStyles.scss';
+@import './headerSection/_headerSection.scss';
+@import './aboutSection/_aboutSection.scss';
+@import './doneSection/_doneSection.scss';
+@import './resultsSection/_resultsSection.scss';
+@import './summarySection/_summarySection.scss';
+@import './orderSection/_orderSection.scss';
+@import './customizeSlider/_customizeSlider.scss';
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: $font-family;
+  color: $font-color;
+}
+
+body {
+  position: relative;
+  scroll-behavior: smooth;
+  z-index: -1;
+}
+
+main {
+  padding-bottom: clamp($spacing-7, 4.3vw, $spacing-3);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  max-width: $max-width;
+  padding: clamp($spacing-9, 3.57vw, $spacing-4);
+  width: 100%;
+  margin: 0 auto;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  appearance: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: $font-weight-bold;
+  line-height: $line-height-H;
+  font-family: $font-family-secondary;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: $font-size-H1;
+}
+
+h2 {
+  font-size: $font-size-H2;
+}
+
+h3 {
+  font-size: $font-size-H3;
+}
+
+h4 {
+  font-size: $font-size-H4;
+}
+
+p,
+span,
+li,
+a,
+ul,
+figcaption,
+blockquote,
+input,
+label,
+input::placeholder {
+  font-size: $font-size;
+  line-height: $line-height-primary;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.li {
+  font-size: max(1.125rem, min(2vw, 1.5rem));
+  line-height: 135%;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.boldText {
+  font-size: $font-size-secondary;
+  font-weight: $font-weight-bold;
+  line-height: 120%;
+}
+
+.lightText {
+  $font-weight: $font-weight-primary;
+}
+
+.colorInvertText {
+  color: $font-color-invert;
+}
+
+.brightText {
+  color: $font-color-bright;
+}
+
+.whiteBg {
+  background-color: $bg-white;
+}
+
+.brightBg {
+  background-color: $bg-bright;
+}
+
+.secondaryBg {
+  background-color: $bg-secondary;
+}
+
+.verticalCenter {
+  display: flex;
+  align-items: center;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(12px, 1.07vw, 15px);
+
+  & > div {
+    flex: 1;
+  }
+}
+
+.mb-10 {
+  margin-bottom: clamp(8px, 0.7vw, 10px);
+}
+
+.mb-24 {
+  margin-bottom: clamp(16px, 1.7vw, 24px);
+}
+
+.mb-50 {
+  margin-bottom: clamp(20px, 3.57vw, 50px);
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.heightAuto {
+  height: auto;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.input {
+  border-bottom: 1px solid $font-color;
+  width: 100%;
+  font-size: $font-size;
+
+  &::placeholder {
+    color: $font-color-placeholder;
+    line-height: 1;
+    opacity: 0.7;
+    font-size: $font-size;
+  }
+}
+
+.customButton {
+  font-size: clamp(1.25rem, 2.57vw, 2.25rem);
+  color: $font-color-bright;
+  font-weight: $font-weight-extra-bold;
+  border-bottom: 2px solid $font-color-bright;
+
+  &:hover,
+  &:active {
+    transform: scale(1.05);
+    color: $font-color-bright;
+    border-color: $font-color-bright;
+  }
+}

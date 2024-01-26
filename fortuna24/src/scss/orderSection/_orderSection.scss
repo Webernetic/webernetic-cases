@@ -1,0 +1,157 @@
+.orderSection {
+  margin-bottom: clamp($spacing-5, 4.28vw, $spacing-3);
+
+  &_wrapper {
+    position: relative;
+    display: flex;
+    padding-top: clamp($spacing-9, 5.7vw, 80px);
+    gap: clamp($spacing-7, 10.7vw, 150px);
+  }
+
+  &_imageWrapper {
+    max-width: 35%;
+    width: 100%;
+    height: auto;
+
+    & > img {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &_nameWrapper {
+    position: absolute;
+    left: 23%;
+    bottom: 18%;
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: clamp($spacing-9, 2vw, $spacing-7)
+      clamp($spacing-10, 1.6vw, $spacing-8);
+    box-shadow: none;
+    background-color: $bg-dark;
+    border-radius: $spacing-9;
+
+    & > h4 {
+      font-size: clamp(20px, 2.1vw, 36px);
+      font-weight: $font-weight-extra-bold;
+      font-family: $font-family;
+      margin: 5px;
+    }
+
+    & > p {
+      font-size: clamp(8px, 0.9vw, 12px);
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  &_form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_formTitle {
+    margin-bottom: 30px;
+    font-weight: $font-weight-extra-bold;
+    font-size: $font-size-H3;
+    font-family: $font-family;
+  }
+
+  &_secondformTitle {
+    margin-top: clamp($spacing-7, 3.57vw, $spacing-4);
+    margin-bottom: $spacing-9;
+    font-size: clamp(20px, 2.5vw, 35px);
+    font-family: $font-family;
+  }
+
+  &_inputWrapper {
+    display: flex;
+    gap: clamp($spacing-8, 2.9vw, $spacing-6) !important;
+    flex-wrap: wrap;
+
+    & > input {
+      flex-basis: 47%;
+    }
+  }
+
+  &_checkboxWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: clamp($spacing-10, 1.42vw, $spacing-10);
+
+    & > label {
+      flex-basis: 30%;
+    }
+  }
+
+  &_buttonWrapper {
+    margin-top: clamp($spacing-7, 3.57vw, $spacing-4);
+  }
+
+  &_footerTitle {
+    font-size: clamp(1.56rem, 2.86vw, 2.25rem);
+    font-weight: $font-weight-extra-bold;
+    margin-bottom: clamp($spacing-12, 1.42vw, $spacing-9);
+    margin-top: clamp($spacing-7, 7.14vw, $spacing-2);
+  }
+
+  &_footerText {
+    font-size: clamp(1.25rem, 1.71vw, 1.5rem);
+    font-weight: $font-weight-bold;
+    color: $font-color-bright;
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &_form {
+      align-items: center;
+    }
+
+    &_imageWrapper,
+    &_nameWrapper {
+      display: none;
+    }
+
+    &_checkboxWrapper {
+      width: 60%;
+    }
+
+    &_inputWrapper {
+      width: 60%;
+      & > input:not(:first-of-type) {
+        margin-top: $spacing-10;
+      }
+
+      & > input {
+        flex-basis: 100%;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &_form {
+      align-items: stretch;
+    }
+
+    &_checkboxWrapper {
+      width: 100%;
+    }
+
+    &_inputWrapper {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 370px) {
+    &_checkboxWrapper {
+      & > label {
+        flex-basis: 46%;
+      }
+    }
+  }
+}

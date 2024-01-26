@@ -1,0 +1,168 @@
+.resultsSection {
+  margin-bottom: clamp($spacing-5, 4.28vw, $spacing-3);
+
+  &_header {
+    display: flex;
+    gap: clamp(60px, 8vw, 112px);
+    margin-bottom: clamp($spacing-10, 3.4vw, $spacing-4);
+  }
+
+  &_title {
+    margin-bottom: clamp($spacing-10, 1.79vw, $spacing-8);
+  }
+
+  &_headerText {
+    font-family: $font-family-secondary;
+    font-size: $font-size-secondary;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-secondary;
+  }
+
+  &_positionWrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: clamp($spacing-9, 2.86vw, $spacing-6);
+    padding: clamp($spacing-8, 2.86vw, $spacing-6)
+      clamp($spacing-9, 2.86vw, $spacing-6);
+    margin-bottom: clamp(12px, 1.07vw, 15px);
+    background-color: $bg-dark;
+    border-radius: clamp($spacing-9, 2.86vw, $spacing-6);
+  }
+
+  &_positionContent {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: $spacing-9;
+    align-items: center;
+  }
+
+  &_positionTextPrimary {
+    font-family: $font-family-secondary;
+    font-weight: $font-weight-bold;
+    color: $font-color-invert;
+    text-align: center;
+  }
+
+  &__positionHeader {
+    font-size: $font-size-secondary;
+  }
+
+  &__positionNumber {
+    font-size: clamp(3rem, 8.9vw, 7.8rem);
+    line-height: 80%;
+    margin-top: $spacing-7;
+  }
+
+  &__positionTextDescription {
+    font-size: clamp(2.5rem, 5.7vw, 5rem);
+    line-height: 80%;
+    margin-bottom: $spacing-12;
+  }
+
+  &__positionTextDescription2 {
+    font-size: clamp(1.125rem, 2.42vw, 2.125rem);
+    margin-bottom: $spacing-7;
+  }
+
+  &_positionTextSecondary {
+    color: $font-color-invert;
+    text-align: center;
+  }
+
+  &_imageWrapper {
+    position: relative;
+    border-radius: clamp($spacing-9, 2.14vw, $spacing-7);
+    overflow: hidden;
+    flex: 1;
+
+    & > img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &_statisticsWrapper {
+    padding: clamp($spacing-8, 2.86vw, $spacing-6)
+      clamp($spacing-9, 2.86vw, $spacing-6);
+    margin-bottom: clamp(12px, 1.07vw, 15px);
+    background-color: $bg-medium;
+    border-radius: clamp($spacing-9, 2.86vw, $spacing-6);
+  }
+
+  &_statisticsHeader {
+    color: $font-color-invert;
+    margin-bottom: clamp($spacing-9, 2.86vw, $spacing-6);
+  }
+
+  &_statisticsItem {
+    color: $font-color-invert;
+    margin-bottom: $spacing-11;
+    font-weight: $font-weight-bold;
+  }
+
+  &_figcaption {
+    margin-top: clamp($spacing-10, 1.42vw, $spacing-9);
+    font-family: $font-family-secondary;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    line-height: 120%;
+  }
+
+  &_graphWrapper {
+    position: relative;
+    border-radius: clamp($spacing-9, 2.14vw, $spacing-7);
+    overflow: hidden;
+    padding: clamp($spacing-8, 2.86vw, $spacing-6)
+      clamp($spacing-9, 2.86vw, $spacing-6);
+    background-color: $bg-white;
+
+    & > img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &_trafficText {
+    padding: clamp($spacing-8, 2.86vw, $spacing-6)
+      clamp($spacing-9, 2.86vw, $spacing-6);
+    background-color: $bg-bright;
+    border-radius: clamp($spacing-9, 2.86vw, $spacing-6);
+    width: 37%;
+    color: $font-color-invert;
+    font-family: $font-family-secondary;
+    font-weight: $font-weight-bold;
+    font-size: clamp(2rem, 3vw, 2.625rem);
+  }
+}
+
+@media (max-width: $breakpoints-md) {
+  .resultsSection {
+    &_flexColumn {
+      flex-direction: column;
+    }
+
+    &_trafficText {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $breakpoints-sm) {
+  .resultsSection {
+    &_header {
+      display: block;
+      margin-bottom: $spacing-11;
+      margin-left: $spacing-9;
+      margin-right: $spacing-9;
+    }
+
+    &__positionNumber {
+      margin-top: 0;
+    }
+
+    &__positionTextDescription2 {
+      margin-bottom: 0;
+    }
+  }
+}
