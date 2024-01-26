@@ -1,5 +1,5 @@
 .summarySection {
-  margin-bottom: clamp($spacing-5, 4.28vw, $spacing-3);
+  margin-bottom: clamp($spacing-5, 5.7vw, 80px);
   padding: clamp($spacing-8, 2.86vw, $spacing-6)
     clamp($spacing-9, 2.86vw, $spacing-6) clamp($spacing-7, 4.3vw, $spacing-3) 0;
   background-color: $bg-dark;
@@ -10,13 +10,15 @@
   overflow: hidden;
 
   &_imageWrapper {
+    position: relative;
     height: 100%;
     width: 100%;
     max-width: 45%;
+    transform: translateX(-35%);
 
     & > img {
-      height: 100%;
-      width: 100%;
+      height: auto;
+      width: 135%;
     }
   }
 
@@ -54,6 +56,12 @@
 
     &_imageWrapper {
       max-width: 100%;
+      transform: translateX(-5%);
+
+      & > img {
+        height: auto;
+        width: 110%;
+      }
     }
   }
 }

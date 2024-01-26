@@ -13,21 +13,25 @@
     {type: "email", placeholder: "E-mail*", name: "email"},    
     {type: "url", placeholder: "Сайт*", name: "site"} ]
 
-section.orderSection     
-      +wrapper(class="flexContainer orderSection__position")
-        +wrapper(class="brightBg flex-center orderSection_nameWrapper")
-            h4.colorInvertText Анастасия
-            p.colorInvertText ACCOUNT MANAGER
-        .orderSection_imageWrapper 
-          +img("./assets/images/girl.png", "Девушка", ["500", "1200"])
-        form.orderSection_form.feedback__form
-          h3.orderSection_formTitle Заказать консультацию
-          .flexContainer.orderSection_inputWrapper  
-            each input in inputs         
-              input.input(type= input.type placeholder=input.placeholder name=input.name)   
-          h4.orderSection_secondformTitle Чем вам помочь?
-          .orderSection_checkboxWrapper
-            each checkbox in checkboxes 
-              +customCheckbox(checkbox.value, checkbox.name, checkbox.id)          
-          .orderSection_buttonWrapper 
-            button.customButton(type="submit") Отправить            
+section.orderSection  
+  h3.textCenter У вас остались вопросы?
+  h3.textCenter Хотите так же? Пишите, обсудим ваш проект! 
+  .orderSection_wrapper
+    .orderSection_nameWrapper
+      h4.colorInvertText Анастасия
+      p.colorInvertText ACCOUNT MANAGER
+    .orderSection_imageWrapper 
+      +img("./assets/images/girl.png", "Девушка", ["500", "1200"])
+    form.orderSection_form.feedback__form
+      h3.orderSection_formTitle Заказать консультацию
+      .flexContainer.orderSection_inputWrapper  
+        each input in inputs         
+          input.input(type= input.type placeholder=input.placeholder name=input.name)   
+      h4.orderSection_secondformTitle Чем вам помочь?
+      .orderSection_checkboxWrapper
+        each checkbox in checkboxes 
+          +customCheckbox(checkbox.value, checkbox.name, checkbox.id)          
+      .orderSection_buttonWrapper 
+        button.customButton(type="submit") Отправить  
+      p.orderSection_footerTitle Может быть полезно
+      a.orderSection_footerText(href="белпромимпэкс.бел") БЕЛПРОМИМПЭКС
