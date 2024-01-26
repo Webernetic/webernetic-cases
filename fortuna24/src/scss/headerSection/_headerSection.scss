@@ -17,16 +17,22 @@
   }
 
   &_topDescription {
+    opacity: 0;
     font-size: clamp(0.875rem, 1.28vw, 1.125rem);
+    animation: 3s show 0.3s ease forwards;
   }
 
   &_topWrapperTitle {
+    opacity: 0;
     white-space: nowrap;
+    animation: 3s show ease forwards;
   }
 
   &_title {
+    opacity: 0;
     font-family: 'Toxigenesis';
     font-weight: $font-weight-bold;
+    animation: 3s show 0.6s ease forwards;
   }
 
   &_imageWrapper {
@@ -72,6 +78,8 @@
     font-weight: $font-weight-bold;
     font-size: clamp(1.5rem, 4vw, 3.5rem);
     color: $font-color-invert;
+    opacity: 0;
+    animation: 3s show 0.9s ease forwards;
   }
 
   &_contentItemNumber {
@@ -84,17 +92,32 @@
     font-weight: $font-weight-bold;
     font-size: clamp(1.5rem, 3.7vw, 3.25rem);
     color: $font-color-invert;
+    opacity: 0;
+    animation: 3s show 1.2s ease forwards;
   }
 
   &_contentItemText {
     font-weight: $font-weight-bold;
     font-size: clamp(0.875rem, 1.3vw, 1.125rem);
     color: $font-color-invert;
+    opacity: 0;
+    animation: 3s show 1.5s ease forwards;
   }
 
   &_contentDescription {
     max-width: 38%;
     color: $font-color-invert;
+    opacity: 0;
+    animation: 3s show 1.8s ease forwards;
+  }
+
+  @keyframes show {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 }
 
