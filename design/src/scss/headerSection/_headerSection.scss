@@ -1,0 +1,130 @@
+.headerSection {
+  position: relative;
+  margin-bottom: clamp(80px, 8.5vw, 166px);
+  padding: clamp(100px, 20.8vw, 408px) clamp(40px, 7.2vw, 141px)
+    clamp(60px, 9.9vw, 194px) clamp(40px, 7.2vw, 141px);
+  background-color: $bg-dark;
+  border-bottom-left-radius: clamp(40px, 4.1vw, 80px);
+  border-bottom-right-radius: clamp(40px, 4.1vw, 80px);
+
+  &_title {
+    position: relative;
+    display: block;
+    max-width: 80%;
+    color: $font-color-invert;
+  }
+
+  &__titleSecond {
+    display: block;
+    position: relative;
+    z-index: 5;
+  }
+
+  &__titleLast {
+    display: block;
+    text-align: end;
+    color: #c6f649;
+    line-height: 0.9;
+  }
+
+  &_itemsGroup {
+    position: absolute;
+    width: 32%;
+    height: 71%;
+    left: 32.5%;
+    bottom: 11%;
+  }
+
+  &_line {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &_lineSecondary {
+    object-fit: contain;
+    width: 22.12%;
+    height: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0.3%;
+    right: -0.5%;
+  }
+
+  &_item {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: clamp(5px, 10vw, 10px);
+    padding: clamp(10px, 1.27vw, 25px) clamp(13px, 1.7vw, 34px);
+    border-radius: 50px;
+    width: fit-content;
+    z-index: 10;
+    backdrop-filter: blur(clamp(5px, 0.51vw, 10px));
+    white-space: nowrap;
+  }
+
+  &__itemFirst {
+    left: 0;
+    bottom: 0%;
+    transform: translate(-97%, 35%);
+    padding: clamp(10px, 1.27vw, 25px) clamp(13px, 1.58vw, 31px);
+    background: linear-gradient(
+      108.46deg,
+      rgba(130, 188, 255, 0.33) 0%,
+      rgba(255, 255, 255, 0.066) 100%
+    );
+  }
+
+  &__itemSecond {
+    position: absolute;
+    top: 3%;
+    right: 8%;
+    transform: translate(0, -50%);
+    background: linear-gradient(
+      108.46deg,
+      rgba(255, 255, 255, 0.1056) 0%,
+      rgba(130, 188, 255, 0.33) 100%
+    );
+  }
+
+  &__itemThird {
+    padding: 7px;
+    padding-left: clamp(13px, 1.58vw, 31px);
+    background: linear-gradient(
+      108.46deg,
+      rgba(255, 255, 255, 0.264) 0%,
+      rgba(255, 255, 255, 0.066) 100%
+    );
+    bottom: 0;
+    right: 0;
+    transform: translate(88%, 70%);
+  }
+
+  &_itemText {
+    color: $font-color-invert;
+    font-size: clamp(0.875rem, 1.22vw, 1.5rem);
+  }
+
+  &_itemIcon {
+    width: clamp(1rem, 1.33vw, 26px);
+    height: clamp(1rem, 1.33vw, 26px);
+    object-fit: contain;
+  }
+
+  &_itemLikeIcon {
+    width: clamp(1rem, 1.33vw, 26px);
+    height: clamp(1.25rem, 1.53vw, 30px);
+    object-fit: contain;
+  }
+
+  &_itemLogoIcon {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: $breakpoints-sm) {
+  .headerSection {
+  }
+}

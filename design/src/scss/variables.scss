@@ -1,0 +1,32 @@
+@import './fonts';
+
+$max-width: 1960px;
+
+//fonts
+$font-family: Manrope, sans-serif;
+$font-family-secondary: Toxigenesis;
+$font-weight-medium: 500;
+$font-weight-primary: 400;
+
+$font-color: #000000;
+$font-color-invert: #ffffff;
+$font-color-secondary: #066de2;
+$font-color-bright: #c6f649;
+$font-color-placeholder: #363636;
+
+//backgrounds
+$bg-secondary: #f4f4f6;
+$bg-dark: #222222;
+$bg-white: #ffffff;
+
+$breakpoints-sm: 576px;
+$breakpoints-md: 768px;
+
+// $breakpoint: (
+//   xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px,
+//   xxl: 1400px,
+// );
