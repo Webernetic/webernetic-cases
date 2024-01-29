@@ -2,6 +2,10 @@
 @import './variables';
 @import '../mixins/mixinsStyles.scss';
 @import './headerSection/_headerSection.scss';
+@import './resultsSection/_resultsSection.scss';
+@import './targetSection/_targetSection.scss';
+@import './casesSection/_casesSection.scss';
+@import './nichesSection/_nichesSection.scss';
 @import './customizeSlider/_customizeSlider.scss';
 *,
 *::after,
@@ -102,6 +106,7 @@ figcaption,
 blockquote,
 input,
 label,
+button,
 input::placeholder {
   font-size: clamp(14px, 1.22vw, 24px);
   line-height: 130%;

@@ -1,0 +1,9 @@
+mixin case(title, text, img, href)
+    .case&attributes(attributes)
+        figure 
+            a.case_imageWrapper(href= href)
+                +img(img, "case", ["500", "1200"])  
+            figcaption 
+                h3.case_title= title 
+                span.case_text= text 
+        

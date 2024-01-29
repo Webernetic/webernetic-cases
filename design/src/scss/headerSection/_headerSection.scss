@@ -17,14 +17,16 @@
   &__titleSecond {
     display: block;
     position: relative;
-    z-index: 5;
+    z-index: 20;
   }
 
   &__titleLast {
     display: block;
+    position: relative;
     text-align: end;
     color: #c6f649;
     line-height: 0.9;
+    z-index: 5;
   }
 
   &_itemsGroup {
@@ -62,6 +64,18 @@
     z-index: 10;
     backdrop-filter: blur(clamp(5px, 0.51vw, 10px));
     white-space: nowrap;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      right: 0;
+      top: 50%;
+      transform: translate(50%, -50%);
+      background-color: #3991f5;
+    }
   }
 
   &__itemFirst {
@@ -99,6 +113,10 @@
     bottom: 0;
     right: 0;
     transform: translate(88%, 70%);
+
+    &::after {
+      display: none;
+    }
   }
 
   &_itemText {
@@ -121,6 +139,22 @@
   &_itemLogoIcon {
     width: 100%;
     height: 100%;
+  }
+
+  &_image {
+    position: absolute;
+    bottom: 17%;
+    right: 0;
+    transform: translateX(32%);
+    max-width: 55%;
+    width: 100%;
+    height: auto;
+    z-index: 10;
+
+    & > img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 

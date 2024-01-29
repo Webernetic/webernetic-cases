@@ -1,0 +1,15 @@
+-
+    var items = ["Интернет-магазин", "Корпоративный сайт","Сайт-визитка","Сайт-каталог","Лендинг"]
+
+section.casesSection
+    h2.casesSection_title Наши работы
+    up.casesSection_itemsWrapper
+        each item in items
+            li 
+                button.casesSection_item= item
+    .casesSection_casesWrapper
+        +case("Sysracks", "Разработка онлайн-магазина серверного оборудования", "./assets/images/case1.png", "https://webernetic.by").casesSection__minWidthPrimary
+        +case("Aquar System", "Сайт для промышленной компании", "./assets/images/case2.png", "https://webernetic.by").casesSection__minWidthPrimary
+        +case("Лидкон", "Сайт для производителя пищевой продукции", "./assets/images/case3.png", "https://webernetic.by").casesSection__minWidthSecondary
+        +case("Zmicer Consulting", "Лендинг для продажи услуг консалтинга", "./assets/images/case4.png", "https://webernetic.by").casesSection__minWidthSecondary
+        +case("Law", "Сайт для юридической компании", "./assets/images/case5.png", "https://webernetic.by").casesSection__minWidthSecondary

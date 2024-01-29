@@ -1,0 +1,9 @@
+-
+    var items = [{title:"Медицина", count:"4"}, {title:"Некоммерческие организации", count:"5"},{title:"IT", count:"3"},{title:"Промышленность", count:"5"},{title:"Автомобили", count:"2"},{title:"Банки", count:"5"},{title:"Образование", count:"3"},{title:"Фитнес", count:"5"},{title:"Развлечение", count:"4"},{title:"Строительство, мебель", count:"2"}]
+
+section.nichesSection
+    h2.nichesSection_title Работаем с разными #[span.nichesSection__colorSecondary нишами]
+    ul.nichesSection_itemsWrapper
+        each item in items 
+            li.nichesSection_item= item.title
+                span.nichesSection_itemCount= item.count

@@ -1,0 +1,42 @@
+.nichesSection {
+  padding: clamp(70px, 8.67vw, 170px) clamp(40px, 4.29vw, 84px);
+
+  &_title {
+    margin-bottom: clamp(24px, 2.34vw, 46px);
+  }
+
+  &__colorSecondary {
+    color: $font-color-secondary;
+  }
+
+  &_itemsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &_item {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    margin-right: clamp(40px, 4.13vw, 81px);
+    margin-bottom: clamp(14px, 1.12vw, 22px);
+    font-size: clamp(1.5rem, 2.14vw, 2.625rem);
+    line-height: 136%;
+  }
+
+  &_itemCount {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(200%, -50%);
+    font-size: clamp(0.75rem, 0.82vw, 1rem);
+    color: $font-color-secondary;
+    line-height: 1;
+  }
+}
+
+@media (max-width: $breakpoints-sm) {
+  .nichesSection {
+  }
+}
