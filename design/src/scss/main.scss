@@ -6,6 +6,7 @@
 @import './targetSection/_targetSection.scss';
 @import './casesSection/_casesSection.scss';
 @import './nichesSection/_nichesSection.scss';
+@import './stagesSection/_stagesSection.scss';
 @import './customizeSlider/_customizeSlider.scss';
 *,
 *::after,
@@ -78,22 +79,22 @@ h4 {
 }
 
 h1 {
-  font-size: clamp(40px, 7.65vw, 150px);
+  font-size: clamp(3.75rem, 7.65vw, 9.375rem);
   line-height: 90%;
 }
 
 h2 {
-  font-size: clamp(40px, 3.06vw, 60px);
+  font-size: clamp(1.625rem, 3.06vw, 3.75rem);
   line-height: 140%;
 }
 
 h3 {
-  font-size: clamp(32px, 2.45vw, 48px);
+  font-size: clamp(1.375rem, 2.45vw, 3rem);
   line-height: 137%;
 }
 
 h4 {
-  font-size: clamp(30px, 2.24vw, 44px);
+  font-size: clamp(1.375rem, 2.14vw, 2.625rem);
   line-height: 130%;
 }
 
@@ -108,7 +109,7 @@ input,
 label,
 button,
 input::placeholder {
-  font-size: clamp(14px, 1.22vw, 24px);
+  font-size: clamp(1rem, 1.22vw, 1.5rem);
   line-height: 130%;
   color: inherit;
   margin: 0;
@@ -140,6 +141,10 @@ span {
 
 .brightText {
   color: $font-color-bright;
+}
+
+.secondaryColorText {
+  color: $font-color-secondary;
 }
 
 .darkBg {

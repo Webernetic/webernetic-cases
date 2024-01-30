@@ -20,12 +20,8 @@
     background-color: $bg-secondary;
     line-height: 137%;
 
-    &:hover {
+    &:hover:not(.activeFilter) {
       background-color: #d3d3d3;
-    }
-
-    &:active {
-      background-color: #cfff94;
     }
   }
 
@@ -34,6 +30,12 @@
     justify-content: space-between;
     gap: clamp(20px, 2.04vw, 40px);
     flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  &_case {
+    position: absolute;
+    top: -100%;
   }
 
   &__minWidthPrimary {
@@ -41,8 +43,16 @@
   }
 
   &__minWidthSecondary {
-    width: calc((100% - 2 * clamp(10px, 1.02vw, 20px)) / 3);
+    min-width: calc((100% - 2 * clamp(20px, 2.04vw, 40px)) / 3);
   }
+}
+
+.activeFilter {
+  background-color: #cfff94;
+}
+
+.activeFiltartionElement {
+  position: static;
 }
 
 @media (max-width: $breakpoints-sm) {

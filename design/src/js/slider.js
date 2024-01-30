@@ -7408,36 +7408,70 @@ var Swiper = (function () {
   ];
   return ee.use(ue), ee;
 })();
-//# sourceMappingURL=swiper-bundle.min.js.map
 
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
   slidesPerView: 1,
-  spaceBetween: 10,
-  breakpoints: {
-    // when window width is >= 768px
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 15,
-    },
-    // when window width is >= 992px
-    992: {
-      slidesPerView: 3,
-      spaceBetween: 15,
-    },
-  },
-  loop: true,
-  mousewheel: {
-    invert: true,
-  },
+  // spaceBetween: 10,
+  // breakpoints: {
+  //   // when window width is >= 768px
+  //   768: {
+  //     slidesPerView: 2,
+  //     spaceBetween: 15,
+  //   },
+  //   // when window width is >= 992px
+  //   992: {
+  //     slidesPerView: 3,
+  //     spaceBetween: 15,
+  //   },
+  // },
   autoHeight: true,
   updateOnWindowResize: true,
   autoplay: {
-    delay: 5000,
+    delay: 7000,
   },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+});
+
+// CUSTOMIZATION
+
+const setActiveClassByDefault = () => {
+  let navigationButtons = document.querySelectorAll('.swiper_navItem');
+  navigationButtons[0].classList.add('swiper_activeNavItem');
+};
+
+const toggleActiveClass = (activeIndex) => {
+  let navigationButtons = document.querySelectorAll('.swiper_navItem');
+
+  navigationButtons.forEach((navItem, i) => {
+    if (+navItem.id <= +activeIndex) {
+      navItem.classList.add('swiper_activeNavItem');
+    } else {
+      navItem.classList.remove('swiper_activeNavItem');
+    }
+  });
+};
+
+const slideTo = ({ target }) => {
+  let current = target.closest('DIV');
+  let navId = null;
+
+  if (current && current.classList.contains('swiper_navItem')) {
+    navId = current.id;
+    swiper.slideTo(+navId, 300);
+  }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  let navigationButtonsWrapper = document.querySelector('.swiper_navWrapper');
+
+  setActiveClassByDefault();
+
+  navigationButtonsWrapper.addEventListener('click', slideTo);
+
+  swiper.on('slideChange', () => {
+    let activeIndex = swiper.activeIndex;
+
+    toggleActiveClass(activeIndex);
+  });
 });
