@@ -32,8 +32,8 @@ section.stagesSection
                 .stagesSection_itemImageWrapper
                     +img("./assets/images/step4.png", "Четвертый шаг. Отрисовка дизайна", ["500", "1200"], false)   
                 p.stagesSection_itemNumber.stagesSection_itemNumberColor4 4
-    .swiper_navWrapper
+    ul.swiper_navWrapper
         each item in navItems
-            .swiper_navItem("id"= item.id)
+            li.swiper_navItem("id"= item.id)
                 p.stagesSection_navItemText= item.text
                 p.stagesSection_navItemText= item.number  

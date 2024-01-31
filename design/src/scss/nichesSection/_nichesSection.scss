@@ -1,8 +1,8 @@
 .nichesSection {
-  padding: clamp(70px, 8.67vw, 170px) clamp(40px, 4.29vw, 84px);
+  padding: clamp(90px, 8.67vw, 170px) clamp(60px, 7.14vw, 140px);
 
   &_title {
-    margin-bottom: clamp(24px, 2.34vw, 46px);
+    margin-bottom: clamp(26px, 2.34vw, 46px);
   }
 
   &__colorSecondary {
@@ -12,6 +12,7 @@
   &_itemsWrapper {
     display: flex;
     flex-wrap: wrap;
+    padding-right: clamp(0px, 8.16vw, 160px);
   }
 
   &_item {
@@ -19,9 +20,9 @@
     position: relative;
     margin: 0;
     padding: 0;
-    margin-right: clamp(40px, 4.13vw, 81px);
+    margin-right: clamp(36px, 4.13vw, 81px);
     margin-bottom: clamp(14px, 1.12vw, 22px);
-    font-size: clamp(1.5rem, 2.14vw, 2.625rem);
+    font-size: clamp(1.25rem, 2.14vw, 2.625rem);
     line-height: 136%;
   }
 
@@ -30,7 +31,7 @@
     top: 0;
     right: 0;
     transform: translate(200%, -50%);
-    font-size: clamp(0.75rem, 0.82vw, 1rem);
+    font-size: clamp(0.625rem, 0.82vw, 1rem);
     color: $font-color-secondary;
     line-height: 1;
   }
@@ -38,5 +39,9 @@
 
 @media (max-width: $breakpoints-sm) {
   .nichesSection {
+    padding: clamp(90px, 8.67vw, 170px) 0;
+    &_itemsWrapper {
+      padding-right: 0;
+    }
   }
 }

@@ -7413,27 +7413,13 @@ const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
   slidesPerView: 1,
-  // spaceBetween: 10,
-  // breakpoints: {
-  //   // when window width is >= 768px
-  //   768: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 15,
-  //   },
-  //   // when window width is >= 992px
-  //   992: {
-  //     slidesPerView: 3,
-  //     spaceBetween: 15,
-  //   },
-  // },
-  autoHeight: true,
   updateOnWindowResize: true,
   autoplay: {
     delay: 7000,
   },
 });
 
-// CUSTOMIZATION
+// CUSTOMIZATION STAGES SLIDER
 
 const setActiveClassByDefault = () => {
   let navigationButtons = document.querySelectorAll('.swiper_navItem');
@@ -7453,7 +7439,7 @@ const toggleActiveClass = (activeIndex) => {
 };
 
 const slideTo = ({ target }) => {
-  let current = target.closest('DIV');
+  let current = target.closest('.swiper_navItem');
   let navId = null;
 
   if (current && current.classList.contains('swiper_navItem')) {
@@ -7462,10 +7448,24 @@ const slideTo = ({ target }) => {
   }
 };
 
+const displayActiveNav = (activeIndex) => {
+  if (window.innerWidth > 768) return;
+
+  let navigationButtons = document.querySelectorAll('.swiper_navItem');
+  navigationButtons.forEach((item) => {
+    if (item.id == activeIndex) {
+      item.classList.add('swiper_navItemDisplay');
+    } else {
+      item.classList.remove('swiper_navItemDisplay');
+    }
+  });
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   let navigationButtonsWrapper = document.querySelector('.swiper_navWrapper');
 
   setActiveClassByDefault();
+  displayActiveNav(0);
 
   navigationButtonsWrapper.addEventListener('click', slideTo);
 
@@ -7473,5 +7473,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let activeIndex = swiper.activeIndex;
 
     toggleActiveClass(activeIndex);
+    displayActiveNav(activeIndex);
   });
 });

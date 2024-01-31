@@ -1,0 +1,27 @@
+.processSection {
+  padding: clamp(80px, 9.69vw, 190px) clamp(60px, 7.14vw, 140px);
+
+  &_title {
+    margin-bottom: clamp(32px, 2.3vw, 45px);
+  }
+
+  &_cardsWrapper {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: clamp(20px, 2.04vw, 40px);
+  }
+
+  &_card {
+    margin: 0;
+    padding: 0;
+    background-color: #94c7ff;
+    padding: clamp(32px, 3.06vw, 60px) clamp(20px, 2.42vw, 47.5px);
+  }
+}
+
+@media (max-width: $breakpoints-sm) {
+  .processSection {
+    padding: 0;
+  }
+}

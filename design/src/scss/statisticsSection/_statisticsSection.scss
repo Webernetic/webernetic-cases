@@ -1,0 +1,58 @@
+.statisticsSection {
+  border-radius: clamp(30px, 4.08vw, 80px);
+  background-color: $bg-secondary;
+  padding: clamp(38px, 6.12vw, 120px) clamp(24px, 7.14vw, 140px);
+
+  &_title {
+    margin-bottom: clamp(32px, 2.04vw, 40px);
+  }
+
+  &_itemsWrapper {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-bottom: clamp(32px, 2.04vw, 40px);
+    gap: clamp(14px, 1.53vw, 30px);
+  }
+
+  &_item {
+    border-radius: 24px;
+    background-color: $bg-white;
+    margin: 0;
+    padding: clamp(28px, 2.55vw, 50px) clamp(32px, 2.04vw, 40px);
+  }
+
+  &_itemTitle {
+    font-size: clamp(56px, 5.6vw, 110px);
+    color: $font-color-secondary;
+    opacity: 50%;
+    transition: opacity 0.8s ease;
+  }
+
+  &__itemTitleOpacity {
+    opacity: 1;
+  }
+
+  &_itemText {
+    color: #000000;
+  }
+
+  &_text {
+    max-width: 66%;
+    color: #000000;
+    font-size: clamp(1.125rem, 1.83vw, 2.25rem);
+    gap: clamp(14px, 1.53vw, 30px);
+  }
+}
+
+@media (max-width: $breakpoints-md) {
+  .statisticsSection {
+    &_itemsWrapper {
+      flex-direction: column;
+    }
+
+    &_text {
+      max-width: 100%;
+    }
+  }
+}

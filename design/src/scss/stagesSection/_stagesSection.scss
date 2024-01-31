@@ -1,4 +1,7 @@
 .stagesSection {
+  padding: 0 clamp(60px, 7.14vw, 140px);
+  margin-bottom: clamp(90px, 9.69vw, 190px);
+
   &_title {
     margin-bottom: clamp(32px, 1.79vw, 35px);
   }
@@ -13,9 +16,11 @@
       'text image';
     gap: clamp(24px, 2.55vw, 50px);
     background-color: #beff6c;
+    margin: 0;
     padding: clamp(51px, 5.61vw, 110px) clamp(20px, 11.73vw, 230px)
       clamp(36px, 4.29vw, 84px) clamp(20px, 2.55vw, 50px);
     border-radius: clamp(30px, 3.06vw, 60px);
+    height: auto;
   }
 
   &__itemBg2 {
@@ -102,11 +107,14 @@
   }
 }
 
-@media (max-width: $breakpoints-sm) {
+@media (max-width: $breakpoints-md) {
   .stagesSection {
+    padding: 0;
+
     &_item {
+      align-items: stretch;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr auto auto;
+      grid-template-rows: auto auto 1fr;
       grid-template-areas:
         'title'
         'image'
@@ -115,6 +123,7 @@
 
     &_itemTitle {
       margin-bottom: 21px;
+      max-width: 80%;
     }
 
     &_itemContent {
@@ -123,11 +132,15 @@
   }
 }
 
+// кастомизация слайдера
 .swiper {
   &_navWrapper {
     display: flex;
+    position: relative;
     justify-content: space-between;
     gap: clamp(14px, 1.22vw, 24px);
+    padding: 0;
+    margin: 0;
     margin-top: clamp(10px, 1.53vw, 30px);
   }
 
@@ -135,6 +148,9 @@
     flex: 1;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
     padding: clamp(22px, 1.73vw, 34px) clamp(20px, 2.04vw, 40px);
     border-radius: 20px;
     background-color: $bg-secondary;
@@ -144,7 +160,16 @@
     background-color: #1c1c1c;
     color: $font-color-invert;
   }
+}
 
-  &_navItemText {
+@media (max-width: $breakpoints-md) {
+  .swiper {
+    &_navItem {
+      display: none;
+    }
+
+    &_navItemDisplay {
+      display: flex;
+    }
   }
 }
