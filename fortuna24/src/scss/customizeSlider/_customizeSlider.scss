@@ -67,6 +67,8 @@
 .swiper_slideText {
   color: $font-color-invert;
   font-size: $font-size-mini;
+  margin: 0;
+  padding: 0;
 }
 
 @media (max-width: $breakpoints-sm) {

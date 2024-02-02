@@ -1,6 +1,7 @@
 .headerSection {
   position: relative;
   margin-bottom: clamp($spacing-5, 4.28vw, $spacing-3);
+  margin-top: clamp($spacing-5, 4.28vw, $spacing-3);
 
   &_wrapper {
     padding: clamp($spacing-8, 2.86vw, $spacing-6)

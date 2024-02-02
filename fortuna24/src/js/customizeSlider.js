@@ -18,6 +18,9 @@ const updateCountOfSlides = () => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+  updateSlideNumber();
+  updateCountOfSlides();
+
   const btnPrev = document.querySelector('.swiper-button-prev');
   const btnNext = document.querySelector('.swiper-button-next');
 

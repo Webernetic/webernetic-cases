@@ -7,6 +7,7 @@
 @import './resultsSection/_resultsSection.scss';
 @import './summarySection/_summarySection.scss';
 @import './orderSection/_orderSection.scss';
+@import './swiper/_swiper-bundle.min.css';
 @import './customizeSlider/_customizeSlider.scss';
 *,
 *::after,
@@ -24,10 +25,6 @@ body {
   z-index: -1;
 }
 
-main {
-  padding-bottom: clamp($spacing-7, 4.3vw, $spacing-3);
-}
-
 body::-webkit-scrollbar {
   display: none;
 }
@@ -35,6 +32,7 @@ body::-webkit-scrollbar {
 .container {
   max-width: $max-width;
   padding: clamp($spacing-9, 3.57vw, $spacing-4);
+  padding-bottom: 0;
   width: 100%;
   margin: 0 auto;
 }
