@@ -41,11 +41,11 @@
   }
 
   &__minWidthPrimary {
-    min-width: calc((100% - clamp(20px, 2.04vw, 40px)) / 2);
+    min-width: calc((100% - clamp(20px, 2.1vw, 40px)) / 2);
   }
 
   &__minWidthSecondary {
-    min-width: calc((100% - 2 * clamp(20px, 2.04vw, 40px)) / 3);
+    min-width: calc((100% - 2 * clamp(20px, 2.1vw, 40px)) / 3);
   }
 }
 

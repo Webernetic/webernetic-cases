@@ -7,6 +7,8 @@
 
   &_cardsWrapper {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
     margin: 0;
     padding: 0;
     gap: clamp(20px, 2.04vw, 40px);
@@ -15,8 +17,210 @@
   &_card {
     margin: 0;
     padding: 0;
+    flex: 1;
+    max-width: 33.3%;
     background-color: #94c7ff;
     padding: clamp(32px, 3.06vw, 60px) clamp(20px, 2.42vw, 47.5px);
+    border-radius: clamp(30px, 2.04vw, 40px);
+  }
+
+  &__cardBackground1 {
+    background-color: #c4ff79;
+  }
+
+  &__cardBackground2 {
+    background-color: #ebe4ff;
+  }
+
+  &_cardTitle {
+    font-size: clamp(1.375rem, 1.84vw, 2.25rem);
+    color: #041e3c;
+    margin-bottom: clamp(31px, 3.67vw, 72px);
+  }
+
+  &__cardTitleColor1 {
+    color: #35530e;
+  }
+
+  &__cardTitleColor2 {
+    color: #5b5084;
+  }
+
+  &_cardText {
+    margin-top: clamp(22px, 1.73vw, 34px);
+    color: #235692;
+  }
+
+  &__cardTextColor1 {
+    color: #516c2e;
+  }
+
+  &__cardTextColor2 {
+    color: #7c729a;
+  }
+
+  &_firstCardItemsWrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 65%;
+    margin: 0 auto;
+    gap: clamp(20px, 1.4vw, 26px);
+    background-color: #f0f8ff;
+    padding: clamp(20px, 3.06vw, 30px) clamp(20px, 1.63vw, 32px);
+    border-radius: clamp(30px, 1.53vw, 45px);
+    transition: all 0.3s ease;
+  }
+
+  &_firstCardItem {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    gap: clamp(10px, 0.7vw, 12px);
+    padding: clamp(10px, 0.7vw, 13px);
+    background-color: #bbdbff;
+    border-radius: clamp(15px, 1.02vw, 20px);
+    transition: all 0.3s ease;
+  }
+
+  &__firstCardItemBgSecondary {
+    background-color: #d2c2ff;
+  }
+
+  &_firstCardItemIconWrapper {
+    display: flex;
+    align-items: center;
+    background-color: #fefefe;
+    padding: clamp(10px, 0.7vw, 13px);
+    border-radius: 10px;
+
+    & > img {
+      width: clamp(16px, 1.22vw, 24px);
+      height: clamp(16px, 1.22vw, 24px);
+    }
+  }
+
+  &_firstCardItemIconWrapperBg1 {
+    background-color: #fefefe;
+  }
+
+  &_firstCardItemLinesWrapper {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    flex-direction: column;
+    gap: clamp(7px, 0.5vw, 9px);
+  }
+
+  &_firstCardItemLine {
+    display: flex;
+    gap: clamp(7px, 0.5vw, 10px);
+  }
+
+  &_firstCardItemFirstLineEl {
+    flex: 1;
+    height: clamp(12px, 1.67vw, 16px);
+    background-color: #f4faff;
+    border-radius: 8px;
+  }
+
+  &_firstCardSecondLineEl {
+    height: clamp(7px, 0.5vw, 10px);
+    background-color: #f4faff;
+    border-radius: 10px;
+  }
+
+  &__flex2 {
+    flex: 2;
+  }
+
+  &__flex1 {
+    flex: 1;
+  }
+
+  &__firstCardItemActiveFirst {
+    animation: 2s animation1 0s ease forwards;
+    opacity: 1;
+
+    .processSection_firstCardItemIconWrapper {
+      animation: 2s animation2 0s ease forwards;
+    }
+
+    .processSection_firstCardItemFirstLineEl {
+      animation: 2s animation2 0s ease forwards;
+    }
+
+    .processSection_firstCardSecondLineEl {
+      animation: 2s animation2 0s ease forwards;
+    }
+  }
+
+  &__firstCardItemActiveSecond {
+    animation: 2s animation3 0s ease;
+
+    .processSection_firstCardItemIconWrapperBg1 {
+      animation: 2s animation4 0s ease forwards;
+    }
+
+    .processSection_firstCardItemFirstLineEl {
+      animation: 2s animation4 0s ease forwards;
+    }
+
+    .processSection_firstCardSecondLineEl {
+      animation: 2s animation4 0s ease forwards;
+    }
+  }
+
+  @keyframes animation1 {
+    from {
+      transform: scale(1);
+      background-color: #7bb9ff;
+    }
+    50% {
+      transform: scale(1.5);
+      background-color: #f4faff;
+    }
+    to {
+      transform: scale(1);
+      background-color: #7bb9ff;
+    }
+  }
+
+  @keyframes animation2 {
+    from {
+      background-color: #f4faff;
+    }
+    50% {
+      background-color: rgba(146, 197, 255, 1);
+    }
+    to {
+      background-color: #f4faff;
+    }
+  }
+
+  @keyframes animation3 {
+    from {
+      transform: scale(1);
+      background-color: #d2c2ff;
+    }
+    50% {
+      transform: scale(1.5);
+      background-color: rgba(198, 168, 255, 0);
+    }
+    to {
+      transform: scale(1);
+      background-color: #d2c2ff;
+    }
+  }
+  @keyframes animation4 {
+    from {
+      background-color: #f4faff;
+    }
+    50% {
+      background-color: rgba(198, 168, 255, 1);
+    }
+    to {
+      background-color: #f4faff;
+    }
   }
 }
 

@@ -32,3 +32,23 @@ const showStatistics = () => {
 };
 
 window.addEventListener('load', createObserver(showStatistics, statistics[0]));
+
+// -----PROCESS SECTION------
+
+let processes = document.querySelectorAll('.processSection_firstCardItem');
+
+const animateFirstProcess = () => {
+  processes[0].classList.add('processSection__firstCardItemActiveFirst');
+  setTimeout(() => {
+    // processes[0].classList.remove('processSection__firstCardItemActiveFirst');
+    processes[1].classList.add('processSection__firstCardItemActiveSecond');
+  }, [1500]);
+  // setTimeout(() => {
+  //   processes[1].classList.remove('processSection__firstCardItemActiveSecond');
+  // }, [3500]);
+};
+
+window.addEventListener(
+  'load',
+  createObserver(animateFirstProcess, processes[0]),
+);
