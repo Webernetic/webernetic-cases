@@ -40,15 +40,22 @@ let processes = document.querySelectorAll('.processSection_firstCardItem');
 const animateFirstProcess = () => {
   processes[0].classList.add('processSection__firstCardItemActiveFirst');
   setTimeout(() => {
-    // processes[0].classList.remove('processSection__firstCardItemActiveFirst');
     processes[1].classList.add('processSection__firstCardItemActiveSecond');
   }, [1500]);
-  // setTimeout(() => {
-  //   processes[1].classList.remove('processSection__firstCardItemActiveSecond');
-  // }, [3500]);
 };
 
 window.addEventListener(
   'load',
   createObserver(animateFirstProcess, processes[0]),
 );
+
+let orders = document.querySelectorAll('.processSection_thirdCardImageWrapper');
+
+const showOrder = () => {
+  for (let i = orders.length - 1; i >= 0; i--) {
+    orders[i].style.transitionDelay = `${2.8 + 0.6 * (orders.length - i - 1)}s`;
+    orders[i].style.opacity = '1';
+  }
+};
+
+window.addEventListener('load', createObserver(showOrder, orders[0]));

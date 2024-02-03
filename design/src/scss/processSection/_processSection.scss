@@ -35,7 +35,7 @@
   &_cardTitle {
     font-size: clamp(1.375rem, 1.84vw, 2.25rem);
     color: #041e3c;
-    margin-bottom: clamp(31px, 3.67vw, 72px);
+    margin-bottom: 32px;
   }
 
   &__cardTitleColor1 {
@@ -222,10 +222,95 @@
       background-color: #f4faff;
     }
   }
+
+  &_secondCardItemsWrapper {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &_secondCardImageWrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: auto;
+
+    & > img {
+      width: 70%;
+      height: auto;
+    }
+
+    &:nth-of-type(2) {
+      justify-content: flex-start;
+    }
+
+    &:last-of-type {
+      justify-content: center;
+    }
+  }
+
+  &_thirdCardImageWrapper {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+    gap: 30px;
+    opacity: 0;
+    transition: all 2s ease-in-out;
+
+    &:nth-of-type(1) {
+      z-index: 30;
+    }
+
+    &:nth-of-type(2) {
+      position: absolute;
+      justify-content: flex-end;
+      z-index: 20;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    &:nth-of-type(3) {
+      z-index: 10;
+    }
+
+    & > img {
+      width: 78%;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: $breakpoints-xl) {
+  .processSection {
+    &_cardsWrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &_card {
+      max-width: 45%;
+    }
+  }
+}
+
+@media (max-width: $breakpoints-md) {
+  .processSection {
+    &_card {
+      max-width: 65%;
+    }
+  }
 }
 
 @media (max-width: $breakpoints-sm) {
   .processSection {
     padding: 0;
+
+    &_card {
+      max-width: 100%;
+    }
   }
 }

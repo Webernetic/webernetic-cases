@@ -1,4 +1,4 @@
-mixin img(src, alt, resolutions=[], lazy = true ,sizes=[["max-width: 500px", "100vw"],"100vw"])
+mixin img(src, alt, resolutions=[], lazy = "lazy" ,sizes=[["max-width: 500px", "100vw"],"100vw"])
 	-
 		var srcPath = [];
 		srcPath.push(src.substring(0, src.lastIndexOf('.')), src.substring(src.lastIndexOf('.')));
