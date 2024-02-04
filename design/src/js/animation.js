@@ -59,3 +59,51 @@ const showOrder = () => {
 };
 
 window.addEventListener('load', createObserver(showOrder, orders[0]));
+
+// -----TEAM SECTION------
+
+let teamWrapper = document.querySelector('.teamSection_teamWrapper');
+let teammates = document.querySelectorAll('.teamSection_imageWrapper');
+let roles = document.querySelectorAll('.teamSection_role');
+
+const getActiveRoleId = (target) => {
+  if (target.classList.contains('teamSection_img')) {
+    return target.getAttribute('data-id');
+  }
+};
+
+const animateTeammates = (activeRoleId) => {
+  teammates.forEach((teammate) => {
+    if (teammate.getAttribute('data-id') !== activeRoleId) {
+      teammate.style.transform = 'scale(0.84)';
+    }
+  });
+};
+
+const visibleActiveRole = (activeRoleId) => {
+  roles.forEach((role) => {
+    if (role.getAttribute('data-id') === activeRoleId) {
+      role.classList.add('teamSection__activeRole');
+    }
+  });
+};
+
+const showRole = ({ target }) => {
+  if (window.innerWidth >= 576) {
+    let activeRoleId = getActiveRoleId(target);
+    if (activeRoleId && activeRoleId !== '1') {
+      animateTeammates(activeRoleId);
+      visibleActiveRole(activeRoleId);
+    }
+  }
+};
+
+const hideRole = () => {
+  if (window.innerWidth >= 576) {
+    roles.forEach((role) => role.classList.remove('teamSection__activeRole'));
+    teammates.forEach((teammate) => (teammate.style.transform = 'scale(1)'));
+  }
+};
+
+teamWrapper.addEventListener('mouseover', showRole);
+teamWrapper.addEventListener('mouseout', hideRole);

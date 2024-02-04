@@ -9,13 +9,19 @@
   &_teamWrapper {
     position: relative;
     margin-bottom: clamp(32px, 2.3vw, 45px);
-    height: clamp(300px, 27.6vw, 540px);
+    height: clamp(200px, 27.6vw, 540px);
+  }
+
+  &__absolute {
+    position: absolute;
   }
 
   &_imageWrapper {
-    height: auto;
+    height: 100%;
+    width: 100%;
     border-radius: 50%;
-    position: absolute;
+    overflow: hidden;
+    transition: all 0.7s ease;
 
     & > img {
       width: 100%;
@@ -33,19 +39,19 @@
   &__img2 {
     width: 17.6%;
     top: 3%;
-    left: 32%;
+    left: 31%;
   }
 
   &__img3 {
     width: 13.6%;
     bottom: 0%;
-    left: 45%;
+    left: 47%;
   }
 
   &__img4 {
     width: 23.3%;
     top: 0%;
-    left: 55%;
+    left: 57%;
   }
 
   &__img5 {
@@ -58,16 +64,177 @@
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%, 80%);
-    padding: clamp(14px, 1.02vw, 20px) clamp(20px, 1.83vw, 36px);
+    transform: translate(-50%, 60%);
+    padding: clamp(10px, 1.02vw, 20px) clamp(12px, 1.83vw, 36px);
     border-radius: clamp(14px, 1.02vw, 20px);
     background-color: #dcecff;
+    font-size: clamp(12px, 1.22vw, 24px);
     color: #2a5d95;
     line-height: 125%;
+    white-space: nowrap;
+    text-align: center;
+    opacity: 0;
+    transition: all 1s ease;
+  }
+
+  &__activeRole {
+    opacity: 1;
+  }
+}
+
+@media (max-width: $breakpoints-lg) {
+  .teamSection {
+    &__img4 {
+      left: 58%;
+    }
+  }
+}
+
+@media (max-width: $breakpoints-md) {
+  .teamSection {
+    &__img2 {
+      left: 31%;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .teamSection {
+    &__img2 {
+      left: 35%;
+    }
   }
 }
 
 @media (max-width: $breakpoints-sm) {
   .teamSection {
+    padding-inline: 0;
+
+    &_teamWrapper {
+      height: clamp(679px, 61vw, 1200px);
+    }
+
+    &__img1 {
+      width: 40%;
+      left: 5%;
+    }
+
+    &__img2 {
+      width: 35%;
+      top: 20%;
+      left: auto;
+      right: 10%;
+    }
+
+    &__img3 {
+      width: 32%;
+      bottom: auto;
+      top: 39%;
+      left: 12%;
+    }
+
+    &__img4 {
+      width: 45%;
+      top: auto;
+      bottom: 12%;
+      left: auto;
+      right: 5%;
+    }
+
+    &__img5 {
+      width: 40%;
+      bottom: 0;
+      right: auto;
+      left: 5%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .teamSection {
+    &__img1 {
+      width: 45%;
+    }
+
+    &__img2 {
+      width: 40%;
+      top: 23%;
+    }
+
+    &__img3 {
+      width: 37%;
+      top: 39%;
+      left: 12%;
+    }
+
+    &__img4 {
+      width: 50%;
+      bottom: 14%;
+    }
+
+    &__img5 {
+      width: 42%;
+      left: 5%;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .teamSection {
+    &__img1 {
+      width: 55%;
+      left: 0;
+    }
+
+    &__img2 {
+      top: 30%;
+      width: 38%;
+      right: 0;
+    }
+
+    &__img3 {
+      width: 40%;
+      top: 40%;
+      left: 7%;
+    }
+
+    &__img4 {
+      width: 48%;
+      bottom: 18%;
+      right: 0;
+    }
+
+    &__img5 {
+      left: 0;
+      width: 48%;
+    }
+  }
+}
+
+@media (max-width: 340px) {
+  .teamSection {
+    &__img1 {
+      width: 64%;
+    }
+
+    &__img2 {
+      width: 44%;
+      top: 28%;
+      width: 42%;
+    }
+
+    &__img3 {
+      width: 42%;
+      top: 38%;
+    }
+
+    &__img4 {
+      width: 60%;
+      bottom: 21%;
+    }
+
+    &__img5 {
+      width: 50%;
+    }
   }
 }
