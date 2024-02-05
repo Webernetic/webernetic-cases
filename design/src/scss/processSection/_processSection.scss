@@ -307,7 +307,7 @@
 
 @media (max-width: $breakpoints-sm) {
   .processSection {
-    padding: 0;
+    padding-inline: 0;
 
     &_card {
       max-width: 100%;

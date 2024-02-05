@@ -72,9 +72,11 @@
       font-size: clamp(18px, 1.12vw, 22px);
       font-weight: $font-weight-medium;
       line-height: 137%;
+      opacity: 0.3;
     }
 
-    &:active {
+    &:active,
+    &:focus {
       border: 1px solid rgba(255, 255, 255, 0.2);
     }
   }
