@@ -1,0 +1,135 @@
+.feedbackSection {
+  border-radius: clamp(50px, 4.08vw, 80px);
+  padding: clamp(50px, 8.88vw, 174px) clamp(24px, 7.19vw, 141px);
+  padding-bottom: 0;
+  background-color: #222222;
+
+  &_wrapper {
+    display: flex;
+    gap: clamp(30px, 3.6vw, 70px);
+  }
+
+  &_content {
+    flex: 1;
+  }
+
+  &_title {
+    font-size: clamp(42px, 4.08vw, 80px);
+    margin-bottom: clamp(12px, 1.53vw, 30px);
+    color: #f2f2f2;
+    line-height: 120%;
+  }
+
+  &_text {
+    font-size: clamp(22px, 1.84vw, 36px);
+    margin-bottom: clamp(16px, 1.28vw, 25px);
+    color: #ffffff;
+    opacity: 60%;
+    line-height: 137%;
+  }
+
+  &_item {
+    display: flex;
+    width: fit-content;
+    gap: clamp(5px, 0.51vw, 10px);
+    padding: clamp(20px, 1.22vw, 24px) clamp(17px, 1.68vw, 33px);
+    margin-bottom: clamp(16px, 1.28vw, 25px);
+    background: linear-gradient(
+      108.46deg,
+      rgba(255, 255, 255, 0.1056) 0%,
+      rgba(210, 255, 175, 0.1782) 100%
+    );
+    border-radius: 60px;
+
+    & > span {
+      font-size: clamp(1rem, 1.22vw, 1.5rem);
+      color: $font-color-invert;
+      font-weight: $font-weight-medium;
+      line-height: 1;
+    }
+  }
+
+  &_form {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: clamp(10px, 0.82vw, 16px);
+    align-items: flex-end;
+  }
+
+  &_input {
+    padding: clamp(22px, 1.17vw, 23px) clamp(20px, 1.43vw, 28px);
+    width: 85%;
+    background-color: rgba(71, 71, 71, 0.33);
+    border-radius: clamp(14px, 1.02vw, 20px);
+    font-size: clamp(18px, 1.12vw, 22px);
+    font-weight: $font-weight-medium;
+    line-height: 137%;
+    color: $font-color-invert;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+
+    &::placeholder {
+      font-size: clamp(18px, 1.12vw, 22px);
+      font-weight: $font-weight-medium;
+      line-height: 137%;
+    }
+
+    &:active {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  &_buttonWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 11px;
+    max-height: fit-content;
+  }
+
+  &_button {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: clamp(250px, 20.6vw, 404px);
+    height: clamp(125px, 10.3vw, 202px);
+    border-top-left-radius: clamp(125px, 10.3vw, 202px);
+    border-top-right-radius: clamp(125px, 10.3vw, 202px);
+    background-color: #c6f649;
+    color: #000000;
+    font-size: clamp(22px, 1.83vw, 36px);
+    padding: 0;
+    padding-bottom: clamp(22px, 1.83vw, 36px);
+    outline: none;
+    border: none;
+
+    &:active {
+      box-shadow: 0px -18px 15px 0px #c6f64929;
+    }
+  }
+}
+
+@media (max-width: $breakpoints-lg) {
+  .feedbackSection {
+    &_input {
+      width: 100%;
+    }
+
+    &_buttonWrapper {
+      margin-top: 40px;
+    }
+  }
+}
+
+@media (max-width: $breakpoints-md) {
+  .feedbackSection {
+    &_wrapper {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: $breakpoints-sm) {
+  .feedbackSection {
+  }
+}
