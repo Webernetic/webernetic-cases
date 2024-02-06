@@ -30,6 +30,7 @@
 
   &_item {
     display: flex;
+    align-items: center;
     width: fit-content;
     gap: clamp(5px, 0.51vw, 10px);
     padding: clamp(20px, 1.22vw, 24px) clamp(17px, 1.68vw, 33px);
@@ -40,6 +41,11 @@
       rgba(210, 255, 175, 0.1782) 100%
     );
     border-radius: 60px;
+
+    & > img {
+      width: clamp(20px, 1.43vw, 28px);
+      height: clamp(20px, 1.17vw, 23px);
+    }
 
     & > span {
       font-size: clamp(1rem, 1.22vw, 1.5rem);

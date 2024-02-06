@@ -7409,6 +7409,28 @@ var Swiper = (function () {
   return ee.use(ue), ee;
 })();
 
+// CUSTOMIZATION TASKS SLIDER
+
+const customSwiper = new Swiper('.customSwiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  slidesPerView: 3,
+  loop: true,
+  updateOnWindowResize: true,
+  centeredSlides: true,
+  autoplay: {
+    delay: 5000,
+  },
+  effect: 'coverflow',
+  coverflowEffect: {
+    depth: 400,
+  },
+  parallax: true,
+  slideActiveClass: 'tasksSection_activeSlide',
+  slideFullyVisibleClass: 'tasksSection_fullyVisibleSlide',
+});
+
+// CUSTOMIZATION STAGES SLIDER
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
@@ -7418,8 +7440,6 @@ const swiper = new Swiper('.swiper', {
     delay: 7000,
   },
 });
-
-// CUSTOMIZATION STAGES SLIDER
 
 const setActiveClassByDefault = () => {
   let navigationButtons = document.querySelectorAll('.swiper_navItem');
