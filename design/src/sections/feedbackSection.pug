@@ -1,0 +1,16 @@
+section.feedbackSection
+    form.send_form_1(method="POST")
+        .feedbackSection_wrapper
+            .feedbackSection_content
+                .feedbackSection_title Давайте пообщаемся!
+                .feedbackSection_text Поможем понять ваши идеи и реализуем их
+                .feedbackSection_item
+                    img(src="../assets/icons/like.svg", alt="like")
+                    span Мы на связи
+            .feedbackSection_form
+                input.feedbackSection_input(placeholder="Ваше Имя", type="text", name="user_name", required)
+                input.feedbackSection_input(placeholder="Телефон", type="tel", name="user_phone", required)
+                input.feedbackSection_input(placeholder="E-mail", type="email", name="user_email")
+                input.feedbackSection_input(placeholder="Сайт", type="url", name="user_site")
+        .feedbackSection_buttonWrapper
+            button.feedbackSection_button(type="submit") Оставить заявку
