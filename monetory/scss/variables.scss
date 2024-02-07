@@ -1,0 +1,40 @@
+@import './fonts';
+
+$max-width: 1260px;
+
+//fonts
+$font-family: Circe, san-serif;
+$font-weight-extra-bold: 800;
+$font-weight-bold: 700;
+$font-weight-primary: 400;
+
+$font-size: clamp(1.125rem, 2.06vw, 1.625rem);
+$font-size-secondary: clamp(0.875rem, 1.94vw, 1.625rem);
+$font-size-H1: clamp(2.25rem, 5.87vw, 4.625rem);
+$font-size-H2: clamp(2rem, 3.81vw, 3rem);
+$font-size-H3: clamp(1.625rem, 2.86vw, 2.25rem);
+$font-size-H4: clamp(1.375rem, 1.33vw, 1.625rem);
+
+$font-color: #323232;
+$font-color-bright: #002960;
+$font-color-placeholder: #363636;
+
+//backgrounds
+$bg-primary: #f9faf6;
+$bg-secondary: #d7ffce;
+$bg-secondary: #edffe9;
+$bg-bright: #faeaff;
+$bg-white: #ffffff;
+
+$breakpoints-sm: 576px;
+$breakpoints-md: 768px;
+$breakpoints-lg: 992px;
+
+// $breakpoint: (
+//   xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px,
+//   xxl: 1400px,
+// );
