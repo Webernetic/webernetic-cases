@@ -17,8 +17,8 @@
 
     &:checked {
       ~ .checkbox__custom {
-        background-color: $bg-dark;
-        border-color: $bg-dark;
+        background-color: $font-color-bright;
+        border-color: $font-color-bright;
         box-shadow: 0 0 0 0.2rem rgba(31, 88, 168, 0.25);
 
         &:after {

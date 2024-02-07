@@ -18,6 +18,7 @@ body {
   position: relative;
   scroll-behavior: smooth;
   z-index: -1;
+  background-color: $bg-primary;
 }
 
 body::-webkit-scrollbar {
@@ -77,6 +78,7 @@ h4 {
 
 h1 {
   font-size: $font-size-H1;
+  font-weight: $font-weight-primary;
 }
 
 h2 {
@@ -125,10 +127,6 @@ span {
 
 .lightText {
   $font-weight: $font-weight-primary;
-}
-
-.colorInvertText {
-  color: $font-color-invert;
 }
 
 .brightText {
