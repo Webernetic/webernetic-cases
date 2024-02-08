@@ -1,6 +1,15 @@
 .stagesSection {
   margin-bottom: clamp(78px, 9.52vw, 120px);
 
+  &_mainTitle {
+    width: fit-content;
+    padding: 2px 12px;
+    border: 1px solid $font-color;
+    border-radius: clamp(15px, 1.59vw, 20px);
+    background-color: $bg-secondary;
+    margin-bottom: clamp(24px, 2.78vw, 35px);
+  }
+
   &_title {
     max-width: 50%;
     margin-bottom: 20px;
@@ -214,6 +223,10 @@
 
 @media (max-width: $breakpoints-sm) {
   .stagesSection {
+    &_mainTitle {
+      padding: 2px 20px;
+    }
+
     &_title {
       max-width: 77%;
     }

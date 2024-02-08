@@ -5,6 +5,7 @@
 @import './descriptionSection/_descriptionSection.scss';
 @import './targetSection/_targetSection.scss';
 @import './stagesSection/_stagesSection.scss';
+@import './positionSection/_positionSection.scss';
 @import './orderSection/_orderSection.scss';
 
 *,
@@ -86,6 +87,7 @@ h1 {
 
 h2 {
   font-size: $font-size-H2;
+  font-weight: $font-weight-primary;
 }
 
 h3 {
@@ -191,6 +193,10 @@ span {
     opacity: 0.7;
     font-size: $font-size;
   }
+}
+
+.mb-6 {
+  margin-bottom: 6px;
 }
 
 .customButton {
