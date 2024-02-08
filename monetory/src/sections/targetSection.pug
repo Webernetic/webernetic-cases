@@ -1,0 +1,15 @@
+-
+    var targets = [{number: "1", text: "Рост количества целевых посетителей сайта"},
+                    {number: "2", text: "Рост постоянных пользователей платформой "},
+                    {number: "3", text: "Повышение узнаваемости бренда среди профессиональных пользователей"}]
+
+section.targetSection
+    .targetSection_imageWpapper
+        img(src="../assets/images/man.png", alt="Man")
+    .targetSection_contentWrapper
+        h2.targetSection_title Цели клиента
+        .targetSection_targetsWrapper
+            each target in targets 
+                .targetSection_target
+                    p.targetSection_targetNumber= target.number 
+                    p= target.text 
