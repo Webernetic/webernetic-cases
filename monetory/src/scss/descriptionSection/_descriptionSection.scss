@@ -41,8 +41,9 @@
   }
 
   &_itemTitle {
-    max-width: 56%;
+    max-width: 68%;
     margin-bottom: 20px;
+    font-size: clamp(1.625rem, 2.5vw, 2.125rem);
   }
 
   &_itemTitleSecondary {

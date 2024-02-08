@@ -32,6 +32,8 @@
     display: flex;
     flex-direction: column;
     gap: clamp(10px, 1.59vw, 20px);
+    padding: 0;
+    margin: 0;
   }
 
   &_target {
@@ -39,6 +41,7 @@
     align-items: center;
     gap: clamp(14px, 2.62vw, 33px);
     padding: 7px 8px;
+    margin: 0;
     border: 1px solid $font-color;
     border-radius: clamp(15px, 1.59vw, 20px);
     background-color: $bg-white;

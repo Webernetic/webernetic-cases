@@ -8,8 +8,8 @@ section.targetSection
         img(src="../assets/images/man.png", alt="Man")
     .targetSection_contentWrapper
         h2.targetSection_title Цели клиента
-        .targetSection_targetsWrapper
+        ul.targetSection_targetsWrapper
             each target in targets 
-                .targetSection_target
+                li.targetSection_target
                     p.targetSection_targetNumber= target.number 
                     p= target.text 
