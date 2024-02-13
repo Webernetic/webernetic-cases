@@ -1,0 +1,94 @@
+@mixin text-60($color: null) {
+    font-family: "Circe", sans-serif;
+    font-size: 60px;
+    line-height: 66px;
+    font-weight: 700;
+
+    @if($color) {
+        color: $color;
+    }
+
+    @else {
+        color: $text-light;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 32px;
+        line-height: 35.38px;
+    }
+}
+
+@mixin text-50($color: null) {
+    font-family: "Circe", sans-serif;
+    font-size: 50px;
+    line-height: 50.45px;
+    font-weight: 700;
+
+    @if($color) {
+        color: $color;
+    }
+
+    @else {
+        color: $text-light;
+    }
+}
+
+
+@mixin text-34($color: null) {
+    font-family: "Circe", sans-serif;
+    font-size: 34px;
+    line-height: 39.1px;
+    font-weight: 700;
+
+    @if($color) {
+        color: $color;
+    }
+
+    @else {
+        color: $text-blue;
+    }
+}
+
+@mixin text-32($color: null) {
+    font-family: "Circe", sans-serif;
+    font-size: 32px;
+    line-height: 47.17px;
+    font-weight: 700;
+
+    @if($color) {
+        color: $color;
+    }
+
+    @else {
+        color: $text-light;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 24px;
+        line-height: 27.6px;
+    }
+}
+
+
+@mixin text-24($color: null) {
+    font-family: "Circe", sans-serif;
+    font-size: 24px;
+    line-height: 26.4px;
+    font-weight: 400;
+
+    @if($color) {
+        color: $color;
+    }
+
+    @else {
+        padding: 6px 15px;
+        border: 1.5px solid $text-light;
+        border-radius: 80px;
+        color: $text-light;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 18px;
+        line-height: 23.4px;
+    }
+}

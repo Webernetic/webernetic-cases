@@ -1,7 +1,10 @@
 @import './fonts';
 @import './variables';
 @import '../mixins/mixinsStyles.scss';
+@import './mixins/mixins';
 @import '../sections/welcomeSection/style';
+@import '../sections/targetSection/style';
+
 
 
 *,
@@ -27,7 +30,6 @@ body::-webkit-scrollbar {
   max-width: $max-width;
   width: 100%;
   margin: 0 auto;
-  padding: 0 50px;
 }
 
 blockquote:before,

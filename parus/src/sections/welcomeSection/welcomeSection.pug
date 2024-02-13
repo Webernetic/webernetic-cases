@@ -1,31 +1,17 @@
+- var items = [{title: "Компания", subtitle: "Pa-rus"}, {title: "Ниша", subtitle: "Складской консалтинг"}, {title: "Тип сайта", subtitle: "Визитка"}]
+
 section.welcome 
+    .welcome__wrapper 
 
-    .container 
+        h1.welcome__title   
+            | Редизайн корпоративного сайта
 
-        .welcome__wrapper 
+        ul.welcome__list 
 
-            h1.welcome__title   
-                | Редизайн корпоративного сайта
-
-            ul.welcome__list 
-
+            each val in items
                 li.welcome__item 
-                    span 
-                        | Компания
+                    span= val.title
+                    span= val.subtitle
 
-                    span 
-                        | Pa-rus
-                li.welcome__item 
-                    span 
-                        | Ниша
-
-                    span 
-                        | Складской консалтинг
-                li.welcome__item 
-                    span 
-                        | Тип сайта
-
-                    span 
-                        | Визитка  
-
-
+        picture.welcome__image 
+            img(src="../../assets/images/laptop.png", alt="laptop")
