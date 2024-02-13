@@ -1,0 +1,58 @@
+@import './fonts';
+@import './variables';
+@import '../mixins/mixinsStyles.scss';
+@import '../sections/welcomeSection/style';
+
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  scroll-behavior: smooth;
+  z-index: -1;
+}
+
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  appearance: none;
+  padding: 0;
+  margin: 0;
+}
