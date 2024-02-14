@@ -1,0 +1,45 @@
+-
+    var tasks = [
+        {id: "1", task: "Устаревший дизайн сайта", 
+        solution: "Обновленный дизайн, который не только  выглядит современно, но и закрывает боли клиентов",
+        clientName:"Дмитрий", clientRole: "Маркетолог в консалтинговом агентстве",
+        clientNumber: "Клиент №1", image: "../assets/images/client1.png"},
+        {id: "2", task: "Ускорить и упростить этап оформления заказов", 
+        solution: "Удобный процесс покупки и поиска информации на сайте",
+        clientName:"Дарья", clientRole: "Владелец интернет-магазина",
+        clientNumber: "Клиент №2", image: "../assets/images/client2.png"},
+        {id: "3", task: "Отсутствие адаптивного дизайна", 
+        solution: "Дизайн, который корректно отображается во всех браузерах и на всех устройствах",
+        clientName:"Алексей", clientRole: "Маркетолог IT-компании",
+        clientNumber: "Клиент №3", image: "../assets/images/client3.png"},
+        {id: "4", task: "Низкая конверсия", 
+        solution: "Закрытие потребностей клиентов и четкие призывы к действию",
+        clientName:"Марк", clientRole: "Проджект менеджер в промышленной компании",
+        clientNumber: "Клиент №4", image: "../assets/images/client4.png"},
+        {id: "5", task: "Обновить сайт для ребрендинга", 
+        solution: "Дизайн, который стал частью бренда",
+        clientName:"Константин", clientRole: "CEO юридической компании",
+        clientNumber: "Клиент №5", image: "../assets/images/client5.png"},
+    
+    ]
+
+section.tasksSection
+    .customSwiper
+        .swiper-wrapper             
+            each task in tasks
+                .swiper-slide
+                    .tasksSection_task(class=`tasksSection__taskBg${task.id}`)
+                        .tasksSection_content
+                            .tasksSection_firstBlock
+                                h3.tasksSection_title Задача:
+                                p.tasksSection_text= task.task
+                            .tasksSection_secondBlock
+                                h3.tasksSection_title Решение:
+                                p.tasksSection_text= task.solution
+                            h4.tasksSection_clientName= task.clientName
+                            p.tasksSection_clientRole= task.clientRole
+                        .tasksSection_clientWrapper                            
+                            .tasksSection_clientNumberWrapper
+                                p.tasksSection_clientNumber= task.clientNumber
+                            .tasksSection_clientImageWrapper
+                                img(src= task.image, alt="Клиент")

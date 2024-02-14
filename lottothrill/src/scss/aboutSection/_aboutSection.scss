@@ -1,0 +1,166 @@
+.aboutSection {
+  margin-bottom: clamp($spacing-10, 9.5vw, $spacing-1);
+
+  &_groupWrapper {
+    min-width: 66.7%;
+  }
+
+  &_title {
+    margin-bottom: clamp($spacing-11, 3.67vw, $spacing-7);
+  }
+
+  &_item {
+    position: relative;
+    overflow: hidden;
+    border-radius: clamp($spacing-13, 2.08vw, $spacing-11);
+    border: 2px solid $bg-secondary;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_itemTitle {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    flex: 1;
+    margin-top: clamp($spacing-10, 9.5vw, $spacing-1);
+    margin-left: clamp($spacing-12, 5.4vw, $spacing-4);
+    padding-bottom: clamp($spacing-14, 2.16vw, $spacing-10);
+    font-size: clamp(1rem, 2.67vw, 2rem);
+    font-weight: $font-weight-bold;
+    line-height: $line-height-H;
+  }
+
+  &_itemTextWrapper {
+    padding: clamp($spacing-14, 2.83vw, $spacing-9) 0
+      clamp($spacing-14, 2.5vw, $spacing-10)
+      clamp($spacing-12, 5.4vw, $spacing-4);
+    background-color: $bg-secondary;
+  }
+
+  &_itemText {
+    font-size: clamp(1rem, 2.08vw, 1.56rem);
+    font-weight: $font-weight-bold;
+    color: $bg-white;
+  }
+
+  &_imageWrapper {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 50%;
+    max-height: 100%;
+    height: 100%;
+
+    & > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &_contentWrapper {
+    margin-top: clamp($spacing-10, 9.5vw, $spacing-1);
+  }
+
+  &_ticketWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > img {
+      object-fit: contain;
+      width: 85%;
+      height: 85%;
+    }
+  }
+
+  &_ticket {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 60%;
+    width: 100%;
+    height: 100%;
+    animation: move 3s infinite linear;
+  }
+
+  @keyframes move {
+    0% {
+      transform: translate(-50%, -50%);
+    }
+    25% {
+      transform: translate(-50%, -53%);
+    }
+    75% {
+      transform: translate(-50%, -47%);
+    }
+    100% {
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  @keyframes show {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: $breakpoints-sm) {
+  .aboutSection {
+    &__flexColumn {
+      flex-direction: column;
+    }
+
+    &_groupWrapper {
+      min-width: 100%;
+    }
+
+    &_itemTitle {
+      position: static;
+      opacity: 0;
+      transition: all 2s ease-in-out;
+    }
+    &_itemText {
+      opacity: 0;
+      transition: all 2s ease-in-out;
+    }
+
+    &_imageWrapper {
+      max-width: 40%;
+      max-height: 95%;
+      opacity: 0;
+      transition: all 2s ease-in-out;
+      transition-delay: 2s;
+    }
+
+    &_contentWrapper {
+      flex-direction: column-reverse;
+    }
+
+    &_ticketWrapper {
+      margin-bottom: $spacing-13;
+    }
+
+    &_ticket {
+      left: 20%;
+      top: 40%;
+    }
+  }
+}
+
+@media (max-width: 280px) {
+  .aboutSection {
+    &_imageWrapper {
+      display: none;
+    }
+  }
+}

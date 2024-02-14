@@ -1,0 +1,86 @@
+.casesSection {
+  padding: 0 clamp(60px, 7.14vw, 140px);
+
+  &_title {
+    margin-bottom: clamp(20px, 2.04vw, 40px);
+  }
+
+  &_itemsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    gap: clamp(8px, 0.8vw, 16px);
+    margin-bottom: clamp(14px, 1.43vw, 28px);
+  }
+
+  &_item {
+    margin: 0;
+    padding: clamp(16px, 1.02vw, 20px) clamp(20px, 1.63vw, 32px);
+    font-size: clamp(1rem, 1.22vw, 1.5rem);
+    font-weight: $font-weight-medium;
+    border-radius: 32px;
+    background-color: $bg-secondary;
+    min-height: 100%;
+    line-height: 137%;
+    white-space: nowrap;
+
+    &:hover:not(.activeFilter) {
+      background-color: #d3d3d3;
+    }
+  }
+
+  &_casesWrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: clamp(20px, 2.04vw, 40px);
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  &_case {
+    position: absolute;
+    top: -100%;
+    max-width: 75%;
+    margin-inline: auto;
+  }
+
+  &__minWidthPrimary {
+    min-width: calc((100% - clamp(30px, 2.04vw, 40px)) / 2);
+  }
+
+  &__minWidthSecondary {
+    min-width: calc((100% - 3 * clamp(30px, 2.04vw, 40px)) / 3);
+  }
+}
+
+.activeFilter {
+  background-color: #cfff94;
+}
+
+.activeFiltartionElement {
+  position: static;
+}
+
+@media (max-width: $breakpoints-md) {
+  .casesSection {
+    &_casesWrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &_case {
+      max-width: 80%;
+    }
+  }
+}
+
+@media (max-width: $breakpoints-sm) {
+  .casesSection {
+    padding: 0;
+
+    &_case {
+      max-width: 100%;
+    }
+  }
+}

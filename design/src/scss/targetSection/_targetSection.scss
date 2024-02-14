@@ -1,0 +1,11 @@
+.targetSection {
+  padding: clamp(70px, 9.7vw, 190px) clamp(60px, 7.1vw, 140px);
+
+  &_text {
+    text-align: center;
+  }
+
+  &_textColorSecondary {
+    color: $font-color-secondary;
+  }
+}

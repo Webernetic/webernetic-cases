@@ -1,0 +1,30 @@
+section.aboutSection
+  .flexContainer.aboutSection__flexColumn  
+      div.aboutSection_groupWrapper 
+        h2.aboutSection_title О проекте
+        .flexContainer.aboutSection__flexColumn  
+          .aboutSection_item
+            p.aboutSection_itemTitle Сайт-агрегатор
+            .aboutSection_itemTextWrapper
+              p.aboutSection_itemText Наш клиент
+          .aboutSection_item
+            p.aboutSection_itemTitle Апрель 2021 
+            .aboutSection_itemTextWrapper
+              p.aboutSection_itemText Старт сотрудничества
+      .aboutSection_item
+        .aboutSection_itemTitle
+          span Индия 
+          .aboutSection_imageWrapper
+            +img("./assets/images/cathedral.png", "Собор", ["500", "1200"])
+        .aboutSection_itemTextWrapper
+          p.aboutSection_itemText Регион продвижения
+  .flexContainer.aboutSection_contentWrapper 
+    div 
+      p.mb-12 Заказчик занимается #[span.brightText лотерейным бизнесом] и выступает посредником между покупателями и продавцами лотерейных билетов. 
+      p Сайт не продает билеты, а предоставляет информацию о лотереях со ссылками на сайты, где их можно купить. Компания получает комиссию за каждую регистрацию, осуществленную через его сайт.
+    .aboutSection_ticketWrapper 
+      +img("./assets/images/bingoBackground.png", "фон", ["500", "1200"])
+      +img("./assets/images/bingo.png", "Билет Бинго", ["500", "1200"]).aboutSection_ticket
+
+  
+

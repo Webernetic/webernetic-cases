@@ -1,0 +1,14 @@
+-
+    var items = [{title: "12+", text: "Лет создаем и продвигаем сайты"},
+    {title: ">100", text: "Продуманных и разработанных  сайтов"},
+    {title: "14", text: "Стран заказывают наши услуги"},
+    {title: "70%", text: "Клиентов приходят по рекомендации"},]
+
+section.statisticsSection
+    h2.statisticsSection_title Достигаем нужных вам результатов, независимо от размера бизнеса
+    ul.statisticsSection_itemsWrapper
+        each item in items
+            li.statisticsSection_item
+                h3.statisticsSection_itemTitle= item.title
+                p.statisticsSection_itemText= item.text
+    p.statisticsSection_text Мы работаем с разными клиентами – от лидеров рынка до небольших компаний

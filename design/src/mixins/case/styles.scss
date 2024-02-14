@@ -1,0 +1,40 @@
+.case {
+  flex: 1;
+  max-width: 100%;
+  width: 100%;
+
+  &_imageWrapper {
+    display: block;
+    border-radius: clamp(15px, 1.53vw, 30px);
+    margin-bottom: clamp(12px, 1.22vw, 24px);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1.6;
+
+    & img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &_title {
+    font-weight: $font-weight-medium;
+    margin-bottom: clamp(2px, 0.41vw, 8px);
+    font-size: clamp(1.375rem, 2.45vw, 3rem);
+    line-height: 137%;
+  }
+
+  &_text {
+    display: block;
+    font-size: clamp(1rem, 1.22vw, 1.5rem);
+    margin-bottom: clamp(10px, 1.02vw, 20px);
+    opacity: 80%;
+  }
+}
+
+@media (max-width: $breakpoints-sm) {
+  .case {
+    max-width: 100%;
+  }
+}

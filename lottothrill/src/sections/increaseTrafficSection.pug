@@ -1,0 +1,14 @@
+section.increaseTrafficSection
+    .increaseTrafficSection_header#increaseTrafficSection_title
+        h2.increaseTrafficSection_title Увеличение трафика
+        +arrowButton("Оригинальный график")(id="arrBtn3" class="increaseTrafficSection_btn")
+    .increaseTrafficSection_wrapper
+        +wrapper.secondaryBg.flexContainer.increaseTrafficSection_flexColumn.increaseTrafficSection__alignItems
+            p.increaseTrafficSection_imgText Обеспечили трафик #[span.boldText с 100 до 500] посетителей/день в течение 9 месяцев
+            .increaseTrafficSection_imageWrapper
+                +img("./assets/images/graph6.png", "График", ["500", "1200"])
+        +arrowButton("Перейти к оригинальным графикам")(id="arrBtn6" class="increaseTrafficSection_btn customButtonSecondary")
+        .increaseTrafficSection_originalsGrahpics#increaseTrafficSection_originalsGrahpics
+            h4 Рост числа пользователей за период сотрудничества
+            .increaseTrafficSection_imageWrapper
+                +img("./assets/images/graph9.png", "График", ["500", "1200"])        
