@@ -11,6 +11,38 @@
         grid-template-rows: repeat(7, 77.5px);
         gap: 30px;
 
+        &__logo {
+            position: absolute;
+            top: 13%;
+            right: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            width: 420px;
+            height: 114px;
+            padding: 18px 56px 18px 56px;
+            border-radius: 20px;
+            background-color: $text-blue;
+
+            &>span {
+                @include text-28;
+                font-weight: 500;
+            }
+
+            &>picture {
+                display: block;
+                width: 72px;
+                height: 78px;
+
+                &>img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+
         &__blue {
             color: #0E1843;
             font-weight: 700;
