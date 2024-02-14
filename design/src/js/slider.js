@@ -7419,7 +7419,7 @@ const customSwiper = new Swiper('.customSwiper', {
   updateOnWindowResize: true,
   centeredSlides: true,
   autoplay: {
-    delay: 5000,
+    delay: 7000,
   },
   effect: 'coverflow',
   coverflowEffect: {
@@ -7428,6 +7428,21 @@ const customSwiper = new Swiper('.customSwiper', {
   parallax: true,
   slideActiveClass: 'tasksSection_activeSlide',
   slideFullyVisibleClass: 'tasksSection_fullyVisibleSlide',
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  customSwiper.on('click', () => {
+    let clickedIndex = customSwiper.clickedIndex;
+    let activeIndex = customSwiper.activeIndex;
+    if (clickedIndex> activeIndex) { 
+      customSwiper.slideNext(300);
+    }
+
+    if (clickedIndex< activeIndex) { 
+      customSwiper.slidePrev(300);
+    }
+    
+  });
 });
 
 // CUSTOMIZATION STAGES SLIDER
