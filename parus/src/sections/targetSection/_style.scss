@@ -1,0 +1,61 @@
+.target {
+    display: flex;flex-wrap: wrap;
+    gap: 30px;
+
+    & .target-left,
+    & .target-right {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        padding: 40px 50px;
+        border-radius: 30px;
+
+        &__title {
+            @include text-34;
+        }
+    }
+
+
+
+    & .target-left {
+        flex: 1 0 50%;
+        background-color: $text-light;
+        box-shadow: 0px 4px 4px 0px #0000000D;
+
+        &__text {
+            @include text-24($text-dark);
+        }
+    }
+
+    & .target-right {
+        flex: 1 0 32%;
+        background-color: $bg-light;
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        &__item {
+            display: flex;
+            align-items: center;
+            gap: 19px;
+
+            &>div {
+                flex: 0 0 45px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 45px;
+                border-radius: 50%;
+                background-color: $text-light;
+                @include text-28(#111B46);
+            }
+
+            &>span {
+                @include text-24($text-dark);
+            }
+        }
+    }
+}

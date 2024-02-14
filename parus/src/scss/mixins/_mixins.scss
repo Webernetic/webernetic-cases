@@ -69,6 +69,26 @@
     }
 }
 
+@mixin text-28($color: null) {
+    font-family: "Circe", sans-serif;
+    font-size: 28px;
+    line-height: 33.6px;
+    font-weight: 700;
+
+    @if($color) {
+        color: $color;
+    }
+
+    @else {
+        color: $text-light;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 22px;
+        line-height: 30.12px;
+    }
+}
+
 
 @mixin text-24($color: null) {
     font-family: "Circe", sans-serif;
@@ -81,9 +101,6 @@
     }
 
     @else {
-        padding: 6px 15px;
-        border: 1.5px solid $text-light;
-        border-radius: 80px;
         color: $text-light;
     }
 

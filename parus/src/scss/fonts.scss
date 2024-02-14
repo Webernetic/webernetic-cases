@@ -28,3 +28,13 @@
   font-style: normal;
   font-weight: 800;
 }
+
+@font-face {
+  font-family: "RoadRadio";
+  src: url("../assets/fonts/roadradio_bold.otf") format("opentype");
+  src:
+    url('../assets/fonts/roadradio_bold.woff2') format("woff"),
+    url("../assets/fonts/roadradio_bold.woff") format("woff");
+  font-style: normal;
+  font-weight: bold;
+}

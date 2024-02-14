@@ -1,18 +1,19 @@
 .welcome {
     position: relative;
-    padding: 76px 50px 70px 50px;
-    background-color: $bg-blue;
-    border-radius: 50px;
 
     &__wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(7, 80px);
+        padding: 76px 50px 70px 50px;
+        background-color: $bg-blue;
+        border-radius: 50px;
+        margin-bottom: 30px;
     }
 
     &__title {
         grid-row: 1/3;
-        font-family: "Circe", sans-serif;
+        font-family: "RoadRadio";
         font-size: 60px;
         line-height: 66px;
         color: $text-light;
@@ -31,11 +32,14 @@
         align-items: flex-start;
         gap: 4px;
 
-        & > span:first-child {
+        &>span:first-child {
             @include text-24;
+            padding: 6px 15px;
+            border: 1.5px solid $text-light;
+            border-radius: 80px;
         }
 
-        & > span:last-child {
+        &>span:last-child {
             @include text-32;
         }
     }
@@ -48,7 +52,7 @@
         width: 1054px;
         height: 641px;
 
-        & > img {
+        &>img {
             width: 100%;
             height: 100%;
             object-fit: cover;
