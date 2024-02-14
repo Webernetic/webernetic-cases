@@ -1,0 +1,101 @@
+.before {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    &__title {
+        @include text-50($text-blue)
+    }
+
+
+    & .swiper {
+        width: 100%;
+        height: 710px;
+    }
+
+    .swiper-wrapper {
+        height: 100%;
+    }
+
+    & .swiper-slide {
+
+        &>img {
+            width: 100%;
+        }
+    }
+
+    & .before-content {
+        display: flex;
+        gap: 30px;
+
+        &__left,
+        &__right {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: 0px 4px 4px 0px #0000000D;
+        }
+
+        &__left {
+            max-width: 510px;
+            background-color: $bg-light;
+        }
+
+        &__right {
+            max-width: 740px;
+            background-color: $text-light;
+        }
+
+        &__title {
+            @include text-34;
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            gap: 26px;
+        }
+
+        &__item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+
+            &>picture {
+                flex: 0 0 53px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 15px;
+                height: 53px;
+                border-radius: 50%;
+                background-color: $text-blue;
+
+                &>img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            &>div {
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+
+                &>span:first-child {
+                    @include text-24($text-blue);
+                    font-weight: 700;
+                }
+
+                &>span:last-child {
+                    @include text-24($text-dark);
+                }
+            }
+        }
+
+    }
+
+}

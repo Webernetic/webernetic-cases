@@ -2,9 +2,13 @@
 @import './variables';
 @import '../mixins/mixinsStyles.scss';
 @import './mixins/mixins';
+@import 'swiper/scss';
 @import '../sections/welcomeSection/style';
 @import '../sections/targetSection/style';
 @import '../sections/beginworkSection/style';
+@import '../sections/beforeSection/style';
+@import '../sections/trendSection/style';
+@import '../sections/identitySection/style';
 
 
 

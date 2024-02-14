@@ -13,10 +13,7 @@
 
     &__title {
         grid-row: 1/3;
-        font-family: "RoadRadio";
-        font-size: 60px;
-        line-height: 66px;
-        color: $text-light;
+        @include text-60;
     }
 
     &__list {

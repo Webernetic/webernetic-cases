@@ -1,5 +1,5 @@
 @mixin text-60($color: null) {
-    font-family: "Circe", sans-serif;
+    font-family: "RoadRadio";
     font-size: 60px;
     line-height: 66px;
     font-weight: 700;
@@ -19,7 +19,7 @@
 }
 
 @mixin text-50($color: null) {
-    font-family: "Circe", sans-serif;
+    font-family: "RoadRadio";
     font-size: 50px;
     line-height: 50.45px;
     font-weight: 700;
@@ -89,6 +89,26 @@
     }
 }
 
+@mixin text-26($color: null) {
+    font-family: "Circe", sans-serif;
+    font-size: 26px;
+    line-height: 38.32px;
+    font-weight: 700;
+
+    @if($color) {
+        color: $color;
+    }
+
+    @else {
+        color: $text-blue;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 20px;
+        line-height: 29.48px;
+    }
+}
+
 
 @mixin text-24($color: null) {
     font-family: "Circe", sans-serif;
@@ -102,6 +122,26 @@
 
     @else {
         color: $text-light;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 18px;
+        line-height: 23.4px;
+    }
+}
+
+@mixin text-22($color: null) {
+    font-family: "Circe", sans-serif;
+    font-size: 22px;
+    line-height: 29.7px;
+    font-weight: 400;
+
+    @if($color) {
+        color: $color;
+    }
+
+    @else {
+        color: $text-dark;
     }
 
     @media (max-width: 480px) {

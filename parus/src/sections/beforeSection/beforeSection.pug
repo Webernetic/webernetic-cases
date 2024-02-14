@@ -1,0 +1,55 @@
+-
+    var itemsOne = [
+        {icon: '../../assets/icons/before2.svg', title: 'Текст', subtitle: 'Основной акцент был на цифрах и слоганах.'}, 
+        {icon: '../../assets/icons/before3.svg', title: 'Порядок блоков', subtitle: 'Логичная цепочка информации, направленная на совершение покупки.'}
+    ];
+    var itemsTwo = [
+        {icon: '../../assets/icons/before4.svg', title: 'Яркие цвета', subtitle: 'Используемые цвета были яркими. Ассоциировались с морской тематикой, но не с доверием к бизнесу.'},
+        {icon: '../../assets/icons/before5.svg', title: 'Перегруженность текстом', subtitle: 'Текст читался плохо, поэтому воспринимать информацию было трудно.'},
+        {icon: '../../assets/icons/before6.svg', title: 'Одинаковый фон', subtitle: 'Одна картинка использовалась на 40% блоков.'},
+    ]
+
+
+section.before
+
+    h2.before__title.
+        Сайт до редизайна
+
+    .swiper
+        .swiper-wrapper
+            .swiper-slide
+                img(src="../../assets/images/before.png" alt="before site") 
+
+        .swiper-scrollbar 
+
+    h2.before__title. 
+        Анализ исходного сайта
+
+    .before-content 
+
+        .before-content__left
+            h2.before-content__title.
+                Сильные стороны:
+
+            ul.before-content__list
+                each item in itemsOne
+                    li.before-content__item
+                        picture
+                            img(src= item.icon alt="icon")
+                        div
+                            span= item.title
+                            span= item.subtitle
+
+
+        .before-content__right
+            h2.before-content__title.
+                Слабые стороны:
+
+            ul.before-content__list
+                each item in itemsTwo
+                    li.before-content__item
+                        picture
+                            img(src= item.icon alt="icon")
+                        div
+                            span= item.title
+                            span= item.subtitle
