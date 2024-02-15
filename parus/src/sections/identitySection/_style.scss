@@ -1,8 +1,4 @@
 .identity {
-    &__title {
-        @include text-50($text-blue);
-        margin-bottom: 30px;
-    }
 
     & .identity-content {
         position: relative;

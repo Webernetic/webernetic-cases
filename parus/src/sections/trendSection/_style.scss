@@ -44,26 +44,7 @@
         }
 
         &__item {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            padding: 35px 50px 35px 50px;
-            border-radius: 30px;
-
-            &>p {
-                @include text-22;
-            }
-
-            &>div {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 45px;
-                height: 45px;
-                @include text-28;
-                border-radius: 50%;
-                background-color: $text-blue;
-            }
+            @include item-style;
 
             &:first-child {
                 background-color: $text-light;

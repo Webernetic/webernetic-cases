@@ -9,6 +9,7 @@
 @import '../sections/beforeSection/style';
 @import '../sections/trendSection/style';
 @import '../sections/identitySection/style';
+@import '../sections/decorSection/style';
 
 
 
@@ -69,4 +70,9 @@ main {
   display: flex;
   flex-direction: column;
   gap: 110px;
+}
+
+.title-50 {
+  @include text-50($text-blue);
+  margin-bottom: 30px;
 }

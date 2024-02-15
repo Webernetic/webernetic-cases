@@ -1,0 +1,151 @@
+$img-url: '/src/assets/images/texts.jpg';
+
+@mixin onsest {
+    font-family: "Onest", sans-serif;
+    font-size: 18px;
+    line-height: 28.8px;
+    font-weight: 400;
+    font-style: normal;
+    color: #D6D6D6;
+}
+
+@mixin bunner {
+    font-family: Circe;
+    color: $text-blue;
+    background-color: #EBF2FF;
+    padding: 6px 32px;
+    font-size: 14px;
+    line-height: 22.4px;
+    font-weight: 700;
+}
+
+@mixin frame($mb) {
+    position: relative;
+    border: 1.5px solid #EBF2FF;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: $mb;
+}
+
+.decor {
+
+
+    & .decor-content {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 30px;
+
+        &__year {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 63px;
+            max-width: 80%;
+            height: 34px;
+            padding: 2px 0 2px 13px;
+            @include frame(15px);
+
+            &>span:first-child {
+                @include onsest;
+            }
+
+            &>span:last-child {
+                @include bunner;
+            }
+        }
+
+        &__title {
+            @include frame(13px);
+            padding: 6px 6px 6px 13px;
+
+            &>span:first-child {
+                font-family: "RoadRadio";
+                font-size: 28px;
+                line-height: 33.6px;
+                font-weight: 700;
+
+                color: #D6D6D6;
+            }
+
+            &>span:last-child {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                @include bunner;
+                border-radius: 5px 0px 5px 0px;
+            }
+        }
+
+        &__text {
+            @include frame(9px);
+            padding: 6px 6px 6px 13px;
+
+            &>span:first-child {
+                @include onsest;
+            }
+
+            &>span:last-child {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                @include bunner;
+                padding: 6px 27px;
+                border-radius: 5px 0px 5px 0px;
+            }
+        }
+
+        &__task {
+            position: relative;
+            margin-left: 13px;
+
+            &>span:first-child {
+                display: inline-block;
+                @include onsest;
+                padding-bottom: 8px;
+                border-bottom: 1px solid #FFFFFF4D;
+                margin-bottom: 8px;
+            }
+
+            &>span:last-child {
+                @include onsest;
+                display: block;
+                padding-left: 30px;
+
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    content: '•';
+                    font-size: 24px;
+                }
+            }
+        }
+
+
+        &__image {
+            position: relative;
+            grid-column: 1/4;
+            background:
+                linear-gradient(0deg, rgba(14, 24, 67, 0.8), rgba(14, 24, 67, 0.8)),
+                linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
+                url($img-url) center no-repeat;
+            background-size: cover;
+            width: 810px;
+            height: auto;
+
+            padding: 35px;
+            border-radius: 30px;
+            border: 1px solid #FFFFFF4D;
+        }
+
+        &__list {
+            grid-column: 4/6;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__item {
+            @include item-style;
+        }
+    }
+}
