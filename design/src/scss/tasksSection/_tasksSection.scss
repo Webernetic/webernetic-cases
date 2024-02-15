@@ -1,5 +1,6 @@
 .tasksSection {
   padding-block: clamp(50px, 8.47vw, 166px) clamp(24px, 9.29vw, 182px);
+  padding-inline: clamp(30px, 8.3vw, 160px);
   overflow: hidden;
 
   &_task {

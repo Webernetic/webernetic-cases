@@ -28,7 +28,7 @@ section.tasksSection
         .swiper-wrapper             
             each task in tasks
                 .swiper-slide
-                    .tasksSection_task(class=`tasksSection__taskBg${task.id}`)
+                    .tasksSection_task(class=`tasksSection__taskBg${task.id}`, id=`task${task.id-1}`)
                         .tasksSection_content
                             .tasksSection_firstBlock
                                 h3.tasksSection_title Задача:
