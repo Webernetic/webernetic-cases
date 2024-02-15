@@ -49,11 +49,24 @@ window.addEventListener(
   createObserver(animateFirstProcess, processes[0]),
 );
 
+let acceptions = document.querySelectorAll(
+  '.processSection_secondCardImageWrapper',
+);
+
+const showAcception = () => {
+  for (let i = 0; i < acceptions.length; i++) {
+    acceptions[i].style.transitionDelay = `${1.8 + 0.5 * i}s`;
+    acceptions[i].style.opacity = '1';
+  }
+};
+
 let orders = document.querySelectorAll('.processSection_thirdCardImageWrapper');
+
+window.addEventListener('load', createObserver(showAcception, acceptions[0]));
 
 const showOrder = () => {
   for (let i = orders.length - 1; i >= 0; i--) {
-    orders[i].style.transitionDelay = `${2.8 + 0.6 * (orders.length - i - 1)}s`;
+    orders[i].style.transitionDelay = `${3.3 + 0.5 * (orders.length - i - 1)}s`;
     orders[i].style.opacity = '1';
   }
 };

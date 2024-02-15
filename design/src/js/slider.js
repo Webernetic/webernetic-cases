@@ -7434,14 +7434,13 @@ document.addEventListener('DOMContentLoaded', () => {
   customSwiper.on('click', () => {
     let clickedIndex = customSwiper.clickedIndex;
     let activeIndex = customSwiper.activeIndex;
-    if (clickedIndex> activeIndex) { 
+    if (clickedIndex > activeIndex) {
       customSwiper.slideNext(300);
     }
 
-    if (clickedIndex< activeIndex) { 
+    if (clickedIndex < activeIndex) {
       customSwiper.slidePrev(300);
     }
-    
   });
 });
 

@@ -36,7 +36,7 @@ body::-webkit-scrollbar {
 
 .container {
   max-width: $max-width;
-  padding: clamp(10px, 1.02vw, 20px);
+  padding: 0 clamp(10px, 1.02vw, 20px);
   width: 100%;
   margin: 0 auto;
 }
