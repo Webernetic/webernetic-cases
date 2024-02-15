@@ -1,0 +1,5 @@
+.after {
+    &__content {
+        @include slider-box;
+    }
+}

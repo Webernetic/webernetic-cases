@@ -174,3 +174,10 @@
         background-color: $text-blue;
     }
 }
+
+@mixin slider-box {
+    width: 100%;
+    height: 709px;
+    border: 10px solid #26252A;
+    border-radius: 30px;
+}
