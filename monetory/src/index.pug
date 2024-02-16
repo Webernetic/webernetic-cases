@@ -1,0 +1,20 @@
+extends layouts/MainLayout
+include mixins/index.pug
+
+block title
+  | Monetory
+
+block content
+  body.body  
+    .container
+      include sections/headerSection  
+      include sections/descriptionSection 
+      include sections/targetSection 
+      include sections/stagesSection 
+      include sections/positionSection 
+      include sections/trafficSection 
+      include sections/resultsSection 
+      include sections/orderSection 
+
+  script
+    include js/clickArrowButton.js 

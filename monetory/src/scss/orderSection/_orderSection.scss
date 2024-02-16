@@ -1,0 +1,163 @@
+.orderSection {
+  margin-bottom: 30px;
+
+  &_titleItem {
+    display: inline-block;
+    padding-inline: 12px;
+    border: 1px solid #323232;
+    border-radius: 40px;
+    background-color: #f8e3ff;
+    line-height: 140%;
+  }
+
+  &_wrapper {
+    position: relative;
+    display: flex;
+    margin-top: clamp(24px, 2.38vw, 30px);
+    gap: clamp(30px, 5.47vw, 69px);
+    padding: clamp(30px, 3.57vw, 30px) clamp(24px, 4.05vw, 51px)
+      clamp(30px, 3.57vw, 30px) clamp(24px, 7.46vw, 94px);
+    border: 1px solid #000000;
+    border-radius: 20px;
+    background-color: #ffffff;
+  }
+
+  &_imageWrapper {
+    max-width: 36%;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    overflow: hidden;
+
+    & > img {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &_nameWrapper {
+    position: absolute;
+    left: 4%;
+    bottom: 23%;
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(8px, 1vw, 12px);
+    padding: clamp(10px, 1.6vw, 20px) clamp(15px, 2vw, 25px);
+    box-shadow: none;
+    background-color: #f8e3ff;
+    border: 1px solid #323232;
+    border-radius: 15px;
+
+    & > h4 {
+      font-size: clamp(20px, 2.1vw, 36px);
+      font-weight: $font-weight-extra-bold;
+      font-family: $font-family;
+      line-height: 1;
+    }
+
+    & > p {
+      font-size: clamp(8px, 0.9vw, 12px);
+      font-weight: $font-weight-bold;
+      line-height: 1;
+    }
+  }
+
+  &_form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-block: auto;
+  }
+
+  &_formTitle {
+    font-size: clamp(2rem, 3.81vw, 3rem);
+    margin-bottom: clamp(20px, 1.9vw, 24px);
+    font-weight: $font-weight-primary;
+    font-family: $font-family;
+  }
+
+  &_secondformTitle {
+    margin-top: clamp(30px, 2.58vw, 50px);
+    margin-bottom: clamp(14px, 1.59vw, 20px);
+    font-size: clamp(1.625rem, 2.86vw, 2.25rem);
+    font-weight: $font-weight-primary;
+  }
+
+  &_inputWrapper {
+    display: flex;
+    gap: clamp(30px, 3.17vw, 40px) !important;
+    flex-wrap: wrap;
+
+    & > input {
+      flex-basis: calc((100% - clamp(30px, 3.17vw, 40px)) / 2);
+    }
+  }
+
+  &_checkboxWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    & > label {
+      flex-basis: 40%;
+    }
+  }
+
+  &_buttonWrapper {
+    display: flex;
+    margin-top: clamp(36px, 3.97vw, 50px);
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &_form {
+      align-items: center;
+    }
+
+    &_imageWrapper,
+    &_nameWrapper {
+      display: none;
+    }
+
+    &_checkboxWrapper {
+      width: 80%;
+    }
+
+    &_inputWrapper {
+      width: 80%;
+
+      & > input {
+        flex-basis: 100%;
+      }
+    }
+
+    &_buttonWrapper {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &_form {
+      align-items: stretch;
+    }
+
+    &_checkboxWrapper {
+      width: 100%;
+    }
+
+    &_inputWrapper {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 370px) {
+    &_checkboxWrapper {
+      & > label {
+        flex-basis: 46%;
+      }
+    }
+  }
+}
