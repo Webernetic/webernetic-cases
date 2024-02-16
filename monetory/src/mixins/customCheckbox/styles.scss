@@ -3,8 +3,8 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  flex: 0 0 26%;
-  font-size: $font-size;
+  flex: 0 0 40%;
+  font-size: clamp(1.125rem, 1.9vw, 1.5rem);
   font-weight: $font-weight-primary;
   color: $font-color;
   cursor: pointer;
@@ -56,8 +56,6 @@
 
 @media (max-width: $breakpoints-sm) {
   .checkbox {
-    font-weight: $font-weight-bold;
-
     .checkbox__custom {
       height: 20px;
       width: 20px;

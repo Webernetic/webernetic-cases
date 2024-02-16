@@ -5,11 +5,15 @@ section.positionSection
         .positionSection_resultText 
             p.mb-6 В результате улучшений на сайте за 3 месяца удалось поднять сайт #[span.brightText.boldText в Топ-5 Яндекс] и вывести все ключевые запросы в #[span.brightText.boldText Топ-15].
             p Общий прирост в среднем составил 80 позиций по каждому ключу.
-    .positionSection_imageWrapper
-        img(src="../assets/images/positions.png", alt="Яндекс. Позимции в выдаче")
+    .positionSection_scrollWrapper 
+        .positionSection_imageWrapper
+            img(src="../assets/images/positions.png", alt="Яндекс. Позимции в выдаче")
+        +arrowButton().positionSection_arrowButtonPosition(id="btn1_positionSection")
     .positionSection_resultWrapper
         h3.positionSection_resultSearchItem Google
         .positionSection_resultText 
             p Почти еще #[span.brightText.boldText в 2 раза] вырос процент ключевых слов #[span.brightText.boldText в Топ-10 Google]: с 6 до 10 процентов за последние 3 месяца.   
-    .positionSection_imageWrapper
-        img(src="../assets/images/graph1.png", alt="Google. Поцент ключевых слов")
+    .positionSection_scrollWrapper 
+        .positionSection_imageWrapper
+            img(src="../assets/images/graph1.png", alt="Google. Поцент ключевых слов")
+        +arrowButton().positionSection_arrowButtonPosition(id="btn2_positionSection")

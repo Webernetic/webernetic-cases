@@ -14,8 +14,8 @@
     {type: "url", placeholder: "Сайт*", name: "site"} ]
 
 section.orderSection  
-  h3.textCenter У вас остались вопросы?
-  h3.textCenter Хотите так же? Пишите, обсудим ваш проект! 
+  h3.textCenter Улучшите свой бизнес #[span.orderSection_titleItem с SEO-оптимизацией!] 
+  h3.textCenter Закажите услуги и получите максимальную видимость сайта!
   .orderSection_wrapper
     .orderSection_nameWrapper
       h4.colorInvertText Анастасия
@@ -32,6 +32,4 @@ section.orderSection
         each checkbox in checkboxes 
           +customCheckbox(checkbox.value, checkbox.name, checkbox.id)          
       .orderSection_buttonWrapper 
-        button.customButton(type="submit") Отправить  
-      p.orderSection_footerTitle Может быть полезно
-      a.orderSection_footerText(href="белпромимпэкс.бел") БЕЛПРОМИМПЭКС
+        button.customButton(type="submit") Отправить       
