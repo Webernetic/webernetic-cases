@@ -1,0 +1,23 @@
+-
+    var items = ["сбор семантического ядра", "подготовка структуры сайта",
+    "подготовка контент-плана","технический аудит сайта","анализ конкурентов по тех параметрам",
+    "анализ юзабилити сайта клиента и сайтов конкурентов, подготовка рекомендаций",
+    "анализ ссылочного профиля сайта клиента и сайтов конкурентов, подготовка стратегии наращивания внешних ссылок",]
+
+section.initialDataSection
+    .initialDataSection_initialWrapper
+        h2.initialDataSection_title Исходные данные:
+        .initialDataSection_content
+            p.mb-10 Клиент пришел к нам с #[span.boldText новым доменом и сайтом]. Ему было 1,5 года. До этого у них 1 год был лендинг, который приносил трафик и конверсии. После переезда на полноценный сайт конверсия стала ниже.
+            p Изначально клиент заходил с запросом на стандартный план работ по продвижению, но, погрузившись в проект, мы предложили им провести аудит-стратегию, на основании которой уже строить стратегию продвижения проекта.
+    .initialDataSection_strategyWrapper
+        .initialDataSection_strategyImageWrapper
+            img(src="../assets/images/woman.png", alt="Team-lead SEO-отдела")
+            .initialDataSection_nameWrapper            
+                h4 Вероника
+                p Team-lead SEO-отдела
+        .initialDataSection_strategyContent
+            h3.initialDataSection_strategyTitle Что входило в аудит-стратегию:
+            ul.initialDataSection_strategyTextGroup
+                each item in items
+                    li.initialDataSection_strategyTextItem= item
