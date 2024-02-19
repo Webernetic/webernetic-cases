@@ -167,4 +167,8 @@
     height: 709px;
     border: 10px solid #26252A;
     border-radius: 30px;
+
+    @media (max-width: 480px) {
+        height: 272px;  
+    }
 }

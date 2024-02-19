@@ -135,7 +135,7 @@
             width: 810px;
             background-color: $text-light;
             border-radius: 30px;
-            padding: 50px clamp(50px, 4.2vw, 60px) clamp(44px, 4.2vw, 50px);
+            padding: clamp(32px, 4.2vw, 60px) clamp(24px, 4.2vw, 50px);
 
             &>picture {
                 display: flex;
@@ -188,6 +188,12 @@
                 grid-row: 11/16;
                 width: 100%;
                 grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+
+                &>picture {
+                    width: 100%;
+                    height: 60px;
+                }
             }
 
             &__text {

@@ -148,4 +148,25 @@ $img-url: '/src/assets/images/texts.jpg';
             @include item-style;
         }
     }
+
+    @media (max-width: 768px) {
+        & .decor-content {
+            display: grid;
+            grid-template-columns: repeat(1, 100%);
+            gap: 30px;
+
+
+            &__image {
+                grid-column: 1;
+                width: 100%;
+            }
+
+            &__list {
+                grid-column: 1;
+
+            }
+        }
+    }
+
+
 }

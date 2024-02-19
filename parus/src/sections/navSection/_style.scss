@@ -1,13 +1,14 @@
 .nav {
     &__text {
         @include text-24($text-dark);
-        padding: 40px 50px;
+        padding: clamp(32px, 4.2vw, 40px) clamp(24px, 4.2vw, 50px);
         border-radius: 30px;
         background-color: $text-light;
 
-        & >span {
+        &>span {
             color: $text-blue;
             font-weight: 700;
         }
     }
+
 }
