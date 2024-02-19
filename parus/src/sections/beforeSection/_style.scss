@@ -1,10 +1,5 @@
 .before {
 
-    & .before-swiper {
-        @include slider-box;
-        margin-bottom: 30px;
-    }
-
     & .before-content {
         display: flex;
         gap: 30px;
@@ -79,4 +74,111 @@
 
     }
 
+    & .before-swiper {
+        @include slider-box;
+        margin-bottom: 30px;
+
+    }
+
+    & .before-slider {
+        height: max-content;
+        margin-bottom: 30px;
+
+        &__badge {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            min-height: 100px;
+            padding: 20px 24px 20px 24px;
+            border-radius: 30px;
+            background-color: $bg-light;
+
+            &>div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include text-28($text-blue);
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                background-color: $text-light;
+            }
+
+            &>p {
+                @include text-24($text-dark);
+            }
+        }
+    }
+
+    .animate__slideInUp {
+        animation: slide-up 0.2s ease-out;
+    }
+
+}
+
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.swiper-slide {
+    position: relative;
+
+    &>img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__point {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 5px solid #17214A;
+        background-color: #fff;
+        @include text-26($text-blue)
+    }
+
+    &__point1 {
+        top: 40%;
+        right: 15%;
+    }
+
+    &__point2 {
+        top: 50%;
+        right: 10%;
+    }
+
+    &__point3 {
+        top: 4%;
+        right: 15%;
+    }
+
+    &__point4 {
+        top: 15%;
+        right: 15%;
+    }
+
+    &__point5 {
+        top: 6%;
+        right: 15%;
+    }
+
+    &__point6 {
+        top: 40%;
+        right: 15%;
+    }
 }

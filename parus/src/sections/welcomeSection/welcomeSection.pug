@@ -6,14 +6,9 @@ section.welcome
         h1.welcome__title.
             Редизайн корпоративного сайта
 
-        ul.welcome__list 
-
-            each val in items
-                li.welcome__item 
-                    span= val.title
-                    span= val.subtitle
-
-        picture.welcome__image 
-            img(src="../../assets/images/laptop.png", alt="laptop")
+        each val in items
+            div.welcome__item
+                span= val.title
+                span= val.subtitle
 
     include ../targetSection/targetSection.pug

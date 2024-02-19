@@ -10,10 +10,14 @@
 +sectionLayout("identity", "Поддержали фирменный стиль бренда")
 
     .identity-content 
-        p.identity-content__text
+        .identity-content__text
             span.
                 #[span.identity-content__blue Сайт должен быть продолжением бренда], а не отдельной его частью. 
-                Это важно, чтобы посетители сразу узнавали компанию и запоминали ее. 
+                Это важно, чтобы посетители сразу узнавали компанию и запоминали ее.
+            .identity-content__logo
+                picture 
+                    img(src="../../assets/icons/identity.svg" alt="logo")
+                span Pa-Rus
 
         .identity-content__colors
             .identity-content__color.
@@ -43,8 +47,4 @@
                 picture
                     img(src=i alt="icon")
 
-        .identity-content__logo
-            picture 
-                img(src="../../assets/icons/identity.svg" alt="logo")
-            span Pa-Rus
 

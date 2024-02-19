@@ -3,6 +3,8 @@
 @import '../mixins/mixinsStyles.scss';
 @import './mixins/mixins';
 @import 'swiper/scss';
+@import 'swiper/scss/scrollbar';
+@import 'swiper/scss/pagination';
 @import '../sections/welcomeSection/style';
 @import '../sections/targetSection/style';
 @import '../sections/beginworkSection/style';
@@ -13,6 +15,8 @@
 @import '../sections/navSection/style';
 @import '../sections/afterSection/style';
 @import '../sections/mobileSection/style';
+@import '../sections/resultSection/style';
+@import '../sections/marketing/style';
 
 
 
@@ -40,6 +44,20 @@ body::-webkit-scrollbar {
   max-width: $max-width;
   width: 100%;
   margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    max-width: 1024px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 480px;
+    padding: 0 16px;
+  }
+
 }
 
 blockquote:before,
@@ -73,9 +91,17 @@ main {
   display: flex;
   flex-direction: column;
   gap: 110px;
+
+  @media (max-width: 768px) {
+    gap: 90px;
+  }
 }
 
 .title-50 {
   @include text-50($text-blue);
   margin-bottom: 30px;
+  
+  @media (max-width: 768px) {
+    margin-bottom: 22px;
+  }
 }
