@@ -1,0 +1,190 @@
+.footer {
+    background-color: #E4EAFF;
+    border-radius: 30px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: clamp(40px, 4.2vw, 70px) clamp(24px, 4.2vw, 50px);
+    }
+
+    &__image {
+        position: relative;
+        width: 436.984px;
+        height: 539px;
+        background: url("/src/assets/images/nastya.png") center no-repeat;
+
+        &>div {
+            position: absolute;
+            top: 50%;
+            left: -15%;
+            width: 248px;
+            height: 124px;
+            background: url("/src/assets/images/footer1.png") center no-repeat;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 571px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        color: #26252a;
+    }
+
+    &__actions {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    &__inputs {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 112px;
+    }
+
+    &__input {
+        width: 260px;
+        height: 36px;
+        border: none;
+        border-bottom: 2px solid #26252a;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        background: transparent;
+        outline: none;
+    }
+
+    &__checkboxs {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 30px;
+    }
+
+    &__subtitle {
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &__button {
+        align-self: baseline;
+        border: none;
+        background-color: transparent;
+        border-bottom: 2px solid #333;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        color: #333;
+        cursor: pointer;
+    }
+
+    @media (max-width: 480px) {
+        &__wrapper {
+            padding: 50px 0;
+        }
+
+        &__image {
+            display: none;
+        }
+
+        &__title {
+            font-size: 25px;
+        }
+
+        &__actions {
+            gap: 30px;
+        }
+
+        &__form {
+            width: 100%;
+        }
+
+        &__inputs {
+            height: auto;
+            gap: 30px;
+        }
+
+        &__input {
+            width: 100%;
+        }
+
+        &__subtitle {
+            font-size: 20px;
+        }
+
+        &__checkboxs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 29px 25px;
+        }
+
+        &__button {
+            font-size: 20px;
+        }
+    }
+}
+
+.checkbox {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex: 0 0 26%;
+    font-size: 24px;
+    font-weight: 300;
+    color: #26252a;
+    cursor: pointer;
+    user-select: none;
+
+    input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+
+        &:checked {
+            ~.checkbox__custom {
+                background-color: #fff;
+
+                &:after {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .checkbox__custom {
+        position: relative;
+        height: 14px;
+        width: 14px;
+        border: 2px solid #000;
+        border-radius: 2px;
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            display: none;
+            width: 7px;
+            height: 7px;
+            background-color: #000;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

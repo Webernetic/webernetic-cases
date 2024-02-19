@@ -1,0 +1,33 @@
+-
+    var services = ['Сайт', 'SEO', 'SMM', 'Доработка', 'Контекст', 'Другое'];
+    var inputs = ['Имя *', 'Телефон *', 'E-mail *', 'Сайт *'];
+section.footer
+
+    .container
+
+        .footer__wrapper
+
+            .footer__image
+                div
+
+            form.footer__form
+
+                h2.footer__title.
+                    Заказать консультацию
+
+                .footer__actions
+
+                    .footer__inputs
+                        each input in inputs
+                            input.footer__input(type="text" placeholder=input required)
+                    h3.footer__subtitle.
+                        Чем вам помочь?
+                    .footer__checkboxs
+                        each service in services
+                            label.checkbox
+                                input(type="checkbox" name="user_wish[]" value=service)
+                                .checkbox__custom
+                                span #{service}
+
+                    button.footer__button.
+                        Отправить
