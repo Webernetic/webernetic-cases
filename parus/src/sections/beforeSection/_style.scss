@@ -131,9 +131,11 @@
                 top: 6%;
                 right: 15%;
             }
+        }
 
+        @media (max-width: 768px) {
 
-            @media (max-width: 768px) {
+            & .swiper-slide {
                 &__point {
                     width: 40px;
                     height: 40px;
@@ -154,7 +156,7 @@
 
     & .before-slider {
         height: max-content;
-        margin-bottom: 30px;
+        margin-bottom: 110px;
 
         &__badge {
             display: flex;
@@ -189,6 +191,10 @@
     @media (max-width: 768px) {
         & .before-content {
             flex-direction: column;
+        }
+
+        & .before-slider {
+            margin-bottom: 90px;
         }
     }
 
