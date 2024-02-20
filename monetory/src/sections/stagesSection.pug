@@ -1,0 +1,55 @@
+-
+    var audits = [{image: "../assets/images/audit1.png", title: "Отсутствие файла Sitemap.xml", text: "Это приводило к тому, что поисковые роботы не находили или упускали часть страниц. Снижалась видимость сайта."},
+                {image: "../assets/images/audit2.png", title: "Коды ответа сервера", text: "Мы обнаружили некоторое количество ссылок с кодом ответа 301. Они затрудняли сканирование сайта поисковыми роботами."},
+                {image: "../assets/images/audit3.png", title: "Дубли страниц", text: "Обнаружили технические дубли и, чтобы избежать индексации таких страниц поисковыми системами и проблем, связанных с каннибализацией запросов, исправили этот недочет."},
+                {image: "../assets/images/audit4.png", title: "Микроразметка", text: "Для улучшения структуры страниц \"в глазах\" роботов ПС были предложены к внедрению следующие варианты микроразметки Schema.org: AggregateRating, FAQPage, Organization."},]
+
+    var competitors = [{number: "1", text: "Добавить в шапку сайта ссылки на важные для пользователей страницы: \"Блог\" и \"Помощь\"."},
+                        {number: "4", text: "Доработать блог: улучшить функциональность и привлекательность."},
+                        {number: "2", text: "Структурировать ссылки в \"Подвале\" сайта и добавить ссылки на важные страницы."},
+                        {number: "5", text: "Создать разводящую страницу по P2P обменникам, где их можно будет сравнить."},
+                        {number: "3", text: "Улучшить главную страницу: добавить блоки с описанием сервиса (текст и инфографика), инструкцией по использованию, а также FAQ."},]
+
+    var links = ["Тип площадок-доноров;","Доменная зона площадок-доноров;",
+                "Регионы трафика из веб-поиска; ","Средний прирост ссылок у конкурентов;","Соотношение анкорных и безанкорных ссылок и т.д. "]
+
+section.stagesSection
+    h2.stagesSection_mainTitle Этапы работы
+    .stagesSection_coreWrapper
+        h3.stagesSection_title Сбор семантического ядра
+        .stagesSection_coreContent
+            p.stagesSection_coreContentText Клиент предоставляет предложения по обмену и продаже криптовалюты через различные платежные системы, банки и обычные валюты. Поэтому в процессе сбора семантики мы учли все возможные комбинации этих обменов.
+            p.stagesSection_coreContentItem Рассмотрели варианты, такие как "payeer на bitcoin", "btc yoomoney", "bitcoin на skrill", "qiwi на bitcoin" и так далее. 
+    .stagesSection_auditWrapper
+        h3.stagesSection_title Технический аудит
+        p.stagesSection_auditHeaderText В процессе него были найдены недочеты, которые влияют на продвижение ресурса и его последующее ранжирование:
+        ul.stagesSection_auditItemsWrapper
+            each audit in audits
+                li.stagesSection_auditItem
+                    .stagesSection_auditItemImageWrapper
+                        img(src= audit.image, alt="audit")
+                    h4.stagesSection_auditItemTitle= audit.title
+                    p= audit.text 
+    .stagesSection_competitorsWrapper
+        h3.stagesSection_title Анализ конкурентов и юзабилити
+        p.stagesSection_competitorsText В результате предложили внедрить самые актуальные наработки. Например:
+        ul.stagesSection_competitorsItemsWrapper
+            each competitor in competitors
+                li.stagesSection_competitorsItem(class=`stagesSection_order${competitor.number}`)
+                    p.stagesSection_competitorsItemNumber= competitor.number
+                    p= competitor.text
+    .stagesSection_linksWrapper
+        h3.stagesSection_title Анализ ссылочной массы
+        .stagesSection_linksContent
+            .stagesSection_linksTextWrapper
+                p.stagesSection_linksText Выявили, что конкуренты проекта имеют большую ссылочную массу. В итоге составили план получения внешних ссылок для проекта с учетом факторов: 
+                ul.stagesSection_linksList
+                    each link in links
+                        li.stagesSection_linksItem= link
+            .stagesSection_linksImageWrapper
+                img(src="../assets/images/computer.png", alt="Компьютер")
+    .stagesSection_optimizationWrapper
+        h3.stagesSection_title.stagesSection__titleWidth Контентная оптимизация
+        .stagesSection_optimizationContent
+            p.stagesSection_optimizationContentText Уделили особое внимание созданию оптимального контента для продвижения. Для быстрого прогресса мы разработали шаблоны тегов и мета-тегов для страниц для различных комбинаций обмена. Затем приступили к анализу и доработке текста до совершенства. 
+            p.stagesSection_optimizationContentItem Создавали информативный, привлекательный и оптимизированный контент, чтобы полностью удовлетворить потребности и ожидания пользователей. 

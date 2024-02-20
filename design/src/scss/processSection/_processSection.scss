@@ -150,23 +150,23 @@
     }
 
     .processSection_firstCardSecondLineEl {
-      animation: 2s animation2 0s ease forwards;
+      animation: 1.5s animation2 0s ease forwards;
     }
   }
 
   &__firstCardItemActiveSecond {
-    animation: 2s animation3 0s ease;
+    animation: 1.5s animation3 0s ease;
 
     .processSection_firstCardItemIconWrapperBg1 {
-      animation: 2s animation4 0s ease forwards;
+      animation: 1.5s animation4 0s ease forwards;
     }
 
     .processSection_firstCardItemFirstLineEl {
-      animation: 2s animation4 0s ease forwards;
+      animation: 1.5s animation4 0s ease forwards;
     }
 
     .processSection_firstCardSecondLineEl {
-      animation: 2s animation4 0s ease forwards;
+      animation: 1.5s animation4 0s ease forwards;
     }
   }
 
@@ -235,6 +235,8 @@
     justify-content: flex-end;
     width: 100%;
     height: auto;
+    opacity: 0;
+    transition: all 2s ease-in-out;
 
     & > img {
       width: 70%;

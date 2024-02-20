@@ -1,0 +1,77 @@
+.headerSection {
+  margin-bottom: clamp(80px, 7.6vw, 96px);
+  background-image: url('./../assets/images/main-1200.png');
+  background-position-x: right;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-size: 70%;
+
+  &_title {
+    max-width: 85%;
+  }
+
+  &_titleWpapper {
+    width: fit-content;
+    margin-top: 10px;
+    padding: 3px 20px;
+    border: 1px solid $font-color;
+    border-radius: 10px;
+    background-color: $bg-secondary;
+    margin-bottom: clamp(140px, 14.1vw, 178px);
+  }
+
+  &_areaWrapper {
+    background-image: url('./../assets/images/bgBlock1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 10px clamp(20px, 2.38vw, 30px);
+  }
+
+  &_areaTitle {
+    font-size: (1.25rem, 1.22vw, 1.5rem);
+  }
+
+  &_areaText {
+    font-size: (1.5rem, 1.43vw, 1.75rem);
+  }
+}
+
+@media (max-width: $breakpoints-md) {
+  .headerSection {
+    background-position-y: 55%;
+  }
+}
+
+@media (max-width: $breakpoints-sm) {
+  .headerSection {
+    background-image: url('./../assets/images/main-500.png');
+
+    background-size: 85%;
+    background-position-y: 60%;
+
+    &_title {
+      max-width: 100%;
+    }
+
+    &_titleWpapper {
+      margin-bottom: 350px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .headerSection {
+    background-position-y: 65%;
+    background-size: 100%;
+  }
+}
+
+@media (max-width: 340px) {
+  .headerSection {
+    background-position-y: 70%;
+
+    &_titleWpapper {
+      margin-bottom: 300px;
+    }
+  }
+}

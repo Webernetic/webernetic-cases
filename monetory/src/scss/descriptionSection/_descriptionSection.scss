@@ -1,0 +1,98 @@
+.descriptionSection {
+  margin-bottom: clamp(80px, 9.52vw, 120px);
+
+  &_header {
+    display: flex;
+    gap: clamp(24px, 3.17vw, 40px);
+    margin-bottom: clamp(40px, 6.35vw, 80px);
+  }
+
+  &_headerItem {
+    padding-inline: clamp(60px, 6.94vw, 87.5px);
+    padding-block: 5px;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid #323232;
+    border-radius: 15px;
+    background-color: $bg-secondary;
+    font-size: (1.25rem, 1.22vw, 1.5rem);
+  }
+
+  &_headerTextWrapper {
+    flex: 1;
+
+    & > p {
+      text-align: justify;
+    }
+  }
+
+  &_itemsGroup {
+    display: flex;
+    gap: clamp(20px, 3.17vw, 40px);
+  }
+
+  &_item {
+    flex: 1;
+    width: 100%;
+    background-image: url('./../assets/images/bgBlock2-1200.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 15px 45px 30px 30px;
+  }
+
+  &_itemTitle {
+    max-width: 68%;
+    margin-bottom: 20px;
+    font-size: clamp(1.625rem, 2.5vw, 2.125rem);
+  }
+
+  &_itemTitleSecondary {
+    margin-bottom: clamp(2px, 1.03vw, 13px);
+  }
+
+  &__itemTitleMgSecondary {
+    margin-bottom: 2px;
+  }
+
+  &_itemLine {
+    margin-block: clamp(8px, 1.3vw, 16px);
+    height: 1px;
+    background-color: #0000001a;
+  }
+}
+
+@media (max-width: $breakpoints-md) {
+  .descriptionSection {
+    &_itemsGroup {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &_item {
+      max-width: 75%;
+    }
+  }
+}
+
+@media (max-width: $breakpoints-sm) {
+  .descriptionSection {
+    &_header {
+      flex-direction: column;
+    }
+
+    &_headerItem {
+      min-width: 100%;
+      text-align: center;
+    }
+
+    &_item {
+      max-width: 100%;
+      background-image: url('./../assets/images/bgBlock2-500.png');
+      padding: 24px 20px;
+    }
+
+    &_itemTitle {
+      max-width: 64%;
+    }
+  }
+}
