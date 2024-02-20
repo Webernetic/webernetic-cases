@@ -40,6 +40,8 @@ export const showSlideTitle = (index, titles, badge, actionClass) => {
 
     const { firstChild, lastChild } = badge;
 
+    console.log(firstChild, lastChild);
+
     if (titles[index]) {
         firstChild.textContent = index + 1;
         lastChild.textContent = titles[index];

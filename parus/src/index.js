@@ -1,16 +1,15 @@
 import './scss/main.scss';
 
-import { items, titles } from './constants/constants'
+import { items, titlesBefore, titlesAfter } from './constants/constants'
 import { debounce, createItem, showSlideTitle } from './js/main'
+import { initSwiper } from './js/initSwiper'
 
-
-import Swiper from 'swiper';
-import { FreeMode } from 'swiper/modules';
 
 document.addEventListener("DOMContentLoaded", () => {
 
     const listTasks = document.querySelector(".decor-content__list");
-    const badgeSlide = document.querySelector(".before-slider__badge");
+    const badgeBefore = document.querySelector(".before-slider__badge");
+    const badgeAfter = document.querySelector(".after-slider__badge");
 
     let isMobileView = window.innerWidth < 768;
 
@@ -32,21 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }));
 
-    const swiper = new Swiper('.swiper', {
 
-        modules: [FreeMode],
-        direction: "vertical",
-        slidesPerView: "auto",
-        autoHeight: true,
-        freeMode: true,
+    const afterSwiper = initSwiper('.after-swiper', titlesAfter, badgeAfter, 'animate__slideInUp')
+    const beforeSwiper = initSwiper('.before-swiper', titlesBefore, badgeBefore, 'animate__slideInUp')
 
-        on: {
-            slideChange: (swiper) => {
-                showSlideTitle(swiper.activeIndex, titles, badgeSlide, 'animate__slideInUp')
-            }
-        }
-    });
-
-    showSlideTitle(swiper.activeIndex, titles, badgeSlide, 'animate__slideInUp')
+    showSlideTitle(beforeSwiper.activeIndex, titlesBefore, badgeBefore, 'animate__slideInUp');
+    showSlideTitle(afterSwiper.activeIndex, titlesAfter, badgeAfter, 'animate__slideInUp');
 
 })

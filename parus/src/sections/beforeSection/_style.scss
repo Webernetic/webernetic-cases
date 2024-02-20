@@ -78,7 +78,11 @@
         @include slider-box;
         margin-bottom: 30px;
 
-        .swiper-slide {
+        & .swiper-wrapper {
+            touch-action: pan-y;
+        }
+
+        & .swiper-slide {
             position: relative;
 
             &>img {
@@ -109,13 +113,12 @@
             }
 
             &__point2 {
-                top: 50%;
-                right: 10%;
-                transform: translateY(-50%);
+                top: 5%;
+                right: 15%;
             }
 
             &__point3 {
-                top: 4%;
+                top: 10%;
                 right: 15%;
             }
 
@@ -129,10 +132,6 @@
                 right: 15%;
             }
 
-            &__point6 {
-                top: 40%;
-                right: 15%;
-            }
 
             @media (max-width: 768px) {
                 &__point {
@@ -146,7 +145,7 @@
                 }
 
                 &__point2 {
-                    right: 0%;
+                    top: 3%;
                 }
             }
         }
