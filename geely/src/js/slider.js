@@ -7446,13 +7446,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // CUSTOMIZATION STAGES SLIDER
 const swiper = new Swiper('.swiper', {
-  // Optional parameters
   direction: 'horizontal',
   slidesPerView: 1,
+  loop: true,
   updateOnWindowResize: true,
-  // autoplay: {
-  //   delay: 7000,
-  // },
+  autoplay: {
+    delay: 7000,
+  },
 });
 
 const setActiveClassByDefault = () => {
@@ -7478,35 +7478,39 @@ const slideTo = ({ target }) => {
 
   if (current && current.classList.contains('swiper_navItem')) {
     navId = current.id;
-    swiper.slideTo(+navId, 300);
+    swiper.slideToLoop(+navId, 300);
   }
 };
 
-const displayActiveNav = (activeIndex) => {
-  if (window.innerWidth > 768) return;
+const nextSlide = () => {
+  let activeIndex = swiper.realIndex;
 
-  let navigationButtons = document.querySelectorAll('.swiper_navItem');
-  navigationButtons.forEach((item) => {
-    if (item.id == activeIndex) {
-      item.classList.add('swiper_navItemDisplay');
-    } else {
-      item.classList.remove('swiper_navItemDisplay');
-    }
-  });
+  if (swiper.slides.length === activeIndex) {
+    toggleActiveClass(0);
+    swiper.slideToLoop(0, 300);
+  } else {
+    swiper.slideNext();
+  }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
   let navigationButtonsWrapper = document.querySelector('.swiper_navWrapper');
+  const nextBtn = document.querySelector('.stagesSection_arrow');
 
   setActiveClassByDefault();
-  displayActiveNav(0);
 
   navigationButtonsWrapper.addEventListener('click', slideTo);
 
   swiper.on('slideChange', () => {
-    let activeIndex = swiper.activeIndex;
+    let activeIndex = swiper.realIndex;
 
     toggleActiveClass(activeIndex);
-    displayActiveNav(activeIndex);
+    if (swiper.slides.length === activeIndex) {
+      console.log(swiper.slides.length === activeIndex);
+      toggleActiveClass(0);
+      swiper.slideToLoop(0, 300);
+    }
   });
+
+  nextBtn.addEventListener('click', nextSlide);
 });

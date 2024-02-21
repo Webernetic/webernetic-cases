@@ -1,0 +1,47 @@
+.resultsSection {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-inline: clamp(30px, 5.71vw, 80px);
+  margin-bottom: clamp(70px, 7.14vw, 100px);
+
+  &_content {
+    flex: 1;
+    padding-top: clamp(30px, 5.71vw, 57.5px);
+
+    & > p {
+      opacity: 80%;
+    }
+  }
+
+  &_imageWrapper {
+    max-width: 40%;
+    min-width: 30%;
+    width: 100%;
+    height: auto;
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &_title {
+    margin-bottom: clamp(15px, 2.38vw, 30px);
+  }
+}
+
+@media (max-width: $breakpoints-sm) {
+  .resultsSection {
+    flex-direction: column;
+
+    &_content {
+      padding-top: 0;
+    }
+
+    &_imageWrapper {
+      max-width: 100%;
+    }
+  }
+}
