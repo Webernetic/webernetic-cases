@@ -7450,9 +7450,9 @@ const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   slidesPerView: 1,
   updateOnWindowResize: true,
-  autoplay: {
-    delay: 7000,
-  },
+  // autoplay: {
+  //   delay: 7000,
+  // },
 });
 
 const setActiveClassByDefault = () => {

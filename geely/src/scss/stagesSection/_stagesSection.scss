@@ -44,6 +44,7 @@
     font-weight: $font-weight-bold;
     line-height: 147%;
     z-index: 10;
+    opacity: 100%;
   }
 
   &_itemTitleNumber {
@@ -60,18 +61,47 @@
 
   &_itemDescription {
     grid-area: a;
+
+    & > p {
+      font-size: clamp(1rem, 1.86vw, 1.625rem);
+      opacity: 80%;
+    }
   }
 
   &_itemDescription2 {
     grid-area: c;
+    & > p {
+      font-size: clamp(1rem, 1.86vw, 1.625rem);
+      opacity: 80%;
+    }
   }
 
   &_itemSecondColumn {
     grid-area: b;
+    & > p {
+      font-size: clamp(1rem, 1.86vw, 1.625rem);
+      opacity: 80%;
+    }
+  }
+
+  &_itemInnerBlock {
+    padding: clamp(12px, 2.38vw, 30px) clamp(12px, 2.77vw, 35px);
+    height: fit-content;
+    border-radius: clamp(10px, 1.59vw, 20px);
+    background-color: $bg-white;
+    font-size: clamp(1rem, 1.86vw, 1.625rem);
+    color: #393939;
+    opacity: 80%;
+
+    & > h4 {
+      color: #0c0c0c;
+      font-size: clamp(1rem, 1.86vw, 1.625rem);
+      opacity: 100%;
+    }
   }
 
   &_descriptionText {
-    font-size: clamp(1.125rem, 1.86vw, 1.625rem);
+    font-size: clamp(1rem, 1.86vw, 1.625rem);
     line-height: 130%;
     color: #393939;
     opacity: 80%;
@@ -105,45 +135,128 @@
   &_coreTitle {
     margin-block: 5px;
     margin-top: 7px;
-    font-size: clamp(1.125rem, 1.86vw, 1.625rem);
+    font-size: clamp(1rem, 1.86vw, 1.625rem);
     font-weight: $font-weight-bold;
     line-height: 130%;
     color: #393939;
-    opacity: 80%;
+    opacity: 100%;
   }
 
   &_itemImageWrapper {
-    position: relative;
-    grid-area: image;
-    border-radius: clamp(20px, 2.04vw, 40px);
-    overflow: hidden;
-    color: #352959;
-    flex: 1;
-    height: auto;
-    aspect-ratio: 1.57;
+    height: 100%;
+    width: 100%;
 
     & > img {
       width: 100%;
       height: 100%;
-      object-fit: fill;
+      object-fit: contain;
+    }
+  }
+
+  &__secondSlideImage {
+    background-image: url('./../assets/images/stage-image-1.png');
+    background-size: auto 140%;
+    background-repeat: no-repeat;
+    background-position: center -20%;
+  }
+
+  &__thirdSlideImage {
+    height: clamp(307px, 39vw, 489px);
+    width: 90%;
+  }
+
+  &__4thSlideImage {
+    position: relative;
+    right: -10%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    & > img {
+      height: auto;
+    }
+  }
+
+  &_slideUl {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin: 0;
+    padding: 0;
+  }
+
+  &_slideLi {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    padding-left: 20px;
+    color: #393939;
+    font-size: clamp(1rem, 1.86vw, 1.625rem);
+    line-height: 140%;
+    opacity: 80%;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      left: 7px;
+      top: 0;
+      transform: translateY(clamp(10px, 1.14vw, 16px));
+      background-color: #393939;
+    }
+  }
+}
+
+@media (max-width: $breakpoints-lg) {
+  .stagesSection {
+    &__secondSlideImage {
+      background-size: 100% auto;
+      max-height: 303px;
     }
   }
 }
 
 @media (max-width: $breakpoints-md) {
   .stagesSection {
-    padding: 0;
+    padding-inline: 30px;
 
     &_item {
       padding-right: 20px;
       align-items: stretch;
       grid-template-columns: 1fr;
-      grid-template-rows: auto auto 1fr;
+      grid-template-rows: auto auto auto 1fr;
       grid-template-areas:
         'title'
         'a'
         'b'
         'c';
+    }
+
+    &__secondSlideImage {
+      background-size: auto 100%;
+      background-position: center top;
+    }
+
+    &__thirdSlideImage {
+      margin-inline: auto;
+      margin-top: 37px;
+      width: 60%;
+    }
+
+    &_slideLi::before {
+      width: 3px;
+      height: 3px;
+    }
+
+    &_4thSlide {
+      grid-template-rows: auto auto 1fr;
+      grid-template-areas:
+        'title'
+        'a'
+        'b';
     }
   }
 }
@@ -152,6 +265,28 @@
   .stagesSection {
     &_itemTitleNumber {
       left: 10%;
+    }
+
+    &__secondSlideImage {
+      background-size: contain;
+      background-position: center center;
+    }
+
+    &__thirdSlideImage {
+      position: relative;
+      width: 100%;
+      transform: translateX(38%);
+    }
+
+    &__4thSlideImage {
+      width: 110%;
+      right: auto;
+    }
+
+    &_itemInnerBlock {
+      & > h4 {
+        opacity: 80%;
+      }
     }
   }
 }
@@ -179,6 +314,7 @@
     font-size: clamp(1.25rem, 2vw, 1.75rem);
     line-height: 140%;
     white-space: nowrap;
+    cursor: pointer;
   }
 
   &_activeNavItem {
