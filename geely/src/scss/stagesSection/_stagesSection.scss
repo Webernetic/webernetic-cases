@@ -45,6 +45,7 @@
     line-height: 147%;
     z-index: 10;
     opacity: 100%;
+    opacity: 100%;
   }
 
   &_itemTitleNumber {
@@ -67,10 +68,19 @@
       font-size: clamp(1rem, 1.86vw, 1.625rem);
       opacity: 80%;
     }
+
+    & > p {
+      font-size: clamp(1rem, 1.86vw, 1.625rem);
+      opacity: 80%;
+    }
   }
 
   &_itemDescription2 {
     grid-area: c;
+    & > p {
+      font-size: clamp(1rem, 1.86vw, 1.625rem);
+      opacity: 80%;
+    }
     & > p {
       font-size: clamp(1rem, 1.86vw, 1.625rem);
       opacity: 80%;
@@ -99,9 +109,30 @@
       font-size: clamp(1rem, 1.86vw, 1.625rem);
       opacity: 100%;
     }
+    & > p {
+      font-size: clamp(1rem, 1.86vw, 1.625rem);
+      opacity: 80%;
+    }
+  }
+
+  &_itemInnerBlock {
+    padding: clamp(12px, 2.38vw, 30px) clamp(12px, 2.77vw, 35px);
+    height: fit-content;
+    border-radius: clamp(10px, 1.59vw, 20px);
+    background-color: $bg-white;
+    font-size: clamp(1rem, 1.86vw, 1.625rem);
+    color: #393939;
+    opacity: 80%;
+
+    & > h4 {
+      color: #0c0c0c;
+      font-size: clamp(1rem, 1.86vw, 1.625rem);
+      opacity: 100%;
+    }
   }
 
   &_descriptionText {
+    font-size: clamp(1rem, 1.86vw, 1.625rem);
     font-size: clamp(1rem, 1.86vw, 1.625rem);
     line-height: 130%;
     color: #393939;
@@ -137,13 +168,17 @@
     margin-block: 5px;
     margin-top: 7px;
     font-size: clamp(1rem, 1.86vw, 1.625rem);
+    font-size: clamp(1rem, 1.86vw, 1.625rem);
     font-weight: $font-weight-bold;
     line-height: 130%;
     color: #393939;
     opacity: 100%;
+    opacity: 100%;
   }
 
   &_itemImageWrapper {
+    height: 100%;
+    width: 100%;
     height: 100%;
     width: 100%;
 
@@ -235,11 +270,13 @@
 @media (max-width: $breakpoints-md) {
   .stagesSection {
     padding-inline: 30px;
+    padding-inline: 30px;
 
     &_item {
       padding-right: 20px;
       align-items: stretch;
       grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto 1fr;
       grid-template-rows: auto auto auto 1fr;
       grid-template-areas:
         'title'
@@ -307,6 +344,28 @@
         opacity: 80%;
       }
     }
+
+    &__secondSlideImage {
+      background-size: contain;
+      background-position: center center;
+    }
+
+    &__thirdSlideImage {
+      position: relative;
+      width: 100%;
+      transform: translateX(38%);
+    }
+
+    &__4thSlideImage {
+      width: 110%;
+      right: auto;
+    }
+
+    &_itemInnerBlock {
+      & > h4 {
+        opacity: 80%;
+      }
+    }
   }
 }
 
@@ -333,6 +392,7 @@
     font-size: clamp(1.25rem, 2vw, 1.75rem);
     line-height: 140%;
     white-space: nowrap;
+    cursor: pointer;
     cursor: pointer;
   }
 
