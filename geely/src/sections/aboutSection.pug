@@ -1,0 +1,24 @@
+- 
+    var items = [{title:"Тематика", titleSecondary:"сайта:", text:"Автосалон Geely, продажа автомобилей"},
+    {title:"Регион", titleSecondary:"продвижения:" , text:"Минск (Боровая), Минская область, кроме Солигорска"},
+    {title:"Начало", titleSecondary:"сотрудничества:", text:"Ноябрь 2020 года"}]
+
+    var results = [{title:"С 0,8 до 82,6%", text: "выросла видимость сайта"},
+    {title:"С 1 до 59%", text: "вырос % ключей в Топ-5"},
+    {title:"В 17 раз", text: "вырос органический трафик "},]
+
+section.aboutSection 
+    ul.aboutSection_descriptionWrapper
+        each item in items
+            li.aboutSection_descriptionItem
+                div 
+                    h3.aboutSection_descriptionTitle= item.title
+                    h3.aboutSection_descriptionTitle= item.titleSecondary
+                p.aboutSection_descriptionText= item.text
+    h2.aboutSection_resultsTitle Кратко о результатах:
+    ul.aboutSection_resultsWrapper
+        each result in results
+            li.aboutSection_resultItem
+                h3.aboutSection_resultItemTitle= result.title
+                p.aboutSection_resultItemText= result.text
+

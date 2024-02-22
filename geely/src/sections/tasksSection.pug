@@ -1,0 +1,38 @@
+-
+    var tasks = [{id:"1", text:"Увеличение трафика на сайте"},
+    {id:"2", text:"Увеличение обращений с сайта в отдел продаж / отдел сервис"},
+    {id:"3", text:"Повышение узнаваемости салона"},]
+
+section.tasksSection 
+    .tasksSection_header
+        .tasksSection_tasksWrapper
+            h2.tasksSection_title Задачи проекта: 
+            .tasksSection_tasksGroug
+                each task in tasks
+                    .tasksSection_task
+                        .tasksSection_taskNumber= task.id
+                        .tasksSection_taskText= task.text
+        .tasksSection_tasksDescription 
+            p.mb-10 Необходимо было четко сформировать восприятие клиента “если Geely, то только в АтлантМ на Боровой”. 
+            p Сделать это через полноту, удобство поиска информации, через преимущества, удобство связи и т.д.
+    .tasksSection_wrapper
+        .tasksSection_descriptionItem
+            div 
+                h3.tasksSection_descriptionTitle Ограничен регион продвижения
+                p.tasksSection_descriptionText.mb-10 Нельзя продвигаться в других городах, где уже есть салон Geely другого дилера или салон из их холдинга, например, в Солигорске.
+                p.tasksSection_descriptionText.mb-10 Таким образом, клиент может продвигаться только в Минске и Минской области, за исключением Солигорска. 
+                p.tasksSection_descriptionText Если их рекламу увидят в других городах, им грозит большой штраф от дистрибьютора. Но разрешены любые активности, где невозможно выставить ГЕО. 
+            .tasksSection_descriptionImageWrapper
+                img(src="../assets/images/dealer.png", alt="Автосалон")
+        .tasksSection_descriptionQuote.tasksSection__margin
+            img(src="../assets/icons/quote.svg", alt="Ковычки")
+            p В РБ много представителей бренда, поэтому завод разработал директиву, по которой каждый дилер имеет право рекламироваться только в своем регионе.
+        .tasksSection_descriptionItem
+            .tasksSection_descriptionImageWrapper.tasksSection_logo
+                img(src="../assets/icons/logo.svg", alt="Атлант М")
+            div 
+                h3.tasksSection_descriptionTitle Конкуренция с самим холдингом
+                p.tasksSection_descriptionText.mb-10 Geely-atlantm.by входят в состав холдинга https://atlantm.by/ , которые также продвигаются и конкурируют с ними в выдаче по основным запросам. Купить авто онлайн можно только на https://atlantm.by/.
+        .tasksSection_descriptionQuote.tasksSection__margin
+            img(src="../assets/icons/quote.svg", alt="Ковычки")
+            p По Geely самая ожесточенная конкуренция внутри бренда. 13 дилерских центров Geely в Беларуси. И основные находятся в Минске.  Поэтому еще до начала оптимизации мы анализировали преимущества клиента по отношению к другим дилерам.

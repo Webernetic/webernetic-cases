@@ -1,0 +1,30 @@
+.headerSection {
+  position: relative;
+  padding: clamp(187px, 34.3vw, 480px) clamp(31px, 5.71vw, 80px)
+    clamp(79px, 11.79vw, 165px) clamp(31px, 5.71vw, 80px);
+  background-image: url('./../assets/images/main-1200.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  &_title {
+    position: relative;
+    color: $font-color-invert;
+    z-index: 5;
+  }
+}
+
+@media (max-width: $breakpoints-sm) {
+  .headerSection {
+    background-image: url('./../assets/images/main-500.png');
+  }
+}

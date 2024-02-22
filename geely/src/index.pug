@@ -1,0 +1,23 @@
+extends layouts/MainLayout
+include mixins/index.pug
+
+block title
+  | Geely
+
+block content
+  body.body  
+    .container
+      include sections/headerSection  
+      include sections/aboutSection
+      include sections/tasksSection
+      include sections/initialDataSection
+      include sections/stagesSection   
+      include sections/resultsSection  
+      include sections/positionSection  
+      include sections/summarySection 
+      include sections/orderSection 
+
+
+  script
+    include js/slider.js
+    
