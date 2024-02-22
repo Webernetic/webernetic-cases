@@ -8,6 +8,7 @@
 @import './stagesSection/_stagesSection.scss';
 @import './resultsSection/_resultsSection.scss';
 @import './positionSection/_positionSection.scss';
+@import './summarySection/_summarySection.scss';
 @import './orderSection/_orderSection.scss';
 @import './swiper/_swiper-bundle.min.css';
 
@@ -209,28 +210,32 @@ span {
 }
 
 .input {
-  border-bottom: 1px solid $font-color;
+  border-bottom: 2px solid $font-color-invert;
   width: 100%;
-  font-size: clamp(1rem, 1.86vw, 1.625rem);
+  font-size: clamp(1.125rem, 1.71vw, 1.5rem);
+  color: $font-color-invert;
+  line-height: 147%;
 
   &::placeholder {
-    color: $font-color-placeholder;
+    color: #ffffff;
     line-height: 1;
     opacity: 0.5;
-    font-size: clamp(1rem, 1.86vw, 1.625rem);
+    font-size: clamp(1.125rem, 1.71vw, 1.5rem);
+    line-height: 147%;
   }
 }
 
 .customButton {
-  font-size: clamp(1.25rem, 2.57vw, 2.25rem);
-  color: $font-color-bright;
+  font-size: clamp(1.125rem, 2.57vw, 2.25rem);
+  color: $font-color-invert;
   font-weight: $font-weight-extra-bold;
-  border-bottom: 2px solid $font-color-bright;
+  line-height: 147%;
+  border-bottom: 2px solid $font-color-invert;
 
   &:hover,
   &:active {
     transform: scale(1.05);
-    color: $font-color-bright;
+    color: #eeeeee;
     border-color: $font-color-bright;
   }
 }

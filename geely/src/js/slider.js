@@ -1172,7 +1172,12 @@ var Swiper = (function () {
         else {
           if (!r.support.smoothScroll)
             return (
-              m({ swiper: r, targetPosition: -c, side: e ? 'left' : 'top' }), !0
+              m({
+                swiper: r,
+                targetPosition: -c,
+                side: e ? 'left' : 'top',
+              }),
+              !0
             );
           l.scrollTo({ [e ? 'left' : 'top']: -c, behavior: 'smooth' });
         }
@@ -1317,7 +1322,12 @@ var Swiper = (function () {
         } else {
           if (!r.support.smoothScroll)
             return (
-              m({ swiper: r, targetPosition: s, side: e ? 'left' : 'top' }), !0
+              m({
+                swiper: r,
+                targetPosition: s,
+                side: e ? 'left' : 'top',
+              }),
+              !0
             );
           h.scrollTo({ [e ? 'left' : 'top']: s, behavior: 'smooth' });
         }
@@ -1957,7 +1967,12 @@ var Swiper = (function () {
         p.target.matches(i.focusableElements) || (s.allowClick = !1),
         void (
           i.isTouched &&
-          (Object.assign(n, { startX: u, startY: m, currentX: u, currentY: m }),
+          (Object.assign(n, {
+            startX: u,
+            startY: m,
+            currentX: u,
+            currentY: m,
+          }),
           (i.touchStartTime = o()))
         )
       );
@@ -2380,7 +2395,10 @@ var Swiper = (function () {
       o = !!i.nested,
       d = 'on' === t ? 'addEventListener' : 'removeEventListener',
       c = t;
-    s[d]('touchstart', e.onDocumentTouchStart, { passive: !1, capture: o }),
+    s[d]('touchstart', e.onDocumentTouchStart, {
+      passive: !1,
+      capture: o,
+    }),
       r[d]('touchstart', e.onTouchStart, { passive: !1 }),
       r[d]('pointerdown', e.onTouchStart, { passive: !1 }),
       s[d]('touchmove', e.onTouchMove, { passive: !1, capture: o }),
@@ -2543,7 +2561,12 @@ var Swiper = (function () {
             { params: a } = s;
           a.cssMode ||
             (a.autoHeight && s.updateAutoHeight(),
-            G({ swiper: s, runCallbacks: e, direction: t, step: 'Start' }));
+            G({
+              swiper: s,
+              runCallbacks: e,
+              direction: t,
+              step: 'Start',
+            }));
         },
         transitionEnd: function (e, t) {
           void 0 === e && (e = !0);
@@ -2552,7 +2575,12 @@ var Swiper = (function () {
           (s.animating = !1),
             a.cssMode ||
               (s.setTransition(0),
-              G({ swiper: s, runCallbacks: e, direction: t, step: 'End' }));
+              G({
+                swiper: s,
+                runCallbacks: e,
+                direction: t,
+                step: 'End',
+              }));
         },
       },
       slide: X,
@@ -2848,7 +2876,13 @@ var Swiper = (function () {
           },
           allowClick: !0,
           allowTouchMove: l.params.allowTouchMove,
-          touches: { startX: 0, startY: 0, currentX: 0, currentY: 0, diff: 0 },
+          touches: {
+            startX: 0,
+            startY: 0,
+            currentX: 0,
+            currentY: 0,
+            diff: 0,
+          },
           imagesToLoad: [],
           imagesLoaded: 0,
         }),
@@ -3882,7 +3916,9 @@ var Swiper = (function () {
           (l.removeEventListener('keydown', d), (t.keyboard.enabled = !1));
       }
       (t.keyboard = { enabled: !1 }),
-        s({ keyboard: { enabled: !1, onlyInViewport: !0, pageUpDown: !0 } }),
+        s({
+          keyboard: { enabled: !1, onlyInViewport: !0, pageUpDown: !0 },
+        }),
         i('init', () => {
           t.params.keyboard.enabled && c();
         }),
@@ -4005,7 +4041,11 @@ var Swiper = (function () {
           a && t.params.nested && s.stopPropagation(),
           t.params.freeMode && t.params.freeMode.enabled)
         ) {
-          const e = { time: o(), delta: Math.abs(m), direction: Math.sign(m) },
+          const e = {
+              time: o(),
+              delta: Math.abs(m),
+              direction: Math.sign(m),
+            },
             a =
               c &&
               e.time < c.time + 500 &&
@@ -4195,7 +4235,10 @@ var Swiper = (function () {
             t,
             t.originalParams.navigation,
             t.params.navigation,
-            { nextEl: 'swiper-button-next', prevEl: 'swiper-button-prev' },
+            {
+              nextEl: 'swiper-button-next',
+              prevEl: 'swiper-button-prev',
+            },
           )),
           !e.nextEl && !e.prevEl)
         )
@@ -6332,7 +6375,12 @@ var Swiper = (function () {
         n('slideChange', () => {
           !i.destroyed && i.autoplay.running && (h = !0);
         }),
-        Object.assign(i.autoplay, { start: S, stop: T, pause: M, resume: C });
+        Object.assign(i.autoplay, {
+          start: S,
+          stop: T,
+          pause: M,
+          resume: C,
+        });
     },
     function (e) {
       let { swiper: t, extendParams: s, on: i } = e;
@@ -7291,7 +7339,12 @@ var Swiper = (function () {
                 t.style.transitionDuration = `${e}ms`;
               });
           }),
-            ce({ swiper: t, duration: e, transformElements: s, allSlides: !0 });
+            ce({
+              swiper: t,
+              duration: e,
+              transformElements: s,
+              allSlides: !0,
+            });
         },
         perspective: () => t.params.creativeEffect.perspective,
         overwriteParams: () => ({
@@ -7409,106 +7462,76 @@ var Swiper = (function () {
   return ee.use(ue), ee;
 })();
 
-// CUSTOMIZATION TASKS SLIDER
-
-const customSwiper = new Swiper('.customSwiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  slidesPerView: 3,
-  loop: true,
-  updateOnWindowResize: true,
-  centeredSlides: true,
-  autoplay: {
-    delay: 7000,
-  },
-  effect: 'coverflow',
-  coverflowEffect: {
-    depth: 400,
-  },
-  parallax: true,
-  slideActiveClass: 'tasksSection_activeSlide',
-  slideFullyVisibleClass: 'tasksSection_fullyVisibleSlide',
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  customSwiper.on('click', () => {
-    let clickedIndex = customSwiper.clickedIndex;
-    let activeIndex = customSwiper.activeIndex;
-    if (clickedIndex > activeIndex) {
-      customSwiper.slideNext(300);
-    }
-
-    if (clickedIndex < activeIndex) {
-      customSwiper.slidePrev(300);
-    }
-  });
-});
-
 // CUSTOMIZATION STAGES SLIDER
-const swiper = new Swiper('.swiper', {
-  direction: 'horizontal',
-  slidesPerView: 1,
-  loop: true,
-  updateOnWindowResize: true,
-  autoplay: {
-    delay: 7000,
-  },
-});
+let swiperGeely = null;
 
 const setActiveClassByDefault = () => {
-  let navigationButtons = document.querySelectorAll('.swiper_navItem');
-  navigationButtons[0].classList.add('swiper_activeNavItem');
+  let navigationButtons = document.querySelectorAll('.swiperGeely_navItem');
+  navigationButtons[0].classList.add('swiperGeely_activeNavItem');
 };
 
 const toggleActiveClass = (activeIndex) => {
-  let navigationButtons = document.querySelectorAll('.swiper_navItem');
+  let navigationButtons = document.querySelectorAll('.swiperGeely_navItem');
 
   navigationButtons.forEach((navItem, i) => {
     if (+navItem.id <= +activeIndex) {
-      navItem.classList.add('swiper_activeNavItem');
+      navItem.classList.add('swiperGeely_activeNavItem');
     } else {
-      navItem.classList.remove('swiper_activeNavItem');
+      navItem.classList.remove('swiperGeely_activeNavItem');
     }
   });
 };
 
 const slideTo = ({ target }) => {
-  let current = target.closest('.swiper_navItem');
+  let current = target.closest('.swiperGeely_navItem');
   let navId = null;
 
-  if (current && current.classList.contains('swiper_navItem')) {
+  if (current && current.classList.contains('swiperGeely_navItem')) {
     navId = current.id;
-    swiper.slideToLoop(+navId, 300);
+    swiperGeely.slideToLoop(+navId, 300);
   }
 };
 
 const nextSlide = () => {
-  let activeIndex = swiper.realIndex;
+  let activeIndex = swiperGeely.realIndex;
 
-  if (swiper.slides.length === activeIndex) {
+  if (swiperGeely.slides.length === activeIndex) {
     toggleActiveClass(0);
-    swiper.slideToLoop(0, 300);
+    swiperGeely.slideToLoop(0, 300);
   } else {
-    swiper.slideNext();
+    swiperGeely.slideNext();
   }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  let navigationButtonsWrapper = document.querySelector('.swiper_navWrapper');
+  swiperGeely = new Swiper('.swiperGeely', {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    loop: true,
+    updateOnWindowResize: true,
+    autoplay: {
+      delay: 7000,
+    },
+  });
+
+  let navigationButtonsWrapper = document.querySelector(
+    '.swiperGeely_navWrapper',
+  );
+
   const nextBtn = document.querySelector('.stagesSection_arrow');
 
   setActiveClassByDefault();
 
   navigationButtonsWrapper.addEventListener('click', slideTo);
 
-  swiper.on('slideChange', () => {
-    let activeIndex = swiper.realIndex;
+  swiperGeely.on('slideChange', () => {
+    let activeIndex = swiperGeely.realIndex;
 
     toggleActiveClass(activeIndex);
-    if (swiper.slides.length === activeIndex) {
-      console.log(swiper.slides.length === activeIndex);
+    if (swiperGeely.slides.length === activeIndex) {
+      console.log(swiperGeely.slides.length === activeIndex);
       toggleActiveClass(0);
-      swiper.slideToLoop(0, 300);
+      swiperGeely.slideToLoop(0, 300);
     }
   });
 

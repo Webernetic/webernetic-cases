@@ -9,12 +9,12 @@
 
 section.stagesSection
     h2.stagesSection_title Этапы работ:
-    ul.swiper_navWrapper
+    ul.swiperGeely_navWrapper
         each item in navItems
-            li.swiper_navItem("id"= item.id)
+            li.swiperGeely_navItem("id"= item.id)
                 p.stagesSection_navItemText= item.text
     .stagesSection__relative 
-        .swiper
+        .swiperGeely
             .swiper-wrapper
                 .swiper-slide.stagesSection_item.stagesSection__paddingBottom
                     .stagesSection_itemTitle 
