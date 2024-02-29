@@ -1,104 +1,79 @@
-//- -
-//-     var navItems = [{text: "Сбор СЯ", id: "0"},
-//-     {text: "Конкурентный анализ", id: "1"},
-//-     {text: "Анализ юзабилити", id: "2"},
-//-     {text: "Технический аудит", id: "3"},
-//-     {text: "Анализ ссылочного профиля", id: "4"},
-//-     {text: "Контентная оптимизация", id: "5"},
-//-     {text: "Стратегия продвижения", id: "6"}]
+-
+    var navItems = [{text: "Технический аудит", id: "0"},
+    {text: "Сбор СЯ", id: "1"},
+    {text: "Контентная оптимизация", id: "2"},
+    {text: "Анализ ссылочного профиля", id: "3"},
+    {text: "Анализ юзабилити", id: "4"},
+    {text: "Serm", id: "5"}]
 
-//- section.stagesSection
-//-     h2.stagesSection_title Этапы работ:
-//-     ul.swiperGeely_navWrapper
-//-         each item in navItems
-//-             li.swiperGeely_navItem("id"= item.id)
-//-                 p.stagesSection_navItemText= item.text
-//-     .stagesSection__relative 
-//-         .swiperGeely
-//-             .swiper-wrapper
-//-                 .swiper-slide.stagesSection_item.stagesSection__paddingBottom
-//-                     .stagesSection_itemTitle 
-//-                         h3.stagesSection_itemTitleText Сбор семантического ядра
-//-                         span.stagesSection_itemTitleNumber 1
-//-                     .stagesSection_itemDescription
-//-                         p.stagesSection_descriptionText.mb-10 Для начала составили семантическое ядро сайта и на его основе сделали структуру сайта. На сайте не хватало очень много целевых важных страниц, на которые можно было бы вести большое количество частотных запросов, соответственно приводить трафик на сайт.
-//-                         p.stagesSection_descriptionText У данного бизнеса нет выраженной сезонности, но клиент отмечал некоторые особенности. 
-//-                     .stagesSection_itemSecondColumn 
-//-                         .stagesSection_core
-//-                             span.stagesSection_coreNumber 1
-//-                             div 
-//-                                 h4.stagesSection_coreTitle Продажа новых автомобилей: 
-//-                                 p.stagesSection_descriptionText Пик весной (март-апрель), осенью (с началом учебного года) и под новый год (т.к. дилеры распродают склады)
-//-                         .stagesSection_core
-//-                             span.stagesSection_coreNumber 2
-//-                             div 
-//-                                 h4.stagesSection_coreTitle Сервис (тех. обслуживание авто):  
-//-                                 p.stagesSection_descriptionText.mb-10 Высокий сезон загрузки сервиса в период шиномонтажа - весна (март-апрель) и осень (ноябрь). 
-//-                                 p.stagesSection_descriptionText Сезонные услуги , например, заправка  кондиционера перед летним сезоном.
-//-                         .stagesSection_core
-//-                             span.stagesSection_coreNumber 3
-//-                             div 
-//-                                 h4.stagesSection_coreTitle Кузовной ремонт:
-//-                                 p.stagesSection_descriptionText.mb-10 Пик перед зимой  
-//-                 .swiper-slide.stagesSection_item
-//-                     .stagesSection_itemTitle 
-//-                         h3.stagesSection_itemTitleText Конкурентный анализ
-//-                         span.stagesSection_itemTitleNumber 2
-//-                     .stagesSection_itemDescription
-//-                         p.stagesSection_descriptionText Проанализировали конкурентов, которые находятся в топе по собранным ключевым запросам, по техническим показателям (видимость сайта, траст, спамность, возраст, количество страниц в индексе и т.д).
-//-                     .stagesSection_itemDescription2.stagesSection_itemImageWrapper.stagesSection__secondSlideImage
-//-                     p.stagesSection_itemSecondColumn.stagesSection_itemInnerBlock Среди конкурентов в выдаче не только сайты других дилеров Geely, но и сайты, которые продают авто разных марок - сайты-агрегаторы, что затрудняет продвижение.
-//-                 .swiper-slide.stagesSection_item
-//-                     .stagesSection_itemTitle 
-//-                         h3.stagesSection_itemTitleText Анализ юзабилити
-//-                         span.stagesSection_itemTitleNumber 3
-//-                     .stagesSection_itemDescription
-//-                         p.mb-10 Мы проанализировали сайт клиента и его конкурентов с точки зрения юзабилити.
-//-                         p.mb-10 Новый сайт, по словам клиента, имел меньшую конверсию по сравнению с лендингом. Поэтому мы предложили внести изменения на сайте, которые сделают его более удобным и привлекательным. Это поможет поднять позиции в поисковых результатах.
-//-                         p Также учли новую структуру сайта.
-//-                     .stagesSection_itemSecondColumn.stagesSection_itemImageWrapper.stagesSection__thirdSlideImage
-//-                         img(src="../assets/images/stage-image-2.png", alt="Шестеренки")
-//-                 .swiper-slide.stagesSection_item.stagesSection_4thSlide           
-//-                     .stagesSection_itemTitle 
-//-                         h3.stagesSection_itemTitleText Технический аудит
-//-                         span.stagesSection_itemTitleNumber 4
-//-                     .stagesSection_itemDescription
-//-                         p.mb-10 Сделали технический аудит сайта. Подготовили ТЗ для программистов. Некоторые выводы по итогам аудита:
-//-                         ul.stagesSection_slideUl 
-//-                             li.stagesSection_slideLi Откорректировать sitemap.xml: добавить туда недостающие страницы, добавить теги priority, changefreq, заменить все URL на канонические.
-//-                             li.stagesSection_slideLi Оптимизировать файлы PDF.
-//-                             li.stagesSection_slideLi Увеличить скорость загрузки сайта на мобильных устройствах.
-//-                             li.stagesSection_slideLi Удалить ссылки 404 и 301 кодами ответа сервера  и  другие.
-//-                     .stagesSection_itemSecondColumn.stagesSection_itemImageWrapper.stagesSection__4thSlideImage
-//-                         img(src="../assets/images/stage-image-3.png", alt="Шестеренки")
-//-                 .swiper-slide.stagesSection_item
-//-                     .stagesSection_itemTitle 
-//-                         h3.stagesSection_itemTitleText Анализ ссылочного профиля
-//-                         span.stagesSection_itemTitleNumber 5
-//-                     p.stagesSection_itemDescription Проанализировали ссылочный профиль сайта и его основных конкурентов и разработали стратегию получения ссылок.
-//-                     .stagesSection_itemSecondColumn.stagesSection_itemInnerBlock
-//-                         h4.mb-10 Вернемся к ограничениям по региону продвижения
-//-                         p.mb-10 Мы не могли размещаться на региональных площадках, где уже есть другие дилеры Geely.
-//-                         p Поэтому решили сосредоточиться на основных площадках для получения  ссылок, которые не привязаны к конкретному региону. Т.е. выбирали охват всей Беларуси либо Минска.   
-//-                 .swiper-slide.stagesSection_item
-//-                     .stagesSection_itemTitle 
-//-                         h3.stagesSection_itemTitleText Контентная оптимизация
-//-                         span.stagesSection_itemTitleNumber 6
-//-                     p.stagesSection_itemDescription Проверили тексты на сайте и составили контент-план. Написали новый материал и откорректировали уже существующий.
-//-                     .stagesSection_itemDescription2.stagesSection_itemImageWrapper.stagesSection__6thSlideImage
-//-                     .stagesSection_itemSecondColumn.stagesSection_itemInnerBlock
-//-                         h4.mb-10 Особенности:
-//-                         ul.stagesSection_slideUl                        
-//-                             li.stagesSection_slideLi На сайте было мало контента, чтобы конкурировать с другими сайтами.
-//-                             li.stagesSection_slideLi При написании текстов мы учли имеющиеся блоки на сайте, чтобы контент гармонично вписывался в дизайн и учитывали это при рекомендациях по юзабилити. Также предложили дополнения к страницам, чтобы увеличенные тексты подходили по дизайну.
-//-                 .swiper-slide.stagesSection_item
-//-                     .stagesSection_itemTitle 
-//-                         h3.stagesSection_itemTitleText Стратегия продвижения
-//-                         span.stagesSection_itemTitleNumber 7
-//-                     .stagesSection_itemDescription
-//-                         p.mb-10 После всех аудитов  разработали 6-месячную стратегию продвижения.
-//-                         p.mb-10 Начали с подготовки контента, мета-тегов и наращивания ссылок. Одновременно внесли технические правки и улучшили юзабилити на сайте.
-//-                         p В первую очередь устранили критические технические ошибки и создали новые страницы для каждой модели авто.
-//-                     .stagesSection_itemSecondColumn.stagesSection_itemImageWrapper.stagesSection__7thSlideImage
-//-                         img(src="../assets/images/stage-image-5.png", alt="Стратегия")
-//-         .stagesSection_arrow
+section.stagesSection
+    h2.stagesSection_title Этапы работ:
+    ul.swiperGeely_navWrapper
+        each item in navItems
+            li.swiperGeely_navItem("id"= item.id)
+                p.stagesSection_navItemText= item.text
+    .stagesSection__relative 
+        .swiperGeely
+            .swiper-wrapper
+                .swiper-slide.stagesSection_item.stagesSection__paddingBottom
+                    .stagesSection_itemTitle 
+                        h3.stagesSection_itemTitleText Технический аудит
+                        span.stagesSection_itemTitleNumber 1
+                    .stagesSection_itemDescription
+                        p.stagesSection_descriptionText.mb-10 В этом проекте мы начали с технического аудита. 
+                        p.stagesSection_descriptionText.mb-10 По результатам которого составили ТЗ на доработки. Некоторые изменения:
+                        ul.stagesSection_slideUl 
+                            li.stagesSection_slideLi исправили файл sitemap.xml
+                            li.stagesSection_slideLi заменили ссылки с кодом 3xx ответа сервера
+                            li.stagesSection_slideLi удалили технические дубли страниц
+                            li.stagesSection_slideLi исправили ошибки верстки
+                            li.stagesSection_slideLi увеличили скорость загрузки
+                            li.stagesSection_slideLi внедрили микроразметку и т.д.
+                    .stagesSection_itemSecondColumn.stagesSection__firstSlideImage                     
+                .swiper-slide.stagesSection_item
+                    .stagesSection_itemTitle 
+                        h3.stagesSection_itemTitleText Семантическое ядро
+                        span.stagesSection_itemTitleNumber 2
+                    .stagesSection_itemDescription
+                        p.stagesSection_descriptionText Собрали семантическое ядро отдельно для каждого региона. В результате вышло около 3000 запросов.  Начали с коммерческих запросов,например, “заказать суши+регион”, “купить суши в Новороссийске”, которые позже дополнили информационными.
+                    p.stagesSection_itemDescription2.stagesSection_itemDescription2Slide2 3000                    
+                    .stagesSection_itemSecondColumn.stagesSection__secondSlideImage 
+                .swiper-slide.stagesSection_item
+                    .stagesSection_itemTitle 
+                        h3.stagesSection_itemTitleText Контентная оптимизация
+                        span.stagesSection_itemTitleNumber 3
+                    .stagesSection_itemDescription
+                        p.mb-10 На основании семантики был подготовлен контент-план для проработки мета-тегов и, в дальнейшем, текстов страниц.
+                        p На данный момент на сайте проработаны все мета-теги и написаны тексты для главных страниц по каждому городу.
+                    .stagesSection_itemSecondColumn.stagesSection__thirdSlideImage
+                .swiper-slide.stagesSection_item.stagesSection_itemSlide4-5          
+                    .stagesSection_itemTitle 
+                        h3.stagesSection_itemTitleText Анализ ссылочного профиля
+                        span.stagesSection_itemTitleNumber 4
+                    .stagesSection_itemDescription
+                        p.mb-10 Провели анализ ссылочного профиля сайта и всех конкурентов этой сферы в каждом регионе. Сайты-конкуренты имели от 400 до 1729 ссылок, что в несколько раз больше, чем было у клиента. На основании этого составили план наращивания ссылочной массы. 
+                    .stagesSection_itemDescription2.stagesSection__4thSlideImage
+                    .stagesSection_itemSecondColumn.stagesSection_itemInnerBlock
+                        p.mb-10 На данный момент на сайте ведется работа по получению бесплатных и платных ссылок. Также наращиваем двух- и трехуровневые ссылки.
+                        p Перейдя на наращивание разноуровневых ссылок, мы заметили, что ключи, которые постоянно меняли позиции - перестали прыгать. И заняли более высокие позиции (анализируемый период - 4-6 месяцев).  
+                .swiper-slide.stagesSection_item.stagesSection_itemSlide4-5 
+                    .stagesSection_itemTitle 
+                        h3.stagesSection_itemTitleText Анализ юзабилити
+                        span.stagesSection_itemTitleNumber 5
+                    .stagesSection_itemDescription
+                        p.stagesSection_descriptionText.mb-10 Проведен анализ юзабилити сайта и составлен список рекомендаций по улучшению юзабилити и увеличению конверсионности сайта.  Все рекомендации были выполнены.
+                        p.stagesSection_descriptionText.mb-6 Некоторые из доработок:
+                        ul.stagesSection_slideUl
+                            li.stagesSection_slideLi улучшение структуры сайта
+                            li.stagesSection_slideLi внедрение необходимых страниц
+                            li.stagesSection_slideLi добавление фильтра
+                            li.stagesSection_slideLi редактирование списка выбранных товаров, не переходя в интерфейс корзины и т.д..
+                    .stagesSection_itemSecondColumn.stagesSection__5thSlideImage 
+                .swiper-slide.stagesSection_item.stagesSection_itemSlide4-5 
+                    .stagesSection_itemTitle 
+                        h3.stagesSection_itemTitleText Serm
+                        span.stagesSection_itemTitleNumber 6
+                    .stagesSection_itemDescription
+                        p.stagesSection_descriptionText.mb-10 Ежемесячно ведется работа с репутацией: вовремя отвечаем на комментарии, взаимодействуем с клиентами  и на основании этого улучшаем сервис.
+                    .stagesSection_itemSecondColumn.stagesSection__6thSlideImage 
+        .stagesSection_arrow
