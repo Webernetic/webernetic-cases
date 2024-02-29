@@ -1,0 +1,21 @@
+extends layouts/MainLayout
+include mixins/index.pug
+
+block title
+  | Yapoki
+
+block content
+  body.body  
+    .container
+      include sections/headerSection  
+      include sections/resultsSection 
+      include sections/featuresSection 
+      include sections/aboutSection 
+      include sections/positionSection  
+      include sections/summarySection 
+      include sections/orderSection 
+
+
+  script
+    include js/slider.js
+    

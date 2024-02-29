@@ -1,0 +1,206 @@
+.positionSection {
+  margin-bottom: clamp(70px, 7.14vw, 100px);
+
+  &_searchResults {
+    padding: clamp(30px, 3.57vw, 50px) clamp(35px, 5.71vw, 80px);
+    border-radius: clamp(20px, 4.29vw, 60px);
+    background-color: #3f484f;
+    overflow: hidden;
+  }
+
+  &_searchResultsTitle {
+    margin-bottom: clamp(15px, 2.14vw, 30px);
+    color: $font-color-invert;
+  }
+
+  &_searchResultsItem {
+    display: flex;
+    justify-content: space-between;
+    gap: clamp(10px, 2.86vw, 40px);
+
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &_searchResultsImgWrapper {
+    max-width: 71.5%;
+    width: 100%;
+    height: auto;
+    border-radius: clamp(10px, 1.43vw, 20px);
+    overflow-y: hidden;
+    overflow-y: auto;
+
+    & > img {
+      height: auto;
+      width: 100%;
+      min-width: 700px;
+      object-fit: fill;
+    }
+  }
+
+  &_searchResultsContent {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: clamp(10px, 2.86vw, 40px);
+  }
+
+  &_searchResultsTop {
+    width: fit-content;
+    padding: 4px clamp(8px, 1.07vw, 15px);
+    font-size: clamp(1.25rem, 2.43vw, 2.125rem);
+    line-height: 120%;
+    font-weight: $font-weight-bold;
+    color: $font-color-invert;
+    border-radius: 80px;
+    border: 1.5px solid $font-color-invert;
+  }
+
+  &_searchResultsText {
+    color: $font-color-invert;
+    line-height: 120%;
+  }
+
+  &_searchDisplays {
+    display: flex;
+    justify-content: space-between;
+    gap: clamp(10px, 4.29vw, 60px);
+    margin-bottom: clamp(70px, 7.14vw, 100px);
+    padding: clamp(30px, 2.86vw, 40px) clamp(35px, 5.71vw, 80px);
+    border-radius: clamp(30px, 4.29vw, 60px);
+    background-color: #e2e8f0;
+    overflow: hidden;
+  }
+
+  &_searchDisplaysContent {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 44px;
+  }
+
+  &_searchDisplaysTitle {
+    width: fit-content;
+    padding: 4px clamp(8px, 1.07vw, 15px);
+    font-size: clamp(1.25rem, 2.43vw, 2.125rem);
+    line-height: 120%;
+    font-weight: $font-weight-bold;
+    color: #575859;
+    border-radius: 80px;
+    border: 1.5px solid #575859;
+  }
+
+  &_searchDisplaysImgWrapper {
+    max-width: 64%;
+    width: 100%;
+    height: auto;
+    border-radius: clamp(10px, 1.43vw, 20px);
+    overflow: hidden;
+
+    & > img {
+      height: auto;
+      width: 100%;
+      object-fit: fill;
+    }
+  }
+
+  &_searchDisplaysText {
+    color: #3f484f;
+    flex: 1;
+  }
+
+  &_visibility {
+    padding-block: clamp(35px, 5vw, 70px) clamp(35px, 2.86vw, 40px);
+    padding-inline: clamp(30px, 5.71vw, 80px);
+    border-radius: clamp(20px, 4.29vw, 60px);
+    background-color: #73a0ea;
+    overflow: hidden;
+  }
+
+  &_visibilityItem:not(:last-of-type) {
+    margin-bottom: clamp(30px, 4.29vw, 60px);
+  }
+
+  &_visibilityTitle {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: clamp(1.25rem, 2.43vw, 2.125rem);
+    line-height: 120%;
+    font-weight: $font-weight-bold;
+    color: $font-color-invert;
+    margin-bottom: clamp(10px, 1.07vw, 15px);
+  }
+
+  &_visibilityTitleItem {
+    width: fit-content;
+    white-space: nowrap;
+    padding: 3px clamp(8px, 1.07vw, 15px);
+    border-radius: 80px;
+    border: 1.5px solid $font-color-invert;
+  }
+
+  &_visibilityText {
+    margin-bottom: clamp(10px, 2.14vw, 30px);
+    font-size: clamp(1.125rem, 2.43vw, 2.125rem);
+    color: $font-color-invert;
+    line-height: 130%;
+  }
+
+  &_visibilityImgWrapper {
+    width: 100%;
+    height: auto;
+    border-radius: clamp(10px, 1.43vw, 20px);
+    overflow: hidden;
+
+    & > img {
+      height: auto;
+      width: 100%;
+      min-width: 700px;
+      object-fit: fill;
+    }
+  }
+}
+
+@media (max-width: $breakpoints-md) {
+  .positionSection {
+    &_searchResults {
+      padding-right: 0;
+    }
+
+    &_searchResultsItem {
+      flex-direction: column-reverse;
+    }
+
+    &_searchResultsImgWrapper {
+      max-width: 100%;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &_searchDisplaysImgWrapper {
+      max-width: 100%;
+    }
+
+    &_searchDisplays {
+      flex-direction: column;
+    }
+
+    &_visibility {
+      padding-right: 0;
+    }
+
+    &_visibilityImgWrapper {
+      overflow-x: auto;
+    }
+  }
+}
+
+@media (max-width: $breakpoints-sm) {
+  .positionSection {
+  }
+}

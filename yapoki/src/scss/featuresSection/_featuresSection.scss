@@ -1,0 +1,12 @@
+.featuresSection {
+  margin-bottom: clamp(60px, 12.14vw, 170px);
+
+  &_title {
+    margin-bottom: clamp(12px, 1.43vw, 20px);
+  }
+}
+
+@media (max-width: $breakpoints-md) {
+  .featuresSection {
+  }
+}
