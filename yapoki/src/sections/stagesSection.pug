@@ -6,6 +6,20 @@
     {text: "Анализ юзабилити", id: "4"},
     {text: "Serm", id: "5"}]
 
+    var changes = ["исправили файл sitemap.xml",
+    "заменили ссылки с кодом 3xx ответа сервера", 
+    "удалили технические дубли страниц", 
+    "исправили ошибки верстки",
+    "увеличили скорость загрузки",
+    "внедрили микроразметку и т.д."]
+
+    var doingItems = [{number: "1", text: "Оптимизируем структуру сайта: создаем посадочные страницы для каждого раздела сайта для продвижения." },
+    {number: "2", text: "Задаем ЧПУ URL для карточек товаров, чтобы задать уникальные мета-теги. " },
+    {number: "3", text: "Получаем трехуровневые ссылки для “подкрепления” ранее полученных платных ссылок." },
+    {number: "4", text: "Исправляем технические ошибки, связанные с тем, что сайт самописный." }]
+ 
+
+
 section.stagesSection
     h2.stagesSection_title Этапы работ:
     ul.swiperGeely_navWrapper
@@ -23,19 +37,15 @@ section.stagesSection
                         p.stagesSection_descriptionText.mb-10 В этом проекте мы начали с технического аудита. 
                         p.stagesSection_descriptionText.mb-10 По результатам которого составили ТЗ на доработки. Некоторые изменения:
                         ul.stagesSection_slideUl 
-                            li.stagesSection_slideLi исправили файл sitemap.xml
-                            li.stagesSection_slideLi заменили ссылки с кодом 3xx ответа сервера
-                            li.stagesSection_slideLi удалили технические дубли страниц
-                            li.stagesSection_slideLi исправили ошибки верстки
-                            li.stagesSection_slideLi увеличили скорость загрузки
-                            li.stagesSection_slideLi внедрили микроразметку и т.д.
+                            each change in changes
+                                li.stagesSection_slideLi= change                            
                     .stagesSection_itemSecondColumn.stagesSection__firstSlideImage                     
                 .swiper-slide.stagesSection_item
                     .stagesSection_itemTitle 
                         h3.stagesSection_itemTitleText Семантическое ядро
                         span.stagesSection_itemTitleNumber 2
                     .stagesSection_itemDescription
-                        p.stagesSection_descriptionText Собрали семантическое ядро отдельно для каждого региона. В результате вышло около 3000 запросов.  Начали с коммерческих запросов,например, “заказать суши+регион”, “купить суши в Новороссийске”, которые позже дополнили информационными.
+                        p.stagesSection_descriptionText Собрали семантическое ядро отдельно для каждого региона. В результате вышло около 3000 запросов. Начали с коммерческих запросов,например, “заказать суши+регион”, “купить суши в Новороссийске”, которые позже дополнили информационными.
                     p.stagesSection_itemDescription2.stagesSection_itemDescription2Slide2 3000                    
                     .stagesSection_itemSecondColumn.stagesSection__secondSlideImage 
                 .swiper-slide.stagesSection_item
@@ -74,6 +84,13 @@ section.stagesSection
                         h3.stagesSection_itemTitleText Serm
                         span.stagesSection_itemTitleNumber 6
                     .stagesSection_itemDescription
-                        p.stagesSection_descriptionText.mb-10 Ежемесячно ведется работа с репутацией: вовремя отвечаем на комментарии, взаимодействуем с клиентами  и на основании этого улучшаем сервис.
+                        p.stagesSection_descriptionText.mb-10 Ежемесячно ведется работа с репутацией: вовремя отвечаем на комментарии, взаимодействуем с клиентами и на основании этого улучшаем сервис.
                     .stagesSection_itemSecondColumn.stagesSection__6thSlideImage 
         .stagesSection_arrow
+    .stagesSection_doingWrapper
+        h3.stagesSection_doingTitle Что делаем сейчас?
+        ul.stagesSection_doingList
+            each item in doingItems
+                li.stagesSection_doingListItem
+                    span.stagesSection_doingListItemNumber #[span= item.number]
+                    p= item.text

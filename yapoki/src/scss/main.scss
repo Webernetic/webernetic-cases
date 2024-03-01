@@ -4,9 +4,11 @@
 @import './headerSection/_headerSection.scss';
 @import './resultsSection/_resultsSection.scss';
 @import './featuresSection/_featuresSection.scss';
-@import './aboutSection/_aboutSection.scss';
 @import './stagesSection/_stagesSection.scss';
 @import './positionSection/_positionSection.scss';
+@import './attendanceSection/_attendanceSection.scss';
+@import './usersSection/_usersSection.scss';
+@import './trafficSection/_trafficSection.scss';
 @import './summarySection/_summarySection.scss';
 @import './orderSection/_orderSection.scss';
 @import './swiper/_swiper-bundle.min.css';
@@ -140,6 +142,10 @@ span {
 
 .colorInvertText {
   color: $font-color-invert;
+}
+
+.colorInvertBorder {
+  border-color: $font-color-invert;
 }
 
 .brightText {

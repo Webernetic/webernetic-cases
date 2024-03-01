@@ -1,0 +1,74 @@
+.trafficSection {
+  margin-bottom: clamp(60px, 7.86vw, 110px);
+
+  &_title {
+    margin-bottom: clamp(12px, 1.43vw, 20px);
+  }
+
+  &_wrapper {
+    display: grid;
+    grid-template:
+      'a b'
+      'a c';
+    gap: clamp(15px, 2.14vw, 30px);
+    grid-template-rows: 50% 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &_firstBlock {
+    padding: clamp(20px, 3.57vw, 50px);
+    padding-bottom: 0;
+    border-radius: clamp(15px, 2.14vw, 30px);
+    background-color: #e8eeff;
+    grid-area: a;
+  }
+
+  &_firstBlockImageWrapper {
+    border-top-left-radius: clamp(10px, 1.43vw, 20px);
+    border-top-right-radius: clamp(10px, 1.43vw, 20px);
+    overflow: hidden;
+    height: auto;
+    width: 100%;
+
+    & > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__blockTitle1 {
+    color: #ff7b00;
+    font-size: clamp(1.125rem, 2.43vw, 2.125rem);
+    font-weight: $font-weight-bold;
+  }
+
+  &__blockTitle2 {
+    display: inline-block;
+    margin-bottom: clamp(15px, 1.43vw, 20px);
+    color: #0689c0;
+    font-size: clamp(1.125rem, 2.43vw, 2.125rem);
+    font-weight: $font-weight-bold;
+  }
+
+  &_secondBlock {
+    grid-area: b;
+  }
+
+  &_thirdBlock {
+    grid-area: c;
+  }
+}
+
+@media (max-width: $breakpoints-md) {
+  .trafficSection {
+    &_wrapper {
+      flex-direction: column;
+      grid-template:
+        'a'
+        'b'
+        'c';
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, auto);
+    }
+  }
+}
