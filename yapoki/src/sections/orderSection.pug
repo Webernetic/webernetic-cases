@@ -14,18 +14,20 @@
     {type: "url", placeholder: "Сайт*", name: "site"} ]
 
 section.orderSection 
-  .orderSection_nameWrapper
-    h4.colorInvertText Анастасия
-    p.colorInvertText ACCOUNT MANAGER
-  .orderSection_imageWrapper 
-    +img("./assets/images/girl.png", "Девушка", ["500", "1200"])
-  form.orderSection_form.feedback__form
-    h3.orderSection_formTitle Заказать консультацию
-    .flexContainer.orderSection_inputWrapper  
-      each input in inputs         
-        input.input(type= input.type placeholder=input.placeholder name=input.name)   
-    h4.orderSection_secondformTitle Чем вам помочь?
-    .orderSection_checkboxWrapper
-      each checkbox in checkboxes 
-        +customCheckbox(checkbox.value, checkbox.name, checkbox.id)          
-    button.customButton(type="submit") Отправить  
+  .orderSection_title Свяжитесь с нами сегодня, чтобы быть в Топе уже завтра!
+  .orderSection_wrapper
+    .orderSection_nameWrapper
+      h4.colorInvertText Анастасия
+      p.colorInvertText ACCOUNT MANAGER
+    .orderSection_imageWrapper 
+      +img("./assets/images/girl.png", "Девушка", ["500", "1200"])
+    form.orderSection_form.feedback__form
+      h3.orderSection_formTitle Заказать консультацию
+      .flexContainer.orderSection_inputWrapper  
+        each input in inputs         
+          input.input(type= input.type placeholder=input.placeholder name=input.name)   
+      h4.orderSection_secondformTitle Чем вам помочь?
+      .orderSection_checkboxWrapper
+        each checkbox in checkboxes 
+          +customCheckbox(checkbox.value, checkbox.name, checkbox.id)          
+      button.customButton(type="submit") Отправить  

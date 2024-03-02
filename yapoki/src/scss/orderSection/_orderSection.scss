@@ -1,13 +1,20 @@
 .orderSection {
-  position: relative;
-  display: flex;
-  // top: calc(-1 * clamp(30px, 3.57vw, 50px));
-  min-height: 110%;
-  z-index: 1;
-  gap: clamp(40px, 6.07vw, 85px);
-  padding-inline: clamp(30px, 10.29vw, 144px) clamp(30px, 11.4vw, 160px);
-  padding-block: clamp(85px, 10.71vw, 150px) clamp(55px, 7.14vw, 100px);
-  background-color: $bg-dark;
+  &_title {
+    margin-bottom: clamp(20px, 2.14vw, 30px);
+    font-size: clamp(1.5rem, 1.47vw, 2.125rem);
+    font-weight: 800;
+    text-align: center;
+  }
+
+  &_wrapper {
+    position: relative;
+    display: flex;
+    gap: clamp(40px, 7.5vw, 105px);
+    padding-inline: clamp(20px, 8.14vw, 114px) clamp(20px, 5vw, 70px);
+    padding-block: clamp(40px, 5vw, 70px);
+    background-color: #e2e2e2;
+    border-radius: clamp(20px, 2.14vw, 30px);
+  }
 
   &_imageWrapper {
     max-width: 40%;
@@ -38,14 +45,14 @@
     & > h4 {
       font-size: clamp(20px, 2.1vw, 36px);
       font-weight: $font-weight-extra-bold;
-      color: #3f484f;
+      color: #333333;
       font-family: $font-family;
     }
 
     & > p {
       font-size: clamp(8px, 0.9vw, 12px);
       font-weight: $font-weight-bold;
-      color: #3f484f;
+      color: #333333;
     }
   }
 
@@ -58,14 +65,14 @@
     margin-bottom: 20px;
     font-weight: $font-weight-extra-bold;
     font-size: clamp(2rem, 3.43vw, 3rem);
-    color: $font-color-invert;
-    line-height: 110%;
+    color: #333333;
+    line-height: 146%;
   }
 
   &_secondformTitle {
     margin-bottom: 20px;
     font-size: clamp(1.125rem, 2.57vw, 2.25rem);
-    color: $font-color-invert;
+    color: #333333;
     font-weight: $font-weight-bold;
     line-height: 147%;
   }
@@ -79,6 +86,7 @@
 
     & > input {
       flex-basis: 47%;
+      color: #333333;
     }
   }
 
@@ -119,6 +127,10 @@
   }
 
   @media (max-width: $breakpoints-sm) {
+    &_title {
+      text-align: start;
+    }
+
     &_form {
       align-items: stretch;
     }

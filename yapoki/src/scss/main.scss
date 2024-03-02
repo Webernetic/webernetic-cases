@@ -9,6 +9,8 @@
 @import './attendanceSection/_attendanceSection.scss';
 @import './usersSection/_usersSection.scss';
 @import './trafficSection/_trafficSection.scss';
+@import './trafficSection/_trafficSection.scss';
+@import './conversionSection/_conversionSection.scss';
 @import './summarySection/_summarySection.scss';
 @import './orderSection/_orderSection.scss';
 @import './swiper/_swiper-bundle.min.css';
@@ -27,6 +29,7 @@ body {
   position: relative;
   scroll-behavior: smooth;
   z-index: -1;
+  background-color: #f5f7fc62;
 }
 
 body::-webkit-scrollbar {
@@ -114,6 +117,7 @@ label,
 input::placeholder {
   font-size: clamp(1.125rem, 1.86vw, 1.625rem);
   line-height: 138%;
+  font-weight: 400;
   color: inherit;
   margin: 0;
   padding: 0;
@@ -222,14 +226,14 @@ span {
 }
 
 .input {
-  border-bottom: 2px solid $font-color-invert;
+  border-bottom: 2px solid #333333;
   width: 100%;
   font-size: clamp(1.125rem, 1.71vw, 1.5rem);
-  color: $font-color-invert;
+  color: #333333;
   line-height: 147%;
 
   &::placeholder {
-    color: #ffffff;
+    color: inherit;
     line-height: 1;
     opacity: 0.5;
     font-size: clamp(1.125rem, 1.71vw, 1.5rem);
@@ -239,15 +243,16 @@ span {
 
 .customButton {
   font-size: clamp(1.125rem, 2.57vw, 2.25rem);
-  color: $font-color-invert;
+  width: fit-content;
+  color: $font-color;
   font-weight: $font-weight-extra-bold;
   line-height: 147%;
-  border-bottom: 2px solid $font-color-invert;
+  border-bottom: 2px solid #333333;
 
   &:hover,
   &:active {
     transform: scale(1.05);
-    color: #eeeeee;
-    border-color: $font-color-bright;
+    color: #000000;
+    border-color: #000000;
   }
 }

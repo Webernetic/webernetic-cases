@@ -1,0 +1,54 @@
+.conversionSection {
+  margin-bottom: clamp(60px, 7.86vw, 110px);
+
+  &_title {
+    margin-bottom: clamp(12px, 1.43vw, 20px);
+  }
+
+  &_header {
+    margin-bottom: clamp(15px, 2.14vw, 30px);
+    padding: clamp(15px, 1.79vw, 25px) clamp(20px, 2.57vw, 50px);
+    border-radius: clamp(20px, 2.14vw, 30px);
+    background-color: $bg-bright;
+  }
+
+  &_headerText {
+    margin-block: auto;
+    font-size: clamp(1rem, 2.43vw, 1.75rem);
+    line-height: 110%;
+    color: $font-color-invert;
+  }
+
+  &_headerItem {
+    display: inline-block;
+    margin-bottom: 4px;
+    padding: 4px clamp(8px, 1.07vw, 15px);
+    border: 1px solid $font-color-invert;
+    border-radius: 50px;
+    font-size: clamp(1.125rem, 2.43vw, 2.125rem);
+    font-weight: $font-weight-bold;
+    line-height: 147%;
+    color: $font-color-invert;
+  }
+
+  &_imgWrapper {
+    width: 100%;
+    height: auto;
+    margin-bottom: clamp(15px, 1.43vw, 30px);
+    border-radius: 20px;
+    overflow-y: hidden;
+    overflow-x: auto;
+
+    & > img {
+      height: auto;
+      width: 100%;
+      min-width: 700px;
+      object-fit: fill;
+    }
+  }
+}
+
+@media (max-width: $breakpoints-sm) {
+  .conversionSection {
+  }
+}
