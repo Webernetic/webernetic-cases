@@ -1,0 +1,258 @@
+@import './fonts';
+@import './variables';
+@import '../mixins/mixinsStyles.scss';
+@import './headerSection/_headerSection.scss';
+@import './resultsSection/_resultsSection.scss';
+@import './featuresSection/_featuresSection.scss';
+@import './stagesSection/_stagesSection.scss';
+@import './positionSection/_positionSection.scss';
+@import './attendanceSection/_attendanceSection.scss';
+@import './usersSection/_usersSection.scss';
+@import './trafficSection/_trafficSection.scss';
+@import './trafficSection/_trafficSection.scss';
+@import './conversionSection/_conversionSection.scss';
+@import './summarySection/_summarySection.scss';
+@import './orderSection/_orderSection.scss';
+@import './swiper/_swiper-bundle.min.css';
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: $font-family;
+  color: $font-color;
+}
+
+body {
+  position: relative;
+  scroll-behavior: smooth;
+  z-index: -1;
+  background-color: #f5f7fc62;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  max-width: $max-width;
+  padding: clamp(20px, 2.86vw, 40px) clamp(20px, 4.29vw, 60px);
+  width: 100%;
+  margin: 0 auto;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  appearance: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: $font-weight-bold;
+  font-family: $font-family;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 4.38rem);
+  line-height: 100%;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4.29vw, 3.75rem);
+  line-height: 147%;
+}
+
+h3 {
+  font-size: clamp(1.375rem, 2.86vw, 2.5rem);
+  line-height: 147%;
+}
+
+h4 {
+  font-size: clamp(1.375rem, 2vw, 1.75rem);
+  line-height: 120%;
+}
+
+p,
+span,
+li,
+a,
+ul,
+figcaption,
+blockquote,
+input,
+label,
+input::placeholder {
+  font-size: clamp(1.125rem, 1.86vw, 1.625rem);
+  line-height: 138%;
+  font-weight: 400;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.li {
+  font-size: max(1.125rem, min(2vw, 1.5rem));
+  line-height: 147%;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.boldText {
+  font-weight: $font-weight-bold;
+}
+
+.lightText {
+  $font-weight: $font-weight-primary;
+}
+
+.colorInvertText {
+  color: $font-color-invert;
+}
+
+.colorInvertBorder {
+  border-color: $font-color-invert;
+}
+
+.brightText {
+  color: $font-color-bright;
+}
+
+.whiteBg {
+  background-color: $bg-white;
+}
+
+.brightBg {
+  background-color: $bg-bright;
+}
+
+.secondaryBg {
+  background-color: $bg-secondary;
+}
+
+.verticalCenter {
+  display: flex;
+  align-items: center;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(12px, 1.07vw, 15px);
+
+  & > div {
+    flex: 1;
+  }
+}
+
+.mb-6 {
+  margin-bottom: clamp(4px, 0.7vw, 6px);
+}
+
+.mb-10 {
+  margin-bottom: clamp(8px, 0.7vw, 10px);
+}
+
+.mb-20 {
+  margin-bottom: clamp(10px, 1.43vw, 20px);
+}
+
+.mb-24 {
+  margin-bottom: clamp(16px, 1.7vw, 24px);
+}
+
+.mb-50 {
+  margin-bottom: clamp(20px, 3.57vw, 50px);
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.heightAuto {
+  height: auto;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.input {
+  border-bottom: 2px solid #333333;
+  width: 100%;
+  font-size: clamp(1.125rem, 1.71vw, 1.5rem);
+  color: #333333;
+  line-height: 147%;
+
+  &::placeholder {
+    color: inherit;
+    line-height: 1;
+    opacity: 0.5;
+    font-size: clamp(1.125rem, 1.71vw, 1.5rem);
+    line-height: 147%;
+  }
+}
+
+.customButton {
+  font-size: clamp(1.125rem, 2.57vw, 2.25rem);
+  width: fit-content;
+  color: $font-color;
+  font-weight: $font-weight-extra-bold;
+  line-height: 147%;
+  border-bottom: 2px solid #333333;
+
+  &:hover,
+  &:active {
+    transform: scale(1.05);
+    color: #000000;
+    border-color: #000000;
+  }
+}

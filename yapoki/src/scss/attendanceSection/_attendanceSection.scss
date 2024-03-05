@@ -1,0 +1,80 @@
+.attendanceSection {
+  margin-bottom: clamp(60px, 7.86vw, 110px);
+
+  &_title {
+    margin-bottom: clamp(12px, 1.43vw, 20px);
+  }
+
+  &_imgWrapper {
+    width: 100%;
+    height: auto;
+    margin-bottom: clamp(15px, 1.43vw, 30px);
+    border-radius: 20px;
+    overflow-y: hidden;
+    overflow-y: auto;
+
+    & > img {
+      height: auto;
+      width: 100%;
+      min-width: 700px;
+      object-fit: fill;
+    }
+  }
+
+  &_wrapper {
+    display: flex;
+    gap: clamp(15px, 1.43vw, 30px);
+  }
+
+  &_item {
+    flex: 1;
+    padding: clamp(40px, 4.29vw, 60px) clamp(20px, 3.57vw, 50px)
+      clamp(30px, 3.57vw, 50px) clamp(20px, 3.57vw, 50px);
+    background-color: $bg-bright;
+    border-radius: 20px;
+  }
+
+  &_itemBigText {
+    display: inline-block;
+    margin-bottom: clamp(41px, 3.86vw, 54px);
+    font-size: clamp(3.44rem, 6.07vw, 5.313rem);
+    font-weight: $font-weight-bold;
+    color: $font-color-invert;
+    line-height: 120%;
+  }
+
+  &_itemFooterWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &_itemText {
+    font-size: clamp(1.125rem, 2.43vw, 2.125rem);
+    font-weight: $font-weight-bold;
+    color: $font-color-invert;
+    line-height: 120%;
+  }
+
+  &_itemOutline {
+    display: inline-block;
+    padding: 4px clamp(8px, 1.07vw, 15px);
+    border: 1px solid $font-color-invert;
+    border-radius: 50px;
+  }
+}
+
+@media (max-width: $breakpoints-md) {
+  .attendanceSection {
+    &_imgWrapper {
+      max-width: 100%;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &_wrapper {
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,96 @@
+-
+    var navItems = [{text: "Технический аудит", id: "0"},
+    {text: "Сбор СЯ", id: "1"},
+    {text: "Контентная оптимизация", id: "2"},
+    {text: "Анализ ссылочного профиля", id: "3"},
+    {text: "Анализ юзабилити", id: "4"},
+    {text: "Serm", id: "5"}]
+
+    var changes = ["исправили файл sitemap.xml",
+    "заменили ссылки с кодом 3xx ответа сервера", 
+    "удалили технические дубли страниц", 
+    "исправили ошибки верстки",
+    "увеличили скорость загрузки",
+    "внедрили микроразметку и т.д."]
+
+    var doingItems = [{number: "1", text: "Оптимизируем структуру сайта: создаем посадочные страницы для каждого раздела сайта для продвижения." },
+    {number: "2", text: "Задаем ЧПУ URL для карточек товаров, чтобы задать уникальные мета-теги. " },
+    {number: "3", text: "Получаем трехуровневые ссылки для “подкрепления” ранее полученных платных ссылок." },
+    {number: "4", text: "Исправляем технические ошибки, связанные с тем, что сайт самописный." }]
+ 
+
+
+section.stagesSection
+    h2.stagesSection_title Этапы работ:
+    ul.swiperGeely_navWrapper
+        each item in navItems
+            li.swiperGeely_navItem("id"= item.id)
+                p.stagesSection_navItemText= item.text
+    .stagesSection__relative 
+        .swiperGeely
+            .swiper-wrapper
+                .swiper-slide.stagesSection_item.stagesSection__paddingBottom
+                    .stagesSection_itemTitle 
+                        h3.stagesSection_itemTitleText Технический аудит
+                        span.stagesSection_itemTitleNumber 1
+                    .stagesSection_itemDescription
+                        p.stagesSection_descriptionText.mb-10 В этом проекте мы начали с технического аудита. 
+                        p.stagesSection_descriptionText.mb-10 По результатам которого составили ТЗ на доработки. Некоторые изменения:
+                        ul.stagesSection_slideUl 
+                            each change in changes
+                                li.stagesSection_slideLi= change                            
+                    .stagesSection_itemSecondColumn.stagesSection__firstSlideImage                     
+                .swiper-slide.stagesSection_item
+                    .stagesSection_itemTitle 
+                        h3.stagesSection_itemTitleText Семантическое ядро
+                        span.stagesSection_itemTitleNumber 2
+                    .stagesSection_itemDescription
+                        p.stagesSection_descriptionText Собрали семантическое ядро отдельно для каждого региона. В результате вышло около 3000 запросов. Начали с коммерческих запросов,например, “заказать суши+регион”, “купить суши в Новороссийске”, которые позже дополнили информационными.
+                    p.stagesSection_itemDescription2.stagesSection_itemDescription2Slide2 3000                    
+                    .stagesSection_itemSecondColumn.stagesSection__secondSlideImage 
+                .swiper-slide.stagesSection_item
+                    .stagesSection_itemTitle 
+                        h3.stagesSection_itemTitleText Контентная оптимизация
+                        span.stagesSection_itemTitleNumber 3
+                    .stagesSection_itemDescription
+                        p.mb-10 На основании семантики был подготовлен контент-план для проработки мета-тегов и, в дальнейшем, текстов страниц.
+                        p На данный момент на сайте проработаны все мета-теги и написаны тексты для главных страниц по каждому городу.
+                    .stagesSection_itemSecondColumn.stagesSection__thirdSlideImage
+                .swiper-slide.stagesSection_item.stagesSection_itemSlide4-5          
+                    .stagesSection_itemTitle 
+                        h3.stagesSection_itemTitleText Анализ ссылочного профиля
+                        span.stagesSection_itemTitleNumber 4
+                    .stagesSection_itemDescription
+                        p.mb-10 Провели анализ ссылочного профиля сайта и всех конкурентов этой сферы в каждом регионе. Сайты-конкуренты имели от 400 до 1729 ссылок, что в несколько раз больше, чем было у клиента. На основании этого составили план наращивания ссылочной массы. 
+                    .stagesSection_itemDescription2.stagesSection__4thSlideImage
+                    .stagesSection_itemSecondColumn.stagesSection_itemInnerBlock
+                        p.mb-10 На данный момент на сайте ведется работа по получению бесплатных и платных ссылок. Также наращиваем двух- и трехуровневые ссылки.
+                        p Перейдя на наращивание разноуровневых ссылок, мы заметили, что ключи, которые постоянно меняли позиции - перестали прыгать. И заняли более высокие позиции (анализируемый период - 4-6 месяцев).  
+                .swiper-slide.stagesSection_item.stagesSection_itemSlide4-5 
+                    .stagesSection_itemTitle 
+                        h3.stagesSection_itemTitleText Анализ юзабилити
+                        span.stagesSection_itemTitleNumber 5
+                    .stagesSection_itemDescription
+                        p.stagesSection_descriptionText.mb-10 Проведен анализ юзабилити сайта и составлен список рекомендаций по улучшению юзабилити и увеличению конверсионности сайта.  Все рекомендации были выполнены.
+                        p.stagesSection_descriptionText.mb-6 Некоторые из доработок:
+                        ul.stagesSection_slideUl
+                            li.stagesSection_slideLi улучшение структуры сайта
+                            li.stagesSection_slideLi внедрение необходимых страниц
+                            li.stagesSection_slideLi добавление фильтра
+                            li.stagesSection_slideLi редактирование списка выбранных товаров, не переходя в интерфейс корзины и т.д..
+                    .stagesSection_itemSecondColumn.stagesSection__5thSlideImage 
+                .swiper-slide.stagesSection_item.stagesSection_itemSlide4-5 
+                    .stagesSection_itemTitle 
+                        h3.stagesSection_itemTitleText Serm
+                        span.stagesSection_itemTitleNumber 6
+                    .stagesSection_itemDescription
+                        p.stagesSection_descriptionText.mb-10 Ежемесячно ведется работа с репутацией: вовремя отвечаем на комментарии, взаимодействуем с клиентами и на основании этого улучшаем сервис.
+                    .stagesSection_itemSecondColumn.stagesSection__6thSlideImage 
+        .stagesSection_arrow
+    .stagesSection_doingWrapper
+        h3.stagesSection_doingTitle Что делаем сейчас?
+        ul.stagesSection_doingList
+            each item in doingItems
+                li.stagesSection_doingListItem
+                    span.stagesSection_doingListItemNumber #[span= item.number]
+                    p= item.text

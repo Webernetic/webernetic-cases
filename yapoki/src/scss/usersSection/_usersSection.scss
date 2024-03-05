@@ -1,0 +1,37 @@
+.usersSection {
+  margin-bottom: clamp(60px, 7.86vw, 110px);
+
+  &_title {
+    margin-bottom: clamp(12px, 1.43vw, 20px);
+  }
+
+  &_wrapper {
+    padding-top: clamp(30px, 3.57vw, 50px);
+    padding-left: clamp(20px, 3.57vw, 50px);
+    border-radius: 20px;
+    background-color: #e8eeff;
+    overflow: hidden;
+  }
+
+  &_wrapperTitle {
+    margin-bottom: clamp(16px, 2.29vw, 32px);
+    padding-right: clamp(20px, 3.57vw, 50px);
+    font-size: clamp(1.125rem, 2.43vw, 2.125rem);
+    font-weight: $font-weight-bold;
+    line-height: 120%;
+  }
+
+  &_imageWrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 20px;
+    overflow: auto;
+
+    & > img {
+      min-width: 700px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

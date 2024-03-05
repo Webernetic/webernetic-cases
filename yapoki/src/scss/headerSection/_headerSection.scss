@@ -1,0 +1,70 @@
+.headerSection {
+  display: flex;
+  margin-bottom: clamp(60px, 7.86vw, 110px);
+  border-radius: clamp(25px, 3.57vw, 50px);
+  background-color: $bg-bright;
+  background-image: url('./../assets/images/pizza-1200.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom;
+
+  &_content {
+    flex-basis: 55%;
+    padding: clamp(20px, 5vw, 70px) 0 clamp(20px, 4.29vw, 60px)
+      clamp(20px, 3.57vw, 50px);
+  }
+
+  &_title {
+    color: $font-color-invert;
+    margin-bottom: clamp(40px, 4.29vw, 60px);
+  }
+
+  &_itemsWrapper {
+    margin: 0;
+    padding: 0;
+  }
+
+  &_item {
+    margin: 0;
+    padding: 0;
+
+    &:not(:last-of-type) {
+      margin-bottom: clamp(14px, 1.57vw, 22px);
+    }
+  }
+
+  &_itemTitle {
+    width: fit-content;
+    margin-bottom: 2px;
+    padding: 4px clamp(10px, 1.07vw, 15px);
+    border: 1px solid #fff;
+    border-radius: 40px;
+    font-size: clamp(1rem, 1.71vw, 1.5rem);
+    color: $font-color-invert;
+  }
+
+  &_itemText {
+    font-size: clamp(1.25rem, 2.5vw, 2.188rem);
+    font-weight: 700;
+    color: $font-color;
+  }
+}
+
+@media (max-width: $breakpoints-md) {
+  .headerSection {
+    background-size: 80% auto;
+  }
+}
+
+@media (max-width: $breakpoints-sm) {
+  .headerSection {
+    flex-direction: column;
+    background-image: url('./../assets/images/pizza-500.png');
+    background-size: contain;
+
+    &_content {
+      padding-right: 20px;
+      padding-bottom: 178px;
+    }
+  }
+}

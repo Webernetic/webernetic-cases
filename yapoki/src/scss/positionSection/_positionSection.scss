@@ -1,0 +1,124 @@
+.positionSection {
+  margin-bottom: clamp(60px, 7.86vw, 110px);
+
+  &_title {
+    margin-bottom: clamp(12px, 1.43vw, 20px);
+  }
+
+  &_header {
+    display: flex;
+    align-items: center;
+    gap: clamp(6px, 0.71vw, 10px);
+    margin-bottom: clamp(15px, 2.14vw, 30px);
+    padding: clamp(15px, 1.79vw, 25px) clamp(20px, 2.57vw, 50px);
+    border-radius: clamp(20px, 2.14vw, 30px);
+    background-color: $bg-bright;
+  }
+
+  &_headerText {
+    font-size: clamp(1.125rem, 2.43vw, 2.125rem);
+    line-height: 147%;
+    color: $font-color-invert;
+  }
+
+  &_headerItem {
+    padding: 4px clamp(8px, 1.07vw, 15px);
+    border: 1px solid $font-color-invert;
+    border-radius: 50px;
+    font-size: clamp(1.125rem, 2.43vw, 2.125rem);
+    font-weight: $font-weight-bold;
+    line-height: 147%;
+    color: $font-color-invert;
+  }
+
+  &_searchResults {
+    padding: clamp(20px, 3.57vw, 50px) clamp(20px, 5.71vw, 50px);
+    border-radius: clamp(20px, 2.14vw, 30px);
+    background-color: #e8eeff;
+    overflow: hidden;
+  }
+
+  &_searchResultsSecondary {
+    margin-top: clamp(15px, 2.14vw, 30px);
+    background-color: $bg-dark;
+  }
+
+  &_searchResultsTitle {
+    margin-bottom: clamp(20px, 2.14vw, 30px);
+  }
+
+  &_searchResultsItem {
+    display: flex;
+    justify-content: space-between;
+    gap: clamp(15px, 2.86vw, 40px);
+
+    &:not(:last-of-type) {
+      margin-bottom: clamp(20px, 2.14vw, 30px);
+    }
+  }
+
+  &_searchResultsImgWrapper {
+    max-width: 67%;
+    width: 100%;
+    height: auto;
+    border-radius: clamp(10px, 1.43vw, 20px);
+    overflow-y: hidden;
+    overflow-y: auto;
+
+    & > img {
+      height: auto;
+      width: 100%;
+      min-width: 700px;
+      object-fit: fill;
+    }
+  }
+
+  &_searchResultsContent {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: clamp(10px, 2.86vw, 40px);
+  }
+
+  &_searchResultsTop {
+    width: fit-content;
+    padding: 4px clamp(8px, 1.07vw, 15px);
+    font-size: clamp(1.25rem, 2.43vw, 2.125rem);
+    line-height: 147%;
+    font-weight: $font-weight-bold;
+    color: $font-color;
+    border-radius: 80px;
+    border: 1.5px solid $font-color;
+  }
+
+  &_searchResultsText {
+    line-height: 120%;
+  }
+}
+
+@media (max-width: $breakpoints-md) {
+  .positionSection {
+    &_searchResults {
+      padding-right: 0;
+    }
+
+    &_searchResultsItem {
+      flex-direction: column-reverse;
+    }
+
+    &_searchResultsImgWrapper {
+      max-width: 100%;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &_searchDisplaysImgWrapper {
+      max-width: 100%;
+    }
+
+    &_searchDisplays {
+      flex-direction: column;
+    }
+  }
+}
