@@ -11,7 +11,7 @@ get_header();
           <div class="header_title">
             <h1 class="renovista-title">Website promotion and development</h1>
             <h1 class="brightText renovista-title">
-              for <span class="brightText"> distributor of server equipment</span>
+              for <span class="brightText"> a distributor of server equipment</span>
             </h1>
           </div>
           <div class="blockWrapper brightBg header_content">
