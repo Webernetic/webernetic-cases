@@ -1,0 +1,17 @@
+extends layouts/MainLayout
+include mixins/index.pug
+
+block title
+  | Design
+
+block content
+  body.body  
+    .container
+      include sections/headerSection  
+      include sections/casesSection       
+      include sections/stagesSection 
+      include sections/feedbackSection 
+
+  script
+    include js/filtration.js 
+    include js/slider.js
