@@ -3,6 +3,7 @@
 @import '../mixins/mixinsStyles.scss';
 @import './swiper/_swiper-bundle.min.css';
 @import './headerSection/_headerSection.scss';
+@import './nichesSection/_nichesSection.scss';
 @import './casesSection/_casesSection.scss';
 @import './stagesSection/_stagesSection.scss';
 @import './feedbackSection/_feedbackSection.scss';
@@ -28,9 +29,8 @@ body::-webkit-scrollbar {
 
 .container {
   max-width: $max-width;
-
   width: 100%;
-  margin: 0 auto;
+  margin-inline: auto;
 }
 
 .padding {
@@ -65,6 +65,8 @@ button {
 }
 
 img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -112,6 +114,7 @@ input,
 label,
 button,
 input::placeholder {
+  font-family: Circe;
   font-size: clamp(1.125rem, 1.57vw, 1.375rem);
   line-height: 130%;
   color: inherit;
@@ -128,6 +131,27 @@ span {
   color: inherit;
   margin: 0;
   padding: 0;
+}
+
+.customBtn {
+  width: 100%;
+  background-color: #2f58ff;
+  border-radius: 14px;
+  padding: 18px 30px;
+  color: #fff;
+  line-height: 1.37;
+  font-weight: 600;
+  font-size: clamp(1rem, 1.43vw, 1.25rem);
+
+  &:hover {
+    background-color: #5073ff;
+  }
+}
+
+@media (max-width: $breakpoints-sm) {
+  .padding {
+    padding-inline: 24px;
+  }
 }
 
 // .input {
