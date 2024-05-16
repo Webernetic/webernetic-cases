@@ -1,67 +1,73 @@
-const resetFilters = (activeFilterName) => {
-  let allFilters = document.querySelectorAll('.filterItem');
+const resetFilters = (filterTab) => {
+  const wrapper = filterTab.closest('.filtersTabs');
+
+  const activeFilterName = filterTab.getAttribute('data-filter-name');
+
+  let allFilters = wrapper.querySelectorAll('.filterTab');
+
   allFilters.forEach((item) => {
-    if (
-      item.getAttribute('data-filter-name') !== activeFilterName &&
-      item.classList.contains('activeFilter')
-    ) {
-      item.classList.remove('activeFilter');
+    if (item.getAttribute('data-filter-name') !== activeFilterName) {
+      item.classList.remove('active');
     }
   });
 };
 
-const toggleActiveFilterName = ({ target }) => {
+const toggleActiveFilterName = (filterTab) => {
+  filterTab.classList.toggle('active');
+
+  resetFilters(filterTab);
+};
+
+const getActiveFilter = (tab) => {
   let activeFilterName = null;
 
-  if (target.classList.contains('filterItem')) {
-    target.classList.toggle('activeFilter');
-    activeFilterName = target.getAttribute('data-filter-name');
+  if (tab.classList.contains('active')) {
+    activeFilterName = tab.getAttribute('data-filter-name');
   }
-
-  resetFilters(activeFilterName);
-};
-
-const getActiveFilter = () => {
-  let allFilters = document.querySelectorAll('.filterItem');
-  let activeFilterName = null;
-
-  allFilters.forEach((item) => {
-    if (item.classList.contains('activeFilter')) {
-      activeFilterName = item.getAttribute('data-filter-name');
-      return;
-    }
-  });
 
   return activeFilterName;
 };
 
-const showFilteredElements = (activeFilterName) => {
-  let allElements = document.querySelectorAll('.case');
+const showFilteredElements = (target) => {
+  console.log(target);
+
+  let activeFilterName = getActiveFilter(target);
+  console.log(activeFilterName);
+  const wrapper = target.closest('.filtersWrapper');
+
+  let allElements = wrapper.querySelectorAll('.filterItem');
 
   if (!activeFilterName) {
-    allElements.forEach((item) =>
-      item.classList.add('activeFiltartionElement'),
-    );
+    allElements.forEach((item) => {
+      item.classList.remove('active');
+      item.classList.remove('disactive');
+    });
+
     return;
   }
 
   allElements.forEach((item) => {
     if (item.getAttribute('data-filter-value') === activeFilterName) {
-      item.classList.add('activeFiltartionElement');
+      item.classList.add('active');
+      item.classList.remove('disactive');
     } else {
-      item.classList.remove('activeFiltartionElement');
+      item.classList.remove('active');
+      item.classList.add('disactive');
     }
   });
 };
 
-const filtration = (e) => {
-  toggleActiveFilterName(e);
-  let activeFilterName = getActiveFilter();
-  showFilteredElements(activeFilterName);
+const filtration = ({ target }) => {
+  if (target.classList.contains('filterTab')) {
+    toggleActiveFilterName(target);
+    showFilteredElements(target);
+  }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  const filtersWrapper = document.querySelector('.filtersWrapper');
+  const filtersWrappers = document.querySelectorAll('.filtersWrapper');
 
-  filtersWrapper.addEventListener('click', filtration);
+  filtersWrappers.forEach((wrapper) =>
+    wrapper.addEventListener('click', filtration),
+  );
 });

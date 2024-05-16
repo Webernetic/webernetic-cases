@@ -1,22 +1,35 @@
 -
-    var Filters = {STORE: "store", CORPORATE:"corporate", BUSINESSCARD:"businessСard", CATALOG:"catalog", LANDING:"landing"}
+    const Filters = {STORE: "store", CORPORATE:"corporate", BUSINESSCARD:"businessСard", CATALOG:"catalog", LANDING:"landing"}
 
--
-    var items = [{name: "Интернет-магазин", filterName: Filters.STORE}, 
+    const items = [{name: "Интернет-магазин", filterName: Filters.STORE}, 
     {name: "Сайт-каталог", filterName: Filters.CATALOG},
     {name: "Корпоративный сайт", filterName: Filters.CORPORATE},    
     {name: "Сайт-визитка", filterName: Filters.BUSINESSCARD},    
     {name: "Лендинг", filterName: Filters.LANDING}]
 
-section.casesSection
-    h2.casesSection_title Наши работы
-    up.casesSection_itemsWrapper.filtersWrapper
-        each item in items
-            li 
-                button.casesSection_item.filterItem("data-filter-name"= item.filterName)= item.name
-    .casesSection_casesWrapper
-        //- +case("Sysracks", "Разработка онлайн-магазина серверного оборудования", "./assets/images/case1.png", "https://webernetic.by/nashi-raboty/kejs-sysracks/" ).casesSection_case.activeFiltartionElement.casesSection__minWidthPrimary("data-filter-value" = Filters.STORE)
-        //- +case("Aquar System", "Сайт для промышленной компании", "./assets/images/case2.png", "https://webernetic.by/nashi-raboty/kejs-akvar-sistems/", "corporate").casesSection_case.activeFiltartionElement.casesSection__minWidthPrimary("data-filter-value" = Filters.CORPORATE)
-        //- +case("Лидкон", "Сайт для производителя пищевой продукции", "./assets/images/case3.png", "https://webernetic.by/nashi-raboty/lidkon-case/").casesSection_case.activeFiltartionElement.casesSection__minWidthSecondary("data-filter-value" = Filters.BUSINESSCARD)
-        //- +case("Zmicer Consulting", "Лендинг для продажи услуг консалтинга", "./assets/images/case4.png", "https://webernetic.by/nashi-raboty/kejs-zmicer-consulting/").casesSection_case.activeFiltartionElement.casesSection__minWidthSecondary("data-filter-value" = Filters.CATALOG)
-        //- +case("Law", "Сайт для юридической компании", "./assets/images/case5.png", "https://webernetic.by/nashi-raboty/law-company/ ").casesSection_case.activeFiltartionElement.casesSection__minWidthSecondary("data-filter-value" = Filters.LANDING)
+    const cases = [{type: "Интернет-магазин", image:"../assets/images/case-1.png", filterName: Filters.STORE, text:"Онлайн-магазин серверного и телекоммуникационного оборудования"}, 
+    {type: "Сайт-визитка", image:"../assets/images/case-2.png", filterName: Filters.BUSINESSCARD, text:"Сайт для юридической компании"}, 
+    {type: "Сайт-каталог", image:"../assets/images/case-3.png", filterName: Filters.CATALOG, text:"Сайт для производителя продуктов питания"},    
+    {type: "Сайт-каталог", image:"../assets/images/case-4.png", filterName: Filters.CATALOG, text:"Лендинг для продажи услуг консалтинга"},    
+    {type: "Корпоративный сайт", image:"../assets/images/case-5.png", filterName: Filters.CORPORATE, text:"Корпоративный сайт для промышленной компании"}]
+
+
+section.casesSection.padding.filtersWrapper
+    h2.h2.casesSection_topTitle Соблюдаем баланс между #[span креативностью] и #[span функциональностью]
+    h2.h2.casesSection_title Наши кейсы
+    .casesTabsSwiper
+        ul.casesSection_itemsWrapper.filtersTabs.swiper-wrapper 
+            each item in items
+                li.swiper-slide
+                    button.casesSection_item.filterTab("data-filter-name"= item.filterName)= item.name    
+    ul.casesSection_casesWrapper
+        each caseItem in cases
+            li.casesSection_case.filterItem("data-filter-value"= caseItem.filterName)
+                .casesSection_caseImageWrapper
+                    a(href="#")
+                        img(src= caseItem.image, alt= caseItem.type)
+                .casesSection_caseFooter
+                    p.casesSection_caseText= caseItem.text 
+                    .casesSection_caseBtn
+                        a.customBtn(href="#") К проекту
+                .casesSection_caseType=caseItem.type    

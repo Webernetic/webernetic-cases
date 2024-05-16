@@ -1,6 +1,7 @@
 .nichesSection {
   background-color: #061faa;
   padding-block: clamp(60px, 5.71vw, 80px) clamp(50px, 6.43vw, 90px);
+  overflow: hidden;
 
   &_title {
     color: #fff;
@@ -10,6 +11,7 @@
 
   &_itemsWrapper {
     display: flex;
+    gap: clamp(10px, 2.14vw, 30px);
   }
 
   &_item {
@@ -25,8 +27,7 @@
 
   &_itemIcon {
     position: relative;
-    min-width: clamp(42px, 4vw, 56px);
-    width: 100%;
+    width: clamp(42px, 4vw, 56px);
     height: clamp(42px, 4vw, 56px);
     border-radius: 50%;
     background-color: #4e64e7;

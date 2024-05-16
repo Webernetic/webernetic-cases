@@ -8,13 +8,24 @@
     {title: "Образование", img: "../assets/icons/niche_7.svg"},
     {title: "Развлечение", img: "../assets/icons/niche_8.svg"},
     {title: "Фитнес", img: "../assets/icons/niche_9.svg"},
-    {title: "Строительство, мебель", img: "../assets/icons/niche_10.svg"},]
+    {title: "Строительство, мебель", img: "../assets/icons/niche_10.svg"},
+    {title: "Автомобили", img: "../assets/icons/niche_5.svg"}, 
+    {title: "Банки", img: "../assets/icons/niche_6.svg"},
+    {title: "Образование", img: "../assets/icons/niche_7.svg"},
+    {title: "Развлечение", img: "../assets/icons/niche_8.svg"},
+    {title: "Фитнес", img: "../assets/icons/niche_9.svg"},
+    {title: "Строительство, мебель", img: "../assets/icons/niche_10.svg"},
+    {title: "Медицина", img: "../assets/icons/niche_1.svg"}, 
+    {title: "Некоммерческие организации", img: "../assets/icons/niche_2.svg"},
+    {title: "IT", img: "../assets/icons/niche_3.svg"},
+    {title: "Промышленность", img: "../assets/icons/niche_4.svg"},]
 
 section.nichesSection
-    h2.nichesSection_title Работаем с разными нишами
-    .nichesSection_itemsWrapper
-        each niche in niches
-            .nichesSection_item
-                .nichesSection_itemIcon
-                    img(src=niche.img, alt=niche.title)
-                .nichesSection_itemText= niche.title
+    h2.h2.nichesSection_title Работаем с разными нишами
+    .nichesSwiper
+        .nichesSection_itemsWrapper.swiper-wrapper
+            each niche in niches
+                .nichesSection_item.swiper-slide
+                    .nichesSection_itemIcon
+                        img(src=niche.img, alt=niche.title)
+                    .nichesSection_itemText= niche.title

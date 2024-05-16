@@ -7409,104 +7409,21 @@ var Swiper = (function () {
   return ee.use(ue), ee;
 })();
 
-// CUSTOMIZATION TASKS SLIDER
+// nichesSwiper
 
-const customSwiper = new Swiper('.customSwiper', {
-  // Optional parameters
+const nichesSwiper = new Swiper('.nichesSwiper', {
   direction: 'horizontal',
-  slidesPerView: 3,
-  loop: true,
+  slidesPerView: 'auto',
   updateOnWindowResize: true,
-  centeredSlides: true,
-  autoplay: {
-    delay: 7000,
-  },
-  effect: 'coverflow',
-  coverflowEffect: {
-    depth: 400,
-  },
-  parallax: true,
-  slideActiveClass: 'tasksSection_activeSlide',
-  slideFullyVisibleClass: 'tasksSection_fullyVisibleSlide',
+  grid: { rows: 2, fill: 'row' },
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  customSwiper.on('click', () => {
-    let clickedIndex = customSwiper.clickedIndex;
-    let activeIndex = customSwiper.activeIndex;
-    if (clickedIndex > activeIndex) {
-      customSwiper.slideNext(300);
-    }
+// casesTabsSwiper
 
-    if (clickedIndex < activeIndex) {
-      customSwiper.slidePrev(300);
-    }
-  });
-});
-
-// CUSTOMIZATION STAGES SLIDER
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
+const casesTabsSwiper = new Swiper('.casesTabsSwiper', {
   direction: 'horizontal',
-  slidesPerView: 1,
+  slidesPerView: 'auto',
   updateOnWindowResize: true,
-  autoplay: {
-    delay: 7000,
-  },
-});
-
-const setActiveClassByDefault = () => {
-  let navigationButtons = document.querySelectorAll('.swiper_navItem');
-  navigationButtons[0].classList.add('swiper_activeNavItem');
-};
-
-const toggleActiveClass = (activeIndex) => {
-  let navigationButtons = document.querySelectorAll('.swiper_navItem');
-
-  navigationButtons.forEach((navItem, i) => {
-    if (+navItem.id <= +activeIndex) {
-      navItem.classList.add('swiper_activeNavItem');
-    } else {
-      navItem.classList.remove('swiper_activeNavItem');
-    }
-  });
-};
-
-const slideTo = ({ target }) => {
-  let current = target.closest('.swiper_navItem');
-  let navId = null;
-
-  if (current && current.classList.contains('swiper_navItem')) {
-    navId = current.id;
-    swiper.slideTo(+navId, 300);
-  }
-};
-
-const displayActiveNav = (activeIndex) => {
-  if (window.innerWidth > 768) return;
-
-  let navigationButtons = document.querySelectorAll('.swiper_navItem');
-  navigationButtons.forEach((item) => {
-    if (item.id == activeIndex) {
-      item.classList.add('swiper_navItemDisplay');
-    } else {
-      item.classList.remove('swiper_navItemDisplay');
-    }
-  });
-};
-
-document.addEventListener('DOMContentLoaded', () => {
-  let navigationButtonsWrapper = document.querySelector('.swiper_navWrapper');
-
-  setActiveClassByDefault();
-  displayActiveNav(0);
-
-  navigationButtonsWrapper.addEventListener('click', slideTo);
-
-  swiper.on('slideChange', () => {
-    let activeIndex = swiper.activeIndex;
-
-    toggleActiveClass(activeIndex);
-    displayActiveNav(activeIndex);
-  });
+  clickable: true,
+  slideToClickedSlide: true,
 });
