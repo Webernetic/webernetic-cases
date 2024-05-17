@@ -55,6 +55,7 @@
     margin: 0;
     margin-bottom: 34px;
     padding: 0;
+    overflow: hidden;
   }
 
   &_case {
@@ -83,6 +84,7 @@
     overflow: hidden;
     width: 100%;
     height: clamp(330px, 28.57vw, 400px);
+    transition: all 0.3s ease;
 
     & a {
       width: 100%;
@@ -132,6 +134,32 @@
   &_case.disactive {
     display: none;
   }
+
+  &_feedback {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(16px, 4.21vw, 59px);
+    background-color: #182460;
+    overflow: hidden;
+    border-radius: clamp(16px, 1.86vw, 26px);
+    padding: clamp(28px, 2.57vw, 36px) clamp(24px, 3.86vw, 54px);
+  }
+
+  &_feedbackText {
+    flex: 1;
+    font-family: Manrope;
+    font-size: clamp(1.125rem, 1.57vw, 1.375rem);
+    font-weight: 600;
+    line-height: 1.4;
+    color: #fff;
+  }
+
+  &_showMoreBtn {
+    display: none;
+    margin-bottom: 40px;
+    width: 100%;
+  }
 }
 
 @media (max-width: $breakpoints-lg) {
@@ -139,8 +167,9 @@
     &_casesWrapper {
       flex-direction: column;
       align-items: center;
-      margin-bottom: 40px;
+      margin-bottom: 12px;
       gap: 46px;
+      flex-wrap: nowrap;
     }
 
     &_case {
@@ -167,10 +196,29 @@
     &_caseBtn {
       width: 100%;
     }
+
+    &_showMoreBtn {
+      display: block;
+    }
   }
 }
 
 @media (max-width: $breakpoints-sm) {
   .casesSection {
+    &_feedback {
+      flex-direction: column;
+    }
+
+    &_feedbackBtn {
+      width: fit-content;
+    }
+
+    &_feedbackText {
+      text-align: center;
+
+      & > span {
+        font-weight: 700;
+      }
+    }
   }
 }

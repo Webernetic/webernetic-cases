@@ -32,4 +32,10 @@ section.casesSection.padding.filtersWrapper
                     p.casesSection_caseText= caseItem.text 
                     .casesSection_caseBtn
                         a.customBtn(href="#") К проекту
-                .casesSection_caseType=caseItem.type    
+                .casesSection_caseType=caseItem.type  
+    .casesSection_showMoreBtn 
+        button.customBtnSecondary#showMoreBtn("data-title"="Загрузить больше", "data-title-short"="Свернуть") Загрузить больше
+    .casesSection_feedback
+        p.casesSection_feedbackText Поможем выполнить и другие задачи, даже самые #[span необычные]. Расскажите нам о них и мы подберем решение
+        .casesSection_feedbackBtn
+            button.customBtn Обсудить проект  

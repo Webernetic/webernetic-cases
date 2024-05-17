@@ -153,6 +153,25 @@ span {
   }
 }
 
+.customBtnSecondary {
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  color: #2f58ff;
+  border: 1px solid #2f58ff;
+  border-radius: 14px;
+  padding: 18px 30px;
+  line-height: 1.37;
+  font-weight: 600;
+  font-size: clamp(1rem, 1.43vw, 1.25rem);
+  text-align: center;
+
+  &:hover {
+    background-color: #2f58ff;
+    color: #fff;
+  }
+}
+
 @media (max-width: $breakpoints-sm) {
   .padding {
     padding-inline: 24px;
