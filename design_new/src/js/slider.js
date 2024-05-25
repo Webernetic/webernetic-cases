@@ -7427,3 +7427,17 @@ const casesTabsSwiper = new Swiper('.casesTabsSwiper', {
   clickable: true,
   slideToClickedSlide: true,
 });
+
+// stagesSwiper
+
+const stagesSwiper = new Swiper('.stagesSwiper', {
+  direction: 'horizontal',
+  slidesPerView: 'auto',
+  updateOnWindowResize: true,
+  speed: 1200,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: '.stagesSection_btnNext',
+    prevEl: '.stagesSection_btnPrev',
+  },
+});

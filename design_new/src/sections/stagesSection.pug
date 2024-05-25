@@ -1,48 +1,24 @@
 -
-    var navItems = [{text: "Исследование", number: "1", id: "0"},
-    {text: "Подготовка мудборда", number: "2", id: "1"},
-    {text: "Прототипирование", number: "3", id: "2"},
-    {text: "Отрисовка дизайна", number: "4", id: "3"}]
+    const stages = [{title:"Постановка целей", text: ["Определяем, каких результатов вы хотите достичь, для чего вам сайт.", "Вы заполняете бриф, а мы составляем ТЗ для ясного понимания задач."], number: "01", img: "../assets/images/stage_1.png"},
+    {title:"Подготовка мудборда", text: ["Подбираем визуальные элементы (изображения, цвета, шрифты, стили и т.д.), которые отражают общее визуальное направление будущего сайта."], number: "02", img: "../assets/images/stage_2.png"},
+    {title:"Прототипирование", text: ["Определяем структуру сайта и содержание блоков. Создаем прототипы - черновые версии дизайна, которые показывают основные элементы будущего интерфейса."], number: "03", img: "../assets/images/stage_3.png"},
+    {title:"Отрисовка дизайна", text: ["На этом этапе создаются визуальные элементы сайта, включая цветовую схему, шрифты, изображения и другие графические элементы."], number: "04", img: "../assets/images/stage_4.png"},]
 
 section.stagesSection
-    h2.stagesSection_title #[span.secondaryColorText Этапы] работ по дизайну
-    .swiper
-        .swiper-wrapper
-            .swiper-slide.stagesSection_item
-                h4.stagesSection_itemTitle Исследование
-                p.stagesSection_itemText Обсуждаем ваши цели и потребности. Анализируем имеющиеся предложения на рынке. #[br] Также исследуем поведение и потребности целевой аудитории. Проводим опросы среди ваших клиентов, чтобы опираться на объективные данные.
-                .stagesSection_itemImageWrapper
-                    +img("./assets/images/step1.png", "Первый шаг. Исследование", ["500", "1200"])   
-                    span.stagesSection_pointer.stagesSection__pointerRT.stagesSection__pointerPosition1 А/В тестирование
-                    span.stagesSection_pointer.stagesSection__pointerLB.stagesSection__pointerPosition2 Изучение конкурентов
-                p.stagesSection_itemNumber 1
-            .swiper-slide.stagesSection_item.stagesSection__itemBg2
-                h4.stagesSection_itemTitle.stagesSection__itemTitleColor2 Подготовка мудборда
-                p.stagesSection_itemText.stagesSection__itemTextColor2 Подбираем визуальные элементы(изображения, цвета, шрифты, стили и т.д.), которые отражают общее визуальное направление будущего сайта. 
-                .stagesSection_itemImageWrapper
-                    +img("./assets/images/step2.png", "Второй шаг. Подготовка мудборда", ["500", "1200"])   
-                    span.stagesSection_pointer.stagesSection__pointerLT.stagesSection__pointerBg2.stagesSection__pointerPosition3 Пример первого экрана
-                    span.stagesSection_pointer.stagesSection__pointerRT.stagesSection__pointerBg2.stagesSection__pointerPosition4 Структура блоков страницы               
-                p.stagesSection_itemNumber.stagesSection_itemNumberColor2 2
-            .swiper-slide.stagesSection_item.stagesSection__itemBg3
-                h4.stagesSection_itemTitle.stagesSection__itemTitleColor3 Прототипирование
-                p.stagesSection_itemText.stagesSection__itemTextColor3 Определяем структуру сайта и содержание блоков. Создаем прототипы -  черновые версии дизайна, которые показывают основные элементы будущего интерфейса.
-                .stagesSection_itemImageWrapper
-                    +img("./assets/images/step3.png", "Третий шаг. Прототипирование", ["500", "1200"])   
-                    span.stagesSection_pointer.stagesSection__pointerRT.stagesSection__pointerBg3.stagesSection__pointerPosition5 Визуализация готового проекта              
-                p.stagesSection_itemNumber.stagesSection_itemNumberColor3 3
-            .swiper-slide.stagesSection_item.stagesSection__itemBg4
-                h4.stagesSection_itemTitle.stagesSection__itemTitleColor4 Отрисовка дизайна
-                p.stagesSection_itemText.stagesSection__itemTextColor4 На этом этапе создаются визуальные элементы сайта, включая цветовую схему, шрифты, изображения и другие графические элементы.  
-                .stagesSection_itemImageWrapper
-                    +img("./assets/images/step4.png", "Четвертый шаг. Отрисовка дизайна", ["500", "1200"], false)   
-                    span.stagesSection_pointer.stagesSection__pointerLT.stagesSection__pointerBg4.stagesSection__pointerPosition6 Типографика 
-                    span.stagesSection_pointer.stagesSection__pointerRT.stagesSection__pointerBg4.stagesSection__pointerPosition7 Палитра цветов
-                    span.stagesSection_pointer.stagesSection__pointerRT.stagesSection__pointerBg4.stagesSection__pointerPosition8 Кнопки состояния
-                    span.stagesSection_pointer.stagesSection__pointerLT.stagesSection__pointerBg4.stagesSection__pointerPosition9 Иконки  
-                p.stagesSection_itemNumber.stagesSection_itemNumberColor4 4
-    ul.swiper_navWrapper
-        each item in navItems
-            li.swiper_navItem("id"= item.id)
-                p.stagesSection_navItemText= item.text
-                p.stagesSection_navItemText= item.number  
+    .stagesSection_header.padding
+        h2.h2 Этапы создания дизайна
+        .stagesSection_nav
+            .stagesSection_navBtn.stagesSection_btnPrev
+            .stagesSection_navBtn.stagesSection_btnNext   
+    .stagesSwiper
+        ul.swiper-wrapper 
+            each stage in stages
+                li.swiper-slide.stagesSection_item 
+                    .stagesSection_itemLeft
+                        h2.stagesSection_itemNumber= stage.number
+                        h3.stagesSection_itemTitle= stage.title
+                        each item in stage.text
+                            p.stagesSection_itemText= item
+                    .stagesSection_itemRight 
+                        .stagesSection_itemImageWrapper
+                            img(src=stage.img, alt=stage.title)  

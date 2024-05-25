@@ -1,5 +1,6 @@
 .casesSection {
   padding-block: clamp(90px, 7.86vw, 110px) clamp(90px, 7.43vw, 104px);
+  overflow: hidden;
 
   &_topTitle {
     margin-bottom: clamp(90px, 7.86vw, 110px);

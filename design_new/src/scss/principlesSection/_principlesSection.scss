@@ -1,0 +1,10 @@
+.principlesSection {
+  &_title {
+    margin-bottom: clamp(32px, 2.57vw, 36px);
+  }
+}
+
+@media (max-width: $breakpoints-sm) {
+  .principlesSection {
+  }
+}
