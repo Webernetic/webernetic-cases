@@ -1,0 +1,14 @@
+-
+    const statistics = [{value: "12+", text: "Лет создаем и продвигаем сайты",class:""},
+    {value: ">100", text: "Разработанных и продуманных решений", class:"statisticsSection__itemBg2"},
+    {value: "14", text: "Стран заказывают наши услуги", class:"statisticsSection__itemBg3"},
+    {value: "70%", text: "Клиентов приходят по рекомендации", class:"statisticsSection__itemBg4"}]
+
+section.statisticsSection
+    .container.padding    
+        h2.h2.statisticsSection_title Опыт подтвержден цифрами
+        .statisticsSection_wrapper
+            each item in statistics
+                .statisticsSection_item(class= item.class)
+                    h3.statisticsSection_itemValue= item.value
+                    p.statisticsSection_itemText= item.text

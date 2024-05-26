@@ -21,11 +21,12 @@
     {title: "Промышленность", img: "../assets/icons/niche_4.svg"},]
 
 section.nichesSection
-    h2.h2.nichesSection_title Работаем с разными нишами
-    .nichesSwiper
-        .nichesSection_itemsWrapper.swiper-wrapper
-            each niche in niches
-                .nichesSection_item.swiper-slide
-                    .nichesSection_itemIcon
-                        img(src=niche.img, alt=niche.title)
-                    .nichesSection_itemText= niche.title
+    .container
+        h2.h2.nichesSection_title Работаем с разными нишами
+        .nichesSwiper
+            .nichesSection_itemsWrapper.swiper-wrapper
+                each niche in niches
+                    .nichesSection_item.swiper-slide
+                        .nichesSection_itemIcon
+                            img(src=niche.img, alt=niche.title)
+                        .nichesSection_itemText= niche.title

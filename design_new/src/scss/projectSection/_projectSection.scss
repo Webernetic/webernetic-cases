@@ -1,0 +1,93 @@
+.projectSection {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(26px, 5.21vw, 73px);
+  margin-bottom: clamp(90px, 8.57vw, 120px);
+
+  &_title {
+    flex: 1;
+  }
+
+  &_project {
+    flex-basis: 51.7%;
+    padding-block: clamp(28px, 2.29vw, 32px);
+    padding-inline: clamp(20px, 2.5vw, 35px);
+    border-radius: 14px;
+    border: 2px solid #223ccb;
+  }
+
+  &_projectTitle {
+    margin-bottom: 8px;
+    font-size: clamp(1.5rem, 2.43vw, 2.125rem);
+    font-weight: 600;
+    color: #223ccb;
+    line-height: 1.3;
+  }
+
+  &_projectText {
+    margin-bottom: clamp(16px, 2.57vw, 36px);
+    font-size: clamp(1.125rem, 1.43vw, 1.25rem);
+    font-weight: 500;
+    line-height: 1.4;
+    opacity: 80%;
+  }
+
+  &_statisticsWrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  &_statisticsItemValue {
+    font-size: clamp(3.125rem, 4.43vw, 3.875rem);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  &_statisticsPercent {
+    font-size: clamp(1.875rem, 2.43vw, 2.125rem);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  &_statisticsItemText {
+    font-family: Circe;
+    font-size: clamp(1.125rem, 1.43vw, 1.25rem);
+    line-height: 1.3;
+    color: #253fcf;
+    white-space: nowrap;
+  }
+
+  &_arrowWrapper {
+    position: absolute;
+    right: calc(51.7% + 5px);
+    height: 100%;
+    width: 14.5%;
+    background-image: url(../assets/images/line.png);
+    background-repeat: no-repeat;
+    background-size: 100% 87%;
+    background-position: bottom;
+  }
+}
+
+@media (max-width: $breakpoints-lg) {
+  .projectSection {
+  }
+}
+
+@media (max-width: $breakpoints-md) {
+  .projectSection {
+    flex-direction: column;
+
+    &_project {
+      flex-basis: 100%;
+    }
+
+    &_arrowWrapper {
+      visibility: hidden;
+    }
+  }
+}

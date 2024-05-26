@@ -7,6 +7,10 @@
 @import './casesSection/_casesSection.scss';
 @import './stagesSection/_stagesSection.scss';
 @import './principlesSection/_principlesSection.scss';
+@import './resultsSection/_resultsSection.scss';
+@import './projectSection/_projectSection.scss';
+@import './statisticsSection/_statisticsSection.scss';
+@import './reviewsSection/_reviewsSection.scss';
 @import './feedbackSection/_feedbackSection.scss';
 
 *,
@@ -183,29 +187,8 @@ span {
   }
 }
 
-// .input {
-//   border-bottom: 1px solid $font-color;
-//   width: 100%;
-//   font-size: $font-size;
-
-//   &::placeholder {
-//     color: $font-color-placeholder;
-//     line-height: 1;
-//     opacity: 0.7;
-//     font-size: $font-size;
-//   }
-// }
-
-// .customButton {
-//   font-size: clamp(1.25rem, 2.57vw, 2.25rem);
-//   color: $font-color-bright;
-//   font-weight: $font-weight-extra-bold;
-//   border-bottom: 2px solid $font-color-bright;
-
-//   &:hover,
-//   &:active {
-//     transform: scale(1.05);
-//     color: $font-color-bright;
-//     border-color: $font-color-bright;
-//   }
-// }
+.customButton {
+  &:hover,
+  &:active {
+  }
+}

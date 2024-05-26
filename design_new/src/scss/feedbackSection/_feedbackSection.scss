@@ -1,12 +1,10 @@
 .feedbackSection {
-  border-radius: clamp(50px, 4.08vw, 80px);
-  padding: clamp(50px, 8.88vw, 174px) clamp(24px, 7.19vw, 141px);
-  padding-bottom: 0;
-  background-color: #222222;
+  background: linear-gradient(268.03deg, #061faa 2.71%, #2641d0 115.25%);
+  padding-block: clamp(60px, 7.86vw, 110px);
 
   &_wrapper {
     display: flex;
-    gap: clamp(30px, 3.6vw, 70px);
+    gap: clamp(30px, 8.57vw, 120px);
   }
 
   &_content {
@@ -14,85 +12,59 @@
   }
 
   &_title {
-    font-size: clamp(42px, 4.08vw, 80px);
-    margin-bottom: clamp(12px, 1.53vw, 30px);
-    color: #f2f2f2;
+    font-size: clamp(1.75rem, 3.71vw, 3.25rem);
+    margin-bottom: 14px;
+    color: #ecf0ff;
     line-height: 120%;
+    font-weight: 700;
   }
 
   &_text {
-    font-size: clamp(22px, 1.84vw, 36px);
+    font-family: Circe;
+    font-size: clamp(1.25rem, 1.71vw, 1.5rem);
     margin-bottom: clamp(16px, 1.28vw, 25px);
     color: #ffffff;
-    opacity: 60%;
-    line-height: 137%;
+    opacity: 70%;
+    line-height: 135%;
   }
 
-  &_item {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    gap: clamp(5px, 0.51vw, 10px);
-    padding: clamp(20px, 1.22vw, 24px) clamp(17px, 1.68vw, 33px);
-    margin-bottom: clamp(16px, 1.28vw, 25px);
-    background: linear-gradient(
-      108.46deg,
-      rgba(255, 255, 255, 0.1056) 0%,
-      rgba(210, 255, 175, 0.1782) 100%
-    );
-    border-radius: 60px;
-
-    & > img {
-      width: clamp(20px, 1.43vw, 28px);
-      height: clamp(20px, 1.17vw, 23px);
-    }
-
-    & > span {
-      font-size: clamp(1rem, 1.22vw, 1.5rem);
-      // color: $font-color-invert;
-      // font-weight: $font-weight-medium;
-      line-height: 1;
-    }
+  &_line {
+    font-family: Circle;
+    color: #e6e6e6;
   }
 
   &_form {
     display: flex;
     flex: 1;
     flex-direction: column;
-    gap: clamp(10px, 0.82vw, 16px);
-    align-items: flex-end;
+    gap: 12px;
   }
 
   &_input {
-    padding: clamp(22px, 1.17vw, 23px) clamp(20px, 1.43vw, 28px);
-    width: 85%;
-    background-color: rgba(71, 71, 71, 0.33);
-    border-radius: clamp(14px, 1.02vw, 20px);
-    font-size: clamp(18px, 1.12vw, 22px);
-    // font-weight: $font-weight-medium;
-    line-height: 137%;
-    // color: $font-color-invert;
+    padding: 18px 24px;
+    background: #1b38cd;
+    border-radius: 14px;
+    border: 1px solid #ffffff33;
+    font-size: 1.25rem;
+    line-height: 147%;
+    color: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.04);
 
     &::placeholder {
-      font-size: clamp(18px, 1.12vw, 22px);
-      // font-weight: $font-weight-medium;
-      line-height: 137%;
-      opacity: 0.3;
+      font-size: 1.25rem;
+      line-height: 147%;
+      opacity: 0.5;
+      color: #ffffff;
     }
 
     &:active,
     &:focus {
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border: 1px solid #ffffff;
     }
   }
 
   &_buttonWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin-top: 11px;
-    max-height: fit-content;
+    margin-top: 8px;
   }
 
   &_button {
@@ -125,13 +97,6 @@
 
 @media (max-width: $breakpoints-lg) {
   .feedbackSection {
-    &_input {
-      width: 100%;
-    }
-
-    &_buttonWrapper {
-      margin-top: 40px;
-    }
   }
 }
 

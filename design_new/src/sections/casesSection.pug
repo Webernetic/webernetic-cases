@@ -14,28 +14,29 @@
     {type: "Корпоративный сайт", image:"../assets/images/case-5.png", filterName: Filters.CORPORATE, text:"Корпоративный сайт для промышленной компании"}]
 
 
-section.casesSection.padding.filtersWrapper
-    h2.h2.casesSection_topTitle Соблюдаем баланс между #[span креативностью] и #[span функциональностью]
-    h2.h2.casesSection_title Наши кейсы
-    .casesTabsSwiper
-        ul.casesSection_itemsWrapper.filtersTabs.swiper-wrapper 
-            each item in items
-                li.swiper-slide
-                    button.casesSection_item.filterTab("data-filter-name"= item.filterName)= item.name    
-    ul.casesSection_casesWrapper
-        each caseItem in cases
-            li.casesSection_case.filterItem("data-filter-value"= caseItem.filterName)
-                .casesSection_caseImageWrapper
-                    a(href="#")
-                        img(src= caseItem.image, alt= caseItem.type)
-                .casesSection_caseFooter
-                    p.casesSection_caseText= caseItem.text 
-                    .casesSection_caseBtn
-                        a.customBtn(href="#") К проекту
-                .casesSection_caseType=caseItem.type  
-    .casesSection_showMoreBtn 
-        button.customBtnSecondary#showMoreBtn("data-title"="Загрузить больше", "data-title-short"="Свернуть") Загрузить больше
-    .casesSection_feedback
-        p.casesSection_feedbackText Поможем выполнить и другие задачи, даже самые #[span необычные]. Расскажите нам о них и мы подберем решение
-        .casesSection_feedbackBtn
-            button.customBtn Обсудить проект  
+section.casesSection.filtersWrapper
+    .container.padding
+        h2.h2.casesSection_topTitle Соблюдаем баланс между #[span креативностью] и #[span функциональностью]
+        h2.h2.casesSection_title Наши кейсы
+        .casesTabsSwiper
+            ul.casesSection_itemsWrapper.filtersTabs.swiper-wrapper 
+                each item in items
+                    li.swiper-slide
+                        button.casesSection_item.filterTab("data-filter-name"= item.filterName)= item.name    
+        ul.casesSection_casesWrapper
+            each caseItem in cases
+                li.casesSection_case.filterItem("data-filter-value"= caseItem.filterName)
+                    .casesSection_caseImageWrapper
+                        a(href="#")
+                            img(src= caseItem.image, alt= caseItem.type)
+                    .casesSection_caseFooter
+                        p.casesSection_caseText= caseItem.text 
+                        .casesSection_caseBtn
+                            a.customBtn(href="#") К проекту
+                    .casesSection_caseType=caseItem.type  
+        .casesSection_showMoreBtn 
+            button.customBtnSecondary#showMoreBtn("data-title"="Загрузить больше", "data-title-short"="Свернуть") Загрузить больше
+        .casesSection_feedback
+            p.casesSection_feedbackText Поможем выполнить и другие задачи, даже самые #[span необычные]. Расскажите нам о них и мы подберем решение
+            .casesSection_feedbackBtn
+                button.customBtn Обсудить проект  
