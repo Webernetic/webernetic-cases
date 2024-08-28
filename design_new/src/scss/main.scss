@@ -162,6 +162,10 @@ span {
   }
 }
 
+.hideScroll {
+  overflow: hidden;
+}
+
 .customBtnSecondary {
   display: inline-block;
   width: 100%;
@@ -184,11 +188,5 @@ span {
 @media (max-width: $breakpoints-sm) {
   .padding {
     padding-inline: 24px;
-  }
-}
-
-.customButton {
-  &:hover,
-  &:active {
   }
 }

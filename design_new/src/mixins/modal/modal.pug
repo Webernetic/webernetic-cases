@@ -1,0 +1,18 @@
+mixin modal()
+    .modal.modalFeedback.overlay&attributes(attributes)  
+        .popup  
+            .popup__header   
+                p.popup__title Давайте обсудим! Заполните форму, остальное — #[span за нами]
+                span.popup__closeBtn.toggleModal
+                    img(src="../assets/icons/close.svg")
+            form.popup__form.send_form_1(method="POST")
+                .popup__formData
+                    .popup__inputsWrapper
+                        input.popup__input(placeholder="Имя", type="text", name="user_name", required)
+                        input.popup__input(placeholder="Телефон", type="tel", name="user_phone", required)
+                        input.popup__input(placeholder="E-mail", type="email", name="user_email")
+                        input.popup__input(placeholder="Сайт", type="url", name="user_site")
+                    .popup__textareaWrapper
+                        textarea.popup__textarea(placeholder="Ваш комментарий", type="text", name="user_comment")
+                .popup__buttonWrapper
+                    button.customBtn(type="submit") Отправить

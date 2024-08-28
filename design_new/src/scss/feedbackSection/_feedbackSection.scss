@@ -28,9 +28,19 @@
     line-height: 135%;
   }
 
-  &_line {
-    font-family: Circle;
+  &_lineWrapper {
+    margin-top: clamp(24px, 3.33vw, 42px);
+    padding-block: 19px 6px;
+    background-image: url('../assets/images/line_2.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  &_lineText {
+    font-family: Circe;
     color: #e6e6e6;
+    font-size: 1.25rem;
+    line-height: 1.35;
   }
 
   &_form {
@@ -48,7 +58,7 @@
     font-size: 1.25rem;
     line-height: 147%;
     color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.04);
+    border: 1px solid #ffffff33;
 
     &::placeholder {
       font-size: 1.25rem;
@@ -95,20 +105,19 @@
   }
 }
 
-@media (max-width: $breakpoints-lg) {
-  .feedbackSection {
-  }
-}
-
 @media (max-width: $breakpoints-md) {
   .feedbackSection {
     &_wrapper {
       flex-direction: column;
+      gap: 30px;
     }
-  }
-}
 
-@media (max-width: $breakpoints-sm) {
-  .feedbackSection {
+    &_lineWrapper {
+      display: none;
+    }
+
+    &_text {
+      margin-bottom: 0;
+    }
   }
 }
