@@ -1,0 +1,12 @@
+-
+    const reviews = [{image: "../assets/images/feedback_1.png"},
+    {image: "../assets/images/feedback_2.png"},
+    {image: "../assets/images/feedback_3.png"},
+    {image: "../assets/images/feedback_4.png"},]
+
+section.reviewsSection.container.padding    
+    h2.h2.reviewsSection_title И отзывами клиентов
+    .reviewsSection_wrapper
+        each review in reviews   
+            .reviewsSection_review  
+                img(src=review.image, alt="Отзыв")         

@@ -1,0 +1,24 @@
+-
+    const stages = [{title:"Постановка целей", text: ["Определяем, каких результатов вы хотите достичь, для чего вам сайт.", "Вы заполняете бриф, а мы составляем ТЗ для ясного понимания задач."], number: "01", img: "../assets/images/stage_1.png"},
+    {title:"Подготовка мудборда", text: ["Подбираем визуальные элементы (изображения, цвета, шрифты, стили и т.д.), которые отражают общее визуальное направление будущего сайта."], number: "02", img: "../assets/images/stage_2.png"},
+    {title:"Прототипирование", text: ["Определяем структуру сайта и содержание блоков. Создаем прототипы - черновые версии дизайна, которые показывают основные элементы будущего интерфейса."], number: "03", img: "../assets/images/stage_3.png"},
+    {title:"Отрисовка дизайна", text: ["На этом этапе создаются визуальные элементы сайта, включая цветовую схему, шрифты, изображения и другие графические элементы."], number: "04", img: "../assets/images/stage_4.png"},]
+
+section.stagesSection.container
+    .stagesSection_header.padding
+        h2.h2 Этапы создания дизайна
+        .stagesSection_nav
+            .stagesSection_navBtn.stagesSection_btnPrev
+            .stagesSection_navBtn.stagesSection_btnNext   
+    .stagesSwiper
+        ul.swiper-wrapper 
+            each stage in stages
+                li.swiper-slide.stagesSection_item 
+                    .stagesSection_itemLeft
+                        h2.stagesSection_itemNumber= stage.number
+                        h3.stagesSection_itemTitle= stage.title
+                        each item in stage.text
+                            p.stagesSection_itemText= item
+                    .stagesSection_itemRight 
+                        .stagesSection_itemImageWrapper
+                            img(src=stage.img, alt=stage.title)  

@@ -1,0 +1,16 @@
+-
+    const results = [{title: "Увеличение конверсии", text: "Добавляем на сайт эффективные призывы к действию. Это приводит к большему числу клиентов, которые совершают целевые действия.", icon: "../assets/icons/result_1.svg",},
+    {title: "Снижение процента отказов", text: "Привлекательный и функциональный дизайн снижает процент отказов и увеличивает вовлеченность посетителей.", icon: "../assets/icons/result_2.svg",},
+    {title: "Улучшение юзабилити", text: "Ключевой элемент нашего дизайна — пользователь. Позитивный пользовательский опыт приводит к повышению лояльности трафика.", icon: "../assets/icons/result_3.svg",},
+    {title: "Заложенные SEO-требования", text: "Используем элементы, которые относительно быстро загружатся. Это положительно влияет на показатели поисковой оптимизации. ", icon: "../assets/icons/result_4.svg",},]
+
+section.resultsSection
+    .container.padding    
+        h2.h2.resultsSection_title В результате вы получите не только дизайн, но и
+        .resultsSection_wrapper
+            each result in results
+                .resultsSection_item
+                    .resultsSection_itemIcon
+                        img(src= result.icon, alt= result.title)
+                    h4.h4.resultsSection_itemTitle= result.title
+                    p.resultsSection_itemText= result.text

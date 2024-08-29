@@ -1,0 +1,15 @@
+section.headerSection  
+    .headerSection_bg
+        .headerSection_bgSecondary
+        .headerSection_content.container.padding
+            .headerSection_contentWrapper
+                .headerSection_logo
+                    img(src="../assets/icons/logo.svg", alt="Логотип")
+                h1.h1.headerSection_title Создаем дизайны, которые решают задачи бизнеса
+                p.headerSection_text С новым дизайном у наших клиентов растут конверсии, увеличивается время, которое пользователи проводят на сайте, снижается нагрузка на колл-центры
+    .container
+        .headerSection_feedback
+            p.headerSection_feedbackText Поможем выполнить и другие задачи, даже самые #[span необычные]. Расскажите нам о них и мы подберем решение
+            .headerSection_feedbackBtn
+                button.customBtn.toggleModal Обсудить проект
+    +modal

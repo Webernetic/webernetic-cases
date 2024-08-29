@@ -1,0 +1,20 @@
+@import './fonts';
+
+$max-width: 1400px;
+
+//fonts
+$font-family: Manrope, sans-serif;
+
+$breakpoints-sm: 576px;
+$breakpoints-md: 768px;
+$breakpoints-lg: 992px;
+$breakpoints-xl: 1200px;
+
+// $breakpoint: (
+//   xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px,
+//   xxl: 1400px,
+// );

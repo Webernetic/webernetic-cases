@@ -1,0 +1,123 @@
+.feedbackSection {
+  background: linear-gradient(268.03deg, #061faa 2.71%, #2641d0 115.25%);
+  padding-block: clamp(60px, 7.86vw, 110px);
+
+  &_wrapper {
+    display: flex;
+    gap: clamp(30px, 8.57vw, 120px);
+  }
+
+  &_content {
+    flex: 1;
+  }
+
+  &_title {
+    font-size: clamp(1.75rem, 3.71vw, 3.25rem);
+    margin-bottom: 14px;
+    color: #ecf0ff;
+    line-height: 120%;
+    font-weight: 700;
+  }
+
+  &_text {
+    font-family: Circe;
+    font-size: clamp(1.25rem, 1.71vw, 1.5rem);
+    margin-bottom: clamp(16px, 1.28vw, 25px);
+    color: #ffffff;
+    opacity: 70%;
+    line-height: 135%;
+  }
+
+  &_lineWrapper {
+    margin-top: clamp(24px, 3.33vw, 42px);
+    padding-block: 19px 6px;
+    background-image: url('../assets/images/line_2.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  &_lineText {
+    font-family: Circe;
+    color: #e6e6e6;
+    font-size: 1.25rem;
+    line-height: 1.35;
+  }
+
+  &_form {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &_input {
+    padding: 18px 24px;
+    background: #1b38cd;
+    border-radius: 14px;
+    border: 1px solid #ffffff33;
+    font-size: 1.25rem;
+    line-height: 147%;
+    color: #ffffff;
+    border: 1px solid #ffffff33;
+
+    &::placeholder {
+      font-size: 1.25rem;
+      line-height: 147%;
+      opacity: 0.5;
+      color: #ffffff;
+    }
+
+    &:active,
+    &:focus {
+      border: 1px solid #ffffff;
+    }
+  }
+
+  &_buttonWrapper {
+    margin-top: 8px;
+  }
+
+  &_button {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: clamp(250px, 20.6vw, 404px);
+    height: clamp(125px, 10.3vw, 202px);
+    border-top-left-radius: clamp(125px, 10.3vw, 202px);
+    border-top-right-radius: clamp(125px, 10.3vw, 202px);
+    background-color: #c6f649;
+    color: #000000;
+    font-size: clamp(22px, 1.83vw, 36px);
+    padding: 0;
+    padding-bottom: clamp(22px, 1.83vw, 36px);
+    outline: none;
+    border: none;
+    transition: all 300ms ease;
+
+    &:active,
+    &:hover {
+      box-shadow: 0px -18px 15px 0px #c6f64929;
+    }
+
+    &:active {
+      transform: scale(1.05);
+    }
+  }
+}
+
+@media (max-width: $breakpoints-md) {
+  .feedbackSection {
+    &_wrapper {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    &_lineWrapper {
+      display: none;
+    }
+
+    &_text {
+      margin-bottom: 0;
+    }
+  }
+}

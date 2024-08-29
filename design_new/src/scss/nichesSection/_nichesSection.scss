@@ -1,0 +1,62 @@
+.nichesSection {
+  background-color: #061faa;
+  padding-block: clamp(60px, 5.71vw, 80px) clamp(50px, 6.43vw, 90px);
+  overflow: hidden;
+
+  &_title {
+    color: #fff;
+    margin-bottom: clamp(24px, 3.57vw, 50px);
+    text-align: center;
+  }
+
+  &_itemsWrapper {
+    display: flex;
+    gap: clamp(10px, 2.14vw, 30px);
+  }
+
+  &_item {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    padding-inline: 10px 26px;
+    padding-block: 8px;
+    gap: clamp(8px, 1.29vw, 18px);
+    border-radius: 40px;
+    background-color: #1830c1;
+  }
+
+  &_itemIcon {
+    position: relative;
+    width: clamp(42px, 4vw, 56px);
+    height: clamp(42px, 4vw, 56px);
+    border-radius: 50%;
+    background-color: #4e64e7;
+
+    & > img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: clamp(21px, 2.5vw, 35px);
+      height: clamp(21px, 2.5vw, 35px);
+    }
+  }
+
+  &_itemText {
+    color: #fff;
+    font-family: Circe;
+    font-size: clamp(1rem, 1.43vw, 1.25rem);
+    font-weight: 400;
+    line-height: 1.47;
+  }
+}
+
+@media (max-width: $breakpoints-lg) {
+  .nichesSection {
+  }
+}
+
+@media (max-width: $breakpoints-sm) {
+  .nichesSection {
+  }
+}

@@ -1,0 +1,17 @@
+-
+    const pojectStatisctics = [{value:"+4", text: "Конверсии"},
+    {value:"+20", text: "Глубина просмотра"},
+    {value:"-15", text: "Отказов"},]
+
+section.projectSection.container.padding    
+    h2.h2.projectSection_title Ориентированы на рост важных для вас показателей. #[br] Доказываем это в наших кейсах      
+    .projectSection_project
+        h4.projectSection_projectTitle Проект “Sysracks”
+        p.projectSection_projectText Разработка дизайна и программирование интернет-магазина серверного оборудования
+        .projectSection_statisticsWrapper
+            each item in pojectStatisctics
+                .projectSection_statisticsItem
+                    h3.projectSection_statisticsItemValue= item.value 
+                        span.projectSection_statisticsPercent %
+                    p.projectSection_statisticsItemText= item.text
+    .projectSection_arrowWrapper

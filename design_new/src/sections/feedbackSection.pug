@@ -1,0 +1,15 @@
+section.feedbackSection 
+    .container.padding  
+        .feedbackSection_wrapper   
+            .feedbackSection_content
+                .feedbackSection_title Давайте обсудим ваш запрос
+                .feedbackSection_text Расскажите о своих задачах и потребностях, а мы подберем решение
+                .feedbackSection_lineWrapper
+                    p.feedbackSection_lineText Заполните форму
+            form.feedbackSection_form.send_form_1(method="POST")
+                input.feedbackSection_input(placeholder="Имя", type="text", name="user_name", required)
+                input.feedbackSection_input(placeholder="Телефон", type="tel", name="user_phone", required)
+                input.feedbackSection_input(placeholder="E-mail", type="email", name="user_email")
+                input.feedbackSection_input(placeholder="Сайт", type="url", name="user_site")
+                .feedbackSection_buttonWrapper
+                    button.customBtnSecondary(type="submit") Отправить

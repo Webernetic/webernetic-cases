@@ -1,0 +1,23 @@
+extends layouts/MainLayout
+include mixins/index.pug
+
+block title
+  | Design
+
+block content
+  body.body 
+    include sections/headerSection 
+    include sections/nichesSection  
+    include sections/casesSection       
+    include sections/stagesSection 
+    include sections/principlesSection
+    include sections/resultsSection
+    include sections/projectSection
+    include sections/statisticsSection
+    include sections/reviewsSection    
+    include sections/feedbackSection 
+
+  script 
+    include js/slider.js
+    include js/toggleModal.js 
+    include js/filtration.js    

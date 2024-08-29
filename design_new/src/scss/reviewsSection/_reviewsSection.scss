@@ -1,0 +1,36 @@
+.reviewsSection {
+  margin-bottom: clamp(90px, 8.57vw, 120px);
+
+  &_title {
+    margin-bottom: clamp(24px, 2.57vw, 36px);
+  }
+
+  &_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+  }
+
+  &_review {
+    max-width: 69%;
+    border-radius: 14px;
+    overflow: hidden;
+
+    &:nth-of-type(even) {
+      margin-left: auto;
+    }
+  }
+}
+
+@media (max-width: $breakpoints-lg) {
+  .reviewsSection {
+  }
+}
+
+@media (max-width: $breakpoints-md) {
+  .reviewsSection {
+    &_review {
+      max-width: 100%;
+    }
+  }
+}
