@@ -1,0 +1,16 @@
+extends layouts/MainLayout
+include mixins/index.pug
+
+block title
+  | Starkmovers
+
+block content
+  body.body    
+    include sections/headerSection 
+    .container 
+      include sections/summarySection 
+      include sections/orderSection 
+
+  script
+    include js/slider.js
+    

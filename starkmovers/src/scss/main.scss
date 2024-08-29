@@ -1,0 +1,169 @@
+@import './fonts';
+@import './variables';
+@import '../mixins/mixinsStyles.scss';
+@import './headerSection/_headerSection.scss';
+@import './summarySection/_summarySection.scss';
+@import './orderSection/_orderSection.scss';
+@import './swiper/_swiper-bundle.min.css';
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: $font-family;
+  color: #433338;
+}
+
+body {
+  position: relative;
+  scroll-behavior: smooth;
+  z-index: -1;
+  background-color: #f5f7fc62;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  max-width: $max-width;
+  padding-inline: clamp(24px, 7.17vw, 100px);
+  width: 100%;
+  margin-inline: auto;
+
+  @media (max-width: $breakpoints-sm) {
+    padding-inline: 24px;
+  }
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  appearance: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  font-family: $font-family;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.head1 {
+  font-size: clamp(2rem, 5.5vw, 4.125rem);
+  line-height: 110%;
+  color: #32322d;
+}
+
+.head2 {
+  font-size: clamp(2.125rem, 4vw, 3rem);
+  line-height: 100%;
+  color: #32322d;
+}
+
+.head3 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  line-height: 110%;
+  color: #2d2d2d;
+}
+
+// .head4 {
+//   font-size: clamp(1.375rem, 2vw, 1.75rem);
+//   line-height: 120%;
+// }
+
+p,
+span,
+li,
+a,
+ul,
+figcaption,
+blockquote,
+input,
+label,
+input::placeholder {
+  font-size: clamp(1.125rem, 1.86vw, 1.625rem);
+  line-height: 138%;
+  font-weight: 400;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.li {
+  font-size: max(1.125rem, min(2vw, 1.5rem));
+  line-height: 147%;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.input {
+  border-bottom: 2px solid #333333;
+  width: 100%;
+  font-size: clamp(1.125rem, 1.71vw, 1.5rem);
+  color: #333333;
+  line-height: 147%;
+
+  &::placeholder {
+    color: inherit;
+    line-height: 1;
+    opacity: 0.5;
+    font-size: clamp(1.125rem, 1.71vw, 1.5rem);
+    line-height: 147%;
+  }
+}
+
+.customButton {
+  font-size: clamp(1.125rem, 2.57vw, 2.25rem);
+  width: fit-content;
+  color: #363636;
+  font-weight: 800;
+  line-height: 147%;
+  border-bottom: 2px solid #333333;
+
+  &:hover,
+  &:active {
+    transform: scale(1.05);
+    color: #000000;
+    border-color: #000000;
+  }
+}

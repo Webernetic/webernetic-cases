@@ -1,0 +1,13 @@
+-
+    var items = [{text: "Увеличить количество заказов на сайте в 2 раза", title: "Задача проекта:"},
+    {text: "Август 2020 - по настоящее время", title: "Срок сотрудничества:"},
+    {text: "Бостон, штат Массачусетс, Чикаго, штат Иллинойс, США", title: "Регион продвижения:"}]
+
+section.headerSection.container  
+  .headerSection__bg
+  h1.headerSection__title.head1.renovista-title  SEO продвижение мувинговой компании
+  ul.headerSection__itemsWrapper
+    each item in items
+      li.headerSection__item
+        h3.headerSection__itemTitle= item.title
+        p.headerSection__itemText= item.text
