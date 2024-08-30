@@ -1,13 +1,6 @@
 @import './fonts';
 @import './variables';
 @import '../mixins/mixinsStyles.scss';
-@import './headerSection/_headerSection.scss';
-@import './resultsSection/_resultsSection.scss';
-@import './seoSection/_seoSection.scss';
-@import './stagesSection/_stagesSection.scss';
-@import './summarySection/_summarySection.scss';
-@import './orderSection/_orderSection.scss';
-@import './swiper/_swiper-bundle.min.css';
 
 *,
 *::after,
@@ -180,3 +173,12 @@ span {
 .mb-16 {
   margin-bottom: 16px;
 }
+
+@import './headerSection/_headerSection.scss';
+@import './resultsSection/_resultsSection.scss';
+@import './seoSection/_seoSection.scss';
+@import './stagesSection/_stagesSection.scss';
+@import './regionsSection/_regionsSection.scss';
+@import './summarySection/_summarySection.scss';
+@import './orderSection/_orderSection.scss';
+@import './swiper/_swiper-bundle.min.css';

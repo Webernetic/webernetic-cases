@@ -1,0 +1,21 @@
+-
+  var items = [
+    {number: "1", text: "Пересмотрели структуру сайта"}, 
+    {number: "2", text: "Предложили новые доработки по юзабилити"}, 
+    {number: "3", text: "Собрали семантику по новой локации"}, 
+    {number: "4", text: "	Создали новые страницы по новым направлениям"}]
+
+  
+section.regionsSection
+  h2.head2.regionsSection__title Новые регионы
+  p.regionsSection__text.regionsSection__textInvert Результаты работы позволили клиенту масштабировать свой бизнес и открыть вторую локацию, где они могут оказывать услуги — #[span.bold Чикаго.] 
+  .regionsSection__wrapper
+    .regionsSection__imageWrapper
+      img(src="../assets/images/city.png", alt="City")
+    .regionsSection__itemsWrapper
+      p.regionsSection__text Для работы с новым регионом мы провели дополнительные доработки на сайте:
+        ul.regionsSection__items
+          each item in items
+            li.regionsSection__item
+              span.regionsSection__itemNumber=item.number
+              p.regionsSection__itemText=item.text
