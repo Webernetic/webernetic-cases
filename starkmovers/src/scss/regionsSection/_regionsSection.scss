@@ -74,6 +74,9 @@
   }
 
   &__itemText {
+    font-size: clamp(1.25rem, 1.83vw, 1.375rem);
+    line-height: 1.3;
+    color: #303030;
   }
 
   @media (max-width: $breakpoints-md) {
