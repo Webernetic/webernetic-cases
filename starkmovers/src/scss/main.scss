@@ -2,6 +2,9 @@
 @import './variables';
 @import '../mixins/mixinsStyles.scss';
 @import './headerSection/_headerSection.scss';
+@import './resultsSection/_resultsSection.scss';
+@import './seoSection/_seoSection.scss';
+@import './stagesSection/_stagesSection.scss';
 @import './summarySection/_summarySection.scss';
 @import './orderSection/_orderSection.scss';
 @import './swiper/_swiper-bundle.min.css';
@@ -20,7 +23,7 @@ body {
   position: relative;
   scroll-behavior: smooth;
   z-index: -1;
-  background-color: #f5f7fc62;
+  background-color: #f4f2ee;
 }
 
 body::-webkit-scrollbar {
@@ -29,12 +32,12 @@ body::-webkit-scrollbar {
 
 .container {
   max-width: $max-width;
-  padding-inline: clamp(24px, 7.17vw, 100px);
+  padding-inline: clamp(20px, 7.17vw, 100px);
   width: 100%;
   margin-inline: auto;
 
   @media (max-width: $breakpoints-sm) {
-    padding-inline: 24px;
+    padding-inline: 20px;
   }
 }
 
@@ -65,10 +68,12 @@ button {
   margin: 0;
 }
 
-img {
+img,
+picture {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: flex;
 }
 
 h1,
@@ -90,7 +95,7 @@ h4 {
 
 .head2 {
   font-size: clamp(2.125rem, 4vw, 3rem);
-  line-height: 100%;
+  line-height: 147%;
   color: #32322d;
 }
 
@@ -166,4 +171,12 @@ span {
     color: #000000;
     border-color: #000000;
   }
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
 }
