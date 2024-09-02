@@ -59,15 +59,37 @@
 
   &__imageWrapper {
     border-radius: clamp(20px, 2.5vw, 30px);
+    background-color: #fff;
     overflow: hidden;
-  }
+    overflow-x: auto;
+    height: 100%;
 
-  @media (max-width: 1270px) {
-    &__wrapper {
-      flex-wrap: wrap;
+    & > img {
+      object-fit: contain;
+      min-width: 737px;
     }
   }
 
-  @media (max-width: $breakpoints-sm) {
+  @media (max-width: $breakpoints-md) {
+    &__wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding-right: 0;
+    }
+
+    &_block {
+      &:nth-child(1),
+      &:nth-child(4) {
+        margin-right: clamp(24px, 3.33vw, 40px);
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
   }
 }

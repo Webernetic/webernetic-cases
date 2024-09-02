@@ -127,6 +127,11 @@
     gap: clamp(16px, 3.33vw, 40px);
   }
 
+  &__imageWrapper {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
   @media (max-width: $breakpoints-xl) {
     &__wrapper {
       grid-template-areas:
@@ -160,8 +165,25 @@
       gap: 16px;
     }
 
+    &__item {
+      &:nth-of-type(9) {
+        & > div {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+    }
+
     &__itemValue {
       margin-top: 40px;
+    }
+
+    &__itemGraph {
+      padding-right: 0;
+
+      .seoSection__itemTitle {
+        padding-right: clamp(32px, 3.33vw, 40px);
+      }
     }
   }
 }

@@ -5,29 +5,30 @@
   background-color: #fff;
   box-shadow: 0px 4px 4px 0px #0000000d;
   margin-bottom: clamp(60px, 7.86vw, 110px);
+  overflow: hidden;
 
-  &_wrapper {
+  &__wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 20px;
+    gap: 16px;
   }
 
-  &_content {
+  &__content {
     flex: 1;
   }
 
-  &_title {
-    margin-bottom: clamp(12px, 1.43vw, 20px);
+  &__title {
+    margin-bottom: clamp(16px, 2.08vw, 25px);
   }
 
-  &__selectedText {
-    // color: $font-color-bright;
-    font-weight: 700;
+  &__text {
+    font-size: clamp(1.25rem, 2.33vw, 1.75rem);
+    color: #2d2d2d;
+    line-height: 1.3;
   }
 
-  &_imageWrapper {
-    max-width: 45%;
+  &__imageWrapper {
+    max-width: 44%;
     width: 100%;
     height: 100%;
 
@@ -36,20 +37,36 @@
       height: 100%;
     }
   }
+
+  &__listItem {
+    position: relative;
+    padding-left: clamp(25px, 3.33vw, 40px);
+
+    &::before {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      width: 5px;
+      height: 5px;
+      top: clamp(9px, 1.33vw, 16px);
+      left: clamp(10px, 1.42vw, 17px);
+      background-color: #2d2d2d;
+    }
+  }
 }
 
 @media (max-width: $breakpoints-md) {
   .summarySection {
-    &_wrapper {
+    &__wrapper {
       flex-direction: column;
     }
 
-    &_imageWrapper {
+    &__imageWrapper {
       margin-inline: auto;
       max-width: 60%;
     }
 
-    &_title {
+    &__title {
       margin-left: 12px;
     }
   }
@@ -57,11 +74,11 @@
 
 @media (max-width: $breakpoints-sm) {
   .summarySection {
-    &_imageWrapper {
+    &__imageWrapper {
       max-width: 100%;
     }
 
-    &_footer {
+    &__footer {
       justify-content: flex-start;
       font-weight: 700;
     }
