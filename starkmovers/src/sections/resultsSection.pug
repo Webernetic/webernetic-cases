@@ -1,0 +1,17 @@
+-
+  var results = [
+    {value: "60%", valueDescription: "", text: "запросов вывели в Топ-5 Google"}, 
+    {value: "×30", valueDescription: " раз",text: "рост органического трафика"}, 
+    {value: "×150", valueDescription: " раз",text: "увеличение конверсии на сайте"}, 
+    {value: "+1", valueDescription: " локация",text: "масштабирование бизнеса в Чикаго"}]
+
+  
+section.resultsSection 
+  h2.head2.resultsSection__title Результаты:
+  .resultsSection__wrapper
+    each item in results
+      .resultsSection__item
+        .resultsSection__itemHeader
+          span.resultsSection__value=item.value
+          span.resultsSection__valueDescription=item.valueDescription
+        p.resultsSection_itemText=item.text
