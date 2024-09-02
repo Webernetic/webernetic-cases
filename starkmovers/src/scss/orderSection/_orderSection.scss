@@ -1,23 +1,28 @@
 .orderSection {
-  &_title {
-    margin-bottom: clamp(20px, 2.14vw, 30px);
-    font-size: clamp(1.5rem, 1.47vw, 2.125rem);
-    font-weight: 800;
+  &__title {
+    margin-bottom: clamp(24px, 5vw, 60px);
+    margin-inline: auto;
+    max-width: 877px;
+    font-size: clamp(1.625rem, 4vw, 3rem);
+    font-weight: 700;
+    line-height: 1.25;
     text-align: center;
   }
 
-  &_wrapper {
+  &__wrapper {
     position: relative;
     display: flex;
-    gap: clamp(40px, 7.5vw, 105px);
+    gap: clamp(30px, 4.74vw, 55px);
     padding-inline: clamp(20px, 8.14vw, 114px) clamp(20px, 5vw, 70px);
-    padding-block: clamp(40px, 5vw, 70px);
-    background-color: #e2e2e2;
+    padding-block: clamp(23px, 5vw, 70px);
+    background-color: #ffffff;
     border-radius: clamp(20px, 2.14vw, 30px);
   }
 
-  &_imageWrapper {
-    max-width: 40%;
+  &__imageWrapper {
+    position: relative;
+    max-width: 42%;
+    margin-left: clamp(30px, 5.4vw, 63px);
     width: 100%;
     height: auto;
 
@@ -28,17 +33,18 @@
     }
   }
 
-  &_nameWrapper {
+  &__nameWrapper {
     position: absolute;
     left: 0;
     bottom: 27%;
-    transform: translateX(30%);
+    transform: translateX(-25%);
     max-width: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
-    padding: clamp(20px, 2vw, 28px) clamp(20px, 2.23vw, 32px);
+    padding: 20px clamp(20px, 2.23vw, 32px);
+    box-shadow: 2px 8px 8px 0px #00000026;
     background-color: #fff;
     border-radius: 15px;
 
@@ -56,28 +62,28 @@
     }
   }
 
-  &_form {
+  &__form {
     display: flex;
     flex-direction: column;
   }
 
-  &_formTitle {
+  &__formTitle {
     margin-bottom: 20px;
-    font-weight: 800;
-    font-size: clamp(2rem, 3.43vw, 3rem);
-    color: #333333;
-    line-height: 146%;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    color: #363636;
+    line-height: 147%;
   }
 
-  &_secondformTitle {
+  &__secondformTitle {
     margin-bottom: 20px;
     font-size: clamp(1.125rem, 2.57vw, 2.25rem);
-    color: #333333;
+    color: #363636;
     font-weight: 700;
     line-height: 147%;
   }
 
-  &_inputWrapper {
+  &__inputWrapper {
     display: flex;
     justify-content: space-between;
     gap: clamp(30px, 2.86vw, 40px);
@@ -85,12 +91,12 @@
     margin-bottom: clamp(30px, 3.57vw, 50px);
 
     & > input {
-      flex-basis: 47%;
+      flex-basis: calc((100% - clamp(30px, 2.86vw, 40px)) / 2);
       color: #333333;
     }
   }
 
-  &_checkboxWrapper {
+  &__checkboxWrapper {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -102,24 +108,30 @@
     }
   }
 
-  @media (max-width: $breakpoints-md) {
+  @media (max-width: $breakpoints-lg) {
     &_form {
       align-items: center;
     }
 
-    &_imageWrapper,
-    &_nameWrapper {
+    &__wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__imageWrapper,
+    &__nameWrapper {
       display: none;
     }
 
-    &_checkboxWrapper {
-      width: 60%;
+    &__form {
+      width: 80%;
+    }
+
+    &__checkboxWrapper {
       gap: 30px;
     }
 
-    &_inputWrapper {
-      width: 60%;
-
+    &__inputWrapper {
       & > input {
         flex-basis: 100%;
       }
@@ -127,20 +139,13 @@
   }
 
   @media (max-width: $breakpoints-sm) {
-    &_title {
-      text-align: start;
-    }
-
-    &_form {
+    &__form {
       align-items: stretch;
-    }
-
-    &_checkboxWrapper {
       width: 100%;
     }
 
-    &_inputWrapper {
-      width: 100%;
+    &__wrapper {
+      padding: 30px 23px;
     }
   }
 

@@ -154,7 +154,7 @@ span {
   font-size: clamp(1.125rem, 2.57vw, 2.25rem);
   width: fit-content;
   color: #363636;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 147%;
   border-bottom: 2px solid #333333;
 
@@ -163,6 +163,10 @@ span {
     transform: scale(1.05);
     color: #000000;
     border-color: #000000;
+  }
+
+  @media (max-width: $breakpoints-md) {
+    font-weight: 800;
   }
 }
 

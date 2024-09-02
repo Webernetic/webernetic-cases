@@ -76,6 +76,10 @@
     padding-bottom: 393px;
     background-position: right center;
 
+    &__itemsWrapper {
+      margin-inline: 24px;
+    }
+
     &__title {
       max-width: 100%;
     }
