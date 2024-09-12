@@ -1,0 +1,47 @@
+.prioritySection {
+  margin-bottom: 100px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    max-width: 100%;
+    min-height: 280px;
+    padding: 30px 40px;
+    border-radius: 12px;
+    background-color: $color-light-blue;
+  }
+
+  &__left {
+    max-width: 420px;
+  }
+
+  &__left-title {
+    color: white;
+  }
+
+  &__right {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 340px;
+    width: 100%;
+    min-height: 220px;
+    border-radius: 12px;
+    padding: 24px 30px;
+    background-color: $color-box-bg;
+  }
+
+  &__right-pic {
+    width: 140px;
+  }
+
+  &__right-text {
+    color: $color-text;
+  }
+}

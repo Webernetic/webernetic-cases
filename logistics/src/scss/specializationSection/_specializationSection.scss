@@ -1,0 +1,46 @@
+.specializationSection {
+  margin-bottom: 100px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 500px;
+    min-height: 240px;
+    padding: 30px 40px;
+    border: 1px solid rgba(0, 0, 0, 0.01);
+    border-radius: 12px;
+    background-color: white;
+  }
+
+  &__left-title {
+    line-height: 120%;
+    color: $color-main;
+  }
+
+  &__left-text {
+    color: $color-text;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 728px;
+    min-height: 240px;
+    padding: 30px 40px;
+    border-radius: 12px;
+    background-color: $color-light-blue;
+    color: white;
+  }
+
+  &__right-title {
+    line-height: 44.22px;
+  }
+}

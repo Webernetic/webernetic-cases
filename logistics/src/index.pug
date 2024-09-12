@@ -1,0 +1,13 @@
+extends layouts/MainLayout
+include mixins/index.pug
+
+block title
+  | Logistics
+
+block content
+  body.body    
+    include sections/headerSection 
+    .container 
+      include sections/specializationSection
+      include sections/prioritySection
+      include sections/strategySection

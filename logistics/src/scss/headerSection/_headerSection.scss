@@ -1,0 +1,76 @@
+.headerSection {
+  padding-block: 30px 10px;
+
+  &__wrapper {
+    display: flex;
+    min-height: 624px;
+    border-radius: 18px;
+    background-color: $color-blue;
+    color: white;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 675px;
+    padding: 65px 0 42px 40px;
+  }
+
+  &__title {
+    max-width: 590px;
+    font-size: 51px;
+    font-weight: 700;
+    line-height: 105%;
+  }
+
+  &__button {
+    width: 202px;
+    height: 52px;
+    padding: 8px 24px;
+    margin-bottom: 12px;
+    border: 1.5px solid #fff;
+    border-radius: 51px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 120%;
+  }
+
+  &__text {
+    font-size: 24px;
+    color: $color-light;
+  }
+
+  &__pictures {
+    position: relative;
+    width: 565px;
+  }
+
+  &__pic {
+    position: absolute;
+    width: 254px;
+    height: 428px;
+
+    &:nth-child(1) {
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    &:nth-child(2) {
+      top: 0;
+      left: 11px;
+    }
+
+    &:nth-child(3) {
+      right: 30px;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    &:nth-child(4) {
+      right: 20px;
+      bottom: 0;
+    }
+  }
+}

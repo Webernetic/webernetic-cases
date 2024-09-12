@@ -1,0 +1,23 @@
+@import './fonts';
+
+$max-width: 1400px;
+
+//fonts
+$font-family: 'Circe';
+
+//colors
+$color-bg: #eeeeee;
+$color-box-bg: #e1e7ff;
+$color-box-bg2: #edf1fd;
+$color-light: #f1f1f1;
+$color-blue: #333ae5;
+$color-light-blue: #7b95f4;
+$color-main: #283975;
+$color-text: #5567a7;
+
+//breakpoints
+$breakpoints-sm: 576px;
+$breakpoints-md: 768px;
+$breakpoints-lg: 992px;
+$breakpoints-xl: 1200px;
+$breakpoints-xxl: 1400px;
