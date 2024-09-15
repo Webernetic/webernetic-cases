@@ -1,0 +1,14 @@
+-
+  var results = [
+    {title: "60%", text: "Качественных заявок с рекламы, т.е. пользователи заинтересованы в услугах, которые предлагает компания"}, 
+    {title: "18", text: "Целевых заявок в месяц, при небольшом количестве нецелевых (10)"}, 
+  ]
+
+section.resultsSection
+  .resultsSection__wrapper.wrapper
+    h2.resultsSection__title Результаты
+    .resultsSection__container
+      each result in results
+        .resultsSection__box
+          span.resultsSection__box-title=result.title
+          p.resultsSection__box-text=result.text

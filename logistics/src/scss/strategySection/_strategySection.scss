@@ -106,4 +106,154 @@
       margin-top: 10px;
     }
   }
+
+  &__marketing {
+    position: relative;
+    min-height: 242px;
+    padding: 32px 510px 32px 40px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    background-color: white;
+  }
+
+  &__graph {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 12px;
+  }
+
+  &__graph-left,
+  &__graph-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 614px;
+    min-height: 318px;
+    padding: 130px 40px 32px;
+    border-radius: 12px;
+    background-color: white;
+  }
+
+  &__graph-title {
+    color: $color-main;
+    line-height: 120%;
+  }
+
+  @media (max-width: $breakpoints-xl) {
+    &__base,
+    &__analysis,
+    &__marketing {
+      padding-right: clamp(
+        40px,
+        calc(40px + 370 * (100vw - 768px) / 432),
+        510px
+      );
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__base,
+    &__analysis,
+    &__marketing,
+    &__graph-left,
+    &__graph-right {
+      padding-top: 99px;
+    }
+
+    &__step-btn {
+      top: 32px;
+      left: 40px;
+    }
+
+    &__particular {
+      flex-direction: column;
+    }
+
+    &__particular-left {
+      max-width: 100%;
+    }
+
+    &__graph {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+
+    &__graph-left,
+    &__graph-right {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    margin-bottom: 70px;
+
+    &__title {
+      margin-bottom: 20px;
+      font-size: 26px;
+      line-height: 120%;
+    }
+
+    &__base,
+    &__analysis,
+    &__marketing,
+    &__particular-right,
+    &__graph-left,
+    &__graph-right {
+      padding-inline: 20px;
+      padding-bottom: 24px;
+    }
+
+    &__step-btn {
+      padding: 8px 0px 6px 0px;
+      width: 90px;
+      height: 43px;
+      top: 20px;
+      left: 20px;
+      font-size: 20px;
+    }
+
+    & h3.strategy-title,
+    &__graph-title {
+      margin-bottom: 10px;
+      font-size: 20px;
+      line-height: 120%;
+    }
+
+    &__particular-title {
+      margin-bottom: 6px;
+      font-size: 20px;
+      line-height: 29.48px;
+    }
+
+    &__base-text,
+    &__analysis-text,
+    &__marketing-text,
+    &__particular-text,
+    &__graph-text {
+      font-size: 16px;
+    }
+
+    &__base-text.second-text {
+      margin-top: 5px;
+    }
+
+    &__particular-left {
+      min-height: 140px;
+    }
+
+    &__analysis-text {
+      padding: 16px;
+    }
+
+    &__marketing-text.second-text {
+      margin-top: 7px;
+    }
+
+    &__graph-left,
+    &__graph-right {
+      min-height: 262px;
+    }
+  }
 }

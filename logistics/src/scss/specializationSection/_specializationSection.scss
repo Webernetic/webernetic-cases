@@ -43,4 +43,46 @@
   &__right-title {
     line-height: 44.22px;
   }
+
+  @media (max-width: $breakpoints-md) {
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__left,
+    &__right {
+      max-width: 100%;
+      justify-content: flex-start;
+      min-height: auto;
+    }
+
+    &__left-title,
+    &__right-title {
+      margin-bottom: 14px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    margin-bottom: 70px;
+
+    &__left,
+    &__right {
+      padding: 24px 20px;
+    }
+
+    &__left-title,
+    &__right-title {
+      font-size: 20px;
+      line-height: 120%;
+    }
+
+    &__right-title {
+      line-height: 29.48px;
+    }
+
+    &__left-text,
+    &__right-text {
+      font-size: 16px;
+    }
+  }
 }

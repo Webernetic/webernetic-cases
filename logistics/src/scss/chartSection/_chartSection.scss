@@ -1,0 +1,132 @@
+.chartSection {
+  position: relative;
+  margin-bottom: 100px;
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    max-width: 1240px;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  &__card {
+    min-height: 188px;
+    padding: 26px 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.01);
+
+    &:nth-child(1) {
+      background-color: $color-light-blue;
+
+      & .chartSection__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 120%;
+        color: #fff;
+      }
+    }
+
+    &:nth-child(n + 2) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 188px;
+      padding: 26px 30px;
+      border: 1px solid rgba(0, 0, 0, 0.01);
+      border-radius: 12px;
+      background-color: $color-box-bg2;
+
+      & .chartSection__title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 120%;
+        color: $color-main;
+      }
+
+      & .chartSection__text {
+        font-size: 24px;
+        line-height: 130%;
+        color: $color-text;
+      }
+    }
+  }
+
+  &__picture {
+    width: 100%;
+    border-radius: 12px;
+
+    & img {
+      width: auto;
+      height: 100%;
+      object-fit: cover;
+      object-position: left;
+      border-radius: 12px;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    &__cards {
+      margin-right: 24px;
+    }
+
+    &__picture {
+      overflow-x: scroll;
+      white-space: nowrap;
+    }
+  }
+
+  @media (max-width: $breakpoints-xl) {
+    &__picture {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  @media (max-width: 850px) {
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__cards {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    margin-bottom: 70px;
+
+    &__cards {
+      gap: 10px;
+    }
+
+    &__card {
+      min-height: 140px;
+      padding: 24px 20px;
+
+      &:nth-child(1) {
+        & .chartSection__title {
+          font-size: 32px;
+        }
+      }
+
+      &:nth-child(n + 2) {
+        min-height: 140px;
+        padding: 24px 20px;
+
+        & .chartSection__title {
+          font-size: 36px;
+        }
+
+        & .chartSection__text {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

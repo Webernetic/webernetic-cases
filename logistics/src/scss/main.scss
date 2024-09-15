@@ -5,6 +5,12 @@
 @import './specializationSection/specializationSection';
 @import './prioritySection/prioritySection';
 @import './strategySection/strategySection';
+@import './resultsSection/resultsSection';
+@import './chartSection/chartSection';
+@import './tableSection/tableSection';
+@import './graphSection/graphSection';
+@import './diagramSection/diagramSection';
+@import './orderSection/orderSection';
 
 *,
 *::after,
@@ -32,10 +38,23 @@ body::-webkit-scrollbar {
   padding-bottom: 0;
   width: 100%;
   margin: 0 auto;
+
+  @media (max-width: 1300px) {
+    padding-inline: 24px;
+  }
+}
+
+.container-pic {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (max-width: 1300px) {
+    padding-left: 24px;
+  }
 }
 
 .wrapper {
-  // outline: 1px solid red;
   max-width: 1240px;
   margin: 0 auto;
 }
@@ -91,4 +110,36 @@ p {
   line-height: 130%;
   font-family: $font-family;
   color: inherit;
+}
+
+.input {
+  border-bottom: 2px solid #333333;
+  width: 100%;
+  font-size: clamp(1.125rem, 1.71vw, 1.5rem);
+  color: #333333;
+  line-height: 147%;
+
+  &::placeholder {
+    color: inherit;
+    line-height: 1;
+    opacity: 0.5;
+    font-size: clamp(1.125rem, 1.71vw, 1.5rem);
+    line-height: 147%;
+  }
+}
+
+.customButton {
+  font-size: clamp(1.125rem, 2.57vw, 2.25rem);
+  width: fit-content;
+  color: $color-main;
+  font-weight: 800;
+  line-height: 100%;
+  border-bottom: 2px solid $color-main;
+
+  &:hover,
+  &:active {
+    transform: scale(1.05);
+    color: $color-text;
+    border-color: $color-text;
+  }
 }
