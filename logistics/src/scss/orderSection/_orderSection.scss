@@ -18,7 +18,7 @@
     max-width: 1240px;
     margin: 0 auto;
     gap: 30px;
-    padding: 56px 40px 56px 104px;
+    padding: 56px 40px 56px 103.6px;
     background-color: $color-box-bg2;
     box-shadow: 2px 4px 9px 0 rgba(36, 24, 61, 0.1);
     border-radius: 12px;
@@ -114,9 +114,14 @@
     }
   }
 
-  @media (max-width: $breakpoints-md) {
+  @media (max-width: $breakpoints-lg) {
+    &_wrapper {
+      padding: 40px;
+    }
+
     &_form {
       align-items: center;
+      padding: 0;
     }
 
     &_imageWrapper,
@@ -138,6 +143,26 @@
     }
   }
 
+  @media (max-width: $breakpoints-md) {
+    &_title {
+      font-size: clamp(20px, calc(20px + 10 * (100vw - 400px) / 368), 30px);
+    }
+
+    &_formTitle {
+      font-size: clamp(24px, calc(24px + 18 * (100vw - 400px) / 368), 42px);
+    }
+
+    &_secondformTitle {
+      font-size: clamp(18px, calc(18px + 18 * (100vw - 400px) / 368), 36px);
+    }
+
+    &_checkboxWrapper {
+      & > label {
+        font-size: clamp(18px, calc(18px + 6 * (100vw - 400px) / 368), 24px);
+      }
+    }
+  }
+
   @media (max-width: $breakpoints-sm) {
     &_title {
       text-align: start;
@@ -153,6 +178,48 @@
 
     &_inputWrapper {
       width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &_wrapper {
+      padding: 30px 20px;
+    }
+
+    &_title {
+      margin-bottom: 20px;
+      font-size: 20px;
+      line-height: 110%;
+      text-align: center;
+    }
+
+    &_formTitle {
+      font-size: 24px;
+      line-height: 111%;
+    }
+
+    &_secondformTitle {
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+
+    &_inputWrapper {
+      gap: 30px;
+      margin-bottom: 30px;
+
+      & > input {
+        height: 36px;
+      }
+    }
+
+    &_checkboxWrapper {
+      margin-bottom: 40px;
+      gap: 24px;
+
+      & > label {
+        font-size: 18px;
+        height: 22px;
+      }
     }
   }
 

@@ -91,6 +91,20 @@
     }
   }
 
+  @media (max-width: $breakpoints-md) {
+    &__card {
+      &:nth-child(n + 2) {
+        & .chartSection__title {
+          font-size: clamp(36px, calc(36px + 12 * (100vw - 400px) / 368), 48px);
+        }
+
+        & .chartSection__text {
+          font-size: clamp(20px, calc(20px + 4 * (100vw - 400px) / 368), 24px);
+        }
+      }
+    }
+  }
+
   @media (max-width: $breakpoints-sm) {
     &__cards {
       grid-template-columns: 1fr;

@@ -18,6 +18,9 @@
   }
 
   &__left-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 120%;
     color: white;
   }
 
@@ -44,6 +47,7 @@
 
   &__right-text {
     color: $color-text;
+    font-size: 20px;
   }
 
   @media (max-width: $breakpoints-xl) {
@@ -64,6 +68,16 @@
 
     &__box {
       max-width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__left-title {
+      font-size: clamp(20px, calc(20px + 10 * (100vw - 400px) / 368), 30px);
+    }
+
+    &__right-text {
+      font-size: clamp(16px, calc(16px + 4 * (100vw - 400px) / 368), 20px);
     }
   }
 

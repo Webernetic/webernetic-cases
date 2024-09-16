@@ -3,17 +3,22 @@
 
   &__title {
     margin-bottom: 37px;
+    font-weight: 700;
+    font-size: 36px;
     color: $color-main;
   }
 
   & h3.strategy-title {
     margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 30px;
     line-height: 44.22px;
     color: $color-main;
   }
 
   & p {
     color: $color-text;
+    font-size: 20px;
   }
 
   &__base {
@@ -77,6 +82,8 @@
   }
 
   &__particular-title {
+    font-weight: 700;
+    font-size: 30px;
     line-height: 44.22px;
   }
 
@@ -138,6 +145,8 @@
 
   &__graph-title {
     color: $color-main;
+    font-weight: 700;
+    font-size: 30px;
     line-height: 120%;
   }
 
@@ -160,6 +169,28 @@
     &__graph-left,
     &__graph-right {
       padding-top: 99px;
+    }
+
+    &__particular-left {
+      min-height: clamp(
+        140px,
+        calc(140px + 100 * (100vw - 400px) / 368),
+        240px
+      );
+    }
+
+    &__title {
+      font-size: clamp(26px, calc(26px + 10 * (100vw - 400px) / 368), 36px);
+    }
+
+    & h3.strategy-title,
+    &__particular-title,
+    &__graph-title {
+      font-size: clamp(20px, calc(20px + 10 * (100vw - 400px) / 368), 30px);
+    }
+
+    & p {
+      font-size: clamp(16px, calc(16px + 4 * (100vw - 400px) / 368), 20px);
     }
 
     &__step-btn {

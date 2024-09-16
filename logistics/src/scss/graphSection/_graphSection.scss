@@ -54,6 +54,7 @@
 
   &__picture {
     width: 100%;
+    height: 436px;
     border-radius: 12px;
 
     & img {
@@ -83,6 +84,18 @@
 
     &__card:nth-child(1) {
       grid-column: 1 / 3;
+    }
+
+    &__card {
+      &:nth-child(n + 2) {
+        & .graphSection__title {
+          font-size: clamp(36px, calc(36px + 12 * (100vw - 400px) / 368), 48px);
+        }
+
+        & .graphSection__text {
+          font-size: clamp(20px, calc(20px + 4 * (100vw - 400px) / 368), 24px);
+        }
+      }
     }
   }
 
