@@ -1,0 +1,36 @@
+-
+  var cards = [
+    {title: "Отраслевые решения", text: "Разработали для сервиса новый раздел – отраслевые решения. На этих страницах находятся уже готовые макеты сооружений. Здесь особое внимание уделили структурированию информации для меню, чтобы пользователь быстро нашел необходимые решения."},
+    {title: "Акционные предложения", text: "Выделили акционные предложения с помощью цвета, чтобы привлечь внимание пользователей и стимулировать их к совершению покупок. Это позволит предложить клиентам выгодные условия и повысить конверсию, увеличить объем продаж."},
+    {title: "Фильтры по размерам", text: "При создании дизайна для фильтра мы использовали графику, чтобы пользователь легко мог считывать информацию. "}
+  ]
+
+section.industrySection
+  .industrySection__container
+    .industrySection__top
+      .industrySection__cards
+        each card in cards
+          .industrySection__card
+            p.industrySection__card-title=card.title
+            p.industrySection__card-text=card.text
+    .industrySection__bottom
+      .industrySection__columns
+        .industrySection__columns-pic
+          img.industrySection__image(src="./assets/images/industry-1.png", alt="Отраслевые решения")
+        .industrySection__columns-pic
+          img.industrySection__image(src="./assets/images/industry-2.png", alt="Акционные предложения")
+        .industrySection__columns-pic
+          img.industrySection__image(src="./assets/images/industry-3.png", alt="Фильтры по размерам")
+      .industrySection__conclusion
+        .industrySection__conclusion-content
+          .industrySection__left
+            h2.industrySection__left-title.title Выводы
+            p.industrySection__left-text.text Такая большая работа продела с одной целью — сделать сервис проще и удобнее в использовании. Чтобы достичь этого, мы уделили особое внимание подготовительным работам: изучению рынка, кастедавам, прототипированию.
+            p.industrySection__left-text.text Теперь пользователи могут быстрее находить то, что им нужно, проектировать и заказывать здания. Скорость загрузки страниц минимальна, несмотря на количество фото-контента.
+          .industrySection__right
+            h2.industrySection__right-title.title Как это поможет компании достигать своих целей? 
+            p.industrySection__right-text.text Интуитивно понятный дизайн помогает быстро и точно удовлетворить потребности пользователя. В итоге, клиент лоялен к компании и готов заказывать ее услуги и рекомендовать другим.
+        .industrySection__pic-results
+          img.industrySection__image(src="./assets/images/results.png", alt="Результаты")
+        .industrySection__pic-design
+          img.industrySection__image(src="./assets/images/line-2.png", alt="Webernetic дизайн")

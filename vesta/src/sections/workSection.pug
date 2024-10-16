@@ -1,0 +1,28 @@
+-
+  var cards = [
+    {title: "Целевая аудитория", text: ""},
+    {title: "≈80%", text: "Пользователей - это юридические лица, нуждающиеся в здании для коммерческих целей"}, 
+    {title: "10%", text: "Инвесторы, рассматривающие здания для потенциальных инвестиций"},
+    {title: "10%", text: "Частные лица, заказывающие здания для личного использования"}, 
+  ]
+
+
+section.workSection
+  .workSection__wrapper.wrapper
+    .workSection__top
+      .workSection__top-pictures
+        .workSection__top-pic
+          img.workSection__image(src="./assets/images/work1.png", alt="Офисное помещение")
+        .workSection__top-pic
+          img.workSection__image(src="./assets/images/work2.png", alt="Параметры")
+      .workSection__top-content
+        h2.workSection__top-title Как работает платформа?
+        p.workSection__top-text Клиенты сами проектируют здания, выбирают размеры, цвет, добавляют различные элементы через интерфейс онлайн-конфигуратора. После создания модели, пользователь онлайн видит стоимость сооружения, может получить коммерческое предложение или сделать заказ на сооружение под ключ. <br>Важно отметить, что система создана с учетом потребностей пользователей без опыта в строительстве и проектировании зданий.
+    .workSection__cards
+      each card in cards
+        .workSection__card
+          p.workSection__title=card.title
+          p.workSection__text=card.text
+
+
+
