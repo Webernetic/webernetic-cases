@@ -229,4 +229,15 @@
       margin-bottom: 43px;
     }
   }
+
+  @media (max-width: 350px) {
+    &__country-left,
+    &__country-right {
+      font-size: 13px;
+    }
+
+    &__bottom-text {
+      font-size: 16px;
+    }
+  }
 }

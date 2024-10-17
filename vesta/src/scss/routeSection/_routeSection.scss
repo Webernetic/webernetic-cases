@@ -120,12 +120,27 @@
   }
 
   @media (max-width: 450px) {
+    margin-bottom: 64px;
+
     &__container {
       min-height: 689px;
     }
 
     &__pic {
       top: 195px;
+    }
+
+    &__title {
+      font-size: 22px;
+    }
+  }
+
+  @media (max-width: 350px) {
+    &__container {
+      padding: 18px 18px 32px 18px;
+    }
+    &__title {
+      font-size: 20px;
     }
   }
 }

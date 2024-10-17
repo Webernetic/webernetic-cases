@@ -102,6 +102,7 @@
 
   &__third-block {
     position: relative;
+    max-width: 614px;
     border-radius: 8px;
     padding: 26px 24px;
     background-color: $color-blue;
@@ -139,6 +140,12 @@
 
   &__fourth-title.title {
     color: white;
+  }
+
+  @media (max-width: $breakpoints-xl) {
+    &__second-block {
+      min-height: 550px;
+    }
   }
 
   @media (max-width: $breakpoints-lg) {
@@ -219,6 +226,15 @@
 
     &__fourth-left {
       padding-inline: 18px;
+    }
+  }
+  @media (max-width: 350px) {
+    &__second-block {
+      min-height: 570px;
+    }
+
+    &__fourth-pic {
+      height: 170px;
     }
   }
 }

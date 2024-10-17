@@ -9,6 +9,10 @@
 
   &__pic {
     max-width: 822px;
+
+    & img {
+      border-radius: 8px;
+    }
   }
 
   &__top-left {
@@ -72,6 +76,7 @@
 
   &__bottom-pic {
     border-radius: 8px;
+    width: 300px;
 
     &:nth-child(2) img {
       border-top-left-radius: 8px;
@@ -115,7 +120,13 @@
     }
   }
 
-  @media (max-width: $breakpoints-lg) {
+  @media (max-width: 1150px) {
+    &__bottom-content {
+      transform: translateY(-50px);
+    }
+  }
+
+  @media (max-width: 1120px) {
     &__top {
       flex-direction: column;
     }
@@ -135,6 +146,7 @@
     &__bottom-content {
       max-width: 100%;
       margin-bottom: 33px;
+      transform: translateY(0);
     }
 
     &__bottom-pictures {
@@ -162,6 +174,14 @@
   @media (max-width: $breakpoints-xs) {
     margin-bottom: 65px;
 
+    &__title {
+      font-size: 22px;
+    }
+
+    &__text {
+      font-size: 17px;
+    }
+
     &__bottom-title {
       font-size: 22px;
       margin-bottom: 14px;
@@ -173,6 +193,17 @@
 
     &__bottom-pic:first-child {
       transform: translateX(30px);
+      height: 231px;
+      width: 248px;
+
+      & img {
+        border-radius: 8px;
+        object-position: left;
+      }
+    }
+    &__bottom-pic:last-child {
+      height: 309px;
+      width: 454px;
     }
 
     &__top-left {

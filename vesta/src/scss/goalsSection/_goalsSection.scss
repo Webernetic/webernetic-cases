@@ -110,6 +110,8 @@
   }
 
   @media (max-width: $breakpoints-lg) {
+    margin-bottom: 130px;
+
     &__container {
       min-height: 1300px;
     }
@@ -159,6 +161,8 @@
   }
 
   @media (max-width: $breakpoints-xs) {
+    margin-bottom: 104px;
+
     &__container {
       min-height: 1864px;
     }

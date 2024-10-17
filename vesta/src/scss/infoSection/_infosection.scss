@@ -23,18 +23,22 @@
 
   &__chronology-pic {
     width: 300px;
+
     border-radius: 8px;
 
     & img {
       height: auto;
+      border-radius: 8px;
     }
 
     &:first-child {
+      height: 336px;
       transform: translateY(92px);
       margin-right: 22px;
     }
 
     &:nth-child(2) {
+      height: 321px;
       margin-right: 74px;
 
       & img {
@@ -146,6 +150,7 @@
     & img {
       border-top-left-radius: 12px;
       border-top-right-radius: 12px;
+      object-position: left;
     }
   }
 
@@ -226,6 +231,14 @@
       padding-left: 18px;
     }
 
+    &__chronology-pic:first-child {
+      width: 220px;
+      height: 487px;
+      & img {
+        object-position: left;
+      }
+    }
+
     &__favorites,
     &__compare {
       padding-top: 26px;
@@ -240,6 +253,7 @@
     &__favorites-content,
     &__compare-content {
       margin-bottom: 0;
+      padding-right: 18px;
     }
 
     &__favorites-pic,
@@ -258,6 +272,15 @@
     &__history-pic img {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
+    }
+  }
+
+  @media (max-width: 350px) {
+    &__chronology-pic:last-child {
+      display: none;
+    }
+    &__chronology-pic:first-child {
+      margin-right: 0;
     }
   }
 }

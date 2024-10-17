@@ -231,4 +231,10 @@
       top: 140px;
     }
   }
+
+  @media (max-width: 350px) {
+    &__columns {
+      margin-top: 220px;
+    }
+  }
 }

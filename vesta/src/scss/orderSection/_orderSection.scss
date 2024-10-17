@@ -212,15 +212,23 @@
   }
 
   @media (max-width: $breakpoints-xs) {
+    padding-top: 0;
+
     &_wrapper {
       padding: 30px 20px;
+    }
+
+    & button.customButton {
+      font-size: 18px;
+      line-height: 111%;
     }
 
     &_title {
       margin-bottom: 20px;
       font-size: 20px;
       line-height: 110%;
-      text-align: center;
+      text-align: left;
+      padding-top: 22px;
     }
 
     &_formTitle {

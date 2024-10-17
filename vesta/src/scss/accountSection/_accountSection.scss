@@ -150,7 +150,13 @@
     }
 
     &__left-pic {
-      width: 327px;
+      width: 70%;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__left-pic {
+      width: 100%;
     }
   }
 
@@ -162,6 +168,10 @@
     &__opportunity-title {
       font-size: 22px;
       margin-bottom: 4px;
+    }
+
+    &__opportunity-title {
+      max-width: 280px;
     }
 
     &__text,
