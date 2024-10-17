@@ -1,7 +1,7 @@
 section.headerSection
   .headerSection__container
     .headerSection__wrapper.wrapper
-      h1.headerSection__title < 600 экранов, 7 месяцев работ
+      h1.headerSection__title < 600 экранов, <span>7 месяцев работ </span> 
       h3.headerSection__subtitle Как мы создали новый дизайн для онлайн-конфигуратора промышленной компании
       .headerSection__content
         p.headerSection__text Наш клиент, международная промышленная компания PK Vesta, обратился с запросом редизайна онлайн системы WebSteel.
@@ -11,7 +11,9 @@ section.headerSection
     .headerSection__pic-bg
       img.headerSection__image(src="./assets/images/macbook.png", alt="Ноутбук")
     .headerSection__pic-line
-      img.headerSection__image(src="./assets/images/line.png", alt="Webernetic дизайн")
+      picture
+        source(media="(max-width: 576px)" srcset="./assets/images/line-mobile.png")
+        img.headerSection__image(src="./assets/images/line.png", alt="Webernetic дизайн")
     .headerSection__bottom
       span.headerSection__bottom-text Дизайн онлайн-конфигуратора
       span.headerSection__bottom-text < 600 экранов

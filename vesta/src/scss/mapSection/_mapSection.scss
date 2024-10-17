@@ -29,7 +29,7 @@
     left: -33px;
     font-family: $font-family;
     font-weight: 700;
-    font-size: 100px;
+    @include responsive-sizing(font-size, 70, 100, 400, 1440);
     color: #adc2f1;
   }
 
@@ -43,6 +43,7 @@
   }
 
   &__text {
+    font-size: 18px;
     line-height: 135%;
   }
 
@@ -80,5 +81,68 @@
     font-size: 24px;
     line-height: 80%;
     text-align: center;
+  }
+
+  @media (max-width: 1070px) {
+    &__right {
+      padding-top: 120px;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__top {
+      flex-direction: column-reverse;
+    }
+
+    &__right {
+      max-width: 100%;
+    }
+
+    &__bottom {
+      flex-direction: column;
+    }
+
+    &__bottom-left,
+    &__bottom-right {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    margin-bottom: 64px;
+
+    &__right {
+      padding: 118px 18px 24px 18px;
+    }
+
+    &__title {
+      font-size: 22px;
+    }
+
+    &__text {
+      font-size: 17px;
+    }
+
+    &__number {
+      top: 30px;
+      left: -21px;
+    }
+
+    &__bottom-number {
+      border-radius: 6px;
+      padding: 10px 12px;
+      width: 46px;
+      height: 46px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 80%;
+      text-align: center;
+    }
+
+    &__bottom-right,
+    &__bottom-left {
+      gap: 16px;
+      padding: 18px;
+    }
   }
 }

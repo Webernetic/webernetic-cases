@@ -30,6 +30,7 @@
   }
 
   &__text {
+    font-size: 18px;
     line-height: 135%;
     color: rgba(255, 255, 255, 0.75);
   }
@@ -87,5 +88,104 @@
 
   &__opportunity-text {
     max-width: 382px;
+  }
+
+  @media (max-width: $breakpoints-xl) {
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__left {
+      flex-direction: row;
+    }
+
+    &__left-content {
+      width: 60%;
+    }
+
+    &__left-pic {
+      min-height: 0;
+      width: 40%;
+    }
+
+    &__sort-content {
+      max-width: 60%;
+    }
+
+    &__sort {
+      gap: 15px;
+    }
+
+    &__opportunity {
+      width: 100%;
+      gap: 15px;
+    }
+
+    &__opportunity-text {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__sort {
+      flex-direction: column;
+    }
+
+    &__sort-content {
+      max-width: 100%;
+    }
+
+    &__opportunity {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__left {
+      flex-direction: column;
+    }
+
+    &__left-content {
+      width: 100%;
+    }
+
+    &__left-pic {
+      width: 327px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    margin-bottom: 48px;
+
+    &__title,
+    &__sort-title,
+    &__opportunity-title {
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+
+    &__text,
+    &__sort-text,
+    &__opportunity-text {
+      font-size: 17px;
+    }
+
+    &__left-content,
+    &__sort,
+    &__opportunity {
+      padding: 26px 18px;
+    }
+
+    &__left-content {
+      min-height: 154px;
+    }
+
+    &__opportunity {
+      gap: 0;
+    }
+
+    &__diagram-pic {
+      height: 192px;
+    }
   }
 }

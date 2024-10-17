@@ -5,24 +5,30 @@ section.stepsSection
       .stepsSection__first-left
         span.stepsSection__number 1-ый этап
         h3.stepsSection__first-title.title Интервью с клиентами
-        p.stepsSection__first-text.text В центре нашего дизайна — пользователи, их боли и ценности. Поэтому работу над проектом мы начали с кастдевов. В сумме более 30 часов мы общались с пользователями платформы, это около 20 клиентов, чтобы узнать их мнение о сервисе и понять, что неудобно, чего не хватает. В итоге, получили полную информацию об ожиданиях и болях целевой аудитории. И в новом дизайне <b> основное внимание уделили функциям платформы, которые наиболее значимы для пользователей </b> .
+        p.stepsSection__first-text.text В центре нашего дизайна — пользователи, их боли и ценности. Поэтому работу над проектом мы начали с кастдевов. В сумме более 30 часов мы общались с пользователями платформы, это около 20 клиентов, чтобы узнать их мнение о сервисе и понять, что неудобно, чего не хватает. В итоге, получили полную информацию об ожиданиях и болях целевой аудитории. И в новом дизайне <b> основное внимание уделили функциям платформы, которые наиболее значимы для пользователей</b>.
       .stepsSection__first-right
     .stepsSection__box
       .stepsSection__second-block
         span.stepsSection__number 2-ой этап
         h3.stepsSection__second-title.title Мудборд
-        p.stepsSection__secondtext.text Мудборд при создании дизайна сайта — это подборка стилей, цветовых сочетаний, шрифтов, референсов и других элементов. Основной идеей стало создание дизайна из карточек. Такой стиль можно встретить у крупнейших корпораций, например, Google.
+        p.stepsSection__secondtext.text Мудборд при создании дизайна сайта — это подборка стилей, цветовых сочетаний, шрифтов, референсов и других элементов.<br> Основной идеей стало создание дизайна из карточек. Такой стиль можно встретить у крупнейших корпораций, например, Google.
         .stepsSection__second-pictures
           .stepsSection__second-pic
-            img.stepsSection__image(src="./assets/images/moodboard-1.png", alt="Мудборд")
+            picture
+              source(media="(max-width: 500px)" srcset="./assets/images/moodboard1-mobile.png")
+              img.stepsSection__image(src="./assets/images/moodboard-1.png", alt="Мудборд")
           .stepsSection__second-pic
-            img.headerSection__image(src="./assets/images/moodboard-2.png", alt="Мудборд")
+             picture
+              source(media="(max-width: 500px)" srcset="./assets/images/moodboard2-mobile.png")
+              img.headerSection__image(src="./assets/images/moodboard-2.png", alt="Мудборд")
       .stepsSection__third-block
         span.stepsSection__number 3-ий этап
         h3.stepsSection__third-title.title Прототипы
         p.stepsSection__thirdtext.text Прототип — это макет будущих страниц, который создается для того, чтобы показать, как они будут выглядеть. На основе прототипов далее разрабатывается дизайн.
         .stepsSection__third-pic
-          img.stepsSection__image(src="./assets/images/prototype.png", alt="Прототип")
+          picture
+            source(media="(max-width: 400px)" srcset="./assets/images/prototype-mobile.png")
+            img.stepsSection__image(src="./assets/images/prototype.png", alt="Прототип")
     .stepsSection__fourth-block
       .stepsSection__fourth-left
         span.stepsSection__number 4-ый этап

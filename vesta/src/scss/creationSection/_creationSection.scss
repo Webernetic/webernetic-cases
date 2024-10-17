@@ -29,7 +29,7 @@
     left: -33px;
     font-family: $font-family;
     font-weight: 700;
-    font-size: 100px;
+    @include responsive-sizing(font-size, 70, 100, 400, 1440);
     color: #adc2f1;
   }
 
@@ -63,7 +63,11 @@
   }
 
   &__bottom-text {
+    font-size: 18px;
     color: rgba(255, 255, 255, 0.75);
+  }
+  &__bottom-pictures {
+    display: flex;
   }
 
   &__bottom-pic {
@@ -97,6 +101,86 @@
 
     &:last-child {
       margin-top: 10px;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    &__top-left {
+      padding-top: 120px;
+    }
+
+    &__bottom-content {
+      max-width: 430px;
+      margin-right: 20px;
+    }
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__top {
+      flex-direction: column;
+    }
+    &__bottom {
+      position: relative;
+      flex-direction: column;
+      min-height: 620px;
+      justify-content: space-between;
+      padding: 24px 18px 0 18px;
+    }
+
+    &__top-left,
+    &__pic {
+      max-width: 100%;
+    }
+
+    &__bottom-content {
+      max-width: 100%;
+      margin-bottom: 33px;
+    }
+
+    &__bottom-pictures {
+      justify-content: space-between;
+    }
+
+    &__bottom-pic:first-child {
+      max-width: 248px;
+      align-self: flex-end;
+    }
+
+    &__bottom-pic:last-child {
+      width: 221px;
+      transform: translateY(0);
+      transform: translateX(18px);
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__bottom {
+      min-height: 720px;
+    }
+  }
+  @media (max-width: $breakpoints-xs) {
+    margin-bottom: 65px;
+
+    &__bottom-title {
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+
+    &__bottom-text {
+      font-size: 17px;
+    }
+
+    &__bottom-pic:first-child {
+      transform: translateX(30px);
+    }
+
+    &__top-left {
+      padding: 90px 18px 24px 18px;
+    }
+    &__number {
+      top: 30px;
+      left: -21px;
     }
   }
 }

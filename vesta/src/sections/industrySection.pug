@@ -31,6 +31,10 @@ section.industrySection
             h2.industrySection__right-title.title Как это поможет компании достигать своих целей? 
             p.industrySection__right-text.text Интуитивно понятный дизайн помогает быстро и точно удовлетворить потребности пользователя. В итоге, клиент лоялен к компании и готов заказывать ее услуги и рекомендовать другим.
         .industrySection__pic-results
-          img.industrySection__image(src="./assets/images/results.png", alt="Результаты")
+          picture
+            source(media="(max-width: 400px)" srcset="./assets/images/results-mobile.png")
+            img.industrySection__image(src="./assets/images/results.png", alt="Результаты")
         .industrySection__pic-design
-          img.industrySection__image(src="./assets/images/line-2.png", alt="Webernetic дизайн")
+          picture
+            source(media="(max-width: 400px)" srcset="./assets/images/line-mobile2.png")
+            img.industrySection__image(src="./assets/images/line-2.png", alt="Webernetic дизайн")

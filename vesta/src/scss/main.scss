@@ -47,6 +47,10 @@ body::-webkit-scrollbar {
 .wrapper {
   max-width: 1240px;
   margin: 0 auto;
+
+  @media (max-width: 1300px) {
+    padding-inline: 24px;
+  }
 }
 
 ul,

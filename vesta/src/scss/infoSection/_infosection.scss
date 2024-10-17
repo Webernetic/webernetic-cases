@@ -17,8 +17,12 @@
     overflow: hidden;
   }
 
+  &__chronology-pictures {
+    display: flex;
+  }
+
   &__chronology-pic {
-    max-width: 300px;
+    width: 300px;
     border-radius: 8px;
 
     & img {
@@ -133,5 +137,127 @@
 
   &__history-text {
     max-width: 358px;
+  }
+
+  &__history-pic {
+    max-width: 1156px;
+    height: 312px;
+
+    & img {
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xl) {
+    &__chronology {
+      padding-left: 24px;
+    }
+
+    &__chronology-pic:nth-child(2) {
+      margin-right: 20px;
+    }
+  }
+
+  @media (max-width: 950px) {
+    &__chronology {
+      flex-direction: column-reverse;
+      padding-top: 32px;
+    }
+
+    &__chronology-content {
+      align-self: flex-start;
+    }
+
+    &__favorites {
+      flex-direction: column;
+    }
+
+    &__compare {
+      flex-direction: column-reverse;
+      padding: 60px 0 0 24px;
+    }
+
+    &__compare-content {
+      padding-right: 24px;
+    }
+
+    &__history {
+      padding-inline: 18px;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__history-content {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__chronology {
+      position: relative;
+    }
+
+    &__chronology-pic:first-child {
+      width: 220px;
+    }
+
+    &__chronology-pic:nth-child(2) {
+      position: absolute;
+      bottom: 0;
+      right: -20px;
+      width: 216px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    margin-bottom: 75px;
+
+    & .title {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    & .text {
+      font-size: 17px;
+    }
+
+    &__chronology {
+      padding-left: 18px;
+    }
+
+    &__favorites,
+    &__compare {
+      padding-top: 26px;
+      padding-left: 18px;
+      gap: 26px;
+    }
+
+    &__chronology-content {
+      padding-bottom: 0;
+    }
+
+    &__favorites-content,
+    &__compare-content {
+      margin-bottom: 0;
+    }
+
+    &__favorites-pic,
+    &__compare-pic {
+      height: 227px;
+      & img {
+        border-top-left-radius: 8px;
+      }
+    }
+
+    &__history {
+      padding: 26px 0px 18px 18px;
+      gap: 26px;
+    }
+
+    &__history-pic img {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
   }
 }

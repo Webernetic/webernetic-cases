@@ -2,7 +2,9 @@ section.mapSection
   .mapSection__wrapper.wrapper
     .mapSection__top
       .mapSection__pic
-        img.mapSection__image(src="./assets/images/map.png", alt="Карта")
+        picture
+          source(media="(max-width: 400px)" srcset="./assets/images/map-mobile.png")
+          img.mapSection__image(src="./assets/images/map.png", alt="Карта")
       .mapSection__right
         .mapSection__number 01
         .mapSection__content

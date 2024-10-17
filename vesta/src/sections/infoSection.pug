@@ -1,10 +1,15 @@
 section.infoSection
   .infoSection__wrapper.wrapper
     .infoSection__chronology
-      .infoSection__chronology-pic
-        img.infoSection__chronology-image(src="./assets/images/chronology-1.png", alt="Хронология заказа")
-      .infoSection__chronology-pic
-        img.infoSection__chronology-image(src="./assets/images/chronology-2.png", alt="Хронология заказа")
+      .infoSection__chronology-pictures
+        .infoSection__chronology-pic
+          picture
+            source(media="(max-width: 500px)" srcset="./assets/images/chronology1-mobile.png")
+            img.infoSection__chronology-image(src="./assets/images/chronology-1.png", alt="Хронология заказа")
+        .infoSection__chronology-pic
+            picture
+              source(media="(max-width: 500px)" srcset="./assets/images/chronology2-mobile.png")
+              img.infoSection__chronology-image(src="./assets/images/chronology-2.png", alt="Хронология заказа")
       .infoSection__chronology-content
         h2.infoSection__chronology-title.title Хронология заказа
         p.infoSection__chronology-text.text При желании, можно получить подробную информацию, на каком этапе заказ сейчас — все в формате пути от точки А (производитель) до Б (клиент) с промежуточными данными и трекингом по датам.

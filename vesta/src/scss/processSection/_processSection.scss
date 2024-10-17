@@ -27,4 +27,17 @@
     padding: 26px 24px;
     background-color: $color-blue-bg;
   }
+
+  @media (max-width: $breakpoints-xs) {
+    margin-bottom: 0;
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__pic,
+    &__text {
+      display: none;
+    }
+  }
 }
