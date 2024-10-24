@@ -1,0 +1,76 @@
+.headerSection {
+  max-width: $max-width;
+  border-radius: 0 0 70px 70px;
+  padding-block: 80px 50px;
+  background-image: url('../assets/images/banner.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__content {
+    margin-bottom: 77px;
+  }
+
+  &__subtitle {
+    margin-bottom: 32px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 125%;
+    color: #fff;
+    opacity: 0.75;
+  }
+
+  &__title {
+    max-width: 650px;
+    margin-bottom: 16px;
+    font-family: $second-family;
+    font-weight: 500;
+    font-size: 46px;
+    line-height: 115%;
+    letter-spacing: 0.01em;
+    color: $color-light;
+  }
+
+  &__text {
+    max-width: 715px;
+  }
+
+  &__region-box {
+    margin-bottom: 22px;
+  }
+
+  &__region-title {
+    margin-bottom: 14px;
+    font-family: $second-family;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 115%;
+    letter-spacing: 0.01em;
+    color: $color-light;
+  }
+
+  &__button {
+    min-height: 40px;
+    border: 1px solid #bfbfbf;
+    border-radius: 26px;
+    padding: 6px 24px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 125%;
+    color: #fff;
+    opacity: 0.75;
+  }
+
+  &__info-box {
+    display: flex;
+    gap: 22px;
+    margin-bottom: 50px;
+  }
+
+  &__info-left,
+  &__info-right {
+    max-width: 404px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,94 @@
+.trafficSection {
+  &__container {
+    border-radius: 70px;
+    position: relative;
+    top: -20px;
+    min-height: 1017px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding-block: 75px;
+    background-image: url('../assets/images/traffic-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    font-family: $second-family;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 115%;
+    letter-spacing: 0.01em;
+    color: $color-light;
+  }
+
+  &__top-right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__top-icon {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+  }
+
+  &__subtitle {
+    font-family: $second-family;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 115%;
+    letter-spacing: 0.01em;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #fff;
+  }
+
+  &__box {
+    min-height: 351px;
+    margin-bottom: 12px;
+    padding: 30px 36px;
+    display: flex;
+    gap: 40px;
+
+    &:last-child {
+      background-image: url('../assets/images/traffic-box.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__box-pic {
+    max-width: 800px;
+  }
+
+  &__box-content {
+    max-width: 328px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__box-button {
+    border: 1.5px solid #fff;
+    border-radius: 67px;
+    padding: 12px 32px 10px 32px;
+    min-height: 52px;
+    font-family: $second-family;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 115%;
+    letter-spacing: 0.01em;
+    color: #fff;
+  }
+}

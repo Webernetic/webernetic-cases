@@ -1,0 +1,112 @@
+.growthSection {
+  &__container {
+    border-radius: 70px;
+    position: relative;
+    min-height: 1246px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding-block: 95px;
+    background-image: url('../assets/images/growth-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 36px;
+  }
+
+  &__title {
+    font-family: $second-family;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 115%;
+    letter-spacing: 0.01em;
+    color: $color-light;
+  }
+
+  &__top-right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__top-icon {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+  }
+
+  &__subtitle {
+    font-family: $second-family;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 115%;
+    letter-spacing: 0.01em;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #fff;
+  }
+
+  &__box {
+    display: flex;
+    gap: 40px;
+    border-radius: 20px;
+    padding: 30px 36px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    margin-bottom: 12px;
+
+    &:nth-child(1) {
+      background-image: url('../assets/images/box-1.png');
+    }
+
+    &:nth-child(2) {
+      background-image: url('../assets/images/box-2.png');
+    }
+
+    &:nth-child(3) {
+      background-image: url('../assets/images/box-3.png');
+    }
+  }
+
+  &__box-left {
+    max-width: 478px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__box-right {
+    max-width: 650px;
+    min-height: 300px;
+  }
+
+  &__box-button {
+    border: 1.5px solid #fff;
+    border-radius: 67px;
+    padding: 12px 32px 10px 32px;
+    min-height: 52px;
+    font-family: $second-family;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 115%;
+    letter-spacing: 0.01em;
+    color: #fff;
+  }
+
+  &__box-text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 125%;
+    color: #fff;
+    opacity: 0.8;
+  }
+}

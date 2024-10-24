@@ -1,0 +1,42 @@
+.tasksSection {
+  padding-block: 73px 110px;
+
+  &__title {
+    margin-bottom: 29px;
+    font-family: $second-family;
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 115%;
+    letter-spacing: 0.01em;
+    color: $color-light;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row: auto;
+    gap: 14px;
+  }
+
+  &__card {
+    padding: 26px 35px;
+    border-radius: 16px;
+    border: 1px solid $color-border;
+  }
+
+  &__card-number {
+    display: block;
+    margin-bottom: 11px;
+    font-family: $second-family;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 115%;
+    letter-spacing: 0.01em;
+    color: $color-green;
+  }
+
+  &__card-text {
+    font-size: 22px;
+    line-height: 125%;
+  }
+}

@@ -1,0 +1,51 @@
+.featuresSection {
+  &__wrapper {
+    position: relative;
+    min-height: 480px;
+    border-radius: 50px;
+    background-image: url('../assets/images/features-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  &__image-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50px;
+  }
+
+  &__content {
+    padding: 60px 36px 12px 420px;
+  }
+
+  &__title {
+    margin-bottom: 14px;
+    font-family: $second-family;
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 115%;
+    letter-spacing: 0.01em;
+    color: $color-light;
+  }
+
+  &__list-item {
+    display: flex;
+    gap: 10px;
+    padding-block: 26px;
+    border-bottom: 1.5px solid $color-border;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__item-image {
+    display: block;
+    width: 46px;
+    height: 46px;
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,16 @@
+extends layouts/MainLayout
+include mixins/index.pug
+
+block title
+  | Nevada
+
+block content
+  body.body    
+    .container
+      include sections/headerSection 
+      include sections/tasksSection 
+      include sections/featuresSection
+      include sections/workSection
+      include sections/growthSection
+      include sections/trafficSection
+      
