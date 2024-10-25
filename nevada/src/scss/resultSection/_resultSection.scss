@@ -1,9 +1,24 @@
 .resultSection {
-  padding-bottom: 110px;
+  padding-bottom: 95px;
 
   &__content {
+    display: flex;
+    overflow: hidden;
+  }
+
+  &__left {
     max-width: 717px;
     min-height: 375px;
+    margin-right: 25px;
+  }
+
+  &__right {
+    width: 485px;
+    min-height: 326px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: rotate(6deg);
   }
 
   &__title {
@@ -14,5 +29,122 @@
     line-height: 115%;
     letter-spacing: 0.01em;
     color: $color-green;
+  }
+
+  &__mobile-image {
+    display: none;
+  }
+
+  &__button-image {
+    width: 41px;
+    height: 41px;
+  }
+
+  &__button {
+    margin-bottom: 7px;
+    font-family: $second-family;
+    font-weight: 600;
+    @include responsive-sizing(font-size, 26, 34, 400, 1440);
+    color: #ededed;
+    padding-inline: 10px;
+  }
+
+  &__button.button-1 {
+    .resultSection__button-pic {
+      min-height: 74px;
+      border-radius: 100%;
+      padding: 15px 15px;
+      border: 2px solid rgba(144, 124, 255, 0.6);
+    }
+  }
+
+  &__button.button-2 {
+    width: 436px;
+    min-height: 74px;
+    align-self: end;
+    border: 2px solid rgba(9, 203, 133, 0.6);
+    border-radius: 60px;
+    letter-spacing: 0.03em;
+    padding-inline: 15px;
+  }
+
+  &__button.button-3 {
+    display: flex;
+    align-items: center;
+    align-self: start;
+    // width: 324px;
+    min-height: 74px;
+    border-radius: 60px;
+    padding-inline: 35px;
+    width: 324px;
+    height: 74px;
+    background: rgba(9, 203, 133, 0.85);
+
+    .resultSection__button-pic {
+      display: block;
+      margin-right: 24px;
+    }
+  }
+
+  &__buttons-box {
+    display: flex;
+    gap: 7px;
+    align-self: right;
+    transform: translateX(50px);
+  }
+
+  &__button.button-4 {
+    display: flex;
+    align-items: center;
+    border: 2px solid rgba(24, 160, 251, 0.6);
+    border-radius: 60px;
+    padding: 5px 35px;
+    width: 222px;
+    min-height: 74px;
+
+    .resultSection__button-pic img {
+      width: 41px;
+      height: 25px;
+      margin-right: 15px;
+    }
+  }
+
+  &__button.button-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    background-color: $color-green;
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__content {
+      flex-direction: column;
+    }
+
+    &__left {
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+
+    &__right {
+      align-self: center;
+      min-height: 400px;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__mobile-image {
+      display: block;
+    }
+
+    &__button,
+    &__button.button-3,
+    &__button.button-4,
+    &__button.button-5 {
+      display: none;
+    }
   }
 }
