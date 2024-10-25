@@ -1,0 +1,18 @@
+.resultSection {
+  padding-bottom: 110px;
+
+  &__content {
+    max-width: 717px;
+    min-height: 375px;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+    font-family: $second-family;
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 115%;
+    letter-spacing: 0.01em;
+    color: $color-green;
+  }
+}

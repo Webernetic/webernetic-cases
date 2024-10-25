@@ -1,12 +1,13 @@
-.growthSection {
+.positionSection {
   &__container {
     border-radius: 70px;
     position: relative;
-    min-height: 1246px;
+    top: -120px;
+    min-height: 616px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
-    padding-block: 95px;
-    background-image: url('../assets/images/growth-bg.png');
+    padding-block: 75px;
+    background-image: url('../assets/images/position-bg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,10 +21,10 @@
   }
 
   &__title {
+    padding-top: 20px;
     font-family: $second-family;
     font-weight: 500;
     font-size: 36px;
-    @include responsive-sizing(font-size, 26, 36, 400, 1440);
     line-height: 115%;
     letter-spacing: 0.01em;
     color: $color-light;
@@ -54,47 +55,23 @@
 
   &__box {
     display: flex;
+    justify-content: space-between;
     gap: 40px;
-    border-radius: 20px;
     padding: 30px 36px;
-    @include responsive-sizing(padding-block, 18, 30, 400, 1440);
-    @include responsive-sizing(padding-inline, 24, 36, 400, 1440);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-    margin-bottom: 12px;
-
-    &:nth-child(1) {
-      background-image: url('../assets/images/box-1.png');
-    }
-
-    &:nth-child(2) {
-      background-image: url('../assets/images/box-2.png');
-    }
-
-    &:nth-child(3) {
-      background-image: url('../assets/images/box-3.png');
-    }
   }
 
-  &__box-left {
-    max-width: 478px;
+  &__box-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: flex-start;
-  }
-
-  &__box-right {
-    max-width: 650px;
-    min-height: 300px;
+    max-width: 328px;
   }
 
   &__box-button {
     border: 1.5px solid #fff;
     border-radius: 67px;
     padding: 12px 32px 10px 32px;
+    margin-bottom: 16px;
     min-height: 52px;
     font-family: $second-family;
     font-weight: 500;
@@ -105,39 +82,19 @@
   }
 
   &__box-text {
-    font-family: $font-family;
-    font-weight: 400;
-    @include responsive-sizing(font-size, 20, 26, 400, 1440);
-    line-height: 125%;
+    margin-bottom: 36px;
+    line-height: 115%;
     color: #fff;
     opacity: 0.8;
   }
 
-  @media (max-width: $breakpoints-xxl) {
-    &__box {
-      gap: 20px;
-    }
+  &__box-pic {
+    max-width: 800px;
+    border-radius: 18px;
+    padding: 36px 0px 12px 0px;
 
-    &__box-right {
-      min-height: 200px;
-    }
-  }
-
-  @media (max-width: $breakpoints-lg) {
-    &__box {
-      flex-direction: column;
-    }
-
-    &__box-left {
-      max-width: 100%;
-    }
-
-    &__box-button {
-      margin-bottom: 12px;
-    }
-
-    &__box-right {
-      max-width: 100%;
+    & img {
+      border-radius: 18px;
     }
   }
 }

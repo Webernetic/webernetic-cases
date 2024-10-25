@@ -1,11 +1,15 @@
 .workSection {
   padding-block: 110px 143px;
 
+  &__wrapper {
+    overflow: hidden;
+  }
+
   &__title {
     margin-bottom: 36px;
     font-family: $second-family;
     font-weight: 500;
-    font-size: 38px;
+    @include responsive-sizing(font-size, 26, 38, 400, 1440);
     line-height: 115%;
     letter-spacing: 0.01em;
     color: $color-light;
@@ -28,7 +32,9 @@
 
   &__card {
     position: relative;
-    padding: 32px 35px 32px 140px;
+    @include responsive-sizing(padding-left, 60, 140, 400, 1440);
+    @include responsive-sizing(padding-right, 24, 32, 400, 1440);
+    @include responsive-sizing(padding-block, 26, 35, 400, 1440);
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.06);
     overflow: hidden;
@@ -51,10 +57,11 @@
     left: -25px;
     font-family: $second-family;
     font-weight: 700;
-    font-size: 107px;
+    @include responsive-sizing(font-size, 50, 107, 400, 1440);
     line-height: 115%;
     letter-spacing: 0.01em;
     color: $color-green;
+    overflow: hidden;
   }
   &__card-top {
     display: flex;
@@ -84,7 +91,7 @@
 
   &__card-text {
     font-weight: 400;
-    font-size: 22px;
+    @include responsive-sizing(font-size, 17, 22, 400, 1440);
     line-height: 125%;
     color: var(--txt);
   }
@@ -116,7 +123,7 @@
     padding-left: 30px;
     font-family: $font-family;
     font-weight: 400;
-    font-size: 20px;
+    @include responsive-sizing(font-size, 16, 20, 400, 1440);
     line-height: 125%;
     margin-bottom: 10px;
   }
@@ -130,5 +137,69 @@
     height: 10px;
     border-radius: 50%;
     background-color: $color-green;
+  }
+
+  @media (max-width: $breakpoints-xxl) {
+    &__cards {
+      grid-template-columns: 42% 57%;
+    }
+
+    &__cards-2 {
+      grid-template-columns: 33% 66%;
+    }
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__list-block {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__card {
+      &:nth-child(1),
+      &:nth-child(2) {
+        grid-column: span 2;
+      }
+    }
+
+    &__card-number {
+      left: -20px;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    padding-block: 60px 143px;
+
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    &__cards {
+      column-gap: 6px;
+    }
+
+    &__card-number {
+      left: -15px;
+    }
+
+    &__card-top {
+      margin-bottom: 12px;
+    }
+
+    &__card-title {
+      font-size: 16px;
+    }
+
+    &__card-oval {
+      width: 18px;
+      height: 8px;
+    }
+
+    &__card-list-item::before {
+      width: 6px;
+      height: 6px;
+    }
   }
 }

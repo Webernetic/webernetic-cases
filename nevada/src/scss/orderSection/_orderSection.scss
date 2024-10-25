@@ -9,7 +9,7 @@
     font-weight: 700;
     line-height: 120%;
     text-align: center;
-    color: $color-main;
+    color: $color-green;
   }
 
   &_wrapper {
@@ -19,7 +19,7 @@
     margin: 0 auto;
     gap: 30px;
     padding: 56px 40px 56px 103.6px;
-    background-color: $color-box-bg2;
+    background: rgba(255, 255, 255, 0.09);
     box-shadow: 2px 4px 9px 0 rgba(36, 24, 61, 0.1);
     border-radius: 12px;
   }
@@ -39,7 +39,7 @@
   &_nameWrapper {
     position: absolute;
     left: 0;
-    bottom: 27%;
+    bottom: 20%;
     transform: translateX(17%);
     width: 248px;
     height: 124px;
@@ -48,44 +48,52 @@
     align-items: center;
     gap: 8px;
     padding: 31.5px 20px 37px 20px;
-    background-color: white;
+    backdrop-filter: blur(20px);
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.33) 0%,
+      rgba(255, 255, 255, 0.33) 100%
+    );
     border-radius: 12px;
 
     & > h4 {
       font-size: 42px;
       line-height: 42px;
       font-weight: 800;
-      color: $color-main;
-      font-family: $font-family;
+      color: #222d2d;
+      // font-family: $font-family;
     }
 
     & > p {
       font-size: 12px;
       font-weight: 800;
-      color: $color-main;
+      color: #222d2d;
     }
   }
 
   &_form {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     padding: 20px 28px 20px 50px;
   }
 
   &_formTitle {
+    font-family: $second-family;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 120%;
+    color: $color-light;
     margin-bottom: 20px;
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 62px;
-    color: $color-main;
-    line-height: 61.91px;
   }
 
   &_secondformTitle {
-    color: $color-main;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 147%;
+    font-family: $second-family;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 120%;
+    color: $color-light;
+    margin-bottom: 20px;
   }
 
   &_inputWrapper {
@@ -97,7 +105,8 @@
 
     & > input {
       flex-basis: 250px;
-      color: #333333;
+      font-size: 20px;
+      border-bottom: 1px solid $color-text;
     }
   }
 
@@ -112,6 +121,16 @@
       flex-basis: 30%;
       font-size: 24px;
     }
+  }
+
+  & button.customButton {
+    font-family: $second-family;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 120%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: $color-light;
   }
 
   @media (max-width: $breakpoints-lg) {

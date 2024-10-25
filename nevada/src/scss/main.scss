@@ -7,6 +7,9 @@
 @import './workSection/_workSection.scss';
 @import './growthSection/_growthSection.scss';
 @import './trafficSection/_trafficSection.scss';
+@import './positionSection/_positionSection.scss';
+@import './resultSection/_resultSection.scss';
+@import './orderSection/_orderSection.scss';
 
 *,
 *::after,
@@ -14,7 +17,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  // outline: 1px solid red;
+  outline: 1px solid red;
 }
 
 body {
