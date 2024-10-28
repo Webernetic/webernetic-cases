@@ -1,5 +1,6 @@
 .tasksSection {
   padding-block: 73px 110px;
+  @include responsive-sizing(padding-top, 60, 73, 400, 1440);
 
   &__title {
     margin-bottom: 29px;
