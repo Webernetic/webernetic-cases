@@ -2,16 +2,14 @@
   &__container {
     border-radius: 70px;
     position: relative;
-    top: -120px;
+
     min-height: 616px;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+    border-radius: 50px;
     padding-block: 75px;
-    background-image: url('../assets/images/position-bg.png');
+    background-image: url('../assets/images/position-bg2.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
   }
 
   &__top {
@@ -105,21 +103,53 @@
   }
 
   @media (max-width: $breakpoints-md) {
+    &__container {
+      top: -170px;
+      padding-block: 20px 40px;
+    }
+
     &__top {
       flex-direction: column;
       justify-content: flex-start;
       gap: 20px;
-      margin-bottom: 36px;
+      margin-bottom: 20px;
+    }
+
+    &__subtitle {
+      font-size: 16px;
     }
 
     &__box {
       flex-direction: column;
+      gap: 0;
     }
 
-    &__box-pic,
     &__box-content {
       width: 100%;
       max-width: 100%;
+    }
+
+    &__box-button {
+      min-height: 41px;
+      padding: 10px 26px;
+    }
+
+    &__box-text {
+      margin-bottom: 20px;
+    }
+
+    &__box-pic {
+      height: 209px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+
+      & img {
+        width: 577px;
+        height: 209px;
+        object-fit: contain;
+      }
     }
   }
 }

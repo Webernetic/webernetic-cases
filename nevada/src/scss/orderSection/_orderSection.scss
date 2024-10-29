@@ -208,14 +208,17 @@
   }
 
   @media (max-width: $breakpoints-xs) {
+    position: relative;
+    top: -40px;
+
     &_wrapper {
       padding: 30px 20px;
     }
 
     &_title {
       margin-bottom: 20px;
-      font-size: 20px;
-      line-height: 110%;
+      font-size: 18px;
+      line-height: 21.6px;
       text-align: center;
     }
 

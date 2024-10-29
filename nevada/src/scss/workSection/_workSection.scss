@@ -1,5 +1,6 @@
 .workSection {
-  padding-block: 110px 243px;
+  @include responsive-sizing(padding-top, 64, 110, 400, 1440);
+  @include responsive-sizing(padding-bottom, 143, 243, 400, 1440);
 
   &__wrapper {
     overflow: hidden;
@@ -51,7 +52,6 @@
     align-items: left;
     width: 282px;
     transform: rotate(6deg);
-    outline: 1px solid red;
 
     & img {
       display: none;
@@ -205,6 +205,7 @@
         display: grid;
         grid-template-columns: 1fr;
         place-items: center;
+        gap: 15px;
       }
     }
   }
@@ -250,10 +251,6 @@
       height: 8px;
     }
 
-    &__card-text.third {
-      padding-right: 24px;
-    }
-
     &__card-list-item::before {
       width: 6px;
       height: 6px;
@@ -264,6 +261,13 @@
     &__card-right {
       max-width: 220px;
       width: 100%;
+      transform: rotate(0deg);
+    }
+
+    &__cards {
+      & .workSection__card:nth-child(3) {
+        justify-items: left;
+      }
     }
 
     &__card-right img {
@@ -272,6 +276,11 @@
 
     &__button {
       display: none;
+    }
+
+    &__card-list-item {
+      padding-left: 15px;
+      margin-bottom: 6px;
     }
   }
 }
