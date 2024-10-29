@@ -56,6 +56,7 @@
     min-height: 351px;
     margin-bottom: 12px;
     padding: 30px 36px;
+    border-radius: 20px;
     @include responsive-sizing(padding-block, 0, 30, 400, 1440);
     @include responsive-sizing(padding-inline, 0, 36, 400, 1440);
     display: flex;
@@ -149,7 +150,6 @@
 
       & img {
         object-fit: contain;
-        width: 565px;
       }
     }
 

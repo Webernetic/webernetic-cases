@@ -102,6 +102,7 @@
 
   @media (max-width: $breakpoints-xs) {
     padding-block: 54px 45px;
+    border-radius: 0 0 40px 40px;
     background-image: url('../assets/images/banner-mobile.png');
 
     &__subtitle {

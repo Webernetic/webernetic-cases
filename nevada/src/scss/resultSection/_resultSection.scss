@@ -1,5 +1,6 @@
 .resultSection {
   padding-bottom: 95px;
+  padding-top: 64px;
 
   &__content {
     display: flex;
@@ -172,7 +173,7 @@
 
   @media (max-width: $breakpoints-sm) {
     position: relative;
-    top: -120px;
+    top: -170px;
     padding-bottom: 0;
 
     &__right {

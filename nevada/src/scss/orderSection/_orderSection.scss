@@ -1,6 +1,4 @@
 .orderSection {
-  margin-bottom: 30px;
-
   &_title {
     max-width: 900px;
     margin-inline: auto;
@@ -135,13 +133,21 @@
     color: $color-light;
   }
 
+  @media (max-width: $breakpoints-xxl) {
+    &_nameWrapper {
+      bottom: 30%;
+    }
+  }
+
+  @media (max-width: $breakpoints-xl) {
+    padding-inline: 24px;
+  }
+
   @media (max-width: $breakpoints-lg) {
+    padding-inline: 24px;
+
     &_wrapper {
       padding: 40px;
-    }
-
-    &_title {
-      margin-inline: 15px;
     }
 
     &_form {
@@ -171,7 +177,6 @@
   @media (max-width: $breakpoints-md) {
     &_title {
       font-size: clamp(20px, calc(20px + 10 * (100vw - 400px) / 368), 30px);
-      margin-inline: 15px;
     }
 
     &_formTitle {
@@ -209,10 +214,11 @@
 
   @media (max-width: $breakpoints-xs) {
     position: relative;
-    top: -40px;
+    top: -100px;
 
     &_wrapper {
-      padding: 30px 20px;
+      padding: 46px 26px;
+      border-radius: 16px;
     }
 
     &_title {
@@ -223,8 +229,9 @@
     }
 
     &_formTitle {
-      font-size: 24px;
+      font-size: 22px;
       line-height: 111%;
+      margin-bottom: 20px;
     }
 
     &_secondformTitle {
@@ -249,6 +256,11 @@
         font-size: 18px;
         height: 22px;
       }
+    }
+
+    & button.customButton {
+      font-size: 18px;
+      align-self: flex-start;
     }
   }
 

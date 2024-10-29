@@ -230,8 +230,14 @@
       margin-bottom: 24px;
     }
 
-    &__cards {
+    &__cards,
+    &__cards-2 {
       column-gap: 8px;
+      row-gap: 8px;
+    }
+
+    &__cards-2 {
+      margin-top: 8px;
     }
 
     &__card-number {
