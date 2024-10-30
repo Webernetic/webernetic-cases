@@ -1,0 +1,156 @@
+.headerSection {
+  max-width: $max-width;
+  border-radius: 0 0 70px 70px;
+  padding-block: 80px 50px;
+  background-image: url('../assets/images/banner.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__content {
+    margin-bottom: 77px;
+  }
+
+  &__subtitle {
+    margin-bottom: 32px;
+    font-weight: 400;
+    font-size: 22px;
+    @include responsive-sizing(font-size, 18, 22, 400, 1440);
+    line-height: 125%;
+    color: #fff;
+    opacity: 0.75;
+  }
+
+  &__title {
+    max-width: 650px;
+    margin-bottom: 16px;
+    font-family: $second-family;
+    font-weight: 500;
+    font-size: 46px;
+    @include responsive-sizing(font-size, 30, 46, 400, 1440);
+    line-height: 115%;
+    letter-spacing: 0.01em;
+    color: $color-light;
+  }
+
+  &__text {
+    max-width: 715px;
+    @include responsive-sizing(font-size, 20, 26, 400, 1440);
+  }
+
+  &__text.desktop {
+    display: block;
+  }
+
+  &__text.mobile {
+    display: none;
+  }
+  &__region-box {
+    margin-bottom: 22px;
+  }
+
+  &__region-title {
+    margin-bottom: 14px;
+    font-family: $second-family;
+    font-weight: 500;
+    @include responsive-sizing(font-size, 18, 24, 400, 1440);
+    line-height: 115%;
+    letter-spacing: 0.01em;
+    color: $color-light;
+  }
+
+  &__button {
+    min-height: 40px;
+    border: 1px solid #bfbfbf;
+    border-radius: 26px;
+    padding: 6px 24px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 125%;
+    color: #fff;
+    opacity: 0.75;
+  }
+
+  &__button.first.mobile {
+    display: none;
+  }
+
+  &__info-box {
+    display: flex;
+    gap: 22px;
+    margin-bottom: 50px;
+  }
+
+  &__info-left,
+  &__info-right {
+    max-width: 404px;
+    width: 100%;
+  }
+
+  @media (max-width: $breakpoints-xxl) {
+    &__info-box {
+      margin-bottom: 100px;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__info-box {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    padding-block: 54px 45px;
+    border-radius: 0 0 40px 40px;
+    background-image: url('../assets/images/banner-mobile.png');
+
+    &__subtitle {
+      margin-bottom: 22px;
+    }
+
+    &__content {
+      margin-bottom: 54px;
+    }
+
+    &__text {
+      line-height: 120%;
+    }
+
+    &__text.desktop {
+      display: none;
+    }
+
+    &__text.mobile {
+      display: block;
+    }
+
+    &__info-box {
+      gap: 16px;
+      margin-bottom: 0;
+    }
+
+    &__region-title {
+      margin-bottom: 10px;
+    }
+
+    &__region-box {
+      margin-bottom: 16px;
+    }
+
+    &__button {
+      min-height: 35px;
+      font-size: 18px;
+      line-height: 130%;
+      color: #fff;
+    }
+
+    &__button.first.desktop {
+      display: none;
+    }
+
+    &__button.first.mobile {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+-
+  var cards = [
+    {title: "Google", text: ""},
+    {title: "1,25$", text: "Средняя цена за клик"}, 
+    {title: "13", text: "Конверсий"},
+    {title: "17,4$", text: "Средняя цена конверсии"}, 
+  ]
+
+section.chartSection
+  .chartSection__wrapper.wrapper
+    .chartSection__cards
+      each card in cards
+        .chartSection__card
+          span.chartSection__title=card.title
+          span.chartSection__text=card.text
+    .chartSection__picture
+      img.chartSection__image(src="./assets/images/google.jpg")

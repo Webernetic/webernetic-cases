@@ -1,0 +1,39 @@
+@import './fonts';
+
+@mixin responsive-sizing($prop, $min, $max, $minDisplay, $maxDisplay) {
+  $sizeDiff: $max - $min;
+  $displayDiff: $maxDisplay - $minDisplay;
+
+  #{$prop}: clamp(
+    #{$min}px,
+    calc(#{$min}px + ($sizeDiff * (100vw - #{$minDisplay}px) / $displayDiff)),
+    #{$max}px
+  );
+}
+
+$max-width: 1440px;
+
+//fonts
+$font-family: 'Involve';
+$second-family: 'Circe';
+$third-family: 'Inter';
+
+//colors
+$color-bg: #f0f5fc;
+$color-main: #0435a0;
+$color-blue: #2555bd;
+$color-light-blue: #ebf0fb;
+$color-text: #616161;
+$color-light-gray: #f6f6f6;
+$color-dark: #3c3c3c;
+$color-blue-bg: #e5edfd;
+$color-box-bg: #e1e7ff;
+$color-box-bg2: #edf1fd;
+
+//breakpoints
+$breakpoints-xs: 400px;
+$breakpoints-sm: 576px;
+$breakpoints-md: 768px;
+$breakpoints-lg: 992px;
+$breakpoints-xl: 1200px;
+$breakpoints-xxl: 1440px;

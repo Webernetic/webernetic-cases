@@ -1,0 +1,19 @@
+-
+  var cards = [
+    {number: "01", text: "Рост числа постоянных клиентов"},
+    {number: "02", text: "Повышение узнаваемости бренда"},
+    {number: "03", text: "Укрепление лояльности "},
+    {number: "04", text: "Снижение процента отказов (текущий показатель — 18.1%)"},
+    {number: "05", text: "Увеличение глубины просмотра и времени на сайте (текущие показатели — 2.55 страницы и 3:13 минут соответственно)"},
+    {number: "06", text: "Увеличение посещаемости заведения и сайта"},   
+  ]
+
+section.tasksSection
+  .tasksSection__wrapper.wrapper
+    h2.tasksSection__title Задачи клиента
+    .tasksSection__cards
+      each card in cards
+        .tasksSection__card
+          span.tasksSection__card-number=card.number
+          p.tasksSection__card-text=card.text    
+    

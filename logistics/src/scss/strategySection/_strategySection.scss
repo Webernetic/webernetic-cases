@@ -1,0 +1,290 @@
+.strategySection {
+  margin-bottom: 100px;
+
+  &__title {
+    margin-bottom: 37px;
+    font-weight: 700;
+    font-size: 36px;
+    color: $color-main;
+  }
+
+  & h3.strategy-title {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 44.22px;
+    color: $color-main;
+  }
+
+  & p {
+    color: $color-text;
+    font-size: 20px;
+  }
+
+  &__base {
+    position: relative;
+    background-image: url('../assets/images/base-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 332px;
+    padding: 32px 510px 32px 40px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+  }
+
+  &__base-text {
+    &.second-text {
+      margin-top: 12px;
+    }
+  }
+
+  &__step-btn {
+    position: absolute;
+    top: 32px;
+    right: 40px;
+    width: 120px;
+    height: 58px;
+    border-radius: 100px;
+    padding: 8px 10px 6px 10px;
+    font-weight: 700;
+    font-size: 30px;
+    background-color: $color-light-blue;
+    color: white;
+  }
+
+  &__particular {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  &__particular-left {
+    min-height: 240px;
+    max-width: 399px;
+    width: 100%;
+    border-radius: 12px;
+    background-color: $color-blue;
+  }
+
+  &__particular-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 829px;
+    min-height: 240px;
+    padding: 26px 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.01);
+    color: white;
+    background-color: $color-light-blue;
+  }
+
+  &__particular-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 44.22px;
+  }
+
+  & p.strategySection__particular-text {
+    color: white;
+  }
+
+  &__analysis {
+    position: relative;
+    background-image: url('../assets/images/analysis-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 368px;
+    padding: 32px 510px 32px 40px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+  }
+
+  &__analysis-text {
+    padding: 16px 24px;
+    border-radius: 12px;
+    background-color: $color-box-bg2;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+
+    &.second-text {
+      margin-top: 10px;
+    }
+  }
+
+  &__marketing {
+    position: relative;
+    min-height: 242px;
+    padding: 32px 510px 32px 40px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    background-color: white;
+  }
+
+  &__graph {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 12px;
+  }
+
+  &__graph-left,
+  &__graph-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 614px;
+    min-height: 318px;
+    padding: 130px 40px 32px;
+    border-radius: 12px;
+    background-color: white;
+  }
+
+  &__graph-title {
+    color: $color-main;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 120%;
+  }
+
+  @media (max-width: $breakpoints-xl) {
+    &__base,
+    &__analysis,
+    &__marketing {
+      padding-right: clamp(
+        40px,
+        calc(40px + 370 * (100vw - 768px) / 432),
+        510px
+      );
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__base,
+    &__analysis,
+    &__marketing,
+    &__graph-left,
+    &__graph-right {
+      padding-top: 99px;
+    }
+
+    &__particular-left {
+      min-height: clamp(
+        140px,
+        calc(140px + 100 * (100vw - 400px) / 368),
+        240px
+      );
+    }
+
+    &__title {
+      font-size: clamp(26px, calc(26px + 10 * (100vw - 400px) / 368), 36px);
+    }
+
+    & h3.strategy-title,
+    &__particular-title,
+    &__graph-title {
+      font-size: clamp(20px, calc(20px + 10 * (100vw - 400px) / 368), 30px);
+    }
+
+    & p {
+      font-size: clamp(16px, calc(16px + 4 * (100vw - 400px) / 368), 20px);
+    }
+
+    &__step-btn {
+      top: 32px;
+      left: 40px;
+    }
+
+    &__particular {
+      flex-direction: column;
+    }
+
+    &__particular-left {
+      max-width: 100%;
+    }
+
+    &__graph {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+
+    &__graph-left,
+    &__graph-right {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    margin-bottom: 70px;
+
+    &__title {
+      margin-bottom: 20px;
+      font-size: 26px;
+      line-height: 120%;
+    }
+
+    &__base,
+    &__analysis,
+    &__marketing,
+    &__particular-right,
+    &__graph-left,
+    &__graph-right {
+      padding-inline: 20px;
+      padding-bottom: 24px;
+    }
+
+    &__step-btn {
+      padding: 8px 0px 6px 0px;
+      width: 90px;
+      height: 43px;
+      top: 20px;
+      left: 20px;
+      font-size: 20px;
+    }
+
+    & h3.strategy-title,
+    &__graph-title {
+      margin-bottom: 10px;
+      font-size: 20px;
+      line-height: 120%;
+    }
+
+    &__particular-title {
+      margin-bottom: 6px;
+      font-size: 20px;
+      line-height: 29.48px;
+    }
+
+    &__base-text,
+    &__analysis-text,
+    &__marketing-text,
+    &__particular-text,
+    &__graph-text {
+      font-size: 16px;
+    }
+
+    &__base-text.second-text {
+      margin-top: 5px;
+    }
+
+    &__particular-left {
+      min-height: 140px;
+    }
+
+    &__analysis-text {
+      padding: 16px;
+    }
+
+    &__marketing-text.second-text {
+      margin-top: 7px;
+    }
+
+    &__graph-left,
+    &__graph-right {
+      min-height: 262px;
+    }
+  }
+}

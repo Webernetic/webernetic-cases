@@ -1,0 +1,71 @@
+.tasksSection {
+  @include responsive-sizing(padding-top, 60, 73, 400, 1440);
+  @include responsive-sizing(padding-bottom, 55, 110, 400, 1440);
+
+  &__title {
+    margin-bottom: 29px;
+    font-family: $second-family;
+    font-weight: 500;
+    @include responsive-sizing(font-size, 26, 38, 400, 1440);
+    line-height: 115%;
+    letter-spacing: 0.01em;
+    color: $color-light;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row: auto;
+    gap: 14px;
+  }
+
+  &__card {
+    padding: 26px 35px;
+    border-radius: 16px;
+    border: 1px solid $color-border;
+  }
+
+  &__card-number {
+    display: block;
+    margin-bottom: 11px;
+    font-family: $second-family;
+    font-weight: 500;
+    @include responsive-sizing(font-size, 28, 36, 400, 1440);
+    line-height: 115%;
+    letter-spacing: 0.01em;
+    color: $color-green;
+  }
+
+  &__card-text {
+    @include responsive-sizing(font-size, 18, 22, 400, 1440);
+    line-height: 125%;
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+      grid-row: auto;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__cards {
+      grid-template-columns: repeat(1, 1fr);
+      grid-row: auto;
+      gap: 6px;
+    }
+
+    &__card {
+      padding: 18px 24px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    padding-bottom: 55px;
+    padding-top: 60px;
+
+    &__title {
+      margin-bottom: 16px;
+    }
+  }
+}

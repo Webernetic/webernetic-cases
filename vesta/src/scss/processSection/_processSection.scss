@@ -1,0 +1,43 @@
+.processSection {
+  margin-bottom: 100px;
+
+  &__title {
+    font-family: $font-family;
+    max-width: 605px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    color: $color-dark;
+    margin-bottom: 26px;
+
+    & span {
+      background-color: #cadafe;
+    }
+  }
+
+  &__pic {
+    margin-bottom: 24px;
+    height: 74px;
+    width: 100%;
+  }
+
+  &__text {
+    max-width: 798px;
+    border-radius: 8px;
+    padding: 26px 24px;
+    background-color: $color-blue-bg;
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    margin-bottom: 0;
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__pic,
+    &__text {
+      display: none;
+    }
+  }
+}

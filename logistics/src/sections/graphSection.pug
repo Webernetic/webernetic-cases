@@ -1,0 +1,17 @@
+-
+  var cards = [
+    {title: "Яндекс", text: ""},
+     {title: "0,6$", text: "Средняя цена за клик"},
+    {title: "18", text: "Конверсий"}, 
+  ]
+
+
+section.graphSection
+  .graphSection__wrapper.wrapper
+    .graphSection__cards
+      each card in cards
+        .graphSection__card
+          span.graphSection__title=card.title
+          span.graphSection__text=card.text
+    .graphSection__picture
+      img.graphSection__image(src="./assets/images/graph.png")

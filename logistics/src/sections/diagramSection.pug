@@ -1,0 +1,89 @@
+-
+  var items1 = [
+    {name: "Конверсия", value: "0,31%"},
+    {name: "Достижение цели", value: "27"},
+    {name: "Целевые визиты", value: "25"},  ]
+
+  var items2 = [
+    {name: "Конверсия", value: "0,31%"},
+    {name: "Достижение цели", value: "27"},
+    {name: "Целевые визиты", value: "25"},  ]
+
+  var items3 = [
+    {name: "Конверсия", value: "0,4%"},
+    {name: "Достижение цели", value: "33"},
+    {name: "Целевые визиты", value: "32"},  ]
+
+  var items4 = [
+    {name: "Конверсия", value: "0,38%"},
+    {name: "Достижение цели", value: "55"},
+    {name: "Целевые визиты", value: "30"},  ]
+
+section.diagramSection
+  .diagramSection__wrapper.wrapper
+    .diagramSection__boxes
+      .diagramSection__box
+        .diagramSection__btns
+          button.diagramSection__btn Venyoo
+          button.diagramSection__btn
+            img.chartSection__image(src="./assets/icons/message.svg")
+            span Отправил сообщение
+        .diagramSection__content.content-1
+          .diagramSection__info
+            ul.diagramSection__list
+              each item in items1
+                li.diagramSection__item
+                  span.diagramSection__item-name=item.name
+                  span.diagramSection__item-value=item.value
+          .diagramSection__picture
+            img.chartSection__image(src="./assets/images/diagram-1.jpg")
+      .diagramSection__box
+        .diagramSection__btns
+          button.diagramSection__btn Автоцель
+          button.diagramSection__btn
+            img.chartSection__image(src="./assets/icons/arrows.svg")
+            span Переход в мессенджер
+        .diagramSection__content.content-2
+          .diagramSection__info
+            ul.diagramSection__list
+              each item in items2
+                li.diagramSection__item
+                  span.diagramSection__item-name=item.name
+                  span.diagramSection__item-value=item.value
+          .diagramSection__picture 
+            img.chartSection__image(src="./assets/images/diagram-2.jpg")
+      .diagramSection__box
+        .diagramSection__btns
+          button.diagramSection__btn
+            img.chartSection__image(src="./assets/icons/message-share.svg")
+            span Заявка
+        .diagramSection__content.content-3
+          .diagramSection__info
+            ul.diagramSection__list
+              each item in items3
+                li.diagramSection__item
+                  span.diagramSection__item-name=item.name
+                  span.diagramSection__item-value=item.value
+          .diagramSection__picture 
+            img.chartSection__image(src="./assets/images/diagram-3.jpg")
+      .diagramSection__box
+        .diagramSection__btns
+          button.diagramSection__btn Автоцель
+          button.diagramSection__btn
+            img.chartSection__image(src="./assets/icons/phone.svg")
+            span Клик по номеру телефона
+        .diagramSection__content.content-4
+          .diagramSection__info
+            ul.diagramSection__list
+              each item in items4
+                li.diagramSection__item
+                  span.diagramSection__item-name=item.name
+                  span.diagramSection__item-value=item.value
+          .diagramSection__picture 
+            img.chartSection__image(src="./assets/images/diagram-4.jpg")
+    .diagramSection__conclusion
+      p.diagramSection__conclusion-text Выбранная стратегия  позволила не только сократить процент нецелевых заявок, но и значительно увеличить количество качественных лидов при равных затратах на продвижение.
+
+
+    
+      

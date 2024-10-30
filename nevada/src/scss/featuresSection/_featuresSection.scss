@@ -1,0 +1,97 @@
+.featuresSection {
+  &__wrapper {
+    position: relative;
+    min-height: 480px;
+    border-radius: 50px;
+    background-image: url('../assets/images/features-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  &__image-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content {
+    padding-bottom: 12px;
+    @include responsive-sizing(padding-left, 0, 420, 768, 1440);
+    @include responsive-sizing(padding-top, 32, 60, 768, 1440);
+    @include responsive-sizing(padding-right, 0, 36, 768, 1440);
+  }
+
+  &__title {
+    margin-bottom: 14px;
+    font-family: $second-family;
+    font-weight: 500;
+    @include responsive-sizing(font-size, 26, 38, 400, 1440);
+    line-height: 115%;
+    letter-spacing: 0.01em;
+    color: $color-light;
+  }
+
+  &__list-item {
+    display: flex;
+    gap: 10px;
+    padding-block: 26px;
+    border-bottom: 1.5px solid $color-border;
+
+    &:last-child {
+      border-bottom: none;
+
+      & img {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__item-image {
+    display: block;
+    width: 46px;
+    height: 46px;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  &__item-text {
+    @include responsive-sizing(font-size, 20, 26, 400, 1440);
+  }
+
+  @media (max-width: $breakpoints-xl) {
+    margin-inline: 24px;
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__wrapper {
+      min-height: 700px;
+      border-radius: 16px;
+      background-image: url('../assets/images/features-bg-mobile.png');
+    }
+
+    &__title {
+      margin-bottom: 6px;
+      max-width: 300px;
+    }
+
+    &__list-item {
+      flex-direction: column;
+      padding-top: 14px;
+      padding-bottom: 16px;
+    }
+
+    &__item-text {
+      line-height: 125%;
+    }
+
+    &__item-image {
+      width: 36px;
+      height: 36px;
+    }
+  }
+}

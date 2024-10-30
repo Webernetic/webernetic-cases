@@ -1,0 +1,18 @@
+-
+  var services = [
+    {image: './assets/icons/google.svg', text: "Продвижение услуг железнодорожных перевозок из Китая в регионе Республики Беларусь", alt: "google"}, 
+    {image: './assets/icons/yandex.svg', text: "Продвижение логистических услуг через Республику Беларусь в России", alt: "yandex"}, 
+  ]
+
+section.prioritySection 
+  .prioritySection__wrapper.wrapper
+    .prioritySection__left
+      h3.prioritySection__left-title Приоритетные регионы и услуги для продвижения   
+    .prioritySection__right
+      each service in services
+        .prioritySection__box
+          .prioritySection__right-pic
+            img.prioritySection__right-image(src=service.image, alt=service.alt)
+          p.prioritySection__right-text=service.text 
+
+      

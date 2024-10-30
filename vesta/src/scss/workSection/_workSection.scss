@@ -1,0 +1,189 @@
+.workSection {
+  margin-bottom: 136px;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    min-height: 365px;
+    padding: 30px 24px 0 36px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+    background-color: $color-blue;
+    color: white;
+  }
+
+  &__top-pictures {
+    display: flex;
+  }
+
+  &__top-pic {
+    border-radius: 8px;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__top-pic:first-child {
+    width: 326px;
+  }
+
+  &__top-pic:nth-child(2) {
+    width: 254px;
+    border-radius: 8px;
+    margin-top: 77px;
+    transform: translateX(-47px);
+    z-index: 1;
+    box-shadow: 0 4px 9px 0 rgba(17, 15, 83, 0.25);
+
+    & img {
+      overflow: hidden;
+      border-radius: 8px;
+    }
+  }
+
+  &__top-content {
+    max-width: 590px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 26px;
+  }
+
+  &__top-title {
+    font-family: $font-family;
+    font-weight: 500;
+    @include responsive-sizing(font-size, 22, 30, 400, 1440);
+    line-height: 133%;
+  }
+
+  &__top-text {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 135%;
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row: auto;
+    gap: 12px;
+  }
+
+  &__card {
+    @include responsive-sizing(min-height, 176, 248, 400, 1440);
+    border-radius: 8px;
+    padding: 26px 24px;
+    background: $color-light-gray;
+
+    & .workSection__text {
+      font-family: $second-family;
+      font-weight: 400;
+      @include responsive-sizing(font-size, 17, 20, 400, 1440);
+      line-height: 135%;
+      color: $color-text;
+    }
+  }
+
+  &__title-number {
+    font-family: $font-family;
+    @include responsive-sizing(font-size, 48, 64, 992, 1440);
+    line-height: 94px;
+    font-weight: 500;
+    color: $color-main;
+  }
+
+  &__title-symbol {
+    font-family: $second-family;
+    @include responsive-sizing(font-size, 48, 64, 992, 1440);
+    font-weight: 500;
+    color: $color-main;
+  }
+
+  &__card:first-child {
+    background: #ebf0fb;
+
+    & .workSection__title {
+      font-family: $font-family;
+      font-weight: 500;
+      @include responsive-sizing(font-size, 22, 30, 400, 1440);
+      line-height: 130%;
+      color: $color-main;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    &__top {
+      flex-direction: column;
+      flex-direction: column-reverse;
+    }
+
+    &__top-content {
+      max-width: 100%;
+    }
+
+    &__top-title {
+      margin-bottom: 8px;
+    }
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__top {
+      overflow: hidden;
+    }
+
+    &__top-pictures {
+      width: 600px;
+    }
+
+    &__top-pic:first-child {
+      @include responsive-sizing(width, 235, 326, 400, 576);
+    }
+
+    &__cards {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__top-text {
+      font-size: 17px;
+    }
+  }
+
+  @media (max-width: 550px) {
+    &__top-pic {
+      & img {
+        width: auto;
+      }
+    }
+  }
+
+  @media (max-width: 450px) {
+    margin-bottom: 70px;
+
+    &__top {
+      padding: 24px 18px 0 18px;
+    }
+
+    &__cards {
+      gap: 8px;
+    }
+
+    &__card {
+      padding: 24px 18px;
+    }
+
+    &__title-number,
+    &__title-symbol {
+      line-height: 68px;
+      margin-bottom: 14px;
+    }
+  }
+}
