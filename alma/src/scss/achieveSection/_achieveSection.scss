@@ -1,0 +1,121 @@
+.achieveSection {
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 120%;
+    color: $color-title;
+    margin-bottom: 36px;
+  }
+
+  &__target-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  &__target-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 360px;
+    border-radius: 12px;
+    padding: 32px 72px 32px 36px;
+    background-color: #fff;
+  }
+
+  &__target-top {
+    display: flex;
+    align-items: center;
+  }
+
+  &__target-pic {
+    background-image: url('../assets/images/target.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__target-number {
+    width: 64px;
+    height: 64px;
+    margin-right: 24px;
+    border-radius: 12px;
+    padding: 15px 14px;
+    background-color: $color-light-blue;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 120%;
+    text-align: center;
+    color: $color-subtitle;
+  }
+
+  &__target-title,
+  &__tool-title {
+    max-width: 450px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 115%;
+    color: $color-title;
+  }
+
+  &__tool-box {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 60px;
+  }
+
+  &__tool-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 400px;
+    border-radius: 12px;
+    padding: 30px 36px 24px 36px;
+    background: linear-gradient(
+      137deg,
+      #fcf1ff 0%,
+      #e7e7ff 53.9%,
+      #e3efff 100%
+    );
+  }
+
+  &__tool-right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 14px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 228px;
+    border-radius: 12px;
+    padding: 24px 36px;
+    background-color: #fff;
+  }
+
+  &__card-top {
+    display: flex;
+    border-radius: 8px;
+    padding: 8px 45px 8px 12px;
+    background-color: $color-light-blue;
+  }
+
+  &__card-image {
+    display: block;
+    margin-right: 12px;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__card-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 110%;
+    color: $color-title;
+  }
+}

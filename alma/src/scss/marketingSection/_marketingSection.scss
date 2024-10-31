@@ -1,0 +1,89 @@
+.marketingSection {
+  &__box {
+    border-radius: 12px;
+    padding: 32px 36px;
+    background-color: #fff;
+    margin-bottom: 60px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 43px;
+  }
+
+  &__number {
+    width: 64px;
+    height: 64px;
+    margin-right: 24px;
+    padding: 15px 14px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 120%;
+    text-align: center;
+    color: #1e2f44;
+    background-color: $color-light-blue;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 115%;
+    color: $color-title;
+  }
+
+  &__cards {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 195px;
+    border-radius: 12px;
+    padding: 20px 26px;
+    background-color: $color-light-blue;
+
+    &:nth-child(1) {
+      max-width: 274px;
+    }
+    &:nth-child(2) {
+      max-width: 600px;
+    }
+    &:nth-child(3) {
+      max-width: 274px;
+    }
+  }
+
+  &__card-title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 115%;
+    color: $color-title;
+  }
+
+  &__promotion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 60px;
+  }
+
+  &__promotion-left,
+  &__promotion-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px;
+    border-radius: 12px;
+    padding: 32px 80px 32px 36px;
+    background-color: #fff;
+  }
+
+  &__promotion-top {
+    display: flex;
+  }
+}

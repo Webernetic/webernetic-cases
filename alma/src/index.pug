@@ -1,0 +1,18 @@
+extends layouts/MainLayout
+include mixins/index.pug
+
+block title
+  | Alma
+
+block content
+  body.body
+  .container    
+    include sections/headerSection
+    include sections/aboutSection
+    include sections/resultSection
+    include sections/achieveSection
+    include sections/specificSection
+    include sections/marketingSection
+    include sections/reworkSection
+    
+      //include sections/orderSection   

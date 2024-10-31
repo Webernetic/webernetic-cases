@@ -1,0 +1,42 @@
+.resultSection {
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 100px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 299px;
+    min-height: 184px;
+    border-radius: 12px;
+    padding: 24px;
+    background-color: #fff;
+
+    &:first-child {
+      background: linear-gradient(43deg, #fcf1ff 0%, #e3efff 100%);
+    }
+  }
+
+  &__card-title {
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 115%;
+    color: $color-title;
+  }
+
+  &__card:first-child .resultSection__card-title {
+    font-size: 32px;
+  }
+
+  &__card-text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: #656565;
+  }
+}

@@ -1,0 +1,89 @@
+.headerSection {
+  margin-bottom: 100px;
+
+  &__wrapper {
+    display: flex;
+    min-height: 600px;
+    background-image: url('../assets/images/banner-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 36px 24px 24px 32px;
+  }
+
+  &__left {
+    max-width: 628px;
+  }
+
+  &__title {
+    max-width: 628px;
+    margin-bottom: 206px;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    color: $color-title;
+  }
+
+  &__region {
+    padding-top: 26px;
+  }
+
+  &__region-title {
+    max-width: 99px;
+    margin-bottom: 134px;
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 110%;
+    color: #1e2f44;
+    opacity: 0.8;
+    background-color: #fff;
+  }
+
+  &__region-text {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 120%;
+    color: $color-subtitle;
+  }
+
+  &__right {
+    display: flex;
+    gap: 8px;
+    max-width: 588px;
+    width: 100%;
+  }
+
+  &__card {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 290px;
+    min-height: 211px;
+    border-radius: 16px;
+    padding: 26px 32px;
+    background-color: #fff;
+  }
+
+  &__card-title {
+    border-radius: 10px;
+    padding: 6px 12px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 110%;
+    color: $color-subtitle;
+    opacity: 0.8;
+    background-color: $color-light-blue;
+  }
+
+  &__card-text {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 120%;
+    color: $color-subtitle;
+  }
+}

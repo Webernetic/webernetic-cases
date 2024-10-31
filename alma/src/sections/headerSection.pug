@@ -1,0 +1,21 @@
+-
+  var cards = [
+    {title: "Ниша", text: "Канцелярские товары"},
+    {title: "Услуга", text: "Контекстная реклама"},    
+  ]
+
+section.headerSection
+  .headerSection__wrapper.wrapper
+    .headerSection__left
+      h1.headerSection__title Продвижение магазина канцелярских товаров
+      .headerSection__region
+        p.headerSection__region-title Регион
+        p.headerSection__region-text Литва
+    .headerSection__right
+      each card in cards
+        .headerSection__card
+          span.headerSection__card-title=card.title
+          span.headerSection__card-text=card.text
+
+         
+        

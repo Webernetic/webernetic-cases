@@ -1,0 +1,8 @@
+mixin customCheckbox(value, name, id)
+    label.checkbox&attributes(attributes)
+        input(class="checkbox" type="checkbox" id=id name=name value=value)
+        span(class="checkbox__custom")
+        span.checkbox__value= value
+
+  
+   

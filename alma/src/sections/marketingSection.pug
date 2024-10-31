@@ -1,0 +1,30 @@
+-
+  var cards = [
+    {title: "Что это?", text: "Повторный показ рекламы пользователям, которые уже посещали сайт."},
+    {title: "Зачем?", text: "Ремаркетинг помогает возвращать пользователей на сайт. Например, кто-то смотрел товар, но не купил его, ремаркетинг показывает рекламу, тем самым напоминает пользователю о его выборе и подталкивает к покупке. "},
+    {title: "Как помогло в проекте?", text: "Повышение конверсий и узнаваемости бренда."},
+  ]
+
+section.marketingSection
+  .marketingSection__wrapper.wrapper
+    .marketingSection__box
+      .marketingSection__top
+        span.marketingSection__number 02
+        h2.marketingSection__title Настройка ремаркетинга
+      .marketingSection__cards
+        each card in cards
+          .marketingSection__card
+            h3.marketingSection__card-title=card.title
+            p.marketingSection__card-text=card.text
+    .marketingSection__promotion
+      .marketingSection__promotion-left
+        .marketingSection__promotion-top
+          span.marketingSection__number 03
+          h2.marketingSection__title Продвижение карточек отдельных магазинов
+        .marketingSection__promotion-text В процессе сотрудничества клиент поставил новую задачу — увеличение офлайн продаж. <br>
+          | Поэтому мы запустили умные кампании для продвижения карточек отдельных магазинов.
+      .marketingSection__promotion-right
+        .marketingSection__promotion-top
+          span.marketingSection__number 04
+          h2.marketingSection__title Разработка маркетинговой стратегии
+        .marketingSection__promotion-text Кроме настройки контекстной рекламы, мы разработали маркетинговую стратегию: добавили поиск по услугам, например, печать документов, внедрили промокоды, чтобы отследить приход по каждому региону.
