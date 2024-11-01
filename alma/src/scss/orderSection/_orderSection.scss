@@ -1,16 +1,15 @@
 .orderSection {
-  /*
   margin-bottom: 30px;
 
   &_title {
     max-width: 1047px;
     margin-inline: auto;
     margin-bottom: 24px;
-    font-size: 30px;
     font-weight: 700;
-    line-height: 120%;
+    font-size: 28px;
+    line-height: 115%;
     text-align: center;
-    color: $color-main;
+    color: $color-title;
   }
 
   &_wrapper {
@@ -20,7 +19,7 @@
     margin: 0 auto;
     gap: 30px;
     padding: 56px 40px 56px 103.6px;
-    background-color: $color-box-bg2;
+    background-color: $color-light-blue;
     box-shadow: 2px 4px 9px 0 rgba(36, 24, 61, 0.1);
     border-radius: 12px;
   }
@@ -56,14 +55,14 @@
       font-size: 42px;
       line-height: 42px;
       font-weight: 800;
-      color: $color-main;
+      color: $color-title;
       font-family: $font-family;
     }
 
     & > p {
       font-size: 12px;
       font-weight: 800;
-      color: $color-main;
+      color: $color-text;
     }
   }
 
@@ -78,15 +77,16 @@
     font-weight: 700;
     font-size: 42px;
     line-height: 62px;
-    color: $color-main;
+    color: $color-title;
     line-height: 61.91px;
   }
 
   &_secondformTitle {
-    color: $color-main;
+    color: $color-title;
     font-weight: 700;
     font-size: 36px;
     line-height: 147%;
+    margin-bottom: 20px;
   }
 
   &_inputWrapper {
@@ -97,8 +97,11 @@
     margin-bottom: 50px;
 
     & > input {
-      flex-basis: 250px;
+      flex-basis: 245px;
+      height: 36px;
       color: #333333;
+      border-bottom: 2px solid #3c3c3c;
+      font-size: 21px;
     }
   }
 
@@ -113,6 +116,18 @@
       flex-basis: 30%;
       font-size: 24px;
     }
+  }
+
+  & button.customButton {
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 120%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #1f1f1f;
+    text-align: left;
+    margin-top: 10px;
   }
 
   @media (max-width: $breakpoints-lg) {
@@ -230,5 +245,5 @@
         flex-basis: 46%;
       }
     }
-  }*/
+  }
 }

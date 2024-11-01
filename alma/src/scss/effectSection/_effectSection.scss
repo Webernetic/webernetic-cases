@@ -1,0 +1,39 @@
+.effectSection {
+  margin-bottom: 100px;
+
+  &__wrapper {
+    display: flex;
+    gap: 18px;
+    border-radius: 12px;
+    background-color: #fff;
+  }
+
+  &__content {
+    max-width: 636px;
+    padding: 50px 0 50px 36px;
+  }
+
+  &__title {
+    margin-bottom: 81px;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 120%;
+    color: $color-title;
+  }
+
+  &__text {
+    font-size: 24px;
+    line-height: 120%;
+
+    &:last-child {
+      margin-top: 10px;
+    }
+  }
+
+  &__pic {
+    position: relative;
+    top: -50px;
+    max-width: 515px;
+    height: 342px;
+  }
+}

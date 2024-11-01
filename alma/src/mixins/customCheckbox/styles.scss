@@ -39,10 +39,11 @@
 
   .checkbox__custom {
     position: relative;
-    height: 20px;
-    width: 20px;
+    height: 16px;
+    width: 16px;
     border: 2px solid #000;
     border-radius: 3px;
+    background-color: #fff;
 
     &:after {
       content: '';

@@ -7,6 +7,8 @@
 @import './achieveSection/_achieveSection.scss';
 @import './specificSection/_specificSection.scss';
 @import './marketingSection/_marketingSection.scss';
+@import './reworkSection/_reworkSection.scss';
+@import './effectSection/_effectSection.scss';
 @import './orderSection/orderSection';
 
 *,
@@ -15,7 +17,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  //: 1px solid red;
+  // outline: 1px solid red;
 }
 
 body {
