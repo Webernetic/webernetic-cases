@@ -5,6 +5,7 @@
     max-width: 1047px;
     margin-inline: auto;
     margin-bottom: 24px;
+    padding-inline: 15px;
     font-weight: 700;
     font-size: 28px;
     line-height: 115%;
@@ -130,6 +131,12 @@
     margin-top: 10px;
   }
 
+  @media (max-width: $breakpoints-xxl) {
+    &_wrapper {
+      padding-left: 40px;
+    }
+  }
+
   @media (max-width: $breakpoints-lg) {
     &_wrapper {
       padding: 40px;
@@ -230,12 +237,16 @@
 
     &_checkboxWrapper {
       margin-bottom: 40px;
-      gap: 24px;
+      gap: 20px;
 
       & > label {
         font-size: 18px;
         height: 22px;
       }
+    }
+
+    & button.customButton {
+      font-size: 26px;
     }
   }
 

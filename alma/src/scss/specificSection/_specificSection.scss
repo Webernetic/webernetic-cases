@@ -3,10 +3,12 @@
 
   &__card {
     display: flex;
-    gap: 40px;
+    @include responsive-sizing(gap, 24, 40, 400, 1440);
     min-height: 300px;
     border-radius: 12px;
     padding: 32px 36px;
+    @include responsive-sizing(padding-block, 24, 32, 400, 1440);
+    @include responsive-sizing(padding-inline, 20, 36, 400, 1440);
     background-color: #fff;
     margin-bottom: 14px;
 
@@ -58,6 +60,7 @@
     flex-direction: column;
     justify-content: space-between;
     max-width: 570px;
+    width: 100%;
   }
 
   &__left.third {
@@ -67,9 +70,13 @@
   &__title {
     font-family: $font-family;
     font-weight: 700;
-    font-size: 32px;
+    @include responsive-sizing(font-size, 24, 32, 400, 1440);
     line-height: 120%;
     color: $color-title;
+  }
+
+  &__text {
+    @include responsive-sizing(font-size, 18, 20, 400, 1440);
   }
 
   &__top {
@@ -81,5 +88,60 @@
     color: $color-subtitle;
     opacity: 0.8;
     background-color: #fff;
+  }
+
+  @media (max-width: $breakpoints-xxl) {
+    &__title {
+      margin-bottom: 12px;
+    }
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__card {
+      flex-direction: column;
+    }
+
+    &__card.second {
+      flex-direction: column;
+    }
+
+    &__left,
+    &__left.third,
+    &__right.third {
+      max-width: 100%;
+    }
+
+    &__right {
+      align-self: center;
+    }
+
+    &__right.third {
+      min-height: 200px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    margin-bottom: 40px;
+
+    &__right.first,
+    &__right.second {
+      min-height: 180px;
+    }
+
+    &__right.third {
+      min-height: 186px;
+      padding: 20px 16px;
+    }
+
+    &__top {
+      border-radius: 6px;
+      padding: 6px 8px;
+      font-size: 20px;
+      line-height: 110%;
+    }
+
+    &__text {
+      line-height: 120%;
+    }
   }
 }

@@ -38,16 +38,11 @@ body::-webkit-scrollbar {
   max-width: $max-width;
   width: 100%;
   margin: 0 auto;
-  //background-color: $color-bg;
 }
 
 .wrapper {
   max-width: 1240px;
   margin: 0 auto;
-
-  @media (max-width: 1300px) {
-    padding-inline: 24px;
-  }
 }
 
 ul,
