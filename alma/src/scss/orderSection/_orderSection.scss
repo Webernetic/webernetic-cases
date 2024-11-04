@@ -213,7 +213,7 @@
       margin-bottom: 20px;
       font-size: 20px;
       line-height: 110%;
-      text-align: center;
+      padding-inline: 0;
     }
 
     &_formTitle {
@@ -246,7 +246,7 @@
     }
 
     & button.customButton {
-      font-size: 26px;
+      font-size: 18px;
     }
   }
 

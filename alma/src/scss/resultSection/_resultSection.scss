@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 14px;
-    margin-bottom: 100px;
+    @include responsive-sizing(margin-bottom, 60, 100, 400, 1440);
   }
 
   &__card {
@@ -50,8 +50,6 @@
   }
 
   @media (max-width: $breakpoints-xs) {
-    margin-bottom: 60px;
-
     &__cards {
       grid-template-columns: 1fr;
       gap: 8px;

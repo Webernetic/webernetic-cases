@@ -1,5 +1,5 @@
 .aboutSection {
-  margin-bottom: 100px;
+  @include responsive-sizing(margin-bottom, 60, 100, 400, 1440);
 
   &__client-box {
     display: flex;
@@ -66,6 +66,7 @@
     background-position: left;
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 12px;
     @include responsive-sizing(padding-inline, 20, 36, 992, 1440);
     @include responsive-sizing(padding-block, 26, 36, 992, 1440);
   }
@@ -126,6 +127,10 @@
     &__client-box {
       flex-direction: column;
     }
+
+    &__client-card {
+      max-width: 100%;
+    }
   }
 
   @media (max-width: $breakpoints-sm) {
@@ -152,8 +157,6 @@
   }
 
   @media (max-width: $breakpoints-xs) {
-    margin-bottom: 60px;
-
     &__client-box {
       gap: 8px;
       margin-bottom: 60px;

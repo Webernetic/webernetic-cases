@@ -4,7 +4,7 @@
     @include responsive-sizing(padding-block, 24, 32, 400, 1440);
     @include responsive-sizing(padding-inline, 20, 36, 400, 1440);
     background-color: #fff;
-    margin-bottom: 60px;
+    @include responsive-sizing(margin-bottom, 40, 60, 400, 1440);
   }
 
   &__top {
@@ -117,6 +117,7 @@
   @media (max-width: $breakpoints-xs) {
     &__promotion {
       gap: 40px;
+      margin-bottom: 64px;
     }
 
     &__top,
@@ -124,6 +125,10 @@
       flex-direction: column;
       align-items: flex-start;
       margin-bottom: 8px;
+    }
+
+    &__promotion-right {
+      padding-bottom: 48px;
     }
 
     &__number {
@@ -136,6 +141,7 @@
 
     &__card {
       min-height: 128px;
+      padding: 20px;
     }
 
     &__card-title {

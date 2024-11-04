@@ -12,6 +12,7 @@
     max-width: 400px;
     width: 100%;
     min-height: 424px;
+    border-radius: 12px;
     background-image: url('../assets/images/rework.png');
     background-position: center;
     background-size: cover;
@@ -157,6 +158,10 @@
     &__cards {
       grid-template-columns: repeat(2, 1fr);
     }
+
+    &__card {
+      max-width: 100%;
+    }
   }
 
   @media (max-width: $breakpoints-sm) {
@@ -172,7 +177,7 @@
     }
 
     &__box {
-      gap: 20px;
+      gap: 8px;
     }
 
     &__right-top {
@@ -185,11 +190,16 @@
 
     &__cards {
       grid-template-columns: 1fr;
+      gap: 8px;
     }
 
     &__card {
       max-width: 100%;
       min-height: 140px;
+
+      &:first-child {
+        padding-bottom: 11px;
+      }
     }
 
     &__right-top {
@@ -203,6 +213,10 @@
       padding: 14.5px 16px;
       margin-bottom: 26px;
       font-size: 26px;
+    }
+
+    &__right-text {
+      margin-bottom: 26px;
     }
 
     &__list li {

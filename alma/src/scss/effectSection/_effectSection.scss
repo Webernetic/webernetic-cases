@@ -1,5 +1,5 @@
 .effectSection {
-  margin-bottom: 100px;
+  @include responsive-sizing(margin-bottom, 60, 100, 992, 1440);
 
   &__wrapper {
     display: flex;
@@ -25,6 +25,10 @@
     color: $color-title;
   }
 
+  &__title.mobile {
+    display: none;
+  }
+
   &__text {
     font-size: 24px;
     @include responsive-sizing(font-size, 20, 24, 400, 1440);
@@ -41,15 +45,13 @@
     flex-shrink: 0;
   }
 
-  @media (max-width: $breakpoints-xxl) {
-    &__title {
-      margin-bottom: 16px;
-    }
-  }
-
   @media (max-width: $breakpoints-lg) {
     &__wrapper {
       flex-direction: column;
+    }
+
+    &__title {
+      margin-bottom: 16px;
     }
 
     &__content {
@@ -62,6 +64,20 @@
     &__pic {
       width: 100%;
       height: auto;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__title {
+      display: none;
+    }
+
+    &__title.mobile {
+      display: block;
+    }
+
+    &__content {
+      padding-bottom: 0;
     }
   }
 }

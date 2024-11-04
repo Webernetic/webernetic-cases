@@ -1,5 +1,5 @@
 .headerSection {
-  margin-bottom: 100px;
+  @include responsive-sizing(margin-bottom, 60, 100, 400, 1440);
 
   &__wrapper {
     display: flex;
@@ -16,6 +16,7 @@
 
   &__left {
     max-width: 628px;
+    padding-left: 8px;
   }
 
   &__title {
@@ -66,7 +67,7 @@
     justify-content: space-between;
     align-items: flex-start;
     max-width: 290px;
-    @include responsive-sizing(min-height, 96, 221, 400, 1440);
+    @include responsive-sizing(min-height, 96, 211, 400, 1440);
     @include responsive-sizing(padding-block, 16, 26, 400, 1440);
     @include responsive-sizing(padding-inline, 20, 32, 400, 1440);
     border-radius: 16px;
@@ -116,8 +117,6 @@
   }
 
   @media (max-width: $breakpoints-xs) {
-    margin-bottom: 60px;
-
     &__wrapper {
       flex-direction: column;
       min-height: 548px;
@@ -146,11 +145,16 @@
 
     &__region-title {
       max-width: 80px;
+      border-radius: 6px;
     }
 
     &__card {
       width: 100%;
       max-width: 100%;
+    }
+
+    &__card-title {
+      border-radius: 6px;
     }
   }
 }
