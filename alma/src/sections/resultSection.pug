@@ -1,0 +1,15 @@
+-
+  var cards = [
+    {title: "Результаты продвижения", text: ""},
+    {title: "3-е", text: "Место в аукционе"}, 
+    {title: "4%", text: "Конверсия из клика в заказ"},
+    {title: "3,59€", text: "Цена конверсии"}, 
+  ]
+
+section.resultSection
+  .resultSection__wrapper.wrapper
+    .resultSection__cards
+       each card in cards
+        .resultSection__card
+          span.resultSection__card-title=card.title
+          span.resultSection__card-text=card.text

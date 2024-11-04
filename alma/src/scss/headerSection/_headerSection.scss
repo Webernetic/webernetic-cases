@@ -1,0 +1,160 @@
+.headerSection {
+  @include responsive-sizing(margin-bottom, 60, 100, 400, 1440);
+
+  &__wrapper {
+    display: flex;
+    min-height: 600px;
+    @include responsive-sizing(min-height, 550, 600, 1200, 1440);
+    background-image: url('../assets/images/banner-bg.png');
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include responsive-sizing(padding-top, 26, 36, 400, 1440);
+    @include responsive-sizing(padding-bottom, 10, 24, 400, 1440);
+    @include responsive-sizing(padding-inline, 10, 24, 400, 1440);
+  }
+
+  &__left {
+    max-width: 628px;
+    padding-left: 8px;
+  }
+
+  &__title {
+    max-width: 628px;
+    margin-bottom: 206px;
+    font-family: $font-family;
+    font-weight: 700;
+    @include responsive-sizing(font-size, 24, 40, 400, 1440);
+    line-height: 120%;
+    color: $color-title;
+  }
+
+  &__region {
+    padding-top: 26px;
+  }
+
+  &__region-title {
+    max-width: 99px;
+    margin-bottom: 134px;
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 16, 24, 400, 1440);
+    line-height: 110%;
+    color: #1e2f44;
+    opacity: 0.8;
+    background-color: #fff;
+  }
+
+  &__region-text {
+    font-weight: 700;
+    @include responsive-sizing(font-size, 18, 28, 400, 1440);
+    line-height: 120%;
+    color: $color-subtitle;
+  }
+
+  &__right {
+    display: flex;
+    gap: 8px;
+    max-width: 588px;
+    width: 100%;
+  }
+
+  &__card {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 290px;
+    @include responsive-sizing(min-height, 96, 211, 400, 1440);
+    @include responsive-sizing(padding-block, 16, 26, 400, 1440);
+    @include responsive-sizing(padding-inline, 20, 32, 400, 1440);
+    border-radius: 16px;
+    background-color: #fff;
+  }
+
+  &__card-title {
+    border-radius: 10px;
+    padding: 6px 12px;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 16, 24, 400, 1440);
+    line-height: 110%;
+    color: $color-subtitle;
+    opacity: 0.8;
+    background-color: $color-light-blue;
+  }
+
+  &__card-text {
+    font-weight: 700;
+    @include responsive-sizing(font-size, 18, 28, 400, 1440);
+    line-height: 120%;
+    color: $color-subtitle;
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__title {
+      position: absolute;
+      max-width: 500px;
+      margin-right: 15px;
+    }
+
+    &__region {
+      margin-top: 270px;
+      width: 200px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    &__right {
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    &__card {
+      min-height: 96px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__wrapper {
+      flex-direction: column;
+      min-height: 548px;
+      padding-inline: 10px;
+      gap: 53px;
+      background-image: url('../assets/images/banner-bg-mobile.png');
+    }
+
+    &__left {
+      padding-inline: 10px;
+    }
+
+    &__region {
+      margin-top: 150px;
+    }
+
+    &__region-title {
+      margin-bottom: 16px;
+    }
+
+    &__right {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 15px;
+    }
+
+    &__region-title {
+      max-width: 80px;
+      border-radius: 6px;
+    }
+
+    &__card {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &__card-title {
+      border-radius: 6px;
+    }
+  }
+}

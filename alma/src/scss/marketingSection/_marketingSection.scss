@@ -1,0 +1,151 @@
+.marketingSection {
+  &__box {
+    border-radius: 12px;
+    @include responsive-sizing(padding-block, 24, 32, 400, 1440);
+    @include responsive-sizing(padding-inline, 20, 36, 400, 1440);
+    background-color: #fff;
+    @include responsive-sizing(margin-bottom, 40, 60, 400, 1440);
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 43px;
+  }
+
+  &__number {
+    width: 64px;
+    height: 64px;
+    margin-right: 24px;
+    padding: 15px 14px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 120%;
+    text-align: center;
+    color: #1e2f44;
+    background-color: $color-light-blue;
+  }
+
+  &__title {
+    font-weight: 700;
+    @include responsive-sizing(font-size, 24, 32, 400, 1440);
+    line-height: 115%;
+    color: $color-title;
+  }
+
+  &__cards {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 195px;
+    border-radius: 12px;
+    padding: 20px 26px;
+    background-color: $color-light-blue;
+
+    &:nth-child(1) {
+      max-width: 274px;
+    }
+    &:nth-child(2) {
+      max-width: 600px;
+    }
+    &:nth-child(3) {
+      max-width: 274px;
+    }
+  }
+
+  &__card-title {
+    font-weight: 700;
+    @include responsive-sizing(font-size, 22, 28, 400, 1440);
+    line-height: 115%;
+    color: $color-title;
+  }
+
+  &__card-text,
+  &__promotion-text {
+    @include responsive-sizing(font-size, 18, 20, 400, 1440);
+    line-height: 120%;
+  }
+
+  &__promotion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 60px;
+  }
+
+  &__promotion-left,
+  &__promotion-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px;
+    border-radius: 12px;
+    @include responsive-sizing(padding-block, 24, 32, 400, 1440);
+    @include responsive-sizing(padding-right, 20, 80, 400, 1440);
+    @include responsive-sizing(padding-left, 20, 36, 400, 1440);
+    background-color: #fff;
+  }
+
+  &__promotion-top {
+    display: flex;
+  }
+
+  @media (max-width: 900px) {
+    &__cards {
+      flex-direction: column;
+    }
+
+    &__card:nth-child(1),
+    &__card:nth-child(2),
+    &__card:nth-child(3) {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 700px) {
+    &__promotion {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__promotion {
+      gap: 40px;
+      margin-bottom: 64px;
+    }
+
+    &__top,
+    &__promotion-top {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+
+    &__promotion-right {
+      padding-bottom: 48px;
+    }
+
+    &__number {
+      width: 60px;
+      height: 60px;
+      padding: 14.5px 15.5px;
+      margin-bottom: 26px;
+      font-size: 26px;
+    }
+
+    &__card {
+      min-height: 128px;
+      padding: 20px;
+    }
+
+    &__card-title {
+      margin-bottom: 16px;
+    }
+  }
+}

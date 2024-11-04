@@ -1,0 +1,30 @@
+-
+  var cards = [
+    {title: "Автоматизация", src: "./assets/icons/tool-1.svg", text: "Система использует искусственный интеллект для назначения ставок и выбора объявлений с наибольшей конверсией."},
+    {title: "Smart Bidding", src: "./assets/icons/tool-2.svg", text: "Автоматический подбор аудитории и таргетинг объявлений на основе предоставленных данных."}, 
+    {title: "Интеграция медийной и поисковой рекламы",  src: "./assets/icons/tool-3.svg", text: "Упрощает запуск рекламы в Google Ads и обеспечивает доступ к разным форматам и плейсментам (КМС, Поиск, YouTube, Gmail)."},
+    {title: "Высокий охват и конверсии",  src: "./assets/icons/tool-4.svg", text: "Больше людей увидят объявления благодаря максимальной автоматизации и доступу к основным каналам Google."}, 
+  ]
+section.achieveSection
+  .achieveSection__wrapper.wrapper
+    h2.achieveSection__title Как мы достигли этих результатов?
+    .achieveSection__target-box
+      .achieveSection__target-content
+        .achieveSection__target-top  
+          span.achieveSection__target-number 01
+          h3.achieveSection__target-title Запуск таргетированной рекламы
+        .achieveSection__target-text
+          | Для запуска рекламы мы выбрали платформу Perfomance MAX. Основное преимущество этого инструмента — низкая стоимость конверсии, по сравнению с поисковой рекламой. <br>
+          | Цены в магазине низкие, поэтому важно было получать клиентов за минимальную стоимость, чтобы инвестиции в продвижение окупались.
+      .achieveSection__target-pic
+    .achieveSection__tool-box
+      .achieveSection__tool-left 
+        h3.achieveSection__tool-title Новый инструмент 
+        p.achieveSection__tool-text Perfomance MAX — это новый инструмент Google Ads. Он автоматизирует настройку рекламы и максимизировать результаты. Основные преимущества Perfomance MAX.
+      .achieveSection__tool-right
+        each card in cards
+          .achieveSection__card
+            .achieveSection__card-top
+              img.achieveSection__card-image(src=card.src  alt="интсрумент")
+              h3.achieveSection__card-title=card.title
+            p.achieveSection__card-text=card.text      

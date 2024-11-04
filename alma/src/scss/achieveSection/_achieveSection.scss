@@ -1,0 +1,261 @@
+.achieveSection {
+  &__title {
+    font-weight: 700;
+    @include responsive-sizing(font-size, 28, 36, 400, 1440);
+    line-height: 120%;
+    color: $color-title;
+    margin-bottom: 36px;
+  }
+
+  &__target-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  &__target-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 12px;
+    padding: 32px 72px 32px 36px;
+    @include responsive-sizing(padding-block, 24, 32, 400, 1440);
+    @include responsive-sizing(padding-left, 20, 36, 400, 1440);
+    @include responsive-sizing(padding-right, 20, 72, 992, 1440);
+
+    background-color: #fff;
+  }
+
+  &__target-top {
+    display: flex;
+    align-items: center;
+  }
+
+  &__target-pic {
+    width: 610px;
+    height: 360px;
+    border-radius: 12px;
+    background-image: url('../assets/images/target.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__target-number {
+    width: 64px;
+    height: 64px;
+    margin-right: 24px;
+    border-radius: 12px;
+    padding: 15px 14px;
+    background-color: $color-light-blue;
+    font-family: $font-family;
+    font-weight: 700;
+    @include responsive-sizing(font-size, 26, 32, 400, 1440);
+    line-height: 120%;
+    text-align: center;
+    color: $color-subtitle;
+  }
+
+  &__target-title,
+  &__tool-title {
+    max-width: 450px;
+    font-weight: 700;
+    @include responsive-sizing(font-size, 24, 32, 400, 1440);
+    line-height: 115%;
+    color: $color-title;
+  }
+
+  &__tool-box {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 60px;
+  }
+
+  &__tool-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 400px;
+    border-radius: 12px;
+    padding: 30px 36px 24px 36px;
+    background: linear-gradient(
+      137deg,
+      #fcf1ff 0%,
+      #e7e7ff 53.9%,
+      #e3efff 100%
+    );
+  }
+
+  &__tool-right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 14px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 228px;
+    border-radius: 12px;
+    padding-block: 24px;
+    @include responsive-sizing(padding-inline, 20, 36, 400, 1440);
+    background-color: #fff;
+  }
+
+  &__card-top {
+    display: flex;
+    border-radius: 8px;
+    padding: 8px 45px 8px 12px;
+    background-color: $color-light-blue;
+  }
+
+  &__card-image {
+    display: block;
+    margin-right: 12px;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__card-title {
+    font-weight: 700;
+    font-size: 24px;
+    @include responsive-sizing(font-size, 22, 24, 400, 1440);
+    line-height: 110%;
+    color: $color-title;
+  }
+
+  &__card-text {
+    @include responsive-sizing(font-size, 18, 20, 400, 1440);
+  }
+
+  @media (max-width: 1150px) {
+    &__target-box {
+      grid-template-columns: 1fr;
+    }
+
+    &__target-top {
+      margin-bottom: 15px;
+    }
+
+    &__target-pic {
+      justify-self: center;
+    }
+
+    &__tool-box {
+      flex-direction: column;
+    }
+
+    &__tool-left {
+      max-width: 100%;
+    }
+
+    &__tool-title {
+      margin-bottom: 15px;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__target-pic {
+      width: 100%;
+    }
+
+    &__tool-right {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    &__target-pic {
+      height: 194px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__target-box {
+      margin-bottom: 40px;
+      gap: 8px;
+    }
+
+    &__target-pic {
+      width: 100%;
+      min-height: 194px;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__target-title {
+      line-height: 120%;
+    }
+
+    &__target-top {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+
+    &__target-number {
+      width: 60px;
+      height: 60px;
+      padding: 14.5px 17.5px;
+      margin-bottom: 26px;
+    }
+
+    &__target-text {
+      font-size: 18px;
+      line-height: 120%;
+    }
+
+    &__tool-box {
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+
+    &__tool-left {
+      padding: 24px 20px;
+    }
+
+    &__tool-title {
+      margin-bottom: 50px;
+    }
+
+    &__tool-text {
+      font-size: 18px;
+      line-height: 120%;
+    }
+
+    &__card {
+      min-height: auto;
+    }
+
+    &__card:nth-child(1) {
+      order: 0;
+    }
+
+    &__card:nth-child(2) {
+      order: 2;
+    }
+
+    &__card:nth-child(3) {
+      order: 1;
+    }
+
+    &__card:nth-child(4) {
+      order: 3;
+    }
+
+    &__card-top {
+      padding: 8px 12px;
+      margin-bottom: 11px;
+    }
+
+    &__card-text {
+      line-height: 120%;
+    }
+  }
+}

@@ -1,0 +1,177 @@
+.aboutSection {
+  @include responsive-sizing(margin-bottom, 60, 100, 400, 1440);
+
+  &__client-box {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+
+  &__client-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 613px;
+    min-height: 192px;
+    border-radius: 12px;
+    padding-block: 24px;
+    @include responsive-sizing(padding-inline, 20, 36, 992, 1440);
+    background-color: #fff;
+  }
+
+  &__title {
+    font-family: $font-family;
+    font-weight: 700;
+    @include responsive-sizing(font-size, 22, 32, 400, 1440);
+    line-height: 120%;
+    color: $color-title;
+  }
+
+  &__client-text,
+  &__platform-text,
+  &__performance-item {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1440);
+    line-height: 120%;
+    color: $color-text;
+  }
+
+  &__platform-box {
+    min-height: 222px;
+    background-image: url('../assets/images/platform-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    @include responsive-sizing(padding-inline, 20, 36, 992, 1440);
+    @include responsive-sizing(padding-block, 24, 36, 992, 1440);
+    margin-bottom: 14px;
+  }
+
+  &__platform-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 540px;
+    min-height: 150px;
+  }
+
+  &__performance-box {
+    min-height: 222px;
+    background-image: url('../assets/images/performance-bg.png');
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    @include responsive-sizing(padding-inline, 20, 36, 992, 1440);
+    @include responsive-sizing(padding-block, 26, 36, 992, 1440);
+  }
+
+  &__performance-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 540px;
+    @include responsive-sizing(max-width, 390, 540, 992, 1440);
+    min-height: 150px;
+    margin-left: auto;
+  }
+
+  &__performance-list li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 6px;
+      height: 6px;
+      background-color: $color-subtitle;
+      border-radius: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-xxl) {
+    &__title {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__platform-box {
+      background-position: left;
+    }
+
+    &__performance-box {
+      background: $color-light-blue;
+    }
+
+    &__performance-content {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__client-box {
+      flex-direction: column;
+    }
+
+    &__client-card {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__platform-box {
+      min-height: 330px;
+      background-image: url('../assets/images/platform-bg-mobile.png');
+    }
+
+    &__platform-content {
+      min-height: 108px;
+    }
+
+    &__performance-box {
+      min-height: 322px;
+      background-image: url('../assets/images/performance-bg-mobile.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &__performance-content {
+      min-height: 130px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__client-box {
+      gap: 8px;
+      margin-bottom: 60px;
+    }
+
+    &__client-card {
+      min-height: 222px;
+
+      &:last-child {
+        min-height: 178px;
+      }
+    }
+
+    &__platform-box {
+      margin-bottom: 8px;
+    }
+  }
+}

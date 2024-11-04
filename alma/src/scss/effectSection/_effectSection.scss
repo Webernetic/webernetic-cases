@@ -1,0 +1,83 @@
+.effectSection {
+  @include responsive-sizing(margin-bottom, 60, 100, 992, 1440);
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    border-radius: 12px;
+    background-color: #fff;
+  }
+
+  &__content {
+    max-width: 636px;
+    padding: 50px 0 50px 36px;
+    @include responsive-sizing(padding-block, 36, 50, 992, 1440);
+    @include responsive-sizing(padding-left, 20, 36, 992, 1440);
+  }
+
+  &__title {
+    margin-bottom: 81px;
+    font-weight: 700;
+    font-size: 50px;
+    @include responsive-sizing(font-size, 36, 50, 400, 1440);
+    line-height: 120%;
+    color: $color-title;
+  }
+
+  &__title.mobile {
+    display: none;
+  }
+
+  &__text {
+    font-size: 24px;
+    @include responsive-sizing(font-size, 20, 24, 400, 1440);
+    line-height: 120%;
+
+    &:last-child {
+      margin-top: 10px;
+    }
+  }
+
+  &__pic {
+    width: 515px;
+    height: 342px;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__content {
+      max-width: 100%;
+      padding-right: 20px;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__pic {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__title {
+      display: none;
+    }
+
+    &__title.mobile {
+      display: block;
+    }
+
+    &__content {
+      padding-bottom: 0;
+    }
+  }
+}

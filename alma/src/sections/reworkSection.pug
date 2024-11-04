@@ -1,0 +1,32 @@
+-
+  var cards = [
+    {title: "3-е", text: "Место в аукционе"},
+    {title: "2390", text: "Заказов"}, 
+    {title: "0,12€", text: "Стоимость клика"},
+    {title: "3,54€", text: "Стоимость конверсии"}, 
+  ]
+
+section.reworkSection
+  .reworkSection__wrapper.wrapper
+    .reworkSection__box
+      .reworkSection__left
+      .reworkSection__right
+        .reworkSection__right-top
+          span.reworkSection__right-number 05
+          h2.reworkSection__right-title Доработка сайта
+        .reworkSection__right-text Помимо настройки рекламы мы также работали над улучшением сайта, чтобы повысить % конверсий:
+        ul.reworkSection__list
+          .reworkSection__list-left
+            li.reworkSection__right-item Скорректировали страницы Доставка, Оплата
+            li.reworkSection__right-item Подключили онлайн-оплату
+            li.reworkSection__right-item Изменили внешний вид каталога
+          .reworkSection__list-right
+            li.reworkSection__right-item Добавили модуль, с помощью которого отслеживали наиболее эффективный канал продаж
+            li.reworkSection__right-item Доработали структуру основных разделов.
+    .reworkSection__results
+      h2.reworkSection__results-title Результаты
+      .reworkSection__cards
+         each card in cards
+          .reworkSection__card
+            span.reworkSection__card-title=card.title
+            span.reworkSection__card-text=card.text   

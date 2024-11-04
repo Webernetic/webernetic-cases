@@ -1,0 +1,147 @@
+.specificSection {
+  margin-bottom: 60px;
+
+  &__card {
+    display: flex;
+    @include responsive-sizing(gap, 24, 40, 400, 1440);
+    min-height: 300px;
+    border-radius: 12px;
+    padding: 32px 36px;
+    @include responsive-sizing(padding-block, 24, 32, 400, 1440);
+    @include responsive-sizing(padding-inline, 20, 36, 400, 1440);
+    background-color: #fff;
+    margin-bottom: 14px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__card.second {
+    flex-direction: row-reverse;
+  }
+
+  &__right {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__right.first {
+    max-width: 558px;
+    width: 100%;
+    min-height: 236px;
+    background-image: url('../assets/images/specific-1.png');
+    border-radius: 12px;
+  }
+
+  &__right.second {
+    max-width: 558px;
+    width: 100%;
+    min-height: 276px;
+    background-image: url('../assets/images/specific-2.png');
+    border-radius: 12px;
+  }
+
+  &__right.third {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 570px;
+    min-height: 276px;
+    border-radius: 12px;
+    padding: 20px 26px;
+    background-color: $color-light-blue;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 570px;
+    width: 100%;
+  }
+
+  &__left.third {
+    max-width: 558px;
+  }
+
+  &__title {
+    font-family: $font-family;
+    font-weight: 700;
+    @include responsive-sizing(font-size, 24, 32, 400, 1440);
+    line-height: 120%;
+    color: $color-title;
+  }
+
+  &__text {
+    @include responsive-sizing(font-size, 18, 20, 400, 1440);
+  }
+
+  &__top {
+    display: block;
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-size: 24px;
+    line-height: 110%;
+    color: $color-subtitle;
+    opacity: 0.8;
+    background-color: #fff;
+  }
+
+  @media (max-width: $breakpoints-xxl) {
+    &__title {
+      margin-bottom: 12px;
+    }
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__card {
+      flex-direction: column;
+    }
+
+    &__card.second {
+      flex-direction: column;
+    }
+
+    &__left,
+    &__left.third,
+    &__right.third {
+      max-width: 100%;
+    }
+
+    &__right {
+      align-self: center;
+    }
+
+    &__right.third {
+      min-height: 200px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    margin-bottom: 40px;
+
+    &__right.first,
+    &__right.second {
+      min-height: 180px;
+    }
+
+    &__right.third {
+      min-height: 186px;
+      padding: 20px 16px;
+    }
+
+    &__top {
+      border-radius: 6px;
+      padding: 6px 8px;
+      font-size: 20px;
+      line-height: 110%;
+    }
+
+    &__text {
+      line-height: 120%;
+    }
+  }
+}

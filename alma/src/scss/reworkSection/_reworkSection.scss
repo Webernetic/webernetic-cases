@@ -1,0 +1,232 @@
+.reworkSection {
+  margin-bottom: 100px;
+  @include responsive-sizing(margin-bottom, 60, 100, 400, 1440);
+
+  &__box {
+    display: flex;
+    gap: 20px;
+    @include responsive-sizing(margin-bottom, 60, 100, 400, 1440);
+  }
+
+  &__left {
+    max-width: 400px;
+    width: 100%;
+    min-height: 424px;
+    border-radius: 12px;
+    background-image: url('../assets/images/rework.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__right {
+    max-width: 820px;
+    border-radius: 12px;
+    @include responsive-sizing(padding-block, 24, 32, 400, 1440);
+    @include responsive-sizing(padding-inline, 20, 36, 400, 1440);
+    background-color: #fff;
+  }
+
+  &__right-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__right-number {
+    width: 64px;
+    height: 64px;
+    margin-right: 24px;
+    border-radius: 12px;
+    padding: 15px 14px;
+    background-color: $color-light-blue;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 120%;
+    color: $color-subtitle;
+  }
+
+  &__right-title {
+    font-weight: 700;
+    @include responsive-sizing(font-size, 24, 32, 400, 1440);
+    line-height: 115%;
+    color: $color-title;
+  }
+
+  &__right-text {
+    margin-bottom: 14px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1440);
+    line-height: 120%;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  &__list li {
+    position: relative;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    padding: 16px 24px 16px 45px;
+    background-color: $color-light-blue;
+    @include responsive-sizing(font-size, 18, 20, 400, 1440);
+    line-height: 120%;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 25px;
+      top: 25px;
+      width: 6px;
+      height: 6px;
+      background-color: $color-subtitle;
+      border-radius: 100%;
+    }
+  }
+
+  &__results-title {
+    font-weight: 700;
+    @include responsive-sizing(font-size, 28, 36, 400, 1440);
+    line-height: 120%;
+    color: $color-title;
+    margin-bottom: 21px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 299px;
+    min-height: 157px;
+    border: 1px solid rgba(0, 0, 0, 0.01);
+    border-radius: 12px;
+    @include responsive-sizing(padding-block, 24, 26, 400, 1440);
+    @include responsive-sizing(padding-inline, 20, 30, 400, 1440);
+    background-color: #fff;
+
+    &:first-child {
+      background-color: $color-light-blue;
+    }
+  }
+
+  &__card-title {
+    font-family: $font-family;
+    font-weight: 700;
+    @include responsive-sizing(font-size, 38, 48, 400, 1440);
+    line-height: 120%;
+    color: $color-title;
+  }
+
+  &__card-text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 24px;
+    @include responsive-sizing(font-size, 20, 24, 400, 1440);
+    line-height: 130%;
+    color: $color-text;
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__box {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__left {
+      max-width: 70%;
+    }
+
+    &__right {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__left {
+      max-width: 100%;
+    }
+
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__card {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__list {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__promotion {
+      margin-bottom: 64px;
+    }
+
+    &__box {
+      gap: 8px;
+    }
+
+    &__right-top {
+      margin-bottom: 10px;
+    }
+
+    &__left {
+      min-height: 347px;
+    }
+
+    &__cards {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    &__card {
+      max-width: 100%;
+      min-height: 140px;
+
+      &:first-child {
+        padding-bottom: 11px;
+      }
+    }
+
+    &__right-top {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__right-number {
+      width: 60px;
+      height: 60px;
+      padding: 14.5px 16px;
+      margin-bottom: 26px;
+      font-size: 26px;
+    }
+
+    &__right-text {
+      margin-bottom: 26px;
+    }
+
+    &__list li {
+      padding-right: 20px;
+      padding-left: 35px;
+      margin-bottom: 6px;
+
+      &:before {
+        left: 20px;
+      }
+    }
+  }
+}
