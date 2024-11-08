@@ -1,0 +1,42 @@
+.challengeSection {
+  &__box {
+    display: flex;
+  }
+
+  &__box-content {
+    max-width: 814px;
+    min-height: 439px;
+    padding: 80px 100px;
+    background-color: $color-yellow;
+  }
+
+  &__box-title {
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    color: #6b6a4d;
+  }
+
+  &__box-pic {
+    max-width: 626px;
+    width: 100%;
+    min-height: 439px;
+    background-image: url('../assets/images/challenge-bg.png');
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__result {
+    padding: 80px 100px 70px 100px;
+  }
+
+  &__result-title {
+    margin-bottom: 28px;
+  }
+
+  &__result-pic {
+    min-height: 218px;
+  }
+}

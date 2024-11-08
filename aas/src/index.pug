@@ -1,0 +1,16 @@
+extends layouts/MainLayout
+include mixins/index.pug
+
+block title
+  | AAS
+
+block content
+  body.body
+  .container    
+    include sections/headerSection
+    include sections/featureSection  
+    include sections/stepSection
+    include sections/challengeSection
+    include sections/growthSection
+    include sections/resultSection
+    include sections/orderSection

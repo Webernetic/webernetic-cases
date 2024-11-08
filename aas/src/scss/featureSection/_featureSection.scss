@@ -1,0 +1,33 @@
+.featureSection {
+  &__wrapper {
+    padding-block: 80px 72px;
+  }
+
+  &__title {
+    margin-bottom: 18px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    min-height: 246px;
+    margin-bottom: 80px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__card-title {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  &__subtitle {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+}

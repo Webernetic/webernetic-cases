@@ -1,0 +1,132 @@
+.stepSection {
+  &__start-box {
+    display: flex;
+    padding-inline: 100px;
+    margin: 0 auto;
+    border-top: 1px solid $color-main;
+    border-bottom: 1px solid $color-main;
+  }
+
+  &__start-left {
+    max-width: 420px;
+    width: 100%;
+    padding-top: 70px;
+    margin-right: 100px;
+  }
+
+  &__start-title {
+    margin-bottom: 25px;
+  }
+
+  &__start-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: self-start;
+    max-width: 420px;
+    min-height: 206px;
+    border-radius: 16px;
+    padding: 24px 65px 24px 26px;
+    background-color: $color-yellow;
+  }
+
+  &__start-text {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 120%;
+    color: $color-main;
+  }
+
+  &__start-info {
+    min-height: 49px;
+    border-radius: 32px;
+    padding: 10px 24px;
+    border: 1px solid $color-main;
+    box-shadow: 1px 2px 0 0 #000;
+    background: #fff;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: $color-main;
+  }
+
+  &__start-right {
+    padding: 80px 0 70px 100px;
+    border-left: 1px solid $color-main;
+  }
+
+  &__title.aas-title {
+    min-height: 103px;
+    border-bottom: 1px solid $color-main;
+    padding: 35px 100px 25px;
+  }
+
+  &__card {
+    display: flex;
+    gap: 100px;
+    padding: 45px 100px;
+    border-bottom: 1px solid $color-main;
+  }
+
+  &__card-left {
+    max-width: 420px;
+    width: 100%;
+  }
+
+  &__card-right {
+    max-width: 720px;
+    width: 100%;
+  }
+
+  &__card-title.accent {
+    display: inline-block;
+    width: 100%;
+    border-radius: 16px;
+  }
+
+  &__card-info {
+    padding: 16px 24px;
+    border: 1px solid $color-main;
+    border-radius: 16px;
+    box-shadow: 1px 2px 0 0 #000;
+    background: #fff;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: $color-grey;
+  }
+
+  &__list {
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+
+  &__card:nth-child(3) .stepSection__list {
+    margin-top: 12px;
+  }
+
+  &__list li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 7px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 4px;
+      width: 15px;
+      height: 7px;
+      border-left: 2px solid $color-main;
+      border-bottom: 2px solid $color-main;
+      transform: rotate(-45deg);
+    }
+  }
+}

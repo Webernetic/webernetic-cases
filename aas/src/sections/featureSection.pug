@@ -1,0 +1,18 @@
+-
+  var cards = [
+    {title: "Мультирегиональность", text: "Клиент стремился привлекать учеников в школу не только с территории России, но и из других регионов. При этом (что выяснилось после сбора семантики) на территории России такие учебные заведения ищут не только на русском языке, но и на английском."},
+    {title: "Конкуренция", text: "По многим анлоязычным запросам у проекта www.aas.ru велась борьба за первые места в выдаче не только с сайтами школ-конкурентов, но и с информационными ресурсами, где рассказывалось о лучших школах России."}, 
+    {title: "Сезонность", text: "Основной спрос в ноябре, декабре, январе и апреле, мае, июне — это периоды, когда идут наборы на новый семестр."},
+    ]
+    
+section.featureSection
+  .featureSection__wrapper.wrapper
+    h2.featureSection__title.aas-title Особенности проекта
+    .featureSection__cards
+      each card in cards
+        .featureSection__card
+          span.featureSection__card-title.accent=card.title
+          span.featureSection__card-text=card.text
+    span.featureSection__subtitle.accent Выдача по запросам в англоязычном и русскоязычном сегментах
+    .featureSection__pic
+      img.featureSection__image(src="./assets/images/feature.png" alt="Выдача по запросу")
