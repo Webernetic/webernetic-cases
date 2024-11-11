@@ -4,6 +4,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 24px 76px 24px 100px;
+    @include responsive-sizing(padding-left, 24, 100, 992, 1440);
+    @include responsive-sizing(padding-right, 24, 76, 992, 1440);
   }
 
   &__top-left {
@@ -15,9 +17,13 @@
     background: #fff;
     font-family: $font-family;
     font-weight: 400;
-    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1440);
     line-height: 120%;
     color: $color-main;
+  }
+
+  &__top-right {
+    @include responsive-sizing(font-size, 18, 20, 400, 1440);
   }
 
   &__center {
@@ -37,6 +43,9 @@
 
   &__content {
     padding: 80px 100px 54px 100px;
+    @include responsive-sizing(padding-top, 40, 80, 768, 1440);
+    @include responsive-sizing(padding-bottom, 40, 54, 768, 1440);
+    @include responsive-sizing(padding-inline, 24, 100, 768, 1440);
     border-left: 1px solid $color-main;
   }
 
@@ -44,7 +53,7 @@
     margin-bottom: 14px;
     font-family: $second-family;
     font-weight: 400;
-    font-size: 45px;
+    @include responsive-sizing(font-size, 28, 45, 400, 1440);
     line-height: 120%;
     color: $color-main;
   }
@@ -52,7 +61,7 @@
   &__subtitle {
     max-width: 470px;
     margin-bottom: 32px;
-    font-size: 26px;
+    @include responsive-sizing(font-size, 20, 26, 400, 1440);
     line-height: 120%;
     color: $color-grey-2;
   }
@@ -77,15 +86,16 @@
   }
 
   &__bottom-left {
+    padding: 60px 150px 60px 100px;
+    @include responsive-sizing(padding-block, 40, 60, 992, 1440);
+    @include responsive-sizing(padding-right, 60, 150, 992, 1440);
+    @include responsive-sizing(padding-left, 24, 100, 992, 1440);
     border-right: 1px solid $color-main;
   }
 
-  &__bottom-left {
-    padding: 60px 150px 60px 100px;
-  }
-
   &__bottom-right {
-    padding: 60px 100px;
+    @include responsive-sizing(padding-block, 40, 60, 992, 1440);
+    @include responsive-sizing(padding-inline, 24, 100, 992, 1440);
   }
 
   &__bottom-title {
@@ -94,6 +104,10 @@
 
   &__bottom-title.right {
     margin-bottom: 14px;
+  }
+
+  &__bottom-text {
+    font-size: 20px;
   }
 
   &__country-box {
@@ -115,5 +129,81 @@
     font-size: 20px;
     line-height: 120%;
     color: $color-main;
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__center {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    &__content {
+      border-left: none;
+    }
+
+    &__subtitle {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 870px) {
+    &__top {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 16px;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__pic {
+      @include responsive-sizing(min-height, 320, 532, 400, 768);
+    }
+
+    &__bottom {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__top {
+      padding-block: 22px;
+    }
+
+    &__title {
+      margin-bottom: 12px;
+    }
+
+    &__subtitle {
+      margin-bottom: 20px;
+    }
+
+    &__content {
+      border-left: none;
+    }
+
+    &__text {
+      padding-inline: 20px;
+      font-size: 18px;
+    }
+
+    &__country-box {
+      gap: 4px;
+    }
+
+    &__country {
+      min-height: 35px;
+      padding: 6px 20px;
+      font-size: 18px;
+    }
+
+    &__bottom-left {
+      border-right: none;
+    }
+
+    &__bottom-text {
+      font-size: 18px;
+      line-height: 130%;
+    }
   }
 }

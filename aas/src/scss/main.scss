@@ -77,7 +77,7 @@ picture {
 .aas-title {
   font-family: $second-family;
   font-weight: 400;
-  font-size: 36px;
+  @include responsive-sizing(font-size, 24, 36, 400, 1440);
   line-height: 120%;
   color: $color-main;
   padding-top: 5px;
@@ -89,7 +89,11 @@ picture {
   background-color: $color-yellow;
   font-family: $second-family;
   font-weight: 400;
-  font-size: 22px;
+  @include responsive-sizing(font-size, 19, 22, 400, 1440);
   line-height: 120%;
   color: $color-main;
+
+  @media (max-width: $breakpoints-xs) {
+    padding-inline: 20px;
+  }
 }

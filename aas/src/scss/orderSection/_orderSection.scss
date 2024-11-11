@@ -147,6 +147,10 @@
       padding: 40px;
     }
 
+    &_title {
+      padding-inline: 24px;
+    }
+
     &_form {
       align-items: center;
       padding: 0;
@@ -193,7 +197,7 @@
 
   @media (max-width: $breakpoints-sm) {
     &_title {
-      text-align: start;
+      // text-align: start;
     }
 
     &_form {
@@ -218,7 +222,6 @@
       margin-bottom: 20px;
       font-size: 20px;
       line-height: 110%;
-      padding-inline: 0;
     }
 
     &_formTitle {

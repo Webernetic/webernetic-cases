@@ -1,11 +1,15 @@
 .resultSection {
   &__wrapper {
-    padding-block: 80px 70px;
+    @include responsive-sizing(padding-top, 40, 80, 768, 1440);
+    @include responsive-sizing(padding-bottom, 40, 70, 768, 1440);
     display: flex;
     gap: 20px;
   }
 
   &__left {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
     max-width: 826px;
   }
   &__right {
@@ -30,6 +34,10 @@
   &__left-pic {
     max-width: 820px;
     min-height: 345px;
+
+    & img {
+      object-position: left;
+    }
   }
 
   &__results {
@@ -49,7 +57,10 @@
 
   &__results-content {
     max-width: 814px;
+    width: 100%;
     padding: 80px 100px;
+    @include responsive-sizing(padding-block, 40, 80, 768, 1440);
+    @include responsive-sizing(padding-inline, 24, 100, 768, 1440);
     border-bottom: 1px solid $color-main;
   }
 
@@ -60,8 +71,73 @@
   &__results-text {
     font-family: $font-family;
     font-weight: 400;
-    font-size: 24px;
+    @include responsive-sizing(font-size, 20, 24, 400, 1440);
     line-height: 130%;
     color: $color-grey;
+  }
+
+  @media (max-width: 1270px) {
+    &__wrapper {
+      padding-inline: 24px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__right {
+      max-width: 40%;
+    }
+
+    &__results {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__results-pic {
+      flex-direction: column;
+      align-self: center;
+    }
+
+    &__left-pic {
+      min-height: 200px;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__wrapper {
+      flex-direction: column;
+      padding-right: 0;
+    }
+
+    &__right {
+      max-width: 100%;
+    }
+
+    &__left-info,
+    &__right-info,
+    &__right-pic {
+      margin-right: 24px;
+    }
+
+    &__left-pic {
+      max-width: 820px;
+      min-height: 345px;
+      width: 100%;
+      overflow-x: auto;
+
+      & img {
+        object-position: left;
+        width: auto;
+      }
+    }
+
+    &__results-pic {
+      min-height: 380px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__results-pic {
+      min-height: 320px;
+    }
   }
 }

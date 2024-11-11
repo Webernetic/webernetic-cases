@@ -1,7 +1,7 @@
 .stepSection {
   &__start-box {
     display: flex;
-    padding-inline: 100px;
+    @include responsive-sizing(padding-inline, 24, 100, 992, 1440);
     margin: 0 auto;
     border-top: 1px solid $color-main;
     border-bottom: 1px solid $color-main;
@@ -10,8 +10,8 @@
   &__start-left {
     max-width: 420px;
     width: 100%;
-    padding-top: 70px;
-    margin-right: 100px;
+    @include responsive-sizing(padding-top, 40, 70, 400, 1440);
+    @include responsive-sizing(margin-right, 10, 100, 992, 1440);
   }
 
   &__start-title {
@@ -33,13 +33,13 @@
   &__start-text {
     font-family: $second-family;
     font-weight: 400;
-    font-size: 22px;
+    @include responsive-sizing(font-size, 19, 22, 400, 1440);
     line-height: 120%;
     color: $color-main;
   }
 
   &__start-info {
-    min-height: 49px;
+    @include responsive-sizing(min-height, 36, 49, 400, 1440);
     border-radius: 32px;
     padding: 10px 24px;
     border: 1px solid $color-main;
@@ -47,13 +47,21 @@
     background: #fff;
     font-family: $font-family;
     font-weight: 400;
-    font-size: 24px;
+    @include responsive-sizing(font-size, 20, 24, 400, 1440);
     line-height: 120%;
     color: $color-main;
   }
 
+  &__start-image.mobile {
+    display: none;
+  }
+
   &__start-right {
+    max-width: 720px;
+    width: 100%;
     padding: 80px 0 70px 100px;
+    @include responsive-sizing(padding-left, 10, 100, 992, 1440);
+    @include responsive-sizing(padding-top, 40, 80, 400, 1440);
     border-left: 1px solid $color-main;
   }
 
@@ -61,12 +69,14 @@
     min-height: 103px;
     border-bottom: 1px solid $color-main;
     padding: 35px 100px 25px;
+    @include responsive-sizing(padding-inline, 24, 100, 400, 1440);
   }
 
   &__card {
     display: flex;
-    gap: 100px;
-    padding: 45px 100px;
+    @include responsive-sizing(gap, 20, 100, 992, 1440);
+    @include responsive-sizing(padding-block, 40, 45, 400, 1440);
+    @include responsive-sizing(padding-inline, 24, 100, 992, 1440);
     border-bottom: 1px solid $color-main;
   }
 
@@ -94,9 +104,13 @@
     background: #fff;
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1440);
     line-height: 120%;
     color: $color-grey;
+  }
+
+  &__card-text {
+    @include responsive-sizing(font-size, 18, 20, 400, 1440);
   }
 
   &__list {
@@ -112,6 +126,7 @@
     position: relative;
     padding-left: 35px;
     margin-bottom: 7px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1440);
 
     &:last-child {
       margin-bottom: 0;
@@ -127,6 +142,97 @@
       border-left: 2px solid $color-main;
       border-bottom: 2px solid $color-main;
       transform: rotate(-45deg);
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__start-box {
+      flex-direction: column;
+      padding-inline: 0;
+    }
+
+    &__start-left {
+      max-width: 100%;
+      padding-inline: 24px;
+      border-bottom: 1px solid $color-main;
+    }
+
+    &__start-content {
+      max-width: 100%;
+      padding: 18px 23px 24px 20px;
+      margin-bottom: 40px;
+    }
+
+    &__card {
+      flex-direction: column;
+    }
+
+    &__start-right {
+      border-left: none;
+      padding-inline: 24px;
+    }
+  }
+  @media (max-width: $breakpoints-xs) {
+    &__start-content {
+      min-height: 141px;
+    }
+
+    &__start-info {
+      padding: 6px 24px;
+    }
+
+    &__start-image.desktop {
+      display: none;
+    }
+
+    &__start-image.mobile {
+      display: block;
+    }
+
+    &__start-right {
+      padding-bottom: 40px;
+    }
+
+    &__title.aas-title {
+      padding-block: 30px 26px;
+    }
+
+    &__start-pic {
+      max-width: 100%;
+      height: 270px;
+    }
+
+    &__card {
+      gap: 0;
+    }
+
+    &__card-title.accent {
+      margin-bottom: 18px;
+      padding-inline: 26px;
+    }
+
+    &__card-text {
+      line-height: 130%;
+    }
+
+    &__card-info {
+      margin-top: 16px;
+      line-height: 130%;
+      padding: 16px 20px;
+    }
+
+    &__list {
+      margin-block: 4px 0;
+    }
+
+    &__list li {
+      line-height: 130%;
+    }
+  }
+
+  @media (max-width: 370px) {
+    &__start-text {
+      margin-bottom: 15px;
     }
   }
 }

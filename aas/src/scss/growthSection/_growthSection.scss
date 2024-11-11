@@ -3,7 +3,7 @@
   border-bottom: 1px solid $color-main;
 
   &__wrapper {
-    padding-block: 80px;
+    @include responsive-sizing(padding-block, 40, 80, 400, 1440);
   }
 
   &__title {
@@ -52,7 +52,7 @@
     background: #f4f4f4;
     font-family: $second-family;
     font-weight: 400;
-    font-size: 22px;
+    @include responsive-sizing(font-size, 19, 22, 400, 1440);
     line-height: 45px;
     text-align: center;
     color: $color-main;
@@ -78,6 +78,64 @@
   }
 
   &__text {
-    font-size: 22px;
+    @include responsive-sizing(font-size, 19, 22, 400, 1440);
+  }
+
+  @media (max-width: 1270px) {
+    &__wrapper {
+      padding-inline: 24px;
+    }
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__content {
+      max-width: 30%;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__wrapper {
+      padding-right: 0;
+    }
+
+    &__box {
+      flex-direction: column;
+
+      &:nth-of-type(2) {
+        flex-direction: column;
+      }
+    }
+
+    &__pic {
+      overflow-x: auto;
+
+      & img {
+        width: auto;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      max-width: 50%;
+    }
+
+    &__city {
+      margin-bottom: 8px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__content {
+      max-width: 100%;
+      padding-right: 24px;
+    }
+
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    &__box {
+      gap: 16px;
+    }
   }
 }

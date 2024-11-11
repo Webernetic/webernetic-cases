@@ -5,9 +5,12 @@
 
   &__box-content {
     max-width: 814px;
-    min-height: 439px;
-    padding: 80px 100px;
+    width: 100%;
+    @include responsive-sizing(min-height, 320, 439, 768, 1440);
+    @include responsive-sizing(padding-block, 40, 80, 768, 1440);
+    @include responsive-sizing(padding-inline, 24, 100, 768, 1440);
     background-color: $color-yellow;
+    line-height: 130%;
   }
 
   &__box-title {
@@ -15,6 +18,8 @@
   }
 
   &__text {
+    @include responsive-sizing(font-size, 18, 20, 400, 1440);
+    line-height: 130%;
     color: #6b6a4d;
   }
 
@@ -23,13 +28,16 @@
     width: 100%;
     min-height: 439px;
     background-image: url('../assets/images/challenge-bg.png');
-    background-position: left;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   &__result {
-    padding: 80px 100px 70px 100px;
+    @include responsive-sizing(padding-top, 40, 80, 992, 1440);
+    @include responsive-sizing(padding-bottom, 40, 70, 992, 1440);
+    @include responsive-sizing(padding-left, 24, 100, 992, 1440);
+    @include responsive-sizing(padding-right, 0, 100, 992, 1440);
   }
 
   &__result-title {
@@ -37,6 +45,42 @@
   }
 
   &__result-pic {
-    min-height: 218px;
+    height: 218px;
+    max-width: 1240px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    & img {
+      width: auto;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__box {
+      flex-direction: column;
+    }
+
+    &__box-content {
+      max-width: 100%;
+    }
+
+    &__box-pic {
+      max-width: 100%;
+      border-top: 1px solid $color-main;
+      border-bottom: 1px solid $color-main;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__box-title {
+      margin-bottom: 20px;
+    }
+
+    &__box-pic {
+      min-height: 320px;
+    }
   }
 }
