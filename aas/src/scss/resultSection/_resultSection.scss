@@ -26,7 +26,7 @@
     background: #f4f4f4;
     font-family: $second-family;
     font-weight: 400;
-    font-size: 22px;
+    @include responsive-sizing(font-size, 19, 22, 400, 1440);
     line-height: 120%;
     color: $color-main;
   }
@@ -38,6 +38,10 @@
     & img {
       object-position: left;
     }
+  }
+
+  &__right-image.mobile {
+    display: none;
   }
 
   &__results {
@@ -138,6 +142,19 @@
   @media (max-width: $breakpoints-xs) {
     &__results-pic {
       min-height: 320px;
+    }
+
+    &__left-info,
+    &__right-info {
+      margin-bottom: 8px;
+    }
+
+    &__right-image.desktop {
+      display: none;
+    }
+
+    &__right-image.mobile {
+      display: block;
     }
   }
 }

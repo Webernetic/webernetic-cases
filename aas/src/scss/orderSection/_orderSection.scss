@@ -1,5 +1,5 @@
 .orderSection {
-  padding-top: 80px;
+  @include responsive-sizing(padding-top, 40, 80, 768, 1440);
   margin-bottom: 30px;
 
   &_title {
@@ -125,9 +125,9 @@
   }
 
   & button.customButton {
-    font-family: $font-family;
+    font-family: $second-family;
     font-weight: 600;
-    font-size: 32px;
+    @include responsive-sizing(font-size, 18, 30, 400, 1440);
     line-height: 120%;
     text-decoration: underline;
     text-decoration-skip-ink: none;
@@ -136,21 +136,18 @@
     margin-top: 10px;
   }
 
-  @media (max-width: $breakpoints-xxl) {
-    &_wrapper {
-      padding-left: 40px;
+  @media (max-width: 1200px) {
+    padding-inline: 24px;
+
+    &_nameWrapper {
+      width: 200px;
+      height: 100px;
+      bottom: 35%;
+      padding: 15px;
     }
   }
 
   @media (max-width: $breakpoints-lg) {
-    &_wrapper {
-      padding: 40px;
-    }
-
-    &_title {
-      padding-inline: 24px;
-    }
-
     &_form {
       align-items: center;
       padding: 0;
@@ -196,8 +193,8 @@
   }
 
   @media (max-width: $breakpoints-sm) {
-    &_title {
-      // text-align: start;
+    &_wrapper {
+      padding: 46px 26px;
     }
 
     &_form {
@@ -215,17 +212,17 @@
 
   @media (max-width: $breakpoints-xs) {
     &_wrapper {
-      padding: 30px 20px;
+      padding: 46px 26px;
     }
 
     &_title {
       margin-bottom: 20px;
-      font-size: 20px;
+      font-size: 22px;
       line-height: 110%;
     }
 
     &_formTitle {
-      font-size: 24px;
+      font-size: 22px;
       line-height: 111%;
     }
 

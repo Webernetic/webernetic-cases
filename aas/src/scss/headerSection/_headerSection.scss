@@ -42,7 +42,6 @@
   }
 
   &__content {
-    padding: 80px 100px 54px 100px;
     @include responsive-sizing(padding-top, 40, 80, 768, 1440);
     @include responsive-sizing(padding-bottom, 40, 54, 768, 1440);
     @include responsive-sizing(padding-inline, 24, 100, 768, 1440);

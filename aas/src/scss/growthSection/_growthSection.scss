@@ -135,7 +135,12 @@
     }
 
     &__box {
-      gap: 16px;
+      gap: 10px;
+    }
+
+    &__city {
+      min-height: 42px;
+      line-height: 42px;
     }
   }
 }
