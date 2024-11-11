@@ -1,0 +1,99 @@
+@import './fonts';
+@import './variables';
+@import '../mixins/mixinsStyles.scss';
+@import './headerSection/_headerSection.scss';
+@import './featureSection/featureSection.scss';
+@import './stepSection/stepSection.scss';
+@import './challengeSection/challengeSection.scss';
+@import './growthSection/growthSection.scss';
+@import './resultSection/resultSection.scss';
+@import './orderSection/orderSection';
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  // outline: 1px solid red;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  background-color: $color-bg;
+  color: $color-text;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  color: inherit;
+}
+
+img,
+picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aas-title {
+  font-family: $second-family;
+  font-weight: 400;
+  @include responsive-sizing(font-size, 24, 36, 400, 1440);
+  line-height: 120%;
+  color: $color-main;
+  padding-top: 5px;
+}
+
+.accent {
+  padding: 13px 26px 13px 26px;
+  border-radius: 50px;
+  background-color: $color-yellow;
+  font-family: $second-family;
+  font-weight: 400;
+  @include responsive-sizing(font-size, 19, 22, 400, 1440);
+  line-height: 120%;
+  color: $color-main;
+
+  @media (max-width: $breakpoints-xs) {
+    padding-inline: 20px;
+  }
+}

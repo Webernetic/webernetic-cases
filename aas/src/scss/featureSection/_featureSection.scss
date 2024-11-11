@@ -1,0 +1,74 @@
+.featureSection {
+  &__wrapper {
+    @include responsive-sizing(padding-top, 40, 80, 400, 1440);
+    @include responsive-sizing(padding-bottom, 40, 72, 400, 1440);
+  }
+
+  &__title {
+    margin-bottom: 18px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include responsive-sizing(gap, 20, 50, 992, 1440);
+    min-height: 246px;
+    @include responsive-sizing(margin-bottom, 40, 80, 400, 1440);
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__card-title {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  &__card-text {
+    @include responsive-sizing(font-size, 18, 20, 400, 1440);
+    line-height: 130%;
+  }
+
+  &__subtitle {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  &__image.mobile {
+    display: none;
+  }
+
+  @media (max-width: 1300px) {
+    &__wrapper {
+      padding-inline: 24px;
+    }
+  }
+
+  @media (max-width: 850px) {
+    &__cards {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__card-title {
+      margin-bottom: 8px;
+    }
+
+    &__subtitle.accent {
+      border-radius: 16px;
+      margin-bottom: 10px;
+    }
+
+    &__image.mobile {
+      display: block;
+    }
+
+    &__image.desktop {
+      display: none;
+    }
+  }
+}
