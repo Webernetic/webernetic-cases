@@ -1,0 +1,65 @@
+.headerSection {
+  display: flex;
+  gap: 45px;
+  padding-block: 70px 100px;
+
+  &__pic {
+    max-width: 520px;
+    width: 100%;
+    min-height: 580px;
+  }
+
+  &__title {
+    max-width: 705px;
+    margin-bottom: 16px;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 115%;
+    color: #000;
+  }
+
+  &__regions-box {
+    display: flex;
+    margin-bottom: 40px;
+  }
+
+  &__region {
+    min-height: 59px;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 120%;
+    color: $color-main;
+
+    &:first-child {
+      background-color: $color-accent;
+    }
+
+    &:last-child {
+      background-color: $color-grey;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 2px;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 120%;
+    color: $color-main;
+  }
+
+  &__text {
+    margin-bottom: 12px;
+  }
+
+  &__bottom {
+    max-width: 705px;
+    padding: 20px 32px;
+    border-radius: 18px;
+    background-color: $color-grey;
+  }
+}

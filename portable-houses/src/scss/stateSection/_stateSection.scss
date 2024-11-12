@@ -1,0 +1,44 @@
+.stateSection {
+  margin-bottom: 100px;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__cards {
+    display: flex;
+    gap: 14px;
+  }
+
+  &__card {
+    &:nth-child(1) {
+      max-width: 554px;
+      width: 100%;
+    }
+
+    &:nth-child(2) {
+      max-width: 344px;
+      width: 100%;
+    }
+
+    &:nth-child(3) {
+      max-width: 344px;
+      width: 100%;
+    }
+  }
+
+  &__card-title {
+    min-height: 59px;
+    padding: 14px 32px;
+    border-radius: 24px;
+    background-color: $color-accent;
+    color: $color-main;
+  }
+
+  &__card-text.portable-text {
+    min-height: 98px;
+    padding: 20px 32px;
+    border-radius: 24px;
+    background-color: #fff;
+  }
+}

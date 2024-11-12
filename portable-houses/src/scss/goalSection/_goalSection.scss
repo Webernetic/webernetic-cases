@@ -1,0 +1,119 @@
+.goalSection {
+  margin-bottom: 100px;
+
+  &__icon {
+    width: 54px;
+    height: 51px;
+    margin-right: 32px;
+
+    & img {
+      width: 54px;
+      height: 51px;
+    }
+  }
+
+  &__title.portable-title {
+    margin-bottom: 30px;
+  }
+
+  &__top {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 100px;
+  }
+
+  &__top-left {
+    display: flex;
+    max-width: 894px;
+    min-height: 216px;
+    padding: 40px 32px;
+    border-radius: 26px;
+    background-color: #fff;
+  }
+
+  &__top-content {
+    max-width: 744px;
+  }
+
+  &__top-text {
+    font-size: 22px;
+  }
+
+  &__top-right {
+    max-width: 362px;
+    width: 100%;
+    background-image: url('../assets/images/goal.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__bottom {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__bottom-left {
+    display: flex;
+    flex-direction: column;
+    max-width: 520px;
+    min-height: 100%;
+  }
+
+  &__bottom-content.start {
+    max-width: 520px;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/images/goal-2.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__bottom-right {
+    max-width: 733px;
+    width: 100%;
+  }
+
+  &__bottom-title {
+    padding: 14px 32px;
+    border-radius: 24px;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 120%;
+    text-align: center;
+    color: $color-main;
+    background-color: $color-accent;
+  }
+
+  &__bottom-content.specific {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #fff;
+  }
+
+  &__bottom-subtitle {
+    min-height: 47px;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    border-radius: 34px;
+    background-color: $color-light;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 120%;
+    text-align: center;
+    color: $color-main;
+
+    &:nth-of-type(2) {
+      margin-top: 16px;
+    }
+  }
+
+  &__bottom-content {
+    border-radius: 24px;
+    padding: 24px 32px;
+  }
+}
