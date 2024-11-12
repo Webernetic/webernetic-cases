@@ -1,0 +1,109 @@
+.promotionSection {
+  margin-bottom: 100px;
+
+  &__card {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 60px;
+
+    &:nth-of-type(1) {
+      min-height: 367px;
+    }
+    &:nth-of-type(2) {
+      flex-direction: row-reverse;
+      min-height: 212px;
+    }
+    &:nth-of-type(3) {
+      min-height: 564px;
+    }
+  }
+
+  &__card-pic {
+    max-width: 918px;
+  }
+
+  &__card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 337px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 26px;
+    padding: 24px 32px;
+  }
+
+  &__card-content.first {
+    background-image: url('../assets/images/promotion-bg.png');
+  }
+
+  &__card-content.second {
+    background-color: $color-accent;
+  }
+
+  &__card-content.third {
+    background-image: url('../assets/images/promotion-bg2.png');
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__card-number {
+    min-height: 42px;
+    padding: 8px 15px 4px 15px;
+    border-radius: 80px;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 115%;
+    color: $color-main;
+    background-color: $color-light;
+  }
+
+  &__comment-box {
+    display: flex;
+    gap: 32px;
+    min-height: 246px;
+    padding: 24px 32px;
+    border-radius: 26px;
+    background-color: $color-accent;
+  }
+
+  &__comment-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 364px;
+  }
+
+  &__comment-title {
+    min-height: 47px;
+    border-radius: 18px;
+    padding: 8px 20px;
+    background-color: $color-light;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 120%;
+    color: $color-main;
+  }
+
+  &__comment-pic {
+    max-width: 810px;
+    border-radius: 18px;
+
+    & img {
+      border-radius: 18px;
+    }
+  }
+
+  &__comment-text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    color: $color-main;
+  }
+}

@@ -1,0 +1,20 @@
+.resultSection {
+  display: flex;
+  gap: 50px;
+  min-height: 315px;
+  padding: 24px 32px;
+  margin-bottom: 100px;
+  border-radius: 26px;
+  background-color: $color-light;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__left-title,
+  &__left-text.portable-text {
+    color: $color-main;
+  }
+}
