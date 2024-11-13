@@ -1,6 +1,6 @@
 .resultSection {
   display: flex;
-  gap: 50px;
+  gap: 32px;
   min-height: 315px;
   padding: 24px 32px;
   margin-bottom: 100px;
@@ -11,10 +11,27 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 364px;
   }
 
-  &__left-title,
   &__left-text.portable-text {
     color: $color-main;
+  }
+
+  &__left-title {
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 120%;
+    color: $color-main;
+  }
+
+  &__pic {
+    max-width: 810px;
+    min-height: 267px;
+
+    & img {
+      object-fit: contain;
+    }
   }
 }

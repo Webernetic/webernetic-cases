@@ -33,6 +33,9 @@
     border-radius: 24px;
     background-color: $color-accent;
     color: $color-main;
+    text-align: center;
+    font-size: 26px;
+    line-height: 120%;
   }
 
   &__card-text.portable-text {
@@ -40,5 +43,6 @@
     padding: 20px 32px;
     border-radius: 24px;
     background-color: #fff;
+    font-size: 22px;
   }
 }

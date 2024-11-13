@@ -37,6 +37,10 @@
 
   &__top-text {
     font-size: 22px;
+
+    &:nth-of-type(1) {
+      margin-bottom: 8px;
+    }
   }
 
   &__top-right {
@@ -108,12 +112,16 @@
     color: $color-main;
 
     &:nth-of-type(2) {
-      margin-top: 16px;
+      margin-top: 8px;
     }
   }
 
   &__bottom-content {
     border-radius: 24px;
     padding: 24px 32px;
+  }
+
+  &__bottom-text.portable-text:nth-of-type(1) {
+    margin-bottom: 8px;
   }
 }

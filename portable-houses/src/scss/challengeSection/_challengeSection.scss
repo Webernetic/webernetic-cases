@@ -9,7 +9,7 @@
     min-height: 325px;
     background-image: url('../assets/images/challenge.png');
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
   }
 
@@ -27,6 +27,7 @@
   &__title {
     min-height: 64px;
     padding: 14px 32px;
+    margin-bottom: 37px;
     border-radius: 24px;
     background-color: $color-light;
     font-family: $font-family;

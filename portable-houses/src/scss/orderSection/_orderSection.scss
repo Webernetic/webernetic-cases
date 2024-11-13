@@ -1,35 +1,35 @@
 .orderSection {
-  @include responsive-sizing(padding-top, 40, 80, 768, 1440);
+  @include responsive-sizing(padding-top, 40, 100, 768, 1440);
   margin-bottom: 30px;
 
   &_title {
-    max-width: 864px;
+    max-width: 100%;
     margin-inline: auto;
     margin-bottom: 30px;
     font-family: $font-family;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 120%;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 115%;
     text-align: center;
-    color: $color-main;
+    color: #000;
   }
 
   &_wrapper {
     position: relative;
     display: flex;
-    max-width: 1240px;
+    max-width: 1270px;
     margin: 0 auto;
-    gap: 30px;
-    padding: 56px 40px 56px 103.6px;
+    gap: 55px;
+    padding: 70px 55px 70px 118px;
     background-color: $color-light;
     box-shadow: 2px 4px 9px 0 rgba(36, 24, 61, 0.1);
     border-radius: 12px;
   }
 
   &_imageWrapper {
-    max-width: 437px;
+    max-width: 436px;
     width: 100%;
-    height: auto;
+    height: 539px;
 
     & > img {
       object-fit: contain;
@@ -41,8 +41,8 @@
   &_nameWrapper {
     position: absolute;
     left: 0;
-    bottom: 21%;
-    transform: translateX(17%);
+    bottom: 29%;
+    transform: translateX(21%);
     width: 248px;
     height: 116px;
     display: flex;
@@ -52,7 +52,6 @@
     padding: 20px 20px 37px 20px;
     background-color: #fff;
     border-radius: 12px;
-    border: 1px solid $color-main;
     box-shadow: 1px 2px 0 0 #000;
 
     & > h4 {
@@ -73,14 +72,16 @@
   &_form {
     display: flex;
     flex-direction: column;
-    padding: 30px 28px 20px 50px;
+    max-width: 604px;
+    width: 100%;
+    padding: 20px 23px 20px 10px;
   }
 
   &_formTitle {
     font-family: $font-family;
     margin-bottom: 20px;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 30px;
     line-height: 120%;
     color: $color-main;
   }
@@ -127,6 +128,7 @@
     font-family: $font-family;
     font-weight: 600;
     @include responsive-sizing(font-size, 18, 30, 400, 1440);
+    font-size: 30px;
     line-height: 120%;
     text-decoration: underline;
     text-decoration-skip-ink: none;

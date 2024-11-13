@@ -1,31 +1,50 @@
 .promotionSection {
-  margin-bottom: 100px;
-
   &__card {
     display: flex;
     gap: 15px;
     margin-bottom: 60px;
 
     &:nth-of-type(1) {
-      min-height: 367px;
+      height: 367px;
+
+      & .promotionSection__card-content {
+        background-image: url('../assets/images/promotion-bg.png');
+      }
     }
     &:nth-of-type(2) {
       flex-direction: row-reverse;
-      min-height: 212px;
+      height: 212px;
+
+      & .promotionSection__card-content {
+        background-color: $color-accent;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+      }
     }
     &:nth-of-type(3) {
-      min-height: 564px;
+      height: 564px;
+
+      & .promotionSection__card-content {
+        background-image: url('../assets/images/promotion-bg2.png');
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+      }
     }
   }
 
   &__card-pic {
     max-width: 918px;
+    width: 100%;
+    border-radius: 26px;
+
+    & img {
+      border-radius: 26px;
+    }
   }
 
   &__card-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     max-width: 337px;
     background-position: center;
     background-size: cover;
@@ -34,25 +53,15 @@
     padding: 24px 32px;
   }
 
-  &__card-content.first {
-    background-image: url('../assets/images/promotion-bg.png');
-  }
-
-  &__card-content.second {
-    background-color: $color-accent;
-  }
-
-  &__card-content.third {
-    background-image: url('../assets/images/promotion-bg2.png');
-  }
-
   &__title {
     margin-bottom: 30px;
   }
 
   &__card-number {
+    align-self: flex-start;
     min-height: 42px;
     padding: 8px 15px 4px 15px;
+    margin-bottom: 6px;
     border-radius: 80px;
     font-family: $font-family;
     font-weight: 700;
@@ -62,11 +71,21 @@
     background-color: $color-light;
   }
 
+  &__card-text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: $color-main;
+    margin-bottom: 6px;
+  }
+
   &__comment-box {
     display: flex;
     gap: 32px;
     min-height: 246px;
     padding: 24px 32px;
+    margin-top: 100px;
     border-radius: 26px;
     background-color: $color-accent;
   }
