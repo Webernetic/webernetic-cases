@@ -137,6 +137,10 @@
     &__comment-box {
       flex-direction: column;
     }
+
+    &__comment-title {
+      margin-bottom: 8px;
+    }
   }
 
   @media (max-width: $breakpoints-md) {
@@ -163,6 +167,7 @@
       overflow-y: hidden;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
+      border-radius: 20px;
 
       & img {
         width: auto;
@@ -197,10 +202,6 @@
     &__comment-box {
       min-height: 258px;
       margin-top: 70px;
-    }
-
-    &__comment-title {
-      margin-bottom: 8px;
     }
 
     &__comment-pic {

@@ -10,6 +10,7 @@
     font-weight: 700;
     font-size: 30px;
     line-height: 115%;
+    text-align: center;
     color: #000;
   }
 
@@ -53,7 +54,6 @@
     padding: 20px 20px 37px 20px;
     background-color: #fff;
     border-radius: 12px;
-    box-shadow: 1px 2px 0 0 #000;
 
     & > h4 {
       font-size: 42px;
@@ -202,6 +202,7 @@
     }
 
     &_title {
+      text-align: left;
       padding-inline: 15px 2px;
     }
 
@@ -245,6 +246,10 @@
 
       & > input {
         height: 36px;
+      }
+
+      & > input::placeholder {
+        font-size: 18px;
       }
     }
 

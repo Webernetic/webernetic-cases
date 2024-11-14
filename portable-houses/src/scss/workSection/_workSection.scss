@@ -247,6 +247,14 @@
       border-radius: 20px;
     }
 
+    &__card:nth-of-type(2) .workSection__card-subtitle {
+      padding: 12px 35px;
+    }
+
+    &__card:nth-of-type(3) .workSection__card-subtitle {
+      padding: 12px 40.5px;
+    }
+
     &__card-list {
       padding-top: 0;
     }
