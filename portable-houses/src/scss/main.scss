@@ -16,14 +16,14 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  // outline: 1px solid red;
+  outline: 1px solid red;
 }
 
 body {
   scroll-behavior: smooth;
   font-family: $font-family;
   font-weight: 400;
-  font-size: 20px;
+  @include responsive-sizing(font-size, 18, 20, 400, 1440);
   line-height: 130%;
   background-color: $color-bg;
   color: $color-text;
@@ -34,9 +34,14 @@ body::-webkit-scrollbar {
 }
 
 .container {
-  max-width: 1270px;
+  max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+  @include responsive-sizing(padding-inline, 10, 85, 1300, 1440);
+
+  @media (max-width: $breakpoints-sm) {
+    padding-inline: 24px;
+  }
 }
 
 ul,
@@ -75,7 +80,7 @@ p.portable-text {
   padding: 0;
   font-family: $font-family;
   font-weight: 400;
-  font-size: 20px;
+  @include responsive-sizing(font-size, 18, 20, 400, 1440);
   line-height: 130%;
   color: $color-text;
 }
@@ -83,7 +88,7 @@ p.portable-text {
 h2.portable-title {
   font-family: $font-family;
   font-weight: 700;
-  font-size: 36px;
+  @include responsive-sizing(font-size, 26, 36, 400, 1440);
   line-height: 115%;
   color: #000;
 }

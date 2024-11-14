@@ -1,5 +1,5 @@
 .orderSection {
-  @include responsive-sizing(padding-top, 40, 100, 768, 1440);
+  @include responsive-sizing(padding-top, 70, 100, 768, 1440);
   margin-bottom: 30px;
 
   &_title {
@@ -10,7 +10,6 @@
     font-weight: 700;
     font-size: 30px;
     line-height: 115%;
-    text-align: center;
     color: #000;
   }
 
@@ -20,7 +19,9 @@
     max-width: 1270px;
     margin: 0 auto;
     gap: 55px;
-    padding: 70px 55px 70px 118px;
+    @include responsive-sizing(padding-block, 30, 70, 400, 1440);
+    @include responsive-sizing(padding-right, 20, 55, 400, 1440);
+    @include responsive-sizing(padding-left, 20, 118, 400, 1440);
     background-color: $color-light;
     box-shadow: 2px 4px 9px 0 rgba(36, 24, 61, 0.1);
     border-radius: 12px;
@@ -150,8 +151,8 @@
 
   @media (max-width: $breakpoints-lg) {
     &_form {
+      max-width: 100%;
       align-items: center;
-      padding: 0;
     }
 
     &_imageWrapper,
@@ -194,8 +195,14 @@
   }
 
   @media (max-width: $breakpoints-sm) {
+    padding-inline: 0;
+
     &_wrapper {
-      padding: 46px 26px;
+      padding: 30px 20px;
+    }
+
+    &_title {
+      padding-inline: 15px 2px;
     }
 
     &_form {
@@ -212,18 +219,18 @@
   }
 
   @media (max-width: $breakpoints-xs) {
-    &_wrapper {
-      padding: 46px 26px;
-    }
-
     &_title {
       margin-bottom: 20px;
-      font-size: 22px;
+      font-size: 24px;
       line-height: 110%;
     }
 
+    &_form {
+      padding: 0;
+    }
+
     &_formTitle {
-      font-size: 22px;
+      font-size: 24px;
       line-height: 111%;
     }
 

@@ -1,5 +1,5 @@
 .workSection {
-  margin-bottom: 100px;
+  @include responsive-sizing(margin-bottom, 70, 100, 400, 1440);
 
   &__title {
     margin-bottom: 30px;
@@ -7,23 +7,29 @@
 
   &__card {
     margin-bottom: 24px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 520px 636px;
     gap: 50px;
-    padding: 24px 32px;
+    padding-block: 24px;
+    @include responsive-sizing(padding-inline, 20, 32, 400, 1440);
     border-radius: 26px;
     background-color: #fff;
 
     &:nth-of-type(4) {
+      display: flex;
       gap: 20px;
       padding: 24px 22px 24px 32px;
     }
 
     &:nth-of-type(4) .workSection__card-left {
       max-width: 553px;
+      width: 100%;
     }
 
     &:nth-of-type(4) .workSection__card-right {
       flex-direction: row;
+      max-width: 646px;
+      width: 100%;
     }
   }
 
@@ -45,14 +51,14 @@
 
   &__card-subtitle {
     align-self: flex-start;
-    min-height: 64px;
+    @include responsive-sizing(min-height, 50, 64, 400, 1440);
     padding: 14px 32px;
     margin-bottom: 16px;
     border-radius: 24px;
     background-color: $color-accent;
     font-family: $font-family;
     font-weight: 700;
-    font-size: 30px;
+    @include responsive-sizing(font-size, 22, 30, 400, 1440);
     line-height: 120%;
     color: $color-main;
   }
@@ -121,7 +127,7 @@
     margin-bottom: 8px;
     font-family: $font-family;
     font-weight: 700;
-    font-size: 26px;
+    @include responsive-sizing(font-size, 22, 26, 400, 1440);
     line-height: 120%;
     color: $color-main;
   }
@@ -150,5 +156,107 @@
 
   &__column-number span.currency {
     font-size: 20px;
+  }
+
+  @media (max-width: 1300px) {
+    &__card {
+      grid-template-columns: 48% 50%;
+      gap: 20px;
+
+      &:nth-of-type(4) {
+        grid-template-columns: 48% 50%;
+        gap: 20px;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoints-xxl) {
+    &__card {
+      &:nth-of-type(4) {
+        grid-template-columns: 41% 58%;
+      }
+    }
+
+    &__column-card {
+      padding: 14px 20px;
+    }
+  }
+
+  @media (max-width: 1120px) {
+    &__card {
+      &:nth-of-type(4) {
+        flex-direction: column;
+
+        & .workSection__card-right {
+          max-width: 100%;
+          justify-content: space-between;
+          margin-top: 0;
+        }
+      }
+    }
+
+    &__card-column {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__card {
+      grid-template-columns: 1fr;
+    }
+
+    &__card-left,
+    &__card-right {
+      max-width: 100%;
+    }
+
+    &__card-right-content {
+      margin-top: 0;
+      padding: 20px 26px;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__card {
+      &:nth-of-type(4) {
+        padding: 24px 20px;
+        gap: 26px;
+
+        & .workSection__card-right {
+          flex-direction: column;
+        }
+      }
+    }
+
+    &__column-card {
+      max-width: 100%;
+      min-height: 112px;
+      margin-bottom: 4px;
+    }
+
+    &__column-title {
+      font-size: 20px;
+    }
+
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__card-subtitle {
+      padding: 12px 20px;
+      border-radius: 20px;
+    }
+
+    &__card-list {
+      padding-top: 0;
+    }
+
+    &__card-text:nth-of-type(1) {
+      margin-bottom: 0;
+    }
+
+    &__card:nth-child(4) .workSection__item {
+      margin-bottom: 8px;
+    }
   }
 }

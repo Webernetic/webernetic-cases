@@ -1,12 +1,16 @@
 .headerSection {
   display: flex;
-  gap: 45px;
-  margin-block: 70px 100px;
+  @include responsive-sizing(gap, 26, 45, 992, 1440);
+  @include responsive-sizing(margin-top, 30, 70, 400, 1440);
+  @include responsive-sizing(margin-bottom, 70, 100, 400, 1440);
 
   &__pic {
     max-width: 520px;
     width: 100%;
-    height: 580px;
+
+    & img {
+      object-fit: contain;
+    }
   }
 
   &__content {
@@ -19,23 +23,24 @@
     margin-bottom: 16px;
     font-family: $font-family;
     font-weight: 700;
-    font-size: 44px;
+    @include responsive-sizing(font-size, 30, 44, 768, 1440);
     line-height: 115%;
     color: #000;
   }
 
   &__regions-box {
     display: flex;
-    margin-bottom: 40px;
+    @include responsive-sizing(margin-bottom, 32, 40, 1200, 1440);
   }
 
   &__region {
-    min-height: 59px;
-    padding: 14px 32px;
+    @include responsive-sizing(min-height, 48, 59, 400, 1440);
+    padding-block: 14px;
+    @include responsive-sizing(padding-inline, 20, 32, 992, 1440);
     border-radius: 30px;
     font-family: $font-family;
     font-weight: 700;
-    font-size: 26px;
+    @include responsive-sizing(font-size, 20, 26, 400, 1440);
     line-height: 120%;
     color: $color-main;
 
@@ -52,7 +57,7 @@
     margin-bottom: 2px;
     font-family: $font-family;
     font-weight: 700;
-    font-size: 26px;
+    @include responsive-sizing(font-size, 20, 26, 400, 1440);
     line-height: 120%;
     color: $color-main;
 
@@ -67,9 +72,51 @@
 
   &__bottom {
     max-width: 705px;
-    padding: 20px 32px;
+    padding-block: 20px;
+    @include responsive-sizing(padding-inline, 20, 32, 1200, 1440);
     margin-top: 12px;
     border-radius: 18px;
     background-color: $color-grey;
+  }
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+
+    &__pic {
+      align-self: center;
+      @include responsive-sizing(height, 365, 450, 400, 900);
+    }
+
+    &__title {
+      max-width: 100%;
+    }
+
+    &__bottom {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__regions-box {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    &__region {
+      max-width: 240px;
+      width: 100%;
+      padding-block: 12px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__regions-box {
+      gap: 0;
+    }
+
+    &__region {
+      width: auto;
+    }
   }
 }

@@ -1,14 +1,15 @@
 .challengeSection {
   display: flex;
   gap: 14px;
-  margin-bottom: 100px;
+  @include responsive-sizing(margin-bottom, 70, 100, 400, 1440);
 
   &__pic {
+    flex-shrink: 0;
     max-width: 362px;
     width: 100%;
     min-height: 325px;
     background-image: url('../assets/images/challenge.png');
-    background-position: center;
+    background-position: bottom;
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -27,13 +28,39 @@
   &__title {
     min-height: 64px;
     padding: 14px 32px;
-    margin-bottom: 37px;
+    @include responsive-sizing(margin-bottom, 16, 37, 992, 1440);
     border-radius: 24px;
     background-color: $color-light;
     font-family: $font-family;
     font-weight: 700;
-    font-size: 30px;
+    @include responsive-sizing(font-size, 20, 30, 400, 1440);
     line-height: 120%;
     color: $color-main;
+  }
+
+  @media (max-width: $breakpoints-xxl) {
+    &__content {
+      padding: 20px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__pic {
+      flex-shrink: 1;
+      min-width: 327px;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    flex-direction: column;
+    width: 100%;
+
+    &__pic {
+      align-self: center;
+    }
+
+    &__title {
+      padding: 8px 16px;
+    }
   }
 }

@@ -1,5 +1,5 @@
 .goalSection {
-  margin-bottom: 100px;
+  @include responsive-sizing(margin-bottom, 70, 100, 400, 1440);
 
   &__icon {
     width: 54px;
@@ -19,14 +19,15 @@
   &__top {
     display: flex;
     gap: 14px;
-    margin-bottom: 100px;
+    @include responsive-sizing(margin-bottom, 70, 100, 400, 1440);
   }
 
   &__top-left {
     display: flex;
     max-width: 894px;
     min-height: 216px;
-    padding: 40px 32px;
+    @include responsive-sizing(padding-block, 30, 40, 768, 1440);
+    @include responsive-sizing(padding-inline, 20, 32, 768, 1440);
     border-radius: 26px;
     background-color: #fff;
   }
@@ -36,7 +37,7 @@
   }
 
   &__top-text {
-    font-size: 22px;
+    @include responsive-sizing(font-size, 20, 22, 400, 1440);
 
     &:nth-of-type(1) {
       margin-bottom: 8px;
@@ -46,6 +47,7 @@
   &__top-right {
     max-width: 362px;
     width: 100%;
+    min-height: 216px;
     background-image: url('../assets/images/goal.png');
     background-position: center;
     background-size: cover;
@@ -62,6 +64,11 @@
     flex-direction: column;
     max-width: 520px;
     min-height: 100%;
+  }
+
+  &__bottom-content {
+    border-radius: 24px;
+    padding: 24px 32px;
   }
 
   &__bottom-content.start {
@@ -84,7 +91,7 @@
     border-radius: 24px;
     font-family: $font-family;
     font-weight: 700;
-    font-size: 30px;
+    @include responsive-sizing(font-size, 22, 30, 400, 1440);
     line-height: 120%;
     text-align: center;
     color: $color-main;
@@ -99,7 +106,7 @@
   }
 
   &__bottom-subtitle {
-    min-height: 47px;
+    @include responsive-sizing(min-height, 40, 47, 400, 1440);
     padding: 8px 16px;
     margin-bottom: 16px;
     border-radius: 34px;
@@ -107,6 +114,7 @@
     font-family: $font-family;
     font-weight: 700;
     font-size: 26px;
+    @include responsive-sizing(font-size, 20, 26, 400, 1440);
     line-height: 120%;
     text-align: center;
     color: $color-main;
@@ -116,12 +124,96 @@
     }
   }
 
-  &__bottom-content {
-    border-radius: 24px;
-    padding: 24px 32px;
-  }
-
   &__bottom-text.portable-text:nth-of-type(1) {
     margin-bottom: 8px;
+  }
+
+  @media (max-width: $breakpoints-xxl) {
+    &__bottom-content {
+      padding: 20px;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__icon {
+      width: 36px;
+      height: 34px;
+      margin-right: 15px;
+
+      & img {
+        width: 36px;
+        height: 34px;
+      }
+    }
+
+    &__bottom {
+      flex-direction: column;
+    }
+
+    &__bottom-left {
+      max-width: 100%;
+    }
+
+    &__bottom-content.start {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 700px) {
+    &__top {
+      flex-direction: column;
+    }
+
+    &__top-right {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__title.portable-title {
+      margin-bottom: 16px;
+      line-height: 120%;
+    }
+
+    &__top-left {
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    &__top-text {
+      &:nth-of-type(1) {
+        margin-bottom: 0;
+      }
+    }
+
+    &__top-right {
+      min-height: 170px;
+    }
+
+    &__bottom {
+      gap: 24px;
+    }
+
+    &__bottom-text.portable-text:nth-of-type(1) {
+      margin-bottom: 0;
+    }
+
+    &__bottom-content.start {
+      padding-bottom: 130px;
+    }
+
+    &__bottom-title {
+      padding-block: 12px;
+    }
+
+    &__bottom-subtitle {
+      margin-bottom: 10px;
+      border-radius: 20px;
+      text-align: left;
+
+      &:nth-of-type(2) {
+        margin-top: 20px;
+      }
+    }
   }
 }

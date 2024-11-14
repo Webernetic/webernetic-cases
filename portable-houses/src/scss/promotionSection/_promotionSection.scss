@@ -5,7 +5,7 @@
     margin-bottom: 60px;
 
     &:nth-of-type(1) {
-      height: 367px;
+      @include responsive-sizing(min-height, 266, 367, 992, 1440);
 
       & .promotionSection__card-content {
         background-image: url('../assets/images/promotion-bg.png');
@@ -13,7 +13,7 @@
     }
     &:nth-of-type(2) {
       flex-direction: row-reverse;
-      height: 212px;
+      min-height: 212px;
 
       & .promotionSection__card-content {
         background-color: $color-accent;
@@ -22,7 +22,7 @@
       }
     }
     &:nth-of-type(3) {
-      height: 564px;
+      @include responsive-sizing(min-height, 371, 564, 992, 1440);
 
       & .promotionSection__card-content {
         background-image: url('../assets/images/promotion-bg2.png');
@@ -39,6 +39,7 @@
 
     & img {
       border-radius: 26px;
+      object-position: left;
     }
   }
 
@@ -59,13 +60,13 @@
 
   &__card-number {
     align-self: flex-start;
-    min-height: 42px;
+    @include responsive-sizing(min-height, 36, 42, 400, 1440);
     padding: 8px 15px 4px 15px;
     margin-bottom: 6px;
     border-radius: 80px;
     font-family: $font-family;
     font-weight: 700;
-    font-size: 26px;
+    @include responsive-sizing(font-size, 20, 26, 400, 1440);
     line-height: 115%;
     color: $color-main;
     background-color: $color-light;
@@ -74,7 +75,7 @@
   &__card-text {
     font-family: $font-family;
     font-weight: 400;
-    font-size: 24px;
+    @include responsive-sizing(font-size, 18, 24, 400, 1440);
     line-height: 120%;
     color: $color-main;
     margin-bottom: 6px;
@@ -82,9 +83,10 @@
 
   &__comment-box {
     display: flex;
-    gap: 32px;
+    @include responsive-sizing(gap, 12, 32, 992, 1440);
     min-height: 246px;
-    padding: 24px 32px;
+    @include responsive-sizing(padding-block, 20, 24, 992, 1440);
+    @include responsive-sizing(padding-inline, 20, 32, 992, 1440);
     margin-top: 100px;
     border-radius: 26px;
     background-color: $color-accent;
@@ -94,35 +96,124 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-start;
     max-width: 364px;
+    width: 100%;
   }
 
   &__comment-title {
-    min-height: 47px;
+    @include responsive-sizing(min-height, 36, 47, 400, 1440);
     border-radius: 18px;
     padding: 8px 20px;
     background-color: $color-light;
-    font-family: var(--font-family);
+    font-family: $font-family;
     font-weight: 700;
-    font-size: 26px;
+    @include responsive-sizing(font-size, 20, 26, 400, 1440);
     line-height: 120%;
     color: $color-main;
   }
 
   &__comment-pic {
     max-width: 810px;
+    width: 100%;
     border-radius: 18px;
 
     & img {
       border-radius: 18px;
+      object-fit: contain;
+      object-position: top;
     }
   }
 
   &__comment-text {
     font-family: $font-family;
     font-weight: 400;
-    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1440);
     line-height: 130%;
     color: $color-main;
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__comment-box {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__card {
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    &__card:nth-of-type(2) {
+      flex-direction: column;
+    }
+
+    &__card-content {
+      max-width: 100%;
+      min-height: 230px;
+      padding: 20px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    &__card-pic {
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+
+      & img {
+        width: auto;
+        height: 100%;
+      }
+    }
+
+    &__card:nth-of-type(1) .promotionSection__card-pic {
+      height: 266px;
+    }
+
+    &__card:nth-of-type(2) .promotionSection__card-pic {
+      height: 212px;
+    }
+
+    &__card:nth-of-type(2) .promotionSection__card-content {
+      min-height: 212px;
+    }
+
+    &__card:nth-of-type(3) .promotionSection__card-pic {
+      height: 371px;
+    }
+
+    &__card:nth-of-type(3) .promotionSection__card-content {
+      background-image: url('../assets/images/promotion-bg2-mobile.png');
+    }
+
+    &__card-number {
+      margin-bottom: 4px;
+    }
+
+    &__comment-box {
+      min-height: 258px;
+      margin-top: 70px;
+    }
+
+    &__comment-title {
+      margin-bottom: 8px;
+    }
+
+    &__comment-pic {
+      height: 70px;
+      border-radius: 10px;
+
+      & img {
+        border-radius: 10px;
+      }
+    }
+
+    .text-hidden {
+      display: none;
+    }
   }
 }

@@ -1,9 +1,9 @@
 .resultSection {
   display: flex;
   gap: 32px;
-  min-height: 315px;
-  padding: 24px 32px;
-  margin-bottom: 100px;
+  @include responsive-sizing(padding-block, 20, 24, 400, 1440);
+  @include responsive-sizing(padding-inline, 26, 32, 400, 1440);
+  @include responsive-sizing(margin-bottom, 70, 100, 400, 1440);
   border-radius: 26px;
   background-color: $color-light;
 
@@ -21,17 +21,44 @@
   &__left-title {
     font-family: $font-family;
     font-weight: 700;
-    font-size: 26px;
+    @include responsive-sizing(font-size, 20, 26, 400, 1440);
     line-height: 120%;
     color: $color-main;
   }
 
   &__pic {
     max-width: 810px;
-    min-height: 267px;
 
     & img {
       object-fit: contain;
+    }
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    gap: 24px;
+  }
+
+  @media (max-width: 700px) {
+    border-radius: 20px;
+    padding-right: 0;
+    flex-direction: column;
+
+    &__pic {
+      max-width: 810px;
+      overflow-x: auto;
+
+      & img {
+        width: 538px;
+        height: 175px;
+      }
+    }
+
+    &__left {
+      padding-right: 24px;
+    }
+
+    &__left-title {
+      margin-bottom: 4px;
     }
   }
 }
