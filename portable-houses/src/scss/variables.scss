@@ -1,0 +1,36 @@
+@import './fonts';
+
+@mixin responsive-sizing($prop, $min, $max, $minDisplay, $maxDisplay) {
+  $sizeDiff: $max - $min;
+  $displayDiff: $maxDisplay - $minDisplay;
+
+  #{$prop}: clamp(
+    #{$min}px,
+    calc(
+      #{$min}px +
+        (#{$sizeDiff} * ((100vw - #{$minDisplay}px) / #{$displayDiff}))
+    ),
+    #{$max}px
+  );
+}
+
+$max-width: 1270px;
+
+//fonts
+$font-family: 'Circe';
+
+//colors
+$color-text: #6b6b6b;
+$color-main: #1d2829;
+$color-light: #e2fcff;
+$color-accent: #a4e6ef;
+$color-bg: #f3f4f8;
+$color-grey: #ebebeb;
+
+//breakpoints
+$breakpoints-xs: 400px;
+$breakpoints-sm: 576px;
+$breakpoints-md: 768px;
+$breakpoints-lg: 992px;
+$breakpoints-xl: 1200px;
+$breakpoints-xxl: 1400px;

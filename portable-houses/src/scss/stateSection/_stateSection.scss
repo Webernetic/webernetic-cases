@@ -1,0 +1,75 @@
+.stateSection {
+  @include responsive-sizing(margin-bottom, 70, 100, 400, 1440);
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__cards {
+    display: flex;
+    gap: 14px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+
+    &:nth-child(1) {
+      max-width: 554px;
+      width: 100%;
+    }
+
+    &:nth-child(2) {
+      max-width: 344px;
+      width: 100%;
+    }
+
+    &:nth-child(3) {
+      max-width: 344px;
+      width: 100%;
+    }
+  }
+
+  &__card-title {
+    @include responsive-sizing(min-height, 50, 59, 400, 1440);
+    padding: 14px 32px;
+    border-radius: 24px;
+    background-color: $color-accent;
+    color: $color-main;
+    text-align: center;
+    @include responsive-sizing(font-size, 22, 26, 400, 1440);
+    line-height: 120%;
+  }
+
+  &__card-text.portable-text {
+    height: 100%;
+    padding: 20px 32px;
+    @include responsive-sizing(padding-block, 16, 20, 768, 1440);
+    @include responsive-sizing(padding-inline, 20, 32, 768, 1440);
+    border-radius: 24px;
+    background-color: #fff;
+    @include responsive-sizing(font-size, 18, 22, 400, 1440);
+  }
+
+  @media (max-width: 680px) {
+    &__cards {
+      flex-direction: column;
+    }
+
+    &__card:nth-child(1),
+    &__card:nth-child(2),
+    &__card:nth-child(3) {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__card-title {
+      padding-block: 12px;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.resultSection {
+  display: flex;
+  gap: 32px;
+  @include responsive-sizing(padding-block, 20, 24, 400, 1440);
+  @include responsive-sizing(padding-inline, 26, 32, 400, 1440);
+  @include responsive-sizing(margin-bottom, 70, 100, 400, 1440);
+  border-radius: 26px;
+  background-color: $color-light;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 364px;
+  }
+
+  &__left-text.portable-text {
+    color: $color-main;
+  }
+
+  &__left-title {
+    font-family: $font-family;
+    font-weight: 700;
+    @include responsive-sizing(font-size, 20, 26, 400, 1440);
+    line-height: 120%;
+    color: $color-main;
+  }
+
+  &__pic {
+    max-width: 810px;
+
+    & img {
+      object-fit: contain;
+    }
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    gap: 24px;
+  }
+
+  @media (max-width: 700px) {
+    border-radius: 20px;
+    padding-right: 0;
+    flex-direction: column;
+
+    &__pic {
+      max-width: 810px;
+      overflow-x: auto;
+
+      & img {
+        width: 538px;
+        height: 175px;
+      }
+    }
+
+    &__left {
+      padding-right: 24px;
+    }
+
+    &__left-title {
+      margin-bottom: 4px;
+    }
+  }
+}
