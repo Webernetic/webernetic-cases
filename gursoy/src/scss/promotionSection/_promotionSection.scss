@@ -1,5 +1,5 @@
 .promotionSection {
-  margin-bottom: 26px;
+  margin-bottom: 80px;
 
   &__title {
     margin-bottom: 26px;
@@ -12,6 +12,10 @@
 
   &__card:nth-of-type(1) .promotionSection__card-right {
     background-color: $color-blue;
+
+    & .promotionSection__card-text:last-child {
+      margin-top: 6px;
+    }
   }
 
   &__card:nth-of-type(3) {
@@ -56,6 +60,7 @@
 
   &__card:nth-of-type(5) {
     & .promotionSection__card-left {
+      min-height: 277px;
       background-image: url('../assets/images/house.png');
     }
 
@@ -172,14 +177,12 @@
   &__card-point {
     position: relative;
     padding-left: 30px;
-    margin-top: 5px;
+    margin-top: 10px;
 
     &:before {
       content: '';
       position: absolute;
       left: 0;
-      top: 50%;
-      transform: translateY(-50%);
       width: 24px;
       height: 24px;
       background: url('../assets/icons/note.svg') no-repeat center center;
