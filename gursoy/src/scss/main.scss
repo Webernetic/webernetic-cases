@@ -1,0 +1,89 @@
+@import './fonts';
+@import './variables';
+@import '../mixins/mixinsStyles.scss';
+@import './headerSection/_headerSection.scss';
+@import './specificSection/_specificSection.scss';
+@import './initialSection/_initialSection.scss';
+@import './promotionSection/_promotionSection.scss';
+@import './resultSection/_resultSection.scss';
+@import './techSection.scss/techSection.scss';
+@import './resumeSection/_resumeSection.scss';
+@import './orderSection/orderSection';
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  // outline: 1px solid red;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  background-color: #fff;
+  color: $color-text;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: 100px;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  color: inherit;
+}
+
+img,
+picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h2.gursoy-title {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 130%;
+  text-align: left;
+  color: $color-text;
+}
+
+p.gursoy-text {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  color: $color-text;
+}

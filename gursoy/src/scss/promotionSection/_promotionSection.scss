@@ -1,0 +1,208 @@
+.promotionSection {
+  margin-bottom: 26px;
+
+  &__title {
+    margin-bottom: 26px;
+  }
+
+  &__card {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__card:nth-of-type(1) .promotionSection__card-right {
+    background-color: $color-blue;
+  }
+
+  &__card:nth-of-type(3) {
+    margin-bottom: 50px;
+    min-height: 308px;
+
+    & .promotionSection__card-left {
+      min-height: 308px;
+    }
+  }
+
+  &__card:nth-of-type(4) {
+    margin-bottom: 50px;
+
+    & .promotionSection__card-left {
+      max-width: 716px;
+      width: 100%;
+      min-height: 313px;
+    }
+
+    & .promotionSection__card-right {
+      max-width: 514px;
+      width: 100%;
+      min-height: 313px;
+      padding: 0;
+
+      & .promotionSection__card-text {
+        min-height: 114px;
+        border-radius: 16px;
+        padding: 26px 30px 18px;
+        margin-bottom: 10px;
+        background-color: $color-blue;
+        font-size: 22px;
+      }
+    }
+  }
+
+  &__card:nth-of-type(4) .promotionSection__card-pic {
+    height: 136px;
+    margin-top: 6px;
+  }
+
+  &__card:nth-of-type(5) {
+    & .promotionSection__card-left {
+      background-image: url('../assets/images/house.png');
+    }
+
+    & .promotionSection__card-right {
+      border: 1.5px solid #e6e6e6;
+      border-radius: 16px;
+      padding: 30px;
+    }
+  }
+
+  &__card-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 615px;
+    width: 100%;
+    min-height: 322px;
+    border: 1.5px solid #e6e6e6;
+    border-radius: 16px;
+    padding: 30px;
+  }
+
+  &__card-title {
+    min-height: 52px;
+    border-radius: 14px;
+    padding: 8px 32px;
+    background-color: $color-accent;
+    color: #fff;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 130%;
+    text-align: center;
+  }
+
+  &__card-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 615px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px;
+  }
+
+  &__card-subtitle {
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 130%;
+    text-align: center;
+    color: $color-text;
+  }
+
+  &__line {
+    display: flex;
+    gap: 95px;
+    min-height: 162px;
+    margin-block: 14px 50px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f8e7db 0%, #fff6f0 100%);
+  }
+
+  &__line-left {
+    max-width: 573px;
+    margin: 30px;
+  }
+
+  &__line-subtitle {
+    margin-bottom: 18px;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 130%;
+    color: $color-brown;
+  }
+
+  &__line-pic {
+    max-width: 447px;
+    width: 100%;
+    min-height: 167px;
+    background-image: url('../assets/images/line.png');
+    background-size: contain;
+  }
+
+  &__card-list {
+    margin-top: 8px;
+  }
+
+  &__card-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      background: url('../assets/icons/check.svg') no-repeat center center;
+      background-size: contain;
+    }
+  }
+
+  &__card-point {
+    position: relative;
+    padding-left: 30px;
+    margin-top: 5px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      background: url('../assets/icons/note.svg') no-repeat center center;
+      background-size: contain;
+    }
+  }
+
+  &__card-text .number {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 130%;
+  }
+
+  &__card-statistic {
+    min-height: 47px;
+    border-radius: 14px;
+    padding: 8px 32px;
+    background-color: $color-accent;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    text-align: center;
+    color: #fff;
+  }
+}

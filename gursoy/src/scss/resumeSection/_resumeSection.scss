@@ -1,0 +1,15 @@
+.resumeSection {
+  display: flex;
+  margin-bottom: 80px;
+  min-height: 450px;
+  border-radius: 12px;
+  padding: 36px 36px 32px 36px;
+  background: linear-gradient(135deg, #f8e7db 0%, #fff6f0 100%);
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 600px;
+  }
+}

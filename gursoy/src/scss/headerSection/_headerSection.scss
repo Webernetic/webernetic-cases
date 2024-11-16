@@ -1,0 +1,117 @@
+.headerSection {
+  padding-block: 40px 80px;
+
+  &__title {
+    margin-bottom: 20px;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 120%;
+    text-align: left;
+    color: $color-text;
+
+    & span.accent {
+      background: linear-gradient(225deg, #f3c6a2 0%, #d7ab8f 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-align: left;
+    }
+
+    & .headerSection__title-second {
+      margin-left: 108px;
+    }
+  }
+
+  &__banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    min-height: 440px;
+    background-image: url('../assets/images/banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 32px 30px 28px;
+  }
+
+  &__content-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 380px;
+  }
+
+  &__content-box {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 26px 30px;
+    max-width: 340px;
+    width: 100%;
+    min-height: 182px;
+    color: $color-text;
+
+    &:first-child {
+      background: linear-gradient(225deg, #f3c6a2 0%, #d7ab8f 100%);
+      color: #fff;
+    }
+
+    &:last-child {
+      background-color: #fff;
+    }
+  }
+
+  &__content-title {
+    margin-bottom: 22px;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 130%;
+  }
+
+  &__content-box:last-child .headerSection__content-title {
+    margin-bottom: 16px;
+  }
+
+  &__content-text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+  }
+
+  &__content-item {
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+  }
+
+  &__region {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 16px;
+    margin-bottom: 2px;
+    padding: 5px 32px;
+    max-width: 386px;
+    width: 100%;
+    min-height: 52px;
+    background-color: $color-accent;
+    color: #fff;
+  }
+
+  &__region-title {
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    text-align: center;
+  }
+}
