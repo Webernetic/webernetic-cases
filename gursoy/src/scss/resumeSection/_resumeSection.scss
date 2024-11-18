@@ -4,7 +4,7 @@
   margin-bottom: 80px;
   min-height: 450px;
   border-radius: 12px;
-  padding-block: 36px 32px;
+  padding-block: 36px 20px;
   @include responsive-sizing(padding-inline, 20, 36, 992, 1440);
   padding-top: 0;
   background: linear-gradient(135deg, #f8e7db 0%, #fff6f0 100%);
@@ -52,6 +52,10 @@
 
     &__content-title {
       margin-bottom: 14px;
+    }
+
+    &__content-text {
+      font-size: 20px;
     }
   }
 }

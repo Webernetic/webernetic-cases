@@ -16,7 +16,8 @@
     overflow-x: scroll;
 
     & img {
-      width: auto;
+      width: 100%;
+      object-position: left;
     }
   }
 
@@ -97,6 +98,19 @@
     overflow-x: scroll;
 
     & img {
+      width: 100%;
+      object-position: left;
+    }
+  }
+
+  @media (max-width: $breakpoints-xxl) {
+    &__card-pic {
+      & img {
+        width: auto;
+      }
+    }
+
+    &__growth-pic img {
       width: auto;
     }
   }

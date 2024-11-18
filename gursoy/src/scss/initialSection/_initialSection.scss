@@ -64,12 +64,12 @@
 
   @media (max-width: $breakpoints-md) {
     flex-direction: column;
-  }
 
-  &__content {
-    max-width: 100%;
-    margin: 24px 20px 15px;
-    gap: 14px;
+    &__content {
+      max-width: 100%;
+      margin: 24px 20px 15px;
+      gap: 14px;
+    }
   }
 
   @media (max-width: $breakpoints-xs) {

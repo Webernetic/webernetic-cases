@@ -8,6 +8,7 @@
   &__top {
     min-height: 440px;
     margin-bottom: 10px;
+    border-radius: 16px;
     @include responsive-sizing(padding-top, 20, 30, 1200, 1440);
     background-image: url('../assets/images/tech.png');
     background-repeat: no-repeat;
@@ -81,7 +82,7 @@
   }
 
   &__bottom-text {
-    @include responsive-sizing(font-size, 20, 22, 400, 1440);
+    font-size: 20px;
   }
 
   &__pic {
@@ -126,7 +127,7 @@
     }
 
     &__top-content {
-      margin-inline: 0;
+      margin-inline: 20px;
       max-width: 100%;
     }
 
@@ -142,8 +143,23 @@
   }
 
   @media (max-width: $breakpoints-xs) {
+    margin-bottom: 60px;
+
     &__top {
-      min-height: 620px;
+      height: 620px;
+    }
+
+    &__title {
+      margin-bottom: 14px;
+      line-height: 110%;
+    }
+
+    &__pic {
+      transform: translateY(-90px);
+
+      & img {
+        border-radius: 16px;
+      }
     }
 
     &__image.desktop {
