@@ -14,6 +14,17 @@
   );
 }
 
+@mixin inverse-responsive-sizing($prop, $min, $max, $minDisplay, $maxDisplay) {
+  $sizeDiff: $max - $min;
+  $displayDiff: $maxDisplay - $minDisplay;
+
+  #{$prop}: clamp(
+    #{$min}px,
+    calc(#{$max}px - ($sizeDiff * (100vw - #{$minDisplay}px) / $displayDiff)),
+    #{$max}px
+  );
+}
+
 $max-width: 1240px;
 
 //fonts

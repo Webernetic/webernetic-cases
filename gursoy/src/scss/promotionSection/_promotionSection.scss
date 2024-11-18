@@ -25,6 +25,10 @@
     & .promotionSection__card-left {
       min-height: 308px;
     }
+
+    & .promotionSection__card-right {
+      border: 1.5px solid rgba(0, 0, 0, 0.1);
+    }
   }
 
   &__card:nth-of-type(4) {
@@ -60,7 +64,7 @@
 
   &__card:nth-of-type(5) {
     & .promotionSection__card-left {
-      min-height: 277px;
+      @include responsive-sizing(min-height, 229, 277, 400, 1440);
       background-image: url('../assets/images/house.png');
     }
 
@@ -81,7 +85,7 @@
     min-height: 322px;
     border: 1.5px solid #e6e6e6;
     border-radius: 16px;
-    padding: 30px;
+    @include responsive-sizing(padding, 20, 30, 992, 1440);
   }
 
   &__card-title {
@@ -92,7 +96,7 @@
     color: #fff;
     font-family: $font-family;
     font-weight: 700;
-    font-size: 28px;
+    @include responsive-sizing(font-size, 22, 28, 400, 1440);
     line-height: 130%;
     text-align: center;
   }
@@ -111,7 +115,7 @@
   &__card-subtitle {
     font-family: $font-family;
     font-weight: 700;
-    font-size: 28px;
+    @include responsive-sizing(font-size, 22, 28, 400, 1440);
     line-height: 130%;
     text-align: center;
     color: $color-text;
@@ -119,7 +123,8 @@
 
   &__line {
     display: flex;
-    gap: 95px;
+    align-items: center;
+    @include responsive-sizing(gap, 10, 95, 992, 1440);
     min-height: 162px;
     margin-block: 14px 50px;
     border-radius: 10px;
@@ -135,9 +140,13 @@
     margin-bottom: 18px;
     font-family: $font-family;
     font-weight: 700;
-    font-size: 28px;
+    @include responsive-sizing(font-size, 22, 28, 400, 1440);
     line-height: 130%;
     color: $color-brown;
+  }
+
+  &__line-text {
+    @include responsive-sizing(font-size, 18, 20, 400, 1440);
   }
 
   &__line-pic {
@@ -146,6 +155,7 @@
     min-height: 167px;
     background-image: url('../assets/images/line.png');
     background-size: contain;
+    background-repeat: no-repeat;
   }
 
   &__card-list {
@@ -207,5 +217,168 @@
     line-height: 130%;
     text-align: center;
     color: #fff;
+  }
+
+  &__statistic-pic {
+    & img {
+      object-fit: contain;
+    }
+  }
+
+  &__statistic-image.mobile {
+    display: none;
+  }
+
+  @media (max-width: 1300px) {
+    &__card-title,
+    &__card-subtitle {
+      margin-bottom: 15px;
+    }
+  }
+
+  @media (max-width: 850px) {
+    &__card {
+      flex-direction: column;
+    }
+
+    &__line {
+      flex-direction: column;
+    }
+
+    &__line-pic {
+      background-image: url('../assets/images/line-mobile.png');
+      width: 90%;
+      padding-inline: 50px;
+    }
+
+    &__line-left {
+      max-width: 100%;
+    }
+
+    &__card-left,
+    &__card-right {
+      max-width: 100%;
+      min-height: 256px;
+    }
+
+    &__card:nth-of-type(3) {
+      & .promotionSection__card-left {
+        min-height: 256px;
+      }
+    }
+
+    &__card:nth-of-type(4) .promotionSection__card-left {
+      max-width: 100%;
+      gap: 0;
+    }
+
+    &__card:nth-of-type(4) .promotionSection__card-right {
+      max-width: 100%;
+      align-items: stretch;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    margin-bottom: 60px;
+
+    &__title {
+      line-height: 110%;
+      margin-bottom: 17px;
+    }
+
+    &__card-title {
+      min-height: 40px;
+      padding: 8px 26px;
+      margin-bottom: 24px;
+      border-radius: 10px;
+      line-height: 110%;
+      text-align: left;
+    }
+
+    &__card-right {
+      padding: 20px;
+    }
+
+    &__card-subtitle {
+      margin-bottom: 24px;
+    }
+
+    &__card-text {
+      font-size: 18px;
+      line-height: 115%;
+    }
+
+    .promotionSection__card:nth-of-type(4) .promotionSection__card-right {
+      min-height: 250px;
+    }
+
+    .promotionSection__card:nth-of-type(4)
+      .promotionSection__card-right
+      .promotionSection__card-text {
+      padding: 20px 30px;
+      font-size: 20px;
+      line-height: 120%;
+    }
+
+    &__card:nth-of-type(5) .promotionSection__card-left {
+      background-position: center;
+      border-radius: 10px;
+    }
+
+    .promotionSection__card:nth-of-type(5) .promotionSection__card-right {
+      padding: 20px;
+    }
+
+    .promotionSection__card-text .number {
+      font-size: 25px;
+    }
+
+    &__line {
+      padding-bottom: 20px;
+      gap: 0;
+    }
+
+    &__line-left {
+      margin: 20px;
+    }
+
+    &__line-subtitle {
+      line-height: 110%;
+      margin-bottom: 12px;
+    }
+
+    &__line-pic {
+      max-width: 253px;
+      min-height: 102px;
+    }
+
+    &__card-text {
+      font-size: 18px;
+    }
+
+    &__card-point {
+      font-size: 18px;
+      line-height: 115%;
+    }
+
+    &__card-list li {
+      font-size: 18px;
+      margin-bottom: 2px;
+    }
+
+    &__card-statistic {
+      padding: 8px 30px;
+      border-radius: 10px;
+      font-size: 22px;
+      line-height: 130%;
+    }
+
+    &__statistic-image.desktop {
+      display: none;
+    }
+
+    &__statistic-image.mobile {
+      display: block;
+    }
   }
 }

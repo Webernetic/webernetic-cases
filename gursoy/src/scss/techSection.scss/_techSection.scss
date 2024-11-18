@@ -8,8 +8,10 @@
   &__top {
     min-height: 440px;
     margin-bottom: 10px;
+    @include responsive-sizing(padding-top, 20, 30, 1200, 1440);
     background-image: url('../assets/images/tech.png');
-    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   &__top-content {
@@ -17,20 +19,19 @@
     flex-direction: column;
     justify-content: space-between;
     max-width: 560px;
-    width: 100%;
     min-height: 235px;
     border-radius: 10px;
-    padding: 26px 30px;
+    @include responsive-sizing(padding-block, 18, 26, 1200, 1440);
+    @include responsive-sizing(padding-inline, 20, 30, 1200, 1440);
     background: linear-gradient(225deg, #c69e85 0%, #efbd96 100%);
-    margin-right: 30px;
-    margin-top: 30px;
-    margin-left: auto;
+    @include responsive-sizing(margin-right, 20, 30, 1200, 1440);
+    @include responsive-sizing(margin-left, 500, 650, 992, 1440);
   }
 
   &__top-title {
     font-family: $font-family;
     font-weight: 700;
-    font-size: 36px;
+    @include responsive-sizing(font-size, 22, 36, 400, 1440);
     line-height: 130%;
     color: #fff;
   }
@@ -38,16 +39,21 @@
   &__top-text {
     font-family: $font-family;
     font-weight: 400;
-    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1440);
     line-height: 120%;
     color: #fff;
   }
 
+  &__pic {
+    display: none;
+  }
+
   &__bottom {
     display: flex;
-    gap: 40px;
+    @include responsive-sizing(gap, 20, 40, 992, 1440);
     min-height: 270px;
-    padding: 36px 30px;
+    @include responsive-sizing(padding-block, 18, 36, 400, 1440);
+    @include responsive-sizing(padding-inline, 20, 30, 400, 1440);
     border: 1.5px solid rgba(0, 0, 0, 0.1);
     border-radius: 16px;
   }
@@ -67,11 +73,24 @@
     padding: 8px 32px;
     font-family: $font-family;
     font-weight: 700;
-    font-size: 28px;
+    @include responsive-sizing(font-size, 22, 28, 400, 1440);
     line-height: 130%;
     text-align: center;
     color: #fff;
     background-color: $color-accent;
+  }
+
+  &__bottom-text {
+    @include responsive-sizing(font-size, 20, 22, 400, 1440);
+  }
+
+  &__pic {
+    & img {
+    }
+  }
+
+  &__image.mobile {
+    display: none;
   }
 
   &__bottom-right {
@@ -87,5 +106,67 @@
     border-radius: 10px;
     padding: 26px 30px;
     background-color: $color-blue;
+  }
+
+  @media (max-width: $breakpoints-xxl) {
+    &__top {
+      background-position-x: 35%;
+    }
+
+    &__bottom-title {
+      margin-bottom: 24px;
+    }
+  }
+
+  @media (max-width: 850px) {
+    &__top {
+      position: relative;
+      background-image: none;
+      background: linear-gradient(135deg, #f8e7db 0%, #fff6f0 100%);
+    }
+
+    &__top-content {
+      margin-inline: 0;
+      max-width: 100%;
+    }
+
+    &__pic {
+      display: block;
+    }
+  }
+
+  @media (max-width: 650px) {
+    &__bottom {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__top {
+      min-height: 620px;
+    }
+
+    &__image.desktop {
+      display: none;
+    }
+
+    &__image.mobile {
+      display: block;
+    }
+
+    &__bottom-title {
+      width: 100%;
+      min-height: 40px;
+      border-radius: 10px;
+      padding: 8px 26px;
+      text-align: left;
+      line-height: 110%;
+    }
+
+    &__bottom-text.right {
+      padding: 18px 16px;
+      font-size: 18px;
+      line-height: 115%;
+    }
   }
 }

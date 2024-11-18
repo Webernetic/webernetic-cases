@@ -38,6 +38,7 @@ body::-webkit-scrollbar {
   width: 100%;
   margin: 0 auto;
   padding-inline: 100px;
+  @include responsive-sizing(padding-inline, 24, 100, 992, 1440);
 }
 
 ul,
@@ -75,6 +76,7 @@ h2.gursoy-title {
   font-family: $font-family;
   font-weight: 700;
   font-size: 42px;
+  @include responsive-sizing(font-size, 27, 42, 400, 1440);
   line-height: 130%;
   text-align: left;
   color: $color-text;
@@ -83,7 +85,11 @@ h2.gursoy-title {
 p.gursoy-text {
   font-family: $font-family;
   font-weight: 400;
-  font-size: 20px;
+  @include responsive-sizing(font-size, 18, 20, 400, 1440);
   line-height: 120%;
   color: $color-text;
+
+  @media (max-width: $breakpoints-xs) {
+    line-height: 115%;
+  }
 }
