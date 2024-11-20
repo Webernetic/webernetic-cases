@@ -1,0 +1,61 @@
+.resumeSection {
+  display: flex;
+  @include responsive-sizing(gap, 11, 30, 992, 1440);
+  margin-bottom: 80px;
+  min-height: 450px;
+  border-radius: 12px;
+  padding-block: 36px 20px;
+  @include responsive-sizing(padding-inline, 20, 36, 992, 1440);
+  padding-top: 0;
+  background: linear-gradient(135deg, #f8e7db 0%, #fff6f0 100%);
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    width: 100%;
+    margin-top: 58px;
+  }
+  &__content-title {
+    margin-bottom: 50px;
+    font-family: $font-family;
+    font-weight: 700;
+    @include responsive-sizing(font-size, 27, 42, 400, 1440);
+    line-height: 130%;
+    color: $color-brown;
+  }
+
+  &__content-text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 120%;
+    color: rgba(82, 65, 49, 0.85);
+  }
+
+  &__pic {
+    margin-top: 10px;
+    width: 100%;
+
+    & img {
+      object-fit: contain;
+    }
+  }
+
+  @media (max-width: 850px) {
+    flex-direction: column;
+
+    &__content {
+      max-width: 100%;
+      margin-top: 30px;
+    }
+
+    &__content-title {
+      margin-bottom: 14px;
+    }
+
+    &__content-text {
+      font-size: 20px;
+    }
+  }
+}

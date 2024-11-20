@@ -1,0 +1,186 @@
+.headerSection {
+  padding-block: 40px 80px;
+
+  &__title {
+    margin-bottom: 20px;
+    font-family: $font-family;
+    font-weight: 700;
+    @include responsive-sizing(font-size, 30, 54, 400, 1440);
+    line-height: 120%;
+    text-align: left;
+    color: $color-text;
+
+    & span.accent {
+      background: linear-gradient(225deg, #f3c6a2 0%, #d7ab8f 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-align: left;
+    }
+
+    & .headerSection__title-second {
+      @include responsive-sizing(margin-left, 0, 108, 992, 1440);
+    }
+  }
+
+  &__banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    min-height: 440px;
+    background-image: url('../assets/images/banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 32px 30px 28px;
+    @include responsive-sizing(padding-inline, 14, 30, 992, 1440);
+  }
+
+  &__content-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 380px;
+  }
+
+  &__content-box {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 26px 30px;
+    @include responsive-sizing(padding-block, 18, 26, 992, 1440);
+    @include responsive-sizing(padding-inline, 20, 30, 992, 1440);
+    max-width: 340px;
+    width: 100%;
+    min-height: 182px;
+    color: $color-text;
+
+    &:first-child {
+      background: linear-gradient(225deg, #f3c6a2 0%, #d7ab8f 100%);
+      color: #fff;
+    }
+
+    &:last-child {
+      background-color: #fff;
+    }
+  }
+
+  &__content-title {
+    margin-bottom: 22px;
+    font-family: $font-family;
+    font-weight: 700;
+    @include responsive-sizing(font-size, 22, 28, 400, 1440);
+    line-height: 130%;
+  }
+
+  &__content-box:last-child .headerSection__content-title {
+    margin-bottom: 16px;
+  }
+
+  &__content-text {
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 18, 20, 400, 1440);
+    line-height: 120%;
+  }
+
+  &__content-item {
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+  }
+
+  &__region {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 16px;
+    margin-bottom: 2px;
+    padding: 5px 32px;
+    max-width: 386px;
+    width: 100%;
+    min-height: 52px;
+    background-color: $color-accent;
+    color: #fff;
+  }
+
+  &__region-title {
+    font-family: $font-family;
+    font-weight: 700;
+    @include responsive-sizing(font-size, 22, 24, 400, 1440);
+    line-height: 130%;
+    text-align: center;
+  }
+
+  @media (max-width: 900px) {
+    &__region {
+      margin-left: 15px;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__banner {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      @include inverse-responsive-sizing(min-height, 440, 620, 400, 768);
+    }
+
+    &__content {
+      flex-direction: row;
+      min-height: 0;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__content {
+      flex-direction: column;
+      gap: 6px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    &__region {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+      margin-left: 0;
+      padding-left: 20px;
+      padding-top: 9px;
+      border-radius: 10px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    padding-bottom: 60px;
+
+    &__banner {
+      background-image: url('../assets/images/banner-mobile.png');
+      padding-block: 14px;
+      border-radius: 16px;
+    }
+
+    &__title {
+      line-height: 105%;
+    }
+
+    &__content-box {
+      min-height: 144px;
+      padding-block: 18px;
+    }
+
+    &__content-title {
+      margin-bottom: 16px;
+    }
+
+    &__content-text {
+      line-height: 115%;
+    }
+  }
+}

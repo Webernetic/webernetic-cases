@@ -1,0 +1,33 @@
+-
+  var checkboxes = [
+    {value: "Сайт", name: "user_wish[]", id: "site"}, 
+    {value: "SEO", name: "user_wish[]", id: "seo"}, 
+    {value: "SMM", name: "user_wish[]", id: "smm"}, 
+    {value: "Доработка", name: "user_wish[]", id: "revision"}, 
+    {value: "Контекст", name: "user_wish[]", id: "context"},
+    {value: "Другое", name: "user_wish[]", id: "other"}]
+
+  var inputs = [
+    {type: "text", placeholder: "Имя*", name: "name"}, 
+    {type: "tel", placeholder: "Телефон*", name: "phone"}, 
+    {type: "email", placeholder: "E-mail*", name: "email"},    
+    {type: "url", placeholder: "Сайт*", name: "site"} ]
+
+section.orderSection
+  .orderSection_title  Закажите продвижение сейчас, чтобы стать первыми в поисковых результатах. Ваш успех всего в одном клике!
+  .orderSection_wrapper
+    .orderSection_nameWrapper
+      h4.colorInvertText Елена
+      p.colorInvertText ACCOUNT MANAGER
+    .orderSection_imageWrapper 
+      +img("./assets/images/girl.png", "Девушка", ["500", "1200"])
+    form.orderSection_form.feedback__form
+      h3.orderSection_formTitle Заказать консультацию
+      .flexContainer.orderSection_inputWrapper  
+        each input in inputs         
+          input.input(type= input.type placeholder=input.placeholder name=input.name)   
+      h4.orderSection_secondformTitle Чем вам помочь?
+      .orderSection_checkboxWrapper
+        each checkbox in checkboxes 
+          +customCheckbox(checkbox.value, checkbox.name, checkbox.id)          
+      button.customButton(type="submit") Отправить  

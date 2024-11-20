@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Circe';
+  src: url('../assets/fonts/circe_regular.eot');
+  src:
+    url('../assets/fonts/circe_regular.woff') format('woff'),
+    url('../assets/fonts/circe_regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('../assets/fonts/circe_bold.eot');
+  src:
+    url('../assets/fonts/circe_bold.woff2') format('woff2'),
+    url('../assets/fonts/circe_bold.woff') format('woff'),
+    url('../assets/fonts/circe_bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('../assets/fonts/circe_extra_bold.eot');
+  src:
+    url('../assets/fonts/circe_extra_bold.woff') format('woff'),
+    url('../assets/fonts/circe_extra_bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src:
+    url('../assets/fonts/lato-medium.woff2') format('woff2'),
+    url('../assets/fonts/lato-medium.woff') format('woff'),
+    url('../assets/fonts/lato-medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 500;
+}
