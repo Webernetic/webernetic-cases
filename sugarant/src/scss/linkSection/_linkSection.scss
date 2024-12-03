@@ -1,0 +1,143 @@
+.linkSection {
+  &__top {
+    display: flex;
+    gap: 51px;
+    min-height: 456px;
+    padding: 46px 40px 30px 13px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    background-color: #fff;
+  }
+
+  &__top-pic {
+    max-width: 496px;
+    height: auto;
+    width: 100%;
+
+    & img {
+      object-fit: contain;
+    }
+  }
+
+  &__top-right {
+    max-width: 560px;
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__top-right-text {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 21px;
+    color: $color-text;
+  }
+
+  &__top-list {
+    padding-left: 15px;
+  }
+
+  &__top-list li {
+    position: relative;
+    padding-left: 20px;
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 20px;
+    color: $color-text;
+  }
+
+  &__top-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 4px;
+    height: 4px;
+    background-color: $color-text;
+    transform: rotate(45deg);
+  }
+
+  &__highlight-box {
+    min-height: 204px;
+    padding: 40px 40px 50px 40px;
+    margin-bottom: 90px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    background-color: $color-purple;
+  }
+
+  &__highlight-text {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 21px;
+    color: $color-text;
+
+    &:first-child {
+      margin-bottom: 3px;
+    }
+  }
+
+  &__center-text {
+    max-width: 720px;
+    margin-bottom: 40px;
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 21px;
+    color: $color-text;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 90px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 401px;
+    border-radius: 24px;
+    padding: 36px 32px;
+    border: 1px solid rgba(138, 169, 252, 0.1);
+    background-color: #fff;
+
+    &:last-child {
+      background-color: $color-purple$color-light;
+    }
+  }
+
+  &__card-number {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    padding-block: 18px;
+    text-align: center;
+    background: $color-dark-purple;
+    color: #fff;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 24px;
+  }
+
+  &__card-title {
+    margin-bottom: 6px;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 120%;
+    color: $color-text;
+  }
+
+  &__card-text {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 125%;
+    color: $color-text;
+  }
+}

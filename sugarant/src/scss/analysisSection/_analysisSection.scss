@@ -1,0 +1,75 @@
+.analysisSection {
+  margin-bottom: 90px;
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    max-width: 573px;
+    margin-bottom: 16px;
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 21px;
+    color: $color-text;
+  }
+
+  &__cards {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    min-height: 209px;
+    border-radius: 24px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__card:nth-child(1) {
+    max-width: 275px;
+    background-image: url('../assets/images/analysis-1.png');
+    border: 1px solid rgba(138, 169, 252, 0.1);
+    border-radius: 24px;
+    padding: 50px 36px 30px 36px;
+    box-shadow: 2px 4px 4px 0 rgba(138, 169, 252, 0.12);
+  }
+
+  &__card:nth-child(2) {
+    max-width: 275px;
+    background-image: url('../assets/images/analysis-2.png');
+    border: 1px solid rgba(138, 169, 252, 0.1);
+    border-radius: 24px;
+    padding: 50px 36px 30px 36px;
+    box-shadow: 2px 4px 4px 0 rgba(138, 169, 252, 0.12);
+  }
+
+  &__card:nth-child(3) {
+    max-width: 570px;
+    background-image: url('../assets/images/analysis-3.png');
+    border: 1px solid rgba(138, 169, 252, 0.1);
+    padding: 30px 40px 30px 36px;
+    box-shadow: 2px 4px 4px 0 rgba(138, 169, 252, 0.12);
+
+    .analysisSection__card-text {
+      font-family: $second-family;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 126.5%;
+      color: $color-text;
+    }
+  }
+
+  &__card-text {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 126.5%;
+    color: $color-text;
+  }
+}

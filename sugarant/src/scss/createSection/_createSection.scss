@@ -1,0 +1,73 @@
+.createSection {
+  margin-bottom: 90px;
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    max-width: 560px;
+    margin-bottom: 26px;
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 21px;
+    color: $color-text;
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 90px;
+  }
+
+  &__top-left,
+  &__top-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 171px;
+    padding: 36px;
+    border: 1px solid rgba(138, 169, 252, 0.1);
+    border-radius: 16px;
+    box-shadow: 2px 4px 4px 0 rgba(138, 169, 252, 0.12);
+    background: $color-purple;
+  }
+
+  &__top-title {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 26px;
+    color: $color-black;
+  }
+
+  &__top-text {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 124.5%;
+    color: $color-text;
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  &__bottom-title {
+    margin-top: 66.5px;
+    margin-bottom: 16px;
+  }
+
+  &__bottom-text {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 21px;
+    color: $color-text;
+
+    &:last-child {
+      margin-top: 6px;
+    }
+  }
+}

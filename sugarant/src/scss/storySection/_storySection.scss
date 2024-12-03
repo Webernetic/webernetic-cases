@@ -1,0 +1,79 @@
+.storySection {
+  position: relative;
+  height: 680px;
+  margin-bottom: 90px;
+  background-image: url('../assets/images/hand.png');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 24px;
+  overflow: hidden;
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__top {
+    min-height: 380px;
+    padding-block: 50px 58px;
+    padding-left: 40px;
+  }
+
+  &__top-content {
+    max-width: 509px;
+  }
+
+  &__text {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 21px;
+    color: $color-text;
+
+    &:last-child {
+      margin-top: 4px;
+    }
+  }
+
+  &__bottom {
+    min-height: 317px;
+    padding: 40px 40px 50px 40px;
+    border-radius: 24px;
+  }
+
+  &__bottom-content {
+    max-width: 480px;
+  }
+
+  &__bottom-title {
+    margin-bottom: 18px;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 26px;
+    color: $color-black;
+  }
+
+  &__list {
+    padding-left: 15px;
+  }
+
+  &__list li {
+    position: relative;
+    margin-bottom: 7px;
+    padding-left: 20px;
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 21px;
+    color: $color-text;
+  }
+
+  &__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 4px;
+    height: 4px;
+    background-color: $color-text;
+    transform: rotate(45deg);
+  }
+}

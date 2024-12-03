@@ -1,0 +1,54 @@
+.headerSection {
+  min-height: 654px;
+  margin-block: 92px 100px;
+  background-image: url('../assets/images/banner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+
+  &__title {
+    max-width: 900px;
+    margin-bottom: 64px;
+    padding-top: 20px;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 125%;
+    color: $color-black;
+  }
+
+  &__banner-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 23px;
+  }
+
+  &__card {
+    max-width: 291px;
+    width: 100%;
+    border-radius: 16px;
+    padding: 8px 18px 14px 18px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.16);
+    background: #fff;
+  }
+
+  &__card-title {
+    margin-bottom: 4px;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 54px;
+    line-height: 125%;
+    color: $color-dark-purple;
+  }
+
+  &__card-text {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 125%;
+    color: $color-black;
+  }
+}

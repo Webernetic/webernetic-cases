@@ -1,0 +1,90 @@
+.promotionSection {
+  margin-bottom: 90px;
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    margin-bottom: 33px;
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 21px;
+    color: $color-text;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  &__card {
+    border-radius: 24px;
+    padding: 30px 36px;
+  }
+
+  &__card:first-of-type {
+    border: 1px solid rgba(138, 169, 252, 0.1);
+    box-shadow: 2px 4px 4px 0 rgba(138, 169, 252, 0.12);
+    background: #fff;
+  }
+
+  &__card:last-of-type {
+    background-color: $color-purple;
+  }
+
+  &__card-title {
+    margin-bottom: 16px;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 26px;
+    color: $color-black;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 22px;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-right: 15px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-number {
+    width: 52px;
+    height: 52px;
+    border-radius: 6px;
+    padding-block: 12px;
+    text-align: center;
+    background: $color-dark-purple;
+    color: #fff;
+  }
+
+  &__item-pic {
+    width: 52px;
+    height: 52px;
+    border-radius: 6px;
+    padding: 14px;
+    box-shadow: 2px 4px 4px 0 rgba(138, 169, 252, 0.26);
+    background: #fff;
+
+    & img {
+      display: block;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__item-text {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 104%;
+    color: $color-text;
+  }
+}
