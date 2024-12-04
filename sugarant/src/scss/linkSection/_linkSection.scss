@@ -1,9 +1,12 @@
 .linkSection {
   &__top {
     display: flex;
-    gap: 51px;
+    @include responsive-sizing(gap, 15, 51, 992, 1160);
     min-height: 456px;
     padding: 46px 40px 30px 13px;
+    @include responsive-sizing(padding-right, 20, 40, 992, 1160);
+    @include inverse-responsive-sizing(padding-left, 13, 20, 992, 1160);
+    @include responsive-sizing(padding-top, 24, 46, 992, 1160);
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
     background-color: #fff;
@@ -17,6 +20,10 @@
     & img {
       object-fit: contain;
     }
+  }
+
+  &__top-image.mobile {
+    display: none;
   }
 
   &__top-right {
@@ -61,8 +68,11 @@
 
   &__highlight-box {
     min-height: 204px;
-    padding: 40px 40px 50px 40px;
-    margin-bottom: 90px;
+    padding: 40px 50px;
+    @include responsive-sizing(padding-inline, 20, 40, 992, 1160);
+    @include responsive-sizing(padding-top, 20, 40, 992, 1160);
+    @include responsive-sizing(padding-top, 20, 50, 992, 1160);
+    @include responsive-sizing(margin-bottom, 60, 90, 400, 1160);
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
     background-color: $color-purple;
@@ -92,7 +102,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
-    margin-bottom: 90px;
+    @include responsive-sizing(margin-bottom, 60, 90, 400, 1160);
   }
 
   &__card {
@@ -101,7 +111,8 @@
     justify-content: space-between;
     min-height: 401px;
     border-radius: 24px;
-    padding: 36px 32px;
+    @include responsive-sizing(padding-inline, 20, 32, 992, 1160);
+    @include responsive-sizing(padding-block, 20, 36, 992, 1160);
     border: 1px solid rgba(138, 169, 252, 0.1);
     background-color: #fff;
 
@@ -128,7 +139,7 @@
     margin-bottom: 6px;
     font-family: $font-family;
     font-weight: 500;
-    font-size: 26px;
+    @include responsive-sizing(font-size, 24, 26, 400, 1160);
     line-height: 120%;
     color: $color-text;
   }
@@ -139,5 +150,107 @@
     font-size: 19px;
     line-height: 125%;
     color: $color-text;
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__card {
+      min-height: 250px;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__top {
+      flex-direction: column-reverse;
+      gap: 35px;
+    }
+
+    &__top-pic {
+      align-self: center;
+    }
+
+    &__top-right {
+      max-width: 100%;
+    }
+
+    &__highlight-box {
+      border-radius: 18px;
+      padding-block: 24px;
+      padding-right: 30px;
+    }
+
+    &__cards {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__top {
+      padding-bottom: 0;
+    }
+
+    &__top-pic {
+      height: 160px;
+      overflow: hidden;
+
+      & img {
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+
+    &__top-right-text {
+      font-size: 19px;
+      line-height: 130%;
+    }
+
+    &__highlight-text {
+      font-size: 19px;
+      line-height: 130%;
+    }
+
+    &__center-text {
+      margin-bottom: 40px;
+      font-size: 19px;
+      line-height: 130%;
+    }
+
+    &__top-list li {
+      font-size: 19px;
+      line-height: 130%;
+    }
+
+    &__top-image.mobile {
+      display: block;
+    }
+
+    &__top-image {
+      display: none;
+    }
+
+    &__card {
+      padding-block: 24px;
+    }
+
+    &__card-number {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 16px;
+      padding-block: 12.5px;
+      font-size: 20px;
+    }
+
+    &__card:nth-child(3) {
+      .linkSection__card-number {
+        margin-bottom: 24px;
+      }
+    }
+
+    &__card-text {
+      line-height: 130%;
+    }
   }
 }

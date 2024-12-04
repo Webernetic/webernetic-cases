@@ -1,5 +1,5 @@
 .promotionSection {
-  margin-bottom: 90px;
+  @include responsive-sizing(margin-bottom, 60, 90, 400, 1160);
 
   &__title {
     margin-bottom: 16px;
@@ -22,6 +22,8 @@
   &__card {
     border-radius: 24px;
     padding: 30px 36px;
+    @include responsive-sizing(padding-block, 24, 30, 768, 1160);
+    @include responsive-sizing(padding-inline, 20, 36, 768, 1160);
   }
 
   &__card:first-of-type {
@@ -38,7 +40,7 @@
     margin-bottom: 16px;
     font-family: $font-family;
     font-weight: 500;
-    font-size: 26px;
+    @include responsive-sizing(font-size, 24, 26, 400, 1160);
     color: $color-black;
   }
 
@@ -56,6 +58,7 @@
   }
 
   &__item-number {
+    flex-shrink: 0;
     width: 52px;
     height: 52px;
     border-radius: 6px;
@@ -86,5 +89,34 @@
     font-size: 19px;
     line-height: 104%;
     color: $color-text;
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__cards {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__title {
+      max-width: 300px;
+      margin-bottom: 8px;
+    }
+
+    &__text {
+      margin-bottom: 20px;
+      font-size: 19px;
+      line-height: 125%;
+    }
+
+    &__item {
+      gap: 16px;
+    }
+
+    &__item-text {
+      font-size: 17px;
+      line-height: 125%;
+    }
   }
 }

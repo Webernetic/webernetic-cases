@@ -1,5 +1,5 @@
 .analysisSection {
-  margin-bottom: 90px;
+  @include responsive-sizing(margin-bottom, 60, 90, 400, 1160);
 
   &__title {
     margin-bottom: 24px;
@@ -11,6 +11,7 @@
     font-family: $second-family;
     font-weight: 400;
     font-size: 21px;
+    line-height: 125%;
     color: $color-text;
   }
 
@@ -24,7 +25,7 @@
     flex-direction: column;
     justify-content: flex-end;
     width: 100%;
-    min-height: 209px;
+    @include responsive-sizing(min-height, 155, 209, 400, 1160);
     border-radius: 24px;
     background-position: center;
     background-size: cover;
@@ -36,7 +37,8 @@
     background-image: url('../assets/images/analysis-1.png');
     border: 1px solid rgba(138, 169, 252, 0.1);
     border-radius: 24px;
-    padding: 50px 36px 30px 36px;
+    padding-block: 50px 30px;
+    @include responsive-sizing(padding-inline, 20, 36, 400, 1160);
     box-shadow: 2px 4px 4px 0 rgba(138, 169, 252, 0.12);
   }
 
@@ -45,7 +47,8 @@
     background-image: url('../assets/images/analysis-2.png');
     border: 1px solid rgba(138, 169, 252, 0.1);
     border-radius: 24px;
-    padding: 50px 36px 30px 36px;
+    padding-block: 50px 30px;
+    @include responsive-sizing(padding-inline, 20, 36, 400, 1160);
     box-shadow: 2px 4px 4px 0 rgba(138, 169, 252, 0.12);
   }
 
@@ -53,7 +56,8 @@
     max-width: 570px;
     background-image: url('../assets/images/analysis-3.png');
     border: 1px solid rgba(138, 169, 252, 0.1);
-    padding: 30px 40px 30px 36px;
+    padding-block: 30px;
+    @include responsive-sizing(padding-inline, 20, 36, 400, 1160);
     box-shadow: 2px 4px 4px 0 rgba(138, 169, 252, 0.12);
 
     .analysisSection__card-text {
@@ -71,5 +75,52 @@
     font-size: 19px;
     line-height: 126.5%;
     color: $color-text;
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__cards {
+      flex-wrap: wrap;
+    }
+
+    &__card:nth-child(1),
+    &__card:nth-child(2) {
+      max-width: 48%;
+    }
+
+    &__card:nth-child(3) {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__card:nth-child(1),
+    &__card:nth-child(2) {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__title {
+      margin-bottom: 8px;
+    }
+
+    &__cards {
+      gap: 12px;
+    }
+
+    &__text {
+      font-size: 19px;
+    }
+  }
+
+  &__card-text {
+    line-height: 125%;
+  }
+
+  &__card:nth-child(3) {
+    .analysisSection__card-text {
+      font-size: 19px;
+      line-height: 130%;
+    }
   }
 }

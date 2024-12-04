@@ -1,5 +1,5 @@
 .collectSection {
-  margin-bottom: 90px;
+  @include responsive-sizing(margin-bottom, 60, 90, 400, 1160);
 
   &__title {
     margin-bottom: 24px;
@@ -7,6 +7,7 @@
 
   &__content {
     display: flex;
+    align-items: flex-start;
     gap: 30px;
   }
 
@@ -20,6 +21,7 @@
     font-family: $second-family;
     font-weight: 400;
     font-size: 21px;
+    line-height: 125%;
     color: $color-text;
   }
 
@@ -27,7 +29,8 @@
     max-width: 560px;
     width: 100%;
     min-height: 211px;
-    padding: 24px 36px;
+    padding-block: 24px;
+    @include responsive-sizing(padding-inline, 20, 36, 400, 1160);
     border: 1px solid rgba(138, 169, 252, 0.1);
     border-radius: 24px;
     box-shadow: 2px 4px 4px 0 rgba(138, 169, 252, 0.12);
@@ -35,11 +38,52 @@
     font-family: $second-family;
     font-weight: 400;
     font-size: 21px;
+    line-height: 125%;
     color: $color-text;
   }
 
   &__content-right {
     max-width: 570px;
     width: 100%;
+
+    & img {
+      object-fit: contain;
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__content {
+      flex-direction: column;
+    }
+
+    &__content-left {
+      max-width: 100%;
+    }
+
+    &__card {
+      max-width: 100%;
+    }
+
+    &__content-right {
+      align-self: center;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    margin-bottom: 45px;
+
+    &__title {
+      margin-bottom: 8px;
+    }
+    &__text {
+      margin-bottom: 16px;
+      font-size: 19px;
+      line-height: 130%;
+    }
+
+    &__card {
+      font-size: 19px;
+      line-height: 130%;
+    }
   }
 }

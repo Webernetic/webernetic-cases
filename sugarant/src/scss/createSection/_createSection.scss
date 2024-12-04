@@ -1,5 +1,5 @@
 .createSection {
-  margin-bottom: 90px;
+  @include responsive-sizing(margin-bottom, 60, 90, 400, 1160);
 
   &__title {
     margin-bottom: 16px;
@@ -18,7 +18,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 14px;
-    margin-bottom: 90px;
+    @include responsive-sizing(margin-bottom, 60, 90, 400, 1160);
   }
 
   &__top-left,
@@ -27,7 +27,8 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 171px;
-    padding: 36px;
+    @include responsive-sizing(padding-inline, 20, 36, 768, 1160);
+    @include responsive-sizing(padding-block, 24, 36, 768, 1160);
     border: 1px solid rgba(138, 169, 252, 0.1);
     border-radius: 16px;
     box-shadow: 2px 4px 4px 0 rgba(138, 169, 252, 0.12);
@@ -52,11 +53,18 @@
   &__bottom {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    @include responsive-sizing(gap, 24, 40, 992, 1160);
+  }
+
+  &__bottom-pic {
+    & img {
+      object-position: left;
+      border-radius: 24px;
+    }
   }
 
   &__bottom-title {
-    margin-top: 66.5px;
+    @include responsive-sizing(margin-top, 10, 66.5, 992, 1160);
     margin-bottom: 16px;
   }
 
@@ -68,6 +76,71 @@
 
     &:last-child {
       margin-top: 6px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__bottom {
+      grid-template-columns: 1fr;
+    }
+
+    &__bottom-pic {
+      max-width: 70%;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__bottom-pic {
+      max-width: 90%;
+      border-radius: 18px;
+
+      & img {
+        border-radius: 18px;
+      }
+    }
+  }
+
+  @media (max-width: 700px) {
+    &__top {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__bottom-pic {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__title {
+      margin-bottom: 8px;
+    }
+
+    &__text {
+      font-size: 19px;
+      line-height: 130%;
+    }
+
+    &__top-title {
+      font-size: 24px;
+      margin-bottom: 6px;
+    }
+
+    &__bottom-title {
+      margin-bottom: 12px;
+      margin-top: 0;
+    }
+
+    &__top-left,
+    &__top-right {
+      min-height: 159px;
+    }
+
+    &__bottom-text {
+      font-size: 19px;
+      line-height: 130%;
     }
   }
 }

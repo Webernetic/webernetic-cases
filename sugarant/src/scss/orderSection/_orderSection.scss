@@ -7,7 +7,7 @@
     margin-bottom: 26px;
     font-family: $font-family;
     font-weight: 500;
-    font-size: 28px;
+    @include responsive-sizing(font-size, 24, 28, 400, 1160);
     line-height: 120%;
     text-align: center;
     color: $color-black;
@@ -21,7 +21,7 @@
     gap: 10px;
     padding: 56px 40px 56px 86px;
     @include responsive-sizing(padding-left, 20, 83, 992, 1440);
-    background-color: $color-light;
+    background-color: $color-purple;
     box-shadow: 2px 4px 9px 0 rgba(36, 24, 61, 0.1);
     border-radius: 12px;
   }
@@ -78,7 +78,7 @@
     font-family: $font-family;
     margin-bottom: 20px;
     font-weight: 500;
-    font-size: 36px;
+    @include responsive-sizing(font-size, 24, 36, 400, 1440);
     line-height: 125%;
     color: $color-black;
   }
@@ -139,7 +139,7 @@
     &_nameWrapper {
       width: 200px;
       height: 100px;
-      bottom: 35%;
+      bottom: 25%;
       padding: 15px;
     }
   }
@@ -170,23 +170,6 @@
   }
 
   @media (max-width: $breakpoints-md) {
-    &_title {
-      font-size: clamp(20px, calc(20px + 10 * (100vw - 400px) / 368), 30px);
-    }
-
-    &_formTitle {
-      font-size: clamp(24px, calc(24px + 18 * (100vw - 400px) / 368), 42px);
-    }
-
-    &_secondformTitle {
-      font-size: clamp(18px, calc(18px + 18 * (100vw - 400px) / 368), 36px);
-    }
-
-    &_checkboxWrapper {
-      & > label {
-        font-size: clamp(18px, calc(18px + 6 * (100vw - 400px) / 368), 24px);
-      }
-    }
   }
 
   @media (max-width: $breakpoints-sm) {
@@ -209,17 +192,13 @@
 
   @media (max-width: $breakpoints-xs) {
     &_wrapper {
-      padding: 46px 26px;
+      padding: 30px 26px;
     }
 
     &_title {
       margin-bottom: 20px;
-      font-size: 20px;
-    }
-
-    &_formTitle {
-      font-size: 22px;
-      line-height: 111%;
+      line-height: 126%;
+      text-align: left;
     }
 
     &_secondformTitle {
@@ -233,6 +212,7 @@
 
       & > input {
         height: 36px;
+        font-size: 18px;
       }
     }
 

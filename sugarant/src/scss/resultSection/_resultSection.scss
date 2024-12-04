@@ -1,5 +1,5 @@
 .resultSection {
-  margin-bottom: 90px;
+  @include responsive-sizing(margin-bottom, 60, 90, 400, 1160);
 
   &__title {
     margin-bottom: 26px;
@@ -8,9 +8,10 @@
   &__top {
     position: relative;
     min-height: 514px;
-    margin-bottom: 90px;
-    padding-top: 50px;
-    padding-inline: 100px;
+    @include responsive-sizing(margin-bottom, 60, 90, 400, 1160);
+    @include responsive-sizing(padding-top, 24, 50, 400, 1160);
+    @include responsive-sizing(padding-inline, 20, 100, 768, 1160);
+    border-radius: 24px;
     background-image: url('../assets/images/result-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -22,7 +23,7 @@
     margin-bottom: 20px;
     font-family: $font-family;
     font-weight: 500;
-    font-size: 22px;
+    @include responsive-sizing(font-size, 20, 22, 400, 1160);
     line-height: 140%;
     color: $color-black;
   }
@@ -41,18 +42,29 @@
     }
   }
 
+  &__pic.mobile {
+    display: none;
+  }
+
+  &__center-pic {
+    & img.mobile {
+      display: none;
+    }
+  }
+
   &__center-subtitle {
     max-width: 572px;
     min-height: 110px;
     margin-bottom: 18px;
-    padding: 24px 36px;
+    padding-block: 24px;
+    @include responsive-sizing(padding-inline, 20, 36, 400, 1160);
     border: 1px solid rgba(138, 169, 252, 0.1);
     border-radius: 18px;
     box-shadow: 2px 4px 4px 0 rgba(138, 169, 252, 0.12);
     background: $color-purple;
     font-family: $font-family;
     font-weight: 500;
-    font-size: 22px;
+    @include responsive-sizing(font-size, 20, 22, 400, 1160);
     line-height: 140%;
     color: $color-black;
   }
@@ -60,7 +72,7 @@
   &__bottom {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    @include responsive-sizing(gap, 24, 40, 992, 1160);
     margin-top: 80px;
   }
 
@@ -77,10 +89,93 @@
 
   &__bottom-right {
     min-height: 291px;
-    padding: 24px 26px;
+    padding-block: 24px;
+    @include responsive-sizing(padding-inline, 20, 26, 400, 1160);
     border: 1px solid rgba(138, 169, 252, 0.1);
     border-radius: 18px;
     box-shadow: 2px 4px 4px 0 rgba(138, 169, 252, 0.12);
     background: $color-purple;
+  }
+
+  @media (max-width: 1150px) {
+    &__top {
+      min-height: fit-content;
+    }
+
+    &__pic {
+      position: static;
+      height: auto;
+
+      & img {
+        object-fit: contain;
+        object-position: bottom;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__bottom {
+      grid-template-columns: 1fr;
+    }
+
+    &__center-pic {
+      height: 150px;
+      & img {
+        object-fit: cover;
+        object-position: left;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__top {
+      padding-bottom: 26px;
+      margin-bottom: 12px;
+    }
+
+    &__subtitle {
+      margin-bottom: 0;
+    }
+
+    &__pic {
+      display: none;
+    }
+
+    &__pic.mobile {
+      display: block;
+      height: 338px;
+      margin-bottom: 60px;
+    }
+
+    &__center-subtitle {
+      margin-bottom: 12px;
+    }
+
+    &__center-pic {
+      & img.mobile {
+        display: block;
+      }
+    }
+
+    &__center-pic {
+      & img {
+        display: none;
+      }
+    }
+
+    &__center-pic {
+      & img.mobile {
+        display: block;
+      }
+    }
+
+    &__bottom {
+      margin-top: 60px;
+    }
+
+    &__bottom-text {
+      font-size: 19px;
+      line-height: 130%;
+    }
   }
 }

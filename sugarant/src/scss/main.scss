@@ -41,6 +41,13 @@ body::-webkit-scrollbar {
   max-width: 1160px;
   width: 100%;
   margin: 0 auto;
+
+  @media (max-width: $breakpoints-xl) {
+    padding-inline: 15px;
+  }
+  @media (max-width: 400px) {
+    padding-inline: 20px;
+  }
 }
 
 ul,
@@ -77,7 +84,7 @@ picture {
 .sugarant-title {
   font-family: $font-family;
   font-weight: 500;
-  font-size: 36px;
+  @include responsive-sizing(font-size, 28, 36, 400, 1160);
   line-height: 125%;
   color: $color-black;
 }
