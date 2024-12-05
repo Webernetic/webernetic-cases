@@ -1,0 +1,26 @@
+-
+  var steps = [
+    {number: "01", text: "Анализ сайта и конкурентов"},
+    {number: "02",  text: "Сбор семантического ядра"}, 
+    {number: "03",   text: "Формирование структуры сайта"},
+    {number: "04",   text: "Написание контента"},    
+    {number: "05",   text: "Работа с блогом"},    
+    {number: "06",   text: "Наращивание ссылочной массы"},    
+  ]
+
+section.startSection
+  .startSection__top
+    h2.startSection__title.sugarant-title  Старт
+    .startSection__content
+      .startSection__left 
+        p.startSection__left-text Клиент, поставщик CRM для MCA, хотел начать привлекать первые <b>заявки уже на этапе MVP</b>.
+        p.startSection__left-text Но как этого добиться в конкурентной среде, когда <b>сайт</b> компании совсем <b>новый</b> и состоит всего из <b>одной страницы</b>?
+      .startSection__right
+        h3.startSection__right-title Ответ:
+        .startSection__right-text С помощью нашей команды!
+  .startSection__picture-box
+    .startSection__items-container
+      each step in steps
+        .startSection__item
+          .startSection__item-number=step.number
+          .startSection__item-text=step.text    

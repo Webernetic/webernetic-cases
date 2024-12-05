@@ -1,0 +1,140 @@
+.blogSection {
+  @include responsive-sizing(margin-bottom, 60, 90, 400, 1160);
+
+  &__title {
+    max-width: 560px;
+    margin-bottom: 6px;
+  }
+
+  &__subtitle {
+    margin-bottom: 24px;
+    font-family: $font5;
+    font-weight: 700;
+    @include responsive-sizing(font-size, 36, 42, 400, 1160);
+    line-height: 125%;
+    color: $color-dark-purple;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  &__content-text {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 21px;
+    color: $color-text;
+
+    &:first-child {
+      margin-bottom: 4px;
+    }
+
+    &.highlight {
+      min-height: 129px;
+      padding: 24px 26px;
+      @include responsive-sizing(padding-inline, 20, 24, 400, 1160);
+      margin-top: 12px;
+      border: 1px solid rgba(138, 169, 252, 0.1);
+      border-radius: 18px;
+      box-shadow: 2px 4px 4px 0 rgba(138, 169, 252, 0.12);
+      background: $color-purple;
+    }
+  }
+
+  &__content-right {
+    min-height: 391px;
+    margin-bottom: 16px;
+    padding: 48px 16px 36px 36px;
+
+    border: 1px solid rgba(138, 169, 252, 0.1);
+    border-radius: 24px;
+    box-shadow: 2px 4px 4px 0 rgba(138, 169, 252, 0.12);
+    background: #fff;
+  }
+
+  &__content-title {
+    margin-bottom: 16px;
+    font-family: $font-family;
+    font-weight: 500;
+    @include responsive-sizing(font-size, 24, 26, 400, 1160);
+    color: $color-black;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    gap: 22px;
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-right: 15px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-number {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    padding-block: 18px;
+    text-align: center;
+    background: $color-dark-purple;
+    color: #fff;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 125%;
+  }
+
+  &__item-text {
+    font-family: $second-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 18, 21, 400, 1160);
+    line-height: 125%;
+    color: $color-text;
+  }
+
+  @media (max-width: 900px) {
+    &__content {
+      grid-template-columns: 1fr;
+    }
+
+    &__content-right {
+      padding: 24px 20px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__title {
+      max-width: 320px;
+      margin-bottom: 2px;
+    }
+
+    &__subtitle {
+      margin-bottom: 12px;
+    }
+
+    &__content-right {
+      margin-bottom: 0;
+    }
+
+    &__content-text {
+      font-size: 19px;
+      line-height: 130%;
+    }
+
+    &__item {
+      gap: 16px;
+    }
+
+    &__item-number {
+      width: 50px;
+      height: 50px;
+      padding-block: 12.5px;
+      font-size: 20px;
+    }
+  }
+}

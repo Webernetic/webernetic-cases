@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Circe';
+  src: url('../assets/fonts/circe_regular.eot');
+  src:
+    url('../assets/fonts/circe_regular.woff') format('woff'),
+    url('../assets/fonts/circe_regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src:
+    url('../assets/fonts/lato-medium.woff2') format('woff2'),
+    url('../assets/fonts/lato-medium.woff') format('woff'),
+    url('../assets/fonts/lato-medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Stapel Text';
+  src:
+    url('../assets/fonts/Stapel_Regular.woff2') format('woff2'),
+    url('../assets/fonts/Stapel_Regular.woff') format('woff'),
+    url('../assets/fonts/Stapel_Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Stapel Medium';
+  src:
+    url('../assets/fonts/Stapel_Medium.woff2') format('woff2'),
+    url('../assets/fonts/Stapel_Medium.woff') format('woff'),
+    url('../assets/fonts/Stapel_Medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Caveat';
+  src:
+    url('../assets/fonts/Caveat-Bold.woff2') format('woff2'),
+    url('../assets/fonts/Caveat-Bold.woff') format('woff'),
+    url('../assets/fonts/Caveat-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}

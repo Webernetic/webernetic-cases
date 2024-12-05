@@ -1,0 +1,30 @@
+-
+  var stateItems = [
+    {number: "01", text: "Общий трафик — 14 пользователей/мес "},
+    {number: "02",  text: "Органический трафик — 2 пользователя/мес"}, 
+    {number: "03",   text: "Главная страница на 96 позиции в выдаче"},    
+  ]
+-
+  var resultItems = [
+    { text: "Трафик увеличился в <b>5 раз</b>"},
+    { text: "Сайт 4-й в выдаче по основным коммерческим запросам"},
+    { text: "А главное— клиент получает заявки на CRM-систему"},   
+  ]
+
+section.promotionSection
+  h2.promotionSection__title.sugarant-title Продвижение CRM для MCA
+  p.promotionSection__text Рассказываем, почему низкочастотные запросы — не приговор
+  .promotionSection__cards
+    .promotionSection__card
+      h3.promotionSection__card-title Состояние проекта до:
+      each item in stateItems
+        .promotionSection__item.left-item
+          .promotionSection__item-number=item.number
+          .promotionSection__item-text=item.text
+    .promotionSection__card
+      h3.promotionSection__card-title Кратко о результатах:
+      each item in resultItems
+        .promotionSection__item.right-item
+          .promotionSection__item-pic
+            img.promotionSection__item-image(src="./assets/icons/check.svg" alt="отмечено")
+          .promotionSection__item-text !{item.text}

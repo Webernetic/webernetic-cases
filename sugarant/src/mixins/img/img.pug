@@ -1,0 +1,32 @@
+mixin img(src, alt, resolutions=[], sizes=[["max-width: 500px", "100vw"],"100vw"])
+	-
+		var srcPath = [];
+		srcPath.push(src.substring(0, src.lastIndexOf('.')), src.substring(src.lastIndexOf('.')));
+		var srcset = [];
+		for (i = 0; i  <  resolutions.length; i++) {
+			srcset.push(srcPath.join("-" + resolutions[i]) + " " + resolutions[i] + "w");
+			console.log(srcset)
+		}
+		srcset = srcset.join(", ");
+		
+		var mediaSizes = [];
+		var defaultSize;
+		if (sizes.constructor === Array) {
+			for (var i = 0; i < sizes.length; i++) {
+				if (sizes[i].constructor === Array && sizes[i].length === 2) {
+				mediaSizes.push("\(" + sizes[i][0] + "\) " + sizes[i][1]);
+				}
+				else if (sizes[i].constructor === String) {
+					defaultSize = sizes[i];
+				}
+				else {
+					console.log("Check Sizes value: it can only take arrays of length 2, containing media query and width/pixel density descriptor, or default width as string")
+				}
+			}
+			sizes = mediaSizes.join(" ") + ", " + defaultSize;
+		}
+		else {
+			console.log("Sizes must be array or number")
+		}
+	img(src=src, alt=alt, srcset=srcset, sizes=sizes, loading="lazy")&attributes(attributes)
+

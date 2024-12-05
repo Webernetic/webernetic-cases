@@ -1,0 +1,163 @@
+.storySection {
+  position: relative;
+  height: 680px;
+  @include responsive-sizing(margin-bottom, 60, 90, 400, 1160);
+  background-image: url('../assets/images/hand.png');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 24px;
+  overflow: hidden;
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__top {
+    min-height: 380px;
+    padding-block: 50px 58px;
+    @include responsive-sizing(padding-left, 20, 40, 992, 1160);
+    @include responsive-sizing(padding-top, 32, 50, 992, 1160);
+    @include responsive-sizing(padding-bottom, 26, 50, 992, 1160);
+  }
+
+  &__top-content {
+    max-width: 509px;
+  }
+
+  &__text {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 21px;
+    color: $color-text;
+
+    &:last-child {
+      margin-top: 4px;
+    }
+  }
+
+  &__bottom {
+    min-height: 317px;
+    padding: 40px 40px 50px 40px;
+    border-radius: 24px;
+    @include responsive-sizing(padding-top, 32, 40, 992, 1160);
+    @include responsive-sizing(padding-bottom, 24, 50, 992, 1160);
+    @include responsive-sizing(padding-left, 20, 40, 992, 1160);
+  }
+
+  &__bottom-content {
+    max-width: 480px;
+  }
+
+  &__bottom-title {
+    margin-bottom: 18px;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 26px;
+    color: $color-black;
+  }
+
+  &__list {
+    padding-left: 15px;
+  }
+
+  &__list li {
+    position: relative;
+    margin-bottom: 7px;
+    padding-left: 20px;
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 21px;
+    color: $color-text;
+  }
+
+  &__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 4px;
+    height: 4px;
+    background-color: $color-text;
+    transform: rotate(45deg);
+  }
+
+  &__bottom-pic.mobile {
+    display: none;
+  }
+
+  @media (max-width: 900px) {
+    height: auto;
+    background-image: none;
+    background-color: #fff;
+
+    &__top {
+      min-height: 333px;
+      padding-right: 20px;
+      background-color: #fff;
+    }
+
+    &__top-content {
+      max-width: 100%;
+    }
+
+    &__list {
+      padding-right: 0;
+      padding-bottom: 0;
+
+      & li {
+        padding-right: 20px;
+      }
+    }
+
+    &__bottom {
+      background-color: $color-purple;
+      padding-bottom: 0;
+      padding-right: 0;
+    }
+
+    &__bottom-content {
+      max-width: 100%;
+    }
+
+    &__bottom-pic.mobile {
+      display: block;
+      width: 70%;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__bottom-pic.mobile {
+      width: 90%;
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__bottom-pic.mobile {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__title {
+      margin-bottom: 8px;
+    }
+
+    &__text {
+      font-size: 19px;
+      line-height: 130%;
+    }
+
+    &__bottom-title {
+      margin-bottom: 16px;
+    }
+
+    &__list li {
+      margin-bottom: 10px;
+      font-size: 19px;
+      line-height: 130%;
+    }
+  }
+}

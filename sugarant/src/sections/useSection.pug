@@ -1,0 +1,20 @@
+-
+  var cards = [
+    {src: "./assets/images/use1.png", title: "Изменение шапки профиля", text: "Скорректировали шапку профиля — добавили кнопку с призывом попробовать тестово продукт и контактные данные"},
+    {src: "./assets/images/use2.png", title: "Доработка меню сайта", text: "Добавили в него ссылки на страницы, которые помогут понять, как система решает проблемы клиентов, а для этого разместили кейсы"},
+    {src: "./assets/images/use3.png", title: "Правки разводящей блога", text: "Доработали разводящую страницу Блога, а точнее внедрили фильтр по статьям и поиск"},
+    {src: "./assets/images/use4.png", title: "Новые блоки на главной", text: "Улучшили главную страницу, добавили блоки, которые позволят ознакомиться с продуктом и компанией, повысят лояльность"},
+  ]
+
+
+section.useSection
+  h2.useSection__title.sugarant-title Анализ юзабилити
+  .useSection__subtitle Для улучшения сайта для пользователей и Google команда провела анализ юзабилити и конкурентов, предложив улучшения пользовательского опыта и новый функционал. Однако из-за незавершенности CRM-системы не все предложения были реализованы. Некоторые изменения уже внедрены.
+  .useSection__cards
+    each card in cards
+      .useSection__card
+        .useSection__card-pic
+          img.useSection__card-image(src=card.src)
+        .useSection__card-content
+          h3.useSection__card-title=card.title
+          p.useSection__card-text=card.text

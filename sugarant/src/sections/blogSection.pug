@@ -1,0 +1,21 @@
+-
+  var items = [
+    {number: "01", text: "С общими запросами, чтобы привлекать на сайт дополнительный трафик."},
+    {number: "02",  text: "С низкочастотными ключами, такие статьи обычно привлекают целевые заявки."}, 
+    {number: "03",   text: "И без учёта семантики. Эти статьи написаны по инициативе клиента, и также интересны пользователям."},    
+  ]
+
+section.blogSection
+  h2.blogSection__title.sugarant-title А Блог мы поставили во главу стратегии продвижения.
+  h3.blogSection__subtitle <strong>Неожиданно, правда?</strong>
+  .blogSection__content
+    .blogSection__content-left
+      p.blogSection__content-text Дело в том, что Google поддерживает сайты с правильным и экспертным контентом, и мы этим воспользовались.
+      p.blogSection__content-text Но основная причина для такого решения — CRM для MCA редко ищут, а заявки клиенту нужны. Поэтому мы начали <b>создавать статьи в Блог на смежные и более частотные темы</b>, а в конце текста плавно переходили к рассказу о CRM для MCA, возможностях и преимуществах системы, предлагали демо-версию.
+      p.p.blogSection__content-text.highlight  И эта стратегия сработала, клиент стал получать первые заявки! А усилили мы результат с помощью наращивания ссылок.
+    .blogSection__content-right
+      h3.blogSection__content-title Статьи писали 3 типов:
+      each item in items
+        .blogSection__item
+          .blogSection__item-number=item.number
+          .blogSection__item-text=item.text
