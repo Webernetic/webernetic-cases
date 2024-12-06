@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'Circe';
+  src: url('../assets/fonts/circe_regular.eot');
+  src:
+    url('../assets/fonts/circe_regular.woff') format('woff'),
+    url('../assets/fonts/circe_regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src:
+    url('../assets/fonts/lato-medium.woff2') format('woff2'),
+    url('../assets/fonts/lato-medium.woff') format('woff'),
+    url('../assets/fonts/lato-medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src:
+    url('../assets/fonts/Inter-Regular.woff2'),
+    url('../assets/fonts/Inter-Regular.woff') format('woff'),
+    url('../assets/fonts/Inter-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Onest';
+  src:
+    url('../assets/fonts/Onest-Regular.woff2'),
+    url('../assets/fonts/Onest-Regular.woff') format('woff'),
+    url('../assets/fonts/Onest-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Onest';
+  src:
+    url('../assets/fonts/Onest-Medium.woff2'),
+    url('../assets/fonts/Onest-Medium.woff') format('woff'),
+    url('../assets/fonts/Onest-Medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Onest';
+  src:
+    url('../assets/fonts/Onest-Light.woff2'),
+    url('../assets/fonts/Onest-Light.woff') format('woff'),
+    url('../assets/fonts/Onest-Light.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 300;
+}

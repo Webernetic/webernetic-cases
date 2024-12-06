@@ -1,0 +1,19 @@
+-
+  var cards = [
+    {title: "8% запросов в Топ-10 Яндекс", number: "98%" , text: "запросов"},
+    {title: "0% запросов в Топ-10 Google", number: "82%" ,  text: "запросов"}, 
+    {title: "39 новых пользователей/месяц",  number: "993" ,  text: "пользователей /месяц"},
+    
+  ]
+
+section.resultSection
+  h2.resultSection__title.mps-title Кратко о результатах:
+  .resultSection__cards
+    each card in cards
+      .resultSection__card
+        p.resultSection__card-title=card.title
+        .resultSection__card-content
+          p.resultSection__card-text Стало:
+          .resultSection__card-item
+            span.resultSection__card-number=card.number
+            span.resultSection__card-item-text=card.text

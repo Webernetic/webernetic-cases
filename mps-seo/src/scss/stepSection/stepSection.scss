@@ -1,0 +1,325 @@
+.stepSection {
+  &__highlight {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    min-height: 74px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    padding: 6px 21px;
+    box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, 0.06);
+    background: $color-blue;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  &__highlight-number {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 52px;
+    line-height: 120%;
+    text-align: center;
+    color: #fff;
+  }
+
+  &__highlight-text {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 120%;
+    color: #f2f9ff;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  &__content-left.first {
+    min-height: 500px;
+    border-radius: 24px;
+    padding: 30px 40px;
+    box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, 0.06);
+    background: #fff;
+  }
+
+  &__content-top,
+  &__content-bottom {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: $color-extra;
+  }
+
+  &__content-top {
+    margin-bottom: 40px;
+
+    & span {
+      font-weight: 500;
+    }
+  }
+
+  &__content-bottom {
+    border-radius: 14px;
+    padding: 16px 20px;
+    background-color: #e1f1ff;
+
+    & span {
+      font-weight: 500;
+    }
+  }
+
+  &__content-left.second {
+    border-radius: 14px;
+  }
+
+  &__content-right.second {
+    border-radius: 24px;
+    padding: 30px 40px;
+    min-height: 345px;
+    background-color: #fff;
+  }
+
+  &__content-main {
+    min-height: 180px;
+    border-radius: 24px;
+    padding: 30px 40px;
+    margin-bottom: 20px;
+    background-image: url('../assets/images/step-bg.png');
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+
+  &__main-text {
+    max-width: 520px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  &__card {
+    border-radius: 24px;
+    padding: 24px;
+    background-color: #fff;
+  }
+
+  &__card-pic {
+    margin-bottom: 16px;
+  }
+
+  &__card-text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: $color-extra;
+  }
+
+  &__content.fourth {
+    min-height: 322px;
+    gap: 30px;
+    margin-bottom: 80px;
+    border-radius: 14px;
+    padding: 30px 40px;
+    box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, 0.06);
+    background: #fff;
+  }
+
+  &__content-icon {
+    display: block;
+    width: 28px;
+    height: 28px;
+  }
+
+  &__content-icon.fourth {
+    margin-bottom: 24px;
+  }
+
+  &__content-text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    color: $color-extra;
+  }
+
+  &__content-right {
+    & span {
+      font-weight: 500;
+    }
+  }
+
+  &__message-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 80px;
+  }
+
+  &__message-left {
+    min-height: 434px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 24px;
+    padding: 30px 40px;
+    box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, 0.06);
+    background: #fff;
+  }
+
+  &__message-title {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    color: $color-blue;
+  }
+
+  &__message-right {
+    padding: 31px 71px;
+    border-radius: 24px;
+    background: #eaeef6;
+  }
+
+  &__message-image {
+    display: block;
+  }
+
+  &__traffic {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 80px;
+  }
+
+  &__traffic-bottom {
+    min-height: 158px;
+    border-radius: 14px;
+    padding: 16px 20px;
+    box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, 0.06);
+    background: $color-light-blue;
+  }
+
+  &__traffic-right {
+    border-radius: 24px;
+    padding: 80px 45px 30px 40px;
+    background-color: #fff;
+
+    & span {
+      font-weight: 500;
+    }
+  }
+
+  &__traffic-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 222px;
+    min-height: 36px;
+    padding: 4px 12px;
+    margin-bottom: 24px;
+    border: 1px solid $color-blue;
+    border-radius: 12px;
+  }
+
+  &__traffic-btn-text {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: $color-blue;
+  }
+
+  &__traffic-text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    color: $color-extra;
+  }
+
+  &__conversion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 80px;
+  }
+
+  &__conversion-left {
+    min-height: 324px;
+    border-radius: 24px;
+    padding: 30px 40px;
+    background-color: #fff;
+  }
+
+  &__conversion-left-top {
+    min-height: 80px;
+    margin-bottom: 16px;
+    border-radius: 14px;
+    padding: 16px 20px;
+    box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, 0.06);
+    background: $color-light-blue;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: $color-blue;
+  }
+
+  &__conversion-left-bottom span {
+    font-weight: 500;
+  }
+
+  &__optimization {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 80px;
+  }
+
+  &__optimization-right {
+    border-radius: 24px;
+    padding: 30px 40px;
+    box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, 0.06);
+    background: #fff;
+  }
+
+  &__optimization-right-top {
+    margin-bottom: 30px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: $color-extra;
+
+    & span {
+      font-weight: 500;
+    }
+  }
+
+  &__optimization-right-bottom {
+    min-height: 186px;
+    border-radius: 14px;
+    padding: 16px 20px;
+    box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, 0.06);
+    background: $color-light-blue;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    color: $color-extra;
+
+    & span {
+      font-weight: 500;
+    }
+  }
+}
