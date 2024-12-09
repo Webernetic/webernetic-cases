@@ -1,0 +1,98 @@
+-
+  var cards = [
+    {src: "./assets/images/step3.png", text: "Добавить ссылки на основные услуги и на главной странице баннер с активной кнопкой, с помощью которой люди смогут оставить свои контактные данные для связи."},
+    {src: "./assets/images/step4.png", text: "Оптимизировать мобильную версию сайта. В исходной версии сайта элементы хедера накладывались друг на друга, поэтому мы предложили рационально разместить информацию в нем, например, заменить номер телефона на значок трубки, чтобы сэкономить место. "},
+    {src: "./assets/images/step5.png", text: "Дополнить главную страницу блоком со ссылками на информационные статьи и последние новости сайта."},
+    {src: "./assets/images/step6.png", text: "Улучшить главное меню страницы и футер, добавив пункты “Специализации”, “О нас” и “Блог”, а также ссылки на соцсети и предлагаемые услуги."},
+   
+  ]
+
+section.stepSection
+  h2.stepSection__title.mps-title Этапы работы:
+  .stepSection__highlight
+    .stepSection__highlight-number 01
+    .stepSection__highlight-text Формирование семантического ядра
+  .stepSection__content.first
+    .stepSection__content-left.first
+      p.stepSection__content-top Оптимизацию сайта начали с формирования семантического ядра. 
+        | Собирали как коммерческие, так и информационные ключевые запросы. Первые для привлечения клиентов, 
+        | а вторые — для аудитории, которая ищет информацию о трудоустройстве врачей в Польше и потенциально ей могут быть интересны услуги компании.
+      p.stepSection__content-bottom <span>Ядро вышло небольшим:</span> всего 65 ключей. Ещё во время сбора семантики мы заметили, 
+        |что из-за узкой ниши <span>запросы низкочастотные и среднечастотные</span>, то есть люди ищут подобные услуги достаточно редко.
+        | О том, как <span>мы решили эту проблему</span>, расскажем немного дальше.
+    .stepSection__content-right
+      img.stepSection__content-image(src="./assets/images/step1.png", alt="врач")
+  .stepSection__highlight
+    .stepSection__highlight-number 02
+    .stepSection__highlight-text Анализ юзабилити
+  .stepSection__content.second
+    .stepSection__content-left.second
+      img.stepSection__content-image(src="./assets/images/step2.png", alt="вакансии")
+    .stepSection__content-right.second
+      p.stepSection__content-text  После перешли к анализу юзабилити. Основное правило клуба сеошников — сайт должен
+        |быть интуитивно понятным. Когда человек заходит на страницу, ему важно быстро найти нужную информацию или контакты
+        | компании для дальнейшей связи. Если же сайтом неудобно пользоваться, то будет увеличиваться процент отказа и уменьшаться время, которое клиенты проводят на страницах. Это негативно скажется на поведенческих факторах и позициях в выдаче.
+  .stepSection__highlight
+    .stepSection__highlight-number 03
+    .stepSection__highlight-text Улучшение пользовательского опыта
+  .stepSection__content-main 
+    p.stepSection__main-text Поэтому наша команда проанализировала, насколько удобны сайты конкурентов, сравнила их с нашим проектом. В результате предложила ряд изменений, которые помогли улучшить пользовательский опыт:
+  .stepSection__cards
+    each card in cards
+      .stepSection__card
+        .stepSection__card-pic
+          img.stepSection__card-image(src=card.src, alt="скрин сайта")
+        p.stepSection__card-text=card.text
+  .stepSection__highlight
+    .stepSection__highlight-number 04
+    .stepSection__highlight-text Внешняя оптимизация
+  .stepSection__content.fourth
+    .stepSection__content-left
+      p.stepSection__content-top.fourth Далее перешли к <span>внешней оптимизации</span> веб-сайта и с помощью наращивания ссылочной массы решили частично компенсировать молодой возраст домена.
+      .stepSection__content-bottom
+        img.stepSection__content-icon.fourth(src="./assets/icons/notepad.svg", alt="блокнот")
+        p.stepSection__content-text.fourth   Когда на ресурс ссылаются авторитетные источники, поисковые системы воспринимают это как знак его полезности, а значит доверия к таким сайтам больше. 
+    .stepSection__content-right.fourth  В качестве доноров использовали <span>тематические блоги и новостные ресурсы</span>: именно там находилась наша целевая аудитория. Выбрали сайты с подходящими доменными зонами. Делали упор на «ru», «com», «by» и «pl»: они актуальны для нашей целевой аудитории и региона, в котором нужно было выйти в Топ. Ссылки <span>наращивали постепенно</span>, чтобы не попасть под фильтр.
+  .stepSection__message-box
+    .stepSection__message-left
+      p.stepSection__message-title Интригующий вопрос
+      .stepSection__message-pic
+        img.stepSection__message-image(src="./assets/images/step7.png", alt="сообщение")
+        img.stepSection__message-image.mobile(src="./assets/images/step7-mobile.png", alt="сообщение")
+    .stepSection__message-right
+      img.stepSection__message-image(src="./assets/images/step8.png", alt="данные")
+  .stepSection__highlight.fifth
+    .stepSection__highlight-number 05
+    .stepSection__highlight-text Привлечение дополнительного трафика
+  .stepSection__traffic
+    .stepSection__traffic-left
+      .stepSection__traffic-pic
+        img.stepSection__traffic-image(src="./assets/images/step9.png", alt="запись")
+        img.stepSection__traffic-image.mobile(src="./assets/images/step9-mobile.png", alt="запись")
+      .stepSection__traffic-bottom
+        .stepSection__traffic-btn
+          img.stepSection__content-icon(src="./assets/icons/notepad.svg", alt="блокнот")
+          .stepSection__traffic-btn-text Минутка Википедии
+        p.stepSection__traffic-text Нострификация — это процедура подтверждение диплома в принимащей стране. После признания документа, врач из СНГ имеет право устроиться на работу в Польше.
+    .stepSection__traffic-right Поскольку частотность ключей была небольшой, мы стали искать <span>способы привлечения дополнительного трафика</span> на сайт и решили сделать ставку на блог. <span>Статьи писали на темы, связанные с переездом врачей</span>: как устроиться на работу врачу в Польше, какие документы для этого нужны, что такое нострификация. 
+      |Мы всегда <span>разбираемся в терминологии</span>, чтобы <span>погрузиться в особенности</span> ниши и поведения пользователей, а еще определить, каким должен быть контент.  
+  .stepSection__highlight
+    .stepSection__highlight-number 06
+    .stepSection__highlight-text Конвертация трафика
+  .stepSection__conversion
+    .stepSection__conversion-left
+      .stepSection__conversion-left-top Но это информационный трафик, а как его конвертировать в коммерческий?
+      .stepSection__conversion-left-bottom В конце каждой статьи мы плавно переходили к <span>описанию услуг компании</span>, <span>добавляли ссылки</span> на коммерческие страницы и <span>форму для обратной</span> связи. Благодаря такому решению мы упростили пользователям переход от информации к действию и помогли превратить обычный интерес в потенциальных клиентов.
+    .stepSection__conversion-right
+      img.stepSection__conversion-image(src="./assets/images/step10.png", alt="логотип")
+  .stepSection__highlight
+    .stepSection__highlight-number 07
+    .stepSection__highlight-text Оптимизация коммерческих страниц
+  .stepSection__optimization
+    .stepSection__optimization-left
+      img.stepSection__optimization-image(src="./assets/images/step11.png", alt="медицинские инструменты")
+    .stepSection__optimization-right
+      .stepSection__optimization-right-top Улучшали также и коммерческие страницы. 
+        |Изначально сайт состоял <span>только из главной</span> страницы и <span>нескольких коммерческих</span>. Из-за этого контент не всегда был релевантным запросу пользователя, и потенциальный клиент мог просто закрыть страницу, так и не найдя нужную информацию. 
+      .stepSection__optimization-right-bottom Поэтому мы предложили создать <span>под каждую группу ключей</span> свою посадочную. Например, поисковые фразы, связанные с работой терапевта, вести на страницу “Работа терапевтом в Польше”. Так мы <span>учли специфику запросов</span> врачей по их профессиям и смогли охватить больший сегмент аудитории. 
+      

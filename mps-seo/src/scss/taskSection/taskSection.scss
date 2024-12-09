@@ -1,0 +1,50 @@
+.taskSection {
+  display: flex;
+  gap: 40px;
+  @include responsive-sizing(gap, 24, 40, 992, 1160);
+  margin-bottom: 80px;
+  border-radius: 24px;
+  padding: 40px;
+  @include responsive-sizing(padding-inline, 20, 40, 992, 1160);
+  @include responsive-sizing(padding-block, 26, 40, 992, 1160);
+  background-color: #fff;
+
+  &__left {
+    max-width: 320px;
+    min-width: 220px;
+  }
+
+  &__right {
+    max-width: 720px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__title.right-title {
+    max-width: 431px;
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 18, 20, 400, 1160);
+    line-height: 120%;
+    color: $color-extra;
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    flex-direction: column;
+
+    &__left {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__title {
+      margin-bottom: 8px;
+    }
+  }
+}

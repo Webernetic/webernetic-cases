@@ -1,0 +1,50 @@
+@import './fonts';
+
+@mixin responsive-sizing($prop, $min, $max, $minDisplay, $maxDisplay) {
+  $sizeDiff: $max - $min;
+  $displayDiff: $maxDisplay - $minDisplay;
+
+  #{$prop}: clamp(
+    #{$min}px,
+    calc(
+      #{$min}px +
+        (#{$sizeDiff} * ((100vw - #{$minDisplay}px) / #{$displayDiff}))
+    ),
+    #{$max}px
+  );
+}
+
+@mixin inverse-responsive-sizing($prop, $min, $max, $minDisplay, $maxDisplay) {
+  $sizeDiff: $max - $min;
+  $displayDiff: $maxDisplay - $minDisplay;
+
+  #{$prop}: clamp(
+    #{$min}px,
+    calc(#{$max}px - ($sizeDiff * (100vw - #{$minDisplay}px) / $displayDiff)),
+    #{$max}px
+  );
+}
+
+$max-width: 1240px;
+
+//fonts
+$font-family: 'Onest';
+$second-family: 'Lato';
+$third-family: 'Circe';
+$font3: 'Inter';
+
+//colors
+$color-bg: #f6f6f6;
+$color-blue: #5787e6;
+$color-light-blue: #e1f1ff;
+$color-main: #272727;
+$color-extra: rgba(39, 39, 39, 0.8);
+$color-coral: #fb5f5f;
+
+//breakpoints
+$breakpoints-xs: 400px;
+$breakpoints-sm: 576px;
+$breakpoints-md: 768px;
+$breakpoints-lg: 992px;
+$breakpoints-xl: 1200px;
+$breakpoints-xxl: 1400px;
