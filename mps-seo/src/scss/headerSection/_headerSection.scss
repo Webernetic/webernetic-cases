@@ -6,8 +6,11 @@
     min-height: 710px;
     margin-bottom: 80px;
     padding: 40px 40px 0;
+    border-radius: 24px;
+    @include responsive-sizing(padding-top, 28, 40, 400, 1160);
+    @include responsive-sizing(padding-inline, 20, 40, 400, 1160);
     background-image: url('../assets/images/banner.png');
-    background-position: center;
+    background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -18,20 +21,20 @@
     font-family: $font-family;
     font-weight: 500;
     font-size: 48px;
+    @include responsive-sizing(font-size, 26, 48, 400, 1160);
     line-height: 120%;
     color: $color-main;
   }
 
   &__subtitle {
-    max-width: 304px;
-    width: 100%;
-    min-height: 56px;
+    max-width: fit-content;
     margin-bottom: 4px;
+    padding-inline: 18px;
     border-radius: 15px;
     text-align: center;
     font-family: $font-family;
     font-weight: 400;
-    font-size: 28px;
+    @include responsive-sizing(font-size, 22, 28, 400, 1160);
     line-height: 56px;
     color: $color-blue;
     background-color: $color-light-blue;
@@ -41,7 +44,7 @@
     margin-left: 20px;
     font-family: $font-family;
     font-weight: 400;
-    font-size: 28px;
+    @include responsive-sizing(font-size, 22, 28, 400, 1160);
     line-height: 127.5%;
     color: $color-main;
   }
@@ -54,12 +57,17 @@
     gap: 8px;
   }
 
+  &__cards.mobile {
+    display: none;
+    margin-bottom: 70px;
+  }
+
   &__card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 155px;
-    width: 220px;
+    max-width: 220px;
     border-radius: 16px;
     padding: 20px;
     background-color: $color-light-blue;
@@ -68,14 +76,14 @@
   &__card-title {
     font-family: $font-family;
     font-weight: 400;
-    font-size: 24px;
+    @include responsive-sizing(font-size, 20, 24, 400, 1160);
     line-height: 120%;
     color: $color-blue;
   }
   &__card-text {
     font-family: $font-family;
     font-weight: 400;
-    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1160);
     line-height: 120%;
     color: $color-main;
   }
@@ -83,5 +91,46 @@
   &__card-pic {
     width: 72px;
     height: 39px;
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__banner {
+      min-height: 646px;
+      margin-bottom: 12px;
+      background-image: url('../assets/images/banner-mobile.png');
+    }
+
+    &__cards {
+      display: none;
+    }
+
+    &__cards.mobile {
+      display: flex;
+      flex-direction: column;
+      position: static;
+      gap: 8px;
+    }
+
+    &__card {
+      max-width: 100%;
+      min-height: 120px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__title {
+      margin-bottom: 14px;
+      line-height: 130%;
+    }
+
+    &__subtitle {
+      padding-left: 12px;
+      line-height: 48px;
+    }
+
+    &__text {
+      max-width: 200px;
+      margin-left: 12px;
+    }
   }
 }

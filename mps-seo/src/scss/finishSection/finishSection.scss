@@ -3,7 +3,13 @@
   margin-bottom: 80px;
   padding-left: 30px;
   padding-top: 208px;
+  padding-right: 30px;
   background-image: url('../assets/images/finish-bg.png');
+  background-repeat: no-repeat;
+
+  &__pic {
+    display: none;
+  }
 
   &__content {
     max-width: 537px;
@@ -18,8 +24,34 @@
     margin-bottom: 12px;
     font-family: $font-family;
     font-weight: 400;
-    font-size: 32px;
+    @include responsive-sizing(font-size, 26, 32, 400, 1160);
     line-height: 120%;
     color: $color-blue;
+  }
+
+  &__content-text {
+    @include responsive-sizing(font-size, 18, 20, 400, 1160);
+    line-height: 120%;
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    background-image: none;
+    margin-bottom: 70px;
+    padding-inline: 0;
+    padding-top: 0;
+
+    &__content {
+      max-width: 100%;
+      padding-inline: 20px;
+    }
+
+    &__pic {
+      display: block;
+      height: 360px;
+      margin-bottom: 8px;
+      background-image: url('../assets/images/finish-bg-mobile.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 }

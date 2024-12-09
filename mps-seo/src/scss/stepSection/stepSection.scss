@@ -4,7 +4,7 @@
     align-items: center;
     gap: 26px;
     min-height: 74px;
-    margin-top: 80px;
+    @include responsive-sizing(margin-top, 50, 80, 400, 1160);
     margin-bottom: 20px;
     border-radius: 14px;
     padding: 6px 21px;
@@ -19,7 +19,7 @@
   &__highlight-number {
     font-family: $font-family;
     font-weight: 500;
-    font-size: 52px;
+    @include responsive-sizing(font-size, 48, 52, 400, 1160);
     line-height: 120%;
     text-align: center;
     color: #fff;
@@ -29,6 +29,7 @@
     font-family: $font-family;
     font-weight: 500;
     font-size: 26px;
+    @include responsive-sizing(font-size, 20, 26, 400, 1160);
     line-height: 120%;
     color: #f2f9ff;
   }
@@ -42,22 +43,31 @@
   &__content-left.first {
     min-height: 500px;
     border-radius: 24px;
-    padding: 30px 40px;
+    @include responsive-sizing(padding-inline, 20, 40, 992, 1160);
+    @include responsive-sizing(padding-block, 26, 30, 992, 1160);
     box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, 0.06);
     background: #fff;
+  }
+
+  &__content-right {
+    border-radius: 24px;
+
+    & img {
+      border-radius: 24px;
+    }
   }
 
   &__content-top,
   &__content-bottom {
     font-family: $font-family;
     font-weight: 400;
-    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1160);
     line-height: 120%;
     color: $color-extra;
   }
 
   &__content-top {
-    margin-bottom: 40px;
+    @include responsive-sizing(margin-bottom, 14, 40, 992, 1160);
 
     & span {
       font-weight: 500;
@@ -76,11 +86,16 @@
 
   &__content-left.second {
     border-radius: 14px;
+
+    & img {
+      border-radius: 14px;
+    }
   }
 
   &__content-right.second {
     border-radius: 24px;
-    padding: 30px 40px;
+    @include responsive-sizing(padding-inline, 20, 40, 992, 1160);
+    @include responsive-sizing(padding-block, 26, 30, 992, 1160);
     min-height: 345px;
     background-color: #fff;
   }
@@ -89,6 +104,8 @@
     min-height: 180px;
     border-radius: 24px;
     padding: 30px 40px;
+    @include responsive-sizing(padding-block, 26, 30, 400, 1160);
+    @include responsive-sizing(padding-inline, 20, 40, 400, 1160);
     margin-bottom: 20px;
     background-image: url('../assets/images/step-bg.png');
     background-size: cover;
@@ -98,6 +115,8 @@
 
   &__main-text {
     max-width: 520px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1160);
+    line-height: 120%;
   }
 
   &__cards {
@@ -119,7 +138,7 @@
   &__card-text {
     font-family: $font-family;
     font-weight: 400;
-    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1160);
     line-height: 120%;
     color: $color-extra;
   }
@@ -127,9 +146,10 @@
   &__content.fourth {
     min-height: 322px;
     gap: 30px;
-    margin-bottom: 80px;
+    @include responsive-sizing(margin-bottom, 50, 80, 400, 1160);
     border-radius: 14px;
-    padding: 30px 40px;
+    @include responsive-sizing(padding-inline, 20, 40, 992, 1160);
+    @include responsive-sizing(padding-block, 26, 30, 992, 1160);
     box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, 0.06);
     background: #fff;
   }
@@ -162,16 +182,17 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    margin-bottom: 80px;
+    @include responsive-sizing(margin-bottom, 50, 80, 400, 1160);
   }
 
   &__message-left {
-    min-height: 434px;
+    @include responsive-sizing(min-height, 276, 434, 992, 1160);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border-radius: 24px;
-    padding: 30px 40px;
+    @include responsive-sizing(padding-inline, 20, 40, 992, 1160);
+    @include responsive-sizing(padding-block, 26, 30, 992, 1160);
     box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, 0.06);
     background: #fff;
   }
@@ -179,13 +200,14 @@
   &__message-title {
     font-family: $font-family;
     font-weight: 500;
-    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1160);
     line-height: 120%;
     color: $color-blue;
   }
 
   &__message-right {
     padding: 31px 71px;
+    @include responsive-sizing(padding-inline, 10, 71, 992, 1160);
     border-radius: 24px;
     background: #eaeef6;
   }
@@ -194,11 +216,19 @@
     display: block;
   }
 
+  &__message-image.mobile {
+    display: none;
+  }
+
   &__traffic {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    margin-bottom: 80px;
+    @include responsive-sizing(margin-bottom, 50, 80, 400, 1160);
+  }
+
+  &__traffic-image.mobile {
+    display: none;
   }
 
   &__traffic-bottom {
@@ -211,7 +241,12 @@
 
   &__traffic-right {
     border-radius: 24px;
-    padding: 80px 45px 30px 40px;
+    @include responsive-sizing(padding-top, 26, 80, 992, 1160);
+    @include responsive-sizing(padding-bottom, 26, 30, 992, 1160);
+    @include responsive-sizing(padding-right, 20, 45, 992, 1160);
+    @include responsive-sizing(padding-left, 20, 40, 992, 1160);
+    @include responsive-sizing(font-size, 18, 20, 400, 1160);
+    line-height: 120%;
     background-color: #fff;
 
     & span {
@@ -251,13 +286,14 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    margin-bottom: 80px;
+    @include responsive-sizing(margin-bottom, 50, 80, 400, 1160);
   }
 
   &__conversion-left {
     min-height: 324px;
     border-radius: 24px;
-    padding: 30px 40px;
+    @include responsive-sizing(padding-inline, 20, 40, 992, 1160);
+    @include responsive-sizing(padding-block, 26, 30, 992, 1160);
     background-color: #fff;
   }
 
@@ -270,25 +306,45 @@
     background: $color-light-blue;
     font-family: $font-family;
     font-weight: 400;
-    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1160);
     line-height: 120%;
     color: $color-blue;
+  }
+
+  &__conversion-left-bottom {
+    @include responsive-sizing(font-size, 18, 20, 400, 1160);
+    line-height: 120%;
   }
 
   &__conversion-left-bottom span {
     font-weight: 500;
   }
 
+  &__conversion-right {
+    & img {
+      object-fit: contain;
+    }
+  }
+
   &__optimization {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    margin-bottom: 80px;
+    @include responsive-sizing(margin-bottom, 50, 80, 400, 1160);
+  }
+
+  &__optimization-left {
+    border-radius: 24px;
+
+    & img {
+      border-radius: 24px;
+    }
   }
 
   &__optimization-right {
     border-radius: 24px;
-    padding: 30px 40px;
+    @include responsive-sizing(padding-inline, 20, 40, 992, 1160);
+    @include responsive-sizing(padding-block, 26, 30, 992, 1160);
     box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, 0.06);
     background: #fff;
   }
@@ -297,7 +353,7 @@
     margin-bottom: 30px;
     font-family: $font-family;
     font-weight: 400;
-    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1160);
     line-height: 120%;
     color: $color-extra;
 
@@ -314,12 +370,182 @@
     background: $color-light-blue;
     font-family: $font-family;
     font-weight: 400;
-    font-size: 18px;
+    @include responsive-sizing(font-size, 17, 18, 400, 1160);
     line-height: 120%;
     color: $color-extra;
 
     & span {
       font-weight: 500;
+    }
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__content-main {
+      background-position: center 25%;
+    }
+
+    &__traffic-pic {
+      height: 260px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    &__content {
+      grid-template-columns: 1fr;
+    }
+
+    &__cards {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    &__content-left.first {
+      min-height: 0;
+    }
+
+    &__content-right.second {
+      min-height: 250px;
+    }
+
+    &__title.mps-title {
+      margin-bottom: 24px;
+    }
+
+    &__traffic {
+      grid-template-columns: 1fr;
+    }
+
+    &__traffic-pic {
+      min-height: 300px;
+
+      & img {
+        object-fit: cover;
+      }
+    }
+
+    &__conversion {
+      grid-template-columns: 1fr;
+    }
+
+    &__optimization {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    &__optimization-right {
+      order: 1;
+    }
+
+    &__optimization-left {
+      order: 2;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__message-box {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    &__message-title {
+      margin-bottom: 14px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__highlight {
+      gap: 16px;
+      padding: 6px 18px;
+      margin-bottom: 8px;
+    }
+
+    &__content {
+      gap: 8px;
+    }
+
+    &__content-main {
+      min-height: 360px;
+      background-image: url('../assets/images/step-bg-mobile.png');
+      background-repeat: no-repeat;
+      margin-bottom: 8px;
+    }
+
+    &__content.fourth {
+      gap: 14px;
+    }
+
+    &__content-top.fourth {
+      margin-bottom: 20px;
+    }
+
+    &__content-icon.fourth {
+      margin-bottom: 16px;
+    }
+
+    &__content-text.fourth {
+      font-size: 17px;
+    }
+
+    &__content-right.fourth {
+      font-size: 18px;
+      line-height: 120%;
+    }
+
+    &__message-pic {
+      background-repeat: no-repeat;
+    }
+
+    &__message-pic .stepSection__message-image {
+      display: none;
+    }
+
+    &__message-pic .stepSection__message-image.mobile {
+      display: block;
+    }
+
+    &__message-right {
+      padding-block: 10px;
+      padding-inline: 20px;
+    }
+
+    &__traffic {
+      gap: 8px;
+    }
+
+    &__traffic-pic {
+      height: 300px;
+      margin-bottom: 8px;
+    }
+
+    &__traffic-image {
+      display: none;
+    }
+    &__traffic-image.mobile {
+      display: block;
+    }
+
+    &__highlight.fifth {
+      margin-bottom: 16px;
+    }
+
+    &__traffic-text {
+      font-size: 17px;
+    }
+
+    &__conversion {
+      gap: 8px;
+    }
+
+    &__conversion-left-top {
+      margin-bottom: 14px;
+    }
+
+    &__optimization-left {
+      height: 300px;
+    }
+
+    &__optimization-right-top {
+      margin-bottom: 14px;
     }
   }
 }

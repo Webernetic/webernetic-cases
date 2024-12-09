@@ -22,7 +22,8 @@
     max-width: 360px;
     width: 100%;
     border-radius: 15px;
-    padding: 30px 32px;
+    @include responsive-sizing(padding-block, 26, 30, 992, 1160);
+    @include responsive-sizing(padding-inline, 20, 32, 992, 1160);
     background-color: $color-light-blue;
   }
 
@@ -46,6 +47,7 @@
       font-family: $font-family;
       font-weight: 500;
       font-size: 44px;
+      @include responsive-sizing(font-size, 38, 44, 400, 1160);
       line-height: 120%;
       color: $color-blue;
     }
@@ -60,7 +62,7 @@
     & span:nth-of-type(3) {
       font-family: $font-family;
       font-weight: 400;
-      font-size: 20px;
+      @include responsive-sizing(font-size, 18, 20, 400, 1160);
       line-height: 120%;
       color: $color-main;
     }
@@ -74,7 +76,7 @@
       margin-right: 12px;
       font-family: $font-family;
       font-weight: 500;
-      font-size: 44px;
+      @include responsive-sizing(font-size, 38, 44, 400, 1160);
       line-height: 120%;
       color: $color-blue;
     }
@@ -86,9 +88,12 @@
     height: auto;
     border: 1px solid #e1f1ff;
     border-radius: 16px;
+    overflow-x: auto;
 
     & img {
-      background-size: cover;
+      width: auto;
+      object-fit: cover;
+      object-position: left;
       border-radius: 16px;
     }
   }
@@ -107,5 +112,70 @@
 
   &__box-text {
     margin-bottom: 8px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1160);
+    line-height: 120%;
+  }
+
+  @media (max-width: 700px) {
+    &__box {
+      flex-direction: column;
+    }
+    &__box:nth-of-type(2) {
+      flex-direction: column;
+    }
+
+    &__box-left {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    margin-block: 70px;
+
+    &__title.mps-title {
+      margin-bottom: 14px;
+    }
+
+    &__box {
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+
+    &__box-right.first {
+      height: 317px;
+    }
+
+    &__box-right.second {
+      height: 265px;
+    }
+
+    &__box-right.third {
+      height: 186px;
+    }
+
+    &__box-text {
+      margin-bottom: 18px;
+    }
+
+    &__box-highlight {
+      min-height: 62px;
+    }
+
+    &__box-highlight span:last-of-type {
+      font-size: 18px;
+    }
+
+    &__box-text.second {
+      margin-bottom: 8px;
+    }
+
+    &__highlight-container.second,
+    &__highlight-container.third {
+      margin-bottom: 18px;
+    }
+
+    &__number {
+      font-size: 38px;
+    }
   }
 }

@@ -12,6 +12,8 @@
     width: 100%;
     border-radius: 24px;
     padding: 40px 32px;
+    @include responsive-sizing(padding-inline, 20, 32, 992, 1160);
+    @include responsive-sizing(padding-block, 26, 40, 992, 1160);
     background-color: #fff;
   }
 
@@ -23,7 +25,7 @@
     margin-bottom: 24px;
     font-family: $font-family;
     font-weight: 400;
-    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1160);
     line-height: 120%;
     color: $color-extra;
   }
@@ -55,5 +57,29 @@
     font-size: 16px;
     line-height: 120%;
     color: $color-blue;
+  }
+
+  @media (max-width: 900px) {
+    &__cards {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    &__card {
+      max-width: 100%;
+      min-height: 0;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    margin-bottom: 20px;
+
+    &__card-text {
+      margin-bottom: 16px;
+    }
+
+    &__card:nth-child(2) .startSection__card-text {
+      margin-bottom: 0;
+    }
   }
 }
