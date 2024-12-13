@@ -1,0 +1,134 @@
+.strategySection {
+  @include responsive-sizing(margin-bottom, 60, 100, 400, 1160);
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 475px;
+    border-radius: 26px;
+    padding: 36px 36px 0;
+    @include responsive-sizing(padding-top, 24, 36, 992, 1160);
+    @include responsive-sizing(padding-inline, 20, 36, 992, 1160);
+    background: linear-gradient(139deg, #f0f0f0 0%, #f3f3f3 100%);
+  }
+
+  &__left-text {
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 20, 24, 400, 1160);
+    line-height: 127.5%;
+    color: $color-extra;
+  }
+
+  &__left-pic {
+    height: 230px;
+
+    & img {
+      object-fit: cover;
+    }
+  }
+
+  &__left-image.mobile {
+    display: none;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__right-top {
+    min-height: 201px;
+    border-radius: 26px;
+    @include responsive-sizing(padding-block, 24, 36, 992, 1160);
+    @include responsive-sizing(padding-inline, 20, 36, 992, 1160);
+    background: linear-gradient(137deg, #def0ff 0%, #ffd6d6 100%);
+  }
+
+  &__right-bottom {
+    min-height: 258px;
+    border-radius: 26px;
+    @include responsive-sizing(padding-block, 24, 36, 992, 1160);
+    @include responsive-sizing(padding-inline, 20, 36, 992, 1160);
+    background-color: $color-light-blue;
+  }
+
+  &__right-title {
+    max-width: 173px;
+    width: 100%;
+    min-height: 51px;
+    margin-bottom: 16px;
+    border-radius: 13px;
+    padding: 10px 26px;
+    background: rgba(255, 255, 255, 0.6);
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 24px;
+    color: $color-main;
+  }
+
+  &__right-text {
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 20, 24, 400, 1160);
+    line-height: 127.5%;
+    color: $color-extra;
+  }
+
+  @media (max-width: 850px) {
+    &__left-pic {
+      margin-top: 15px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    &__container {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    &__left,
+    &__right {
+      min-height: 162px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__left-pic {
+      height: 172px;
+      margin-top: 10px;
+    }
+
+    &__left-image {
+      display: none;
+    }
+
+    &__left-image.mobile {
+      display: block;
+    }
+
+    &__right {
+      gap: 8px;
+    }
+
+    &__right-title {
+      border-radius: 8px;
+      padding: 10px 20px;
+      max-width: 141px;
+      min-height: 46px;
+      font-size: 20px;
+    }
+
+    &__right-top {
+      min-height: 162px;
+    }
+  }
+}

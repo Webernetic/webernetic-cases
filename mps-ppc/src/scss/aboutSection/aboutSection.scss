@@ -1,0 +1,104 @@
+.aboutSection {
+  @include responsive-sizing(margin-bottom, 60, 100, 400, 1160);
+
+  &__container {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 460px;
+    width: 100%;
+    min-height: 500px;
+    border-radius: 26px;
+    @include responsive-sizing(padding-block, 24, 36, 992, 1160);
+    @include responsive-sizing(padding-inline, 20, 36, 992, 1160);
+    background: linear-gradient(137deg, #def0ff 0%, #ffd6d6 100%);
+  }
+
+  &__content {
+  }
+
+  &__btn {
+    max-width: 291px;
+    width: 100%;
+    min-height: 73px;
+    border-radius: 12px;
+    padding: 21px 32px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+    background: #fff;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 24px;
+    color: $color-main;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 680px;
+    width: 100%;
+    min-height: 500px;
+    border-radius: 26px;
+    padding: 36px;
+    @include responsive-sizing(padding-block, 24, 36, 992, 1160);
+    @include responsive-sizing(padding-inline, 20, 36, 992, 1160);
+    background: linear-gradient(139deg, #f0f0f0 0%, #f3f3f3 100%);
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 20, 24, 400, 1160);
+    line-height: 127.5%;
+    color: $color-extra;
+  }
+
+  &__pic {
+    align-self: center;
+    max-width: 352px;
+    width: 100%;
+    min-height: 145px;
+
+    & img {
+      object-fit: contain;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__container {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    &__left,
+    &__right {
+      max-width: 100%;
+      min-height: 364px;
+    }
+
+    &__btn {
+      min-height: 58px;
+      max-width: fit-content;
+      border-radius: 12px;
+      padding: 16px 24px;
+      font-size: 20px;
+    }
+
+    &__pic {
+      margin-top: 15px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__pic {
+      max-width: 255px;
+      min-height: 105px;
+      margin-top: 50px;
+    }
+  }
+}
