@@ -1,0 +1,102 @@
+.storySection {
+  @include responsive-sizing(margin-bottom, 60, 100, 400, 1160);
+  min-height: 653px;
+  @include responsive-sizing(padding-inline, 20, 36, 992, 1160);
+  @include responsive-sizing(padding-block, 24, 36, 992, 1160);
+  border-radius: 26px;
+  background-color: $color-light-blue;
+
+  &__top {
+    display: flex;
+    @include responsive-sizing(gap, 24, 52, 992, 1160);
+    margin-bottom: 40px;
+  }
+
+  &__top-content {
+    max-width: 500px;
+    width: 100%;
+  }
+
+  &__top-title {
+    margin-bottom: 26px;
+    font-family: $font-family;
+    font-weight: 500;
+    @include responsive-sizing(font-size, 24, 28, 400, 1160);
+    line-height: 127.5%;
+    color: $color-main;
+  }
+
+  &__top-text {
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 20, 24, 400, 1160);
+    line-height: 127.5%;
+    color: $color-extra;
+  }
+
+  &__top-pic {
+    max-width: 536px;
+    height: 346px;
+    flex-shrink: 0;
+    border-radius: 20px;
+
+    & img {
+      object-fit: cover;
+      border-radius: 20px;
+    }
+  }
+
+  &__bottom {
+    max-width: 1088px;
+    min-height: 195px;
+    border-radius: 18px;
+    padding: 20px 36px;
+    @include responsive-sizing(font-size, 20, 24, 400, 1160);
+    line-height: 127.5%;
+    background: rgba(255, 255, 255, 0.5);
+
+    & span {
+      font-weight: 500;
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__top {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__top-content {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    &__top-pic {
+      flex-shrink: none;
+      height: auto;
+
+      & img {
+        object-fit: contain;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__bottom {
+      padding: 20px 16px;
+    }
+
+    &__top {
+      bottom: 30px;
+    }
+
+    &__top-pic {
+      border-radius: 12px;
+
+      & img {
+        border-radius: 12px;
+      }
+    }
+  }
+}

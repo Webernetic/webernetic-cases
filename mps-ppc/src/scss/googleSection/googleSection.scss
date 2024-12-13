@@ -1,0 +1,147 @@
+.googleSection {
+  margin-bottom: 16px;
+
+  &__title.ppc-title span {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 22px;
+    color: $color-extra;
+  }
+
+  &__container {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__left {
+    max-width: 376px;
+    width: 100%;
+    min-height: 500px;
+    border-radius: 14px;
+    padding: 24px 30px;
+    background-image: url('../assets/images/doctor.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__number {
+    display: block;
+    font-family: $font-family;
+    font-weight: 500;
+    @include responsive-sizing(font-size, 38, 46, 768, 1160);
+    line-height: 127.5%;
+    color: $color-main;
+  }
+
+  &__left .googleSection__number {
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    display: block;
+    width: fit-content;
+    border-radius: 13px;
+    padding: 8px 20px;
+    background: rgba(255, 255, 255, 0.85);
+  }
+
+  &__cards {
+    width: 100%;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 240px;
+    border-radius: 16px;
+    padding: 24px 30px;
+  }
+
+  &__cards-top {
+    margin-bottom: 16px;
+  }
+
+  &__cards-top,
+  &__cards-bottom {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__cards-top .googleSection__card:nth-child(1),
+  &__cards-bottom .googleSection__card:nth-child(2) {
+    max-width: 498px;
+    width: 100%;
+    background-color: $color-grey;
+  }
+
+  &__cards-top .googleSection__card:nth-child(2),
+  &__cards-bottom .googleSection__card:nth-child(1) {
+    max-width: 254px;
+    width: 100%;
+    background: linear-gradient(137deg, #def0ff 0%, #ffd6d6 100%);
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 127.5%;
+    color: $color-extra;
+    opacity: 0.9;
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__container {
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    &__left {
+      max-width: 100%;
+      min-height: 417px;
+      background-position: right;
+      background-size: contain;
+
+      background-color: #ffebed;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__cards-bottom {
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    &__cards-top {
+      flex-direction: column-reverse;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    &__card,
+    &__cards-top .googleSection__card:nth-child(2),
+    &__cards-bottom .googleSection__card:nth-child(1) {
+      max-width: 100%;
+      min-height: 180px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    margin-bottom: 8px;
+
+    &__title.ppc-title {
+      margin-bottom: 24px;
+
+      & span {
+        display: block;
+        font-size: 16px;
+      }
+    }
+
+    &__left,
+    &__card {
+      padding-inline: 17px;
+    }
+  }
+}

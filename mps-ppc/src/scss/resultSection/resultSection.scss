@@ -1,0 +1,90 @@
+.resultSection {
+  @include responsive-sizing(margin-bottom, 60, 100, 400, 1160);
+
+  &__title.ppc-title span {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 22px;
+    color: $color-extra;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  &__card {
+    height: 276px;
+    @include responsive-sizing(height, 250, 276, 992, 1160);
+  }
+
+  &__card:nth-child(1),
+  &__card:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 26px;
+    padding-block: 24px;
+    @include responsive-sizing(padding-inline, 20, 30, 992, 1160);
+    background: #e7f4ff;
+  }
+
+  &__card:nth-child(3) img {
+    object-position: right;
+  }
+
+  &__card-number {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 46px;
+    @include responsive-sizing(font-size, 38, 46, 768, 1160);
+    line-height: 127.5%;
+    color: $color-main;
+  }
+
+  &__card-text {
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 20, 24, 768, 1160);
+    line-height: 127.5%;
+    color: $color-extra;
+    opacity: 0.9;
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__cards {
+      gap: 8px;
+    }
+  }
+  @media (max-width: 800px) {
+    &__cards {
+      grid-template-columns: 1fr;
+    }
+
+    &__card {
+      width: 70%;
+      justify-content: center;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__card {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__title.ppc-title {
+      flex-wrap: wrap;
+    }
+
+    &__title.ppc-title span {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+      font-size: 16px;
+    }
+  }
+}
