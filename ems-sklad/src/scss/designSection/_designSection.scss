@@ -1,0 +1,86 @@
+.designSection {
+  margin-bottom: 110px;
+
+  &__icon-box {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  &__icon-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: $color-accent;
+    border-radius: 6px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+
+    & img {
+      display: block;
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &__icon-text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  &__text {
+    max-width: 660px;
+    margin-bottom: 36px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 136.6%;
+    color: $color-extra;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  &__card {
+    min-height: 422px;
+    border-radius: 16px;
+    padding: 26px 36px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__card:nth-child(1) {
+    background-image: url('../assets/images/design1.png');
+  }
+
+  &__card:nth-child(2) {
+    background-image: url('../assets/images/design2.png');
+  }
+
+  &__card:nth-child(3) {
+    background-image: url('../assets/images/design3.png');
+  }
+
+  &__card-title {
+    margin-bottom: 8px;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 24px;
+    color: $color-main;
+  }
+
+  &__card-text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 136.6%;
+    color: $color-extra;
+  }
+}

@@ -1,0 +1,120 @@
+.startSection {
+  position: relative;
+  margin-bottom: 110px;
+
+  &__top {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 95px;
+  }
+
+  &__top-left {
+    max-width: 590px;
+    width: 100%;
+    min-height: 354px;
+    padding: 36px;
+    border-radius: 16px;
+    background: $color-bluish;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 136%;
+    color: $color-extra;
+  }
+
+  &__top-text {
+    margin-bottom: 6px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__top-right {
+    max-width: 552px;
+    width: 100%;
+    border-radius: 16px;
+    padding: 36px;
+    background-image: url('../assets/images/start1.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 136%;
+    color: #fff;
+  }
+
+  &__center {
+    max-width: 100%;
+    padding-left: 69px;
+    margin-bottom: 98px;
+  }
+
+  &__center-content {
+    min-height: 400px;
+    padding-left: 135px;
+    padding-top: 140px;
+    background-image: url('../assets/images/start2.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__center-text {
+    max-width: 752px;
+    width: 100%;
+    margin-bottom: 5px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 136.6%;
+    text-align: center;
+    color: $color-main;
+  }
+
+  &__bottom {
+    padding: 40px 36px 40px 504px;
+    border-radius: 16px;
+    background-color: $color-blue-bg;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 22px;
+    color: $color-extra;
+  }
+
+  &__bottom-list {
+    margin-top: 6px;
+    padding-left: 15px;
+  }
+
+  &__list-item {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 5px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 22px;
+    color: $color-extra;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 5px;
+      height: 5px;
+      background-color: $color-extra;
+      border-radius: 100%;
+    }
+  }
+
+  &__pic {
+    position: absolute;
+    left: 45px;
+    bottom: 0;
+    width: 411px;
+    height: 308px;
+  }
+}

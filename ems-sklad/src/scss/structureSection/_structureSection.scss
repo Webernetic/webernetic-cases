@@ -1,0 +1,45 @@
+.structureSection {
+  min-height: 589px;
+  margin-bottom: 110px;
+  border-radius: 16px;
+  padding: 50px 36px 0px 36px;
+  background-color: $color-blue-bg;
+
+  &__title {
+    margin-bottom: 16px;
+    line-height: 130%;
+  }
+
+  &__text {
+    margin-bottom: 42px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 136.5%;
+    color: $color-extra;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+  }
+
+  &__card-title {
+    margin-bottom: 16px;
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 22px;
+    color: $color-main;
+  }
+
+  &__card-pic {
+    border-radius: 16px;
+    height: 276px;
+
+    & img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

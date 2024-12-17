@@ -1,0 +1,111 @@
+.devSection {
+  position: relative;
+  margin-bottom: 127px;
+
+  &__top {
+    display: flex;
+    margin-bottom: 50px;
+  }
+
+  &__top-left {
+    max-width: 580px;
+    width: 100%;
+    background-image: url('../assets/images/wordpress.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+  }
+
+  &__top-right {
+    max-width: 580px;
+    width: 100%;
+    padding: 44px 0 44px 60px;
+  }
+
+  &__icon-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  &__icon-pic {
+    width: 44px;
+    height: 44px;
+  }
+
+  &__icon-text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  &__center {
+    display: flex;
+    gap: 120px;
+    min-height: 290px;
+    padding: 40px 36px;
+    margin-bottom: 16px;
+    border-radius: 16px;
+    background-color: $color-bluish;
+  }
+
+  &__center-left,
+  &__center-right {
+    max-width: 484px;
+    width: 100%;
+  }
+
+  &__picture {
+    min-height: 559px;
+    margin-bottom: 180px;
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 136%;
+    color: $color-extra;
+  }
+
+  &__list {
+    list-style-type: decimal;
+    padding-left: 20px;
+  }
+
+  &__list-item {
+    padding-left: 10px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 136%;
+    color: $color-extra;
+  }
+
+  &__bottom {
+    min-height: 320px;
+    border-radius: 16px;
+    padding: 40px 36px 40px 640px;
+    background: $color-bluish;
+  }
+
+  &__bottom-text {
+    max-width: 484px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 136%;
+    color: $color-extra;
+  }
+
+  &__bottom-pic {
+    position: absolute;
+    bottom: -105px;
+    left: -20px;
+    max-width: 700px;
+    width: 100%;
+  }
+}

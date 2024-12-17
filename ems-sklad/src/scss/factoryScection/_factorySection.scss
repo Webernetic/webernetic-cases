@@ -1,0 +1,108 @@
+.factorySection {
+  margin-bottom: 110px;
+
+  &__top {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__top-left,
+  &__top-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 572px;
+    min-height: 492px;
+    border-radius: 16px;
+    padding: 40px 16px 40px 36px;
+    background: $color-bluish;
+  }
+
+  &__top-icon {
+    width: 50px;
+    height: 54px;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 26px;
+    color: $color-main;
+  }
+
+  &__top-text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 136%;
+    color: $color-extra;
+  }
+
+  &__center {
+    min-height: 448px;
+    padding-block: 60px 40px;
+    padding-left: 36px;
+    margin-bottom: 110px;
+    background-image: url('../assets/images/factory.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__center-content {
+    max-width: 560px;
+  }
+
+  &__center-text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 136%;
+    color: $color-extra;
+  }
+
+  &__bottom {
+    display: flex;
+    gap: 162px;
+    min-height: 147px;
+  }
+
+  &__bottom-left {
+    max-width: 460px;
+  }
+
+  &__bottom-title {
+    max-width: 460px;
+    width: 100%;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 130%;
+    color: $color-main;
+
+    & span {
+      color: $color-accent;
+    }
+  }
+
+  &__bottom-right {
+    max-width: 534px;
+  }
+
+  &__bottom-text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 22px;
+    color: $color-extra;
+  }
+
+  &__bottom-text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 136%;
+    color: $color-extra;
+  }
+}

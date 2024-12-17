@@ -1,0 +1,126 @@
+.tabSection {
+  margin-bottom: 110px;
+
+  &__tabs {
+    display: flex;
+    row-gap: 12px;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 26px;
+  }
+
+  &__tab {
+    border-radius: 12px;
+    padding: 12px 30px 14px 30px;
+    width: fit-content;
+    min-height: 56px;
+    background: #f6f6f6;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 136%;
+    color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+
+    &.active {
+      background: $color-accent;
+      color: #fff;
+    }
+  }
+
+  &__container {
+    min-height: 624px;
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    min-height: 624px;
+    padding-left: 36px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    margin-bottom: 20px;
+  }
+
+  &__card-content {
+    max-width: 516px;
+  }
+
+  &__card:nth-child(1) {
+    background-image: url('../assets/images/tab1.png');
+  }
+  &__card:nth-child(2) {
+    background-image: url('../assets/images/tab2.png');
+  }
+  &__card:nth-child(3) {
+    background-image: url('../assets/images/tab3.png');
+  }
+  &__card:nth-child(4) {
+    align-items: flex-start;
+    padding-top: 80px;
+    background-image: url('../assets/images/tab4.png');
+  }
+  &__card:nth-child(5) {
+    background-image: url('../assets/images/tab5.png');
+  }
+  &__card:nth-child(6) {
+    background-image: url('../assets/images/tab6.png');
+  }
+  &__card:nth-child(7) {
+    background-image: url('../assets/images/tab7.png');
+  }
+  &__card:nth-child(8) {
+    background-image: url('../assets/images/tab8.png');
+  }
+  &__card:nth-child(9) {
+    background-image: url('../assets/images/tab9.png');
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 130%;
+    color: $color-main;
+
+    & span {
+      color: $color-accent;
+    }
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 136%;
+    color: $color-extra;
+  }
+
+  &__list {
+    padding-left: 15px;
+  }
+
+  &__list-item {
+    position: relative;
+    padding-left: 20px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 136%;
+    color: $color-extra;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 5px;
+      height: 5px;
+      background-color: $color-extra;
+      border-radius: 100%;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.tariffSection {
+  display: flex;
+  align-items: center;
+  min-height: 620px;
+  margin-bottom: 110px;
+  padding-left: 36px;
+  border-radius: 16px;
+  background-image: url('../assets/images/tariff.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__content {
+    max-width: 516px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 136%;
+    color: $color-extra;
+  }
+}
