@@ -1,5 +1,5 @@
 .designSection {
-  margin-bottom: 110px;
+  @include responsive-sizing(margin-bottom, 70, 110, 768, 1160);
 
   &__icon-box {
     display: flex;
@@ -36,7 +36,7 @@
     margin-bottom: 36px;
     font-family: $font-family;
     font-weight: 400;
-    font-size: 22px;
+    @include responsive-sizing(font-size, 18, 22, 400, 1160);
     line-height: 136.6%;
     color: $color-extra;
   }
@@ -50,7 +50,8 @@
   &__card {
     min-height: 422px;
     border-radius: 16px;
-    padding: 26px 36px;
+    @include responsive-sizing(padding-inline, 20, 36, 992, 1160);
+    @include responsive-sizing(padding-block, 20, 26, 992, 1160);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -72,15 +73,41 @@
     margin-bottom: 8px;
     font-family: $font-family;
     font-weight: 500;
-    font-size: 24px;
+    @include responsive-sizing(font-size, 21, 24, 400, 1160);
     color: $color-main;
   }
 
   &__card-text {
     font-family: $font-family;
     font-weight: 400;
-    font-size: 22px;
+    @include responsive-sizing(font-size, 18, 22, 400, 1160);
     line-height: 136.6%;
     color: $color-extra;
+  }
+
+  @media (max-width: 900px) {
+    &__cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    &__cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    &__card {
+      background-position: bottom;
+      @include responsive-sizing(min-height, 360, 422, 400, 650);
+    }
+
+    &__card-title {
+      margin-bottom: 6px;
+      line-height: 138%;
+    }
   }
 }

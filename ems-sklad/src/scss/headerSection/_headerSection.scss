@@ -1,7 +1,7 @@
 .headerSection {
-  min-height: 684px;
-  margin-bottom: 126px;
-  padding-top: 500px;
+  @include responsive-sizing(min-height, 540, 684, 400, 1160);
+  @include responsive-sizing(margin-bottom, 65, 126, 768, 1160);
+  @include responsive-sizing(padding-top, 359, 500, 400, 1160);
   background-image: url('../assets/images/banner.png');
   background-position: center;
   background-size: cover;
@@ -16,7 +16,7 @@
     margin-bottom: 12px;
     font-family: $font-family;
     font-weight: 500;
-    font-size: 40px;
+    @include responsive-sizing(font-size, 24, 40, 400, 1160);
     line-height: 137.5%;
     color: $color-main;
   }
@@ -30,8 +30,30 @@
     background: #fff;
     font-family: $font-family;
     font-weight: 400;
-    font-size: 26px;
+    @include responsive-sizing(font-size, 18, 26, 400, 1160);
     line-height: 137%;
     color: $color-black;
+  }
+
+  @media (max-width: 1159px) {
+    padding-inline: 20px;
+    padding-bottom: 33px;
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    padding-right: 35px;
+
+    &__title {
+      flex-wrap: wrap;
+
+      & span {
+        display: inline-block;
+        width: 100%;
+      }
+    }
+
+    &__subtitle {
+      padding-inline: 16px;
+    }
   }
 }

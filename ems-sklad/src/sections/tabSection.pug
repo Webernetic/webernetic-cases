@@ -65,11 +65,19 @@
 
 section.tabSection
   .tabSection__tabs
-    each tab in tabs
-     span.tabSection__tab=tab.title
+    each tab, index in tabs
+     span.tabSection__tab(data-index=index class=index === 0 ? 'active' : '')=tab.title
+  .tabSection__dropdown
+    button.tabSection__dropdown-button
+      span.tabSection__selected-option= tabs[0].title
+      span
+        img.tabSection__dropdown-icon(src="./assets/icons/arrow-dropdown.svg", alt="стрелка вниз")
+    ul.tabSection__dropdown-list
+      each tab, index in tabs
+        li.tabSection__dropdown-item(data-index=index class=index === 0 ? 'active' : '')= tab.title
   .tabSection__container
-    each card in cards
-      .tabSection__card
+    each card, index in cards
+      .tabSection__card(data-index=index class=index === 0 ? 'active' : '')
         .tabSection__card-content
           h2.tabSection__title !{card.title}
           if card.text
