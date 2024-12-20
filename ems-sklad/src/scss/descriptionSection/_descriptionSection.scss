@@ -155,6 +155,11 @@
       padding-block: 0 20px;
     }
 
+    &__card:nth-child(3) .descriptionSection__card-left {
+      padding-top: 0;
+      padding-right: 0;
+    }
+
     &__card-text {
       line-height: 139%;
     }
@@ -170,10 +175,12 @@
 
     &__card:nth-child(3) .descriptionSection__card-right {
       min-height: 269px;
+      border-radius: 13px;
 
       & img {
         object-fit: cover;
         min-height: 269px;
+        border-radius: 13px;
       }
     }
   }

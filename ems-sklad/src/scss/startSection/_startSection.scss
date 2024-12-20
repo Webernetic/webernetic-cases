@@ -208,8 +208,9 @@
     }
 
     &__pic {
-      width: 335px;
+      max-width: 335px;
       height: 230px;
+      left: 0;
     }
   }
 

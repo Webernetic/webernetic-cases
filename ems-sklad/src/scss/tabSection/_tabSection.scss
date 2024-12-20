@@ -79,6 +79,8 @@
     left: 0;
     width: 100%;
     z-index: 5;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
   }
 
   &__dropdown-list.show {
@@ -110,6 +112,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 20px;
+    border-radius: 16px;
 
     position: absolute;
     top: 0;
@@ -268,6 +271,10 @@
     &__card:nth-child(1) {
       background-image: url('../assets/images/tab1-mobile.png');
       background-position: bottom;
+
+      & .tabSection__title {
+        max-width: 220px;
+      }
     }
     &__card:nth-child(2) {
       background-image: url('../assets/images/tab2-mobile.png');
@@ -303,6 +310,8 @@
     &__card {
       align-items: flex-start;
       padding-top: 20px;
+      padding-right: 20px;
+      border-radius: 10px;
     }
 
     &__card:nth-child(4) {

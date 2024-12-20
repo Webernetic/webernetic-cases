@@ -118,6 +118,10 @@
     width: 100%;
   }
 
+  &__bottom-image.mobile {
+    display: none;
+  }
+
   @media (max-width: 1050px) {
     &__picture {
       min-height: auto;
@@ -201,6 +205,26 @@
   }
 
   @media (max-width: $breakpoints-xs) {
+    &__top {
+      margin-bottom: 36px;
+    }
+
+    &__top-right {
+      padding-bottom: 0;
+    }
+
+    &__picture.mobile {
+      margin-bottom: 20px;
+    }
+
+    &__icon-box {
+      margin-bottom: 6px;
+    }
+
+    &__center {
+      gap: 0;
+    }
+
     &__bottom-pic {
       min-height: 315px;
       transform: translate(0);
@@ -210,6 +234,14 @@
     &__bottom-image {
       border-radius: 16px;
       object-fit: cover;
+    }
+
+    &__bottom-image.mobile {
+      display: block;
+    }
+
+    &__bottom-image {
+      display: none;
     }
   }
 }

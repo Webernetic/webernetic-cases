@@ -34,7 +34,9 @@
   }
 
   @media (max-width: $breakpoints-xs) {
+    height: 670px;
     padding-top: 24px;
+    overflow: hidden;
 
     &__pic {
       height: 370px;
