@@ -1,0 +1,19 @@
+-
+  var cards = [
+    {title: "Синий цвет", text: "В этом и была особенность проекта — важно было найти баланс между технической информативностью и лёгкостью восприятия."},
+    {title: "Металлический градиент в логотипе", text: "Она подчёркивает твёрдую экспертизу компании и стальную надёжность. Это особенно важно для B2B-аудитории."},
+    {title: "Шрифт Manrope", text: "Легко читается, лаконичный и современный — он стал основой для минималистичного дизайна, который не отвлекает пользователя от сути."}, 
+    ]
+
+
+section.designSection
+  .designSection__icon-box
+    .designSection__icon-pic
+      img.designSection__icon-image(src="./assets/icons/paintbrush.svg", alt="кисть")
+    span.designSection__icon-text Дизайн
+  .designSection__text  В этом и была особенность проекта — важно было найти баланс между технической информативностью и лёгкостью восприятия. А ещё создать сайт, который поддержит общий стиль дочерних компаний:
+  .designSection__cards
+    each card in cards
+      .designSection__card
+        h3.designSection__card-title=card.title
+        p.designSection__card-text=card.text

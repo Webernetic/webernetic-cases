@@ -1,0 +1,58 @@
+.headerSection {
+  @include responsive-sizing(min-height, 540, 684, 400, 1160);
+  @include responsive-sizing(margin-bottom, 65, 126, 768, 1160);
+  @include responsive-sizing(padding-top, 359, 500, 400, 1160);
+  background-image: url('../assets/images/banner.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__wrapper {
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    font-family: $font-family;
+    font-weight: 500;
+    @include responsive-sizing(font-size, 24, 40, 400, 1160);
+    line-height: 137.5%;
+    color: $color-main;
+  }
+
+  &__subtitle {
+    min-height: 56px;
+    max-width: fit-content;
+    padding: 10px 24px;
+    border-radius: 10px;
+    background: #fff;
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 18, 26, 400, 1160);
+    line-height: 137%;
+    color: $color-black;
+  }
+
+  @media (max-width: 1159px) {
+    padding-inline: 20px;
+    padding-bottom: 33px;
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    padding-right: 35px;
+
+    &__title {
+      flex-wrap: wrap;
+
+      & span {
+        display: inline-block;
+        width: 100%;
+      }
+    }
+
+    &__subtitle {
+      padding-inline: 16px;
+    }
+  }
+}

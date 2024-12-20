@@ -1,0 +1,226 @@
+.startSection {
+  position: relative;
+  @include responsive-sizing(margin-bottom, 70, 110, 768, 1160);
+
+  &__top {
+    display: flex;
+    gap: 18px;
+    @include responsive-sizing(margin-bottom, 70, 95, 768, 1160);
+  }
+
+  &__top-left {
+    max-width: 590px;
+    width: 100%;
+    min-height: 354px;
+    @include responsive-sizing(padding, 20, 36, 400, 1160);
+    border-radius: 16px;
+    background: $color-bluish;
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 18, 22, 400, 1160);
+    line-height: 136%;
+    color: $color-extra;
+  }
+
+  &__top-text {
+    margin-bottom: 6px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__top-right {
+    max-width: 552px;
+    width: 100%;
+    border-radius: 16px;
+    padding: 36px;
+    @include responsive-sizing(padding, 20, 36, 400, 1160);
+    background-image: url('../assets/images/start1.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 18, 22, 400, 1160);
+    line-height: 136%;
+    color: #fff;
+  }
+
+  &__center {
+    max-width: 100%;
+    @include responsive-sizing(padding-left, 0, 69, 992, 1160);
+    @include responsive-sizing(margin-bottom, 70, 98, 768, 1160);
+  }
+
+  &__center-content {
+    min-height: 400px;
+    padding-top: 140px;
+    @include responsive-sizing(padding-left, 0, 135, 768, 1160);
+    background-image: url('../assets/images/start2.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__center-text {
+    max-width: 752px;
+    width: 100%;
+    margin-bottom: 5px;
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 21, 32, 576, 1160);
+    line-height: 136.6%;
+    text-align: center;
+    color: $color-main;
+  }
+
+  &__bottom {
+    padding: 40px 36px 40px 504px;
+    @include responsive-sizing(padding-block, 20, 40, 992, 1160);
+    @include responsive-sizing(padding-left, 380, 504, 776, 1160);
+    border-radius: 16px;
+    background-color: $color-blue-bg;
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 18, 22, 400, 1160);
+    line-height: 136%;
+    color: $color-extra;
+  }
+
+  &__bottom-list {
+    margin-top: 10px;
+    padding-left: 15px;
+  }
+
+  &__list-item {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 5px;
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 18, 22, 400, 1160);
+    line-height: 136%;
+    color: $color-extra;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 5px;
+      height: 5px;
+      background-color: $color-extra;
+      border-radius: 100%;
+    }
+  }
+
+  &__pic {
+    position: absolute;
+    left: 45px;
+    bottom: 0;
+    width: 411px;
+    height: 308px;
+  }
+
+  @media (max-width: 1000px) {
+    &__center-content {
+      background-size: contain;
+    }
+
+    &__top-right {
+      background-position: right;
+    }
+
+    &__pic {
+      left: 20px;
+      bottom: 0;
+      width: 340px;
+      height: auto;
+    }
+  }
+
+  @media (max-width: 800px) {
+    &__top {
+      flex-direction: column;
+    }
+
+    &__top-left {
+      max-width: 100%;
+    }
+
+    &__top-right {
+      max-width: 100%;
+      min-height: 329px;
+      background-position: bottom;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__pic {
+      left: 25%;
+    }
+
+    &__bottom {
+      min-height: 528px;
+      padding-inline: 20px;
+    }
+
+    &__center-content {
+      background-image: url('../assets/images/start2-mobile.png');
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__pic {
+      max-width: 335px;
+      width: 100%;
+      height: auto;
+      left: 6px;
+    }
+
+    &__top-text {
+      margin-bottom: 0;
+      line-height: 139%;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__top {
+      gap: 10px;
+    }
+
+    &__top-right {
+      background-image: url('../assets/images/start1-mobile.png');
+    }
+
+    &__list-item {
+      padding-left: 15px;
+
+      &::before {
+        width: 3px;
+        height: 3px;
+      }
+    }
+
+    &__bottom {
+      border-radius: 10px;
+    }
+
+    &__pic {
+      max-width: 335px;
+      height: 230px;
+      left: 0;
+    }
+  }
+
+  @media (max-width: 360px) {
+    &__bottom {
+      min-height: 600px;
+    }
+
+    &__pic {
+      margin-top: 15px;
+    }
+  }
+}

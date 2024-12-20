@@ -1,0 +1,150 @@
+.factorySection {
+  @include responsive-sizing(margin-bottom, 70, 110, 768, 1160);
+
+  &__top {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__top-left,
+  &__top-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 572px;
+    min-height: 492px;
+    border-radius: 16px;
+    padding: 40px 16px 40px 36px;
+    @include responsive-sizing(padding-left, 20, 36, 992, 1160);
+    @include responsive-sizing(padding-block, 24, 40, 992, 1160);
+    background: $color-bluish;
+  }
+
+  &__top-icon {
+    width: 50px;
+    height: 54px;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    font-family: $font-family;
+    font-weight: 600;
+    @include responsive-sizing(font-size, 21, 26, 400, 1160);
+    color: $color-main;
+  }
+
+  &__top-text {
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 18, 22, 400, 1160);
+    line-height: 136%;
+    color: $color-extra;
+  }
+
+  &__center {
+    min-height: 448px;
+    @include responsive-sizing(padding-top, 24, 60, 992, 1160);
+    @include responsive-sizing(padding-bottom, 24, 40, 992, 1160);
+    @include responsive-sizing(padding-left, 20, 36, 992, 1160);
+    @include responsive-sizing(margin-bottom, 70, 110, 768, 1160);
+    background-image: url('../assets/images/factory.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+  }
+
+  &__center-content {
+    max-width: 560px;
+  }
+
+  &__center-text {
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 18, 22, 400, 1160);
+    line-height: 136%;
+    color: $color-extra;
+  }
+
+  &__bottom {
+    display: flex;
+    @include responsive-sizing(gap, 26, 162, 992, 1160);
+    min-height: 147px;
+  }
+
+  &__bottom-left {
+    max-width: 460px;
+  }
+
+  &__bottom-title {
+    max-width: 460px;
+    width: 100%;
+    font-family: $font-family;
+    font-weight: 500;
+    @include responsive-sizing(font-size, 28, 38, 400, 1160);
+    line-height: 130%;
+    color: $color-main;
+
+    & span {
+      color: $color-accent;
+    }
+  }
+
+  &__bottom-right {
+    max-width: 534px;
+  }
+
+  &__bottom-text {
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 18, 22, 400, 1160);
+    line-height: 136%;
+    color: $color-extra;
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__center-content {
+      @include responsive-sizing(max-width, 450, 560, 768, 992);
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__bottom {
+      flex-direction: column;
+    }
+
+    &__bottom-left,
+    &__bottom-title,
+    &__bottom-right {
+      max-width: 100%;
+    }
+
+    &__top-icon {
+      margin-bottom: 36px;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__top {
+      flex-direction: column;
+    }
+
+    &__top-left,
+    &__top-right {
+      max-width: 100%;
+      min-height: auto;
+    }
+
+    &__center {
+      min-height: 742px;
+      padding-right: 20px;
+      background-image: url('../assets/images/factory-mobile.png');
+      background-position: bottom;
+    }
+
+    &__center-content {
+      max-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.tariffSection {
+  display: flex;
+  align-items: center;
+  @include responsive-sizing(min-height, 400, 620, 700, 1160);
+  @include responsive-sizing(margin-bottom, 70, 110, 400, 1160);
+  @include responsive-sizing(padding-left, 20, 36, 992, 1160);
+  border-radius: 16px;
+  background-image: url('../assets/images/tariff.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__content {
+    max-width: 516px;
+    @include responsive-sizing(max-width, 350, 516, 700, 1160);
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 18, 22, 400, 1160);
+    line-height: 136%;
+    color: $color-extra;
+  }
+
+  @media (max-width: 650px) {
+    align-items: flex-start;
+    min-height: 789px;
+    padding-top: 24px;
+    padding-right: 20px;
+    background-image: url('../assets/images/tariff-mobile.png');
+
+    &__content {
+      max-width: 100%;
+    }
+
+    &__title {
+      margin-bottom: 8px;
+    }
+  }
+}

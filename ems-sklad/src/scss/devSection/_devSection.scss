@@ -1,0 +1,247 @@
+.devSection {
+  position: relative;
+  @include responsive-sizing(margin-bottom, 70, 110, 400, 1160);
+
+  &__top {
+    display: flex;
+    margin-bottom: 50px;
+  }
+
+  &__top-left {
+    max-width: 580px;
+    width: 100%;
+    background-image: url('../assets/images/wordpress.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+  }
+
+  &__top-right {
+    max-width: 580px;
+    width: 100%;
+    @include responsive-sizing(padding-block, 10, 44, 992, 1160);
+    @include responsive-sizing(padding-left, 20, 60, 992, 1160);
+  }
+
+  &__icon-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  &__icon-pic {
+    width: 44px;
+    height: 44px;
+  }
+
+  &__icon-text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  &__center {
+    display: flex;
+    @include responsive-sizing(gap, 20, 120, 992, 1160);
+    min-height: 290px;
+    @include responsive-sizing(padding-block, 20, 40, 992, 1160);
+    @include responsive-sizing(padding-inline, 20, 36, 992, 1160);
+    margin-bottom: 16px;
+    border-radius: 16px;
+    background-color: $color-bluish;
+  }
+
+  &__center-left,
+  &__center-right {
+    max-width: 484px;
+    width: 100%;
+  }
+
+  &__picture {
+    min-height: 559px;
+    @include responsive-sizing(margin-bottom, 40, 180, 992, 1160);
+  }
+
+  &__picture.mobile {
+    display: none;
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 18, 22, 400, 1160);
+    line-height: 136%;
+    color: $color-extra;
+  }
+
+  &__list {
+    list-style-type: decimal;
+    padding-left: 20px;
+  }
+
+  &__list-item {
+    padding-left: 10px;
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 18, 22, 400, 1160);
+    line-height: 136%;
+    color: $color-extra;
+  }
+
+  &__bottom {
+    min-height: 320px;
+    border-radius: 16px;
+    padding: 40px 36px 40px 640px;
+    @include responsive-sizing(padding-left, 400, 640, 768, 1160);
+    @include responsive-sizing(padding-block, 20, 40, 992, 1160);
+    @include responsive-sizing(padding-right, 20, 36, 992, 1160);
+    background: $color-bluish;
+  }
+
+  &__bottom-text {
+    max-width: 484px;
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 18, 22, 400, 1160);
+    line-height: 136%;
+    color: $color-extra;
+  }
+
+  &__bottom-pic {
+    position: absolute;
+    bottom: -105px;
+    left: -20px;
+    @include responsive-sizing(max-width, 400, 700, 768, 1160);
+    width: 100%;
+  }
+
+  &__bottom-image.mobile {
+    display: none;
+  }
+
+  @media (max-width: 1050px) {
+    &__picture {
+      min-height: auto;
+    }
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__top-left {
+      background-position: left;
+    }
+
+    &__bottom-pic {
+      bottom: -50px;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__picture {
+      display: none;
+    }
+    &__center {
+      margin-bottom: 150px;
+    }
+
+    &__picture.mobile {
+      display: block;
+    }
+
+    &__bottom {
+      padding-left: 20px;
+      padding-top: 167px;
+    }
+
+    &__bottom-text {
+      max-width: 100%;
+    }
+
+    &__bottom-pic {
+      bottom: 150px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (max-width: 700px) {
+    &__top {
+      flex-direction: column;
+    }
+
+    &__top-left {
+      max-width: 100%;
+      height: 248px;
+    }
+
+    &__top-right {
+      max-width: 100%;
+      padding-left: 0;
+    }
+
+    &__center {
+      flex-direction: column;
+    }
+
+    &__center-left {
+      max-width: 100%;
+    }
+
+    &__center-right {
+      max-width: 100%;
+    }
+
+    &__bottom-pic {
+      bottom: 200px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    &__bottom-pic {
+      bottom: 250px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__top {
+      margin-bottom: 36px;
+    }
+
+    &__top-right {
+      padding-bottom: 0;
+    }
+
+    &__picture.mobile {
+      margin-bottom: 20px;
+    }
+
+    &__icon-box {
+      margin-bottom: 6px;
+    }
+
+    &__center {
+      gap: 0;
+    }
+
+    &__bottom-pic {
+      min-height: 315px;
+      transform: translate(0);
+      left: 5px;
+    }
+
+    &__bottom-image {
+      border-radius: 16px;
+      object-fit: cover;
+    }
+
+    &__bottom-image.mobile {
+      display: block;
+    }
+
+    &__bottom-image {
+      display: none;
+    }
+  }
+}

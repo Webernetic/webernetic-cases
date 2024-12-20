@@ -1,0 +1,94 @@
+.teamSection {
+  display: flex;
+  @include responsive-sizing(gap, 20, 68, 992, 1160);
+  min-height: 417px;
+  @include responsive-sizing(margin-bottom, 70, 110, 768, 1160);
+  border-radius: 16px;
+  @include responsive-sizing(padding-block, 24, 50, 992, 1160);
+  @include responsive-sizing(padding-inline, 20, 36, 992, 1160);
+  background: $color-blue-bg;
+
+  &__left {
+    max-width: 459px;
+    width: 100%;
+    min-height: 315px;
+    border-radius: 16px;
+
+    & img {
+      border-radius: 16px;
+    }
+  }
+
+  &__right-text {
+    margin-bottom: 24px;
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 18, 22, 400, 1160);
+    line-height: 136%;
+    color: $color-extra;
+  }
+
+  &__bottom {
+    max-width: 560px;
+    width: 100%;
+    min-height: 170px;
+    border-radius: 10px;
+    padding: 18px 24px;
+    background: rgba(255, 255, 255, 0.68);
+  }
+
+  &__bottom-text {
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 18, 22, 400, 1160);
+    line-height: 136%;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  &__bottom-btn {
+    display: block;
+    width: fit-content;
+    min-height: 60px;
+    margin-top: 14px;
+    border-radius: 11px;
+    padding: 15px 30px;
+    background: $color-accent;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 22px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &__bottom-btn:hover {
+    background-color: #6d8eef;
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__right-text {
+      margin-bottom: 16px;
+    }
+
+    &__bottom-btn {
+      min-height: 52px;
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+
+    &__bottom {
+      max-width: 100%;
+    }
+    &__left {
+      min-height: auto;
+    }
+
+    &__bottom-btn {
+      font-size: 16px;
+    }
+  }
+}

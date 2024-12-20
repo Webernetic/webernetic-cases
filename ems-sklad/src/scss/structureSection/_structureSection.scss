@@ -1,0 +1,103 @@
+.structureSection {
+  min-height: 589px;
+  @include responsive-sizing(margin-bottom, 70, 110, 768, 1160);
+  border-radius: 16px;
+  @include responsive-sizing(padding-top, 20, 50, 992, 1160);
+  @include responsive-sizing(padding-inline, 20, 36, 992, 1160);
+  background-color: $color-blue-bg;
+
+  &__title {
+    margin-bottom: 16px;
+    line-height: 130%;
+  }
+
+  &__text {
+    margin-bottom: 42px;
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 18, 22, 400, 1160);
+    line-height: 136.5%;
+    color: $color-extra;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+    @include responsive-sizing(gap, 24, 48, 992, 1160);
+  }
+
+  &__card-title {
+    margin-bottom: 16px;
+    font-family: $font-family;
+    font-weight: 600;
+    @include responsive-sizing(font-size, 18, 22, 400, 1160);
+    color: $color-main;
+  }
+
+  &__card-pic {
+    border-radius: 16px;
+    height: 276px;
+
+    & img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__card-image.mobile {
+    display: none;
+  }
+
+  @media (max-width: 1100px) {
+    min-height: auto;
+
+    &__card-pic {
+      height: auto;
+
+      & img {
+        object-fit: contain;
+        object-position: top;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__cards {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    padding-bottom: 20px;
+    border-radius: 10px;
+
+    &__text {
+      margin-bottom: 30px;
+      line-height: 139%;
+    }
+
+    &__card-title {
+      margin-bottom: 12px;
+      line-height: 139%;
+    }
+
+    &__card:first-child .structureSection__card-pic {
+      height: 153px;
+    }
+
+    &__card:nth-child(2) .structureSection__card-pic {
+      height: 210px;
+
+      & .structureSection__card-image {
+        display: none;
+      }
+
+      & .structureSection__card-image.mobile {
+        display: block;
+        object-position: bottom;
+      }
+    }
+  }
+}
