@@ -20,13 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   //dropdown
-  /*
-  const dropdownButton = document.querySelector('.tabSection__dropdown-button');
-  const dropdownList = document.querySelector('.tabSection__dropdown-list');
-  const selectedOption = document.querySelector('.tabSection__selected-option');
-  const dropdownItems = document.querySelectorAll('.tabSection__dropdown-item');
-  const renderingBlocks = document.querySelectorAll('.tabSection__card');
-  const dropdownArrow = document.querySelector('.tabSection__dropdown-icon');
+
+  const dropdownButton = document.querySelector('.devSection__dropdown-button');
+  const dropdownList = document.querySelector('.devSection__dropdown-list');
+  const selectedOption = document.querySelector('.devSection__selected-option');
+  const dropdownItems = document.querySelectorAll('.devSection__dropdown-item');
+  const renderingBlocks = document.querySelectorAll('.devSection__card');
+  const dropdownArrow = document.querySelector('.devSection__dropdown-icon');
 
   if (
     !(
@@ -56,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     selectedOption.textContent = selectedItem.textContent;
     renderContent(dataIndex);
-    console.log(dataIndex);
 
     toggleDropdownList();
   }
@@ -64,15 +63,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // dropdown-content
 
   function renderContent(dataIndex) {
-    renderingBlocks.forEach((block) => {
-      if (block.getAttribute('data-index') === dataIndex) {
+    renderingBlocks.forEach((block, index) => {
+      if (index == dataIndex) {
         console.log('нужный блок', block);
         block.classList.add('active');
       } else {
         block.classList.remove('active');
       }
     });
-  }*/
+  }
 
   //animation
 

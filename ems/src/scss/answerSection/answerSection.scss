@@ -1,14 +1,17 @@
 .answerSection {
   display: flex;
-  gap: 56px;
+  @include responsive-sizing(gap, 20, 56, 992, 1160);
   min-height: 500px;
-  margin-bottom: 130px;
+  @include responsive-sizing(margin-bottom, 70, 130, 400, 1160);
   border-radius: 16px;
   padding: 40px 40px 0;
+  @include responsive-sizing(padding-top, 24, 40, 992, 1160);
+  @include responsive-sizing(padding-inline, 18, 40, 992, 1160);
   background: #f2f6ff;
 
   &__left {
     max-width: 440px;
+    width: 100%;
   }
 
   &__title {
@@ -16,7 +19,7 @@
     margin-bottom: 16px;
     font-family: $font-family;
     font-weight: 600;
-    font-size: 28px;
+    @include responsive-sizing(font-size, 22, 28, 400, 1160);
     line-height: 140%;
     color: rgba(39, 39, 39, 0.92);
   }
@@ -50,6 +53,32 @@
 
     &::-webkit-media-controls-panel {
       margin-bottom: 230px;
+    }
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    min-height: auto;
+    padding-bottom: 24px;
+
+    &__right {
+      min-height: auto;
+    }
+
+    &__video-container {
+      height: auto;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    flex-direction: column;
+    align-items: center;
+
+    &__left {
+      max-width: 100%;
+    }
+
+    &__video-container {
+      height: 370px;
     }
   }
 }

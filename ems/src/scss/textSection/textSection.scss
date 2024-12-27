@@ -1,6 +1,6 @@
 .textSection {
   min-height: 223px;
-  margin-bottom: 130px;
+  @include responsive-sizing(margin-bottom, 70, 130, 400, 1160);
   padding: 24px 30px;
   border-radius: 16px;
   background-image: url('../assets/images/text-bg.png');
@@ -12,8 +12,17 @@
     margin-left: 356px;
     font-family: $font-family;
     font-weight: 500;
-    font-size: 18px;
+    @include responsive-sizing(font-size, 16, 18, 400, 1160);
     line-height: 140%;
     color: rgba(39, 39, 39, 0.8);
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    background-position: right;
+    padding-inline: 18px;
+
+    &__text {
+      margin-left: 0;
+    }
   }
 }

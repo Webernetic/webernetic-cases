@@ -1,12 +1,12 @@
 .corpoSection {
-  margin-bottom: 130px;
+  @include responsive-sizing(margin-bottom, 70, 130, 400, 1160);
 
   &__title {
     max-width: 660px;
     margin-bottom: 20px;
     font-family: $font-family;
     font-weight: 600;
-    font-size: 38px;
+    @include responsive-sizing(font-size, 26, 38, 400, 1160);
     line-height: 140%;
     color: rgba(39, 39, 39, 0.92);
   }
@@ -14,18 +14,21 @@
   &__top {
     display: flex;
     gap: 118px;
+    @include responsive-sizing(gap, 16, 118, 992, 1160);
     margin-bottom: 40px;
   }
 
   &__top-left {
     max-width: 670px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1160);
+    line-height: 140%;
   }
 
   &__top-right {
     max-width: 370px;
     font-family: $font-family;
     font-weight: 500;
-    font-size: 18px;
+    @include responsive-sizing(font-size, 16, 18, 400, 1160);
     line-height: 140%;
     color: rgba(39, 39, 39, 0.6);
   }
@@ -39,7 +42,8 @@
   &__card {
     min-height: 390px;
     border-radius: 12px;
-    padding: 30px;
+    @include responsive-sizing(padding-block, 24, 30, 992, 1160);
+    @include responsive-sizing(padding-inline, 18, 30, 992, 1160);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -72,5 +76,44 @@
     font-size: 18px;
     line-height: 140%;
     color: rgba(39, 39, 39, 0.8);
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 700px) {
+    &__top {
+      flex-direction: column;
+      margin-bottom: 36px;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__cards {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    &__card {
+      background-position: bottom;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__title {
+      line-height: 130%;
+      margin-bottom: 14px;
+    }
+
+    &__card {
+      min-height: 340px;
+    }
+
+    &__card-title {
+      margin-bottom: 12px;
+    }
   }
 }

@@ -15,6 +15,15 @@ section.devSection
         span.devSection__tab.active(data-index="0") Уменьшение размеров меню
         span.devSection__tab(data-index="1") Плавная прокрутка
         span.devSection__tab(data-index="2") Интерактивность
+      .devSection__dropdown
+        button.devSection__dropdown-button
+          span.devSection__selected-option Уменьшение размеров меню
+          span
+            img.devSection__dropdown-icon(src="./assets/icons/arrow-dropdown.svg", alt="стрелка вниз")
+        ul.devSection__dropdown-list
+          li.devSection__dropdown-item(data-index="0") Уменьшение размеров меню
+          li.devSection__dropdown-item(data-index="1") Плавная прокрутка
+          li.devSection__dropdown-item(data-index="2") Интерактивность
       .devSection__tab-container
         .devSection__card.card1.active
           .devSection__card-content

@@ -1,6 +1,6 @@
 .aboutSection {
   margin-top: -10px;
-  margin-bottom: 130px;
+  @include responsive-sizing(margin-bottom, 70, 130, 400, 1160);
   display: flex;
   gap: 20px;
 
@@ -14,7 +14,7 @@
     padding: 30px;
     border-radius: 12px;
     background-image: url('../assets/images/about-bg.png');
-    background-position: center;
+    background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -31,7 +31,7 @@
     margin-bottom: 18px;
     font-family: $font-family;
     font-weight: 600;
-    font-size: 28px;
+    @include responsive-sizing(font-size, 24, 28, 400, 1160);
     line-height: 140%;
     color: rgba(39, 39, 39, 0.92);
   }
@@ -39,7 +39,7 @@
   &__text {
     font-family: $font-family;
     font-weight: 500;
-    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1160);
     line-height: 140%;
     color: rgba(39, 39, 39, 0.8);
   }
@@ -84,5 +84,31 @@
     display: block;
     width: 24px;
     height: 24px;
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    gap: 12px;
+
+    &__left,
+    &__top,
+    &__bottom {
+      padding-inline: 18px;
+      padding-block: 24px;
+    }
+  }
+  @media (max-width: 700px) {
+    flex-direction: column;
+
+    &__left,
+    &__right {
+      max-width: 100%;
+      min-height: 331px;
+    }
+
+    &__btn {
+      min-height: 50px;
+      padding: 10px 26px;
+      font-size: 18px;
+    }
   }
 }

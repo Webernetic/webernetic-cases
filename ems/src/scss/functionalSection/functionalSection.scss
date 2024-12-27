@@ -1,5 +1,5 @@
 .functionalSection {
-  margin-bottom: 130px;
+  @include responsive-sizing(margin-bottom, 70, 130, 400, 1160);
 
   &__content {
     max-width: 660px;
@@ -10,7 +10,7 @@
     margin-bottom: 23px;
     font-family: $font-family;
     font-weight: 600;
-    font-size: 38px;
+    @include responsive-sizing(font-size, 26, 38, 400, 1160);
     line-height: 140%;
     color: rgba(39, 39, 39, 0.92);
   }
@@ -31,7 +31,8 @@
 
   &__card {
     min-height: 390px;
-    padding: 30px;
+    @include responsive-sizing(padding-inline, 18, 30, 1100, 1160);
+    @include responsive-sizing(padding-block, 24, 30, 1100, 1160);
     border-radius: 12px;
     background-position: center;
     background-size: cover;
@@ -54,7 +55,7 @@
     margin-bottom: 16px;
     font-family: $font-family;
     font-weight: 600;
-    font-size: 24px;
+    @include responsive-sizing(font-size, 22, 24, 400, 1160);
     line-height: 140%;
     color: rgba(39, 39, 39, 0.92);
   }
@@ -65,5 +66,31 @@
     font-size: 18px;
     line-height: 140%;
     color: rgba(39, 39, 39, 0.8);
+  }
+
+  @media (max-width: 1020px) {
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__card {
+      min-height: 411px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    &__cards {
+      grid-template-columns: 1fr;
+    }
+
+    &__card {
+      background-position: bottom;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__card-title {
+      margin-bottom: 12px;
+    }
   }
 }

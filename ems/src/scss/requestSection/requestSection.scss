@@ -1,9 +1,11 @@
 .requestSection {
   display: flex;
-  gap: 56px;
+  @include responsive-sizing(gap, 35, 56, 992, 1160);
   min-height: 500px;
-  margin-bottom: 130px;
+  @include responsive-sizing(margin-bottom, 70, 130, 400, 1160);
   padding-inline: 64px 40px;
+  @include responsive-sizing(padding-left, 18, 64, 992, 1160);
+  @include responsive-sizing(padding-right, 18, 40, 992, 1160);
   border-radius: 16px;
   background: #f7f7f7;
 
@@ -15,7 +17,7 @@
   &__content {
     max-width: 440px;
     width: 100%;
-    padding-block: 40px;
+    @include responsive-sizing(padding-block, 24, 40, 992, 1160);
   }
 
   &__title {
@@ -23,6 +25,7 @@
     font-family: $font-family;
     font-weight: 600;
     font-size: 28px;
+    @include responsive-sizing(font-size, 22, 28, 400, 1160);
     line-height: 140%;
     color: rgba(39, 39, 39, 0.92);
   }
@@ -33,5 +36,18 @@
     font-size: 18px;
     line-height: 140%;
     color: rgba(39, 39, 39, 0.8);
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    min-height: 400px;
+  }
+
+  @media (max-width: $breakpoints-md) {
+    flex-direction: column-reverse;
+    align-items: center;
+
+    &__content {
+      max-width: 100%;
+    }
   }
 }

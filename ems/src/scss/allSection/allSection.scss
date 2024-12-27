@@ -1,5 +1,5 @@
 .allSection {
-  margin-bottom: 130px;
+  @include responsive-sizing(margin-bottom, 70, 130, 400, 1160);
 
   &__top {
     display: flex;
@@ -12,6 +12,8 @@
     min-height: 354px;
     border-radius: 16px;
     padding: 36px 40px;
+    @include responsive-sizing(padding-block, 24, 36, 992, 1160);
+    @include responsive-sizing(padding-inline, 18, 40, 992, 1160);
     background: #f7f7f7;
   }
 
@@ -20,6 +22,7 @@
     font-family: $font-family;
     font-weight: 600;
     font-size: 28px;
+    @include responsive-sizing(font-size, 22, 28, 400, 1160);
     line-height: 140%;
     color: rgba(39, 39, 39, 0.92);
   }
@@ -34,14 +37,15 @@
 
   &__subtitle-box {
     display: flex;
+    align-items: center;
     gap: 8px;
-    margin-top: 69px;
+    @include responsive-sizing(margin-top, 24, 69, 576, 1160);
   }
 
   &__subtitle-text {
     font-family: $font-family;
     font-weight: 600;
-    font-size: 22px;
+    @include responsive-sizing(font-size, 18, 22, 400, 1160);
     line-height: 150%;
     color: rgba(39, 39, 39, 0.92);
   }
@@ -54,6 +58,7 @@
 
   &__top-right {
     max-width: 480px;
+    min-width: 340px;
     width: 100%;
     min-height: 354px;
     background-image: url('../assets/images/all-bg.png');
@@ -63,8 +68,10 @@
   }
 
   &__video-box {
-    height: 328px;
+    //height: 328px;
+    height: auto;
     padding: 60px 58px 0;
+    @include responsive-sizing(padding-inline, 10, 58, 992, 1160);
     border-radius: 16px;
     background: linear-gradient(131deg, #d0dfff 0%, #d9e9ff 100%);
   }
@@ -72,9 +79,10 @@
   &__video-container {
     max-width: 1044px;
     width: 100%;
-    height: 268px;
+    //height: 268px;
+    height: auto;
     border-radius: 16px 16px 0 0;
-    //overflow: hidden;
+    overflow: hidden;
   }
 
   &__video-container video {
@@ -82,5 +90,43 @@
     height: auto;
     object-fit: cover;
     border-radius: 16px 16px 0 0;
+  }
+
+  & video.desktop {
+    display: block;
+  }
+
+  & video.mobile {
+    display: none;
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__top {
+      flex-direction: column;
+    }
+
+    &__top-left,
+    &__top-right {
+      max-width: 100%;
+      min-height: 270px;
+    }
+
+    & video.desktop {
+      display: none;
+    }
+
+    & video.mobile {
+      display: block;
+    }
+
+    &__video-box {
+      height: 400px;
+      padding-top: 0;
+    }
+
+    &__video-container {
+      height: 360px;
+      border-radius: 0 0 32px 32px;
+    }
   }
 }

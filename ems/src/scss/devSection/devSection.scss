@@ -1,7 +1,7 @@
 .devSection {
-  height: 1481px;
+  min-height: 1481px;
   width: 100%;
-  padding-block: 110px;
+  @include responsive-sizing(padding-block, 50, 110, 400, 1160);
   background-image: url('../assets/images/dev-bg.png');
   background-position: center;
   background-size: cover;
@@ -15,23 +15,26 @@
 
   &__top {
     display: flex;
-    gap: 60px;
+    @include responsive-sizing(gap, 26, 60, 992, 1160);
     min-height: 296px;
-    margin-bottom: 110px;
+    @include responsive-sizing(margin-bottom, 70, 110, 400, 1160);
   }
 
   &__top-left {
     max-width: 620px;
+    width: 100%;
     padding-block: 15.5px;
   }
 
   &__top-right {
     max-width: 480px;
+    width: 100%;
     min-height: 296px;
     border-radius: 12px;
 
     & img {
       border-radius: 12px;
+      object-position: left;
     }
   }
 
@@ -47,7 +50,7 @@
     margin-bottom: 20px;
     font-family: $font-family;
     font-weight: 600;
-    font-size: 38px;
+    @include responsive-sizing(font-size, 26, 38, 400, 1160);
     line-height: 130%;
     color: #fff;
   }
@@ -55,7 +58,7 @@
   &__text {
     font-family: $font-family;
     font-weight: 500;
-    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1160);
     line-height: 140%;
     color: rgba(255, 255, 255, 0.54);
   }
@@ -71,8 +74,9 @@
     height: 55px;
     font-family: $font-family;
     font-weight: 600;
-    font-size: 22px;
+    @include responsive-sizing(font-size, 18, 22, 400, 1160);
     line-height: 55px;
+    padding-left: 5px;
     color: rgba(255, 255, 255, 0.34);
     cursor: pointer;
     transition: all 0.3s;
@@ -86,6 +90,68 @@
       color: #fff;
       border-bottom: 1px solid #50c5ff4d;
     }
+  }
+
+  &__dropdown {
+    display: none;
+    position: relative;
+  }
+
+  &__dropdown-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 49px;
+    margin-bottom: 10px;
+    border-radius: 8px 8px 0 0;
+    padding: 12px 0px 14px 0px;
+    background: #1d499b;
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 130%;
+    color: #fff;
+
+    & span {
+      color: #fff;
+    }
+  }
+
+  &__dropdown-item {
+    width: 100%;
+    min-height: 49px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 16px 20px 18px 20px;
+    background: #1d499b;
+    font-family: $font-family;
+    font-weight: 500;
+    @include responsive-sizing(font-size, 18, 22, 400, 1160);
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  &__dropdown-list {
+    display: none;
+    position: absolute;
+    top: 59px;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  &__dropdown-list.show {
+    display: block;
+  }
+
+  &__dropdown-icon {
+    transition: 0.2s;
+  }
+
+  &__dropdown-icon.show {
+    transform: rotate(180deg);
+    transition: 0.2s;
   }
 
   &__tab-container {
@@ -129,6 +195,7 @@
 
     & .devSection__card-content {
       max-width: 460px;
+      width: 100%;
     }
   }
 
@@ -157,7 +224,7 @@
     overflow: hidden;
 
     &:nth-child(2) {
-      height: 335px;
+      height: 285px;
     }
   }
 
@@ -175,5 +242,55 @@
     max-width: 580px;
     width: 100%;
     min-height: 440px;
+    border-radius: 16px;
+
+    & img {
+      border-radius: 16px;
+    }
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__title {
+      margin-bottom: 12px;
+    }
+
+    &__tabs-box {
+      gap: 20px;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__top {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__top-left {
+      max-width: 100%;
+    }
+
+    &__bottom-content {
+      max-width: 100%;
+    }
+
+    &__tabs-box {
+      display: none;
+    }
+
+    &__dropdown {
+      display: block;
+    }
+
+    &__tab-container {
+      min-height: auto;
+    }
+
+    &__card.card3 {
+      flex-direction: column;
+
+      & .devSection__card-content {
+        max-width: 100%;
+      }
+    }
   }
 }

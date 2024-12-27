@@ -1,5 +1,5 @@
 .workSection {
-  padding-bottom: 110px;
+  @include responsive-sizing(padding-bottom, 70, 110, 400, 1160);
   background-color: #1d499b;
 
   &__wrapper {
@@ -18,7 +18,7 @@
     max-width: 528px;
     font-family: $font-family;
     font-weight: 600;
-    font-size: 38px;
+    @include responsive-sizing(font-size, 26, 38, 400, 1160);
     line-height: 130%;
     color: #fff;
   }
@@ -37,6 +37,7 @@
 
   &__item-number {
     margin-right: 220px;
+    @include responsive-sizing(margin-right, 30, 220, 992, 1160);
     font-family: $font-family;
     font-weight: 600;
     font-size: 28px;
@@ -53,7 +54,7 @@
     margin-bottom: 16px;
     font-family: $font-family;
     font-weight: 600;
-    font-size: 28px;
+    @include responsive-sizing(font-size, 22, 28, 400, 1160);
     line-height: 140%;
     color: #fff;
   }
@@ -67,6 +68,8 @@
   }
 
   &__item-pic {
+    display: block;
+    flex-shrink: 0;
     align-self: flex-end;
     border-radius: 50%;
     transition: all 0.5s;
@@ -96,5 +99,39 @@
     width: 121px;
     height: 143px;
     margin-left: 35px;
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__item-content {
+      @include responsive-sizing(margin-right, 20, 100, 768, 992);
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__item {
+      margin-bottom: 0;
+    }
+
+    &__item:nth-child(1) .workSection__item-pic {
+      width: 123px;
+      height: 100px;
+    }
+
+    &__item:nth-child(2) .workSection__item-pic {
+      width: 124px;
+      height: 96px;
+    }
+
+    &__item:nth-child(3) .workSection__item-pic {
+      width: 101px;
+      height: 123px;
+      margin-left: 35px;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__item {
+      flex-direction: column;
+    }
   }
 }

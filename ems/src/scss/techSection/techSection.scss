@@ -1,8 +1,9 @@
 .techSection {
   min-height: 500px;
   border-radius: 12px;
-  padding: 40px;
-  margin-bottom: 130px;
+  @include responsive-sizing(padding-block, 30, 40, 992, 1160);
+  @include responsive-sizing(padding-inline, 18, 40, 992, 1160);
+  @include responsive-sizing(margin-bottom, 70, 130, 400, 1160);
   background-image: url('../assets/images/tech-bg.png');
   background-position: center;
   background-size: cover;
@@ -10,6 +11,7 @@
 
   &__content {
     max-width: 600px;
+    @include responsive-sizing(max-width, 350, 600, 600, 1160);
     margin-bottom: 114px;
   }
 
@@ -27,7 +29,7 @@
     margin-bottom: 24px;
     font-family: $font-family;
     font-weight: 600;
-    font-size: 38px;
+    @include responsive-sizing(font-size, 24, 38, 400, 1160);
     line-height: 130%;
     color: rgba(39, 39, 39, 0.92);
   }
@@ -35,7 +37,7 @@
   &__text {
     font-family: $font-family;
     font-weight: 500;
-    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1160);
     line-height: 150%;
     color: rgba(39, 39, 39, 0.8);
   }
@@ -50,7 +52,7 @@
     margin-right: 8px;
     font-family: $font-family;
     font-weight: 600;
-    font-size: 22px;
+    @include responsive-sizing(font-size, 18, 22, 400, 1160);
     line-height: 150%;
     color: rgba(39, 39, 39, 0.92);
   }
@@ -58,5 +60,29 @@
   &__bottom-icon {
     width: 24px;
     height: 24px;
+  }
+
+  @media (max-width: 550px) {
+    min-height: 650px;
+    background-image: url('../assets/images/tech-bg-mobile.png');
+
+    &__content {
+      margin-bottom: 8px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__subtitle {
+      margin-bottom: 4px;
+      font-size: 16px;
+    }
+
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__text {
+      line-height: 140%;
+    }
   }
 }
