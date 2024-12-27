@@ -1,0 +1,30 @@
+extends layouts/MainLayout
+include mixins/index.pug
+
+block title
+  | EMS-sklad
+
+block content
+  body.body
+  include sections/headerSection
+  .container
+    include sections/aboutSection
+  include sections/brandSection
+  .container
+    include sections/textSection
+    include sections/corpoSection 
+    include sections/techSection
+    include sections/harmonySection
+  include sections/matterSection
+  .container
+    include sections/functionalSection
+    include sections/allSection
+    include sections/answerSection
+    include sections/requestSection
+  include sections/devSection
+  include sections/workSection
+  include sections/testSection
+  include sections/teamSection
+  .container
+    include sections/siteSection
+    include sections/orderSection

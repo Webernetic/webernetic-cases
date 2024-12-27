@@ -1,0 +1,31 @@
+.siteSection {
+  min-height: 208px;
+  margin-block: 130px;
+  padding: 36px 30px 36px 264px;
+  border-radius: 16px;
+  background-image: url('../assets/images/site-bg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__content {
+    max-width: 867px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 130%;
+    color: rgba(39, 39, 39, 0.92);
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    color: rgba(39, 39, 39, 0.8);
+  }
+}

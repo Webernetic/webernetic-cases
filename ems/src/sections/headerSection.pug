@@ -1,0 +1,24 @@
+-
+  var cards = [
+    {src: "./assets/icons/check.svg", alt: "отмечено", text: "Роботы на производстве сегодня — это не будущее, а уже настоящее."},
+    {src: "./assets/icons/question.svg", alt: "вопрос", text: "Но кто управляет этими железными мастерами?"},
+    {src: "./assets/icons/check.svg", alt: "отмечено", text: "Компании в сфере АСУ ТП, автоматизированных систем управления технологическим процессом."},
+    
+  ]
+
+
+section.headerSection
+  .headerSection__top
+    .headerSection__container
+      .headerSection__content
+        h1.headerSection__title Корпоративный сайт для инжиниринговой компании
+        p.headerSection__subtitle От идеи до дочерней компании всего один сайт
+      .headerSection__cards
+        each card in cards
+          .headerSection__card
+            .headerSection__card-pic
+              img.headerSection__card-image(src=card.src, alt=card.alt)
+            .headerSection__card-text=card.text    
+  .headerSection__picture
+    img.headerSection__image(src="./assets/images/screen.png", alt="скрин")
+    

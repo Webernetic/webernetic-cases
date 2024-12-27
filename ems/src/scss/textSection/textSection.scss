@@ -1,0 +1,19 @@
+.textSection {
+  min-height: 223px;
+  margin-bottom: 130px;
+  padding: 24px 30px;
+  border-radius: 16px;
+  background-image: url('../assets/images/text-bg.png');
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__text {
+    margin-left: 356px;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    color: rgba(39, 39, 39, 0.8);
+  }
+}

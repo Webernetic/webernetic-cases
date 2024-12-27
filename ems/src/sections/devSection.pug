@@ -1,0 +1,40 @@
+section.devSection
+  .devSection__wrapper
+    .devSection__top
+      .devSection__top-left
+        h2.devSection__title Разработка сайта
+        p.devSection__text  Изначально, учитывая сложность дизайна, мы предложили разрабатывать сайт на Laravel — фреймворке, который идеально подходит для амбициозных задач. Но бюджет клиента был ниже необходимого для этого фреймворка. И мы решили искать альтернативы. Из большого количества CMS выбор пал на Wordpress. Однако работа с этой CMS для такого сложного проекта была не без трудностей. 
+      .devSection__top-right
+        img.devSection__top-image(src="./assets/images/dev1.png", alt="wordpress")
+    .devSection__bottom
+      .devSection__bottom-content
+        h2.devSection__title Вёрстка сайта
+        p.devSection__text После согласования дизайна мы перешли к вёрстке. Чтобы сайт мог приносить клиентов быстрее, страницы начинали верстать по мере их готовности. Не будем углубляться в отличия Grid от Flexbox, но разберём несколько фишек от наших фронтенд разработчиков. 
+    .devSection__tabs
+      .devSection__tabs-box
+        span.devSection__tab.active(data-index="0") Уменьшение размеров меню
+        span.devSection__tab(data-index="1") Плавная прокрутка
+        span.devSection__tab(data-index="2") Интерактивность
+      .devSection__tab-container
+        .devSection__card.card1.active
+          .devSection__card-content
+            h3.devSection__card-title Уменьшение размеров меню
+            p.devSection__card-text Например, меню остаётся на месте при прокрутке страницы, но при этом его размеры уменьшаются, чтобы не занимать слишком много пространства. Это плавное изменение масштаба делает взаимодействие более удобным и функциональным, а навигация всегда под рукой.
+          .devSection__video-container
+            video(controls, autoplay, muted, loop)
+              source(src="./assets/video/video3.mp4", type="video/mp4")
+              | Ваш браузер не поддерживает видео.
+        .devSection__card.card2
+          .devSection__card-content
+            h3.devSection__card-title Плавный скролл страницы
+            p.devSection__card-text Вертикальная прокрутка выполнена с эффектом инерции, благодаря такому подходу просмотр контента становится более плавным и приятным. 
+          .devSection__video-container
+            video(controls, autoplay, muted, loop)
+              source(src="./assets/video/video4.mp4", type="video/mp4")
+              | Ваш браузер не поддерживает видео.
+        .devSection__card.card3
+          .devSection__card-content
+            h3.devSection__card-title Интерактивные элементы с эффектами
+            p.devSection__card-text Каждый интерактивный элемент — будь то кнопка, ссылка или карточка — снабжён эффектом подсветки или смены цвета при наведении курсора. Это добавляет сайту оживлённости и вовлекает пользователя 
+          .devSection__card-pic
+            img.devSection__card-image(src="./assets/images/dev2.png", alt="эффекты")

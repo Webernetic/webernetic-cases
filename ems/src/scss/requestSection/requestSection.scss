@@ -1,0 +1,37 @@
+.requestSection {
+  display: flex;
+  gap: 56px;
+  min-height: 500px;
+  margin-bottom: 130px;
+  padding-inline: 64px 40px;
+  border-radius: 16px;
+  background: #f7f7f7;
+
+  &__pic {
+    max-width: 560px;
+    width: 100%;
+  }
+
+  &__content {
+    max-width: 440px;
+    width: 100%;
+    padding-block: 40px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 140%;
+    color: rgba(39, 39, 39, 0.92);
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    color: rgba(39, 39, 39, 0.8);
+  }
+}
