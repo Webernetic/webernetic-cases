@@ -78,6 +78,14 @@
     }
   }
 
+  &__card-image.mobile {
+    display: none;
+  }
+
+  @media (max-width: 1159px) {
+    padding-inline: 20px;
+  }
+
   @media (max-width: $breakpoints-md) {
     &__card {
       flex-direction: column;
@@ -85,11 +93,36 @@
     }
 
     &__card:nth-child(3) {
-      flex-direction: column;
+      flex-direction: column-reverse;
+      gap: 40px;
+      padding-bottom: 24px;
     }
 
     &__card-left {
       max-width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    &__card-title {
+      margin-bottom: 12px;
+      line-height: 120%;
+    }
+
+    &__card-right {
+      height: 224px;
+    }
+
+    &__card-image {
+      display: none;
+    }
+
+    &__card-image.mobile {
+      display: block;
     }
   }
 }

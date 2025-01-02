@@ -86,6 +86,12 @@
     display: none;
   }
 
+  @media (max-width: 1159px) {
+    &__container {
+      padding-inline: 20px;
+    }
+  }
+
   @media (max-width: $breakpoints-lg) {
     &__container {
       gap: 39px;
@@ -111,6 +117,10 @@
       padding-inline: 20px;
     }
 
+    &__picture {
+      padding-inline: 20px;
+    }
+
     &__image {
       display: none;
     }
@@ -121,8 +131,6 @@
   }
 
   @media (max-width: $breakpoints-xs) {
-    margin-bottom: 438px;
-
     &__top {
       min-height: 820px;
     }
@@ -133,9 +141,7 @@
     }
 
     &__picture {
-      position: absolute;
-      bottom: -320px;
-      left: 0;
+      transform: translateY(-157px);
     }
 
     &__title {
@@ -152,10 +158,11 @@
         height: 20px;
       }
     }
+  }
 
-    &__picture {
-      padding-inline: 20px;
-      transform: translateY(-167px);
+  @media (max-width: 350px) {
+    &__title {
+      font-size: 26px;
     }
   }
 }

@@ -19,4 +19,13 @@
     line-height: 140%;
     color: #fff;
   }
+
+  @media (max-width: 1159px) {
+    padding-inline: 20px;
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    min-height: 366px;
+    background-image: url('../assets/images/team-bg-mobile.png');
+  }
 }

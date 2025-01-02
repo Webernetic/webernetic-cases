@@ -30,4 +30,9 @@
     line-height: 140%;
     color: rgba(39, 39, 39, 0.8);
   }
+
+  @media (max-width: $breakpoints-xs) {
+    min-height: 400px;
+    background-image: url('../assets/images/site-bg-mobile.png');
+  }
 }

@@ -24,7 +24,9 @@
   }
 
   &__item {
+    position: relative; /* Родитель для абсолютного позиционирования */
     display: flex;
+    align-items: flex-end;
     min-height: 237px;
     margin-bottom: 60px;
     padding: 0px 0px 32px 0px;
@@ -36,6 +38,7 @@
   }
 
   &__item-number {
+    align-self: flex-start;
     margin-right: 220px;
     @include responsive-sizing(margin-right, 30, 220, 992, 1160);
     font-family: $font-family;
@@ -47,6 +50,7 @@
 
   &__item-content {
     max-width: 617px;
+    @include responsive-sizing(max-width, 350, 617, 576, 1160);
     margin-right: 100px;
   }
 
@@ -70,19 +74,16 @@
   &__item-pic {
     display: block;
     flex-shrink: 0;
-    align-self: flex-end;
     border-radius: 50%;
     transition: all 0.5s;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transition: bottom 1s ease-in-out;
   }
 
   &__item-pic.animate {
-    transform: translateY(-110px);
-    transition: all 0.5s;
-  }
-
-  &__item-pic.animate.pic3 {
-    transform: translateY(-150px);
-    transition: all 0.5s;
+    bottom: calc(100% - 100px);
   }
 
   &__item:nth-child(1) .workSection__item-pic {
@@ -101,37 +102,102 @@
     margin-left: 35px;
   }
 
+  @media (max-width: 1159px) {
+    &__wrapper {
+      padding-inline: 20px;
+    }
+  }
+
   @media (max-width: $breakpoints-lg) {
     &__item-content {
       @include responsive-sizing(margin-right, 20, 100, 768, 992);
     }
   }
 
-  @media (max-width: $breakpoints-md) {
-    &__item {
-      margin-bottom: 0;
+  @media (max-width: 900px) {
+    &__item-pic.animate {
+      bottom: calc(100% - 60px);
     }
 
     &__item:nth-child(1) .workSection__item-pic {
-      width: 123px;
-      height: 100px;
+      width: 103px;
+      height: 80px;
     }
 
     &__item:nth-child(2) .workSection__item-pic {
-      width: 124px;
-      height: 96px;
+      width: 104px;
+      height: 76px;
     }
 
     &__item:nth-child(3) .workSection__item-pic {
-      width: 101px;
-      height: 123px;
+      width: 81px;
+      height: 103px;
       margin-left: 35px;
     }
   }
 
   @media (max-width: $breakpoints-sm) {
+    &__top {
+      margin-bottom: 32px;
+    }
+
     &__item {
       flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: 100px;
+      margin-bottom: 32px;
+    }
+
+    &__item-content {
+      max-width: 100%;
+      margin-right: 0;
+    }
+
+    &__item-number {
+      margin-bottom: 24px;
+      font-size: 22px;
+    }
+
+    &__item-pic {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      transition: all 1s ease-in-out;
+    }
+
+    &__item-pic.animate {
+      right: calc(100% - 100px);
+      bottom: 0;
+      transition: all 1s ease-in-out;
+    }
+
+    &__item:nth-child(2) .workSection__item-pic {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__item {
+      padding-bottom: 140px;
+    }
+
+    &__item:nth-child(1) .workSection__item-pic {
+      width: 163px;
+      height: 140px;
+    }
+
+    &__item:nth-child(2) .workSection__item-pic {
+      width: 164px;
+      height: 156px;
+    }
+
+    &__item:nth-child(3) .workSection__item-pic {
+      width: 121px;
+      height: 143px;
+    }
+
+    .workSection__item-pic.animate {
+      right: calc(100% - 120px);
     }
   }
 }

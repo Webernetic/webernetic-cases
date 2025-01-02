@@ -128,6 +128,7 @@
     font-weight: 500;
     @include responsive-sizing(font-size, 18, 22, 400, 1160);
     color: rgba(0, 0, 0, 0.7);
+    border-bottom: 1px solid #50c5ff4d;
   }
 
   &__dropdown-list {
@@ -139,10 +140,26 @@
     z-index: 5;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
+    background-color: #1d499b;
+    border: 1px solid #50c5ff4d;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
   }
 
   &__dropdown-list.show {
     display: block;
+  }
+
+  &__dropdown-item {
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 130%;
+    color: rgba(255, 255, 255, 0.7);
+
+    &:hover,
+    &:active {
+      color: #fff;
+    }
   }
 
   &__dropdown-icon {
@@ -158,6 +175,8 @@
     min-height: 520px;
     border-radius: 16px;
     padding: 40px 40px 0;
+    @include responsive-sizing(padding-inline, 18, 40, 400, 1160);
+    @include responsive-sizing(padding-top, 24, 40, 400, 1160);
     background: rgba(242, 246, 255, 0.12);
   }
 
@@ -197,13 +216,17 @@
       max-width: 460px;
       width: 100%;
     }
+
+    .devSection__card-title {
+      max-width: 373px;
+    }
   }
 
   &__card-title {
     margin-bottom: 16px;
     font-family: $font-family;
     font-weight: 600;
-    font-size: 28px;
+    @include responsive-sizing(font-size, 22, 28, 400, 1160);
     line-height: 140%;
     color: rgba(255, 255, 255, 0.92);
   }
@@ -217,9 +240,9 @@
   }
 
   &__video-container {
+    position: relative;
     max-width: 1080px;
     width: 100%;
-    height: 285px;
     border-radius: 16px 16px 0 0;
     overflow: hidden;
 
@@ -228,13 +251,23 @@
     }
   }
 
+  &__card.card2 .devSection__video-container {
+    height: 335px;
+
+    & video {
+      height: 335px;
+    }
+  }
+
   &__video-container video {
     width: 100%;
     height: auto;
+    height: 285px;
     object-fit: cover;
+    object-position: left;
 
     &::-webkit-media-controls-panel {
-      margin-bottom: 180px;
+      //  margin-bottom: 10px;
     }
   }
 
@@ -246,6 +279,16 @@
 
     & img {
       border-radius: 16px;
+    }
+  }
+
+  &__card-image.mobile {
+    display: none;
+  }
+
+  @media (max-width: 1159px) {
+    &__wrapper {
+      padding-inline: 20px;
     }
   }
 
@@ -290,7 +333,58 @@
 
       & .devSection__card-content {
         max-width: 100%;
+        margin-bottom: 0;
       }
+
+      & .devSection__card-pic {
+        min-height: 361px;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__tab-container {
+      min-height: 695px;
+    }
+
+    &__top-left {
+      padding-block: 0;
+    }
+
+    &__top-right {
+      min-height: 207px;
+    }
+
+    .card2 .devSection__video-container {
+      height: 465px;
+
+      & video {
+        height: 465px;
+      }
+    }
+
+    &__card-pic {
+      min-height: 361px;
+    }
+
+    &__card-image.mobile {
+      display: block;
+    }
+
+    & .card3 {
+      overflow: hidden;
+    }
+
+    & .card3 img {
+      width: auto;
+    }
+
+    &__card-image {
+      display: none;
+    }
+
+    &__card.card3 {
+      gap: 0;
     }
   }
 }

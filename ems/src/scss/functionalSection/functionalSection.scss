@@ -89,6 +89,31 @@
   }
 
   @media (max-width: $breakpoints-xs) {
+    &__title {
+      margin-bottom: 16px;
+      line-height: 130%;
+    }
+
+    &__content {
+      margin-bottom: 24px;
+    }
+
+    &__cards {
+      gap: 12px;
+    }
+
+    &__card {
+      min-height: 330px;
+    }
+
+    &__card:nth-child(2) {
+      min-height: 344px;
+    }
+
+    &__card:nth-child(3) {
+      min-height: 370px;
+    }
+
     &__card-title {
       margin-bottom: 12px;
     }

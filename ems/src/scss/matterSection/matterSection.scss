@@ -50,6 +50,16 @@
     }
   }
 
+  &__image.mobile {
+    display: none;
+  }
+
+  @media (max-width: 1159px) {
+    &__container {
+      padding-inline: 20px;
+    }
+  }
+
   @media (max-width: 1150px) {
     &__pic img {
       object-position: left;
@@ -69,6 +79,15 @@
   @media (max-width: $breakpoints-xs) {
     &__pic {
       height: 266px;
+    }
+
+    &__image.mobile {
+      display: block;
+      object-position: top;
+    }
+
+    &__image {
+      display: none;
     }
 
     &__title {

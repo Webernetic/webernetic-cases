@@ -61,6 +61,7 @@
     min-width: 340px;
     width: 100%;
     min-height: 354px;
+    border-radius: 0 16px 16px 0;
     background-image: url('../assets/images/all-bg.png');
     background-position: center;
     background-size: cover;
@@ -111,14 +112,12 @@
       min-height: 270px;
     }
 
-    & video.desktop {
-      display: none;
+    &__top-right {
+      min-width: 0;
     }
+  }
 
-    & video.mobile {
-      display: block;
-    }
-
+  @media (max-width: $breakpoints-sm) {
     &__video-box {
       height: 400px;
       padding-top: 0;
@@ -127,6 +126,28 @@
     &__video-container {
       height: 360px;
       border-radius: 0 0 32px 32px;
+    }
+    & video.desktop {
+      display: none;
+    }
+
+    & video.mobile {
+      display: block;
+      height: 360px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__top {
+      margin-bottom: 12px;
+    }
+
+    &__top-right {
+      display: none;
+    }
+
+    &__subtitle-text {
+      line-height: 130%;
     }
   }
 }
