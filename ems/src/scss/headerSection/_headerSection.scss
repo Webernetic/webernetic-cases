@@ -1,0 +1,168 @@
+.headerSection {
+  &__top {
+    min-height: 705px;
+    background-image: url('../assets/images/banner.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1160px;
+    width: 100%;
+    margin: 0 auto;
+    padding-block: 81px;
+  }
+
+  &__content {
+    max-width: 560px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-family: $font-family;
+    font-weight: 500;
+    @include responsive-sizing(font-size, 32, 52, 400, 1160);
+    line-height: 125%;
+    color: #fff;
+  }
+
+  &__subtitle {
+    font-family: $font-family;
+    font-weight: 500;
+    @include responsive-sizing(font-size, 24, 28, 400, 1160);
+    line-height: 140%;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    @include responsive-sizing(gap, 6, 21, 992, 1160);
+    max-width: 485px;
+    width: 100%;
+    margin-top: 29px;
+  }
+
+  &__card {
+    display: flex;
+    min-height: 98px;
+    @include responsive-sizing(padding-block, 16, 20, 992, 1160);
+    @include responsive-sizing(padding-inline, 18, 20, 992, 1160);
+    border-radius: 8px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0 4px 13px 0 rgba(54, 54, 54, 0.4);
+    background: rgba(29, 38, 54, 0.23);
+  }
+
+  &__card-pic {
+    margin-right: 16px;
+
+    & img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__card-text {
+    font-family: $font-family;
+    font-weight: 500;
+    @include responsive-sizing(font-size, 18, 22, 400, 1160);
+    line-height: 130%;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  &__picture {
+    max-width: 1160px;
+    width: 100%;
+    //min-height: 552px;
+    margin: 0 auto;
+    transform: translateY(-137px);
+  }
+
+  &__image.mobile {
+    display: none;
+  }
+
+  @media (max-width: 1159px) {
+    &__container {
+      padding-inline: 20px;
+    }
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__container {
+      gap: 39px;
+    }
+
+    &__cards {
+      margin-top: 0;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__container {
+      flex-direction: column;
+    }
+
+    &__top {
+      min-height: 840px;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__container {
+      padding-inline: 20px;
+    }
+
+    &__picture {
+      padding-inline: 20px;
+    }
+
+    &__image {
+      display: none;
+    }
+
+    &__image.mobile {
+      display: block;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__top {
+      min-height: 820px;
+    }
+
+    &__container {
+      position: relative;
+      padding-top: 59px;
+    }
+
+    &__picture {
+      transform: translateY(-157px);
+    }
+
+    &__title {
+      margin-bottom: 12px;
+    }
+
+    &__card {
+      min-height: 78px;
+    }
+
+    &__card-pic {
+      & img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 350px) {
+    &__title {
+      font-size: 26px;
+    }
+  }
+}

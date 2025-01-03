@@ -1,0 +1,26 @@
+section.workSection
+  .workSection__wrapper
+    .workSection__top
+      h2.workSection__title Что делали на этапе backend-разработки
+    .workSection__content
+      .workSection__item
+        .workSection__item-number {1}
+        .workSection__item-content
+          h4.workSection__item-title Быстрая загрузка видео
+          p.workSection__item-text  На этапе backend-разработки нас ждала интересная задача. Первый экран сайта — это видео высокого качества, которое наглядно демонстрирует процессы автоматизации и моментально привлекает внимание. Чтобы не жертвовать скоростью загрузки, наши backend-разработчики разбили видео на фрагменты, которые подгружаются поочерёдно.
+        .workSection__item-pic
+          img.workSection__item-image(src="./assets/images/work1.png", alt="видео")
+      .workSection__item
+        .workSection__item-number {2}
+        .workSection__item-content
+          h4.workSection__item-title Оптимизация обратной связи
+          p.workSection__item-text Основной и самый главный функционал сайта — формы обратной связи. Для них мы внедрили RabbitMQ. Он помогает организовать обмен сообщениями так, чтобы каждая часть системы выполняла свои задачи без перегрузки и задержек. Для клиента это значит, что сайт будет работать, а данные отправляться, даже при росте трафика и расширении сайта без потерь в производительности. 
+        .workSection__item-pic
+          img.workSection__item-image(src="./assets/icons/work2.svg", alt="обратная связь")
+      .workSection__item
+        .workSection__item-number {3}
+        .workSection__item-content
+          h4.workSection__item-title Использование паттерна «Фабрика» для гибкости проекта
+          p.workSection__item-text Весь проект реализовали с использованием паттерна проектирования «Фабрика». Он выбирает какой метод и класс нужно выбрать в зависимости от запроса пользователя. Если в будущем потребуется доработать сайт — например, добавить новую страницу или изменить функционал — это не потребует глобальной переработки кода.
+        .workSection__item-pic.pic3
+          img.workSection__item-image(src="./assets/icons/work3.svg", alt="паттерн")     

@@ -1,0 +1,31 @@
+.teamSection {
+  min-height: 335px;
+  background-image: url('../assets/images/team-bg.png');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__wrapper {
+    max-width: 1160px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__content {
+    max-width: 600px;
+    font-family: $font-family;
+    font-weight: 500;
+    @include responsive-sizing(font-size, 24, 32, 400, 1160);
+    line-height: 140%;
+    color: #fff;
+  }
+
+  @media (max-width: 1159px) {
+    padding-inline: 20px;
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    min-height: 366px;
+    background-image: url('../assets/images/team-bg-mobile.png');
+  }
+}

@@ -1,0 +1,121 @@
+.functionalSection {
+  @include responsive-sizing(margin-bottom, 70, 130, 400, 1160);
+
+  &__content {
+    max-width: 660px;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin-bottom: 23px;
+    font-family: $font-family;
+    font-weight: 600;
+    @include responsive-sizing(font-size, 26, 38, 400, 1160);
+    line-height: 140%;
+    color: rgba(39, 39, 39, 0.92);
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    color: rgba(39, 39, 39, 0.8);
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  &__card {
+    min-height: 390px;
+    @include responsive-sizing(padding-inline, 18, 30, 1100, 1160);
+    @include responsive-sizing(padding-block, 24, 30, 1100, 1160);
+    border-radius: 12px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__card:nth-child(1) {
+    background-image: url('../assets/images/functional1.png');
+  }
+
+  &__card:nth-child(2) {
+    background-image: url('../assets/images/functional2.png');
+  }
+
+  &__card:nth-child(3) {
+    background-image: url('../assets/images/functional3.png');
+  }
+
+  &__card-title {
+    margin-bottom: 16px;
+    font-family: $font-family;
+    font-weight: 600;
+    @include responsive-sizing(font-size, 22, 24, 400, 1160);
+    line-height: 140%;
+    color: rgba(39, 39, 39, 0.92);
+  }
+
+  &__card-text {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    color: rgba(39, 39, 39, 0.8);
+  }
+
+  @media (max-width: 1020px) {
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__card {
+      min-height: 411px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    &__cards {
+      grid-template-columns: 1fr;
+    }
+
+    &__card {
+      background-position: bottom;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__title {
+      margin-bottom: 16px;
+      line-height: 130%;
+    }
+
+    &__content {
+      margin-bottom: 24px;
+    }
+
+    &__cards {
+      gap: 12px;
+    }
+
+    &__card {
+      min-height: 330px;
+    }
+
+    &__card:nth-child(2) {
+      min-height: 344px;
+    }
+
+    &__card:nth-child(3) {
+      min-height: 370px;
+    }
+
+    &__card-title {
+      margin-bottom: 12px;
+    }
+  }
+}

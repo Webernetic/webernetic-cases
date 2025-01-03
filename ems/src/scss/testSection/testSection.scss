@@ -1,0 +1,128 @@
+.testSection {
+  @include responsive-sizing(padding-bottom, 70, 110, 400, 1160);
+  background-color: #1d499b;
+
+  &__wrapper {
+    max-width: 1160px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+    font-family: $font-family;
+    font-weight: 600;
+    @include responsive-sizing(font-size, 26, 38, 400, 1160);
+    line-height: 130%;
+    color: #fff;
+  }
+
+  &__card {
+    display: flex;
+    min-height: 310px;
+    padding: 40px 40px 0;
+    @include responsive-sizing(padding-inline, 18, 40, 992, 1160);
+    @include responsive-sizing(padding-top, 24, 40, 992, 1160);
+    border-radius: 16px;
+    background: rgba(242, 246, 255, 0.12);
+
+    &:nth-child(2) {
+      @include responsive-sizing(gap, 40, 95, 992, 1160);
+      margin-bottom: 16px;
+
+      & .testSection__card-right {
+        max-width: 547px;
+        width: 100%;
+      }
+    }
+
+    &:nth-child(3) {
+      flex-direction: row-reverse;
+      gap: 50px;
+
+      & .testSection__card-right {
+        max-width: 600px;
+        width: 100%;
+      }
+    }
+  }
+
+  &__card-left {
+    max-width: 430px;
+    width: 100%;
+  }
+
+  &__card-title {
+    margin-bottom: 16px;
+    font-family: $font-family;
+    font-weight: 600;
+    @include responsive-sizing(font-size, 22, 28, 400, 1160);
+    line-height: 140%;
+    color: rgba(255, 255, 255, 0.92);
+  }
+
+  &__card-text {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    color: rgba(255, 255, 255, 0.64);
+  }
+
+  &__card-right {
+    border-radius: 14px;
+
+    & img {
+      border-radius: 14px;
+      object-position: left;
+    }
+  }
+
+  &__card-image.mobile {
+    display: none;
+  }
+
+  @media (max-width: 1159px) {
+    padding-inline: 20px;
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__card {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__card:nth-child(3) {
+      flex-direction: column-reverse;
+      gap: 40px;
+      padding-bottom: 24px;
+    }
+
+    &__card-left {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    &__card-title {
+      margin-bottom: 12px;
+      line-height: 120%;
+    }
+
+    &__card-right {
+      height: 224px;
+    }
+
+    &__card-image {
+      display: none;
+    }
+
+    &__card-image.mobile {
+      display: block;
+    }
+  }
+}

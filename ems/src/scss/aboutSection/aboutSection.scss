@@ -1,0 +1,114 @@
+.aboutSection {
+  margin-top: -40px;
+  @include responsive-sizing(margin-bottom, 70, 130, 400, 1160);
+  display: flex;
+  gap: 20px;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 569.5px;
+    width: 100%;
+    min-height: 451px;
+    padding: 30px;
+    border-radius: 12px;
+    background-image: url('../assets/images/about-bg.png');
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 569.5px;
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 18px;
+    font-family: $font-family;
+    font-weight: 600;
+    @include responsive-sizing(font-size, 24, 28, 400, 1160);
+    line-height: 140%;
+    color: rgba(39, 39, 39, 0.92);
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 500;
+    @include responsive-sizing(font-size, 18, 20, 400, 1160);
+    line-height: 140%;
+    color: rgba(39, 39, 39, 0.8);
+  }
+
+  &__top {
+    padding: 30px 30px 36px 30px;
+    border-radius: 12px;
+    background-color: $color-bg;
+  }
+
+  &__bottom {
+    padding: 24px 30px;
+    border-radius: 12px;
+    background-color: $color-bg;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    max-width: 160px;
+    width: 100%;
+    min-height: 52px;
+    margin-top: 20px;
+    white-space: nowrap;
+    border: 1px solid #2a73ff;
+    border-radius: 80px;
+    padding: 14px 26px;
+    text-decoration: none;
+  }
+
+  &__btn-text {
+    text-wrap: none;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    color: #2a73ff;
+  }
+
+  &__btn-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    gap: 12px;
+
+    &__left,
+    &__top,
+    &__bottom {
+      padding-inline: 18px;
+      padding-block: 24px;
+    }
+  }
+  @media (max-width: 700px) {
+    flex-direction: column;
+
+    &__left,
+    &__right {
+      max-width: 100%;
+      min-height: 331px;
+    }
+
+    &__btn {
+      min-height: 50px;
+      padding: 10px 26px;
+      font-size: 18px;
+    }
+  }
+}
