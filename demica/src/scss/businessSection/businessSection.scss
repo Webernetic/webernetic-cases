@@ -1,0 +1,26 @@
+.businesSection {
+  margin-bottom: 120px;
+
+  &__wrapper {
+    min-height: 335px;
+    padding: 40px;
+    border-radius: 6px;
+    background-image: url('../assets/images/business.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    max-width: 580px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: $color-extra;
+  }
+}

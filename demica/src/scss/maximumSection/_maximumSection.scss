@@ -1,0 +1,82 @@
+.maximumSection {
+  margin-block: 120px;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    padding: 40px;
+    background-image: url('../assets/images/maximum-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+  }
+
+  &__left {
+    max-width: 580px;
+  }
+
+  &__title {
+    padding-block: 32px 8px;
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: $color-main;
+  }
+
+  &__right-box {
+    position: absolute;
+  }
+
+  &__right-icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 54px;
+    height: 54px;
+    z-index: 1;
+  }
+
+  &__box-text {
+    margin-left: auto;
+    border-radius: 11px;
+    padding: 15px 22px;
+    backdrop-filter: blur(40px);
+    box-shadow: 0 4px 49px 0 rgba(248, 136, 82, 0.16);
+    background: #fff;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: center;
+    color: var(--main);
+  }
+
+  &__right-box:first-child {
+    right: 62px;
+    top: 92px;
+    width: 303px;
+
+    & .maximumSection__box-text {
+      max-width: 262px;
+      width: 100%;
+    }
+  }
+
+  &__right-box:last-child {
+    width: 318px;
+    bottom: 70px;
+    right: 200px;
+
+    & .maximumSection__box-text {
+      max-width: 277px;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.arrowButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &_text {
+    font-weight: 700;
+    font-size: clamp(0.875rem, 2.08vw, 1.56rem);
+    opacity: 0.6;
+    width: fit-content;
+  }
+
+  &_arr {
+    position: relative;
+    width: 15px;
+    height: 15px;
+  }
+
+  &_arr:after {
+    content: '';
+    position: relative;
+    display: inline-block;
+    top: -15%;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid;
+    border-right: 2px solid;
+    transform: rotate(135deg);
+    opacity: 0.6;
+  }
+
+  .active &_arr:after {
+    transform: rotate(-45deg);
+    top: 35%;
+  }
+}

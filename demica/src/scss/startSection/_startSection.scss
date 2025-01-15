@@ -1,0 +1,28 @@
+.startSection {
+  margin-bottom: 120px;
+
+  &__wrapper {
+    min-height: 328px;
+    padding: 40px;
+    border-radius: 6px;
+    background-image: url('../assets/images/start-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+  }
+
+  &__text {
+    max-width: 580px;
+    margin-top: 32px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: $color-main;
+
+    & span {
+      color: $color-accent;
+    }
+  }
+}

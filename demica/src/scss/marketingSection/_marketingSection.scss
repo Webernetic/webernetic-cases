@@ -1,0 +1,56 @@
+.marketingSection {
+  margin-bottom: 120px;
+
+  &__wrapper {
+    position: relative;
+    min-height: 350px;
+    border-radius: 6px;
+    padding: 40px;
+    background-image: url('../assets/images/marketing.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+
+    & span {
+      color: $color-accent;
+    }
+  }
+
+  &__text {
+    max-width: 540px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: $color-extra;
+  }
+
+  &__picture {
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+  }
+
+  &__name {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    width: 139px;
+    min-height: 54px;
+    border-radius: 8px;
+    padding: 6px 12px;
+    background: #fff;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    text-align: center;
+    color: $color-main;
+  }
+}

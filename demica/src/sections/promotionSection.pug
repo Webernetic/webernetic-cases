@@ -1,0 +1,65 @@
+- 
+  var tableData1 = [
+    ['1-3', '11%', '24', '+2'],
+    ['1-10', '19%', '43', '-1'],
+    ['11-30', '31%', '69', '+1'],
+  ]
+
+    var tableData2 = [
+    ['31-50', '17%', '38', '+4'],
+    ['51-100', '18%', '39', '-5'],
+    ['100+', '14%', '32', '+1'],
+  ]
+
+   var tableData3 = [
+    ['1-3', '20%', '44', '+6'],
+    ['1-10', '40%', '89', '+7'],
+    ['11-30', '21%', '46', '-2'],
+  ]
+
+    var tableData4 = [
+    ['31-50', '9%', '20', '+2'],
+    ['51-100', '8%', '18', '-4'],
+    ['100+', '22%', '48', '-3'],
+  ]
+
+section.promotionSection
+  .promotionSection__wrapper.wrapper
+    .promotionSection__top-btn.accent-btn Результаты продвижения
+    .promotionSection__box
+      .promotionSection__box-left
+        h3.promotionSection__title.demica-title Процент запросов в топ <span>Яндекс </span>
+        p.promotionSection__text 19% запросов находятся в Топ-10 Яндекс. До этого у сайта позиций почти не было, а клиентов привлекали через социальные сети.
+      .promotionSection__box-right
+        table.promotionSection__table.table1     
+          tbody
+            each row in tableData1
+              tr
+                each cell in row
+                  td= cell
+        table.promotionSection__table.table2     
+          tbody
+            each row in tableData2
+              tr
+                each cell in row
+                  td= cell
+    .promotionSection__box
+      .promotionSection__box-left
+        h3.promotionSection__title.demica-title Процент запросов в топ <span>Google </span>
+        p.promotionSection__text Сейчас <span>40% запросов</span> находятся в Топ-10 Google.
+        button(type="button").promotionSection__original-btn
+          .promotionSection__btn-text Оригинальный график
+          img.promotionSection__btn-image(src="./assets/icons/arrow-down-right.svg", alt="стрелка")
+      .promotionSection__box-right
+        table.promotionSection__table.table3     
+          tbody
+            each row in tableData3
+              tr
+                each cell in row
+                  td= cell
+        table.promotionSection__table.table4     
+          tbody
+            each row in tableData4
+              tr
+                each cell in row
+                  td= cell

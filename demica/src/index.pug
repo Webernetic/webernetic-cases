@@ -1,0 +1,24 @@
+extends layouts/MainLayout
+include mixins/index.pug
+
+block title
+  | Demica
+
+block content
+  body.body
+    .container
+      include sections/headerSection
+      include sections/requestSection
+      include sections/startSection
+    .container.container-dark
+      include sections/workSection
+    .container
+      include sections/maximumSection
+      include sections/solutionSection
+      include sections/marketingSection
+      include sections/dataSection
+      include sections/resultSection
+      include sections/promotionSection
+      include sections/businessSection
+      include sections/orderSection
+      

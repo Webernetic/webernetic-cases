@@ -1,0 +1,120 @@
+.promotionSection {
+  margin-bottom: 120px;
+
+  &__box {
+    display: flex;
+    gap: 40px;
+
+    &:last-child {
+      margin-top: 40px;
+    }
+  }
+
+  &__top-btn {
+    margin-bottom: 16px;
+  }
+
+  &__box-left {
+    max-width: 530px;
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 21px;
+
+    & span {
+      color: $color-accent;
+    }
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: $color-extra;
+  }
+
+  &__original-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 242px;
+    width: 100%;
+    min-height: 36px;
+    margin-top: 16px;
+    padding: 6px 18px;
+    border-radius: 8px;
+    border: 1px solid $color-accent;
+    color: $color-accent;
+  }
+
+  &__btn-text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $color-accent;
+  }
+
+  &__btn-image {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+  }
+
+  &__box-right {
+    display: flex;
+    gap: 10px;
+    max-width: 610px;
+    width: 100%;
+  }
+
+  &__table {
+    width: 300px;
+    border-collapse: separate;
+    border-spacing: 0 3px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  &__table tr {
+    background-color: #fff;
+    line-height: 140%;
+  }
+
+  &__table td {
+    width: 70px;
+    text-align: center;
+    background-color: #fff;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $color-main;
+  }
+
+  &__table td.cell-positive {
+    color: green;
+  }
+
+  &__table td.cell-negative {
+    color: red;
+  }
+
+  &__table td.cell-neutral {
+    color: black;
+  }
+
+  &__table td.cell-percent {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  &__table td.cell-orange {
+    width: 76px;
+    background-color: #ffa77d;
+    color: white;
+    border-radius: 3px;
+    border: none;
+  }
+}
