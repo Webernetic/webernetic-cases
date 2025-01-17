@@ -1,5 +1,5 @@
 .resultSection {
-  margin-bottom: 120px;
+  @include responsive-sizing(margin-bottom, 70, 120, 400, 1440);
 
   &__title {
     max-width: 380px;
@@ -15,15 +15,45 @@
     gap: 20px;
   }
 
-  &__picture {
+  &__chart-container {
+    position: relative;
     max-width: 880px;
     width: 100%;
     height: 331px;
     border-radius: 6px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
 
-    & img {
-      object-fit: cover;
+  &__chart-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  &__chart {
+    width: 880px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: inset(0 100% 0 0);
+    background: url('../assets/images/chart.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    // animation: reveal 2s forwards;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  @keyframes reveal {
+    0% {
+      clip-path: inset(0 100% 0 0);
+    }
+    100% {
+      clip-path: inset(0 0 0 0);
     }
   }
 
@@ -62,6 +92,10 @@
     color: $color-accent;
   }
 
+  &__original-btn.mobile {
+    display: none;
+  }
+
   &__btn-text {
     font-family: $font-family;
     font-weight: 400;
@@ -74,5 +108,43 @@
     display: inline-block;
     width: 22px;
     height: 22px;
+  }
+
+  @media (max-width: 1179px) {
+    &__chart-bg {
+      width: auto;
+    }
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__box {
+      flex-direction: column-reverse;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__picture {
+      height: 256px;
+    }
+
+    &__original-btn {
+      display: none;
+    }
+
+    &__original-btn.mobile {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      max-width: 100%;
+      gap: 6px;
+    }
+
+    &__title {
+      margin-bottom: 16px;
+    }
   }
 }

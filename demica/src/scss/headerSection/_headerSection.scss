@@ -1,12 +1,15 @@
 .headerSection {
-  margin-bottom: 120px;
+  @include responsive-sizing(margin-bottom, 70, 120, 400, 1440);
   padding: 18px 18px 0;
 
   &__wrapper {
     min-height: 662px;
     padding: 55px 0 38px 114px;
+    @include responsive-sizing(padding-top, 30, 55, 400, 1440);
+    @include responsive-sizing(padding-bottom, 26, 38, 400, 1440);
+    @include responsive-sizing(padding-left, 18, 114, 768, 1440);
     background-image: url('../assets/images/banner.png');
-    background-position: center;
+    background-position: left;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 16px;
@@ -20,7 +23,7 @@
     margin-bottom: 12px;
     font-family: $font-family;
     font-weight: 400;
-    font-size: 42px;
+    @include responsive-sizing(font-size, 32, 42, 400, 1440);
     line-height: 50px;
     color: #2a2a2a;
   }
@@ -29,7 +32,7 @@
     max-width: 450px;
     font-family: $font-family;
     font-weight: 400;
-    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1440);
     line-height: 140%;
     color: rgba(42, 42, 42, 0.8);
   }
@@ -43,7 +46,7 @@
     background: rgba(255, 255, 255, 0.6);
     font-family: $font-family;
     font-weight: 400;
-    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1440);
     line-height: 140%;
     color: #2a2a2a;
 
@@ -55,8 +58,47 @@
   &__region-text {
     font-family: $font-family;
     font-weight: 400;
-    font-size: 26px;
+    @include responsive-sizing(font-size, 22, 26, 400, 1440);
     line-height: 140%;
     color: rgba(42, 42, 42, 0.8);
+  }
+
+  @media (max-width: $breakpoints-md) {
+    padding-inline: 0;
+
+    &__wrapper {
+      background-position: 25% 0;
+    }
+  }
+  @media (max-width: $breakpoints-sm) {
+    &__wrapper {
+      padding-right: 18px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__wrapper {
+      min-height: 583px;
+      background-image: url('../assets/images/banner-mobile.png');
+      background-position: center;
+      padding-right: 18px;
+    }
+
+    &__title {
+      line-height: 125%;
+    }
+
+    &__content {
+      margin-bottom: 167px;
+    }
+
+    &__region-btn {
+      min-height: 41px;
+      padding: 8px 16px;
+
+      &:last-of-type {
+        margin-top: 16px;
+      }
+    }
   }
 }

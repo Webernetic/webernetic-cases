@@ -6,7 +6,7 @@
     margin-bottom: 16px;
     font-family: $font-family;
     font-weight: 400;
-    font-size: 30px;
+    @include responsive-sizing(font-size, 24, 30, 400, 1440);
     line-height: 140%;
     color: $color-extra;
     text-align: left;
@@ -16,7 +16,7 @@
     max-width: 680px;
     font-family: $font-family;
     font-weight: 400;
-    font-size: 24px;
+    @include responsive-sizing(font-size, 18, 24, 400, 1440);
     line-height: 140%;
     color: $color-extra;
   }
@@ -145,11 +145,12 @@
     margin-top: 10px;
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1100px) {
     &_nameWrapper {
       width: 200px;
       height: 100px;
-      bottom: 35%;
+      bottom: 25%;
+      left: 10px;
       padding: 15px;
     }
   }
@@ -180,10 +181,6 @@
   }
 
   @media (max-width: $breakpoints-md) {
-    &_title {
-      font-size: clamp(20px, calc(20px + 10 * (100vw - 400px) / 368), 30px);
-    }
-
     &_formTitle {
       font-size: clamp(24px, calc(24px + 18 * (100vw - 400px) / 368), 42px);
     }
@@ -219,12 +216,11 @@
 
   @media (max-width: $breakpoints-xs) {
     &_wrapper {
-      padding: 46px 26px;
+      padding: 30px 20px;
     }
 
     &_title {
-      margin-bottom: 20px;
-      font-size: 20px;
+      margin-bottom: 12px;
     }
 
     &_formTitle {

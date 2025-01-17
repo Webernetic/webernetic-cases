@@ -1,9 +1,10 @@
 .promotionSection {
-  margin-bottom: 120px;
+  @include responsive-sizing(margin-bottom, 70, 120, 400, 1440);
 
   &__box {
     display: flex;
     gap: 40px;
+    @include responsive-sizing(gap, 15, 40, 1100, 1440);
 
     &:last-child {
       margin-top: 40px;
@@ -30,7 +31,7 @@
   &__text {
     font-family: $font-family;
     font-weight: 400;
-    font-size: 18px;
+    @include responsive-sizing(font-size, 16, 18, 400, 1440);
     line-height: 140%;
     color: $color-extra;
   }
@@ -79,6 +80,7 @@
   }
 
   &__table tr {
+    height: 44px;
     background-color: #fff;
     line-height: 140%;
   }
@@ -112,9 +114,105 @@
 
   &__table td.cell-orange {
     width: 76px;
-    background-color: #ffa77d;
-    color: white;
+    color: #fff;
     border-radius: 3px;
     border: none;
+  }
+
+  &__table.table1 .cell-0-0::before,
+  &__table.table3 .cell-0-0::before {
+    background-color: $color-accent;
+  }
+
+  &__table.table1 .cell-1-0::before,
+  &__table.table3 .cell-1-0::before {
+    background-color: #ff9562;
+  }
+
+  &__table.table1 .cell-2-0::before,
+  &__table.table3 .cell-2-0::before {
+    background-color: #ffa77d;
+  }
+
+  &__table.table2 .cell-0-0::before,
+  &__table.table4 .cell-0-0::before {
+    background-color: #ffad86;
+  }
+
+  &__table.table2 .cell-1-0::before,
+  &__table.table4 .cell-1-0::before {
+    background-color: #ffbfa0;
+  }
+
+  &__table.table2 .cell-2-0::before,
+  &__table.table4 .cell-2-0::before {
+    background-color: #ffe6d9;
+    color: #e2a177;
+  }
+
+  &__table td[class*='cell-orange'] {
+    position: relative;
+    background-color: #fff;
+    padding: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      bottom: 3px;
+      left: 3px;
+      right: 3px;
+      background-color: orange;
+      border-radius: 3px;
+      z-index: 1;
+    }
+
+    span {
+      position: relative;
+      z-index: 2;
+      color: white;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    &__box {
+      flex-direction: column;
+    }
+
+    &__box-left {
+      max-width: 100%;
+    }
+
+    &__box-right {
+      gap: 40px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    &__box-right {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__box-right {
+      align-items: left;
+      gap: 3px;
+    }
+
+    &__original-btn {
+      max-width: 100%;
+      gap: 6px;
+      justify-content: center;
+    }
+
+    &__title {
+      margin-bottom: 6px;
+      line-height: 130%;
+    }
+
+    &__box:last-child {
+      margin-top: 36px;
+    }
   }
 }

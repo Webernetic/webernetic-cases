@@ -1,9 +1,9 @@
 .dataSection {
-  margin-bottom: 120px;
+  @include responsive-sizing(margin-bottom, 70, 120, 400, 1440);
 
   &__top {
     display: flex;
-    gap: 70px;
+    @include responsive-sizing(gap, 15, 70, 992, 1440);
     margin-bottom: 40px;
   }
 
@@ -24,7 +24,8 @@
     max-width: 730px;
     width: 100%;
     border-radius: 6px;
-    padding: 32px 40px;
+    @include responsive-sizing(padding-block, 22, 32, 992, 1440);
+    @include responsive-sizing(padding-inline, 18, 40, 992, 1440);
     background-color: #fff;
   }
 
@@ -38,7 +39,7 @@
   &__bottom p {
     font-family: $font-family;
     font-weight: 400;
-    font-size: 18px;
+    @include responsive-sizing(font-size, 16, 18, 400, 1440);
     line-height: 150%;
     color: $color-main;
   }
@@ -63,5 +64,43 @@
   &__bottom-text {
     max-width: 730px;
     width: 100%;
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__top-left {
+      max-width: 280px;
+    }
+
+    &__bottom-title {
+      margin-right: 20px;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__top {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    &__top-left {
+      max-width: 100%;
+    }
+
+    &__title {
+      margin-bottom: 12px;
+    }
+
+    &__bottom {
+      flex-direction: column;
+    }
+
+    &__bottom-title {
+      margin-bottom: 12px;
+    }
+
+    &__top li {
+      margin-bottom: 3px;
+      line-height: 140%;
+    }
   }
 }

@@ -1,9 +1,10 @@
 .businesSection {
-  margin-bottom: 120px;
+  @include responsive-sizing(margin-bottom, 70, 120, 400, 1440);
 
   &__wrapper {
     min-height: 335px;
-    padding: 40px;
+    @include responsive-sizing(padding-inline, 18, 40, 992, 1440);
+    @include responsive-sizing(padding-block, 22, 40, 992, 1440);
     border-radius: 6px;
     background-image: url('../assets/images/business.png');
     background-position: center;
@@ -22,5 +23,17 @@
     font-size: 18px;
     line-height: 150%;
     color: $color-extra;
+  }
+
+  @media (max-width: 500px) {
+    &__wrapper {
+      min-height: 625px;
+      background-image: url('../assets/images/business-mobile.png');
+      background-position: bottom;
+    }
+
+    &__title {
+      margin-bottom: 8px;
+    }
   }
 }

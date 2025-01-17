@@ -13,6 +13,7 @@
 @import './promotionSection/promotionSection';
 @import './businessSection/businessSection.scss';
 @import './orderSection/orderSection';
+@import './modalSection/modalSection.scss';
 
 *,
 *::after,
@@ -32,7 +33,6 @@ body {
   font-family: $font-family;
   font-weight: 400;
   font-size: 20px;
-  // line-height: 150%;
   color: $color-main;
   background-color: $color-bg;
 }
@@ -45,12 +45,16 @@ body::-webkit-scrollbar {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+
+  @media (max-width: 1179px) {
+    padding-inline: 20px;
+  }
 }
 
 .container-dark {
   max-width: 1444px;
   background-color: #0f121b;
-  padding-block: 100px;
+  @include responsive-sizing(padding-block, 70, 100, 400, 1440);
 }
 
 .wrapper {
@@ -119,7 +123,7 @@ picture {
 .dark-title {
   font-family: $font-family;
   font-weight: 400;
-  font-size: 30px;
+  @include responsive-sizing(font-size, 24, 30, 400, 1440);
   line-height: 140%;
   color: rgba(255, 255, 255, 0.8);
 }
@@ -128,6 +132,12 @@ picture {
   font-family: $font-family;
   font-weight: 400;
   font-size: 30px;
+  @include responsive-sizing(font-size, 24, 30, 400, 1440);
   line-height: 140%;
   color: $color-main;
+}
+
+.show-modal-btn:hover,
+.show-modal-btn:active {
+  cursor: pointer;
 }

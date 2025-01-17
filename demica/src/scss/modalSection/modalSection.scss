@@ -1,0 +1,84 @@
+.modal-demica {
+  visibility: hidden;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  backdrop-filter: blur(5px);
+}
+
+.modal-demica.active {
+  visibility: visible;
+}
+
+.modal-demica.active .modal__container {
+  opacity: 1;
+  transform: scale(1) translateY(-50%);
+}
+.modal__container {
+  position: relative;
+  opacity: 0;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 60px;
+  border-radius: 16px;
+  background-color: #bfbfbf;
+  top: 50%;
+  transform: scale(0) translateY(-50%);
+  transition: all 0.3s ease-in-out;
+}
+
+.modal__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal__title {
+  margin-bottom: 15px;
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 130%;
+  color: #fff;
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+}
+
+.modal__close-button:hover {
+  cursor: pointer;
+}
+
+.modal__close-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.modal__content {
+  margin-top: 20px;
+}
+
+.show-button:hover {
+  cursor: pointer;
+}
+
+@media (max-width: $breakpoints-lg) {
+  .modal__container {
+    padding: 30px 20px;
+    border-radius: 6px;
+  }
+
+  .modal__close-button {
+    top: 15px;
+    right: 15px;
+  }
+}

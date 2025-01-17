@@ -33,33 +33,37 @@ section.promotionSection
       .promotionSection__box-right
         table.promotionSection__table.table1     
           tbody
-            each row in tableData1
+            each row, rowIndex in tableData1
               tr
-                each cell in row
-                  td= cell
+                each cell, cellIndex in row
+                  td(class=`cell-${rowIndex}-${cellIndex}`)
+                    span= cell
         table.promotionSection__table.table2     
           tbody
-            each row in tableData2
+            each row, rowIndex in tableData2
               tr
-                each cell in row
-                  td= cell
+                each cell, cellIndex in row
+                  td(class=`cell-${rowIndex}-${cellIndex}`)
+                    span= cell
     .promotionSection__box
       .promotionSection__box-left
         h3.promotionSection__title.demica-title Процент запросов в топ <span>Google </span>
         p.promotionSection__text Сейчас <span>40% запросов</span> находятся в Топ-10 Google.
-        button(type="button").promotionSection__original-btn
+        button(type="button" data-images='["./assets/images/modal-5.png", "./assets/images/modal-6.png"]' ).promotionSection__original-btn.show-modal-btn
           .promotionSection__btn-text Оригинальный график
           img.promotionSection__btn-image(src="./assets/icons/arrow-down-right.svg", alt="стрелка")
       .promotionSection__box-right
         table.promotionSection__table.table3     
           tbody
-            each row in tableData3
+            each row, rowIndex in tableData3
               tr
-                each cell in row
-                  td= cell
+                each cell, cellIndex in row
+                  td(class=`cell-${rowIndex}-${cellIndex}`)
+                    span= cell
         table.promotionSection__table.table4     
           tbody
-            each row in tableData4
+            each row, rowIndex in tableData4
               tr
-                each cell in row
-                  td= cell
+                each cell, cellIndex in row
+                  td(class=`cell-${rowIndex}-${cellIndex}`)
+                    span= cell

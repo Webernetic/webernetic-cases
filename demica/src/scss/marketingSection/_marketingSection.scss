@@ -1,13 +1,14 @@
 .marketingSection {
-  margin-bottom: 120px;
+  @include responsive-sizing(margin-bottom, 70, 120, 400, 1440);
 
   &__wrapper {
     position: relative;
     min-height: 350px;
     border-radius: 6px;
-    padding: 40px;
+    @include responsive-sizing(padding-inline, 18, 40, 992, 1440);
+    @include responsive-sizing(padding-block, 22, 40, 992, 1440);
     background-image: url('../assets/images/marketing.png');
-    background-position: center;
+    background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 16px;
@@ -23,10 +24,10 @@
   }
 
   &__text {
-    max-width: 540px;
+    @include responsive-sizing(max-width, 370, 540, 992, 1440);
     font-family: $font-family;
     font-weight: 400;
-    font-size: 18px;
+    @include responsive-sizing(font-size, 16, 18, 400, 1440);
     line-height: 150%;
     color: $color-extra;
   }
@@ -52,5 +53,48 @@
     line-height: 130%;
     text-align: center;
     color: $color-main;
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__wrapper {
+      background-position: 65% center;
+    }
+
+    &__picture {
+      right: -90px;
+    }
+  }
+
+  @media (max-width: 920px) {
+    &__wrapper {
+      background-image: url('../assets/images/marketing-middle.png');
+    }
+
+    &__picture {
+      display: none;
+    }
+  }
+
+  @media (max-width: 550px) {
+    &__wrapper {
+      min-height: 640px;
+      background-image: url('../assets/images/marketing-mobile.png');
+      background-position: bottom;
+    }
+
+    &__text {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__wrapper {
+      min-height: 590px;
+    }
+
+    &__title {
+      margin-bottom: 12px;
+      line-height: 130%;
+    }
   }
 }
