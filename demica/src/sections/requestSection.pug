@@ -1,0 +1,20 @@
+-
+  var cards = [
+    {src: "./assets/icons/bag.svg", alt: "покупки", text: "<span>Demica</span> — компания-посредник в Испании, которая уже давно помогает покупателям из России получать прямо из Европы различные товары: от модной одежды до техники и товаров для дома. Работают просто: клиент выбирает товар на сайте, а Demica покупает его, принимает на своём складе и организует доставку в Россию. Всё оперативно, без задержек."},
+    {src: "./assets/icons/time.svg", alt: "время", text: "За 10 лет на рынке Demica заработала безупречную репутацию, и это не просто слова. Компания понимает, как важно время клиента, особенно в горячий сезон распродаж, когда каждая минута на счету. Поэтому <span>заказы обрабатываются молниеносно</span>. И да, доверие клиентов говорит само за себя: тысячи положительных отзывов и рекомендаций, которые накопились за такой длительный период работы. "},
+        
+  ]
+
+section.requestSection
+  .requestSection__wrapper.wrapper
+    .requestSection__top
+      .requestSection__top-btn.accent-btn Запрос клиента
+      .requestSection__top-text Необходимо <span>увеличить количество лидов</span>. Задача проста и понятна, дальше предстояло разобраться, как ее достичь быстро и с максимальным результатом.
+    .requestSection__bottom
+      .requestSection__bottom-left Zara, Massimo Dutti, Dyson – что объединяет эти бренды?
+      .requestSection__bottom-right
+        each card in cards
+          .requestSection__card
+            img.requestSection__card-image(src=card.src, alt=card.alt)
+            .requestSection__card-text!=card.text
+

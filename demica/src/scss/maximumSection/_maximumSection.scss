@@ -1,0 +1,137 @@
+.maximumSection {
+  @include responsive-sizing(margin-block, 70, 120, 400, 1440);
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    @include responsive-sizing(padding-inline, 18, 40, 992, 1440);
+    @include responsive-sizing(padding-block, 22, 40, 992, 1440);
+    background-image: url('../assets/images/maximum-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+  }
+
+  &__left {
+    max-width: 580px;
+    @include responsive-sizing(max-width, 335, 580, 768, 1440);
+  }
+
+  &__title {
+    padding-block: 32px 8px;
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 16, 20, 400, 1440);
+    line-height: 150%;
+    color: $color-main;
+  }
+
+  &__right-box {
+    position: absolute;
+  }
+
+  &__right-icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 54px;
+    height: 54px;
+    z-index: 1;
+  }
+
+  &__box-text {
+    margin-left: auto;
+    border-radius: 11px;
+    padding: 15px 22px;
+    backdrop-filter: blur(40px);
+    box-shadow: 0 4px 49px 0 rgba(248, 136, 82, 0.16);
+    background: #fff;
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 16, 20, 400, 1440);
+    line-height: 130%;
+    text-align: center;
+    color: var(--main);
+  }
+
+  &__right-box:first-child {
+    @include responsive-sizing(right, 10, 62, 1200, 1440);
+    top: 92px;
+    width: 303px;
+
+    & .maximumSection__box-text {
+      max-width: 262px;
+      width: 100%;
+    }
+  }
+
+  &__right-box:last-child {
+    width: 318px;
+    bottom: 70px;
+    @include responsive-sizing(right, 40, 200, 1200, 1440);
+
+    & .maximumSection__box-text {
+      max-width: 277px;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__wrapper {
+      min-height: 520px;
+    }
+
+    &__left {
+      max-width: 100%;
+    }
+
+    &__right-box:first-child {
+      top: 300px;
+    }
+
+    &__right-box:last-child {
+      right: 250px;
+      bottom: 20px;
+    }
+
+    &__box-text {
+      padding-inline: 15px;
+    }
+  }
+
+  @media (max-width: 620px) {
+    &__wrapper {
+      min-height: 600px;
+    }
+
+    &__right-box:first-child {
+      top: 370px;
+    }
+
+    &__right-box:last-child {
+      right: 40px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__wrapper {
+      min-height: 690px;
+      background-image: url('../assets/images/maximum-bg-mobile.png');
+      background-position: bottom;
+    }
+
+    &__right-box {
+      display: none;
+    }
+
+    &__title {
+      padding-top: 16px;
+    }
+  }
+}

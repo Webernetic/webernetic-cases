@@ -1,0 +1,144 @@
+.requestSection {
+  @include responsive-sizing(margin-bottom, 70, 120, 400, 1440);
+
+  &__top {
+    display: flex;
+    gap: 238px;
+    @include responsive-sizing(gap, 16, 238, 400, 1440);
+    max-width: 980px;
+    margin-bottom: 64px;
+  }
+
+  &__top-text {
+    max-width: 580px;
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 18, 20, 400, 1440);
+    line-height: 150%;
+    color: $color-main;
+
+    & span {
+      color: $color-accent;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__bottom-left {
+    @include responsive-sizing(max-width, 335, 370, 992, 1440);
+    width: 100%;
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 26, 36, 768, 1440);
+    line-height: 140%;
+    color: var(--main);
+  }
+
+  &__card {
+    max-width: 780px;
+    width: 100%;
+    min-height: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 37px 40px 40px 35px;
+    @include responsive-sizing(padding-top, 22, 37, 400, 1440);
+    @include responsive-sizing(padding-bottom, 22, 40, 400, 1440);
+    @include responsive-sizing(padding-left, 18, 35, 992, 1440);
+    @include responsive-sizing(padding-right, 18, 40, 992, 1440);
+    border-radius: 6px;
+    background-color: #fff;
+  }
+
+  &__card:first-child {
+    margin-bottom: 18px;
+
+    & img {
+      display: block;
+      width: 65px;
+      height: 65px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__card:last-child {
+    padding: 33px 40px 40px 35px;
+    @include responsive-sizing(padding-top, 22, 33, 400, 1440);
+    @include responsive-sizing(padding-bottom, 22, 40, 400, 1440);
+    @include responsive-sizing(padding-left, 18, 35, 992, 1440);
+    @include responsive-sizing(padding-right, 18, 40, 992, 1440);
+
+    & img {
+      display: block;
+      width: 59px;
+      height: 59px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__card-text {
+    padding-left: 5px;
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 16, 18, 400, 1440);
+    line-height: 150%;
+    color: $color-main;
+
+    & span {
+      color: $color-accent;
+    }
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__top-text {
+      margin-right: 10px;
+    }
+
+    &__bottom {
+      gap: 15px;
+    }
+
+    &__card:first-child img,
+    &__card:last-child img {
+      width: 46px;
+      height: 46px;
+      margin-bottom: 12px;
+    }
+  }
+
+  @media (max-width: 630px) {
+    &__top {
+      flex-direction: column;
+    }
+
+    &__bottom {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    &__bottom-left {
+      max-width: 100%;
+    }
+
+    &__card {
+      min-height: 300px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__top-text {
+      margin-right: 0;
+    }
+
+    &__card:first-child {
+      margin-bottom: 10px;
+    }
+
+    &__card-text {
+      padding-left: 0;
+    }
+  }
+}

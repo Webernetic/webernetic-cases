@@ -1,0 +1,106 @@
+.dataSection {
+  @include responsive-sizing(margin-bottom, 70, 120, 400, 1440);
+
+  &__top {
+    display: flex;
+    @include responsive-sizing(gap, 15, 70, 992, 1440);
+    margin-bottom: 40px;
+  }
+
+  &__top-left {
+    max-width: 380px;
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 19px;
+
+    & span {
+      color: $color-accent;
+    }
+  }
+
+  &__top-right {
+    max-width: 730px;
+    width: 100%;
+    border-radius: 6px;
+    @include responsive-sizing(padding-block, 22, 32, 992, 1440);
+    @include responsive-sizing(padding-inline, 18, 40, 992, 1440);
+    background-color: #fff;
+  }
+
+  &__list {
+    margin-top: 16px;
+    padding-left: 25px;
+  }
+
+  &__top p,
+  &__top li,
+  &__bottom p {
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 16, 18, 400, 1440);
+    line-height: 150%;
+    color: $color-main;
+  }
+
+  &__top li {
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__bottom-title span {
+    color: $color-accent;
+  }
+
+  &__bottom-text {
+    max-width: 730px;
+    width: 100%;
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__top-left {
+      max-width: 280px;
+    }
+
+    &__bottom-title {
+      margin-right: 20px;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__top {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    &__top-left {
+      max-width: 100%;
+    }
+
+    &__title {
+      margin-bottom: 12px;
+    }
+
+    &__bottom {
+      flex-direction: column;
+    }
+
+    &__bottom-title {
+      margin-bottom: 12px;
+    }
+
+    &__top li {
+      margin-bottom: 3px;
+      line-height: 140%;
+    }
+  }
+}

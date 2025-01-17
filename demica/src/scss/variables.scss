@@ -1,0 +1,49 @@
+@import './fonts';
+
+@mixin responsive-sizing($prop, $min, $max, $minDisplay, $maxDisplay) {
+  $sizeDiff: $max - $min;
+  $displayDiff: $maxDisplay - $minDisplay;
+
+  #{$prop}: clamp(
+    #{$min}px,
+    calc(
+      #{$min}px +
+        (#{$sizeDiff} * ((100vw - #{$minDisplay}px) / #{$displayDiff}))
+    ),
+    #{$max}px
+  );
+}
+
+@mixin inverse-responsive-sizing($prop, $min, $max, $minDisplay, $maxDisplay) {
+  $sizeDiff: $max - $min;
+  $displayDiff: $maxDisplay - $minDisplay;
+
+  #{$prop}: clamp(
+    #{$min}px,
+    calc(#{$max}px - ($sizeDiff * (100vw - #{$minDisplay}px) / $displayDiff)),
+    #{$max}px
+  );
+}
+
+$max-width: 1240px;
+
+//fonts
+$font-family: 'Rubik', sans-serif;
+$second-family: 'Lato', sans-serif;
+$third-family: 'Circe', sans-serif;
+$font3: 'Onest', sans-serif;
+
+//colors
+
+$color-bg: #f5f5f5;
+$color-main: rgba(0, 0, 0, 0.8);
+$color-accent: #f57a3f;
+$color-extra: rgba(0, 0, 0, 0.7);
+
+//breakpoints
+$breakpoints-xs: 400px;
+$breakpoints-sm: 576px;
+$breakpoints-md: 768px;
+$breakpoints-lg: 992px;
+$breakpoints-xl: 1200px;
+$breakpoints-xxl: 1400px;
