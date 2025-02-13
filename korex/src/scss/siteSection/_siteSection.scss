@@ -1,0 +1,41 @@
+.siteSection {
+  margin-bottom: 100px;
+
+  &__point.korex-point {
+    margin-bottom: 26px;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0px 30px 0px;
+    border-top: 1px solid $color-txt;
+  }
+
+  &__number {
+    max-width: 154px;
+    width: 100%;
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 120px;
+    line-height: 84%;
+    color: #dce3e9;
+  }
+
+  &__content {
+    max-width: 855px;
+    width: 100%;
+
+    & p {
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 140%;
+      color: $color-txt;
+
+      & span {
+        font-weight: 700;
+      }
+    }
+  }
+}

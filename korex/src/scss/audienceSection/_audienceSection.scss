@@ -1,0 +1,44 @@
+.audienceSection {
+  display: flex;
+  gap: 22px;
+  min-height: 636px;
+  padding-left: 144px;
+  margin-bottom: 100px;
+  background-color: $color-accent;
+
+  &__content {
+    max-width: 686px;
+    padding-block: 110px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 28px;
+    color: #fff;
+  }
+
+  &__text {
+    margin-bottom: 7px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: rgba(255, 255, 255, 0.6);
+
+    & span {
+      font-weight: 700;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__picture {
+    max-width: 588px;
+    height: 531px;
+    margin-top: 52px;
+  }
+}

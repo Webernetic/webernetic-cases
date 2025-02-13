@@ -1,0 +1,37 @@
+.calculationSection {
+  min-height: 696px;
+  margin-bottom: 100px;
+  padding: 90px 144px;
+  background: $color-accent;
+
+  &__btn.korex-btn {
+    margin-bottom: 29px;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+
+  &__pic {
+    height: 329px;
+    margin-top: 40px;
+    border-radius: 12px;
+
+    & img {
+      object-fit: cover;
+      border-radius: 12px;
+    }
+  }
+
+  &__text {
+    max-width: 466px;
+    width: 100%;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: rgba(255, 255, 255, 0.6);
+
+    & span {
+      font-weight: 700;
+    }
+  }
+}

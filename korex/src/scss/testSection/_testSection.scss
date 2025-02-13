@@ -1,0 +1,40 @@
+.testSection {
+  margin-bottom: 100px;
+
+  &__wrapper {
+    display: flex;
+    gap: 70px;
+  }
+
+  &__left {
+    max-width: 518px;
+    width: 100%;
+    height: 310px;
+    border-radius: 14px;
+
+    & img {
+      border-radius: 14px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 564px;
+    width: 100%;
+    padding-block: 31px;
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: $color-txt;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+}

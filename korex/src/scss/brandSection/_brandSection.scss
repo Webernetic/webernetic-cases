@@ -1,0 +1,28 @@
+.brandSection {
+  margin-bottom: 100px;
+
+  &__wrapper {
+    border-radius: 20px;
+    padding: 26px 26px 0;
+    width: 1152px;
+    min-height: 666px;
+    background-color: #fff;
+  }
+
+  &__btn {
+    margin-bottom: 26px;
+  }
+
+  &__text {
+    max-width: 730px;
+    margin-bottom: 24px;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+
+  &__pic {
+    height: 416px;
+  }
+}

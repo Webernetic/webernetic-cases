@@ -1,0 +1,44 @@
+.stackSection {
+  margin-bottom: 100px;
+
+  &__point.korex-point {
+    margin-bottom: 16px;
+  }
+
+  &__box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 30px 0px;
+    border-top: 1px solid $color-txt;
+  }
+
+  &__info {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    max-width: 860px;
+  }
+
+  &__pic {
+    width: 174px;
+    height: 78px;
+    flex-shrink: 0;
+
+    &.hidden {
+      height: 0;
+    }
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: $color-txt;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+}

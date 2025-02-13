@@ -1,0 +1,54 @@
+.functionalSection {
+  margin-bottom: 100px;
+
+  &__wrapper {
+    display: flex;
+    gap: 26px;
+    min-height: 352px;
+    border-radius: 20px;
+    padding: 26px 0 0 26px;
+    background-color: #fff;
+    overflow: hidden;
+  }
+
+  &__point.korex-point {
+    margin-bottom: 24px;
+  }
+
+  &__left {
+    max-width: 536px;
+
+    & p {
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 140%;
+      color: $color-txt;
+
+      &:first-of-type {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__right {
+    height: 285px;
+    margin-top: 41px;
+
+    & img {
+      border-top-left-radius: 12px;
+    }
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: $color-txt;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+}

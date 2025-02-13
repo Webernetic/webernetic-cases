@@ -1,0 +1,40 @@
+.attentionSection {
+  margin-bottom: 100px;
+
+  &__wrapper {
+    display: flex;
+    gap: 57px;
+    min-height: 354px;
+    border-radius: 20px;
+    padding: 36px 26px 0 36px;
+    background: #dce3e9;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  &__left {
+    max-width: 497px;
+    width: 100%;
+  }
+
+  &__right {
+    max-width: 536px;
+    width: 100%;
+    padding-bottom: 36px;
+  }
+
+  &__btn {
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: $color-txt;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+}

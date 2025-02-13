@@ -1,0 +1,51 @@
+.customSection {
+  margin-bottom: 60px;
+
+  &__wrapper {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__btn.korex-btn {
+    margin-bottom: 18px;
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: $color-txt;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 464px;
+    width: 100%;
+    min-height: 555px;
+  }
+
+  &__left-bottom {
+    min-height: 220px;
+    border-radius: 14px;
+    padding: 26px;
+    background: #dce3e9;
+  }
+
+  &__right {
+    max-width: 664px;
+    width: 100%;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 14px;
+
+    & img {
+      border-radius: 14px;
+    }
+  }
+}

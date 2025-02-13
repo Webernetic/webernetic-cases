@@ -1,0 +1,266 @@
+.orderSection {
+  margin-bottom: 30px;
+
+  &_title {
+    max-width: 864px;
+    margin-bottom: 16px;
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 24, 30, 400, 1440);
+    line-height: 140%;
+    color: $color-extra;
+    text-align: left;
+  }
+
+  &_text {
+    max-width: 680px;
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 18, 24, 400, 1440);
+    line-height: 140%;
+    color: $color-extra;
+  }
+
+  &_wrapper {
+    position: relative;
+    display: flex;
+    max-width: 1152px;
+    margin: 32px auto 0;
+    gap: 20px;
+    padding: 56px 40px 56px 84px;
+    background-color: #fff;
+    box-shadow: 2px 4px 9px 0 rgba(36, 24, 61, 0.1);
+    border-radius: 12px;
+  }
+
+  &_imageWrapper {
+    max-width: 387px;
+    width: 100%;
+    height: 520px;
+
+    & > img {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &_nameWrapper {
+    position: absolute;
+    left: 40px;
+    bottom: 22%;
+    width: 218px;
+    height: 105px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 14px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(146, 151, 158, 0.5);
+
+    & > h4 {
+      font-size: 36px;
+      font-weight: 600;
+      font-family: $font-family;
+      color: #272727;
+    }
+
+    & > p {
+      font-size: 13px;
+      font-weight: 800;
+      color: #272727;
+    }
+  }
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+    padding: 25.5px 27px 20px 30px;
+  }
+
+  &_formTitle {
+    font-family: $font-family;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 125%;
+    color: #272727;
+  }
+
+  &_secondformTitle {
+    font-family: $font-family;
+    color: #272727;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 140%;
+    margin-bottom: 20px;
+  }
+
+  &_inputWrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+
+    & > input {
+      flex-basis: 245px;
+      height: 36px;
+      border-bottom: 2px solid #3c3c3c;
+      font-size: 20px;
+      font-family: $font-family;
+      font-weight: 400;
+      color: #272727;
+    }
+  }
+
+  &_checkboxWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-bottom: 50px;
+
+    & > label {
+      flex-basis: 30%;
+      font-size: 20px;
+      font-family: $font-family;
+      font-weight: 400;
+      color: #272727;
+    }
+  }
+
+  & button.customButton {
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 18, 24, 400, 1440);
+    line-height: 120%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: $color-accent;
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 1100px) {
+    &_nameWrapper {
+      width: 200px;
+      height: 100px;
+      bottom: 25%;
+      left: 10px;
+      padding: 15px;
+    }
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &_form {
+      align-items: center;
+      padding: 0;
+    }
+
+    &_imageWrapper,
+    &_nameWrapper {
+      display: none;
+    }
+
+    &_checkboxWrapper {
+      width: 60%;
+      gap: 30px;
+    }
+
+    &_inputWrapper {
+      width: 60%;
+
+      & > input {
+        flex-basis: 100%;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &_formTitle {
+      font-size: clamp(24px, calc(24px + 18 * (100vw - 400px) / 368), 42px);
+    }
+
+    &_secondformTitle {
+      font-size: clamp(18px, calc(18px + 18 * (100vw - 400px) / 368), 36px);
+    }
+
+    &_checkboxWrapper {
+      & > label {
+        font-size: clamp(18px, calc(18px + 6 * (100vw - 400px) / 368), 24px);
+      }
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &_wrapper {
+      padding: 46px 26px;
+    }
+
+    &_form {
+      align-items: stretch;
+    }
+
+    &_checkboxWrapper {
+      width: 100%;
+    }
+
+    &_inputWrapper {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &_wrapper {
+      padding: 30px 20px;
+    }
+
+    &_title {
+      margin-bottom: 12px;
+    }
+
+    &_formTitle {
+      font-size: 22px;
+      line-height: 111%;
+    }
+
+    &_secondformTitle {
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+
+    &_inputWrapper {
+      gap: 30px;
+      margin-bottom: 30px;
+
+      & > input {
+        height: 36px;
+      }
+    }
+
+    &_checkboxWrapper {
+      margin-bottom: 40px;
+      gap: 20px;
+
+      & > label {
+        font-size: 18px;
+        height: 22px;
+      }
+    }
+
+    & button.customButton {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 370px) {
+    &_checkboxWrapper {
+      & > label {
+        flex-basis: 46%;
+      }
+    }
+  }
+}

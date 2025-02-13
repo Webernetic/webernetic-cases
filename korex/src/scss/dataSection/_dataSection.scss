@@ -1,0 +1,72 @@
+.dataSection {
+  margin-bottom: 100px;
+
+  &__top {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  &__top-left,
+  &__top-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 370px;
+    padding: 30px 26px;
+    border-radius: 20px;
+  }
+
+  &__top-left {
+    max-width: 466px;
+    width: 100%;
+    background-color: #fff;
+
+    & p {
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 140%;
+      color: $color-txt;
+
+      & span {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__top-right {
+    max-width: 662px;
+    width: 100%;
+    background-color: $color-accent;
+
+    & p {
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 140%;
+      color: #fff;
+      opacity: 0.7;
+
+      & span {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__top-icon,
+  &__bottom-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+
+  &__bottom {
+    display: flex;
+    gap: 450px;
+    min-height: 172px;
+    padding: 30px 26px;
+    border-radius: 20px;
+    background-color: #fff;
+  }
+}

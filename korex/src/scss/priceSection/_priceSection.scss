@@ -1,0 +1,38 @@
+.priceSection {
+  margin-bottom: 100px;
+
+  &__wrapper {
+    display: flex;
+    gap: 27px;
+    border-radius: 16px;
+    padding: 36px 40px;
+    min-height: 378px;
+    background-color: #fff;
+  }
+
+  &__left {
+    max-width: 621px;
+    width: 100%;
+  }
+
+  &__btn {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    max-width: 621px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: rgba(40, 40, 40, 0.85);
+
+    & span {
+      font-weight: 700;
+    }
+  }
+
+  &__right {
+    margin-top: 22px;
+  }
+}

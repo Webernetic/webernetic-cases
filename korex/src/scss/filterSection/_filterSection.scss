@@ -1,0 +1,55 @@
+.filterSection {
+  margin-bottom: 100px;
+
+  &__wrapper {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__left {
+    max-width: 470px;
+    width: 100%;
+    min-height: 530px;
+    background-image: url('../assets/images/filter1.png');
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__right {
+    max-width: 662px;
+    width: 100%;
+    min-height: 530px;
+  }
+
+  &__right-top {
+    min-height: 294px;
+    margin-bottom: 10px;
+    border-radius: 16px;
+    padding: 36px 32px;
+    background-color: #fff;
+  }
+
+  &__btn {
+    margin-bottom: 20px;
+  }
+
+  &__right-bottom {
+    border-radius: 16px;
+    padding: 34px 34px 32px 26px;
+    height: 226px;
+    background: #485764;
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: $color-txt;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+}
