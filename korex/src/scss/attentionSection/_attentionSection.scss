@@ -1,12 +1,15 @@
 .attentionSection {
-  margin-bottom: 100px;
+  @include responsive-sizing(margin-bottom, 70, 120, 400, 1440);
 
   &__wrapper {
     display: flex;
     gap: 57px;
+    @include responsive-sizing(gap, 15, 57, 768, 1440);
     min-height: 354px;
     border-radius: 20px;
-    padding: 36px 26px 0 36px;
+    @include responsive-sizing(padding-left, 20, 36, 1200, 1440);
+    @include responsive-sizing(padding-top, 20, 36, 1200, 1440);
+    @include responsive-sizing(padding-right, 18, 26, 1200, 1440);
     background: #dce3e9;
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
   }
@@ -14,6 +17,11 @@
   &__left {
     max-width: 497px;
     width: 100%;
+    border-radius: 16px 16px 0 0;
+
+    & img {
+      border-radius: 16px 16px 0 0;
+    }
   }
 
   &__right {
@@ -29,12 +37,75 @@
   &__text {
     font-family: $font-family;
     font-weight: 400;
-    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1440);
     line-height: 140%;
     color: $color-txt;
 
     & span {
       font-weight: 700;
+    }
+  }
+
+  &__image.desktop {
+    display: block;
+  }
+
+  &__image.mobile {
+    display: none;
+  }
+
+  @media (max-width: $breakpoints-xl) {
+    &__left img {
+      object-fit: contain;
+      object-position: bottom;
+    }
+
+    &__btn.korex-btn {
+      min-height: 32px;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    &__right {
+      padding-bottom: 20px;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__wrapper {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    &__right {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__wrapper {
+      gap: 52px;
+      padding-right: 0;
+    }
+
+    &__right {
+      padding-bottom: 0;
+      padding-right: 17px;
+    }
+
+    &__left {
+      border-radius: 16px 0 0;
+
+      & img {
+        border-radius: 16px 0 0;
+      }
+    }
+
+    &__image.desktop {
+      display: none;
+    }
+
+    &__image.mobile {
+      display: block;
     }
   }
 }

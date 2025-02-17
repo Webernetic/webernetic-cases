@@ -1,5 +1,5 @@
 .insightSection {
-  margin-bottom: 100px;
+  @include responsive-sizing(margin-bottom, 70, 120, 400, 1440);
 
   &__point.korex-point {
     margin-bottom: 24px;
@@ -20,12 +20,29 @@
     }
   }
 
+  &__image.desktop {
+    display: block;
+  }
+
+  &__image.mobile {
+    display: none;
+  }
+
   &__left {
     max-width: 660px;
     width: 100%;
     border-radius: 16px;
-    padding: 36px 31px;
+    @include responsive-sizing(padding-block, 20, 36, 992, 1440);
+    @include responsive-sizing(padding-inline, 20, 31, 992, 1440);
     background-color: #fff;
+
+    & p {
+      font-family: $font-family;
+      font-weight: 400;
+      @include responsive-sizing(font-size, 18, 20, 400, 1440);
+      line-height: 140%;
+      color: $color-txt;
+    }
   }
 
   &__right {
@@ -33,5 +50,63 @@
     width: 100%;
     height: 324px;
     border-radius: 16px;
+
+    & p {
+      font-family: $font-family;
+      font-weight: 400;
+      @include responsive-sizing(font-size, 18, 20, 400, 1440);
+      line-height: 140%;
+      color: $color-txt;
+    }
+
+    & img {
+      border-radius: 16px;
+    }
+  }
+
+  @media (max-width: 870px) {
+    &__top,
+    &__bottom {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__top {
+      gap: 16px;
+    }
+
+    &__left {
+      max-width: 100%;
+    }
+
+    &__right {
+      height: 268px;
+    }
+
+    &__right img {
+      object-fit: contain;
+    }
+
+    &__point.korex-point {
+      margin-bottom: 16px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__image.desktop {
+      display: none;
+    }
+
+    &__image.mobile {
+      display: block;
+    }
+
+    &__bottom {
+      margin-top: 16px;
+    }
+
+    &__right img {
+      object-fit: cover;
+    }
   }
 }

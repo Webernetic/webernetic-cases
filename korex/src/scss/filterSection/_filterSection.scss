@@ -1,5 +1,5 @@
 .filterSection {
-  margin-bottom: 100px;
+  @include responsive-sizing(margin-bottom, 70, 120, 400, 1440);
 
   &__wrapper {
     display: flex;
@@ -20,13 +20,18 @@
     max-width: 662px;
     width: 100%;
     min-height: 530px;
+
+    & img {
+      object-position: left;
+    }
   }
 
   &__right-top {
     min-height: 294px;
     margin-bottom: 10px;
     border-radius: 16px;
-    padding: 36px 32px;
+    @include responsive-sizing(padding-block, 20, 36, 1200, 1440);
+    @include responsive-sizing(padding-inline, 20, 32, 1200, 1440);
     background-color: #fff;
   }
 
@@ -37,6 +42,9 @@
   &__right-bottom {
     border-radius: 16px;
     padding: 34px 34px 32px 26px;
+    @include responsive-sizing(padding-right, 20, 34, 1200, 1440);
+    @include responsive-sizing(padding-block, 20, 34, 1200, 1440);
+    @include responsive-sizing(padding-left, 20, 26, 1200, 1440);
     height: 226px;
     background: #485764;
   }
@@ -45,11 +53,59 @@
     font-family: $font-family;
     font-weight: 400;
     font-size: 20px;
+    font-size: 20px;
     line-height: 140%;
     color: $color-txt;
 
     & span {
       font-weight: 700;
+    }
+  }
+
+  &__right-image.desktop {
+    display: block;
+  }
+
+  &__right-image.mobile {
+    display: none;
+  }
+
+  @media (max-width: 950px) {
+    &__wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__right {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 450px) {
+    &__btn {
+      margin-bottom: 24px;
+    }
+
+    &__left {
+      min-height: 378px;
+    }
+
+    &__right-image.desktop {
+      display: none;
+    }
+
+    &__right-image.mobile {
+      display: block;
+    }
+
+    &__right-bottom {
+      height: 265px;
+      padding-bottom: 0;
+      padding-top: 35px;
+    }
+
+    &__right-image {
+      border-radius: 8px 8px 0 0;
     }
   }
 }

@@ -6,7 +6,7 @@
     margin-bottom: 16px;
     font-family: $font-family;
     font-weight: 400;
-    @include responsive-sizing(font-size, 24, 30, 400, 1440);
+    @include responsive-sizing(font-size, 26, 30, 400, 1440);
     line-height: 140%;
     color: $color-extra;
     text-align: left;
@@ -220,15 +220,16 @@
 
     &_title {
       margin-bottom: 12px;
+      line-height: 125%;
     }
 
     &_formTitle {
-      font-size: 22px;
-      line-height: 111%;
+      font-size: 26px;
+      line-height: 125%;
     }
 
     &_secondformTitle {
-      font-size: 18px;
+      font-size: 22px;
       margin-bottom: 24px;
     }
 
@@ -252,7 +253,7 @@
     }
 
     & button.customButton {
-      font-size: 18px;
+      font-size: 20px;
     }
   }
 

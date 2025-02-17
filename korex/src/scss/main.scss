@@ -31,7 +31,6 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  // outline: 1px solid red;
 }
 
 html {
@@ -103,7 +102,7 @@ picture {
   padding-left: 22px;
   font-family: $font-family;
   font-weight: 400;
-  font-size: 28px;
+  @include responsive-sizing(font-size, 24, 28, 400, 1440);
   color: $color-txt;
 
   &::before {
@@ -116,6 +115,10 @@ picture {
     height: 8px;
     border-radius: 100%;
     background-color: $color-txt;
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    padding-left: 22px;
   }
 }
 
@@ -130,4 +133,18 @@ picture {
   font-size: 20px;
   line-height: 130%;
   color: $color-txt;
+
+  @media (max-width: $breakpoints-sm) {
+    height: 32px;
+    font-size: 18px;
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    line-height: 140%;
+  }
+
+  @media (max-width: 374px) {
+    min-height: 32px;
+    height: auto;
+  }
 }

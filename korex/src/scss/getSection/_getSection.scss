@@ -1,23 +1,36 @@
 .getSection {
-  margin-bottom: 100px;
-  background-image: url('../assets/images/get.png');
-  background-position: -50px center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  @include responsive-sizing(margin-bottom, 70, 120, 400, 1440);
 
   &__wrapper {
+    display: flex;
+    gap: 10px;
     min-height: 662px;
-    padding-left: 294px;
+  }
+
+  &__picture {
+    width: 284px;
+
+    & img {
+      object-position: right;
+    }
+  }
+
+  &__content {
+    max-width: 858px;
+    width: 100%;
   }
 
   &__box {
     margin-bottom: 12px;
     border-radius: 16px;
     padding: 26px;
-    max-width: 858px;
-    width: 100%;
+
     min-height: 196px;
     background-color: #fff;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__btn {
@@ -27,12 +40,42 @@
   &__text {
     font-family: $font-family;
     font-weight: 400;
-    font-size: 18px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1440);
     line-height: 140%;
     color: rgba(40, 40, 40, 0.85);
 
     & span {
       font-weight: 700;
+    }
+  }
+
+  @media (max-width: $breakpoints-xl) {
+    &__box {
+      padding: 20px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__picture {
+      display: none;
+    }
+
+    &__btn {
+      position: relative;
+      margin-left: 40px;
+    }
+
+    &__btn:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -40px;
+      transform: translateY(-50%);
+      width: 32px;
+      height: 32px;
+      background-image: url('../assets/icons/target.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
     }
   }
 }

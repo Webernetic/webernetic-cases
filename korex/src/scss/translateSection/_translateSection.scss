@@ -1,5 +1,5 @@
 .translateSection {
-  margin-bottom: 100px;
+  @include responsive-sizing(margin-bottom, 70, 120, 400, 1440);
 
   &__wrapper {
     position: relative;
@@ -10,7 +10,8 @@
     justify-content: space-between;
     min-height: 272px;
     border-radius: 16px;
-    padding: 36px 40px;
+    @include responsive-sizing(padding-block, 20, 36, 1100, 1440);
+    @include responsive-sizing(padding-inline, 20, 40, 1100, 1440);
     margin-bottom: 12px;
     background: #dce3e9;
   }
@@ -32,8 +33,8 @@
 
   &__bottom {
     min-height: 322px;
-    padding-block: 36px;
-    padding-left: 40px;
+    @include responsive-sizing(padding-block, 20, 36, 1100, 1440);
+    @include responsive-sizing(padding-left, 20, 40, 1100, 1440);
     border-radius: 16px;
     background-image: url('../assets/images/translate-bg.png');
     background-position: center;
@@ -41,7 +42,7 @@
     background-repeat: no-repeat;
   }
 
-  &__botttom-text {
+  &__bottom-text {
     max-width: 350px;
     font-family: $font-family;
     font-weight: 400;
@@ -76,5 +77,93 @@
     bottom: 45px;
     left: 50%;
     transform: translateX(-15%);
+  }
+
+  &__auto.auto-4 {
+    display: none;
+  }
+
+  @media (max-width: 1100px) {
+    &__top {
+      gap: 300px;
+      height: 350px;
+    }
+
+    &__auto.auto-2 {
+      top: 260px;
+      right: 15%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__top {
+      flex-direction: column;
+      height: auto;
+    }
+
+    &__top-left,
+    &__top-right {
+      max-width: 100%;
+    }
+
+    &__auto.auto-1 {
+      display: none;
+    }
+
+    &__auto.auto-2 {
+      top: 160px;
+      right: 50%;
+      transform: translateX(50%);
+    }
+
+    &__auto.auto-3 {
+      left: 65%;
+    }
+  }
+
+  @media (max-width: 750px) {
+    &__bottom {
+      position: relative;
+      padding-right: 20px;
+    }
+
+    &__bottom-text {
+      padding-top: 264px;
+    }
+
+    &__auto.auto-3 {
+      display: none;
+    }
+
+    &__bottom-text {
+      max-width: 100%;
+    }
+
+    &__auto.auto-4 {
+      display: block;
+      top: 26px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &__bottom {
+      background-image: url('../assets/images/translate-bg-mobile.png');
+      background-position: left;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media (max-width: 600px) {
+    &__auto.auto-2 {
+      top: 200px;
+      @include inverse-responsive-sizing(top, 180, 300, 375, 600);
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__top {
+      gap: 275px;
+    }
   }
 }

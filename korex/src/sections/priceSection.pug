@@ -5,4 +5,5 @@ section.priceSection
       p.priceSection__text Стоимость автомобиля мы получаем в корейских вонах, но для удобства клиентов ее нужно <span>конвертировать в рубли или доллары</span>. Да, можно было так и оставить, чтобы потом менеджер клиента вручную все обновлял и заполнял, но это лишняя работа. Посетитель сайта не станет считать цену авто самостоятельно — он уйдет туда, где цены указаны в нужной валюте и всё понятно.
       p.priceSection__text Поэтому через API мы подключили <span>интеграцию с Центральным банком России</span>, чтобы цены переводить в нужную валюту автоматически, быстро и точно.
     .priceSection__right
-      img.priceSection__image(src="./assets/images/price.png", alt="сообщение")
+      img.priceSection__image.desktop(src="./assets/images/price.png", alt="сообщение")
+      img.priceSection__image.mobile(src="./assets/images/price-mobile.png", alt="сообщение")

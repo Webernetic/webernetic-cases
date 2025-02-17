@@ -1,9 +1,14 @@
 .testSection {
-  margin-bottom: 100px;
+  @include responsive-sizing(margin-bottom, 70, 120, 400, 1440);
 
   &__wrapper {
     display: flex;
-    gap: 70px;
+    align-items: center;
+    @include responsive-sizing(gap, 20, 70, 992, 1440);
+  }
+
+  &__btn.korex-btn {
+    margin-bottom: 15px;
   }
 
   &__left {
@@ -29,12 +34,27 @@
   &__text {
     font-family: $font-family;
     font-weight: 400;
-    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1440);
     line-height: 140%;
     color: $color-txt;
 
     & span {
       font-weight: 700;
+    }
+  }
+  @media (max-width: $breakpoints-md) {
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__right {
+      max-width: 100%;
+      padding-top: 18px;
+      padding-bottom: 0;
+    }
+
+    &__left {
+      height: 296px;
     }
   }
 }

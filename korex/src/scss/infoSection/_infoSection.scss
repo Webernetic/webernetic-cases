@@ -1,5 +1,5 @@
 .infoSection {
-  margin-bottom: 100px;
+  @include responsive-sizing(margin-bottom, 70, 120, 400, 1440);
 
   &__wrapper {
     border-radius: 20px;
@@ -16,6 +16,11 @@
   &__text {
     max-width: 715px;
     margin-bottom: 24px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: $color-txt;
 
     & span {
       font-weight: 700;
@@ -24,5 +29,52 @@
 
   &__pic {
     height: 230px;
+    @include responsive-sizing(height, 190, 230, 768, 1440);
+
+    & img {
+      object-fit: contain;
+    }
+  }
+
+  &__image.desktop {
+    display: block;
+  }
+
+  &__image.mobile {
+    display: none;
+  }
+
+  @media (max-width: $breakpoints-xl) {
+    &__wrapper {
+      min-height: auto;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__wrapper {
+      padding: 20px;
+    }
+
+    &__btn {
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      margin-bottom: 32px;
+    }
+
+    &__pic {
+      height: auto;
+      margin: 0 auto;
+      @include responsive-sizing(max-width, 295, 400, 400, 576);
+    }
+
+    &__image.desktop {
+      display: none;
+    }
+
+    &__image.mobile {
+      display: block;
+    }
   }
 }

@@ -1,8 +1,9 @@
 .reviewSection {
-  margin-bottom: 100px;
+  @include responsive-sizing(margin-bottom, 70, 120, 400, 1440);
 
   &__btn.korex-btn {
     margin-top: 10px;
+    margin-bottom: 24px;
   }
 
   &__top {
@@ -10,7 +11,7 @@
     gap: 24px;
     min-height: 449px;
     border-radius: 20px;
-    padding: 26px;
+    @include responsive-sizing(padding, 20, 26, 1200, 1440);
     margin-bottom: 16px;
     background-color: #fff;
   }
@@ -36,9 +37,9 @@
 
   &__bottom {
     display: flex;
-    gap: 47px;
+    @include responsive-sizing(gap, 24, 47, 768, 1440);
     min-height: 192px;
-    padding: 26px;
+    @include responsive-sizing(padding, 20, 26, 1200, 1440);
     border-radius: 20px;
     background-color: #fff;
   }
@@ -50,7 +51,7 @@
     & p {
       font-family: $font-family;
       font-weight: 400;
-      font-size: 20px;
+      @include responsive-sizing(font-size, 18, 20, 400, 1440);
       line-height: 140%;
       color: $color-txt;
 
@@ -71,12 +72,58 @@
   &__text {
     font-family: $font-family;
     font-weight: 400;
-    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1440);
     line-height: 140%;
     color: $color-txt;
 
     & span {
       font-weight: 700;
+    }
+  }
+
+  &__bottom-image.desktop {
+    display: block;
+  }
+
+  &__bottom-image.mobile {
+    display: none;
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__top {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    &__top-right {
+      max-width: 100%;
+    }
+
+    &__top-left {
+      @include responsive-sizing(height, 217, 397, 400, 768);
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__top-right {
+      padding-bottom: 0;
+    }
+
+    &__bottom {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__bottom-image.desktop {
+      display: none;
+    }
+
+    &__bottom-image.mobile {
+      display: block;
+    }
+
+    &__btn.korex-btn {
+      margin-top: 0px;
     }
   }
 }
