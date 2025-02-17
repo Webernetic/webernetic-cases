@@ -1,0 +1,129 @@
+.reviewSection {
+  @include responsive-sizing(margin-bottom, 70, 120, 400, 1440);
+
+  &__btn.korex-btn {
+    margin-top: 10px;
+    margin-bottom: 24px;
+  }
+
+  &__top {
+    display: flex;
+    gap: 24px;
+    min-height: 449px;
+    border-radius: 20px;
+    @include responsive-sizing(padding, 20, 26, 1200, 1440);
+    margin-bottom: 16px;
+    background-color: #fff;
+  }
+
+  &__top-left {
+    max-width: 540px;
+    width: 100%;
+    height: 397px;
+
+    & img {
+      object-fit: contain;
+    }
+  }
+
+  &__top-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 540px;
+    width: 100%;
+    padding-bottom: 10px;
+  }
+
+  &__bottom {
+    display: flex;
+    @include responsive-sizing(gap, 24, 47, 768, 1440);
+    min-height: 192px;
+    @include responsive-sizing(padding, 20, 26, 1200, 1440);
+    border-radius: 20px;
+    background-color: #fff;
+  }
+
+  &__bottom-left {
+    max-width: 730px;
+    width: 100%;
+
+    & p {
+      font-family: $font-family;
+      font-weight: 400;
+      @include responsive-sizing(font-size, 18, 20, 400, 1440);
+      line-height: 140%;
+      color: $color-txt;
+
+      & span {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__bottom-right {
+    max-width: 299px;
+
+    & img {
+      object-fit: contain;
+    }
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 18, 20, 400, 1440);
+    line-height: 140%;
+    color: $color-txt;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+
+  &__bottom-image.desktop {
+    display: block;
+  }
+
+  &__bottom-image.mobile {
+    display: none;
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__top {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    &__top-right {
+      max-width: 100%;
+    }
+
+    &__top-left {
+      @include responsive-sizing(height, 217, 397, 400, 768);
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__top-right {
+      padding-bottom: 0;
+    }
+
+    &__bottom {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__bottom-image.desktop {
+      display: none;
+    }
+
+    &__bottom-image.mobile {
+      display: block;
+    }
+
+    &__btn.korex-btn {
+      margin-top: 0px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+section.finalSection
+  .finalSection__wrapper.wrapper
+    .finalSection__btn.korex-btn Итоговый дизайн
+    .finalSection__video-container
+      video(controls, autoplay, muted, loop).finalSection__video.desktop
+        source(src="./assets/video/video1.mp4", type="video/mp4")
+        | Ваш браузер не поддерживает видео.
+      video(controls, autoplay, muted, loop).mobile
+        source(src="./assets/video/video2.mp4", type="video/mp4")
+        | Ваш браузер не поддерживает видео.
+      .finalSection__play-btn  
+        img.finalSection__play-image(src="./assets/icons/play.svg", alt="показывать")

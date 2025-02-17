@@ -1,0 +1,48 @@
+@import './fonts';
+
+@mixin responsive-sizing($prop, $min, $max, $minDisplay, $maxDisplay) {
+  $sizeDiff: $max - $min;
+  $displayDiff: $maxDisplay - $minDisplay;
+
+  #{$prop}: clamp(
+    #{$min}px,
+    calc(
+      #{$min}px +
+        (#{$sizeDiff} * ((100vw - #{$minDisplay}px) / #{$displayDiff}))
+    ),
+    #{$max}px
+  );
+}
+
+@mixin inverse-responsive-sizing($prop, $min, $max, $minDisplay, $maxDisplay) {
+  $sizeDiff: $max - $min;
+  $displayDiff: $maxDisplay - $minDisplay;
+
+  #{$prop}: clamp(
+    #{$min}px,
+    calc(#{$max}px - ($sizeDiff * (100vw - #{$minDisplay}px) / $displayDiff)),
+    #{$max}px
+  );
+}
+
+$max-width: 1240px;
+
+//fonts
+$font-family: 'Source Sans 3', sans-serif;
+
+//colors
+$color-main: rgba(0, 0, 0, 0.8);
+$color-extra: rgba(0, 0, 0, 0.7);
+
+$color-bg: #f0f3f4;
+$color-txt: #282828;
+$color-accent: #2e2e2e;
+$color-stroke: rgba(0, 0, 0, 0.03);
+
+//breakpoints
+$breakpoints-xs: 400px;
+$breakpoints-sm: 576px;
+$breakpoints-md: 768px;
+$breakpoints-lg: 992px;
+$breakpoints-xl: 1200px;
+$breakpoints-xxl: 1400px;
