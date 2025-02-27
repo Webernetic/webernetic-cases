@@ -1,0 +1,75 @@
+.headerSection {
+  min-height: 728px;
+  padding-block: 40px 130px;
+  background-image: url('../assets/images/banner.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 166px;
+  }
+
+  &__top-item:nth-child(1) {
+    width: 159px;
+    height: 40px;
+  }
+
+  &__top-item span {
+    display: block;
+    // font-family: $font-family;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    color: $color-text;
+  }
+
+  &__top-item:nth-child(3) {
+    width: 208px;
+    height: 25px;
+  }
+
+  &__content-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__content {
+    position: relative;
+    max-width: 827px;
+    width: 100%;
+  }
+
+  &__title {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 80px;
+    line-height: 110%;
+    color: $color-text;
+  }
+
+  &__badge.badge1 {
+    position: absolute;
+    top: 37px;
+    left: 463px;
+    width: 182px;
+    height: 122px;
+  }
+
+  &__badge.badge2 {
+    position: absolute;
+    width: 170px;
+    height: 74px;
+    right: -7px;
+    bottom: 70px;
+  }
+
+  &__right {
+    width: 330px;
+    height: 315px;
+  }
+}

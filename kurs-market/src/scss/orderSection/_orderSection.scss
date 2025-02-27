@@ -1,0 +1,290 @@
+.orderSection {
+  margin-bottom: 30px;
+
+  &_title {
+    max-width: 864px;
+    margin-bottom: 16px;
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 24, 30, 400, 1440);
+    line-height: 140%;
+    color: $color-text;
+    text-align: left;
+  }
+
+  &_text {
+    max-width: 680px;
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 18, 24, 400, 1440);
+    line-height: 140%;
+    color: $color-text;
+  }
+
+  &_wrapper {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 140px;
+    padding: 70px 129px 75px 120px;
+    background-color: #fff;
+    border-radius: 12px;
+  }
+
+  &_imageWrapper {
+    max-width: 440px;
+    width: 100%;
+    height: auto;
+
+    & > img {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &_nameWrapper {
+    position: absolute;
+    left: 27%;
+    bottom: 39%;
+    width: 245px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 20px;
+    background: $color-pink;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(146, 151, 158, 0.5);
+
+    & > h4 {
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 100%;
+      font-family: $font-family;
+      color: $color-text;
+    }
+
+    & > p {
+      font-family: $font-family;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 120%;
+      text-transform: uppercase;
+      color: $color-text;
+    }
+  }
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+    max-width: 571px;
+    padding-top: 35px;
+  }
+
+  &_formTitle {
+    font-family: $font-family;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 140%;
+    color: $color-text;
+  }
+
+  &_secondformTitle {
+    font-family: $font-family;
+    color: $color-text;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 140%;
+    margin-bottom: 10px;
+  }
+
+  &_inputWrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+
+    & > input {
+      flex-basis: 245px;
+      height: 36px;
+      border-bottom: 2px solid #3c3c3c;
+      font-size: 20px;
+      font-family: $font-family;
+      font-weight: 400;
+      color: #272727;
+    }
+  }
+
+  &_checkboxWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-bottom: 40px;
+
+    & > label {
+      flex-basis: 30%;
+      font-size: 20px;
+      font-family: $font-family;
+      font-weight: 400;
+      color: #272727;
+    }
+  }
+
+  & button.customButton {
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 120%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-align: left;
+    color: $color-dark-pink;
+    margin-bottom: 100px;
+  }
+
+  &__benefit {
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 36px;
+    color: $color-text;
+    margin-bottom: 20px;
+  }
+
+  &__benefit-link {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 133%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: $color-dark-pink;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 1100px) {
+    &_nameWrapper {
+      width: 200px;
+      height: 100px;
+      bottom: 25%;
+      left: 10px;
+      padding: 15px;
+    }
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &_form {
+      align-items: center;
+      padding: 0;
+    }
+
+    &_imageWrapper,
+    &_nameWrapper {
+      display: none;
+    }
+
+    &_checkboxWrapper {
+      width: 60%;
+      gap: 30px;
+    }
+
+    &_inputWrapper {
+      width: 60%;
+
+      & > input {
+        flex-basis: 100%;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &_formTitle {
+      font-size: clamp(24px, calc(24px + 18 * (100vw - 400px) / 368), 42px);
+    }
+
+    &_secondformTitle {
+      font-size: clamp(18px, calc(18px + 18 * (100vw - 400px) / 368), 36px);
+    }
+
+    &_checkboxWrapper {
+      & > label {
+        font-size: clamp(18px, calc(18px + 6 * (100vw - 400px) / 368), 24px);
+      }
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &_wrapper {
+      padding: 46px 26px;
+    }
+
+    &_form {
+      align-items: stretch;
+    }
+
+    &_checkboxWrapper {
+      width: 100%;
+    }
+
+    &_inputWrapper {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &_wrapper {
+      padding: 30px 20px;
+    }
+
+    &_title {
+      margin-bottom: 12px;
+    }
+
+    &_formTitle {
+      font-size: 22px;
+      line-height: 111%;
+    }
+
+    &_secondformTitle {
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+
+    &_inputWrapper {
+      gap: 30px;
+      margin-bottom: 30px;
+
+      & > input {
+        height: 36px;
+      }
+    }
+
+    &_checkboxWrapper {
+      margin-bottom: 40px;
+      gap: 20px;
+
+      & > label {
+        font-size: 18px;
+        height: 22px;
+      }
+    }
+
+    & button.customButton {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 370px) {
+    &_checkboxWrapper {
+      & > label {
+        flex-basis: 46%;
+      }
+    }
+  }
+}

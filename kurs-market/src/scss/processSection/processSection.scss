@@ -1,0 +1,83 @@
+.processSection {
+  position: relative;
+  top: -75px;
+  min-height: 545px;
+  padding-block: 60px 68px;
+  border-radius: 35px 35px 0 0;
+  background-color: #fff;
+
+  &__pic {
+    position: absolute;
+    right: 31px;
+    top: 22px;
+    width: 180px;
+    height: 124px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 32px;
+    margin-bottom: 40px;
+
+    & .processSection__card {
+      min-height: 246px;
+      border-radius: 20px;
+      padding: 24px 28px 28px 28px;
+      background: $color-tan;
+    }
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 32px;
+
+    & .processSection__card {
+      min-height: 145px;
+      border-radius: 20px;
+      padding: 24px 28px 28px 28px;
+      background: $color-tan;
+    }
+  }
+
+  &__card p,
+  &__card li {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 110%;
+    color: $color-text;
+
+    & span {
+      font-weight: 500;
+    }
+  }
+
+  &__card ul {
+    padding-left: 20px;
+    margin-top: 7px;
+  }
+
+  &__card li {
+    position: relative;
+    padding-left: 20px;
+  }
+
+  &__card li:before {
+    position: absolute;
+    content: '';
+    width: 8px;
+    height: 8px;
+    top: 10px;
+    left: -5px;
+    background-color: $color-text;
+    border-radius: 50%;
+  }
+}

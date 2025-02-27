@@ -1,0 +1,76 @@
+.taskSection {
+  position: relative;
+  min-height: 715px;
+  padding-block: 60px 90px;
+  top: -50px;
+  border-radius: 35px 35px 0 0;
+  background-image: url('../assets/images/task-bg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__title {
+    position: relative;
+    width: fit-content;
+    margin-bottom: 40px;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 110%;
+    color: #fff;
+  }
+
+  &__title::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    right: -55px;
+    width: 65px;
+    height: 62px;
+    background: url('../assets/images/light.png');
+    background-size: contain;
+  }
+
+  &__top,
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 190px;
+    width: 100%;
+  }
+
+  &__top {
+    justify-content: flex-start;
+    margin-bottom: 30px;
+  }
+  &__bottom {
+    justify-content: flex-end;
+  }
+
+  &__card {
+    max-width: 410px;
+    width: 100%;
+    min-height: 179px;
+    border-radius: 20px;
+    padding: 20px 24px 24px 24px;
+    background-color: #fff;
+  }
+
+  &__card-title {
+    margin-bottom: 8px;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 110%;
+    color: $color-text;
+  }
+
+  &__card-text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: $color-text;
+  }
+}

@@ -1,0 +1,19 @@
+-
+  var cards = [
+    {src: "./assets/images/dev1.png", title: "Денис Костюк",  text: "Ведущий Back-end программист"},
+    {src: "./assets/images/dev2.png", title: "Сергей Малюкевич",  text: "Back-end программист"},
+    {src: "./assets/images/dev3.png", title: "Никита Короткевич",  text: "Front-end программист"},
+    {src: "./assets/images/dev4.png", title: "Олег Рак",  text: "Project Manager"},
+    
+  ]
+
+section.devSection
+  .devSection__wrapper.wrapper
+    .devSection__cards
+      each card in cards 
+        .devSection__card
+          .devSection__card-pic 
+            img(src=card.src, alt="разработчик")
+          .devSection__card-title=card.title
+          .devSection__card-text=card.text
+
