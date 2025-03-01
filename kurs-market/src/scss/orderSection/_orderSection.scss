@@ -1,12 +1,13 @@
 .orderSection {
   margin-bottom: 30px;
+  background-color: $color-tan;
 
   &_title {
     max-width: 864px;
     margin-bottom: 16px;
     font-family: $font-family;
     font-weight: 400;
-    @include responsive-sizing(font-size, 24, 30, 400, 1440);
+    @include responsive-sizing(font-size, 25, 30, 400, 1440);
     line-height: 140%;
     color: $color-text;
     text-align: left;
@@ -28,7 +29,10 @@
     max-width: 100%;
     margin: 0 auto;
     gap: 140px;
+    @include responsive-sizing(gap, 20, 140, 992, 1440);
     padding: 70px 129px 75px 120px;
+    @include responsive-sizing(padding-left, 20, 120, 1200, 1440);
+    @include responsive-sizing(padding-right, 20, 129, 1200, 1440);
     background-color: #fff;
     border-radius: 12px;
   }
@@ -48,7 +52,7 @@
   &_nameWrapper {
     position: absolute;
     left: 27%;
-    bottom: 39%;
+    top: 47%;
     width: 245px;
     height: 120px;
     display: flex;
@@ -89,7 +93,7 @@
     font-family: $font-family;
     margin-bottom: 20px;
     font-weight: 600;
-    font-size: 48px;
+    @include responsive-sizing(font-size, 25, 48, 400, 1440);
     line-height: 140%;
     color: $color-text;
   }
@@ -98,7 +102,7 @@
     font-family: $font-family;
     color: $color-text;
     font-weight: 600;
-    font-size: 36px;
+    @include responsive-sizing(font-size, 20, 36, 400, 1440);
     line-height: 140%;
     margin-bottom: 10px;
   }
@@ -140,7 +144,7 @@
   & button.customButton {
     font-family: $font-family;
     font-weight: 600;
-    font-size: 36px;
+    @include responsive-sizing(font-size, 20, 36, 400, 1440);
     line-height: 120%;
     text-decoration: underline;
     text-decoration-skip-ink: none;
@@ -152,7 +156,7 @@
   &__benefit {
     font-family: $font-family;
     font-weight: 600;
-    font-size: 36px;
+    @include responsive-sizing(font-size, 25, 36, 400, 1440);
     color: $color-text;
     margin-bottom: 20px;
   }
@@ -160,7 +164,7 @@
   &__benefit-link {
     font-family: $font-family;
     font-weight: 500;
-    font-size: 24px;
+    @include responsive-sizing(font-size, 20, 24, 400, 1440);
     line-height: 133%;
     text-decoration: underline;
     text-decoration-skip-ink: none;
@@ -168,17 +172,24 @@
     text-transform: uppercase;
   }
 
+  @media (max-width: 1350px) {
+    &_nameWrapper {
+      left: 23%;
+    }
+  }
+
   @media (max-width: 1100px) {
     &_nameWrapper {
-      width: 200px;
-      height: 100px;
-      bottom: 25%;
-      left: 10px;
-      padding: 15px;
+      top: 40%;
     }
   }
 
   @media (max-width: $breakpoints-lg) {
+    &_wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+
     &_form {
       align-items: center;
       padding: 0;
@@ -217,6 +228,10 @@
         font-size: clamp(18px, calc(18px + 6 * (100vw - 400px) / 368), 24px);
       }
     }
+
+    & button.customButton {
+      margin-bottom: 34px;
+    }
   }
 
   @media (max-width: $breakpoints-sm) {
@@ -239,21 +254,11 @@
 
   @media (max-width: $breakpoints-xs) {
     &_wrapper {
-      padding: 30px 20px;
+      padding: 30px 0px;
     }
 
     &_title {
       margin-bottom: 12px;
-    }
-
-    &_formTitle {
-      font-size: 22px;
-      line-height: 111%;
-    }
-
-    &_secondformTitle {
-      font-size: 18px;
-      margin-bottom: 24px;
     }
 
     &_inputWrapper {
@@ -270,13 +275,13 @@
       gap: 20px;
 
       & > label {
-        font-size: 18px;
-        height: 22px;
+        font-size: 14px;
+        font-weight: 500;
       }
     }
 
     & button.customButton {
-      font-size: 18px;
+      font-size: 20px;
     }
   }
 

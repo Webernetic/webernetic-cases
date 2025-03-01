@@ -1,10 +1,20 @@
 .processSection {
   position: relative;
-  top: -75px;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  top: -45px;
   min-height: 545px;
   padding-block: 60px 68px;
   border-radius: 35px 35px 0 0;
   background-color: #fff;
+  overflow: hidden;
+
+  &__wrapper {
+    max-width: 1290px;
+    width: 100%;
+    margin: 0 auto;
+  }
 
   &__pic {
     position: absolute;
@@ -51,7 +61,7 @@
   &__card li {
     font-family: $font-family;
     font-weight: 400;
-    font-size: 28px;
+    @include responsive-sizing(font-size, 22, 28, 400, 1400);
     line-height: 110%;
     color: $color-text;
 
@@ -79,5 +89,65 @@
     left: -5px;
     background-color: $color-text;
     border-radius: 50%;
+  }
+
+  @media (max-width: 1320px) {
+    padding-inline: 20px;
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__top,
+    &__bottom {
+      gap: 16px;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__top,
+    &__bottom {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+
+    &__top {
+      margin-bottom: 16px;
+    }
+
+    &__top &__card {
+      min-height: 148px;
+    }
+
+    &__bottom &__card {
+      min-height: 100px;
+    }
+
+    &__pic {
+      width: 100px;
+      height: 71px;
+      right: 0;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    top: -65px;
+    padding-block: 30px;
+    border-radius: 20px 20px 0 0;
+
+    &__pic {
+      right: -20px;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__card li:before {
+      width: 6px;
+      height: 6px;
+    }
+
+    &__card li {
+      padding-left: 15px;
+    }
   }
 }

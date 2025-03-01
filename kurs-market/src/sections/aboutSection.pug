@@ -2,24 +2,23 @@
 -  const circles2 = ["Laravel", "PHP", "MySQL"]
 
 section.aboutSection
-  .aboutSection__top 
+  .aboutSection__picture 
     img(src="./assets/images/about.png", alt="сайт")
-  .aboutSection__bottom
-    .aboutSection__bottom-content
-      h3.aboutSection__title О компании
-      p.aboutSection__text <span>Kurs-Market</span> — это компания, работающая на рынке онлайн-обучения и предлагающая курсы по различным тематикам: от бизнеса и маркетинга до IT и дизайна.
-      h3.aboutSection__title Домен
-      p.aboutSection__text kurs-market.com
-      h3.aboutSection__title О сотрудничестве
-      p.aboutSection__text Наша компания сотрудничает с клиентом в течение 1,5 года, и за это время мы не только оказали ему техническую поддержку, но и улучшили работу сайта. В частности, мы заменили устаревшие технологии на более современные и оптимизировали работу сайта, что положительно сказалось на скорости загрузки страниц и удобстве использования.
-    .aboutSection__circles
-      .aboutSection__left
-        h2.aboutSection__left-title Frontend
-        .aboutSection__left-circles
-          each circle in circles1
-              .aboutSection__circle=circle  
-      .aboutSection__right
-        h2.aboutSection__right-title Backend
-        .aboutSection__right-circles
-          each circle in circles2
-            .aboutSection__circle=circle
+  .aboutSection__content
+    h3.aboutSection__title О компании
+    p.aboutSection__text <span>Kurs-Market</span> — это компания, работающая на рынке онлайн-обучения и предлагающая курсы по различным тематикам: от бизнеса и маркетинга до IT и дизайна.
+    h3.aboutSection__title Домен
+    p.aboutSection__text kurs-market.com
+    h3.aboutSection__title О сотрудничестве
+    p.aboutSection__text Наша компания сотрудничает с клиентом в течение 1,5 года, и за это время мы не только оказали ему техническую поддержку, но и улучшили работу сайта. В частности, мы заменили устаревшие технологии на более современные и оптимизировали работу сайта, что положительно сказалось на скорости загрузки страниц и удобстве использования.
+  .aboutSection__circles
+    .aboutSection__left
+      h2.aboutSection__left-title Frontend
+      .aboutSection__left-circles
+        each circle in circles1
+            .aboutSection__circle=circle  
+    .aboutSection__right
+      h2.aboutSection__right-title Backend
+      .aboutSection__right-circles
+        each circle in circles2
+          .aboutSection__circle=circle

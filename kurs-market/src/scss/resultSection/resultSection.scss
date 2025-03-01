@@ -1,6 +1,9 @@
 .resultSection {
   position: relative;
-  margin-top: -70px;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: -50px;
   margin-bottom: 40px;
   z-index: 1;
 
@@ -41,7 +44,7 @@
   &__text {
     font-family: $font-family;
     font-weight: 400;
-    font-size: 28px;
+    @include responsive-sizing(font-size, 22, 28, 400, 1400);
     line-height: 110%;
     color: $color-white;
   }
@@ -51,6 +54,63 @@
 
     & img {
       object-fit: cover;
+    }
+  }
+
+  @media (max-width: 1320px) {
+    &__wrapper {
+      padding-inline: 20px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xl) {
+    &__cards {
+      gap: 16px;
+    }
+
+    &__picture {
+      height: auto;
+    }
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+    }
+
+    &__card {
+      min-height: 196px;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__cards {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    margin-top: -65px;
+
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__card {
+      min-height: 176px;
+    }
+
+    &__card-pic {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 8px;
+    }
+
+    &__card:nth-child(1) &__card-pic {
+      width: 29px;
+      height: 44px;
     }
   }
 }

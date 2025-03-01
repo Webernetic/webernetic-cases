@@ -1,4 +1,7 @@
 .devSection {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
   min-height: 290px;
   padding: 60px 55px;
   background: $color-pink;
@@ -39,7 +42,7 @@
   &__card-title {
     font-family: $font-family;
     font-weight: 500;
-    font-size: 28px;
+    @include responsive-sizing(font-size, 24, 28, 400, 1400);
     line-height: 110%;
     color: $color-text;
     padding: 24px 28px 8px 18px;
@@ -49,8 +52,58 @@
     padding: 0 28px 28px 18px;
     font-family: $font-family;
     font-weight: 400;
-    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1400);
     line-height: 120%;
     color: $color-text;
+  }
+
+  @media (max-width: 1320px) {
+    padding-inline: 20px;
+  }
+
+  @media (max-width: $breakpoints-xl) {
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+    }
+  }
+
+  @media (max-width: 620px) {
+    &__cards {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 12px;
+    }
+
+    &__card {
+      height: 122px;
+      min-height: 122px;
+      border-radius: 20px;
+    }
+
+    &__card-pic {
+      min-height: 122px;
+
+      & img {
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+
+    &__card:nth-child(2) &__card-pic img {
+      object-position: center;
+    }
+
+    &__card-title {
+      padding: 20px 20px 8px 18px;
+    }
+
+    &__card-text {
+      padding: 0px 20px 20px 18px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    padding-block: 30px;
   }
 }
