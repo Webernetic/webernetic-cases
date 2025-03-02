@@ -90,3 +90,26 @@ h2.kurs-title {
   line-height: 110%;
   color: $color-text;
 }
+
+//animation start
+.animate-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s;
+}
+
+.animate-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-text {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.animate-text.visible {
+  opacity: 1;
+}
+
+//animation end

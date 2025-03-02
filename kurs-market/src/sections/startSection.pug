@@ -11,12 +11,12 @@ section.startSection
   .startSection__wrapper.wrapper 
     h2.startSection__title.kurs-title Стартовая точка
     .startSection__subtitle Клиент, имея негативный опыт работы с предыдущими подрядчиками, определил ключевые критерии для выбора новой команды:
-    .startSection__lamp.lamp1
+    .startSection__lamp.lamp1.animate-card
       img(src="./assets/icons/lamp1.svg", alt="лампа")
-    .startSection__lamp.lamp2
+    .startSection__lamp.lamp2.animate-card
       img(src="./assets/icons/lamp1.svg", alt="лампа")
     .startSection__cards
       each card in cards 
-        .startSection__card
+        .startSection__card.animate-card
           .startSection__card-title=card.title
           .startSection__card-text!=card.text

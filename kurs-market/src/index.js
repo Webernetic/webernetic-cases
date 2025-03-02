@@ -1,94 +1,80 @@
 import './scss/main.scss';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // tabs
-  const tabs = document.querySelectorAll('.devSection__tab');
-  const cards = document.querySelectorAll('.devSection__card');
+  //header animation
+  const headerTitle = document.querySelector('.headerSection__title');
+  const headerCircles = document.querySelector('.headerSection__right');
+  const headerBadge1 = document.querySelector('.headerSection .badge1');
+  const headerBadge2 = document.querySelector('.headerSection .badge2');
 
-  if (!(tabs.length && cards.length)) return;
+  if (!headerTitle && headerCircles && headerBadge1 && headerBadge2) return;
 
-  tabs.forEach((tab) => {
-    tab.addEventListener('click', () => {
-      const index = tab.getAttribute('data-index');
+  const animateHeader = (entry, element) => {
+    if (entry.isIntersecting) {
+      element.classList.add('animate');
+      headerObserver.unobserve(entry.target);
+    }
+  };
 
-      tabs.forEach((t) => t.classList.remove('active'));
-      cards.forEach((c) => c.classList.remove('active'));
+  const headerObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.target === headerTitle) {
+          animateHeader(entry, headerTitle);
+        } else if (entry.target === headerCircles) {
+          animateHeader(entry, headerCircles);
+        } else if (entry.target === headerBadge1) {
+          animateHeader(entry, headerBadge1);
+        } else if (entry.target === headerBadge2) {
+          animateHeader(entry, headerBadge2);
+        }
+      });
+    },
+    { threshold: 0.5 },
+  );
 
-      tab.classList.add('active');
-      cards[index].classList.add('active');
-    });
-  });
+  // animation diffrent blocks
 
-  //dropdown
+  const cards = document.querySelectorAll('.animate-card');
+  const texts = document.querySelectorAll('.animate-text');
 
-  const dropdownButton = document.querySelector('.devSection__dropdown-button');
-  const dropdownList = document.querySelector('.devSection__dropdown-list');
-  const selectedOption = document.querySelector('.devSection__selected-option');
-  const dropdownItems = document.querySelectorAll('.devSection__dropdown-item');
-  const renderingBlocks = document.querySelectorAll('.devSection__card');
-  const dropdownArrow = document.querySelector('.devSection__dropdown-icon');
+  if (!(cards.length && texts.length)) return;
 
-  if (
-    !(
-      dropdownButton &&
-      dropdownList &&
-      selectedOption &&
-      dropdownItems.length &&
-      renderingBlocks.length &&
-      dropdownArrow
-    )
-  )
-    return;
+  // card animation
 
-  // dropdown-menu
-  dropdownButton.addEventListener('click', toggleDropdownList);
-  dropdownItems.forEach((item) => item.addEventListener('click', selectOption));
-
-  function toggleDropdownList() {
-    dropdownList.classList.toggle('show');
-    dropdownArrow.classList.toggle('show');
-  }
-
-  function selectOption(event) {
-    const selectedItem = event.currentTarget;
-
-    const dataIndex = selectedItem.getAttribute('data-index');
-
-    selectedOption.textContent = selectedItem.textContent;
-    renderContent(dataIndex);
-
-    toggleDropdownList();
-  }
-
-  // dropdown-content
-
-  function renderContent(dataIndex) {
-    renderingBlocks.forEach((block, index) => {
-      if (index == dataIndex) {
-        console.log('нужный блок', block);
-        block.classList.add('active');
-      } else {
-        block.classList.remove('active');
-      }
-    });
-  }
-
-  //animation
-
-  const blocks = document.querySelectorAll('.workSection__item-pic');
-
-  if (!blocks.length) return;
-
-  const observer = new IntersectionObserver((entries) => {
+  const animateCard = (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('animate'); // Используем entry.target вместо block
-        observer.unobserve(entry.target); // Прекращаем наблюдение за этим элементом
+        entry.target.classList.add('visible');
+        cardObserver.unobserve(entry.target);
       }
     });
+  };
+
+  const cardObserver = new IntersectionObserver(animateCard, {
+    threshold: 0.4,
   });
 
-  blocks.forEach((block) => {
-    observer.observe(block);
+  cards.forEach((card) => {
+    cardObserver.observe(card);
+  });
+
+  // text animation
+
+  const animateText = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        textObserver.unobserve(entry.target);
+      }
+    });
+  };
+
+  const textObserver = new IntersectionObserver(animateText, {
+    threshold: 0.8,
+  });
+
+  texts.forEach((text) => {
+    textObserver.observe(text);
   });
 });

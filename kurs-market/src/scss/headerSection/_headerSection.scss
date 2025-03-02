@@ -55,6 +55,18 @@
     @include responsive-sizing(font-size, 36, 80, 400, 1400);
     line-height: 110%;
     color: $color-text;
+
+    opacity: 0;
+    transform: translateY(50px);
+    animation: titleAppear 0.5s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+
+  @keyframes titleAppear {
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   &__badge.badge1 {
@@ -64,6 +76,27 @@
     @include responsive-sizing(left, 200, 463, 400, 1400);
     width: 182px;
     height: 122px;
+
+    opacity: 0;
+    transform: translateY(-200px);
+    animation: badge1Fall 0.4s ease-out forwards;
+    animation-delay: 2s;
+  }
+
+  @keyframes badge1Fall {
+    0% {
+      opacity: 0;
+      transform: translateY(-200px);
+    }
+
+    80% {
+      opacity: 1;
+      transform: translateY(15px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   &__badge.badge2 {
@@ -72,11 +105,42 @@
     height: 74px;
     right: -7px;
     bottom: 70px;
+
+    opacity: 0;
+    transform: translateY(-200px);
+    animation: badge2Fall 0.5s ease-out forwards;
+    animation-delay: 3s;
   }
 
+  @keyframes badge2Fall {
+    0% {
+      opacity: 0;
+      transform: translateY(-200px);
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(15px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
   &__right {
     width: 330px;
     height: 315px;
+
+    opacity: 0;
+    transform: translateY(50px);
+    animation: headerCirclesAppear 0.6s ease-out forwards;
+    animation-delay: 1s;
+  }
+
+  @keyframes headerCirclesAppear {
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   &__right img.desktop {

@@ -13,7 +13,7 @@ section.resultSection
     h2.resultSection__title.kurs-title Результаты наших решений
     .resultSection__cards 
       each card in cards
-        .resultSection__card
+        .resultSection__card.animate-card
           .resultSection__card-pic 
             img(src=card.src, alt="результат")
           p.resultSection__text=card.text
