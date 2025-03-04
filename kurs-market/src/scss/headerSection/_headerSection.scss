@@ -1,0 +1,243 @@
+.headerSection {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 728px;
+  padding-block: 40px 130px;
+  background-image: url('../assets/images/banner.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 166px;
+  }
+
+  &__top-item:nth-child(1) {
+    width: 159px;
+    height: 40px;
+  }
+
+  &__top-item span {
+    display: block;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    color: $color-text;
+  }
+
+  &__top-item:nth-child(3) {
+    width: 208px;
+    height: 25px;
+  }
+
+  &__content-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__content {
+    position: relative;
+    max-width: 827px;
+    @include responsive-sizing(max-width, 700, 827, 992, 1400);
+    width: 100%;
+  }
+
+  &__title {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 80px;
+    @include responsive-sizing(font-size, 36, 80, 400, 1400);
+    line-height: 110%;
+    color: $color-text;
+
+    opacity: 0;
+    transform: translateY(50px);
+    animation: titleAppear 0.5s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+
+  @keyframes titleAppear {
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__badge.badge1 {
+    position: absolute;
+    top: 37px;
+    left: 463px;
+    @include responsive-sizing(left, 200, 463, 400, 1400);
+    width: 182px;
+    height: 122px;
+
+    opacity: 0;
+    transform: translateY(-200px);
+    animation: badge1Fall 0.4s ease-out forwards;
+    animation-delay: 2s;
+  }
+
+  @keyframes badge1Fall {
+    0% {
+      opacity: 0;
+      transform: translateY(-200px);
+    }
+
+    80% {
+      opacity: 1;
+      transform: translateY(15px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__badge.badge2 {
+    position: absolute;
+    width: 170px;
+    height: 74px;
+    right: -7px;
+    bottom: 70px;
+
+    opacity: 0;
+    transform: translateY(-200px);
+    animation: badge2Fall 0.5s ease-out forwards;
+    animation-delay: 3s;
+  }
+
+  @keyframes badge2Fall {
+    0% {
+      opacity: 0;
+      transform: translateY(-200px);
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(15px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  &__right {
+    width: 330px;
+    height: 315px;
+
+    opacity: 0;
+    transform: translateY(50px);
+    animation: headerCirclesAppear 0.6s ease-out forwards;
+    animation-delay: 1s;
+  }
+
+  @keyframes headerCirclesAppear {
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__right img.desktop {
+    display: block;
+  }
+
+  &__right img.mobile {
+    display: none;
+  }
+
+  @media (max-width: 1320px) {
+    padding-inline: 20px 18px;
+  }
+
+  @media (max-width: 1150px) {
+    padding-bottom: 60px;
+    min-height: auto;
+
+    &__top {
+      margin-bottom: 105px;
+    }
+
+    &__content-box {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 80px;
+    }
+
+    &__right {
+      width: 320px;
+      height: 115px;
+      align-self: center;
+    }
+
+    &__right img.desktop {
+      display: none;
+    }
+
+    &__right img.mobile {
+      display: block;
+    }
+
+    &__badge.badge1 {
+      top: -40px;
+      transform: rotate(-25deg);
+    }
+
+    .headerSection__badge.badge2 {
+      bottom: 30px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    &__top-item:nth-child(2) {
+      display: none;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    &__top-item:nth-child(1) {
+      width: 99px;
+      height: 25px;
+    }
+
+    &__top-item:nth-child(3) {
+      width: 125px;
+      height: 25px;
+
+      & img {
+        object-fit: contain;
+      }
+    }
+
+    &__badge.badge1 {
+      right: 33px;
+      width: 104px;
+      height: 73px;
+    }
+
+    & &__badge.badge2 {
+      width: 86px;
+      height: 47px;
+      bottom: 80px;
+
+      & img {
+        object-fit: contain;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    min-height: 615px;
+  }
+
+  @media (max-width: 358px) {
+    & &__badge.badge2 {
+      bottom: 20px;
+    }
+  }
+}

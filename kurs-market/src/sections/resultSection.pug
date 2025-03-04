@@ -1,0 +1,22 @@
+-
+  var cards = [
+    {src: "./assets/icons/result1.svg", text: "Увеличили надежность сайта и уменьшили время его простоя"},
+    {src: "./assets/icons/result2.svg", text: "Автоматизировали процесс получения информации о курсах с других ресурсов и поддержания ее на сайте"},
+    {src: "./assets/icons/result3.svg", text: "Обеспечили маштабируемость и уменьшили затраты на обслуживание сайта"},
+    {src: "./assets/icons/result4.svg", text: "Гарантировали стабильную работу сайта при большом наплыве нового трафика "},
+ 
+  ]
+
+
+section.resultSection
+  .resultSection__wrapper.wrapper
+    h2.resultSection__title.kurs-title Результаты наших решений
+    .resultSection__cards 
+      each card in cards
+        .resultSection__card.animate-card
+          .resultSection__card-pic 
+            img(src=card.src, alt="результат")
+          p.resultSection__text=card.text
+  .resultSection__picture
+    img(src="./assets/images/laptop.png", alt="ноутбук") 
+    

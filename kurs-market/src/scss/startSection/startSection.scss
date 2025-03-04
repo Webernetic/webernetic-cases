@@ -1,0 +1,127 @@
+.startSection {
+  position: relative;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 747px;
+  padding: 60px 55px 90px;
+  @include responsive-sizing(padding-top, 30, 60, 400, 1400);
+  @include responsive-sizing(padding-bottom, 30, 90, 400, 1400);
+  @include responsive-sizing(padding-inline, 20, 55, 400, 1400);
+  border-radius: 35px 35px 0 0;
+  background: $color-tan;
+  overflow: hidden;
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    max-width: 960px;
+    margin-bottom: 32px;
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 18, 28, 400, 1400);
+    line-height: 120%;
+    color: $color-text;
+  }
+
+  &__lamp {
+    position: absolute;
+  }
+
+  &__lamp.lamp1 {
+    width: 142px;
+    height: 142px;
+    right: 123px;
+    top: 40px;
+  }
+
+  &__lamp.lamp2 {
+    width: 91px;
+    height: 91px;
+    top: 143px;
+    right: 0;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+  }
+
+  &__card {
+    min-height: 163px;
+    padding: 24px 28px 28px 28px;
+    border-radius: 20px;
+    background-color: #fff;
+  }
+  &__card-title {
+    margin-bottom: 8px;
+    font-family: $font-family;
+    font-weight: 500;
+    @include responsive-sizing(font-size, 22, 28, 400, 1400);
+    line-height: 110%;
+    color: $color-text;
+  }
+
+  &__card-text {
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 18, 20, 400, 1400);
+    line-height: 120%;
+    color: $color-text;
+
+    & span {
+      font-weight: 600;
+    }
+  }
+
+  @media (max-width: $breakpoints-xl) {
+    &__lamp.lamp1 {
+      top: 0;
+    }
+    &__lamp.lamp2 {
+      top: 50px;
+    }
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__cards {
+      gap: 8px;
+    }
+
+    &__card {
+      padding: 20px;
+    }
+  }
+  @media (max-width: $breakpoints-sm) {
+    &__cards {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      margin-bottom: 30px;
+    }
+
+    &__lamp.lamp1 {
+      width: 65px;
+      height: 65px;
+      right: 16px;
+      top: 13px;
+    }
+
+    &__lamp.lamp2 {
+      width: 40px;
+      height: 40px;
+      right: 2px;
+      top: 68px;
+      transform: rotate(70deg);
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__title {
+      margin-bottom: 20px;
+    }
+  }
+}

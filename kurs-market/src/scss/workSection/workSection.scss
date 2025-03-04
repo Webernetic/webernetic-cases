@@ -1,0 +1,108 @@
+.workSection {
+  min-height: 872px;
+  padding-block: 90px 60px;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: -70px;
+  background-image: url('../assets/images/work-bg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__content {
+    margin-top: 70px;
+    max-width: 1070px;
+    @include responsive-sizing(padding, 20, 60, 768, 1400);
+    margin: 0 auto;
+    border: 1px solid $color-dark-pink;
+    border-radius: 35px;
+    background-color: #fff;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 22, 28, 400, 1400);
+    line-height: 120%;
+    color: $color-text;
+
+    & span {
+      font-weight: 500;
+      line-height: 110%;
+    }
+  }
+
+  &__text:nth-child(5) {
+    margin-block: 32px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+    margin-block: 20px 32px;
+  }
+
+  &__card {
+    min-height: 145px;
+    padding: 24px 28px 28px 28px;
+    @include responsive-sizing(padding-inline, 20, 28, 992, 1400);
+    @include responsive-sizing(padding-top, 20, 24, 992, 1400);
+    @include responsive-sizing(padding-bottom, 20, 28, 992, 1400);
+    border-radius: 20px;
+    background-color: $color-tan;
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 22, 28, 400, 1400);
+    line-height: 110%;
+    color: $color-text;
+  }
+
+  @media (max-width: 1320px) {
+    padding-inline: 20px;
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__cards {
+      gap: 12px;
+    }
+
+    @media (max-width: $breakpoints-md) {
+      &__cards {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+
+      &__card {
+        min-height: 88px;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    padding-top: 130px;
+    padding-bottom: 0;
+
+    &__content {
+      border-radius: 20px 20px 0 0;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__cards {
+      margin-bottom: 22px;
+    }
+
+    &__text:nth-child(5) {
+      margin-block: 12px;
+    }
+  }
+}

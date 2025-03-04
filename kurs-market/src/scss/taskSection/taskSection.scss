@@ -1,0 +1,127 @@
+.taskSection {
+  position: relative;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 715px;
+  padding-block: 60px 90px;
+  top: -30px;
+  border-radius: 35px 35px 0 0;
+  background-image: url('../assets/images/task-bg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__title {
+    position: relative;
+    width: fit-content;
+    margin-bottom: 40px;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 60px;
+    @include responsive-sizing(font-size, 36, 60, 400, 1400);
+    line-height: 110%;
+    color: #fff;
+  }
+
+  &__title::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    right: -55px;
+    width: 65px;
+    height: 62px;
+    background: url('../assets/images/light.png');
+    background-size: contain;
+  }
+
+  &__top,
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 190px;
+    @include responsive-sizing(gap, 8, 190, 576, 1400);
+    width: 100%;
+  }
+
+  &__top {
+    justify-content: flex-start;
+    margin-bottom: 30px;
+  }
+  &__bottom {
+    justify-content: flex-end;
+  }
+
+  &__card {
+    max-width: 410px;
+    width: 100%;
+    min-height: 179px;
+    border-radius: 20px;
+    padding: 20px 24px 24px 24px;
+    background-color: #fff;
+  }
+
+  &__card.mobile {
+    display: none;
+  }
+
+  &__card-title {
+    margin-bottom: 8px;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 28px;
+    @include responsive-sizing(font-size, 22, 28, 400, 1400);
+    line-height: 110%;
+    color: $color-text;
+  }
+
+  &__card-text {
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 18, 20, 400, 1400);
+    line-height: 120%;
+    color: $color-text;
+  }
+
+  @media (max-width: 1320px) {
+    &__wrapper {
+      padding-inline: 20px;
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    padding-top: 30px;
+    border-radius: 20px 20px 0 0;
+    background-image: url('../assets/images/task-bg-mobile.png');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__top,
+    &__bottom {
+      flex-direction: column;
+    }
+
+    &__top {
+      margin-bottom: 10px;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__card {
+      min-height: 160px;
+      padding: 20px;
+    }
+
+    &__card.desktop {
+      display: none;
+    }
+
+    &__card.mobile {
+      display: block;
+    }
+  }
+}
