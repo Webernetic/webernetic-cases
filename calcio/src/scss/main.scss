@@ -1,0 +1,101 @@
+@import './fonts';
+@import './variables';
+@import '../mixins/mixinsStyles.scss';
+@import './headerSection/_headerSection.scss';
+@import './startSection/_startSection.scss';
+@import './colorSection/colorSection';
+@import './talismanSection/talismanSection';
+@import './contentSection/contentSection';
+@import './createSection/createSection';
+@import './mainSection/mainSection';
+@import './freeSection/freeSection.scss';
+@import './presentationSection/presentationSection.scss';
+@import './footballSection/footballSection';
+@import './diarySection/diarySection.scss';
+@import './principleSection/principleSection.scss';
+@import './groupSection/groupSection';
+@import './reviewSection/reviewSection.scss';
+@import './functionalSection/functionalSection';
+@import './profileSection/profileSection';
+@import './orderSection/orderSection';
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  // outline: 1px solid red;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: $second-family;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 130%;
+  color: $color-main;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (max-width: 1159px) {
+    padding-inline: 20px;
+  }
+}
+
+.wrapper {
+  max-width: 1159px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  color: inherit;
+}
+
+img,
+picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.calcio-title {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 115%;
+  color: $color-accent;
+}

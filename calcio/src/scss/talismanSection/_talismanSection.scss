@@ -1,0 +1,71 @@
+.talismanSection {
+  min-height: 500px;
+  margin-bottom: 120px;
+  overflow: hidden;
+
+  &__wrapper {
+    display: flex;
+    margin-bottom: 120px;
+    border-radius: 24px;
+    padding-left: 60px;
+    background: linear-gradient(129deg, #424242 0%, #202020 100%);
+  }
+
+  &__left {
+    max-width: 600px;
+    padding-block: 46px;
+  }
+
+  &__title.calcio-title {
+    margin-bottom: 16px;
+    color: #fff;
+  }
+
+  &__text {
+    margin-bottom: 62px;
+    font-family: $second-family;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 130%;
+    color: rgba(255, 255, 255, 0.9);
+
+    & span {
+      font-weight: 700;
+    }
+  }
+
+  &__bottom {
+    position: relative;
+    border: 1px solid #fff;
+    border-radius: 12px;
+    padding: 12px 20px;
+  }
+
+  &__bottom-badge {
+    position: absolute;
+    top: -32px;
+    left: -28px;
+    border-radius: 8px;
+    padding: 5px 14px;
+    background: $color-accent;
+    transform: rotate(-4deg);
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 115%;
+    color: #fff;
+  }
+
+  &__bottom-text {
+    font-family: $second-family;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 130%;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  &__right {
+    width: auto;
+    height: 500px;
+  }
+}

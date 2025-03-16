@@ -1,0 +1,95 @@
+.startSection {
+  position: relative;
+  min-height: 639px;
+  margin-block: 74px 120px;
+
+  &__title {
+    margin-bottom: 34px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 115%;
+    color: $color-main;
+  }
+
+  &__container {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__pic {
+    position: absolute;
+    top: 163px;
+    left: 0;
+    width: auto;
+    height: auto;
+    z-index: -1;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-start;
+    min-height: 366px;
+    max-width: 466px;
+    width: 100%;
+    padding: 26px;
+    border-radius: 12px;
+    background: #eceff1;
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+  }
+
+  &__content-title {
+    margin-bottom: 12px;
+  }
+
+  &__content-text {
+    font-family: $second-family;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 130%;
+    color: $color-main;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+
+  &__right-top {
+    min-height: 130px;
+    max-width: 662px;
+    width: 100%;
+    margin-bottom: 17px;
+    border-radius: 12px;
+    padding: 26px;
+    background: linear-gradient(129deg, #424242 0%, #202020 100%);
+    font-family: $second-family;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 130%;
+    color: #fff;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+
+  &__right-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 392px;
+    max-width: 662px;
+    width: 100%;
+    border: 1px solid $color-main;
+    border-radius: 12px;
+    padding: 26px;
+    transform: rotate(1deg) translate(-5px, 5px);
+  }
+}

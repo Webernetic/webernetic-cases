@@ -1,0 +1,38 @@
+.functionalSection {
+  margin-bottom: 120px;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    gap: 51px;
+    min-height: 528px;
+    border-radius: 24px;
+    padding: 36px 40px;
+    background: #eceff1;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    margin-bottom: 26px;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    max-width: 480px;
+    width: 100%;
+  }
+
+  &__pic {
+    position: absolute;
+    top: 64px;
+    right: 40px;
+  }
+}

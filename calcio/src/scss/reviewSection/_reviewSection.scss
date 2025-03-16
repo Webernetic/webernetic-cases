@@ -1,0 +1,79 @@
+.reviewSection {
+  position: relative;
+  margin-bottom: 125px;
+
+  &__wrapper {
+    display: flex;
+    gap: 20px;
+    padding-top: 120px;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 564px;
+    width: 100%;
+    min-height: 390px;
+    border: 1px solid $color-main;
+    border-radius: 16px;
+    padding: 32px 26px;
+    background: linear-gradient(90deg, #414141 0%, #202020 100%);
+    transform: rotate(-1deg);
+  }
+
+  &__icon {
+    width: 27px;
+    height: 27px;
+  }
+
+  &__left .calcio-title {
+    margin-bottom: 12px;
+    color: #fff;
+  }
+
+  &__text {
+    font-family: $second-family;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 130%;
+    color: #fff;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 564px;
+    width: 100%;
+    min-height: 390px;
+    border: 1px solid $color-main;
+    border-radius: 16px;
+    padding: 26px;
+    transform: translate(5px, 5px);
+
+    & .reviewSection__title {
+      margin-bottom: 12px;
+    }
+
+    & .reviewSection__text {
+      font-family: $second-family;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 130%;
+      color: $color-main;
+    }
+  }
+
+  &__pic {
+    position: absolute;
+    top: -370px;
+    right: 0;
+    width: auto;
+    height: auto;
+  }
+}

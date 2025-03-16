@@ -1,0 +1,37 @@
+.freeSection {
+  margin-bottom: 188px;
+
+  &__wrapper {
+    position: relative;
+    min-height: 436px;
+    border-radius: 24px;
+    padding: 46px 60px 46px 592px;
+    background: linear-gradient(90deg, #2c2c2c 0%, #202020 48.9%, #3b3a3a 100%);
+  }
+
+  &__title.calcio-title {
+    margin-bottom: 12px;
+    line-height: 115%;
+    color: #fff;
+  }
+
+  &__text {
+    font-family: $second-family;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 130%;
+    color: #fff;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 51px;
+    left: 63px;
+    width: auto;
+    height: auto;
+  }
+}

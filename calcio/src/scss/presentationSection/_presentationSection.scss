@@ -1,0 +1,39 @@
+.presentationSection {
+  margin-bottom: 120px;
+
+  &__wrapper {
+    display: flex;
+    gap: 19px;
+  }
+
+  &__left {
+    max-width: 566px;
+    width: 100%;
+    height: 318px;
+  }
+
+  &__right {
+    max-width: 567px;
+    width: 100%;
+    min-height: 318px;
+    padding: 32px 26px;
+    border: 1px solid $color-main;
+    border-radius: 24px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    font-family: $second-family;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 130%;
+    color: $color-main;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+}
