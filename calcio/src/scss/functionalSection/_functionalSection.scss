@@ -1,5 +1,6 @@
 .functionalSection {
   margin-bottom: 120px;
+  @include responsive-sizing(margin-bottom, 60, 120, 400, 1159);
 
   &__wrapper {
     position: relative;
@@ -8,6 +9,7 @@
     min-height: 528px;
     border-radius: 24px;
     padding: 36px 40px;
+    @include responsive-sizing(padding-inline, 16, 40, 992, 1159);
     background: #eceff1;
   }
 
@@ -17,6 +19,9 @@
 
   &__text {
     margin-bottom: 26px;
+    font-size: 20px;
+    line-height: 130%;
+    @include responsive-sizing(font-size, 18, 20, 400, 1159);
 
     & span {
       font-weight: 700;
@@ -27,6 +32,7 @@
     display: flex;
     flex-direction: column;
     max-width: 480px;
+    @include responsive-sizing(max-width, 300, 480, 700, 1159);
     width: 100%;
   }
 
@@ -34,5 +40,55 @@
     position: absolute;
     top: 64px;
     right: 40px;
+    @include responsive-sizing(max-width, 320, 541, 700, 1159);
+    @include responsive-sizing(right, 16, 40, 992, 1159);
+  }
+  @media (max-width: 700px) {
+    &__wrapper {
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      padding-bottom: 0;
+    }
+
+    &__pic {
+      position: static;
+    }
+
+    &__left {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    margin-bottom: 250px;
+
+    &__wrapper {
+      min-height: 528px;
+    }
+
+    &__title {
+      margin-bottom: 8px;
+    }
+
+    &__text {
+      margin-bottom: 12px;
+    }
+
+    &__text:last-child {
+      margin-bottom: 0;
+    }
+
+    &__pic {
+      position: absolute;
+      top: 420px;
+      left: 15px;
+      max-width: 315px;
+
+      & img {
+        width: 100%;
+      }
+    }
   }
 }

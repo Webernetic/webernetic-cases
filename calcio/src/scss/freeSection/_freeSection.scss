@@ -1,11 +1,16 @@
 .freeSection {
   margin-bottom: 188px;
+  @include responsive-sizing(margin-bottom, 60, 188, 768, 1159);
 
   &__wrapper {
     position: relative;
-    min-height: 436px;
+    height: 436px;
     border-radius: 24px;
     padding: 46px 60px 46px 592px;
+    @include responsive-sizing(padding-block, 20, 46, 768, 1159);
+    @include responsive-sizing(padding-right, 16, 60, 768, 1159);
+    @include responsive-sizing(padding-left, 400, 592, 768, 1159);
+    @include responsive-sizing(padding-bottom, 60, 188, 400, 1159);
     background: linear-gradient(90deg, #2c2c2c 0%, #202020 48.9%, #3b3a3a 100%);
   }
 
@@ -19,6 +24,7 @@
     font-family: $second-family;
     font-weight: 300;
     font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1159);
     line-height: 130%;
     color: #fff;
 
@@ -31,7 +37,47 @@
     position: absolute;
     top: 51px;
     left: 63px;
-    width: auto;
+    @include responsive-sizing(left, 16, 63, 768, 1159);
+    max-width: 466px;
+    @include responsive-sizing(max-width, 350, 466, 768, 1159);
+    width: 100%;
     height: auto;
+  }
+
+  @media (max-width: 1150px) {
+    &__wrapper {
+      height: auto;
+      min-height: 436px;
+      padding-bottom: 20px;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__wrapper {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 26px;
+      padding-left: 16px;
+    }
+
+    &__image {
+      position: static;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    margin-bottom: 188px;
+
+    &__wrapper {
+      min-height: 335px;
+      border-radius: 16px;
+    }
+
+    &__image {
+      transform: translateY(120px);
+      margin-top: -120px;
+      height: 304px;
+    }
   }
 }

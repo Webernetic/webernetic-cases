@@ -1,5 +1,6 @@
 .headerSection {
   min-height: 659px;
+  @include responsive-sizing(min-height, 600, 659, 400, 1159);
   padding-block: 93px 134px;
   background-image: url('../assets/images/banner.png');
   background-position: center;
@@ -9,15 +10,21 @@
   &__title {
     max-width: 553px;
     margin-bottom: 148px;
+    @include responsive-sizing(margin-bottom, 26, 148, 400, 1159);
     font-family: $font-family;
     font-weight: 400;
     font-size: 72px;
+    @include responsive-sizing(font-size, 44, 72, 400, 1159);
     line-height: 105%;
     color: #fff;
 
     & span {
       color: $color-accent;
     }
+  }
+
+  &__title.mobile {
+    display: none;
   }
 
   &__content {
@@ -28,7 +35,7 @@
     margin-bottom: 12px;
     font-family: $font-family;
     font-weight: 400;
-    font-size: 36px;
+    @include responsive-sizing(font-size, 30, 36, 400, 1159);
     line-height: 117%;
     color: #fff;
   }
@@ -37,7 +44,47 @@
     font-family: $second-family;
     font-weight: 400;
     font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1159);
     line-height: 130%;
     color: #fff;
+  }
+
+  @media (max-width: 1158px) {
+    &__title {
+      padding-inline: 20px;
+    }
+
+    &__content {
+      padding-inline: 20px;
+    }
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__content {
+      @include responsive-sizing(max-width, 300, 479, 400, 992);
+    }
+  }
+
+  @media (max-width: $breakpoints-sm) {
+    background-image: url('../assets/images/banner-mobile.png');
+    padding-block: 38px;
+
+    &__content {
+      max-width: 100%;
+    }
+
+    &__title {
+      display: none;
+      line-height: 101%;
+    }
+
+    &__title.mobile {
+      display: block;
+      line-height: 101%;
+    }
+
+    &__subtitle {
+      margin-bottom: 8px;
+    }
   }
 }

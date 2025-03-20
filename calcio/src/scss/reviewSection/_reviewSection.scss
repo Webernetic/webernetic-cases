@@ -1,11 +1,12 @@
 .reviewSection {
   position: relative;
   margin-bottom: 125px;
+  @include responsive-sizing(margin-bottom, 60, 125, 400, 1159);
 
   &__wrapper {
     display: flex;
     gap: 20px;
-    padding-top: 120px;
+    @include responsive-sizing(padding-top, 60, 120, 400, 1159);
   }
 
   &__left {
@@ -18,6 +19,8 @@
     border: 1px solid $color-main;
     border-radius: 16px;
     padding: 32px 26px;
+    @include responsive-sizing(padding-block, 26, 32, 400, 1159);
+    @include responsive-sizing(padding-inline, 16, 26, 400, 1159);
     background: linear-gradient(90deg, #414141 0%, #202020 100%);
     transform: rotate(-1deg);
   }
@@ -25,6 +28,7 @@
   &__icon {
     width: 27px;
     height: 27px;
+    margin-bottom: 10px;
   }
 
   &__left .calcio-title {
@@ -36,6 +40,7 @@
     font-family: $second-family;
     font-weight: 300;
     font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1159);
     line-height: 130%;
     color: #fff;
 
@@ -54,6 +59,7 @@
     border: 1px solid $color-main;
     border-radius: 16px;
     padding: 26px;
+    @include responsive-sizing(padding-inline, 18, 26, 400, 1159);
     transform: translate(5px, 5px);
 
     & .reviewSection__title {
@@ -64,6 +70,7 @@
       font-family: $second-family;
       font-weight: 300;
       font-size: 20px;
+      @include responsive-sizing(font-size, 18, 20, 400, 1159);
       line-height: 130%;
       color: $color-main;
     }
@@ -75,5 +82,44 @@
     right: 0;
     width: auto;
     height: auto;
+    z-index: -1;
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__wrapper {
+      gap: 8px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    .reviewSection__pic {
+      display: none;
+    }
+
+    &__left,
+    &__right {
+      max-width: 100%;
+      min-height: auto;
+    }
+
+    &__left {
+      transform: rotate(0deg);
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__icon {
+      width: 21px;
+      height: 21px;
+      margin-bottom: 36px;
+    }
+
+    &__title.calcio-title {
+      margin-bottom: 8px;
+    }
   }
 }

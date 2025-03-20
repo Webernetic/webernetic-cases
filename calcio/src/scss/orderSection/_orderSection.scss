@@ -86,7 +86,7 @@
     font-family: $font-family;
     margin-bottom: 20px;
     font-weight: 400;
-    @include responsive-sizing(font-size, 24, 42, 400, 1440);
+    @include responsive-sizing(font-size, 36, 42, 400, 1440);
     line-height: 125%;
     color: #272727;
   }
@@ -96,6 +96,7 @@
     color: $color-main;
     font-weight: 400;
     font-size: 42px;
+    @include responsive-sizing(font-size, 28, 42, 400, 1440);
     line-height: 125%;
     margin-bottom: 20px;
     color: #272727;
@@ -199,7 +200,7 @@
 
   @media (max-width: $breakpoints-xs) {
     &_wrapper {
-      padding: 30px 26px;
+      padding: 30px 20px;
     }
 
     &_title {
@@ -207,7 +208,6 @@
     }
 
     &_secondformTitle {
-      font-size: 22px;
       margin-bottom: 24px;
     }
 
@@ -233,7 +233,8 @@
     }
 
     & button.customButton {
-      font-size: 18px;
+      font-size: 24px;
+      line-height: 111%;
     }
   }
 

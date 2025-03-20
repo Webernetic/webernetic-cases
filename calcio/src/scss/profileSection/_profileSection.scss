@@ -1,5 +1,6 @@
 .profileSection {
   margin-bottom: 120px;
+  @include responsive-sizing(margin-bottom, 60, 120, 400, 1159);
   padding-right: 7px;
 
   &__wrapper.wrapper {
@@ -8,12 +9,14 @@
     min-height: 590px;
     max-width: 1152px;
     padding-left: 60px;
+    @include responsive-sizing(padding-left, 16, 60, 992, 1159);
     border: 1px solid $color-main;
     border-radius: 24px;
   }
 
   &__left {
     max-width: 540px;
+    @include responsive-sizing(max-width, 400, 540, 900, 1159);
     width: 100%;
     padding-top: 46px;
   }
@@ -26,6 +29,7 @@
     font-family: $second-family;
     font-weight: 300;
     font-size: 22px;
+    @include responsive-sizing(font-size, 18, 22, 400, 1159);
     line-height: 130%;
     color: $color-main;
   }
@@ -44,6 +48,7 @@
     font-family: $second-family;
     font-weight: 400;
     font-size: 22px;
+    @include responsive-sizing(font-size, 18, 22, 400, 1159);
     line-height: 130%;
     color: rgba(255, 255, 255, 0.9);
   }
@@ -51,5 +56,73 @@
   &__pic {
     width: auto;
     height: auto;
+
+    & img {
+      object-position: center;
+    }
+
+    & img.mobile {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    &__left {
+      padding-top: 24px;
+    }
+
+    &__pic {
+      min-width: 350px;
+    }
+
+    &__pic img {
+      object-fit: contain;
+      object-position: bottom;
+    }
+
+    &__bottom {
+      margin-top: 18px;
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__wrapper.wrapper {
+      flex-direction: column;
+    }
+
+    &__left {
+      max-width: 100%;
+    }
+
+    &__pic {
+      height: 400px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__pic {
+      width: 100%;
+      min-width: 0;
+    }
+
+    &__title.calcio-title {
+      margin-bottom: 8px;
+    }
+
+    &__bottom {
+      padding: 20px 16px;
+    }
+
+    &__pic {
+      height: auto;
+
+      & img {
+        display: none;
+      }
+
+      & img.mobile {
+        display: block;
+      }
+    }
   }
 }

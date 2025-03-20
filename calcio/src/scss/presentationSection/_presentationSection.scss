@@ -1,5 +1,6 @@
 .presentationSection {
   margin-bottom: 120px;
+  @include responsive-sizing(margin-bottom, 60, 120, 400, 1159);
 
   &__wrapper {
     display: flex;
@@ -10,6 +11,11 @@
     max-width: 566px;
     width: 100%;
     height: 318px;
+    border-radius: 30px;
+
+    & img {
+      border-radius: 30px;
+    }
   }
 
   &__right {
@@ -17,6 +23,8 @@
     width: 100%;
     min-height: 318px;
     padding: 32px 26px;
+    @include responsive-sizing(padding-block, 20, 32, 768, 1159);
+    @include responsive-sizing(padding-inline, 16, 26, 768, 1159);
     border: 1px solid $color-main;
     border-radius: 24px;
   }
@@ -29,11 +37,44 @@
     font-family: $second-family;
     font-weight: 300;
     font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1159);
     line-height: 130%;
     color: $color-main;
 
     & span {
       font-weight: 700;
+    }
+  }
+
+  @media (max-width: 700px) {
+    &__wrapper {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 8px;
+    }
+
+    &__right {
+      max-width: 100%;
+      min-height: auto;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__left {
+      height: 188px;
+      border-radius: 16px;
+
+      & img {
+        border-radius: 16px;
+      }
+    }
+
+    &__right {
+      border-radius: 16px;
+    }
+
+    &__title {
+      margin-bottom: 8px;
     }
   }
 }

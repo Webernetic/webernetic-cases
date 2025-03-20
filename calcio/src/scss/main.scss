@@ -25,7 +25,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  // outline: 1px solid red;
+  //outline: 1px solid red;
 }
 
 html {
@@ -51,7 +51,7 @@ body::-webkit-scrollbar {
   width: 100%;
   margin: 0 auto;
 
-  @media (max-width: 1159px) {
+  @media (max-width: 1158px) {
     padding-inline: 20px;
   }
 }
@@ -96,6 +96,7 @@ picture {
   font-family: $font-family;
   font-weight: 400;
   font-size: 40px;
+  @include responsive-sizing(font-size, 28, 40, 400, 1159);
   line-height: 115%;
   color: $color-accent;
 }
