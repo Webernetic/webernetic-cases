@@ -1,0 +1,119 @@
+.contentSection {
+  @include responsive-sizing(margin-bottom, 60, 120, 400, 1159);
+
+  &__wrapper {
+    display: flex;
+    gap: 21px;
+    @include responsive-sizing(gap, 10, 21, 400, 1159);
+  }
+
+  &__left {
+    max-width: 760px;
+    width: 100%;
+    border-radius: 12px;
+    padding: 36px 40px;
+    @include responsive-sizing(padding-inline, 16, 40, 992, 1159);
+    @include responsive-sizing(padding-block, 20, 36, 992, 1159);
+    min-height: 528px;
+    background: #eceff1;
+  }
+
+  &__title {
+    margin-bottom: 26px;
+  }
+
+  &__text {
+    margin-bottom: 16px;
+    font-family: $second-family;
+    font-weight: 300;
+    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1159);
+    line-height: 130%;
+    color: $color-main;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+
+  & ul.contentSection__list {
+    padding-left: 30px;
+    margin-bottom: 26px;
+  }
+  & ul.contentSection__list li {
+    position: relative;
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1159);
+    line-height: 130%;
+    color: $color-main;
+    margin-bottom: 4px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 10px;
+      left: -15px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: $color-main;
+    }
+  }
+
+  &__bottom {
+    border-radius: 12px;
+    padding: 19px 24px;
+    min-height: 96px;
+    background: $color-accent;
+    font-family: $second-family;
+    font-weight: 500;
+    font-size: 22px;
+    @include responsive-sizing(font-size, 19, 22, 400, 1159);
+    line-height: 130%;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  &__right {
+    max-width: 368px;
+    width: 100%;
+    height: 528px;
+
+    & img {
+      border-radius: 12px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__left {
+      min-height: auto;
+    }
+
+    &__title {
+      margin-bottom: 8px;
+    }
+
+    &__text {
+      margin-bottom: 12px;
+    }
+
+    & ul.contentSection__list {
+      margin-bottom: 16px;
+    }
+
+    &__bottom {
+      padding: 16px;
+    }
+
+    &__right {
+      max-width: 100%;
+      height: 528px;
+      @include responsive-sizing(height, 244, 528, 400, 1159);
+    }
+  }
+}

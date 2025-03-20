@@ -1,0 +1,186 @@
+.diarySection {
+  margin-bottom: 118px;
+  @include responsive-sizing(margin-bottom, 60, 118, 400, 1159);
+
+  &__wrapper {
+    padding-top: 76px;
+  }
+
+  &__top {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+
+  &__left {
+    max-width: 555px;
+    width: 100%;
+    min-height: 273px;
+  }
+
+  &__title.calcio-title {
+    margin-bottom: 19px;
+  }
+
+  &__text {
+    font-family: $second-family;
+    font-weight: 300;
+    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1159);
+    line-height: 130%;
+    color: $color-main;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+
+  &__right {
+    position: relative;
+    align-self: flex-start;
+    border: 1px solid $color-main;
+    border-radius: 16px;
+    padding: 24px 26px 32px 26px;
+    @include responsive-sizing(padding-inline, 16, 26, 768, 1159);
+    @include responsive-sizing(padding-top, 20, 24, 768, 1159);
+    @include responsive-sizing(padding-bottom, 20, 32, 768, 1159);
+    max-width: 555px;
+    width: 100%;
+    min-height: 186px;
+  }
+
+  &__bottom {
+    // height: 643px;
+    padding-inline: 49px;
+  }
+
+  &__badge {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    border-radius: 8px;
+    padding: 5px 14px;
+    max-width: 193px;
+    width: 100%;
+    min-height: 40px;
+    background: $color-accent;
+    transform: rotate(-4deg);
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 115%;
+    color: #fff;
+  }
+
+  &__pic {
+    position: relative;
+    width: 100%;
+    // height: 643px;
+  }
+
+  &__video-box {
+    position: absolute;
+    height: 570px;
+    top: 0;
+    left: 30px;
+    padding-block: 23px 0px;
+    padding-inline: 85px 110px;
+
+    & video {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+  }
+
+  &__video-mobile {
+    display: none;
+  }
+
+  @media (max-width: 1159px) {
+    &__video-box {
+      @include responsive-sizing(height, 470, 570, 992, 1159);
+      @include responsive-sizing(padding-left, 55, 85, 992, 1159);
+      @include responsive-sizing(padding-right, 80, 110, 992, 1159);
+      @include responsive-sizing(padding-top, 15, 23, 992, 1159);
+    }
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__video-box {
+      @include responsive-sizing(height, 350, 470, 769, 992);
+      @include responsive-sizing(padding-left, 35, 55, 769, 992);
+      @include responsive-sizing(padding-right, 65, 80, 769, 992);
+    }
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__bottom {
+      padding-inline: 0;
+    }
+
+    &__video-box {
+      @include responsive-sizing(height, 250, 400, 500, 768);
+      @include responsive-sizing(padding-top, 10, 15, 500, 768);
+      @include responsive-sizing(padding-left, 15, 45, 500, 768);
+      @include responsive-sizing(padding-right, 45, 70, 500, 768);
+    }
+  }
+
+  @media (max-width: 700px) {
+    &__wrapper {
+      padding-top: 0;
+    }
+
+    &__top {
+      flex-direction: column;
+      gap: 51px;
+    }
+
+    &__left,
+    &__right {
+      max-width: 100%;
+    }
+
+    &__badge {
+      left: -10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__pic {
+      display: none;
+    }
+
+    &__video-mobile {
+      display: block;
+      height: 460px;
+
+      & video {
+        width: 100%;
+        height: 100%;
+        border: 4px solid #231f20;
+        border-radius: 16px;
+        object-fit: cover;
+      }
+    }
+
+    &__top {
+      margin-bottom: 12px;
+    }
+
+    &__title.calcio-title {
+      margin-bottom: 12px;
+    }
+
+    &__badge {
+      top: -25px;
+      min-height: 37px;
+      width: fit-content;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 22px;
+    }
+  }
+}

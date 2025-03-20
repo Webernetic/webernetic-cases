@@ -1,0 +1,93 @@
+.principleSection {
+  margin-bottom: 120px;
+  @include responsive-sizing(margin-bottom, 60, 120, 400, 1159);
+
+  &__top,
+  &__bottom {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    @include responsive-sizing(gap, 15, 60, 992, 1159);
+  }
+
+  &__top {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    font-family: $second-family;
+    font-weight: 300;
+    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1159);
+    line-height: 130%;
+    color: $color-main;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+
+  &__pic {
+    max-width: 724px;
+    width: 100%;
+    height: 476px;
+    @include responsive-sizing(height, 300, 476, 768, 1159);
+    border-radius: 24px;
+
+    & img {
+      border-radius: 24px;
+    }
+  }
+
+  &__content {
+    max-width: 368px;
+    width: 100%;
+    padding-block: 47px;
+    @include responsive-sizing(padding-block, 0, 47, 768, 1159);
+  }
+
+  &__bottom .principleSection__content {
+    padding-block: 21px;
+    @include responsive-sizing(padding-block, 0, 21, 768, 1159);
+  }
+
+  @media (max-width: 700px) {
+    &__top {
+      flex-direction: column;
+    }
+
+    &__bottom {
+      flex-direction: column-reverse;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+
+    &__pic {
+      border-radius: 12px;
+
+      & img {
+        border-radius: 12px;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__pic {
+      height: auto;
+
+      & img {
+        object-fit: contain;
+      }
+    }
+
+    &__title {
+      margin-bottom: 12px;
+    }
+  }
+}

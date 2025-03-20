@@ -1,0 +1,136 @@
+.mainSection {
+  position: relative;
+  margin-bottom: 8px;
+  padding-top: 120px;
+  @include responsive-sizing(padding-top, 60, 120, 400, 1159);
+
+  &__wrapper.wrapper {
+    max-width: 1152px;
+    border-radius: 24px;
+    padding: 46px 60px;
+    @include responsive-sizing(padding-block, 20, 46, 768, 1159);
+    @include responsive-sizing(padding-inline, 18, 60, 768, 1159);
+    min-height: 500px;
+    background: linear-gradient(90deg, #424242 0%, #202020 100%);
+  }
+
+  &__content {
+    position: relative;
+    max-width: 503px;
+    z-index: 1;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 48px;
+    @include responsive-sizing(font-size, 36, 48, 400, 1159);
+    line-height: 115%;
+    color: #fff;
+  }
+
+  &__text {
+    margin-bottom: 16px;
+    font-family: $second-family;
+    font-weight: 300;
+    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1159);
+    line-height: 130%;
+    color: rgba(255, 255, 255, 0.9);
+
+    & span {
+      font-weight: 700;
+    }
+  }
+
+  & ul.mainSection__list {
+    list-style: disc;
+    padding-left: 30px;
+  }
+
+  & ul.mainSection__list li {
+    font-family: $second-family;
+    font-weight: 300;
+    font-size: 20px;
+    @include responsive-sizing(font-size, 18, 20, 400, 1159);
+    line-height: 130%;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 5px;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    bottom: 0;
+    right: 90px;
+    width: auto;
+    height: auto;
+  }
+
+  @media (max-width: $breakpoints-xxl) {
+    &__image {
+      right: 30px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xl) {
+    &__image {
+      @include responsive-sizing(width, 450, 650, 900, 1200);
+    }
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__content {
+      @include responsive-sizing(max-width, 400, 503, 768, 992);
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__wrapper.wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 0;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+
+    &__image {
+      position: static;
+      display: inline-block;
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__image {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__wrapper.wrapper {
+      padding-right: 0;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    &__content {
+      padding-right: 16px;
+    }
+
+    &__image {
+      transform: translateX(15px);
+      margin-top: 22px;
+    }
+
+    & ul.mainSection__list li {
+      margin-bottom: 0;
+    }
+  }
+}
