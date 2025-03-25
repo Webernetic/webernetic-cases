@@ -1,0 +1,44 @@
+.contentSection {
+  margin-bottom: 80px;
+
+  &__wrapper {
+    display: flex;
+    gap: 34px;
+    min-height: 396px;
+    padding: 59px 30px 28px;
+    border-radius: 16px;
+    background-image: url('../assets/images/content-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__left {
+    max-width: 430px;
+    width: 100%;
+  }
+
+  &__title.nova-title {
+    margin-bottom: 16px;
+  }
+
+  &__right {
+    max-width: 636px;
+    width: 100%;
+    min-height: 290px;
+    margin-top: 19px;
+
+    & img {
+      object-fit: contain;
+    }
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #3e492d;
+    letter-spacing: 0.2px;
+  }
+}

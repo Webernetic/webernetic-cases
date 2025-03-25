@@ -1,0 +1,18 @@
+-
+  var items = [
+    {number: "01", text: "Сбор нового ядра"},
+    {number: "02", text: "Удобный UX"},
+    {number: "03", text: "Полезный контент"},  
+  ]
+section.headerSection 
+  .headerSection__wrapper.wrapper
+    .headerSection__left
+      h1.headerSection__title Максимум трафика за минимальный бюджет
+      p.headerSection__subtitle  Строим стратегию продвижения сайта салона красоты в Австралии
+      p.headerSection__text Рассказываем, как охватить дополнительный трафик для продвижения услуг салона красоты через создание полезного контента.
+    .headerSection__right
+      ul.headerSection__list
+        each item in items 
+          li.headerSection__list-item
+            span.headerSection__item-number=item.number
+            span.headerSection__item-text=item.text

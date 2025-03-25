@@ -1,0 +1,127 @@
+.resultSection {
+  margin-bottom: 80px;
+
+  &__title.nova-title {
+    margin-bottom: 14px;
+  }
+
+  &__top {
+    max-width: 870px;
+    width: 100%;
+    min-height: 90px;
+    margin-bottom: 16px;
+    border-radius: 16px;
+    padding: 20px 76px 20px 26px;
+    background: #bed194;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 49px;
+  }
+
+  &__card__content {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__card:nth-child(1) .resultSection__card-right {
+    height: 223px;
+  }
+
+  &__card:nth-child(2) .resultSection__card-right {
+    height: 226px;
+  }
+
+  &__card:nth-child(3) .resultSection__card-right {
+    height: 236px;
+  }
+
+  &__card:nth-child(2) .resultSection__card__content {
+    flex-direction: row-reverse;
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.15px;
+    color: rgba(62, 73, 45, 0.91);
+  }
+
+  &__card-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 270px;
+    width: 100%;
+    border-radius: 16px;
+    padding: 18px 20px;
+    background: #e4eecf;
+  }
+
+  &__card-right {
+    position: relative;
+    max-width: 870px;
+    width: 100%;
+
+    & img {
+      object-fit: contain;
+    }
+  }
+
+  &__card-text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: $color-greenish;
+
+    & span {
+      font-weight: 600;
+    }
+  }
+
+  &__card-top {
+    max-width: 870px;
+    width: 100%;
+    margin-bottom: 12px;
+    border-radius: 16px;
+    padding: 20px 30px;
+    background: #f7f7f7;
+    text-align: left;
+
+    & p {
+      text-align: left;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    top: 25px;
+    right: 23px;
+    max-width: 199px;
+    width: 100%;
+    min-height: 32px;
+    padding: 8px 16px;
+    border: 1px solid #516427;
+    border-radius: 8px;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 120%;
+    color: #516427;
+  }
+
+  &__button-icon {
+    width: 14px;
+    height: 14px;
+  }
+}

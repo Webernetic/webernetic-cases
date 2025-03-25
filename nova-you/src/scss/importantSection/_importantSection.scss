@@ -1,0 +1,39 @@
+.importantSection {
+  margin-bottom: 80px;
+
+  &__wrapper {
+    display: flex;
+    gap: 20px;
+    min-height: 489px;
+    border-radius: 24px;
+    padding: 13px 30px 28px 30px;
+    background: #e4eecf;
+  }
+
+  &__content {
+    max-width: 530px;
+    width: 100%;
+    margin-top: 37px;
+  }
+
+  &__title.nova-title {
+    margin-bottom: 16px;
+    font-size: 28px;
+  }
+
+  &__text {
+    margin-bottom: 5px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+    color: rgba(62, 73, 45, 0.85);
+  }
+
+  &__pic {
+    max-width: 519px;
+    width: 100%;
+    min-height: 448px;
+  }
+}

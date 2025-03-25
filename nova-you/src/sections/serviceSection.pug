@@ -1,0 +1,24 @@
+-
+  var tabs = [
+    { text: "#татуажбровей"},
+    { text: "#татуажгуб"},
+    { text: "#татуажвек"},
+    { text: "#SkinService"},
+    { text: "#fine-line-tattoo"},  
+  ]
+
+section.serviceSection 
+  .serviceSection__wrapper.wrapper
+    h2.serviceSection__title.nova-title Предлагаемые услуги
+    .serviceSection__tabs
+      each tab in tabs 
+        .serviceSection__tab=tab.text
+    .serviceSection__container 
+      h2.serviceSection__second-title.nova-title Для продвижения и поиска новых клиентов были использованы: 
+      .serviceSection__content 
+        .serviceSection__content-left 
+          .serviceSection__content-button Cайт салона-красоты
+          img(src="./assets/images/service1.png", alt="сайт")
+        .serviceSection__content-right
+          .serviceSection__content-button Страничка в Facebook
+          img(src="./assets/images/service2.png", alt="Facebook")
