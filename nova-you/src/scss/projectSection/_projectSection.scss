@@ -1,5 +1,6 @@
 .projectSection {
   margin-bottom: 80px;
+  @include responsive-sizing(margin-bottom, 64, 80, 400, 1160);
 
   &__top,
   &__center,
@@ -7,9 +8,11 @@
     display: flex;
     align-items: center;
     gap: 40px;
+    @include responsive-sizing(gap, 20, 40, 992, 1160);
     margin-bottom: 30px;
     border-radius: 24px;
     padding: 30px;
+    @include responsive-sizing(padding-inline, 18, 30, 992, 1160);
     background: #e2e2e2;
   }
 
@@ -22,17 +25,40 @@
     max-width: 510px;
     width: 100%;
     height: 180px;
+    border-radius: 14px;
+
+    & img {
+      object-fit: contain;
+      border-radius: 14px;
+    }
+
+    & img.desktop {
+      display: block;
+    }
+
+    & img.mobile {
+      display: none;
+    }
   }
 
   &__center-left {
     max-width: 430px;
     width: 100%;
     height: 368px;
+
+    & img {
+      object-fit: contain;
+    }
   }
 
   &__center-right {
     max-width: 630px;
     width: 100%;
+    border-radius: 14px;
+
+    & img {
+      border-radius: 14px;
+    }
   }
 
   &__bottom-left {
@@ -49,6 +75,7 @@
     font-family: $font-family;
     font-weight: 400;
     font-size: 18px;
+    @include responsive-sizing(font-size, 16, 18, 400, 1160);
     line-height: 140%;
     letter-spacing: 0.2px;
     color: #565656;
@@ -65,11 +92,56 @@
       margin-top: 16px;
       border-radius: 16px;
       padding: 26px;
+      @include responsive-sizing(padding-inline, 18, 26, 992, 1160);
+      @include responsive-sizing(padding-inline, 18, 26, 992, 1160);
       background: #e4eecf;
     }
   }
 
   &__bottom-left p.projectSection__text:nth-child(2) {
     margin-top: 30px;
+  }
+
+  @media (max-width: 700px) {
+    &__top,
+    &__center,
+    &__bottom {
+      flex-direction: column;
+    }
+
+    &__top-left,
+    &__bottom-left {
+      max-width: 100%;
+    }
+
+    &__center-left {
+      min-height: 257px;
+      height: auto;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__title.nova-title {
+      margin-bottom: 18px;
+    }
+
+    &__top,
+    &__center {
+      margin-bottom: 20px;
+    }
+
+    &__bottom-left p.projectSection__text:nth-child(2) {
+      margin-top: 12px;
+    }
+
+    &__top-right {
+      & img.desktop {
+        display: none;
+      }
+
+      & img.mobile {
+        display: block;
+      }
+    }
   }
 }

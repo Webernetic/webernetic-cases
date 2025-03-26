@@ -1,11 +1,13 @@
 .coreSection {
   margin-bottom: 80px;
+  @include responsive-sizing(margin-bottom, 64, 80, 400, 1160);
 
   &__wrapper {
     min-height: 878px;
     padding: 59px 30px 46px;
+    @include responsive-sizing(padding-inline, 18, 30, 992, 1160);
     background-image: url('../assets/images/core-bg.png');
-    background-position: top;
+    background-position: left;
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -21,6 +23,7 @@
     font-family: $font-family;
     font-weight: 400;
     font-size: 18px;
+    @include responsive-sizing(font-size, 16, 18, 400, 1160);
     line-height: 140%;
     letter-spacing: 0.2px;
     color: rgba(62, 73, 45, 0.81);
@@ -31,7 +34,13 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     column-gap: 35px;
+    @include responsive-sizing(column-gap, 12, 35, 992, 1160);
     row-gap: 31px;
+    @include responsive-sizing(row-gap, 12, 31, 992, 1160);
+  }
+
+  &__cards.mobile {
+    display: none;
   }
 
   &__card {
@@ -42,10 +51,12 @@
   &__card-list {
     position: relative;
     max-width: 273px;
+    @include responsive-sizing(max-width, 200, 273, 900, 1160);
     width: 100%;
     min-height: 248px;
     border-radius: 11px;
     padding: 24px 21px 24px 13px;
+    @include responsive-sizing(padding-block, 12, 24, 992, 1160);
     background: #d3e0b7;
 
     & li {
@@ -54,6 +65,7 @@
       font-family: $third-family;
       font-weight: 500;
       font-size: 18px;
+      @include responsive-sizing(font-size, 14, 18, 992, 1160);
       color: #3e492d;
     }
 
@@ -74,7 +86,7 @@
     min-height: 248px;
 
     & img {
-      object-position: top;
+      object-position: center;
       object-fit: contain;
     }
   }
@@ -86,5 +98,57 @@
     right: -55px;
     width: 55px;
     height: 45px;
+  }
+
+  @media (max-width: 900px) {
+    &__cards {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+
+    &__card {
+      justify-content: center;
+      gap: 20px;
+    }
+
+    &__card-list {
+      max-width: 50%;
+    }
+
+    &__card-icon {
+      width: 30px;
+      height: 15px;
+      top: 50%;
+      transform: translate(-10px, -50%);
+      right: -35px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__wrapper {
+      padding-block: 44px;
+      background-image: url('../assets/images/core-bg-mobile.png');
+      background-position: left;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &__text {
+      margin-bottom: 20px;
+    }
+
+    &__title.nova-title {
+      margin-bottom: 8px;
+    }
+
+    &__cards {
+      display: none;
+    }
+
+    &__cards.mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
   }
 }

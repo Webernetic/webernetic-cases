@@ -1,10 +1,11 @@
 .serviceSection {
-  margin-bottom: 80px;
+  @include responsive-sizing(margin-bottom, 64, 80, 400, 1160);
 
   &__tabs {
     display: flex;
     gap: 12px;
     margin-bottom: 80px;
+    @include responsive-sizing(margin-bottom, 64, 80, 992, 1160);
   }
 
   &__tab {
@@ -17,6 +18,7 @@
     font-family: $third-family;
     font-weight: 500;
     font-size: 22px;
+    @include responsive-sizing(font-size, 18, 22, 768, 1160);
     text-align: center;
     color: rgba(45, 54, 30, 0.9);
   }
@@ -40,7 +42,6 @@
   }
 
   &__content-button {
-    margin-left: 20px;
     border-radius: 11px;
     padding: 11px 24px;
     width: fit-content;
@@ -49,7 +50,12 @@
     font-family: $third-family;
     font-weight: 500;
     font-size: 22px;
+    @include responsive-sizing(font-size, 18, 22, 768, 1160);
     color: rgba(99, 127, 36, 0.77);
+  }
+
+  &__content-right .serviceSection__content-button {
+    margin-left: 20px;
   }
 
   &__content-left {
@@ -60,6 +66,10 @@
       display: block;
       object-fit: contain;
       object-position: top;
+    }
+
+    & img.mobile {
+      display: none;
     }
   }
 
@@ -72,6 +82,118 @@
       margin-top: 28px;
       object-fit: contain;
       object-position: top;
+    }
+
+    & img.mobile {
+      display: none;
+    }
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__container {
+      min-height: auto;
+    }
+
+    &__content-right img,
+    &__content-left img {
+      margin-top: 10px;
+    }
+
+    &__content-button {
+      padding: 11px 18px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__tabs {
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    &__tab {
+      width: fit-content;
+      padding: 16px 13px;
+      height: 57px;
+    }
+
+    &__container {
+      padding-inline: 18px;
+    }
+
+    &__title.nova-title {
+      margin-bottom: 18px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    &__content-button {
+      width: fit-content;
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: 550px) {
+    &__content {
+      flex-direction: column;
+      gap: 22.5px;
+    }
+
+    &__second-title.nova-title {
+      margin-bottom: 12px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__container {
+      padding-inline: 0;
+    }
+
+    &__tab:nth-child(1) {
+      width: 57.5%;
+    }
+
+    &__tab:nth-child(2) {
+      width: 40.6%;
+    }
+    &__tab:nth-child(3) {
+      width: 49%;
+    }
+    &__tab:nth-child(4) {
+      width: 49%;
+    }
+    &__tab:nth-child(5) {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &__content-right,
+    &__content-left {
+      & img {
+        display: none;
+      }
+
+      & img.mobile {
+        display: block;
+      }
+    }
+
+    &__content-left img {
+      height: 341px;
+    }
+
+    &__second-title.nova-title {
+      padding-inline: 18px;
+    }
+
+    &__content-button {
+      margin-left: 18px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    &__tab:nth-child(n + 1) {
+      width: 100%;
+      max-width: 100%;
     }
   }
 }

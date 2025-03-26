@@ -8,6 +8,7 @@
     font-family: $third-family;
     font-weight: 700;
     font-size: 28px;
+    @include responsive-sizing(font-size, 22, 28, 400, 1160);
     line-height: 136%;
     text-align: center;
     color: #282828;
@@ -80,6 +81,7 @@
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 28px;
+    @include responsive-sizing(font-size, 22, 28, 400, 1160);
     line-height: 120%;
     color: #1f1f1f;
   }
@@ -87,6 +89,7 @@
   &_secondformTitle {
     font-family: $third-family;
     font-size: 24px;
+    @include responsive-sizing(font-size, 18, 24, 400, 1160);
     font-weight: 700;
     line-height: 120%;
     margin-bottom: 20px;
@@ -120,6 +123,7 @@
     & > label {
       flex-basis: 30%;
       font-size: 24px;
+      @include responsive-sizing(font-size, 18, 24, 400, 1160);
     }
   }
 
@@ -127,6 +131,7 @@
     font-family: $third-family;
     font-weight: 700;
     font-size: 24px;
+    @include responsive-sizing(font-size, 18, 24, 400, 1160);
     line-height: 120%;
     text-decoration: underline;
     text-decoration-skip-ink: none;
@@ -191,11 +196,13 @@
 
   @media (max-width: $breakpoints-xs) {
     &_wrapper {
-      padding: 30px 20px;
+      padding: 40px 18px;
     }
 
     &_title {
-      display: none;
+      text-align: left;
+      padding-right: 15px;
+      margin-bottom: 20px;
     }
 
     &_secondformTitle {
@@ -221,11 +228,6 @@
         font-size: 18px;
         height: 22px;
       }
-    }
-
-    & button.customButton {
-      font-size: 24px;
-      line-height: 111%;
     }
   }
 
