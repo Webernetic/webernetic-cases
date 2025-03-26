@@ -1,0 +1,118 @@
+.whoSection {
+  margin-bottom: 80px;
+  @include responsive-sizing(margin-bottom, 64, 80, 400, 1160);
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__content {
+    border-radius: 24px;
+    padding: 40px 30px;
+    @include responsive-sizing(padding-block, 30, 40, 992, 1160);
+    @include responsive-sizing(padding-inline, 18, 30, 992, 1160);
+    background: #e2e2e2;
+  }
+
+  &__top {
+    display: flex;
+    gap: 46px;
+    @include responsive-sizing(gap, 20, 46, 992, 1160);
+    margin-bottom: 18px;
+  }
+
+  &__left {
+    max-width: 524px;
+    width: 100%;
+    min-height: 376px;
+
+    & img {
+      object-fit: contain;
+    }
+  }
+
+  &__right {
+    max-width: 530x;
+    width: 100%;
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    @include responsive-sizing(font-size, 16, 18, 400, 1160);
+    line-height: 140%;
+    letter-spacing: 0.2px;
+    color: rgba(0, 0, 0, 0.64);
+
+    &:last-child {
+      margin-top: 24px;
+      border-radius: 16px;
+      padding: 26px;
+      @include responsive-sizing(padding-block, 20, 26, 992, 1160);
+      @include responsive-sizing(padding-inline, 18, 26, 992, 1160);
+      min-height: 227px;
+      background: #e4eecf;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    gap: 26px;
+    min-height: 127px;
+    border-radius: 16px;
+    padding: 26px;
+    background-color: #fff;
+
+    & img {
+      width: 64px;
+      height: 64px;
+    }
+  }
+
+  &__bottom-text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    @include responsive-sizing(font-size, 16, 18, 400, 1160);
+    line-height: 140%;
+    letter-spacing: 0.2px;
+    color: rgba(0, 0, 0, 0.64);
+  }
+
+  @media (max-width: 650px) {
+    &__top {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    &__left {
+      max-width: 100%;
+      @include responsive-sizing(min-height, 215, 376, 400, 650);
+    }
+
+    &__bottom {
+      gap: 16px;
+      padding: 20px 18px;
+
+      & img {
+        width: 54px;
+        height: 54px;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__title.nova-title {
+      margin-bottom: 18px;
+    }
+
+    &__bottom {
+      flex-direction: column;
+    }
+
+    &__text:last-child {
+      margin-top: 20px;
+    }
+  }
+}

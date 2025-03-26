@@ -1,0 +1,205 @@
+.teamSection {
+  margin-bottom: 80px;
+  @include responsive-sizing(margin-bottom, 64, 80, 400, 1160);
+
+  &__wrapper {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 570px;
+    @include responsive-sizing(max-width, 335, 570, 768, 1160);
+    width: 100%;
+    min-height: 418px;
+    border-radius: 24px;
+    background-image: url('../assets/images/team.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    & p {
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      width: 100%;
+      padding: 18px 30px;
+      @include responsive-sizing(padding-inline, 18, 30, 992, 1160);
+      backdrop-filter: blur(9.199999809265137px);
+      background: rgba(255, 255, 255, 0.65);
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 18px;
+      @include responsive-sizing(font-size, 16, 18, 400, 1160);
+      line-height: 140%;
+      color: #292929;
+
+      & span {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__text.mobile {
+    display: none;
+  }
+
+  &__left-title {
+    width: fit-content;
+    min-height: 52px;
+    margin-top: 30px;
+    margin-left: 30px;
+    border-radius: 11px;
+    padding: 8px 12px;
+    background: #e4eecf;
+    font-family: $third-family;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 138%;
+    color: #2d361e;
+  }
+
+  &__right {
+    max-width: 570px;
+    width: 100%;
+    min-height: 418px;
+    border-radius: 24px;
+  }
+
+  &__right-top {
+    min-height: 156px;
+    padding: 30px 30px 28px 30px;
+    @include responsive-sizing(padding-inline, 18, 30, 992, 1160);
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    background: #bed194;
+  }
+
+  &__right-title {
+    margin-bottom: 12px;
+    font-family: $third-family;
+    font-weight: 700;
+    font-size: 26px;
+    @include responsive-sizing(font-size, 20, 26, 400, 1160);
+    line-height: 138%;
+    color: #2d361e;
+  }
+
+  &__right-text {
+    max-width: 500px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    @include responsive-sizing(font-size, 16, 18, 400, 1160);
+    line-height: 140%;
+    color: #3e492d;
+  }
+
+  &__list {
+    & li {
+      position: relative;
+      border-top: 1px solid rgba(69, 82, 41, 0.14);
+      padding: 11px 30px;
+      @include responsive-sizing(padding-inline, 18, 30, 992, 1160);
+      padding-left: 50px;
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 18px;
+      @include responsive-sizing(font-size, 16, 18, 400, 1160);
+      line-height: 140%;
+      color: #3e492d;
+
+      &:nth-child(1) {
+        background: #d0e1a9;
+      }
+      &:nth-child(2) {
+        background: #deeeba;
+      }
+      &:nth-child(3) {
+        background: #eaf8cb;
+      }
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: 20px;
+        left: 35px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: #3e492d;
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__left {
+      max-width: 100%;
+    }
+
+    &__right {
+      max-width: 100%;
+      min-height: auto;
+      border-radius: 24px;
+    }
+
+    &__list {
+      border-bottom-right-radius: 24px;
+      border-bottom-left-radius: 24px;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__wrapper {
+      gap: 6px;
+    }
+
+    &__left {
+      min-height: 240px;
+      border-radius: 16px;
+    }
+
+    &__left-title {
+      font-size: 20px;
+      min-height: 43px;
+      margin-top: 10px;
+      margin-left: 18px;
+    }
+
+    &__left {
+      & p {
+        display: none;
+      }
+    }
+
+    &__text.mobile {
+      display: block;
+      min-height: 212px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 20px 18px;
+      backdrop-filter: blur(9.199999809265137px);
+      background: rgba(255, 255, 255, 0.65);
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: #292929;
+    }
+
+    &__right-title {
+      margin-bottom: 8px;
+    }
+
+    &__right-top {
+      min-height: 141px;
+      padding: 20px 18px;
+    }
+  }
+}

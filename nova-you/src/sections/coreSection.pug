@@ -1,0 +1,49 @@
+-
+  var items1 = ["fine line tattoos", "perth fine line tattoo", "thin line tattoos", "fine line tattoo", "studio fine needle tattoo", "thin needle tattoo", "fine line tattoo shop"  ]
+  var items2 = ["eyebrow tattooing", "eyebrow tattoo", "eyebrow tattoo perth", "eyebrow tattooing perth", "brow tattooing", "brow tattoo perth", "permanent eyebrow tattoo" ]
+  var items3 = ["eyeliner", "tattooing eyeliner","tattoo eyeliner", "tattooing perth eyeliner", "tattoo perth", "permanent eyeliner", "permanent eyeliner tattoo", "cosmetic eyeliner tattoo" ]
+  var items4 = ["cosmetic tattoo perth", "cosmetic tattoo", "cosmetic tattooing", "permanent makeup", "perth cosmetic tattoo", "studio permanent", "makeup tattoo", "permanent cosmetic tattoo"  ]
+
+section.coreSection 
+  .coreSection__wrapper.wrapper
+    h2.coreSection__title.nova-title Новое ядро 
+    p.coreSection__text Пересмотреть семантику предыдущего подрядчика – первое правило клуба сеошников. Предложить свою – правило хорошего тона и гарантия ответственности за результат. Мы вручную отобрали запросы, которые соответствуют предлагаемым услугам на сайте и переработали под них  наполнение страниц.
+    .coreSection__cards
+      .coreSection__card
+        ul.coreSection__card-list
+          each item in items1 
+            li=item
+          .coreSection__card-icon
+            img(src="./assets/icons/way.svg", alt="стрелка")
+        .coreSection__card-pic
+          img(src="./assets/images/core1.png", alt="список")
+      .coreSection__card
+        ul.coreSection__card-list
+          each item in items2 
+            li=item
+          .coreSection__card-icon
+            img(src="./assets/icons/way.svg", alt="стрелка")
+        .coreSection__card-pic
+          img(src="./assets/images/core2.png", alt="список")
+      .coreSection__card
+        ul.coreSection__card-list
+          each item in items3 
+            li=item
+          .coreSection__card-icon
+            img(src="./assets/icons/way.svg", alt="стрелка")
+        .coreSection__card-pic
+          img(src="./assets/images/core3.png", alt="список")
+      .coreSection__card
+        ul.coreSection__card-list
+          each item in items4
+            li=item
+          .coreSection__card-icon
+            img(src="./assets/icons/way.svg", alt="стрелка")
+        .coreSection__card-pic
+          img(src="./assets/images/core4.png", alt="список")
+    .coreSection__cards.mobile
+      img(src="./assets/images/core1-mobile.png", alt="список")
+      img(src="./assets/images/core2-mobile.png", alt="список")
+      img(src="./assets/images/core3-mobile.png", alt="список")
+      img(src="./assets/images/core4-mobile.png", alt="список")
+        

@@ -1,0 +1,42 @@
+-
+  var cards = [
+    {text: "Около <span>50% ключей</span> вывели в Топ-10 практически с 0 всего <span>за 6 месяцев</span>.", 
+     src: "./assets/images/result1.png", 
+     dataImage: "./assets/images/modal1.png",
+     dataTitle: "% ключей в Топ-10"},
+
+    {text: "А в сезон сайт даже поднимался на <span>30-ю</span> позицию!", 
+    src: "./assets/images/result2.png", 
+    top: "Средняя позиция сайта за выбранный период также показывала стабильно хорошие результаты: мы стартовали с <span>49-й</span> строки в выдаче и постепенно нарастили ее до <span>35-й</span>.", 
+    dataImage: "./assets/images/modal2.png", 
+    dataTitle: "Средняя позиция"},
+
+    {text: "Прогнозы по выдаче и трафику довольно оптимистичны – при должном внимании к ссылкам-донорам и работе с запросами их ждет стабильный прирост. ", 
+    src: "./assets/images/result3.png",  
+    dataImage: "./assets/images/modal3.png",
+    dataTitle: "Прогноз трафика"}, 
+  ]
+  
+
+section.resultSection 
+  .resultSection__wrapper.wrapper 
+    h2.resultSection__title.nova-title Где сейчас находится сайт в результатах выдачи?
+    .resultSection__top
+      p.resultSection__text Проектом мы занимались с мая по октябрь 2023 года. После пересмотра семантики и контентной оптимизации видимость сайта постепенно пошла вверх. 
+    .resultSection__cards
+      each card in cards 
+        .resultSection__card
+          if card.top
+            .resultSection__card-top 
+              p.resultSection__card-text!=card.top
+          .resultSection__card-content
+            .resultSection__card-left 
+              p.resultSection__card-text!=card.text
+            .resultSection__card-right
+              img.resultSection__card-pic(src=card.src, alt="график")
+              button.resultSection__button.desktop.show-modal-btn(data-image=card.dataImage, data-title=card.dataTitle) 
+                img.resultSection__button-icon(src="./assets/icons/search.svg", alt="поиск")
+                span Оригинальный график
+          button.resultSection__button.mobile.show-modal-btn(data-image=card.dataImage, data-title=card.dataTitle) 
+            img.resultSection__button-icon(src="./assets/icons/search.svg", alt="поиск")
+            span Оригинальный график

@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'Circe';
+  src: url('../assets/fonts/circe_regular.eot');
+  src:
+    url('../assets/fonts/circe_regular.woff') format('woff'),
+    url('../assets/fonts/circe_regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('../assets/fonts/circe_bold.eot');
+  src:
+    url('../assets/fonts/circe_bold.woff2') format('woff2'),
+    url('../assets/fonts/circe_bold.woff') format('woff'),
+    url('../assets/fonts/circe_bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('../assets/fonts/circe_extra_bold.eot');
+  src:
+    url('../assets/fonts/circe_extra_bold.woff') format('woff'),
+    url('../assets/fonts/circe_extra_bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src:
+    url('../assets/fonts/Inter-Regular.woff2') format('woff2'),
+    url('../assets/fonts/Inter-Regular.woff') format('woff'),
+    url('../assets/fonts/Inter-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src:
+    url('../assets/fonts/Inter-Medium.woff2') format('woff2'),
+    url('../assets/fonts/Inter-Medium.woff') format('woff'),
+    url('../assets/fonts/Inter-Medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src:
+    url('../assets/fonts/Manrope-Medium.woff2') format('woff2'),
+    url('../assets/fonts/Manrope-Medium.woff') format('woff'),
+    url('../assets/fonts/Manrope-Medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src:
+    url('../assets/fonts/Manrope-Bold.woff2') format('woff2'),
+    url('../assets/fonts/Manrope-Bold.woff') format('woff'),
+    url('../assets/fonts/Manrope-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Caveat';
+  src:
+    url('../assets/fonts/Caveat-Bold.woff2') format('woff2'),
+    url('../assets/fonts/Caveat-Bold.woff') format('woff'),
+    url('../assets/fonts/Caveat-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}

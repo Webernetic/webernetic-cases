@@ -1,0 +1,85 @@
+.contentSection {
+  margin-bottom: 80px;
+  @include responsive-sizing(margin-bottom, 64, 80, 400, 1160);
+
+  &__wrapper {
+    display: flex;
+    gap: 34px;
+    @include responsive-sizing(gap, 19, 34, 992, 1160);
+    min-height: 396px;
+    padding: 59px 30px 28px;
+    @include responsive-sizing(padding-inline, 18, 30, 992, 1160);
+    border-radius: 16px;
+    background-image: url('../assets/images/content-bg.png');
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__left {
+    max-width: 430px;
+    width: 100%;
+  }
+
+  &__title.nova-title {
+    margin-bottom: 16px;
+  }
+
+  &__right {
+    max-width: 636px;
+    width: 100%;
+    min-height: 290px;
+    margin-top: 19px;
+
+    & img {
+      object-fit: contain;
+    }
+
+    & img.mobile {
+      display: none;
+    }
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    @include responsive-sizing(font-size, 16, 18, 400, 1160);
+    line-height: 140%;
+    color: #3e492d;
+    letter-spacing: 0.2px;
+  }
+
+  @media (max-width: $breakpoints-md) {
+    &__wrapper {
+      flex-direction: column;
+      padding-block: 44px 30px;
+      background-image: url('../assets/images/content-bg-mobile.png');
+      background-position: top;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &__left {
+      max-width: 100%;
+    }
+
+    &__title.nova-title {
+      margin-bottom: 8px;
+    }
+
+    &__right {
+      min-height: auto;
+      margin-top: 0;
+
+      & img {
+        display: none;
+      }
+
+      & img.mobile {
+        display: block;
+        height: 275px;
+      }
+    }
+  }
+}

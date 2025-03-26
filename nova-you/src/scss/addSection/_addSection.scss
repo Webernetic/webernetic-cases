@@ -1,0 +1,90 @@
+.addSection {
+  margin-bottom: 80px;
+  @include responsive-sizing(margin-bottom, 64, 80, 400, 1160);
+
+  &__cards {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__card {
+    max-width: 570px;
+    width: 100%;
+    min-height: 320px;
+    border-radius: 24px;
+    padding: 30px;
+    @include responsive-sizing(padding-block, 20, 30, 992, 1160);
+    @include responsive-sizing(padding-inline, 18, 30, 992, 1160);
+    background: #f7f7f7;
+  }
+
+  &__card-icon {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 46px;
+    @include responsive-sizing(margin-bottom, 16, 46, 992, 1160);
+  }
+
+  &__card:last-child {
+    & img {
+      margin-bottom: 37px;
+      @include responsive-sizing(margin-bottom, 16, 37, 992, 1160);
+    }
+  }
+
+  &__card-text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    @include responsive-sizing(font-size, 16, 18, 400, 1160);
+    line-height: 140%;
+    color: #565656;
+  }
+
+  &__list {
+    margin-top: 5px;
+  }
+
+  &__list li {
+    position: relative;
+    padding-left: 25px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    @include responsive-sizing(font-size, 16, 18, 400, 1160);
+    line-height: 140%;
+    color: #565656;
+    margin-bottom: 3px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 11px;
+      left: 10px;
+      width: 5px;
+      height: 5px;
+      border-radius: 100%;
+      background-color: #565656;
+    }
+  }
+
+  @media (max-width: 600px) {
+    &__cards {
+      flex-direction: column;
+    }
+
+    &__card {
+      min-height: auto;
+    }
+
+    &__title.nova-title {
+      margin-bottom: 18px;
+    }
+
+    &__card-icon {
+      width: 64px;
+      height: 64px;
+    }
+  }
+}

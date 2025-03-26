@@ -1,0 +1,130 @@
+.headerSection {
+  margin-bottom: 80px;
+  @include responsive-sizing(margin-bottom, 64, 80, 400, 1160);
+
+  &__wrapper {
+    display: flex;
+    @include responsive-sizing(gap, 15, 44, 992, 1160);
+  }
+
+  &__left {
+    max-width: 560px;
+    width: 100%;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-width: 556px;
+    width: 100%;
+    min-height: 483px;
+    padding: 20px;
+    background-image: url('../assets/images/banner.png');
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-family: $third-family;
+    font-weight: 700;
+    font-size: 48px;
+    @include responsive-sizing(font-size, 28, 48, 400, 1160);
+    line-height: 137.5%;
+    color: #282828;
+  }
+
+  &__subtitle {
+    margin-bottom: 30px;
+    font-family: $third-family;
+    font-weight: 500;
+    font-size: 28px;
+    @include responsive-sizing(font-size, 20, 28, 400, 1160);
+    line-height: 137.5%;
+    color: rgba(0, 0, 0, 0.95);
+  }
+
+  &__text {
+    max-width: 533px;
+    width: 100%;
+    min-height: 127px;
+    border-radius: 16px;
+    padding: 26px 40px 26px 30px;
+    background: #bed194;
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-sizing(font-size, 16, 18, 400, 1160);
+    line-height: 140%;
+    letter-spacing: 0.2px;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  &__list {
+    max-width: 262px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: rgba(#ffffff, 0.5);
+
+    & li {
+      display: flex;
+      gap: 46px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.27);
+      padding: 14px 24px;
+      min-height: 50px;
+
+      & span {
+        font-family: $font-family;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        color: #262626;
+      }
+    }
+
+    & li:last-child {
+      border-bottom: none;
+    }
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    &__text {
+      padding: 20px 18px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    &__wrapper {
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    &__left,
+    &__right {
+      max-width: 100%;
+    }
+
+    &__text {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoints-xs) {
+    &__title {
+      margin-bottom: 6px;
+    }
+
+    &__subtitle {
+      margin-bottom: 24px;
+    }
+
+    &__right {
+      min-height: 294px;
+    }
+
+    &__list {
+      display: none;
+    }
+  }
+}
